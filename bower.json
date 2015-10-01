@@ -1,0 +1,19 @@
+{
+  "name": "zoolander",
+  "version": "0.1.0",
+  "authors": [
+    "Brady Vitrano <brady.vitrano@rackspace.com>"
+  ],
+  "description": "Derek Zoolanders Corporate Style Guide to Help Product Teams Build Ridiculously Good Looking Websites",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5"
+  }
+}
