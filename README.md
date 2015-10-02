@@ -1,6 +1,22 @@
+# Zoolander
+
+Derek Zoolander's Corporate Style Guide to Help Product Teams Build Ridiculously Good Looking Websites
+
+
+## Requirements
+
+* NodeJS
+* NPM
+* Ruby
+* Grunt
+* Sass
+
 ## Install
 
+```
 npm install
+npm test
+```
 
 ## Build
  

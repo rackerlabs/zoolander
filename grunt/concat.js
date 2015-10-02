@@ -1,6 +1,6 @@
 module.exports = {
   dist: {
-      src: [''],
-      dest: 'dist/'
+    src: [''],
+    dest: 'dist/'
   }
 };
