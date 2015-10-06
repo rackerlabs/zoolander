@@ -29,4 +29,10 @@ grunt build:[theme]
 grunt build:derek
 ```
 
+## Deploy
+
+```
+rsync -a docs/_site/ deploy@10.14.209.72:/usr/share/nginx/html/
+```
+
 

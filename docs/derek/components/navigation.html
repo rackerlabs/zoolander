@@ -1,0 +1,55 @@
+---
+layout: page
+theme_name: derek
+css: /dist/derek/css/derek.css
+---
+<h2>Navigation</h2>
+<p>Concepts for the navigation are inspired by the following sites:</p>
+<ul>
+  <li>rackspace.com</li>
+  <li>developer.rackspace.com</li>
+</ul>
+
+<h2>Ceiling Navigation</h2>
+<p>Links on the left and drop down buttons on the right.</p>
+
+<h3>Ceiling Variation #1 [WIP]</h3>
+{% example html %}
+<nav class="ceiling">
+  <dl class="navbar-left">
+    <dt><a href="#">Support</a></dt>
+    <dd>1-800-000-0000</dd>
+    <dt><a href="#">Sales</a></dt>
+    <dd class="last">1-800-000-0000</dd>
+  </dl>
+
+  <div class="navbar-right">
+    <ul class="nav navbar-nav">
+      <li class="dropdown primary">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Signup</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Rackspace Cloud</a></li>
+          <li><a href="#">Cloud Sites</a></li>
+          <li><a href="#">Cloud Office</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="https://my.rackspace.com/portal/auth/login">MyRackspace Portal</a></li>
+          <li><a href="https://mycloud.rackspace.com">Cloud Control Panel</a></li>
+          <li><a href="https://manage.rackspacecloud.com/pages/Login.jsp">Cloud Sites Control Panel</a></li>
+          <li><a href="https://apps.rackspace.com">Rackspace Webmail Login</a></li>
+          <li><a href="https://cp.rackspace.com">Email Admin Login</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <dl class="navbar-right">
+    <dd><a href="#">Partners</a></dd>
+    <dd class="last"><a href="#">Sales</a></dd>
+  </dl>
+</nav>
+
+<div class="clearfix"></div>
+{% endexample %}
