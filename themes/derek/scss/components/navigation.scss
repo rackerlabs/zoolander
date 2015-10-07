@@ -1,0 +1,55 @@
+
+.ceiling{
+  @extend .navbar;
+  @extend .navbar-default;
+  @extend .hidden-sm;
+  @extend .hidden-xs;
+
+  margin: 0;
+
+  dl {
+    margin: 0 15px;
+
+    dt,dd{
+      display: inline-block;
+      margin: 15px 0;
+    }
+
+    dt a {
+      position: relative;
+      display: block;
+    }
+
+    dt a::after {
+      content: ": ";
+    }
+    dd.last::after {
+      content: " ";
+    }
+    dd::after {
+      content: " | ";
+    }
+  }
+  .navbar-right {
+    margin-right: 0;
+    padding-right: 10px;
+  }
+
+  .dropdown{
+    > a {
+      @extend .btn;
+      @extend .btn-default;
+      margin-top: 8px;
+      margin-right: 5px;
+    }
+  }
+  // Increase specificity with additional tags to avoid !importants
+  .nav li.dropdown.primary > a  {
+    background-color: $btn-success-bg;
+    color: $btn-success-color;
+  }
+  .nav li.dropdown.primary > a:hover  {
+    background-color: $btn-success-bg;
+  }
+}
+
