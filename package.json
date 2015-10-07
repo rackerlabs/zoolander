@@ -6,7 +6,8 @@
     "Brady Vitrano <brady.vitrano@rackspace.com>"
   ],
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "build": "bundle install && npm install && bower install"
   },
   "repository": "coming soon",
   "license": "MIT",
