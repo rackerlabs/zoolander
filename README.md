@@ -14,12 +14,12 @@ Derek Zoolander's Corporate Style Guide to Help Product Teams Build Ridiculously
 ## Install
 
 ```
-npm install
-npm test
+gem install bundler
+npm run build
 ```
 
 ## Build
- 
+
 ```
 grunt build
 # Files saved to ./dist/[theme]
