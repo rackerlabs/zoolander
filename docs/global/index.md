@@ -1,14 +1,15 @@
 ---
 layout: page
-css: /dist/derek/css/derek.css
-theme_name: derek
+css: /dist/global/css/global.css
+theme_name: global
 ---
 
-# Derek Theme
+# Global Theme
 
-## Work in progress 
+Standard Bootstrap with Rackspace branded variables via Sass. 
 
-**[insert 90s style gif of man in hard hat swinging hammer]**
+Perfect for marketing vendors that are currently using Bootstrap. This should help unify our marketing landing pages.  
+
 
 ### CSS
 {% highlight html %}
@@ -19,5 +20,4 @@ theme_name: derek
 {% highlight html %}
 <script src="https://path/to/cdn/derek/js/bundle.js"></script>
 {% endhighlight %}
-
 
