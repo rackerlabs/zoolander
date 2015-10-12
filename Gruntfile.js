@@ -7,7 +7,7 @@ module.exports = function (grunt) {
   require('load-grunt-config')(grunt, {
     data: {
       themedir: './themes',
-      buildtheme: 'global',
+      buildtheme: 'all',
       themes: ['global', 'derek']
     }
   });
