@@ -2,11 +2,3 @@
 'use strict';
 
 require('bootstrap');
-
-
-
-
-
-
-
-
