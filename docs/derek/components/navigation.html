@@ -11,45 +11,186 @@ css: /dist/derek/css/derek.css
 </ul>
 
 <h2>Ceiling Navigation</h2>
-<p>Links on the left and drop down buttons on the right.</p>
+<p>If present, this element should be the top most element on a web page.</p>
+<p>It is recommended to use a combination of links with labels as well as button drop downs.</p>
 
-<h3>Ceiling Variation #1 [WIP]</h3>
+
+<h3><span class="badge alert-warning"> WIP </span> Ceiling Menu Links</h3>
+<p>Various combinations on achieving links with labels within the ceiling navigation.</p>
+<p></p>
+<a href="#">Back to Top</a>
+
 {% example html %}
-<nav class="ceiling">
-  <dl class="navbar-left">
-    <dt><a href="#">Support</a></dt>
-    <dd>1-800-000-0000</dd>
-    <dt><a href="#">Sales</a></dt>
-    <dd class="last">1-800-000-0000</dd>
-  </dl>
+<div class="ceiling" role="menubar">
+  <nav class="navbar-left">
+    <ul class="menu-inline" role="menu">
+      <li>
+        <label><a href="javascript:" role="menuitem">Support</a></label>
+        <a href="tel:+18000000000" role="menuitem" title="Support Phone Number">1-800-000-0000</a>
+      </li>
+      <li>
+        <label><a href="javascript:" role="menuitem">Support</a></label>
+        <a href="tel:+18000000000" role="menuitem" title="Support Phone Number">1-800-000-0000</a>
+      </li>
+      <li>
+        <a href="tel:+18000000000" role="menuitem" title="Link Description">Link Only</a>
+      </li>
+      <li>
+        <label>Label w/o Link</label>
+        <a href="tel:+18000000000" role="menuitem" title="Link Described by Label">Some Link</a>
+      </li>
+      <li>
+        Text Only
+      </li>
+    </ul>
+  </nav>
+</div>
+{% endexample %}
 
-  <div class="navbar-right">
+<h3><span class="badge alert-warning"> WIP </span> Ceiling Menu Links Right Side</h3>
+<p>Switch to the right side of ceiling</p>
+<p></p>
+<a href="#">Back to Top</a>
+
+{% example html %}
+<div class="ceiling" role="menubar">
+  <nav class="navbar-right">
+    <ul class="menu-inline" role="menu">
+      <li>
+        <label><a href="javascript:" role="menuitem">Support</a></label>
+        <a href="tel:+18000000000" role="menuitem" title="Support Phone Number">1-800-000-0000</a>
+      </li>
+      <li>
+        <label><a href="javascript:" role="menuitem">Support</a></label>
+        <a href="tel:+18000000000" role="menuitem" title="Support Phone Number">1-800-000-0000</a>
+      </li>
+      <li>
+        <a href="tel:+18000000000" role="menuitem" title="Link Description">Link Only</a>
+      </li>
+      <li>
+        <label>Label w/o Link</label>
+        <a href="tel:+18000000000" role="menuitem" title="Link Described by Label">Some Link</a>
+      </li>
+      <li>
+        Text Only
+      </li>
+    </ul>
+  </nav>
+</div>
+
+{% endexample %}
+
+
+<h3><span class="badge alert-warning"> WIP </span> Ceiling Menu Links Both Sides</h3>
+<p>Combination</p>
+<a href="#">Back to Top</a>
+
+{% example html %}
+<div class="ceiling" role="menubar">
+  <nav class="navbar-left">
+    <ul class="menu-inline" role="menu">
+      <li>
+        <label><a href="javascript:" role="menuitem">Support</a></label>
+        <a href="tel:+18000000000" role="menuitem" title="Support Phone Number">1-800-000-0000</a>
+      </li>
+      <li>
+        <label><a href="javascript:" role="menuitem">Support</a></label>
+        <a href="tel:+18000000000" role="menuitem" title="Support Phone Number">1-800-000-0000</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navbar-right">
+    <ul class="menu-inline" role="menu">
+      <li>
+        <label><a href="javascript:" role="menuitem">Support</a></label>
+        <a href="tel:+18000000000" role="menuitem" title="Support Phone Number">1-800-000-0000</a>
+      </li>
+      <li>
+        <label><a href="javascript:" role="menuitem">Support</a></label>
+        <a href="tel:+18000000000" role="menuitem" title="Support Phone Number">1-800-000-0000</a>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+{% endexample %}
+
+<h3><span class="badge alert-warning"> WIP </span> Ceiling Buttons</h3>
+<p>Buttons</p>
+<a href="#">Back to Top</a>
+
+{% example html %}
+<div class="ceiling" role="menubar">
+  <nav class="navbar-left">
     <ul class="nav navbar-nav">
-      <li class="dropdown primary">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Signup</a>
+      <li class="dropdown">
+        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu</a>
         <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Rackspace Cloud</a></li>
-          <li><a href="#">Cloud Sites</a></li>
-          <li><a href="#">Cloud Office</a></li>
+          <li><a href="#" role="menuitem">Rackspace Cloud</a></li>
+          <li><a href="#" role="menuitem">Cloud Sites</a></li>
+          <li><a href="#" role="menuitem">Cloud Office</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login</a>
+        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu</a>
         <ul class="dropdown-menu" role="menu">
-          <li><a href="https://my.rackspace.com/portal/auth/login">MyRackspace Portal</a></li>
-          <li><a href="https://mycloud.rackspace.com">Cloud Control Panel</a></li>
-          <li><a href="https://manage.rackspacecloud.com/pages/Login.jsp">Cloud Sites Control Panel</a></li>
-          <li><a href="https://apps.rackspace.com">Rackspace Webmail Login</a></li>
-          <li><a href="https://cp.rackspace.com">Email Admin Login</a></li>
+          <li><a href="#" role="menuitem">Rackspace Cloud</a></li>
+          <li><a href="#" role="menuitem">Cloud Sites</a></li>
+          <li><a href="#" role="menuitem">Cloud Office</a></li>
         </ul>
       </li>
     </ul>
-  </div>
-  <dl class="navbar-right">
-    <dd><a href="#">Partners</a></dd>
-    <dd class="last"><a href="#">Sales</a></dd>
-  </dl>
-</nav>
+  </nav>
+  <nav class="navbar-right">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" role="menuitem">Rackspace Cloud</a></li>
+          <li><a href="#" role="menuitem">Cloud Sites</a></li>
+          <li><a href="#" role="menuitem">Cloud Office</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" role="menuitem">Rackspace Cloud</a></li>
+          <li><a href="#" role="menuitem">Cloud Sites</a></li>
+          <li><a href="#" role="menuitem">Cloud Office</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+{% endexample %}
 
-<div class="clearfix"></div>
+
+<h3><span class="badge alert-warning"> WIP </span> Ceiling with Collapse</h3>
+<p>Buttons</p>
+<a href="#">Back to Top</a>
+
+{% example html %}
+<div class="ceiling" role="menubar">
+    <nav class="navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#" role="menuitem">Rackspace Cloud</a></li>
+            <li><a href="#" role="menuitem">Cloud Sites</a></li>
+            <li><a href="#" role="menuitem">Cloud Office</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#" role="menuitem">Rackspace Cloud</a></li>
+            <li><a href="#" role="menuitem">Cloud Sites</a></li>
+            <li><a href="#" role="menuitem">Cloud Office</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+</div>
 {% endexample %}
