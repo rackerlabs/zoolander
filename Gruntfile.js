@@ -10,7 +10,7 @@ module.exports = function (grunt) {
       buildtheme: 'all',
       themes: ['global', 'derek'],
       version: '1.1',
-      cdn_url: 'https://brand.rax.io' // fixme: does not work as cname with cloud files
+      cdnurl: 'https://brand.rax.io' // fixme: does not work as cname with cloud files
     }
   });
 };
