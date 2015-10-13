@@ -8,7 +8,9 @@ module.exports = function (grunt) {
     data: {
       themedir: './themes',
       buildtheme: 'all',
-      themes: ['global', 'derek']
+      themes: ['global', 'derek'],
+      version: '1.1',
+      cdnurl: 'https://brand.rax.io' // fixme: does not work as cname with cloud files
     }
   });
 };

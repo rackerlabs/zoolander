@@ -1,55 +1,62 @@
+$ceiling-margin: floor($navbar-margin-bottom / 2);
 
 .ceiling{
   @extend .navbar;
   @extend .navbar-default;
-  @extend .hidden-sm;
-  @extend .hidden-xs;
+  @extend .visible-md;
+  @extend .visible-lg;
 
   margin: 0;
+  min-height: $line-height-computed;
 
-  dl {
-    margin: 0 15px;
-
-    dt,dd{
-      display: inline-block;
-      margin: 15px 0;
-    }
-
-    dt a {
-      position: relative;
-      display: block;
-    }
-
-    dt a::after {
-      content: ": ";
-    }
-    dd.last::after {
-      content: " ";
-    }
-    dd::after {
-      content: " | ";
-    }
+  a {
+    color: $text-color;
   }
-  .navbar-right {
-    margin-right: 0;
-    padding-right: 10px;
+
+  .navbar-nav {
+    margin-bottom: $ceiling-margin;
+  }
+
+  .navbar-left:first-child {
+    margin-left: 0;
+    padding-left: $ceiling-margin;
+  }
+
+  .navbar-right{
+    ul.dropdown-menu {
+      margin-right: floor($ceiling-margin / 2);
+    }
+    &:last-child{
+      margin-right: 0;
+      padding-right: $ceiling-margin;
+    }
   }
 
   .dropdown{
     > a {
       @extend .btn;
       @extend .btn-default;
-      margin-top: 8px;
-      margin-right: 5px;
+      margin-top: $ceiling-margin;
+      margin-right: floor($ceiling-margin / 2);
     }
   }
-  // Increase specificity with additional tags to avoid !importants
-  .nav li.dropdown.primary > a  {
-    background-color: $btn-success-bg;
-    color: $btn-success-color;
-  }
-  .nav li.dropdown.primary > a:hover  {
-    background-color: $btn-success-bg;
+
+  ul.menu-inline {
+    @extend .list-inline;
+    margin-bottom: 0;
+
+    li{
+      margin: $ceiling-margin 0;
+    }
+
+    label::after {
+      content: ": ";
+    }
+    li::after {
+      content: " | ";
+    }
+    li:last-child::after {
+      content: " ";
+    }
   }
 }
-
