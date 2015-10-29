@@ -7,8 +7,10 @@ module.exports = function (grunt) {
   require('load-grunt-config')(grunt, {
     data: {
       themedir: './themes',
-      buildtheme: 'global',
-      themes: ['global', 'derek']
+      buildtheme: 'all',
+      themes: ['global', 'derek'],
+      version: '1.1',
+      cdnurl: 'https://brand.rax.io' // fixme: does not work as cname with cloud files
     }
   });
 };

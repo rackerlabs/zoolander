@@ -3,7 +3,15 @@
 module.exports = function (grunt) {
 
   grunt.registerTask('build', 'build a theme', function (themename) {
-    var theme = themename === undefined ? grunt.config('buildtheme') : themename;
+    var theme = themename || grunt.config('buildtheme');
+
+    if (theme == 'all') {
+      grunt.config('themes').forEach(function (item) {
+        grunt.task.run(['build:' + item]);
+      });
+      return;
+    }
+
     var themedir = grunt.config('themedir');
 
     var isValidTheme = grunt.file.exists(themedir, theme, 'scss', 'build.scss');
@@ -13,13 +21,20 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run(['scss:' + theme, 'js:' + theme, 'copy']);
-
   });
 
   grunt.registerTask('scss', 'build scss', function (themename) {
 
     var path = require('path');
-    var theme = themename === undefined ? grunt.config('buildtheme') : themename;
+    var theme = themename || grunt.config('buildtheme');
+
+    if (theme == 'all') {
+      grunt.config('themes').forEach(function (item) {
+        grunt.task.run(['scss:' + item]);
+      });
+      return;
+    }
+
     var themedir = grunt.config('themedir');
 
     var distDir = 'dist';
@@ -37,7 +52,15 @@ module.exports = function (grunt) {
 
   grunt.registerTask('js', 'build js', function (themename) {
     var path = require('path');
-    var theme = themename === undefined ? grunt.config('buildtheme') : themename;
+    var theme = themename || grunt.config('buildtheme');
+
+    if (theme == 'all') {
+      grunt.config('themes').forEach(function (item) {
+        grunt.task.run(['js:' + item]);
+      });
+      return;
+    }
+
     var themedir = grunt.config('themedir');
 
     // js
