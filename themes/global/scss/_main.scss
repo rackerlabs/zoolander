@@ -1,0 +1,294 @@
+//** @import url("https://fonts.googleapis.com/css?family=Quicksand:400,300");
+
+@import url("../../../fonts/montserrat/montserrat.css");
+
+//** p overrides
+p {
+  line-height: 160%;
+  margin: 0 0 1em;
+}
+
+//** label overrides
+label, .label {font-weight:500;}
+label.label-default, .label.label-default, label.label-primary, .label.label-primary {color: #fff;}
+
+//** badge overrides
+.badge {font-weight:600;}
+
+//** strong overrides
+b, strong, .strong {
+  letter-spacing: 0.008em;
+}
+.lead b, .lead strong, .lead .strong {
+  font-weight:500;
+  letter-spacing: 0.008em;
+}
+
+//** href overrides
+p a {
+  text-decoration: underline;
+}
+
+//** button size overrides
+.btn {
+  text-decoration: none;
+}
+.btn-lg, .btn-group-lg > .btn {
+  border-radius: 0;
+  font-family: "Montserrat", Arial, san-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  padding: 15px 30px;
+  text-transform: uppercase;
+}
+.btn-sm, .btn-group-sm > .btn {
+  border-radius: 0;
+  font-family: "Montserrat", Arial, san-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 8px 14px;
+  text-transform: uppercase;
+}
+.btn-xs, .btn-group-xs > .btn {
+  border-radius: 0;
+  font-family: "Montserrat", Arial, san-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+.btn.brand-yellow {
+  background-color: #f6b100;
+  border-color: #f6b100;
+  color: #10141a;
+}
+.btn.brand-yellow:hover {
+  background-color: #f6a100;
+  border-color: #f6a100;
+}
+.btn.brand-blue {
+  background-color: #1ae9ef;
+  border-color: #1ae9ef;
+  color: #10141a;
+}
+.btn.brand-blue:hover {
+  background-color: #0dcfd9;
+  border-color: #0dcfd9;
+}
+
+//** table overrides
+.table > thead > tr > th {
+  font-weight: unset;
+}
+
+//** page header overrides
+.page-header {
+  border-bottom: 0;
+}
+
+//** more elegant list styling
+ul, ol {
+  margin-bottom: 10px;
+  padding-left: 1em;
+}
+li {
+  line-height: 140%;
+  margin-bottom: 0.5em;
+  padding-left: 0.4em;
+}
+ol.long > li, ul.long > li {
+  margin-bottom: 1.25em;
+}
+ol li, ol li ul li ol li {
+  list-style-type: decimal;
+}
+ol li ol li {
+  font-size: 0.875em;
+  list-style-type: lower-alpha;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+ol li ol li ol li {
+  font-size: 0.875em;
+  list-style-type: decimal;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+ul ul li {
+  font-size: 0.875em;
+  list-style-type: square;
+  margin-top: 0.4em;
+  margin-left: 1em;
+  margin-bottom: 0.4em;
+}
+ul ul li:last-of-type {
+  margin-bottom: 1em;
+}
+ul ul, ol ul, ol ol, ul ol {
+  margin-bottom: 1.3em;
+  margin-top: 0.75em;
+}
+ol ul li {
+  font-size: 0.875em;
+  list-style-type: disc;
+  margin-top: 0.4em;
+  margin-bottom: 0;
+}
+ol ul li li {
+  font-size: 0.875em;
+  list-style-type: circle;
+  margin-top: 0.4em;
+  margin-bottom: 0;
+}
+li:last-of-type, dl:last-of-type, dd:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+p + ul, p + ol, p + dl {
+  margin-top: 1em;
+}
+
+//** navigation list overrides, stops the regular list adding space and bullets
+.navbar li, .dropdown-menu li, .breadcrumb li, .pagination li {
+  line-height: inherit;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.navbar ul ul li, .dropdown ul ul li {
+  font-size: inherit;
+  list-style-type: none;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+ul.dropdown-menu li {
+  font-size: inherit;
+  list-style-type: none;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+//** small overrides
+small, .small {
+  font-size: 80%;
+  line-height: 120%;
+}
+
+//** blockquote overrides
+blockquote {
+  border: 0 none;
+  color: #c40022;
+  font-family: "Montserrat", Arial, san-serif;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 140%;
+  margin: 0 0 0.6em;
+  padding: 0;
+  text-transform: none;
+  word-spacing: 0;
+}
+blockquote.alternate {
+  border: 0 none;
+  color: #c40022;
+  font-family: "Quicksand", Arial, san-serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 140%;
+  margin: 0 0 20px;
+  padding: 0;
+  text-transform: uppercase;
+  word-spacing: 0.09em
+}
+blockquote::before {
+  content: "“";
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: 2px;
+  line-height: inherit;
+  margin: 0 0 0 -10px;
+  padding: 0;
+  position: absolute;
+}
+blockquote::after {
+  content: "”";
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+cite {
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: inherit;
+  letter-spacing: 0.03em;
+}
+
+//** help-block overrides
+.help-block {
+  font-size: 11px;
+}
+
+//** well overrides
+.well {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+//** label / input field overrides
+.has-warning .help-block, .has-warning .control-label, .has-warning .radio, .has-warning .checkbox, .has-warning .radio-inline, .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
+  color: #eb6800;
+}
+.has-warning .form-control {
+  background-color: rgba(235, 104, 0, 0.1);
+  border-color: #eb6800;
+}
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+  color: #eb0022;
+}
+.has-error .form-control {
+  background-color: rgba(235, 0, 34, 0.1);
+  border-color: #eb0022;
+}
+.has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
+  color: #008500;
+}
+.has-success .form-control {
+  background-color: rgba(0, 133, 0, 0.1);
+  border-color: #008500;
+}
+
+//** tabs overrides
+.nav-tabs {
+  margin-bottom: 1.5em;
+}
+//** emphasis class overrides
+.text-warning {
+  color: #eb6800;
+}
+.text-danger {
+  color: #eb0022;
+}
+.text-success {
+  color: #008500;
+}
+.text-info {
+  color: #008c9b;
+}

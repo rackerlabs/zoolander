@@ -1,6 +1,6 @@
 ---
 layout: page
-css: /dist/global/css/global.css
+css: ../dist/global/css/global.css
 theme_name: global
 ---
 
