@@ -1,6 +1,4 @@
-//** @import url("https://fonts.googleapis.com/css?family=Quicksand:400,300");
-
-@import url("../../../fonts/montserrat/montserrat.css");
+@import 'montserrat';
 
 //** p overrides
 p {
@@ -10,7 +8,13 @@ p {
 
 //** label overrides
 label, .label {font-weight:500;}
-label.label-default, .label.label-default, label.label-primary, .label.label-primary {color: #fff;}
+
+label.label-default,
+.label.label-default,
+label.label-primary,
+.label.label-primary {
+  color: #fff;
+}
 
 //** badge overrides
 .badge {font-weight:600;}
@@ -19,7 +23,9 @@ label.label-default, .label.label-default, label.label-primary, .label.label-pri
 b, strong, .strong {
   letter-spacing: 0.008em;
 }
-.lead b, .lead strong, .lead .strong {
+.lead b,
+.lead strong,
+.lead .strong {
   font-weight:500;
   letter-spacing: 0.008em;
 }
@@ -35,7 +41,7 @@ p a {
 }
 .btn-lg, .btn-group-lg > .btn {
   border-radius: 0;
-  font-family: "Montserrat", Arial, san-serif;
+  font-family: $font-family-sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -45,7 +51,7 @@ p a {
 }
 .btn-sm, .btn-group-sm > .btn {
   border-radius: 0;
-  font-family: "Montserrat", Arial, san-serif;
+  font-family: $font-family-sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -55,7 +61,7 @@ p a {
 }
 .btn-xs, .btn-group-xs > .btn {
   border-radius: 0;
-  font-family: "Montserrat", Arial, san-serif;
+  font-family: $font-family-sans-serif;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -63,23 +69,25 @@ p a {
   padding: 5px 10px;
   text-transform: uppercase;
 }
+
 .btn.brand-yellow {
-  background-color: #f6b100;
-  border-color: #f6b100;
-  color: #10141a;
+  background-color: $brand-yellow;
+  border-color: $brand-yellow;
+  color: $brand-black;
+  &:hover {
+    background-color: $brand-yellow-dark;
+    border-color: $brand-yellow-dark;
+  }
 }
-.btn.brand-yellow:hover {
-  background-color: #f6a100;
-  border-color: #f6a100;
-}
+
 .btn.brand-blue {
-  background-color: #1ae9ef;
-  border-color: #1ae9ef;
-  color: #10141a;
-}
-.btn.brand-blue:hover {
-  background-color: #0dcfd9;
-  border-color: #0dcfd9;
+  background-color: $brand-blue;
+  border-color: $brand-blue;
+  color: $brand-black;
+  &:hover {
+    background-color: $brand-blue-dark;
+    border-color: $brand-blue-dark;
+  }
 }
 
 //** table overrides
@@ -186,7 +194,7 @@ small, .small {
 blockquote {
   border: 0 none;
   color: #c40022;
-  font-family: "Montserrat", Arial, san-serif;
+  font-family: $font-family-sans-serif;
   font-size: 24px;
   font-weight: 300;
   letter-spacing: 0.05em;
@@ -199,7 +207,7 @@ blockquote {
 blockquote.alternate {
   border: 0 none;
   color: #c40022;
-  font-family: "Quicksand", Arial, san-serif;
+  font-family: $font-family-special;
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -267,9 +275,19 @@ cite {
   background-color: rgba(235, 0, 34, 0.1);
   border-color: #eb0022;
 }
-.has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label {
   color: #008500;
 }
+
 .has-success .form-control {
   background-color: rgba(0, 133, 0, 0.1);
   border-color: #008500;
