@@ -6,18 +6,13 @@ theme_name: derek
 
 # Derek Theme
 
+Common components found throughout Rackspace web properties.
 
-**[insert 90s style gif of man in hard hat swinging hammer]**
+## FAQ
 
-### CSS
+* Why are some componets missing?
 
-{% highlight html %}
-<link href="https://brand.rax.io/v1.1/derek/css/derek.css" rel="stylesheet">
-{% endhighlight %}
-
-### Javascript
-{% highlight html %}
-<script src="https://brand.rax.io/v1.1/derek/js/bundle.js"></script>
-{% endhighlight %}
-
-<img src="https://brand.rax.io/v1.1/a" />
+   Because this theme is not complete. Have a look in [Incubation](incubation) tab for any new components that have not 
+   become officially supported components.
+   
+   
