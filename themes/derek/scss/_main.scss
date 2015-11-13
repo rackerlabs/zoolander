@@ -1,1 +1,13 @@
+@import 'components/ceiling';
 @import 'components/navigation';
+
+
+.clear-fixed-top {
+  margin-top: $navbar-height;
+}
+
+@media screen and (min-width: $screen-md-min){
+  .clear-fixed-top {
+    margin-top: 89px;
+  }
+}
