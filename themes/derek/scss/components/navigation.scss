@@ -1,62 +1,41 @@
-$ceiling-margin: floor($navbar-margin-bottom / 2);
+.main-nav {
+  border: 0;
+  background: $brand-black;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
 
-.ceiling{
-  @extend .navbar;
-  @extend .navbar-default;
-  @extend .visible-md;
-  @extend .visible-lg;
-
-  margin: 0;
-  min-height: $line-height-computed;
-
-  a {
-    color: $text-color;
-  }
-
-  .navbar-nav {
-    margin-bottom: $ceiling-margin;
-  }
-
-  .navbar-left:first-child {
-    margin-left: 0;
-    padding-left: $ceiling-margin;
-  }
-
-  .navbar-right{
-    ul.dropdown-menu {
-      margin-right: floor($ceiling-margin / 2);
-    }
-    &:last-child{
-      margin-right: 0;
-      padding-right: $ceiling-margin;
+  .navbar-nav > li > a {
+    color: #E0E0E0;
+    &:hover, &:focus {
+      color: $brand-black;
+      background: #ccc;
     }
   }
 
-  .dropdown{
-    > a {
-      @extend .btn;
-      @extend .btn-default;
-      margin-top: $ceiling-margin;
-      margin-right: floor($ceiling-margin / 2);
+  .dropdown-menu {
+    border: #ccc 1px solid;
+    > li > a {
+      padding: 3px 10px;
+    }
+
+    .dropdown-header {
+      padding: 5px 10px;
+      font-size: 12px;
     }
   }
 
-  ul.menu-inline {
-    @extend .list-inline;
-    margin-bottom: 0;
-
-    li{
-      margin: $ceiling-margin 0;
-    }
-
-    label::after {
-      content: ": ";
-    }
-    li::after {
-      content: " | ";
-    }
-    li:last-child::after {
-      content: " ";
+  .navbar-brand{
+    background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg);
+    background-color: $brand-primary;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 140px 36px;
+    position: relative;
+    width: 160px;
+    &:hover {
+      background-color: $brand-primary;
     }
   }
 }
