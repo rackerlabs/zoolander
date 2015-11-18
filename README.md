@@ -5,40 +5,33 @@ Derek Zoolander's Corporate Style Guide to Help Product Teams Build Ridiculously
 
 ## Requirements
 
-* NodeJS
-* NPM
-* Ruby
-* Grunt
-* Sass
+* Docker Toolbox (Docker Client, Docker Compose)
+* VirtualBox
 
-## Install
+## Start Development
 
 ```
-gem install bundler jekyll
-npm install
+git clone  
+cd zoolander
+docker-compose up
 ```
 
-## Build
+## Contributing
 
-```
-npm run build
-# Files saved to ./dist/[theme]
+These are not exhaustive instructions but here is the gist. (Assumptions: you are running tests and verifying your 
+changes in multiple browsers.)
 
-# by theme
-grunt build:[theme]
-# example
-grunt build:derek
-```
+* Fork Zoolander
+* Clone your repo
+* Create a branch in your repo
+* Make your changes
+* Commit your changes
+* Push branch to your repo
+* Create PR from your repo:`branch` to Zoolander:`master`
 
-## Docs
-
-```
-npm run server
-```
-
-Visit http://127.0.0.1:4000/
 
 ## Deploy
+**Pending**
 
 ```
 rsync -a docs/_site/ deploy@10.14.209.72:/usr/share/nginx/html/
