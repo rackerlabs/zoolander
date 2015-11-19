@@ -2,10 +2,9 @@ jekyll:
   image: jekyll/jekyll
   ports:
     - "4000"
-    - "80"
   volumes:
   - .:/srv/jekyll
-  command: jekyll serve --watch
+  command: jekyll serve --force_polling
 grunt:
   build: ./dockerfiles
   dockerfile: Grunt

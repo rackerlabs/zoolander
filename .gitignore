@@ -1,6 +1,6 @@
 .idea
 .sass-cache
-dist
 node_modules
 bower_components
 .DS_Store
+Gemfile.lock

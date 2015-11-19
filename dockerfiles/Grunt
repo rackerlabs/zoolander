@@ -1,8 +1,14 @@
 FROM envygeeks/alpine
 MAINTAINER "Brady Vitrano <brady.vitrano@rackspace.com>"
-RUN apk --update add build-base \
+COPY copy/ /
+RUN apk --update add build-base nasm autoconf libtool automake \
                      ruby ruby-dev ruby-io-console ruby-irb ruby-json ruby-rake ruby-rdoc \
                      nodejs \
+                     python \
+                     readline readline-dev libxml2 libxml2-dev libxslt  \
+                     libxslt-dev python zlib zlib-dev \
+                     libffi libffi-dev \
+                     git \
                      && \
 
     mkdir -p /home/bob && \
@@ -14,13 +20,13 @@ RUN apk --update add build-base \
     yes | gem update --system --no-document -- --use-system-libraries && \
     yes | gem update --no-document -- --use-system-libraries && \
 
-    cd ~ && \
+    cd /home/bob && \
     gem install sass --no-document && \
 
     npm install -g bower grunt-cli && \
     echo '{ "allow_root": true }' > /root/.bowerrc && \
     gem clean && \
-    apk del build-base ruby-rdoc ruby-dev && \
+    apk del ruby-rdoc ruby-dev && \
 
     mkdir -p /src/app && \
     chown bob:bob /src/app && \
