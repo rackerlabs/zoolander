@@ -4,7 +4,7 @@ module.exports = {
       {
         expand: true,
         src: ['dist/**'],
-        dest: 'docs/',
+        dest: 'docs/_site/',
         options: {
           timestamp: true
         }
