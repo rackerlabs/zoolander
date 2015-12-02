@@ -4,7 +4,7 @@ jekyll:
     - "4000"
   volumes:
   - .:/srv/jekyll
-  command: jekyll serve --force_polling
+  command: bundle exec jekyll serve --force_polling
 grunt:
   build: ./dockerfiles
   dockerfile: Grunt

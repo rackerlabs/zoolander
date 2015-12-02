@@ -19,7 +19,7 @@ docker-machine create --driver=virtualbox --virtualbox-cpu-count=2 --virtualbox-
 docker-machine ls # get ip address
 eval "$(docker-machine env default)"
 docker-compose up -d
-docker-compose ls # get generated port for 4000
+docker-compose ps # get generated port for 4000
 docker-compose logs
 # wait for npm install to complete....
 ```
@@ -50,7 +50,7 @@ docker-compose logs
 
 ## Contributing
 
-These instructions are not exhaustive but here is the gist. (Assumptions: you are running tests and verifying your 
+These instructions are not exhaustive but here is the gist. (Assumptions: you are running tests and verifying your
 changes in multiple browsers.)
 
 * Fork Zoolander
