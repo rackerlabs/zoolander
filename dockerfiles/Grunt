@@ -22,7 +22,7 @@ RUN apk --update add build-base nasm autoconf libtool automake \
 
     cd /home/bob && \
     gem install sass --no-document && \
-
+    git config --global url."https://".insteadOf git:// && \
     npm install -g bower grunt-cli && \
     echo '{ "allow_root": true }' > /root/.bowerrc && \
     gem clean && \
