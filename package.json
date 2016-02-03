@@ -6,10 +6,10 @@
     "Brady Vitrano <brady.vitrano@rackspace.com>"
   ],
   "scripts": {
-    "test": "npm run grunt test",
-    "build": "npm run grunt build",
-    "bower": "./node_modules/bower/bin/bower ",
-    "grunt": "./node_modules/grunt-cli/bin/grunt "
+    "test": "grunt test",
+    "build": "grunt build",
+    "postinstall": "bower install",
+    "mversion": "mversion "
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
@@ -33,5 +33,8 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0",
     "time-grunt": "*"
+  },
+  "devDependencies": {
+    "mversion": "^1.10.1"
   }
 }
