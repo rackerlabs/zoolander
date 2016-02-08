@@ -61,6 +61,14 @@ changes in multiple browsers.)
 * Push branch to your repo
 * Create PR from your repo:`branch` to Zoolander:`master`
 
+## Versioning
+
+Use mversion to bump current version
+```
+npm run mversion major | minor | patch
+```
+For more information on versioning, see http://semver.org/
+
 ## Troubleshooting
 
 **NPM in Container is Toooo Slow and I Hate Waiting!**
