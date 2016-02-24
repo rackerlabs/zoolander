@@ -1,7 +1,0 @@
-#!/bin/sh
-set -e
-cd /src/app
-npm config set registry http://registry.npmjs.org/
-npm install --unsafe-perm
-CI=true bower install
-grunt build

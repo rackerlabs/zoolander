@@ -1,0 +1,17 @@
+{
+  "ceiling": {
+    "layout": "../../_layouts/default",
+    "theme_name": "derek",
+    "css": "/dist/derek/css/derek.css"
+  },
+  "index": {
+    "layout": "../../_layouts/default",
+    "theme_name": "derek",
+    "css": "/dist/derek/css/derek.css"
+  },
+  "navigation": {
+    "layout": "../../_layouts/default",
+    "theme_name": "derek",
+    "css": "/dist/derek/css/derek.css"
+  }
+}

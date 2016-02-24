@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Getting Started
 
 ## Usage
@@ -10,7 +6,8 @@ Insert instructions here
 
 ## Development
 
-{% highlight bash %}
+
+``` bash
 # Clone Repo
 git clone https://github.com/rackerlabs/zoolander
 cd zoolander
@@ -18,14 +15,14 @@ gem install bundler
 bundle install
 npm install
 bower install
-{% endhighlight %}
+```
 
 
 ## Build
 
-{% highlight bash %}
+``` bash
 grunt build:[theme]
-{% endhighlight %}
+```
 
 Available themes:
 
@@ -34,8 +31,8 @@ Available themes:
 
 ## Docs
 
-{% highlight bash %}
-jekyll serve
-#   Server address: http://127.0.0.1:4000/
+``` bash
+npm start
+#   Server address: http://127.0.0.1:9000/
 #   Server running... press ctrl-c to stop.
-{% endhighlight %}
+```
