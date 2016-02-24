@@ -1,4 +1,5 @@
 @import '../_sass/syntax-highlighting';
+@import '../_sass/rsweb-font-style';
 
 body {
   margin-top: 60px;
@@ -6,4 +7,47 @@ body {
 
 .highlight {
   margin-top: 10px;
+}
+i {
+    font-size:4em;
+    font-family: 'rsweb';
+    line-height: normal;
+    color: black;
+    font-style: normal;
+    font-family: 'rsweb'!important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.right{
+    float:right;
+}
+.header{
+    background-color:#2e3238;
+    padding:1em 0;
+    color:white;
+}
+.icon-grid-item{
+    margin-top: 1em;
+}
+.documentation{
+    padding:2em;
+}
+code{
+    background: #3b3f45;
+    color: #e0e0d7;
+}
+.card.blue {
+border-top-color: #739eaf;
+}
+.card {
+    background: #fdfdfd;
+    border-top: solid 8px #bfbfbf;
+    box-shadow: 0 0 0 rgba(0,0,0,.25);
+    margin: 1.5em;
 }
