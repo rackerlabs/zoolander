@@ -9,7 +9,9 @@
     "test": "grunt test",
     "build": "grunt build",
     "postinstall": "bower install",
-    "mversion": "mversion "
+    "mversion": "mversion ",
+    "harp": "harp ",
+    "start": "npm run harp server docs"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
@@ -35,6 +37,7 @@
     "time-grunt": "*"
   },
   "devDependencies": {
+    "harp": "^0.20.1",
     "mversion": "^1.10.1"
   }
 }

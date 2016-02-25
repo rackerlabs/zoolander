@@ -1,0 +1,8 @@
+{
+  "index": {
+    "title": "Zoolander | Incubation",
+    "layout": "../../_layouts/default",
+    "css": "/dist/derek/css/derek.css",
+    "theme_name": "derek"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "index": {
+    "css": "/dist/derek/css/derek.css",
+    "theme_name": "derek",
+    "layout": "../../_layouts/default"
+  },
+  "landing-page": {
+    "layout": "../../_layouts/default",
+    "css": "/dist/derek/css/derek.css"
+  }
+}

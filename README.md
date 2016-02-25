@@ -5,47 +5,19 @@ Derek Zoolander's Corporate Style Guide to Help Product Teams Build Ridiculously
 
 ## Requirements
 
-* Docker Toolbox (Docker Client, Docker Compose)
-* VirtualBox
+Node & NPM
 
 ## Getting Started (Step by Step)
 
-Once you have Docker Toolbox and VirtualBox, open new terminal and run the following:
-
 ```
-git clone https://github.com/rackerlabs/zoolander.git
-cd zoolander
-docker-machine create --driver=virtualbox --virtualbox-cpu-count=2 --virtualbox-memory=2048 default
-docker-machine ls # get ip address
-eval "$(docker-machine env default)"
-docker-compose up -d
-docker-compose ps # get generated port for 4000
-docker-compose logs
-# wait for npm install to complete....
+npm install
+npm start
 ```
-
-You should see this when ready
-
-```
-grunt_1  | Running "watch" task
-grunt_1  | Waiting...
-```
-
-**Why is NPM install so sloooooooooowwwww??**
-
-See: [NPM Issue 8836](https://github.com/npm/npm/issues/8836)
-
 
 ## Restarting Development
 
 ```
-cd zoolander
-docker-machine start default
-docker-machine ls
-eval "$(docker-machine env default)"
-docker-compose up -d
-docker-compose ls
-docker-compose logs
+npm start
 ```
 
 ## Contributing
@@ -68,27 +40,6 @@ Use mversion to bump current version
 npm run mversion major | minor | patch
 ```
 For more information on versioning, see http://semver.org/
-
-## Troubleshooting
-
-**NPM in Container is Toooo Slow and I Hate Waiting!**
-
-The second time around `npm install` will only take a minute. However, a minute is a long time! For you speed demons, you can
-run a hybrid development environment if you like by running Jekyll Docs in the container and `grunt` and `npm` on the host.
-
-```
-docker-compose up -d jekyll
-grunt watch
-```
-
-**I need to install an NPM package, where do I install it?**
-
-You need to run `npm install` within the container for packages that depend on a compiler.
-
-```
-docker exec "<container id?>" npm install <package>
-```
-
 
 ## Deploy
 **Pending**
