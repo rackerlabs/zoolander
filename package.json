@@ -11,7 +11,9 @@
     "postinstall": "bower install",
     "mversion": "mversion ",
     "harp": "harp ",
-    "start": "npm run harp server docs"
+    "start": "harp server docs",
+    "compile": "harp compile docs site",
+    "gh-pages": "./build-pages.sh"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",

@@ -1,13 +1,13 @@
 {
   "index": {
     "layout": "../../_layouts/default",
-    "css": "/dist/global/css/global.css",
+    "css": "dist/global/css/global.css",
     "theme_name": "global",
     "title": "Zoolander | Components"
   },
   "navigation": {
     "layout": "../../_layouts/default",
-    "css": "/dist/global/css/global.css",
+    "css": "dist/global/css/global.css",
     "theme_name": "global",
     "title": "Zoolander | Components > Navigation"
   }
