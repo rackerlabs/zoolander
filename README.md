@@ -42,8 +42,8 @@ npm run mversion major | minor | patch
 For more information on versioning, see http://semver.org/
 
 ## Deploy
-**Pending**
+Run the following command to deploy to github pages!
 
 ```
-rsync -a docs/_site/ deploy@10.14.209.72:/usr/share/nginx/html/
+npm run gh-pages
 ```
