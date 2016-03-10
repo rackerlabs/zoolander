@@ -3,17 +3,6 @@ var webpack = require("webpack");
 module.exports = {
     debug: true,
     cache: false,
-    entry: {
-        //jquery: "./app/jquery",
-        //bootstrap: ["!bootstrap-webpack!./app/bootstrap/bootstrap.config.js", "./app/bootstrap"],
-        //react: "./app/react"
-    },
-    output: {
-        //path: path.join(__dirname, "js"),
-        publicPath: "js/",
-        //filename: "[name].js",
-        //chunkFilename: "[chunkhash].js"
-    },
     module: {
         loaders: [
             // required to write "require('./style.css')"

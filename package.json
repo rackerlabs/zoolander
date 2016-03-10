@@ -7,19 +7,18 @@
   ],
   "scripts": {
     "test": "grunt test",
-    "build": "grunt build",
+    "build": "node ./scripts/build-dist.js",
     "postinstall": "bower install",
-    "mversion": "mversion ",
+    "bump": "mversion ",
     "harp": "harp ",
     "start": "harp server docs",
     "compile": "harp compile docs site",
-    "gh-pages": "./build-pages.sh"
+    "gh-pages": "./scripts/build-pages.sh"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.5",
-    "jquery": "^2.1.4",
     "bower": "^1.6.5",
     "grunt": "^0.4.5",
     "grunt-concurrent": "*",
@@ -33,10 +32,13 @@
     "grunt-jscs": "^2.1.0",
     "grunt-newer": "*",
     "grunt-webpack": "^1.0.11",
+    "jquery": "^2.1.4",
     "load-grunt-config": "*",
+    "lodash": "^4.6.1",
+    "node-sass": "^3.4.2",
+    "time-grunt": "*",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0",
-    "time-grunt": "*"
+    "webpack-dev-server": "^1.12.0"
   },
   "devDependencies": {
     "harp": "^0.20.1",
