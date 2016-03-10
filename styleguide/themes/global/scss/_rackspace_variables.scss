@@ -1,10 +1,63 @@
 @import "bootstrap_variables";
 
-$font_path: 'https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/fonts/';
+$heading: 'Quicksand', Helvetica, Arial, sans-serif;
+$subhead: 'Montserrat', Helvetica, Arial, sans-serif;
+$copy: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$code: tahoma, arial, geneva, helvetica;
 
+$white: #fff;
+
+$decision-engine-blue: #3295E3;
+$bright-blue: #0071db;
+$light-blue: #09c2e5;
+$steel-blue: #007295;
+$teal: #00ffff;
+$mediumteal: #0DCFD9;
+$darkteal: #00B4C3;
+
+$bright-red: #cc0000;
+
+$bright-green: #23cd69;
+$magento-orange: #ed672f;
+$purple: #784b91;
+$signup-green: #5aaa28;
+$mustard: #f6b100;
+
+$active: #00a96d;
+$inactive: #ccc;
+
+$rackspace-red: $brand-primary;
 $brand-black: $gray-base;
 $brand-yellow: #f6b100;
 $brand-yellow-dark: #f6a100;
 $brand-blue: #1ae9ef;
 $brand-blue-dark: #0dcfd9;
+
+$full-width: 100%;
+$half-width: 50%;
+
+/* Layout */
+.full-width { width:  $full-width!important; }
+.no-margin { margin: 0 !important; }
+.no-padding { padding: 0 !important; }
+
+/* Text Alignments */
+.centered { text-align: center !important; }
+.left { text-align: left !important; }
+.right { text-align: right !important; }
+
+.va-middle { vertical-align: middle !important; }
+
+/* Text Styles */
+.uppercase { text-transform: uppercase !important; }
+
+/* Backgrounds */
+.bg-decision-engine-gray { background-color:  $gray-light !important;}
+.bg-red { background-color:  $rackspace-red !important; }
+.bg-steel-blue{ background-color:  $steel-blue !important; }
+.bg-white { background-color:  $white !important; }
+
+.no-border { border: none !important; }
+.center-block{ float:none; }
+
 

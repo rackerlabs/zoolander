@@ -1,0 +1,77 @@
+$heading: 'Quicksand', Helvetica, Arial, sans-serif;
+$subhead: 'Montserrat', Helvetica, Arial, sans-serif;
+$copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$code: Tahoma, Arial, Geneva, Helvetica;
+
+h1,h2,h3,h4,h5,h6,body,p{
+  color:$darkest-gray;
+}
+
+h1, h2, h3{
+  font-family:$heading;
+  @extend .uppercase;
+  font-weight: 400;
+}
+
+h4, h5, h6{
+  font-family: $subhead;
+  @extend .uppercase;
+}
+
+h1{
+  font-size: 3em;
+  text-align: center;
+}
+h2 {
+  font-size:2em;
+  line-height:1.25em;
+}
+h3 {
+  font-size:1.5em;
+  line-height:1.25em;
+  margin: 10px 0;
+}
+
+body, p, blockquote{
+  font-family:$copy;
+  text-align:left;
+  font-weight:400;
+}
+
+.semi-bold{font-weight: 600;}
+
+code, .lrembedtxt{
+  font-family: $code;
+}
+
+a {
+  color: $light-gray;
+  text-decoration: none;
+  line-height: 19px;
+  font-weight:600;
+  &:hover, &:active, &:visited{
+      text-decoration:underline;
+      color:$bright-blue;
+    }
+}
+
+
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  font-size: 1.75rem;
+  font-weight: normal!important;
+  letter-spacing: normal!important;
+  line-height: normal!important;
+}
+blockquote:before {
+  content: open-quote;
+}
+
+cite{
+  text-transform:uppercase;
+  font-size: .75rem;
+  white-space:pre;
+  &:before{
+    content:"\A-";
+  }
+}

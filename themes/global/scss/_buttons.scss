@@ -1,0 +1,29 @@
+/* the button class can be used for both anchor and input tags, defaults to medium/gray */
+.button, a.button{
+  @extend .semi-bold;
+  @extend .uppercase;
+  @extend .center;
+  border-radius: 0px;
+  padding: 8px 20px;
+  width:100%;
+  text-decoration:none;
+}
+
+button.lead{
+  @extend .white;
+  background-color: $signup-green;
+  &:hover, &:active, &:visited{
+    background-color: lighten($signup-green, 5%);
+    @extend .white;
+  }
+}
+
+button.learning{
+  border: 3px solid $mediumteal;
+  background: transparent;
+  color: #333;
+  &:hover{
+    background-color:$mediumteal;
+    border-color:transparent;
+  }
+}
