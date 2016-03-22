@@ -1,0 +1,153 @@
+extends ../../_layouts/page.jade
+
+block page
+  h2 Navigation
+  p Concepts for the navigation are inspired by the following sites:
+  ul
+    li rackspace.com
+    li developer.rackspace.com
+
+  h2 Ceiling Navigation
+  p If present, this element should be the top most element on a web page.
+  p It is recommended to use a combination of links with labels as well as button drop downs.
+
+
+  h3
+    span.badge.alert-warning WIP
+    Ceiling Menu Links
+  p Various combinations on achieving links with labels within the ceiling navigation.
+  p
+  a(href="#") Back to Top
+
+  pre
+    code
+      .ceiling(role="menubar")
+        nav.navbar-left
+          ul.menu-inline(role="menu")
+            li
+              label:a(href="javascript:", role="menuitem") Support
+              a(href="tel:+18000000000", role="menuitem", title="Support Phone Number") 1-800-000-0000
+            li
+              label:a(href="javascript:", role="menuitem") Support
+              a(href="tel:+18000000000", role="menuitem", title="Support Phone Number") 1-800-000-0000
+            li
+              a(href="tel:+18000000000", role="menuitem", title="Link Description") Link Only
+            li
+              label Label w/o Link
+              a(href="tel:+18000000000", role="menuitem", title="Link Described by Label") Some Link
+            li Text Only
+
+  h3
+    span.badge.alert-warning WIP
+    Ceiling Menu Links Right Side
+  p Switch to the right side of ceiling
+  p
+  a(href="#") Back to Top
+
+  pre
+    code
+      .ceiling(role="menubar")
+        nav.navbar-right
+          ul.menu-inline(role="menu")
+            li
+              label:a(href="javascript:", role="menuitem") Support
+              a(href="tel:+18000000000", role="menuitem", title="Support Phone Number") 1-800-000-0000
+            li
+              label:a(href="javascript:", role="menuitem") Support
+              a(href="tel:+18000000000", role="menuitem", title="Support Phone Number") 1-800-000-0000
+            li
+              a(href="tel:+18000000000", role="menuitem", title="Link Description") Link Only
+            li
+              label Label w/o Link
+              a(href="tel:+18000000000", role="menuitem", title="Link Described by Label") Some Link
+            li Text Only
+
+  h3
+    span.badge.alert-warning WIP
+    Ceiling Menu Links Both Sides
+  p Combination
+  a(href="#") Back to Top
+
+  pre
+    code
+      .ceiling(role="menubar")
+        nav.navbar-left
+          ul.menu-inline(role="menu")
+            li
+              label:a(href="javascript:", role="menuitem") Support
+              a(href="tel:+18000000000", role="menuitem", title="Support Phone Number") 1-800-000-0000
+            li
+              label:a(href="javascript:", role="menuitem") Support
+              a(href="tel:+18000000000", role="menuitem", title="Support Phone Number") 1-800-000-0000
+        nav.navbar-right
+          ul.menu-inline(role="menu")
+            li
+              label:a(href="javascript:", role="menuitem") Support
+              a(href="tel:+18000000000", role="menuitem", title="Support Phone Number") 1-800-000-0000
+            li
+              label:a(href="javascript:", role="menuitem") Support
+              a(href="tel:+18000000000", role="menuitem", title="Support Phone Number") 1-800-000-0000
+
+  h3
+    span.badge.alert-warning WIP
+    Ceiling Buttons
+  p Buttons
+  a(href="#") Back to Top
+
+  pre
+    code
+      .ceiling(role="menubar")
+        nav.navbar-left
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href="javascript:", data-toggle="dropdown", role="button", aria-expanded="false") Menu
+              ul.dropdown-menu(role="menu")
+                li:a(href="#", role="menuitem") Rackspace Cloud
+                li:a(href="#", role="menuitem") Cloud Sites
+                li:a(href="#", role="menuitem") Cloud Office
+            li.dropdown
+              a.dropdown-toggle(href="javascript:", data-toggle="dropdown", role="button", aria-expanded="false") Menu
+              ul.dropdown-menu(role="menu")
+                li:a(href="#", role="menuitem") Rackspace Cloud
+                li:a(href="#", role="menuitem") Cloud Sites
+                li:a(href="#", role="menuitem") Cloud Office
+        nav.navbar-right
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href="javascript:", data-toggle="dropdown", role="button", aria-expanded="false") Menu
+              ul.dropdown-menu(role="menu")
+                li:a(href="#", role="menuitem") Rackspace Cloud
+                li:a(href="#", role="menuitem") Cloud Sites
+                li:a(href="#", role="menuitem") Cloud Office
+            li.dropdown
+              a.dropdown-toggle(href="javascript:", data-toggle="dropdown", role="button", aria-expanded="false") Menu
+              ul.dropdown-menu(role="menu")
+                li:a(href="#", role="menuitem") Rackspace Cloud
+                li:a(href="#", role="menuitem") Cloud Sites
+                li:a(href="#", role="menuitem") Cloud Office
+
+  h3
+    span.badge.alert-warning WIP
+    Ceiling with Collapse
+  p Buttons
+  a(href="#") Back to Top
+
+  pre
+    code
+      .ceiling(role="menubar")
+          nav.navbar-right
+            ul.nav.navbar-nav
+              li.dropdown
+                a.dropdown-toggle(href="javascript:", data-toggle="dropdown", role="button", aria-expanded="false") Menu
+                ul.dropdown-menu(role="menu")
+                  li:a(href="#", role="menuitem") Rackspace Cloud
+                  li:a(href="#", role="menuitem") Cloud Sites
+                  li:a(href="#", role="menuitem") Cloud Office
+              li.dropdown
+                a.dropdown-toggle(href="javascript:", data-toggle="dropdown", role="button", aria-expanded="false") Menu
+                ul.dropdown-menu(role="menu")
+                  li:a(href="#", role="menuitem") Rackspace Cloud
+                  li:a(href="#", role="menuitem") Cloud Sites
+                  li:a(href="#", role="menuitem") Cloud Office
+
+

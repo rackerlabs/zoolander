@@ -1,0 +1,18 @@
+{
+  "index": {
+    "theme_name": "global",
+    "title": "Zoolander"
+  },
+  "incubation": {
+    "theme_name": "global",
+    "title": "Zoolander | Incubation"
+  },
+  "about": {
+    "theme_name": "global",
+    "title": "Zoolander | About"
+  },
+  "getting-started": {
+    "theme_name": "global",
+    "title": "Zoolander | Getting Started"
+  }
+}
