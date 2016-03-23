@@ -26,6 +26,21 @@ npm install
 npm start
 ```
 
+## Testing
+Test a theme's JS run:
+
+```
+npm test
+```
+
+
+## Watch
+`npm start` will dynamically compile css and templates but in the event you would like to have a theme's JS to build automatically you can use the following command:
+
+```
+npm run watch
+```
+
 ## Building a Distribution
 ```
 npm run build
@@ -45,8 +60,3 @@ Run the following command to deploy to github pages!
 ```
 npm run gh-pages
 ```
-
-## Coming Soon
-
-* Testing and linting for css/js
-* A watcher to automate rebuild
