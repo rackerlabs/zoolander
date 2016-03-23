@@ -1,8 +1,9 @@
 var _ = require('lodash');
+var harp = require('harp');
 var webpack = require('webpack');
-var sass = require('node-sass');
 var webpackConf = require('../webpack.config');
-var fs = require('fs');
+var fs = require('fs-extra');
+var async = require('async');
 var actions = [
   'mashing',
   'rolling',
@@ -31,46 +32,45 @@ var randomMessage = function (thing) {
   ].join(' ');
 };
 
-var themesDir = __dirname + '/../themes';
-fs.readdir(themesDir, function (err, dirs) {
-  _.each(dirs, function (dir) {
-    console.log(randomMessage(dir));
-    var themeDir = themesDir + '/' + dir;
-    var path = {
-      css: themeDir + '/scss/',
-      js: themeDir + '/js/src/',
-    };
-    var distPath = __dirname + '/../dist/' + dir;
-    var cssPath = distPath + '/css/' + dir + '.css';
-    var jsPath = distPath + '/js/';
+var webpackCallback = function (err, results) {
+  if (err) {
+    console.log(err);
+    return;
+  }
 
-    webpackConf.entry = path.js + 'entry.js';
-    webpackConf.output = {
-      path: jsPath,
-      filename: dir + '.bundle.js'
-    };
+  harp.compile(__dirname + '/../styleguide', '/tmp/styleguide', harpCallback);
+};
 
-    var errHandler = function (err) {
-      if (err) {
-        console.log(err);
-      }
-      return !!err;
+var harpCallback = function (err, results) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+
+  var copyCompiledTheme  = function (theme, callback) {
+    console.log(randomMessage(theme));
+    var themeDir = themesDir + '/' + theme;
+    var cssPath = themeDir + '/scss/build.css';
+    var distPath = __dirname + '/../dist/css/' + theme + '.css';
+    fs.copy(cssPath, distPath, callback);
+  }
+  var themesDir = '/tmp/styleguide/themes';
+  var themes = fs.readdirSync(themesDir);
+  _.pull(themes, 'bower_components');
+  async.each(themes, copyCompiledTheme, function (err) {
+    if (err) {
+      console.log(err);
+      return;
     }
 
-    var sassCallback = function (err, result) {
-      if(!errHandler(err)) {
-        fs.writeFile(cssPath, result.css, errHandler);
+    console.log('Copying Fonts');
+    fs.copy(__dirname + '/../styleguide/fonts', __dirname + '/../dist/fonts', function (err) {
+      if (err) {
+        console.log(err);
+        return;
       }
-    };
-
-    var webpackCallback = function (err, results) {
-      errHandler(err);
-    };
-
-    sass.render({
-      file: path.css + 'build.scss',
-      includePaths: [path.css],
-    }, sassCallback);
-    webpack(webpackConf, webpackCallback);
+      console.log('Distribution Successfully Created');
+    });
   });
-});
+};
+webpack(webpackConf, webpackCallback);

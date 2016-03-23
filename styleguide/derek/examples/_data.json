@@ -1,0 +1,9 @@
+{
+  "index": {
+    "css": "themes/derek/scss/build.css",
+    "theme_name": "derek"
+  },
+  "landing-page": {
+    "css": "themes/derek/scss/build.css"
+  }
+}

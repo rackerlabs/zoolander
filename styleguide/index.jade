@@ -1,0 +1,28 @@
+extends ./_layouts/default.jade
+
+block content
+  .jumbotron
+    h1 Zoolander
+    p Corporate brand style guide for Rackspace websites.
+  .row
+    .col-lg-12
+      h2 Quick Start
+      p Rackspace flavored Bootstrap assets. Add the following to your HTML template.</p>
+      pre
+        code.language-javascript
+          = '<link href="https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/global/css/global.css">'
+          br/
+          = '<script src="https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/global/js/global.bundle.js"></script>'
+          br/
+  .row.text-center
+    .col-md-4
+      h2 Global Base
+      p Vanilla Bootstrap 3.x with styles defaulted to match Rackspace corporate brand.
+      a(href="global"): img.img-thumbnail(src="imgs/global.png")
+    .col-md-4
+      h2 Derek
+      p Extended version of Global Base with shared components.
+      a(href="derek"): img.img-thumbnail(src="imgs/pending.png")
+    .col-md-4
+      h2 Coming Soon!
+      p Or never who knows
