@@ -1,14 +1,14 @@
 #!/bin/bash
 
-sed -i '' -E 's/base":.*/base": "\/zoolander\/"/' docs/_harp.json
+sed -i '' -E 's/base":.*/base": "\/zoolander\/",/' styleguide/_harp.json
 npm run compile
-git checkout -- docs/_harp.json
+git checkout -- styleguide/_harp.json
 git branch -D gh-pages
 
 git checkout --orphan gh-pages
 git rm -rf .
-mv site/* ./
-rm -r site
+mv /tmp/site/* ./
+rm -r /tmp/site
 
 git checkout master -- dist
 echo -e "node_modules\nbower_components" > .gitignore

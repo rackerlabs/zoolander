@@ -12,7 +12,7 @@
     "bump": "mversion ",
     "harp": "harp ",
     "start": "harp server styleguide",
-    "compile": "harp compile styleguide site",
+    "compile": "harp compile styleguide /tmp/site",
     "gh-pages": "./scripts/build-pages.sh"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
