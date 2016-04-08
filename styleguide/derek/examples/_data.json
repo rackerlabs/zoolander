@@ -5,5 +5,8 @@
   },
   "landing-page": {
     "css": "themes/derek/scss/build.css"
+  },
+  "solutions": {
+    "css": "themes/derek/scss/build.css"
   }
 }
