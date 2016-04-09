@@ -16,7 +16,9 @@ module.exports = {
     entry: entry,
     output: {
       path: path.join(__dirname, 'styleguide', 'dist', 'js'),
-      filename: '[name].bundle.js'
+      filename: '[name].bundle.js',
+      libraryTarget: "var",
+      library: "Zoolander"
     },
     module: {
         loaders: [
