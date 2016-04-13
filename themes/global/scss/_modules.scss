@@ -1,0 +1,160 @@
+.cta{
+  @extend .center;
+  & > a{
+    @extend .button
+  }
+}
+
+
+.offerBox {
+  background: #fff url("${images}/solutions/offer-box-stack.png") no-repeat scroll right bottom / 70px 100px;
+  padding: 10px;
+  margin: 10px;
+  background-clip: padding-box;
+}
+
+.expertise-container{
+  background-size: cover;
+  padding: 60px 0;
+  p {
+    background-color: $rackspace-red;
+    @extend .white;
+    display: table;
+    font-style: normal;
+    font-size: 4.4rem;
+    font-weight: 300;
+    letter-spacing: -0.007em;
+    line-height: 175%;
+    vertical-align: center;
+    padding: 0 20px;
+    margin-bottom: 5px;
+    text-align: left;
+    text-transform: none;
+  }
+}
+
+/* ================================================================
+  PRODUCT AND OTHER SHORT DESCRIPTIONS
+================================================================ */
+.infrastructure-and-services-container {
+  .clickarea {
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.0);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      cursor:pointer;
+    }
+  }
+}
+
+.resource-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.resource{
+  background-color: $white;
+  box-sizing: border-box;
+  border-top: 12px solid $bright-green;
+  padding: 20px 20px 5px 20px;
+  margin-bottom: 40px;
+
+  p:first-of-type{
+    padding-top: 8px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 150%;
+  }
+  a{
+    color: $medium-dark-gray;
+    display: block;
+    font-size: 14px;
+    @extend .semi-bold;
+    letter-spacing: 0;
+    margin-top: 1em;
+    padding-bottom: 20px;
+    text-decoration: none;
+    text-transform: none;
+  }
+  .read-more{
+    color: $rackspace-red;
+  }
+  &:hover{
+    background-color: $bright-green;
+    border-top: 12px solid rgba(0,0,0,0.2);
+    @extend .white;
+    cursor: pointer;
+    a{
+      @extend .white;
+      text-decoration: none;
+      text-transform: none;
+    }
+    img {
+      display: none;
+      &.hover{ display: inline-block; }
+      }
+    }
+  img{
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 10px;
+    vertical-align: top;
+    width: 60px;
+    &.hover{ display: none; }
+  }
+}
+
+.customer_stories_logos {
+  img {
+    max-height: 70px;
+    padding: 1% 2%;
+    @extend .center;
+    vertical-align: middle;
+    &:hover {
+      background-color: rgba(0, 5, 10, 0.1);
+      cursor: pointer;
+    }
+  }
+}
+.technologies {
+  h3{
+    & + p {
+      padding-top: 8px;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+}
+.techapps {
+  img {
+    max-height: 80px;
+    max-width: 140px;
+    padding: 2%;
+    @extend .center;
+    vertical-align: middle;
+    }
+    span{
+    &:hover {
+      background-color: rgba(0, 5, 10, 0.1);
+      cursor: pointer;
+    }
+  }
+}
+.additional-resource{
+  .clickarea{
+    border-left:3px solid transparent;
+    padding-left:10px;
+    &:hover{
+      border-left:3px solid $teal;
+    }
+  }
+  i, span {color: $medium-gray;}
+  .fa-angle-right {font-size: 2vw;}
+  .icon {font-size: 3vw;}
+}
