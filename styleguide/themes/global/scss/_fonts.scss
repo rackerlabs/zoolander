@@ -1,0 +1,84 @@
+$heading: 'Quicksand', Helvetica, Arial, sans-serif;
+$subhead: 'Montserrat', Helvetica, Arial, sans-serif;
+$copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$code: Tahoma, Arial, Geneva, Helvetica;
+
+h1,h2,h3,h4,h5,h6,body,p{
+  color:$darkest-gray;
+}
+
+h1, h2, h3{
+  font-family:$heading;
+  @extend .uppercase;
+  font-weight: 400;
+}
+
+h4, h5, h6{
+  font-family: $subhead;
+  @extend .uppercase;
+}
+
+h1{
+  font-size: 3em;
+  text-align: center;
+}
+h2 {
+  font-size:2em;
+  line-height:1.25em;
+}
+h3 {
+  font-size:1.5em;
+  line-height:1.25em;
+  margin: 10px 0;
+}
+
+body, p, blockquote{
+  font-family:$copy;
+  text-align:left;
+  font-weight:400;
+}
+
+.semi-bold{font-weight: 600;}
+
+code, .lrembedtxt{
+  font-family: $code;
+}
+
+a {
+  color: $light-gray;
+  text-decoration: none;
+  line-height: 19px;
+  font-weight:600;
+  &:hover, &:active, &:visited{
+      text-decoration:underline;
+      color:$bright-blue;
+    }
+}
+
+
+blockquote {
+  font-size: 1.75rem;
+  font-weight: 300;
+  border-left:none;
+  margin-bottom: 0px;
+}
+
+cite{
+  color: $darkteal;
+  white-space:pre;
+  font-style:italic;
+  font-size: .9em;
+  font-family: $copy;
+  &:before{
+    content:"—";
+    max-height:1px;
+  }
+}
+
+.read-more {
+  margin-top: 20px;
+  a{
+    @extend .white;
+    text-decoration: none;
+  }
+}

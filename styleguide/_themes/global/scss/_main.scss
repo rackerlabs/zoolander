@@ -192,55 +192,7 @@ small, .small {
 }
 
 //** blockquote overrides
-blockquote {
-  border: 0 none;
-  color: #c40022;
-  font-family: $font-family-sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  line-height: 140%;
-  margin: 0 0 0.6em;
-  padding: 0;
-  text-transform: none;
-  word-spacing: 0;
-}
-blockquote.alternate {
-  border: 0 none;
-  color: #c40022;
-  font-family: $font-family-special;
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  line-height: 140%;
-  margin: 0 0 20px;
-  padding: 0;
-  text-transform: uppercase;
-  word-spacing: 0.09em
-}
-blockquote::before {
-  content: "“";
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  letter-spacing: 2px;
-  line-height: inherit;
-  margin: 0 0 0 -10px;
-  padding: 0;
-  position: absolute;
-}
-blockquote::after {
-  content: "”";
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
+
 cite {
   display: block;
   font-size: 12px;
