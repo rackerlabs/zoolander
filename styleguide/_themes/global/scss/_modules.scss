@@ -234,6 +234,107 @@
     font-size:2em;
   }
 }
+
+.nav-tabs{
+ @extend .center;
+ border:none;
+ margin-bottom:0px;
+  &>li{
+    border-top: 5px solid $darkteal;
+    padding:0px;
+    background-color:$darkteal;
+    float:none;
+    display:inline-block;
+    //snowflake
+    &.enterprise{
+      border-top: 5px solid $darkest-gray;
+      background-color:$darkest-gray;
+        &:hover, &:active{
+        border-top: 5px solid $darkest-gray;
+        a{
+          background-color: $white;
+          h2,p{
+            color:$darkest-gray;
+          }
+        }
+      }
+    }
+    a{
+      border-radius:0px;
+      margin: 0px;
+      padding: 10px 20px;
+      border:none;
+      h2, p{
+        @extend .white;
+        @extend .center;
+        margin:0px;
+      }
+    }
+    &:hover{
+      border-top: 5px solid $white;
+      a{
+        background-color: $darkteal;
+      }
+    }
+    &.active{
+      background-color:$white;
+      a{
+        border:none!important;
+        h2, p{
+          color: $darkteal;
+          @extend .center;
+        }
+      }
+      //snowflake
+      &.enterprise {
+        a{
+          h2, p{
+            color:$darkest-gray;
+          } 
+        }
+        &:hover{
+          border-top: 5px solid $darkest-gray;
+        }
+      }
+      &:hover{
+        border-top: 5px solid $darkteal;
+      }
+    }
+  }
+}
+
+.tab-content{
+  background-color:$white;
+  padding:15px;
+}
+
+.panel-default>.panel-heading{
+ background-color:$darkteal;
+ &.enterprise{
+   background-color:$darkest-gray;
+ }
+ .panel-title{
+   &:before{
+     content: "+";
+    float: left;
+    width: 40px;
+    font-size: 3.5em;
+    margin-top: 0px;
+    margin-left: -2px;
+   }
+    a{
+      &:hover{
+       text-decoration:none;
+     }
+     h2, p{
+       @extend .white;
+       @extend .center;
+     }
+    }
+  }
+}
+
+
 //SPECIAL SNOWFLAKES TO FOLLOW
 
 .rocket{
