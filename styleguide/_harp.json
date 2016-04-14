@@ -1,6 +1,6 @@
 {
   "globals": {
     "base": "/",
-    "css": "themes/global/scss/build.css"
+    "css": "css/global.css"
   }
 }

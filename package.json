@@ -3,38 +3,19 @@
   "description": "Derek Zoolander's Corporate Style Guide to Help Product Teams Build Ridiculously Good Looking Websites",
   "version": "0.2.3",
   "authors": [
-    "Brady Vitrano <brady.vitrano@rackspace.com>"
+    "Rackspace Web Team <rswebdev@rackspace.com>"
   ],
   "scripts": {
-    "test": "npm run test:jscs && npm run test:jshint",
-    "test:jscs": "jscs styleguide/themes ",
-    "test:jshint": "jshint --exclude styleguide/themes/bower_components styleguide/themes",
-    "build": "node ./scripts/build-dist.js",
-    "postinstall": "bower install",
-    "bump": "mversion ",
     "harp": "harp ",
     "start": "harp server styleguide",
-    "compile": "harp compile styleguide /tmp/site",
-    "gh-pages": "./scripts/build-pages.sh",
-    "watch": "watch 'webpack' styleguide/themes/"
+    "gh-pages": "./build-pages.sh",
+    "preversion": "npm run harp compile styleguide dist && git add .",
+    "postcommit": "git push && git push --tags"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
   "dependencies": {
-    "async": "^1.5.2",
-    "bootstrap": "^3.3.5",
-    "bower": "^1.6.5",
-    "fs-extra": "^0.26.7",
-    "jquery": "^2.1.4",
-    "jshint": "^2.9.1",
-    "jstransformer-marked": "^1.0.1",
-    "lodash": "^4.6.1",
-    "watch": "^0.17.1",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0"
-  },
-  "devDependencies": {
-    "harp": "^0.20.1",
-    "mversion": "^1.10.1"
+    "bootstrap-sass": "^3.3.6",
+    "harp": "^0.20.1"
   }
 }

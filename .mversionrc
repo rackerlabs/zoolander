@@ -1,8 +1,0 @@
-{
-    "commitMessage": "chore(bump):  Version %s",
-    "tagName": "%s",
-    "scripts": {
-        "precommit": "npm run build && git add .",
-        "postcommit": "git push && git push --tags"
-    }
-}

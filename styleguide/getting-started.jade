@@ -1,42 +1,38 @@
 extends ./_layouts/default.jade
 
 block content
-  :marked
-    # Getting Started
+    h1 Getting Started
 
-    ## Usage
+    h2 Usage
 
-    Insert instructions here
+    p Insert instructions here
 
-    ## Development
+    h2 Development
 
-
-    ``` bash
-    # Clone Repo
-    git clone https://github.com/rackerlabs/zoolander
-    cd zoolander
-    gem install bundler
-    bundle install
-    npm install
-    bower install
-    ```
+    code
+      | # Clone Repo
+      | git clone https://github.com/rackerlabs/zoolander
+      | cd zoolander
+      | gem install bundler
+      | bundle install
+      | npm install
+      | bower install
 
 
-    ## Build
+    h2 Build
 
-    ``` bash
-    grunt build:[theme]
-    ```
+    code
+      | grunt build:[theme]
 
-    Available themes:
+    p Available themes:
 
-    * global
-    * derek
+    ul
+      li global
+      li derek
 
-    ## Docs
+    h2 Docs
 
-    ``` bash
-    npm start
-    #   Server address: http://127.0.0.1:9000/
-    #   Server running... press ctrl-c to stop.
-    ```
+    code
+      | npm start
+      |   Server address: http://127.0.0.1:9000/
+      |   Server running... press ctrl-c to stop.

@@ -1,12 +1,12 @@
 {
   "index": {
-    "css": "themes/derek/scss/build.css",
+    "css": "css/derek.css",
     "theme_name": "derek"
   },
   "landing-page": {
-    "css": "themes/derek/scss/build.css"
+    "css": "css/derek.css"
   },
   "solutions": {
-    "css": "themes/derek/scss/build.css"
+    "css": "css/derek.css"
   }
 }
