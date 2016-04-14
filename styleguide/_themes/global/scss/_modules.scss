@@ -234,3 +234,17 @@
     font-size:2em;
   }
 }
+//SPECIAL SNOWFLAKES TO FOLLOW
+
+.rocket{
+  background-image:url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/office-365/rocketBG.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center 28%;
+}
+
+@media only screen and (max-width : 992px) {
+  .rocket{
+    background-image:none;
+  }
+ }

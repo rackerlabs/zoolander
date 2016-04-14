@@ -15,13 +15,14 @@ img { max-width: 100%; }
 .right { text-align: right !important; }
 .uppercase { text-transform: uppercase; }
 .white {color:$white;}
-
-/* Backgrounds */
-.bg-decision-engine-gray { background-color: $light-gray-white !important;}
-.bg-red { background-color: $rackspace-red !important; }
-.bg-steel-blue{ background-color: $steel-blue !important; }
-.bg-blue-gray{ background-color: $blue-gray !important; }
-.bg-white { background-color: $white !important; }
+.circle{
+  border: solid 2px $darkest-gray;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
 
 //centered-divs
 .center-block{ margin: 0 auto; float:none;}

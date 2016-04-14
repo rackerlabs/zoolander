@@ -4,19 +4,9 @@
 }
 
 // Background Variations
-.bg-steel-blue {
-  background-color: $steel-blue;
-}
-.bg-red {
-  background-color: $rackspace-red;
-}
-.bg-dark-gray {
-  background-color: $darkest-gray;
-}
-.bg-light-gray {
-  background-color: $light-gray-white;
-}
-.bg-crumpled-paper {
-  background-color: $light-gray;
-  background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png);
-}
+.bg-steel-blue { background-color: $steel-blue;}
+.bg-blue-gray { background-color: $blue-gray;}
+.bg-red { background-color: $rackspace-red; }
+.bg-dark-gray { background-color: $darkest-gray; }
+.bg-light-gray { background-color: $light-gray-white; }
+.bg-crumpled-paper { background-color: $light-gray; background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png); }
