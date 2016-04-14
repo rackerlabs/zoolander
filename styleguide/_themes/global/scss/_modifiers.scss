@@ -15,6 +15,7 @@ img { max-width: 100%; }
 .right { text-align: right !important; }
 .uppercase { text-transform: uppercase; }
 .white {color:$white;}
+.strong{font-weight:600;}
 .circle{
   border: solid 2px $darkest-gray;
   border-radius: 50%;
