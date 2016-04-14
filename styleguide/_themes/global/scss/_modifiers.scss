@@ -1,0 +1,43 @@
+$full-width: 100%;
+
+/* Layout */
+.full-width { width: $full-width; }
+.no-margin { margin: 0 !important; }
+.no-padding { padding: 0 !important; }
+img { max-width: 100%; }
+.standard-padding { padding: 40px 15px 60px 15px; }
+
+/* Text Alignments */
+.centered, .center { text-align: center !important; }
+.left { text-align: left !important; }
+.right { text-align: right !important; }
+.uppercase { text-transform: uppercase; }
+.white {color:$white;}
+
+/* Backgrounds */
+.bg-decision-engine-gray { background-color: $light-gray-white !important;}
+.bg-red { background-color: $rackspace-red !important; }
+.bg-steel-blue{ background-color: $steel-blue !important; }
+.bg-blue-gray{ background-color: $blue-gray !important; }
+.bg-white { background-color: $white !important; }
+
+//centered-divs
+.center-block{ margin: 0 auto; float:none;}
+
+//equal height columns
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+//absolutely positioning an element to the bottom of its container
+.bottom{
+  position: absolute;
+  bottom: 0;
+  @extend .full-width;
+  right: 0;
+  height:10%;
+}
+
