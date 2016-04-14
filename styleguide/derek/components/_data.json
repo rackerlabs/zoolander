@@ -1,14 +1,14 @@
 {
   "ceiling": {
     "theme_name": "derek",
-    "css": "themes/derek/scss/build.css"
+    "css": "css/derek.css"
   },
   "index": {
     "theme_name": "derek",
-    "css": "themes/derek/scss/build.css"
+    "css": "css/derek.css"
   },
   "navigation": {
     "theme_name": "derek",
-    "css": "themes/derek/scss/build.css"
+    "css": "css/derek.css"
   }
 }

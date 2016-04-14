@@ -26,35 +26,18 @@ npm install
 npm start
 ```
 
-## Testing
-Test a theme's JS run:
-
-```
-npm test
-```
-
-
-## Watch
-`npm start` will dynamically compile css and templates but in the event you would like to have a theme's JS to build automatically you can use the following command:
-
-```
-npm run watch
-```
-
-## Building a Distribution
-```
-npm run build
-```
-
 ## Versioning
 
 Use the following command to bump current version
+
 ```
-npm run bump major | minor | patch
+npm version major | minor | patch
 ```
+
 For more information on versioning, see http://semver.org/
 
 ## Deploy
+
 Run the following command to deploy to github pages!
 
 ```

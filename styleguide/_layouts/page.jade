@@ -1,13 +1,14 @@
 extends ./default.jade
 
 block content
-  .row
-    .col-md-3
-      h1 #{ theme_name }
-      .list-group.list-unstyled
-        a.list-group-item(href="#{ theme_name }/") Home
-        a.list-group-item(href="#{ theme_name }/examples/index.html") Examples
-        a.list-group-item(href="#{ theme_name }/components/") Components
-        a.list-group-item(href="#{ theme_name }/incubation/") Incubation
-    .col-md-9
-      block page
+  .container
+    .row
+      .col-md-3
+        h1 #{ theme_name }
+        .list-group.list-unstyled
+          a.list-group-item(href="#{ theme_name }/") Home
+          a.list-group-item(href="#{ theme_name }/examples/index.html") Examples
+          a.list-group-item(href="#{ theme_name }/components/") Components
+          a.list-group-item(href="#{ theme_name }/incubation/") Incubation
+      .col-md-9
+        block page
