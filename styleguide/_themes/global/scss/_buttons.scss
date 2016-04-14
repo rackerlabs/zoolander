@@ -30,6 +30,15 @@ button.lead{
   }
 }
 
+button.leaving{
+  @extend .white;
+  background-color: $mustard;
+  &:hover, &:active, &:visited{
+    background-color: lighten($mustard, 5%);
+    @extend .white;
+  }
+}
+
 button.learning{
   border: 3px solid $mediumteal;
   background: transparent;

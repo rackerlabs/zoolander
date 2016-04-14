@@ -1,10 +1,12 @@
 $full-width: 100%;
 
+
+img { max-width: 100%; }
 /* Layout */
 .full-width { width: $full-width; }
 .no-margin { margin: 0 !important; }
 .no-padding { padding: 0 !important; }
-img { max-width: 100%; }
+.half-padding{ padding: 20px 15px 30px 15px; }
 .standard-padding { padding: 40px 15px 60px 15px; }
 
 /* Text Alignments */

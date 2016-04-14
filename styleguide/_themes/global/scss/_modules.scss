@@ -193,3 +193,44 @@
 .quote-icon{
   padding:20px;
 }
+
+.rug{
+  background-color:$darkteal;
+  @extend .half-padding;
+  @extend .center;
+  a{
+    @extend .white;
+    @extend h4;
+    @extend .center;
+    text-decoration:none;
+    &:hover, &:visited, &:focus{
+      @extend .white;
+    }
+    i{
+      font-family:'fa';
+      font-size:2em;
+    }
+  }
+}
+
+#top-link-desktop a{
+  background-color:$darkteal;
+  @extend .white;
+  @extend h4;
+  @extend .center;
+  text-decoration:none;
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  width: 50px;
+  height: 40px;
+  z-index: 100;
+  display: none;
+  &:hover, &:visited, &:focus{
+    @extend .white;
+  }
+  i{
+    font-family:'fa';
+    font-size:2em;
+  }
+}
