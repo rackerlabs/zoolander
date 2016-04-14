@@ -8,5 +8,8 @@
   },
   "solutions": {
     "css": "css/derek.css"
+  },
+  "office365": {
+    "css": "css/derek.css"
   }
 }
