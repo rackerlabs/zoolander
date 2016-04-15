@@ -4,6 +4,10 @@
 @import 'components/rsweb-font-style';
 @import 'components/solutions';
 
+.content {
+  background: $white;
+}
+
 .clear-fixed-top {
   margin-top: $navbar-height;
 }
