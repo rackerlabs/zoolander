@@ -10,7 +10,7 @@
     "start": "harp server styleguide",
     "gh-pages": "./build-pages.sh",
     "preversion": "npm run harp compile styleguide dist && git add .",
-    "postcommit": "git push && git push --tags"
+    "postversion": "git push && git push --tags"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
