@@ -4,7 +4,7 @@
   @extend .uppercase;
   @extend .center;
   border-radius: 0px;
-  padding: 8px 20px;
+  padding: 15px 20px;
   width:100%;
   text-decoration:none;
   font-size: .85em;
@@ -21,7 +21,7 @@
   }
 }
 
-button.lead{
+.lead button, .lead .button, a.lead{
   @extend .white;
   background-color: $signup-green;
   &:hover, &:active, &:visited{
@@ -30,7 +30,7 @@ button.lead{
   }
 }
 
-button.leaving{
+.leaving button, .leaving .button, a.leaving{
   @extend .white;
   background-color: $mustard;
   &:hover, &:active, &:visited{
@@ -39,7 +39,7 @@ button.leaving{
   }
 }
 
-button.learning{
+.learning button, .learning .button, a.learning{
   border: 3px solid $mediumteal;
   background: transparent;
   color: #333;

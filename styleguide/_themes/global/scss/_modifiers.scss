@@ -8,14 +8,14 @@ img { max-width: 100%; }
 .no-padding { padding: 0 !important; }
 .half-padding{ padding: 20px 15px 30px 15px; }
 .standard-padding { padding: 40px 15px 60px 15px; }
+.standard-padding-full{padding: 40px 0px 60px 0px;}
 
 /* Text Alignments */
 .centered, .center { text-align: center !important; }
-.left { text-align: left !important; }
-.right { text-align: right !important; }
+.left { text-align: left; }
+.right { text-align: right; }
 .uppercase { text-transform: uppercase; }
 .white {color:$white;}
-.strong{font-weight:600;}
 .circle{
   border: solid 2px $darkest-gray;
   border-radius: 50%;
