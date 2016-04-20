@@ -1,5 +1,5 @@
 /* the button class can be used for both anchor and input tags, defaults to medium/gray */
-.button, a.button, button{
+.button, button{
   @extend .semi-bold;
   @extend .uppercase;
   @extend .center;
@@ -10,18 +10,26 @@
   font-size: .85em;
   box-shadow: none;
   border: none;
-}
-
-.banner button, .banner .button{
-  border:3px solid $white;
-  background-color:transparent;
+  cursor: pointer;
   &:hover{
-    background-color:$white;
-    color:$black;
+    text-decoration: none;
   }
 }
 
-.lead button, .lead .button, a.lead{
+.banner button, .banner .button{
+  border: 3px solid $white;
+  background-color:transparent;
+  &:hover{
+    background-color: $white;
+    color: $black;
+  }
+}
+
+.subnav button, .subnav .button{
+  padding: 8px 15px;
+}
+
+.subnav button, .subnav .button, .lead button, .lead .button, a.lead{
   @extend .white;
   background-color: $signup-green;
   &:hover, &:active, &:visited{
@@ -41,10 +49,10 @@
 
 .learning button, .learning .button, a.learning{
   border: 3px solid $mediumteal;
-  background: transparent;
+  padding: 12px 20px;
+  background: $white;
   color: #333;
   &:hover{
-    background-color:$mediumteal;
-    border-color:transparent;
+    background-color: $mediumteal;
   }
 }
