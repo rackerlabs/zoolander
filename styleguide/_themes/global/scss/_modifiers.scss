@@ -15,6 +15,7 @@ img { max-width: 100%; }
 .left { text-align: left; }
 .right { text-align: right; }
 .uppercase { text-transform: uppercase; }
+.medium-teal {color:$mediumteal;}
 .white {color:$white;}
 .circle{
   border: solid 2px $darkest-gray;
@@ -44,4 +45,3 @@ img { max-width: 100%; }
   right: 0;
   height:10%;
 }
-
