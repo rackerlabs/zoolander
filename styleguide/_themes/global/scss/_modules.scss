@@ -1,28 +1,32 @@
 .subnav{
   background-color:$blue-gray;
   border-radius:0px;
-  button{
-    margin: 10px 0px;
+  .subnav-inside{
+    width: 100%;
+  }
+  button, .button{
+    margin: 7px 0px;
   }
   li{
-    padding: 10px;
-    border-bottom:solid transparent 4px;
+    padding: 10px 10px 6px;
+    border-bottom: solid transparent 4px;
     &:hover{
-        border-bottom:solid $darkteal 4px;
-        background-color:transparent;
+        border-bottom: solid $darkteal 4px;
+        background-color: transparent;
       }
     a{
       @extend .white;
       font-weight: 400;
       text-decoration: none;
       &:hover{
-        background-color:transparent;
+        background-color: transparent;
         text-decoration: none;
       }
     }
     &.no-hover{
+      float: right;
       &:hover{
-        border-bottom:solid transparent 4px;
+        border-bottom: solid transparent 4px;
       }
     }
   }
