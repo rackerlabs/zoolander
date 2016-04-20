@@ -308,6 +308,11 @@
 .tab-content{
   background-color:$white;
   padding:15px;
+  position: relative;
+  overflow: auto;
+}
+.panel{
+  margin-bottom:0px;
 }
 
 .panel-default>.panel-heading{
@@ -316,23 +321,30 @@
    background-color:$darkest-gray;
  }
  .panel-title{
-   &:before{
-     content: "+";
-    float: left;
-    width: 40px;
-    font-size: 3.5em;
-    margin-top: 0px;
-    margin-left: -2px;
-   }
     a{
       &:hover{
        text-decoration:none;
+     }
+     h2{
+       margin-bottom:0px;
      }
      h2, p{
        @extend .white;
        @extend .center;
      }
     }
+  }
+}
+table{width: 100%;}
+.panel-heading{
+  background-color:$light-gray-white;
+  min-height:200px;
+  border-radius:0px;
+  &.enterprise{
+    background-color:$darkest-gray;
+  }
+  &.business{
+    background-color:$darkteal;
   }
 }
 
@@ -350,4 +362,76 @@
   .rocket{
     background-image:none;
   }
+  .check, .times{
+    float:right;
+  }
+ }
+ 
+ 
+ .pricing{
+   background-color:$white;
+   .col-md-3{
+     padding: 20px 15px;
+     border-right:1px solid $light-gray-white;
+     &.pricing{
+       padding:0px;
+       border:none;
+     }
+   }
+   .price-compare .col-md-4, .price-compare .col-md-9{
+     padding:0px;
+     border-right:1px solid $light-gray-white;
+     &:last-child{
+       border:none;
+     }
+   }
+   .half-padding{
+     border-top:1px solid $light-gray-white;
+   }
+   .container{
+      border: 1px solid $light-gray-white;
+   }
+   .col-md-9{
+     padding: 20px 0px;
+   }
+   .row .border{
+     border-bottom: 1px solid $light-gray-white;
+   }
+   .title{
+    background-color: $light-gray-white;
+    border: 1px solid $light-gray;
+    padding: 20px 0px;
+    @extend .center;
+    a{
+      @extend h5;
+      &:hover{
+        text-decoration:none;
+      }
+    }
+   }
+   .product-icons{
+     @extend .centered;
+      li{
+        display: inline-block;
+        width: 30px;
+      }
+   }
+   i{
+     font-size: 1.5em;
+   }
+    .check{
+      color:$darkteal;
+   }
+   .times{
+     color:$light-gray;
+   }
+   .fa-arrow-right{
+     border:2px solid $darkteal;
+     border-radius:50%;
+     padding:7px;
+     font-size:1em;
+   }
+   .lead-cell{
+      width: 20%;
+   }
  }
