@@ -14,8 +14,10 @@
     a{
       @extend .white;
       font-weight: 400;
+      text-decoration: none;
       &:hover{
         background-color:transparent;
+        text-decoration: none;
       }
     }
     &.no-hover{
@@ -290,7 +292,7 @@
         a{
           h2, p{
             color:$darkest-gray;
-          } 
+          }
         }
         &:hover{
           border-top: 5px solid $darkest-gray;
