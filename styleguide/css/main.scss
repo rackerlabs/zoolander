@@ -9,19 +9,21 @@ body {
   margin-top: 10px;
 }
 i {
-    font-size:5em;
-    line-height: normal;
-    color: black;
-    font-style: normal;
+  font-size:5em;
+  line-height: normal;
+  color: black;
+  font-style: normal;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:rsweb{
     font-family: 'rsweb'!important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  }
 }
 .right{
     float:right;

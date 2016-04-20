@@ -3,19 +3,26 @@ $subhead: 'Montserrat', Helvetica, Arial, sans-serif;
 $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
 
-h1,h2,h3,h4,h5,h6,body,p{
+body, p{
   color:$darkest-gray;
+  font-family:$copy;
+  @extend .left;
+  font-weight:300;
 }
 
 h1, h2, h3{
   font-family:$heading;
+  color:$darkest-gray;
   @extend .uppercase;
   font-weight: 400;
 }
 
 h4, h5, h6{
   font-family: $subhead;
+  color:$darkest-gray;
   @extend .uppercase;
+  @extend .left;
+  line-height: 1.45em;
 }
 
 h1{
@@ -31,14 +38,7 @@ h3 {
   line-height:1.25em;
   margin: 10px 0;
 }
-
-body, p, blockquote{
-  font-family:$copy;
-  text-align:left;
-  font-weight:400;
-}
-
-.semi-bold{font-weight: 600;}
+.semi-bold, strong{font-weight: 600;}
 
 code, .lrembedtxt{
   font-family: $code;
