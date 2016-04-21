@@ -73,22 +73,22 @@
 /* ================================================================
   PRODUCT AND OTHER SHORT DESCRIPTIONS
 ================================================================ */
-.infrastructure-and-services-container {
-  .clickarea {
-    padding: 5%;
-    background-color: rgba(0, 0, 0, 0.0);
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
-    a {
-      text-decoration: none;
-    }
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-      cursor:pointer;
-    }
+.clickarea {
+  padding: 5%;
+  background-color:$white;
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: $light-gray;
+    cursor:pointer;
+  }
+  .bottom p:last-of-type{
+    color:$rackspace-red;
+    @extend .semi-bold;
   }
 }
+
 
 .resource{
   overflow:auto;
