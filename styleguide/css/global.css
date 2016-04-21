@@ -6343,7 +6343,7 @@ img {
   padding: 40px 0px 60px 0px; }
 
 /* Text Alignments */
-.centered, .pricing .product-icons, .center, .button, .cta > a, a.button, button, .cta, .customer_stories_logos img, .techapps img, .rug, .rug a, #top-link-desktop a, .nav-tabs, .nav-tabs > li a h2, .nav-tabs > li a p, .nav-tabs > li.active a h2, .nav-tabs > li.active a p, .panel-default > .panel-heading .panel-title a h2, .panel-default > .panel-heading .panel-title a p, .pricing .title {
+.centered, .pricing .product-icons, .center, .button, .cta > a, button, .cta, .customer_stories_logos img, .techapps img, .rug, .rug a, #top-link-desktop a, .nav-tabs, .nav-tabs > li a h2, .nav-tabs > li a p, .nav-tabs > li.active a h2, .nav-tabs > li.active a p, .panel-default > .panel-heading .panel-title a h2, .panel-default > .panel-heading .panel-title a p, .pricing .title {
   text-align: center !important; }
 
 .left, body, p, h4, .rug a, #top-link-desktop a, h5, .pricing .title a, h6 {
@@ -6352,10 +6352,10 @@ img {
 .right {
   text-align: right; }
 
-.uppercase, h1, h2, h3, h4, .rug a, #top-link-desktop a, h5, .pricing .title a, h6, .button, .cta > a, a.button, button {
+.uppercase, h1, h2, h3, h4, .rug a, #top-link-desktop a, h5, .pricing .title a, h6, .button, .cta > a, button {
   text-transform: uppercase; }
 
-.white, .read-more a, .lead button, .lead .button, .lead .cta > a, a.lead, .lead button:hover, .lead button:active, .lead button:visited, .lead .button:hover, .lead .cta > a:hover, .lead .button:active, .lead .cta > a:active, .lead .button:visited, .lead .cta > a:visited, a.lead:hover, a.lead:active, a.lead:visited, .leaving button, .leaving .button, .leaving .cta > a, a.leaving, .leaving button:hover, .leaving button:active, .leaving button:visited, .leaving .button:hover, .leaving .cta > a:hover, .leaving .button:active, .leaving .cta > a:active, .leaving .button:visited, .leaving .cta > a:visited, a.leaving:hover, a.leaving:active, a.leaving:visited, .subnav li a, .expertise-container p, .resource:hover, .resource:hover a, .rug a, .rug a:hover, .rug a:visited, .rug a:focus, #top-link-desktop a, #top-link-desktop a:hover, #top-link-desktop a:visited, #top-link-desktop a:focus, .nav-tabs > li a h2, .nav-tabs > li a p, .panel-default > .panel-heading .panel-title a h2, .panel-default > .panel-heading .panel-title a p, .banner {
+.white, .read-more a, .subnav button, .subnav .button, .subnav .cta > a, .lead button, .lead .button, .lead .cta > a, a.lead, .subnav button:hover, .subnav button:active, .subnav button:visited, .subnav .button:hover, .subnav .cta > a:hover, .subnav .button:active, .subnav .cta > a:active, .subnav .button:visited, .subnav .cta > a:visited, .lead button:hover, .lead button:active, .lead button:visited, .lead .button:hover, .lead .cta > a:hover, .lead .button:active, .lead .cta > a:active, .lead .button:visited, .lead .cta > a:visited, a.lead:hover, a.lead:active, a.lead:visited, .leaving button, .leaving .button, .leaving .cta > a, a.leaving, .leaving button:hover, .leaving button:active, .leaving button:visited, .leaving .button:hover, .leaving .cta > a:hover, .leaving .button:active, .leaving .cta > a:active, .leaving .button:visited, .leaving .cta > a:visited, a.leaving:hover, a.leaving:active, a.leaving:visited, .subnav li a, .expertise-container p, .resource:hover a, .resource:hover h6, .resource:hover h3, .rug a, .rug a:hover, .rug a:visited, .rug a:focus, .rug a i, #top-link-desktop a, #top-link-desktop a:hover, #top-link-desktop a:visited, #top-link-desktop a:focus, #top-link-desktop a i, .nav-tabs > li a h2, .nav-tabs > li a p, .panel-default > .panel-heading .panel-title a h2, .panel-default > .panel-heading .panel-title a p, .banner {
   color: #fff; }
 
 .circle {
@@ -6410,7 +6410,7 @@ h3 {
   line-height: 1.25em;
   margin: 10px 0; }
 
-.semi-bold, .button, .cta > a, a.button, button, .resource a, strong {
+.semi-bold, .button, .cta > a, button, .resource a, strong {
   font-weight: 600; }
 
 code, .lrembedtxt {
@@ -6447,14 +6447,17 @@ cite {
     text-decoration: none; }
 
 /* the button class can be used for both anchor and input tags, defaults to medium/gray */
-.button, .cta > a, a.button, .cta > a, button {
+.button, .cta > a, button {
   border-radius: 0px;
   padding: 15px 20px;
   width: 100%;
   text-decoration: none;
   font-size: .85em;
   box-shadow: none;
-  border: none; }
+  border: none;
+  cursor: pointer; }
+  .button:hover, .cta > a:hover, button:hover {
+    text-decoration: none; }
 
 .banner button, .banner .button, .banner .cta > a {
   border: 3px solid #fff;
@@ -6463,9 +6466,12 @@ cite {
     background-color: #fff;
     color: #000; }
 
-.lead button, .lead .button, .lead .cta > a, a.lead {
+.subnav button, .subnav .button, .subnav .cta > a {
+  padding: 8px 15px; }
+
+.subnav button, .subnav .button, .subnav .cta > a, .lead button, .lead .button, .lead .cta > a, a.lead {
   background-color: #5aaa28; }
-  .lead button:hover, .lead button:active, .lead button:visited, .lead .button:hover, .lead .cta > a:hover, .lead .button:active, .lead .cta > a:active, .lead .button:visited, .lead .cta > a:visited, a.lead:hover, a.lead:active, a.lead:visited {
+  .subnav button:hover, .subnav button:active, .subnav button:visited, .subnav .button:hover, .subnav .cta > a:hover, .subnav .button:active, .subnav .cta > a:active, .subnav .button:visited, .subnav .cta > a:visited, .lead button:hover, .lead button:active, .lead button:visited, .lead .button:hover, .lead .cta > a:hover, .lead .button:active, .lead .cta > a:active, .lead .button:visited, .lead .cta > a:visited, a.lead:hover, a.lead:active, a.lead:visited {
     background-color: #65bf2d; }
 
 .leaving button, .leaving .button, .leaving .cta > a, a.leaving {
@@ -6475,19 +6481,21 @@ cite {
 
 .learning button, .learning .button, .learning .cta > a, a.learning {
   border: 3px solid #0DCFD9;
-  background: transparent;
+  padding: 12px 20px;
+  background: #fff;
   color: #333; }
   .learning button:hover, .learning .button:hover, .learning .cta > a:hover, a.learning:hover {
-    background-color: #0DCFD9;
-    border-color: transparent; }
+    background-color: #0DCFD9; }
 
 .subnav {
   background-color: #2e3238;
   border-radius: 0px; }
-  .subnav button {
-    margin: 10px 0px; }
+  .subnav .subnav-inside {
+    width: 100%; }
+  .subnav button, .subnav .button, .subnav .cta > a {
+    margin: 7px 0px; }
   .subnav li {
-    padding: 10px;
+    padding: 10px 10px 6px;
     border-bottom: solid transparent 4px; }
     .subnav li:hover {
       border-bottom: solid #00B4C3 4px;
@@ -6498,8 +6506,10 @@ cite {
       .subnav li a:hover {
         background-color: transparent;
         text-decoration: none; }
-    .subnav li.no-hover:hover {
-      border-bottom: solid transparent 4px; }
+    .subnav li.no-hover {
+      float: right; }
+      .subnav li.no-hover:hover {
+        border-bottom: solid transparent 4px; }
 
 .valueProp {
   margin: 10px; }
@@ -6542,39 +6552,22 @@ cite {
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer; }
 
-.resource-container {
-  display: flex;
-  flex-wrap: wrap; }
-
 .resource {
+  overflow: auto;
+  position: relative;
   background-color: #fff;
-  box-sizing: border-box;
   border-top: 12px solid #23cd69;
-  padding: 20px 20px 5px 20px;
-  margin-bottom: 40px; }
-  .resource p:first-of-type {
-    padding-top: 8px;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 150%; }
+  padding: 20px 20px 5px 20px; }
   .resource a {
     color: #4c4c4c;
-    display: block;
-    font-size: 14px;
-    letter-spacing: 0;
     margin-top: 1em;
     padding-bottom: 20px;
-    text-decoration: none;
-    text-transform: none; }
-  .resource .read-more {
-    color: #c40022; }
+    text-decoration: none; }
   .resource:hover {
     background-color: #23cd69;
-    border-top: 12px solid rgba(0, 0, 0, 0.2);
-    cursor: pointer; }
+    border-top: 12px solid rgba(0, 0, 0, 0.2); }
     .resource:hover a {
-      text-decoration: none;
-      text-transform: none; }
+      text-decoration: none; }
     .resource:hover img {
       display: none; }
       .resource:hover img.hover {
@@ -6583,7 +6576,6 @@ cite {
     display: inline-block;
     margin-right: 10px;
     padding-top: 10px;
-    vertical-align: top;
     width: 60px; }
     .resource img.hover {
       display: none; }
@@ -6635,8 +6627,8 @@ cite {
   .rug a {
     text-decoration: none; }
     .rug a i {
-      font-family: 'fa';
-      font-size: 2em; }
+      font-size: 1.5em;
+      margin: 10px 0px 0px 15px; }
 
 #top-link-desktop a {
   background-color: #00B4C3;
@@ -6644,13 +6636,13 @@ cite {
   position: fixed;
   bottom: 0;
   right: 5px;
-  width: 50px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   z-index: 100;
   display: none; }
   #top-link-desktop a i {
-    font-family: 'fa';
-    font-size: 2em; }
+    font-size: 1.1em;
+    padding-top: 10px; }
 
 .nav-tabs {
   border: none;
