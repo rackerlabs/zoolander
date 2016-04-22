@@ -308,6 +308,7 @@
  }
  .panel-title{
     a{
+      text-decoration:none;
       &:hover{
        text-decoration:none;
      }
@@ -324,8 +325,8 @@
 table{width: 100%;}
 .panel-heading{
   background-color:$light-gray-white;
-  min-height:200px;
   border-radius:0px;
+
   &.enterprise{
     background-color:$darkest-gray;
   }
@@ -350,6 +351,9 @@ table{width: 100%;}
   }
   .check, .times{
     float:right;
+  }
+  .tab-content{
+    display:none;
   }
  }
  
