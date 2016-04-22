@@ -51,5 +51,6 @@
   color: #333;
   &:hover{
     background-color: $mediumteal;
+    @extend .white;
   }
 }
