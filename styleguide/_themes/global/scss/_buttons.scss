@@ -18,12 +18,8 @@
 }
 
 .banner button, .banner .button{
-  border: 3px solid $white;
-  background-color:transparent;
-  &:hover{
-    background-color: $white;
-    color: $black;
-  }
+  background: transparent;
+  color: $white;
 }
 
 .subnav button, .subnav .button{
