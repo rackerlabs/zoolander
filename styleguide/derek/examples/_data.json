@@ -11,5 +11,8 @@
   },
   "office365": {
     "css": "css/derek.css"
+  },
+  "homepage": {
+    "css": "css/derek.css"
   }
 }

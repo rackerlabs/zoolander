@@ -25,6 +25,10 @@ img { max-width: 100%; }
   display: inline-block;
   margin-bottom: 15px;
 }
+.border-white{
+  border:solid 1px $white;
+  padding: 15px;
+}
 
 //centered-divs
 .center-block{ margin: 0 auto; float:none;}

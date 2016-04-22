@@ -4,11 +4,19 @@
   .subnav-inside{
     width: 100%;
   }
-  button, .button{
+  .navbar-header{
+    button{
+      background-color:transparent;
+    }
+  }
+  .button{
     margin: 7px 0px;
   }
+  .icon-bar{
+    background-color: white;
+  }
   li{
-    padding: 10px 10px 6px;
+    padding: 7px 7px 6px;
     border-bottom: solid transparent 4px;
     &:hover{
         border-bottom: solid $darkteal 4px;
@@ -30,6 +38,53 @@
       }
     }
   }
+}
+
+
+.homepage-hero {
+  @extend .full-width;
+  height: 400px;
+  top: 35px;
+  margin-bottom: 40px;
+  background-image: url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg");
+  background-position: 25% 50%;
+  position: relative;
+  background-size: auto;
+  border-bottom: 0;
+  h2 {
+    padding: 10px 0 10px;
+    font-size:2.5em;
+    @extend .white;
+    @extend .uppercase;
+    @extend .left;
+    background-color:transparent;
+    margin:0px;
+  }
+}
+
+#hosting-options{
+  text-align:center;
+  .product{
+    p{
+      margin-bottom:30px;
+    }
+    &:hover{
+      hr{
+        border-color:$mediumteal;
+      }
+      h3, a{
+        color:$mediumteal;
+      }
+    }
+  }
+}
+
+#quadrant{
+  background-image:url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.png");
+  background-repeat:no-repeat;
+  padding: 20px 0px;
+  background-size: 40%;
+  background-position: 13% bottom;
 }
 
 .cta{
@@ -352,7 +407,27 @@ table{width: 100%;}
   .tab-content{
     display:none;
   }
+  .subnav li{
+    padding: 7px 0px 6px;
+    margin:0px;
+  }
  }
+ 
+ @media only screen and (max-width : 770px) {
+   .subnav li{
+    width:100%;
+    padding:0px;
+    margin:0px;
+    }
+    //equal height columns remove in small
+    .row-eq-height {
+    display: inline-block;
+  }
+    .additional-resource .icon {
+      font-size: 10vw;
+    }
+ }
+
  
  .pricing{
     background-color:$white;
