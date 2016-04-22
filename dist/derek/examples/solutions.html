@@ -125,9 +125,14 @@
 </div>
 
 <nav class="navbar subnav">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" data-toggle="collapse" data-target="#subnav" aria-expanded="false" aria-controls="subnav" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <div class="col-xs-2">
+        <button type="button" data-toggle="collapse" data-target="#subnav" aria-expanded="false" aria-controls="subnav" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      </div>
+      <div class="col-xs-10">
+        <!-- Needs to have the title of the page youre on -->
+      </div>
     </div>
     <div id="subnav" class="collapse navbar-collapse">
       <ul class="nav navbar-nav subnav-inside">
@@ -1074,7 +1079,7 @@
 </div>
   
   
-<div class="container-fluid rug hidden-md hidden-lg">
+<div class="container-fluid rug-to-top hidden-md hidden-lg">
   <div class="row">
     <div class="col-xs-12 col-sm-6 center-block">
       <a href="#" class="back-to-top center">Back to Top<i class="fa fa-arrow-circle-up"></i></a>
