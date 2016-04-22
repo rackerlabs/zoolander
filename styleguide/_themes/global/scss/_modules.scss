@@ -183,7 +183,7 @@
 
 .customer_stories_logos {
   img {
-    max-height: 70px;
+    max-height: 40px;
     padding: 1% 2%;
     @extend .center;
     vertical-align: middle;
@@ -235,7 +235,7 @@
   padding:20px;
 }
 
-.rug{
+.rug-to-top{
   background-color:$darkteal;
   @extend .half-padding;
   @extend .center;
@@ -249,6 +249,7 @@
     }
     i{
       font-size:1.5em;
+      font-family:'fontAwesome';
       @extend .white;
       margin:10px 0px 0px 15px;
     }
@@ -410,6 +411,7 @@ table{width: 100%;}
   .subnav li{
     padding: 7px 0px 6px;
     margin:0px;
+    font-size:.86em;
   }
  }
  
@@ -419,10 +421,13 @@ table{width: 100%;}
     padding:0px;
     margin:0px;
     }
+    .navbar-nav {
+      margin:7.5px 0px;
+    }
     //equal height columns remove in small
     .row-eq-height {
     display: inline-block;
-  }
+    }
     .additional-resource .icon {
       font-size: 10vw;
     }
