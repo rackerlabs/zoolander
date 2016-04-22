@@ -10,12 +10,18 @@
     "start": "harp server styleguide",
     "gh-pages": "./build-pages.sh",
     "preversion": "npm run harp compile styleguide dist && git add .",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "migrate": "./scripts/pull-flat-site.js"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "harp": "^0.20.1"
+  },
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "request": "^2.72.0",
+    "shortid": "^2.2.6"
   }
 }
