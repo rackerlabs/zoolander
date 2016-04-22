@@ -307,27 +307,24 @@
    background-color:$darkest-gray;
  }
  .panel-title{
-    a{
-      text-decoration:none;
-      &:hover{
-       text-decoration:none;
-     }
-     h2{
-       margin-bottom:0px;
-     }
-     h2, p{
-       @extend .white;
-       @extend .center;
-     }
+    &:hover{
+     text-decoration:none;
+    }
+  h2{
+    margin-bottom:0px;
+  }
+  h2, p{
+    @extend .white;
+    @extend .center;
     }
   }
 }
+
 table{width: 100%;}
 .panel-heading{
   background-color:$light-gray-white;
   border-radius:0px;
-
-  &.enterprise{
+  &.enterprise, &.enterprise-collapse{
     background-color:$darkest-gray;
   }
   &.business{
@@ -357,23 +354,52 @@ table{width: 100%;}
   }
  }
  
- 
  .pricing{
-   background-color:$white;
-   .col-md-3{
-     padding: 20px 15px;
-     border-right:1px solid $light-gray-white;
-     &.pricing{
-       padding:0px;
-       border:none;
+    background-color:$white;
+    h3.teal{
+      color:$darkteal;
+    }
+    hr.white{
+      border-top:white solid 1px;
+    }
+    .triangle-text{
+      top: -3px;
+      right: 8px;
+      position: absolute;
+      h4{
+        @extend .white;
+        @extend .center;
+      }
+    }
+    .triangle{
+      top: -1px;
+      right: -1px;
+      position: absolute;
+      border-top: 110px solid $mediumteal;
+      border-left: 120px solid transparent;
+    }
+    .col-md-3{
+      padding: 20px 15px;
+      border-right:1px solid $light-gray-white;
+      &.pricing{
+        padding:0px;
+        border:none;
+      }
+    }
+    .price-compare .col-md-4, .price-compare .col-md-9{
+      padding:0px;
+      border-right:1px solid $light-gray-white;
+      &:last-child{
+        border:none;
      }
    }
-   .price-compare .col-md-4, .price-compare .col-md-9{
-     padding:0px;
-     border-right:1px solid $light-gray-white;
-     &:last-child{
-       border:none;
-     }
+   .price-compare{
+      .col-md-4{
+      padding: 15px 0px;
+      }
+      p{
+        margin:0px 20px;
+      }
    }
    .half-padding{
      border-top:1px solid $light-gray-white;
@@ -392,12 +418,11 @@ table{width: 100%;}
     border: 1px solid $light-gray;
     padding: 20px 0px;
     @extend .center;
-    a{
-      @extend h5;
-      &:hover{
-        text-decoration:none;
-      }
-    }
+   }
+   a{
+     &:hover{
+       text-decoration:none;
+     }
    }
    .product-icons{
      @extend .centered;
@@ -409,8 +434,11 @@ table{width: 100%;}
    i{
      font-size: 1.5em;
    }
-    .check{
+   #business .check{
       color:$darkteal;
+   }
+   .check{
+     color:$darkest-gray
    }
    .times{
      color:$light-gray;
