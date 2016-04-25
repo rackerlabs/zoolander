@@ -5,6 +5,9 @@
     width: 100%;
   }
   .navbar-header{
+    .col-xs-10{
+      margin-top:10px;
+    }
     button{
       background-color:transparent;
     }
@@ -18,6 +21,7 @@
   li{
     padding: 7px 7px 6px;
     border-bottom: solid transparent 4px;
+    @extend .left;
     &:hover{
         border-bottom: solid $darkteal 4px;
         background-color: transparent;
@@ -311,6 +315,7 @@
       margin: 0px;
       padding: 10px 20px;
       border:none;
+      text-decoration:none;
       h2, p{
         @extend .white;
         @extend .center;
@@ -452,6 +457,7 @@ table{width: 100%;}
       h4{
         @extend .white;
         @extend .center;
+        line-height: 1em;
       }
     }
     .triangle{

@@ -8,6 +8,7 @@ body, p{
   font-family:$copy;
   @extend .left;
   font-weight:300;
+  line-height: 1.5em;
 }
 
 h1, h2, h3{
@@ -47,8 +48,8 @@ code, .lrembedtxt{
 a {
   color: $light-gray;
   text-decoration: none;
-  line-height: 19px;
-  font-weight:600;
+  line-height: 16px;
+  font-weight:400;
   &:hover{
       text-decoration:underline;
       color:$bright-blue;
@@ -68,7 +69,7 @@ i {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color:$darkest-gray;
+  color:$black;
   &:rsweb{
     font-family: 'rsweb'!important;
   }
@@ -99,4 +100,8 @@ cite{
     @extend .white;
     text-decoration: none;
   }
+}
+
+.copyright{
+  font-size: .75em;
 }
