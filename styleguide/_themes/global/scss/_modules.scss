@@ -270,6 +270,7 @@
   bottom: 0;
   right: 5px;
   width: 35px;
+  padding: 0px;
   height: 35px;
   z-index: 100;
   display: none;
@@ -540,5 +541,26 @@ table{width: 100%;}
    }
    .lead-cell{
       width: 20%;
+   }
+ }
+ 
+#calculator{
+  h3{
+    font-size:16px!important;
+  }
+  button{
+    padding:0px;
+  }
+  h2{
+    line-height: 30px;
+  }
+}
+ 
+ .border-white{
+   &:hover{
+     border-color:$mustard;
+     i{
+       color:$mustard;
+     }
    }
  }
