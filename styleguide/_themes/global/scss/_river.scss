@@ -1,11 +1,11 @@
 .river-light {
-  > h2, h3 {
+  .pattern-header {
     @extend .darkest-gray;
   }
 }
 
 .river-dark {
-  > h2, h3 {
+  .pattern-header {
     @extend .white;
   }
 }
