@@ -459,8 +459,11 @@ table{width: 100%;}
       font-size: 10vw;
     }
  }
-
  
+  .panel-body a {
+    text-decoration: none;
+  }
+
  .pricing{
     background-color:$white;
     h3.teal{
@@ -529,6 +532,7 @@ table{width: 100%;}
     @extend .center;
    }
    a{
+     text-decoration:none;
      &:hover{
        text-decoration:none;
      }

@@ -70,8 +70,11 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color:$black;
-  &:rsweb{
+  &.rsweb{
     font-family: 'rsweb'!important;
+  }
+  &.rs-4x{
+  font-size:4em;
   }
 }
 
@@ -80,6 +83,10 @@ blockquote {
   font-weight: 300;
   border-left:none;
   margin-bottom: 0px;
+}
+
+.fa-check{
+  color: $darkteal;
 }
 
 cite{
