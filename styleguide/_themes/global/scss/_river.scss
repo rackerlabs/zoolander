@@ -1,0 +1,11 @@
+.river-light {
+  > h2, h3 {
+    @extend .darkest-gray;
+  }
+}
+
+.river-dark {
+  > h2, h3 {
+    @extend .white;
+  }
+}
