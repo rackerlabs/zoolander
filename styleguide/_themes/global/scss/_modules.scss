@@ -22,7 +22,7 @@
     padding: 7px 7px 6px;
     border-bottom: solid transparent 4px;
     @extend .left;
-    &:hover, &:focus, &:visited, &.selected{
+    &:hover, &.selected{
         border-bottom: solid $darkteal 4px;
         background-color: transparent;
       }
@@ -30,7 +30,7 @@
       @extend .white;
       font-weight: 400;
       text-decoration: none;
-      &:hover{
+      &:hover, &:focus{
         background-color: transparent;
         text-decoration: none;
       }
@@ -250,8 +250,8 @@
   @extend .half-padding;
   @extend .center;
   a{
-    @extend .white;
     @extend h4;
+    @extend .white;
     @extend .center;
     text-decoration:none;
     &:hover, &:visited, &:focus{
