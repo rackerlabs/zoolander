@@ -22,7 +22,7 @@
     padding: 7px 7px 6px;
     border-bottom: solid transparent 4px;
     @extend .left;
-    &:hover, &:focus{
+    &:hover, &:focus, .selected{
         border-bottom: solid $darkteal 4px;
         background-color: transparent;
       }
@@ -239,6 +239,12 @@
   padding:20px;
 }
 
+.read-more{
+  img{
+    max-height:40px;
+  }
+}
+
 .rug-to-top{
   background-color:$darkteal;
   @extend .half-padding;
@@ -371,6 +377,8 @@
 }
 .panel{
   margin-bottom:0px;
+  background-color:transparent;
+  box-shadow:none;
 }
 
 .panel-default>.panel-heading{
@@ -397,6 +405,8 @@ table{width: 100%;}
   background-color:transparent;
   border-radius:0px;
   border-bottom:transparent;
+  border-right:solid 1px $light-gray;
+  min-height: 220px;
   &.enterprise, &.enterprise-collapse{
     background-color:$darkest-gray;
   }
