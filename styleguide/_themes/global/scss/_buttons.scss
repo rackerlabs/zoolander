@@ -54,3 +54,11 @@
     @extend .white;
   }
 }
+
+.banner a.button.learning{
+  background-color:transparent;
+  @extend .white;
+  &:hover{
+    background-color: $mediumteal;
+  }
+}
