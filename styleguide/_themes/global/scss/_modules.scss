@@ -22,7 +22,7 @@
     padding: 7px 7px 6px;
     border-bottom: solid transparent 4px;
     @extend .left;
-    &:hover{
+    &:hover, &:focus{
         border-bottom: solid $darkteal 4px;
         background-color: transparent;
       }
@@ -37,7 +37,7 @@
     }
     &.no-hover{
       float: right;
-      &:hover{
+      &:hover, &:focus{
         border-bottom: solid transparent 4px;
       }
     }
@@ -250,6 +250,7 @@
     text-decoration:none;
     &:hover, &:visited, &:focus{
       @extend .white;
+      text-decoration:none;
     }
     i{
       font-size:1.5em;
@@ -356,6 +357,12 @@
   }
 }
 
+.pricing-header-row{
+  background-color:$light-gray-white;
+  border-bottom:$light-gray;
+  min-height: 220px;
+}
+
 .tab-content{
   background-color:$white;
   padding:15px;
@@ -387,8 +394,9 @@
 
 table{width: 100%;}
 .panel-heading{
-  background-color:$light-gray-white;
+  background-color:transparent;
   border-radius:0px;
+  border-bottom:transparent;
   &.enterprise, &.enterprise-collapse{
     background-color:$darkest-gray;
   }
