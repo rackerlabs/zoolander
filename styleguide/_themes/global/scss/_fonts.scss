@@ -57,7 +57,6 @@ a {
 }
 
 i {
-  font-size:5em;
   line-height: normal;
   color: black;
   font-style: normal;
@@ -72,6 +71,7 @@ i {
   color:$black;
   &.rsweb{
     font-family: 'rsweb'!important;
+    font-size:5em;
   }
   &.rs-4x{
   font-size:4em;
