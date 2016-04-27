@@ -107,6 +107,9 @@
   padding: 10px;
   margin: 10px;
   background-clip: padding-box;
+  a{
+    text-decoration:none;
+  }
 }
 
 .expertise-container{
@@ -401,19 +404,6 @@
 }
 
 table{width: 100%;}
-.panel-heading{
-  background-color:transparent;
-  border-radius:0px;
-  border-bottom:transparent;
-  border-right:solid 1px $light-gray;
-  min-height: 222px;
-  &.enterprise, &.enterprise-collapse{
-    background-color:$darkest-gray;
-  }
-  &.business{
-    background-color:$darkteal;
-  }
-}
 
 
 //SPECIAL SNOWFLAKES TO FOLLOW
@@ -489,6 +479,24 @@ table{width: 100%;}
       border-top: 90px solid $mediumteal;
       border-left: 110px solid transparent;
     }
+    .panel-heading{
+      background-color:transparent;
+      border-radius:0px;
+      border-bottom:transparent;
+      border-right:solid 1px $light-gray;
+      min-height: 222px;
+      &.enterprise, &.enterprise-collapse{
+        background-color:$darkest-gray;
+      }
+      &.business{
+        background-color:$darkteal;
+        }
+      }
+      
+    .border-right{
+          border-right:solid 1px $light-gray-white;
+        }
+
     .col-md-3{
       padding: 20px 15px;
       border-right:1px solid $light-gray-white;
@@ -513,6 +521,16 @@ table{width: 100%;}
         margin:0px 20px;
       }
    }
+   tr{
+      td.col-md-2{
+          padding: 20px 15px;
+          border:1px solid $light-gray-white;
+          width:14%;
+          &:first-child{
+          width: 15.79%;
+          }
+        }
+    }
    .half-padding{
      border-top:1px solid $light-gray-white;
    }
@@ -550,7 +568,7 @@ table{width: 100%;}
    #business .check{
       color:$darkteal;
    }
-   .check{
+   .check, #business #enterprise .check{
      color:$darkest-gray
    }
    .times{
