@@ -450,6 +450,13 @@ table{width: 100%;}
       font-size: 10vw;
     }
  }
+ 
+  a.js-tabcollapse-panel-heading{
+      text-decoration:none;
+    }
+  .enterprise-collapse{
+    background-color:$darkest-gray;
+  }
 
   .panel-body a {
     text-decoration: none;
@@ -480,16 +487,14 @@ table{width: 100%;}
       border-top: 90px solid $mediumteal;
       border-left: 110px solid transparent;
     }
-    a.js-tabcollapse-panel-heading{
-      text-decoration:none;
-    }
+    
     .panel-heading{
       background-color:transparent;
       border-radius:0px;
       border-bottom:transparent;
       border-right:solid 1px $light-gray;
       min-height: 222px;
-      &.enterprise, .enterprise-collapse{
+      &.enterprise{
         background-color:$darkest-gray;
       }
       &.business{
