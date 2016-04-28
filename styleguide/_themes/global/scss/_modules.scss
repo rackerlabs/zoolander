@@ -102,10 +102,24 @@
 }
 
 .offerBox {
-  background: #fff url("#{images}/solutions/offer-box-stack.png") no-repeat scroll right bottom / 70px 100px;
-  padding: 10px;
+  background: $white;
+  padding: 25px;
   margin: 10px;
   background-clip: padding-box;
+  p{
+    line-height:1.7em;
+  }
+  .bottom{
+    right: 10%;
+    bottom: 5%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    i{
+    font-size: 3em;
+    color: #666;
+    }
+  }
   a, a:hover{
     text-decoration:none;
   }
@@ -263,6 +277,9 @@
   }
   .first{
     padding-left:0px;
+  }
+  ul li{
+    margin-left: 1em;
   }
 }
 

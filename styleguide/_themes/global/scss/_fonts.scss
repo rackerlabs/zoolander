@@ -35,7 +35,7 @@ h2 {
   line-height:1.25em;
 }
 h3 {
-  font-size:1.5em;
+  font-size:1.25em;
   line-height:1.25em;
   margin: 10px 0;
 }
@@ -128,6 +128,8 @@ cite{
 
 ul, li{
   list-style: disc;
+  @extend .left;
+  @extend .no-padding;
 }
 
 .copyright{
