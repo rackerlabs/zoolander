@@ -10,7 +10,14 @@ img { max-width: 100%; }
 .half-padding-full{padding: 20px 0px 30px 0px;}
 .half-padding-top { padding-top: 20px; }
 .standard-padding { padding: 40px 15px 60px 15px; }
-.standard-padding-full{padding: 40px 0px 60px 0px;}
+.no-side-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.standard-padding-full{
+  @extend .standard-padding;
+  @extend .no-side-padding;
+}
 
 /* Text Alignments */
 .centered, .center { text-align: center !important; }
