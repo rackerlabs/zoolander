@@ -275,8 +275,8 @@
     overflow:auto;
     margin: 0px 15px 0px 0px;
   }
-  .first{
-    padding-left:0px;
+  &.three-up{
+    display:inline-block;
   }
   ul li{
     margin-left: 1em;
