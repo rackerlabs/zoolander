@@ -26,7 +26,7 @@
   padding: 8px 15px;
 }
 
-.subnav .button, .lead .button, a.lead {
+.button.lead {
   @extend .white;
   background-color: $signup-green;
   &:hover, &:active, &:visited{
@@ -35,7 +35,7 @@
   }
 }
 
-.leaving .button, a.leaving {
+.button.leaving {
   @extend .white;
   background-color: $mustard;
   &:hover, &:active, &:visited{
@@ -44,7 +44,7 @@
   }
 }
 
-.learning .button, a.learning, a.button.learning{
+.button.learning {
   border: 3px solid $mediumteal;
   padding: 12px 20px;
   background: $white;
@@ -55,7 +55,7 @@
   }
 }
 
-.banner a.button.learning{
+.banner .button.learning{
   background-color:transparent;
   @extend .white;
   &:hover{
