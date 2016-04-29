@@ -5,7 +5,7 @@ img { max-width: 100%; }
 /* Layout */
 .full-width { width: $full-width; }
 .no-margin { margin: 0 !important; }
-.no-padding { padding: 0 !important; }
+.no-padding { padding: 0; }
 .half-padding{ padding: 20px 15px 30px 15px; }
 .half-padding-full{padding: 20px 0px 30px 0px;}
 .half-padding-top { padding-top: 20px; }
