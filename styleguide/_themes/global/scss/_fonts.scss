@@ -102,11 +102,11 @@ ul.checks{
     list-style:none;
     margin-left: 1em;
     &:before {
-    content: "\f00c"; 
+    content: "\f00c";
     font-family: FontAwesome;
     display: inline-block;
-    margin-left: -1.3em; 
-    width: 1.3em; 
+    margin-left: -1.3em;
+    width: 1.3em;
     }
   }
 }
@@ -131,11 +131,11 @@ cite{
   }
 }
 
-ul, li{
+ul {
   list-style: disc;
   @extend .left;
 }
-li{
+li {
   @extend .no-padding;
 }
 
