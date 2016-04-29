@@ -129,6 +129,8 @@ cite{
 ul, li{
   list-style: disc;
   @extend .left;
+}
+li{
   @extend .no-padding;
 }
 
