@@ -92,6 +92,12 @@ blockquote {
 ul.checks{
   list-style:none;
   padding-left:1.3em;
+  &.teal{
+    li:before{color:$darkteal;}
+  }
+  &.green{
+    li:before{color:$signup-green;}
+  }
   li{
     list-style:none;
     margin-left: 1em;
@@ -101,7 +107,6 @@ ul.checks{
     display: inline-block;
     margin-left: -1.3em; 
     width: 1.3em; 
-    color:$darkteal;
     }
   }
 }
