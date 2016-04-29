@@ -44,7 +44,6 @@
   }
 }
 
-
 .homepage-hero {
   @extend .full-width;
   height: 400px;
@@ -248,6 +247,25 @@
     max-height:40px;
   }
 }
+
+.features{
+  display: flex;
+  .icon{
+    background-color:$darkteal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .desc{
+    background-color:$white;
+    overflow:auto;
+    margin: 0px 15px 0px 0px;
+  }
+  .first{
+    padding-left:0px;
+  }
+}
+
 
 .rug-to-top{
   background-color:$darkteal;

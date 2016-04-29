@@ -89,6 +89,23 @@ blockquote {
   color: $darkteal;
 }
 
+ul.checks{
+  list-style:none;
+  padding-left:1.3em;
+  li{
+    list-style:none;
+    margin-left: 1em;
+    &:before {
+    content: "\f00c"; 
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; 
+    width: 1.3em; 
+    color:$darkteal;
+    }
+  }
+}
+
 cite{
   color: $darkteal;
   white-space:pre;
@@ -107,6 +124,10 @@ cite{
     @extend .white;
     text-decoration: none;
   }
+}
+
+ul, li{
+  list-style: disc;
 }
 
 .copyright{
