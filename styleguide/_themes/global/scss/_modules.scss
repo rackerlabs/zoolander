@@ -244,24 +244,21 @@
   .clickarea{
     padding: 0px;
     display:flex;
-    a{display:flex;}
     .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3vw;
-    i{
-      color:white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3vw;
+      i{color:white;}
+      &.pdf{background-color:$rackspace-red;}
+      &.github{background-color:$purple;}
+      &.support{background-color:$darkteal;}
+      &.video{background-color:$blue-gray;}
+      &.case-study{background-color:$steel-blue;}
+      &.news{background-color:$mustard;}
+      &.api{background-color:$dark-gray;}
+      &.rss{background-color:$magento-orange;}
     }
-    &.pdf{background-color:$rackspace-red;}
-    &.github{background-color:$purple;}
-    &.support{background-color:$darkteal;}
-    &.video{background-color:$blue-gray;}
-    &.case-study{background-color:$steel-blue;}
-    &.news{background-color:$mustard;}
-    &.api{background-color:$dark-gray;}
-    &.rss{background-color:$magento-orange;}
-  }
   .desc{
     overflow:auto;
     margin: 0px;
@@ -277,7 +274,17 @@
     margin:10px;
     }
   }
-  span{@extend .darkest-gray;}
+  a{display:flex;}
+  span{ @extend .darkest-gray;}
+}
+
+.list-grid{
+  ul{
+    padding-left:1.3em;
+    li{
+      margin-left: 1em;
+    }
+  }
 }
 
 .quote-icon{
@@ -304,7 +311,7 @@
     margin: 0px 15px 0px 0px;
   }
   &.three-up{
-    display:inline-block;
+    display:block;
   }
   ul li{
     margin-left: 1em;
@@ -510,13 +517,25 @@ table{width: 100%;}
     }
     //equal height columns remove in small
     .row-eq-height {
-    display: inline-block;
+    display: block;
     }
-    .additional-resource .icon {
-      font-size: 10vw;
+    .additional-resource .clickarea{
+      .row-eq-height{
+        display:flex;
+      }
+      .icon{
+        font-size: 2em;
+      }
     }
- }
-
+    .features{
+      display:block;
+      margin-top: 10px;
+      .desc{
+        margin:0px;
+      }
+    }
+  }
+ 
   a.js-tabcollapse-panel-heading{
       text-decoration:none;
     }
