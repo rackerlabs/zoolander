@@ -240,16 +240,44 @@
   }
 }
 .additional-resource{
+  @extend .row-eq-height;
   .clickarea{
-    border-left:3px solid transparent;
-    padding-left:10px;
-    &:hover{
-      border-left:3px solid $teal;
+    padding: 0px;
+    display:flex;
+    a{display:flex;}
+    .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    i{
+      color:white;
+    }
+    &.pdf{background-color:$rackspace-red;}
+    &.github{background-color:$purple;}
+    &.support{background-color:$darkteal;}
+    &.video{background-color:$blue-gray;}
+    &.case-study{background-color:$steel-blue;}
+    &.news{background-color:$mustard;}
+    &.api{background-color:$dark-gray;}
+    &.rss{background-color:$magento-orange;}
+  }
+  .desc{
+    overflow:auto;
+    margin: 0px;
+    padding: 20px;
+  }
+  .arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    }
+  .row-eq-height{
+    margin:10px;
     }
   }
-  i, span {color: $medium-gray;}
-  .fa-angle-right {font-size: 2vw;}
-  .icon {font-size: 3vw;}
+  span{@extend .darkest-gray;}
 }
 
 .quote-icon{
