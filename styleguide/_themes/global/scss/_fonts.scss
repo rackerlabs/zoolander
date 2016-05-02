@@ -46,10 +46,11 @@ code, .lrembedtxt{
 }
 
 a {
-  color: $light-gray;
+  color: $dark-gray;
   text-decoration: none;
   line-height: 16px;
   font-weight:400;
+  cursor: pointer;
   &:hover{
       text-decoration:underline;
       color:$bright-blue;
