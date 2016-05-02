@@ -159,12 +159,7 @@
     background-color: $light-gray;
     cursor:pointer;
   }
-  .bottom p:last-of-type{
-    color:$rackspace-red;
-    @extend .semi-bold;
-  }
 }
-
 
 .resource{
   overflow:auto;
@@ -535,7 +530,7 @@ table{width: 100%;}
       }
     }
   }
- 
+
   a.js-tabcollapse-panel-heading{
       text-decoration:none;
     }
