@@ -1,8 +1,19 @@
 @import 'modifiers';
-@import 'components/ceiling';
-@import 'components/navigation';
+@import 'components/_ceiling';
+@import 'components/_navigation';
+@import 'components/_banners';
 @import 'components/rsweb-font-style';
-@import 'components/solutions';
+@import 'components/_tabs';
+@import 'components/_back-to-top';
+@import 'patterns/_quote';
+@import 'patterns/grid/_modules';
+@import 'patterns/grid/_keyOffers';
+@import 'patterns/grid/_businessResource';
+@import 'patterns/grid/_productFeatures';
+@import 'patterns/grid/_resources';
+@import 'snowflakes/_homepage';
+@import 'snowflakes/_o365';
+
 
 .clear-fixed-top {
   margin-top: $navbar-height;

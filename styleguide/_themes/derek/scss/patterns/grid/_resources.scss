@@ -1,0 +1,88 @@
+.additional-resource {
+  .clickarea {
+    padding: 0px;
+    display:flex;
+    .icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3vw;
+      @extend .white;
+      font-family: FontAwesome;
+      &.pdf{
+        background-color:$rackspace-red;
+        &:after{
+          content: "\f1c1";
+        }
+      }
+      &.github{
+        background-color:$purple;
+        &:after{
+          content: "\f092";
+        }
+      }
+      &.support{
+        background-color:$darkteal;
+        &:after{
+          content: "\f0ad";
+        }
+      }
+      &.video{
+        background-color:$blue-gray;
+        &:after{
+          content: "\f16a";
+        }
+      }
+      &.case-study{
+        background-color:$steel-blue;
+        &:after{
+          content: "\f0f2";
+        }
+      }
+      &.news{
+        background-color:$mustard;
+        &:after{
+          content: "\f1ea";
+        }
+      }
+      &.api{
+        background-color:$dark-gray;
+        &:after{
+          content: "\f1c9";
+        }
+      }
+      &.rss{
+        background-color:$magento-orange;
+        &:after{
+          content: "\f143";
+        }
+      }
+    }
+    .desc{
+      overflow:auto;
+      margin: 0px;
+      padding: 20px;
+    }
+    .arrow{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2vw;
+    }
+    .row-eq-height{
+      margin:10px;
+    }
+  }
+  a{display:flex;}
+}
+
+@media only screen and (max-width : 770px) {
+  .additional-resource .clickarea{
+    .row-eq-height{
+      display:flex;
+    }
+    .icon{
+      font-size: 2em;
+    }
+  }
+}

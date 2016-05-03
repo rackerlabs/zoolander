@@ -1,7 +1,7 @@
 $full-width: 100%;
 
-
 img { max-width: 100%; }
+
 /* Layout */
 .full-width { width: $full-width; }
 .no-margin { margin: 0 !important; }
@@ -24,40 +24,11 @@ img { max-width: 100%; }
 .left { text-align: left; }
 .right { text-align: right; }
 .uppercase { text-transform: uppercase; }
+
+/*Text Colors*/
 .medium-teal {color:$mediumteal;}
 .white {color:$white;}
 .red{color:$rackspace-red;}
 .black {color:$black;}
 .darkest-gray{color:$darkest-gray;}
-.circle{
-  border: solid 2px $darkest-gray;
-  border-radius: 50%;
-  background-color: #fff;
-  padding: 10px;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-.border-white{
-  border:solid 1px $white;
-  padding: 15px;
-}
 
-//centered-divs
-.center-block{ margin: 0 auto; float:none;}
-
-//equal height columns
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-}
-
-//absolutely positioning an element to the bottom of its container
-.bottom{
-  position: absolute;
-  @extend .full-width;
-  height:10%;
-  bottom: 0;
-  right: 0;
-}
