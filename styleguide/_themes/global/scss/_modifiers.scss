@@ -56,8 +56,8 @@ img { max-width: 100%; }
 //absolutely positioning an element to the bottom of its container
 .bottom{
   position: absolute;
-  bottom: 0;
   @extend .full-width;
-  right: 0;
   height:10%;
+  bottom: 0;
+  right: 0;
 }
