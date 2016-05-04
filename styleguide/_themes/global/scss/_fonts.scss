@@ -9,6 +9,7 @@ body, p{
   @extend .left;
   font-weight:300;
   line-height: 1.5em;
+  margin: 0 0 1em;
 }
 
 h1, h2, h3{
@@ -79,13 +80,6 @@ i {
   }
 }
 
-blockquote {
-  font-size: 1.75rem;
-  font-weight: 300;
-  border-left:none;
-  margin-bottom: 0px;
-}
-
 .fa-check{
   color: $darkteal;
 }
@@ -109,18 +103,6 @@ ul.checks{
     margin-left: -1.3em;
     width: 1.3em;
     }
-  }
-}
-
-cite{
-  color: $darkteal;
-  white-space:pre;
-  font-style:italic;
-  font-size: .9em;
-  font-family: $copy;
-  &:before{
-    content:"—";
-    max-height:1px;
   }
 }
 

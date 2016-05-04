@@ -62,3 +62,10 @@
     background-color: $mediumteal;
   }
 }
+
+.cta{
+  @extend .center;
+  & > a{
+    @extend .button
+  }
+}
