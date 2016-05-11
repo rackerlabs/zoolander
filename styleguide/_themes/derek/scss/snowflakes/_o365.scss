@@ -184,4 +184,12 @@
   .check, .times{
     float: right;
   }
+  .pricing .panel-heading{
+      border-right: none;
+      min-height: 0px;
+      padding: 0px 0px 0px 10px;
+  }
+  .pricing .row{
+      border:none;
+  }
 }
