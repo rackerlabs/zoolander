@@ -15,5 +15,8 @@
   },
   "homepage": {
     "css": "css/derek.css"
+  }, 
+  "forms": {
+    "css": "css/derek.css"
   }
 }
