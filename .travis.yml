@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "4.2.4"
+env:
+  - CMD="sass-lint"
+  - CMD="test:visual"
+install:
+  - "npm install"
+script:
+  - "npm run $CMD"
