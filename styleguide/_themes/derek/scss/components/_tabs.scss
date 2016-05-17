@@ -16,7 +16,7 @@
         border-top: 5px solid $darkest-gray;
         a{
           background-color: $white;
-          h2,p{
+          > * {
             color:$darkest-gray;
           }
           &:hover{
@@ -47,7 +47,7 @@
       background-color:$white;
       a{
         border:none!important;
-        h2, p{
+        > * {
           color: $darkteal;
           @extend .center;
         }
@@ -55,7 +55,7 @@
       //snowflake
       &.enterprise {
         a{
-          h2, p{
+          > * {
             color:$darkest-gray;
           }
         }
