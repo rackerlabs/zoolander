@@ -1,7 +1,9 @@
 .homepage-hero {
   @extend .full-width;
-  height: 400px;
-  top: 35px;
+  height: 100%;
+  overflow: visible;
+  background-repeat: no-repeat;
+  top: 65px;
   margin-bottom: 40px;
   background-image: url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg");
   background-position: 25% 50%;
@@ -9,30 +11,41 @@
   background-size: auto;
   border-bottom: 0;
   h2 {
-    padding: 10px 0 10px;
-    font-size:2.5em;
+    padding-top: 20px;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
     @extend .white;
-    @extend .uppercase;
     @extend .left;
-    background-color:transparent;
-    margin:0px;
+  }
+  p{
+    letter-spacing: 1px;
+    line-height: 24px;
+    font-size: 16px;
+    padding-bottom: 10px;
   }
 }
 
 #hosting-options{
   text-align:center;
   .product{
-    p{
-      margin-bottom:30px;
-    }
+    p{ margin-bottom:30px; }
     &:hover{
-      hr{
-        border-color:$mediumteal;
-      }
-      h3, a{
-        color:$mediumteal;
-      }
+      @extend .bg-light-gray;
+      hr{ border-color:$mediumteal; }
+      h3, a{ color:$mediumteal; }
     }
+  }
+}
+
+#solutions{
+  a{ text-decoration:none; }
+  .solution:hover{
+    .border-white{
+     border-color:$mustard;
+     i{ color:$mustard; }
+    }
+    h6{ color: $mustard; }
   }
 }
 
@@ -44,11 +57,9 @@
   background-position: 13% bottom;
 }
 
-.border-white{
-   &:hover{
-     border-color:$mustard;
-     i{
-       color:$mustard;
-     }
-   }
- }
+.form-inline{
+  button, .button{
+  width: auto;
+  }
+}
+
