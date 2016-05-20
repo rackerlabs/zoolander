@@ -1,0 +1,61 @@
+{
+  "viewports": [
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "full",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "/derek/examples/forms.html",
+      "delay": 500,
+      "url": "http://localhost:9000/derek/examples/forms.html"
+    },
+    {
+      "label": "/derek/examples/homepage.html",
+      "delay": 500,
+      "url": "http://localhost:9000/derek/examples/homepage.html"
+    },
+    {
+      "label": "/derek/examples/landing-page.html",
+      "delay": 500,
+      "url": "http://localhost:9000/derek/examples/landing-page.html"
+    },
+    {
+      "label": "/derek/examples/office365.html",
+      "delay": 500,
+      "url": "http://localhost:9000/derek/examples/office365.html"
+    },
+    {
+      "label": "/derek/examples/solutions.html",
+      "delay": 500,
+      "url": "http://localhost:9000/derek/examples/solutions.html"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "../../backstop_data/bitmaps_reference",
+    "bitmaps_test": "../../backstop_data/bitmaps_test",
+    "compare_data": "../../backstop_data/bitmaps_test/compare.json",
+    "casper_scripts": "../../backstop_data/casper_scripts"
+  },
+  "engine": "phantomjs",
+  "report": [
+    "CLI",
+    "browser"
+  ],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3001
+}
