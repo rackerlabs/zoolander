@@ -1,26 +1,26 @@
 .offerBox {
   background: $white;
-  margin: 10px;
   background-clip: padding-box;
+  margin: 10px;
   padding: 25px;
-  p{
-    line-height:1.7em;
-    padding-bottom:10px;
+  p {
+    line-height: 1.7em;
+    padding-bottom: 10px;
   }
-  .bottom{
-     i{
-      right: 15px;
+  .bottom {
+    i {
       bottom: 0;
-      width: 50px;
       height: 50px;
-      float:right;
+      float: right;
       position: absolute;
+      right: 15px;
+      width: 50px;
     }
-    p{
-      left: 25px;
+    p {
       bottom: 0;
-      padding-bottom:0px;
-      float:left;
+      float: left;
+      left: 25px;
+      padding-bottom: 0;
       position: absolute;
     }
   }

@@ -1,81 +1,80 @@
 $body-bg:  #fff !default;
 
 // Component
-.river {
-  padding: $padding-base-vertical*2 0;
-}
+.river { padding: $padding-base-vertical*2 0; }
 
 // Background Variations
-.bg-steel-blue { background-color: $steel-blue;}
-.bg-blue-gray { background-color: $blue-gray;}
+.bg-blue-gray { background-color: $blue-gray; }
+.bg-steel-blue { background-color: $steel-blue; }
 .bg-red { background-color: $rackspace-red; }
 .bg-dark-gray { background-color: $darkest-gray; }
 .bg-light-gray { background-color: $light-gray-white; }
-.bg-white{ background-color: $white;}
 .bg-medium-teal { background: $mediumteal; }
 .bg-crumpled-paper { background-color: $light-gray; background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png); }
+.bg-white { background-color: $white; }
 
-//centered-divs
-.center-block{ margin: 0 auto; float:none;}
-
-//equal height columns
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-}
-
-@media only screen and (max-width : 770px) {
-  //equal height columns remove in small
-  .row-eq-height {
-  display: block;
-  }
-}
-
-//absolutely positioning an element to the bottom of its container
-.bottom{
-  position: absolute;
-  @extend .full-width;
-  height:10%;
-  bottom: 0;
-  right: 0;
-}
-
-.circle{
-  border: solid 2px $darkest-gray;
-  border-radius: 50%;
-  background-color: #fff;
-  padding: 10px;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-.border-white{
-  border:solid 1px $white;
+.border-white {
+  border: solid 1px $white;
   padding: 15px;
 }
 
+//absolutely positioning an element to the bottom of its container
+.bottom {
+  bottom: 0;
+  height: 10%;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+//centered-divs
+.center-block { margin: 0 auto; float: none; }
+
+.circle {
+  background-color: $white;
+  border: solid 2px $darkest-gray;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
 .clickarea {
+  background-color: $white;
   padding: 25px;
-  background-color:$white;
   a, a:hover {
     text-decoration: none;
     &:hover { text-decoration: none; }
   }
   &:hover {
     background-color: $light-gray;
-    cursor:pointer;
-  }
-}
-
-.river-light {
-  .pattern-header {
-    @extend .darkest-gray;
+    cursor: pointer;
   }
 }
 
 .river-dark {
   .pattern-header {
-    @extend .white;
+    color: $white;
+  }
+}
+
+.river-light {
+  .pattern-header {
+    color: $darkest-gray;
+  }
+}
+
+//equal height columns
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width : 770px) {
+  //equal height columns remove in small
+  .row-eq-height {
+    display: block;
   }
 }

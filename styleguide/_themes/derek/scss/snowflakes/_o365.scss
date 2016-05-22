@@ -1,195 +1,196 @@
-.panel-default>.panel-heading{
- background-color:$darkteal;
- &.enterprise{
-   background-color:$darkest-gray;
- }
- .panel-title{
-    &:hover{
-     text-decoration:none;
-    }
-  h2{
-    margin-bottom:0px;
+a.js-tabcollapse-panel-heading {
+  text-decoration: none;
+}
+
+.enterprise-collapse {
+  background-color: $darkest-gray;
+}
+
+.panel-body a {
+  text-decoration: none;
+}
+
+.panel-default>.panel-heading {
+  background-color: $darkteal;
+  &.enterprise {
+    background-color: $darkest-gray;
   }
-  h2, p{
-    @extend .white;
-    @extend .center;
+  .panel-title {
+    &:hover {
+      text-decoration: none;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+    h2, p {
+      color: $white;
+      text-align: center;
     }
   }
 }
 
-
-.rocket{
-  background-image:url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/office-365/rocketBG.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center 28%;
-}
-
-.pricing-header-row{
-  background-color:$light-gray-white;
-  border-bottom:$light-gray;
-  min-height: 225px;
-}
-  
-  
-  a.js-tabcollapse-panel-heading{
-      text-decoration:none;
-    }
-  .enterprise-collapse{
-    background-color:$darkest-gray;
-  }
-
-  .panel-body a {
+.pricing {
+  background-color: $white;
+  a {
     text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
   }
-
- .pricing{
-    background-color:$white;
-    h3.teal{
-      color:$darkteal;
-    }
-    hr.white{
-      border-top:white solid 1px;
-    }
-    .triangle-text{
-      top: 0px;
-      right: 8px;
-      position: absolute;
-      h4{
-        @extend .white;
-        @extend .center;
-        line-height: 1em;
-      }
-    }
-    .triangle{
-      top: -1px;
-      right: -1px;
-      position: absolute;
-      border-top: 90px solid $mediumteal;
-      border-left: 110px solid transparent;
-    }
-
-    .panel-heading{
-      background-color:transparent;
-      border-radius:0px;
-      border-bottom:transparent;
-      border-right:solid 1px $light-gray;
-      min-height: 222px;
-      &.enterprise{
-        background-color:$darkest-gray;
-      }
-      &.business{
-        background-color:$darkteal;
-        }
-      }
-
-    .border-right{
-          border-right:solid 1px $light-gray-white;
-        }
-
-    .col-md-3{
+  h3.teal {
+    color: $darkteal;
+  }
+  hr.white {
+    border-top: $white solid 1px;
+  }
+  i {
+    font-size: 1.5em;
+    margin-top: 15px;
+    vertical-align: middle;
+  }
+  tr {
+    td.col-md-2 {
+      border: 1px solid $light-gray-white;
       padding: 20px 15px;
-      border-right:1px solid $light-gray-white;
-      background-color: transparent;
-      &.pricing{
-        padding:0px;
-        border:none;
+      width: 14%;
+      &:first-child {
+        width: 15.79%;
       }
     }
-    .price-compare .col-md-4, .price-compare .col-md-9{
-      padding:0px;
-      &:last-child{
-        border:none;
-     }
-   }
-   .price-compare{
-      .col-md-4{
+  }
+  .border-right {
+    border-right:solid 1px $light-gray-white;
+  }
+  .check, #business #enterprise .check {
+    color: $darkest-gray;
+  }
+  .col-md-3{
+    background-color: transparent;
+    border-right: 1px solid $light-gray-white;
+    padding: 20px 15px;
+    &.pricing {
+      border: none;
+      padding: 0;
+    }
+  }
+  .col-md-9 {
+    padding: 20px 0px;
+    .row {
+      border: none;
+    }
+  }
+  .fa-arrow-right {
+    border: 2px solid $darkteal;
+    border-radius: 50%;
+    font-size: 1em;
+    margin-top: 0;
+    padding: 7px;
+  }
+  .half-padding {
+    border-top: 1px solid $light-gray-white;
+  }
+  .lead-cell {
+    width: 20%;
+  }
+  .panel-heading {
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: transparent;
+    border-right: solid 1px $light-gray;
+    min-height: 222px;
+    &.enterprise {
+      background-color: $darkest-gray;
+    }
+    &.business {
+        background-color: $darkteal;
+    }
+  }
+  .price-compare .col-md-4, .price-compare .col-md-9 {
+    padding: 0;
+    &:last-child {
+      border: none;
+    }
+  }
+  .price-compare {
+    .col-md-4 {
       padding: 15px 0px;
-      }
-      p{
-        margin:0px 20px;
-      }
-   }
-   tr{
-      td.col-md-2{
-          padding: 20px 15px;
-          border:1px solid $light-gray-white;
-          width:14%;
-          &:first-child{
-          width: 15.79%;
-          }
-        }
     }
-   .half-padding{
-     border-top:1px solid $light-gray-white;
-   }
-   .col-md-9{
-     padding: 20px 0px;
-     .row{
-       border:none;
-     }
-   }
-   .row{
-     border: 1px solid $light-gray-white;
-   }
-   .title{
+    p {
+      margin:0px 20px;
+    }
+  }
+  .product-icons {
+    text-align: center;
+    li {
+      display: inline-block;
+      width: 30px;
+    }
+  }
+  .row {
+    border: 1px solid $light-gray-white;
+  }
+  .times {
+    color: $light-gray;
+  }
+  .title {
     background-color: $light-gray-white;
     border: 1px solid $light-gray;
     padding: 20px 0px;
-    @extend .center;
-   }
-   a{
-     text-decoration:none;
-     &:hover{
-       text-decoration:none;
-     }
-   }
-   .product-icons{
-     @extend .centered;
-      li{
-        display: inline-block;
-        width: 30px;
-      }
-   }
-   i{
-     font-size: 1.5em;
-     vertical-align: middle;
-     margin-top: 15px;
-   }
-   #business .check{
-      color:$darkteal;
-   }
-   .check, #business #enterprise .check{
-     color:$darkest-gray
-   }
-   .times{
-     color:$light-gray;
-   }
-   .fa-arrow-right{
-     border:2px solid $darkteal;
-     border-radius:50%;
-     padding:7px;
-     font-size:1em;
-     margin-top:0px;
-   }
-   .lead-cell{
-      width: 20%;
-   }
- }
- 
- @media only screen and (max-width : 992px) {
-  .rocket{
-    background-image:none;
+    text-align: center;
   }
-  .check, .times{
+  .triangle {
+    border-left: 110px solid transparent;
+    border-top: 90px solid $mediumteal;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+  }
+  .triangle-text {
+    position: absolute;
+    right: 8px;
+    top: 0px;
+    h4 {
+      color: $white;
+      line-height: 1em;
+      text-align: center;
+    }
+  }
+  #business .check {
+    color: $darkteal;
+  }
+} // End of pricing class
+
+.pricing-header-row {
+  background-color: $light-gray-white;
+  border-bottom: $light-gray;
+  min-height: 225px;
+}
+
+.rocket {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/office-365/rocketBG.png');
+  background-position: center 28%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 992px) {
+
+  .rocket {
+    background-image: none;
+  }
+
+  .check, .times {
     float: right;
   }
+
   .pricing .panel-heading{
-      border-right: none;
-      min-height: 0px;
-      padding: 0px 0px 0px 10px;
+    border-right: none;
+    min-height: 0px;
+    padding: 0px 0px 0px 10px;
   }
+
   .pricing .row{
-      border:none;
+    border: none;
   }
-}
+
+} // End of @media max-width: 992px

@@ -1,0 +1,63 @@
+body, p {
+  color: $darkest-gray;
+  font-family: $copy;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0 0 1em;
+  text-align: left;
+}
+
+a {
+  color: $dark-gray;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+  &:hover{
+    color: $bright-blue;
+    text-decoration: underline;
+  }
+}
+
+code, .lrembedtxt { font-family: $code; }
+
+h1, h2, h3 {
+  color: $darkest-gray;
+  font-family: $heading;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h4, h5, h6 {
+  color: $darkest-gray;
+  font-family: $subhead;
+  line-height: 1.45em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.25em;
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.25em;
+  margin: 10px 0;
+}
+
+img { max-width: 100%; }
+li { padding: 0; }
+strong, .semi-bold { font-weight: 600; }
+table { width: 100%; }
+
+ul {
+  list-style: disc;
+  text-align: left;
+}

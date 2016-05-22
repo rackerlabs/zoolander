@@ -13,14 +13,3 @@
 @import 'patterns/grid/_resources';
 @import 'snowflakes/_homepage';
 @import 'snowflakes/_o365';
-
-
-.clear-fixed-top {
-  margin-top: $navbar-height;
-}
-
-@media screen and (min-width: $screen-md-min){
-  .clear-fixed-top {
-    margin-top: 89px;
-  }
-}
