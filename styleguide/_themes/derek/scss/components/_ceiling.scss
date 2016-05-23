@@ -17,18 +17,6 @@ $ceiling-font-size: 11px;
     line-height: 2.6;
     vertical-align: middle;
   }
-  .navbar-left:first-child {
-    margin-left: 0;
-    padding-left: $ceiling-margin;
-  }
-  .navbar-right {
-    ul.dropdown-menu {
-      margin-right: floor($ceiling-margin / 2);
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-  }
   ul.menu-inline {
     @extend .list-inline;
     margin-bottom: 0;
@@ -61,38 +49,50 @@ $ceiling-font-size: 11px;
     }
     /** TODO: Refactor as a mixin **/
     .dropdown-green {
-      background-color: #5aaa28;
+      background-color: $signup-green;
+      color: $white;
+      li a {
         color: $white;
-        li a {
-            color: $white;
-            &:hover {
-                background-color: #468b24;
-            }
+        &:hover {
+          background-color: #468b24;
         }
+      }
     }
-      .dropdown > a.dropdown-green {
-          background-color: #5aaa28;
-          color: $white;
-          &:hover, &:focus, &:active {
-              background-color: #468b24;
-              color: $white;
-          }
+    .dropdown > a.dropdown-green {
+      background-color: $signup-green;
+      color: $white;
+      &:hover, &:focus, &:active {
+        background-color: #468b24;
+        color: $white;
       }
-      .dropdown.open > a.dropdown-green {
-          background-color: #5aaa28;
-          color: $white;
-          &:focus, &:active {
-              background-color: #468b24;
-              color: $white;
-          }
-          li a {
-              color: $white;
-              &:hover {
-                  background-color: #468b24;
-              }
-          }
+    }
+    .dropdown.open > a.dropdown-green {
+      background-color: $signup-green;
+      color: $white;
+      &:focus, &:active {
+        background-color: #468b24;
+        color: $white;
       }
-      /** End Refactor block **/
+      li a {
+        color: $white;
+        &:hover {
+          background-color: #468b24;
+        }
+      }
+    }
+    /** End Refactor block **/
+  }
+  .navbar-left:first-child {
+    margin-left: 0;
+    padding-left: $ceiling-margin;
+  }
+  .navbar-right {
+    ul.dropdown-menu {
+      margin-right: floor($ceiling-margin / 2);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
