@@ -1,34 +1,23 @@
 .main-nav {
-  border: 0;
   background: $brand-black;
+  border: 0;
+  border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  border-radius: 0;
   border: none;
-
-  .navbar-nav > li > a {
-    color: #E0E0E0;
-    &:hover, &:focus {
-      color: $brand-black;
-      background: #ccc;
-    }
-  }
-
   .dropdown-menu {
-    border: #ccc 1px solid;
+    border: $inactive 1px solid;
     > li > a {
       padding: 3px 10px;
     }
-
     .dropdown-header {
       padding: 5px 10px;
       font-size: 12px;
     }
   }
-
   .navbar-brand{
-    background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg);
     background-color: $brand-primary;
+    background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg);
     background-position: 10px 10px;
     background-repeat: no-repeat;
     background-size: 140px 36px;
@@ -38,38 +27,28 @@
       background-color: $brand-primary;
     }
   }
+  .navbar-nav > li > a {
+    color: #E0E0E0;
+    &:hover, &:focus {
+      color: $brand-black;
+      background: $inactive;
+    }
+  }
 }
 
-.subnav{
-  background-color:$blue-gray;
-  border-radius:0px;
-  .subnav-inside{
-    width: 100%;
-  }
-  .navbar-header{
-    .col-xs-10{
-      margin-top:10px;
-    }
-    button{
-      background-color:transparent;
-    }
-  }
-  .button{
-    margin: 7px 0px;
-  }
-  .icon-bar{
-    background-color: white;
-  }
-  li{
+.subnav {
+  background-color: $blue-gray;
+  border-radius: 0;
+  li {
     padding: 7px 7px 6px;
     border-bottom: solid transparent 4px;
-    @extend .left;
-    &:hover, &.selected{
+    text-align: left;
+    &:hover, &.selected {
         border-bottom: solid $darkteal 4px;
         background-color: transparent;
       }
-    a{
-      @extend .white;
+    a {
+      color: $white;
       font-weight: 400;
       text-decoration: none;
       &:hover, &:focus{
@@ -84,23 +63,40 @@
       }
     }
   }
+  .button {
+    margin: 7px 0;
+  }
+  .icon-bar {
+    background-color: white;
+  }
+  .navbar-header {
+    button {
+      background-color:transparent;
+    }
+    .col-xs-10{
+      margin-top: 10px;
+    }
+  }
+  .subnav-inside {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width : 992px) {
-  .subnav li{
-    padding: 7px 0px 6px;
-    margin:0px;
-    font-size:.86em;
+  .subnav li {
+    font-size: .86em;
+    padding: 7px 0 6px;
+    margin: 0;
   }
 }
 
 @media only screen and (max-width : 770px) {
-  .subnav li{
-    width:100%;
-    padding:0px;
-    margin:0px;
+  .subnav li {
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
   .navbar-nav {
-    margin:7.5px 0px;
+    margin: 7.5px 0;
   }
 }
