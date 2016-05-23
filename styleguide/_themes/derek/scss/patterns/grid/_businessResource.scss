@@ -1,36 +1,37 @@
 .resource{
-  overflow:auto;
-  position:relative;
   background-color: $white;
   border-top: 12px solid $bright-green;
-  padding: 20px 20px 5px 20px;
+  overflow: auto;
   margin: 10px;
-  a{
-    color: $medium-dark-gray;
-    @extend .semi-bold;
-    margin-top: 1em;
-    padding-bottom: 20px;
-    text-decoration: none;  }
-  &:hover{
+  padding: 20px 20px 5px 20px;
+  position: relative;
+  &:hover {
     background-color: $bright-green;
     border-top: 12px solid rgba(0,0,0,0.2);
-    a{
-      @extend .white;
+    a {
+      color: $white;
       text-decoration: none;
     }
-    h6, h3{
-      @extend .white;
+    h3, h6 {
+      color: $white;
     }
     img {
       display: none;
-      &.hover{ display: inline-block; }
+      &.hover { display: inline-block; }
     }
   }
-  img{
+  a {
+    color: $medium-dark-gray;
+    font-weight: 600;
+    margin-top: 1em;
+    padding-bottom: 20px;
+    text-decoration: none;
+  }
+  img {
     display: inline-block;
     margin-right: 10px;
     padding-top: 10px;
     width: 60px;
-    &.hover{ display: none; }
+    &.hover { display: none; }
   }
 }

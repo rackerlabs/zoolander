@@ -1,22 +1,18 @@
-$full-width: 100%;
-
-img { max-width: 100%; }
-
 /* Layout */
-.full-width { width: $full-width; }
+.full-width { width: 100%; }
 .no-margin { margin: 0 !important; }
-.no-padding { padding: 0; }
 .half-padding{ padding: 20px 15px 30px 15px; }
-.half-padding-full{padding: 20px 0px 30px 0px;}
+.half-padding-full { padding: 20px 0px 30px 0px; }
 .half-padding-top { padding-top: 20px; }
-.standard-padding { padding: 40px 15px 60px 15px; }
-.no-side-padding {
+.no-padding { padding: 0; }
+.no-side-padding, %no-side-padding {
   padding-left: 0;
   padding-right: 0;
 }
-.standard-padding-full{
-  @extend .standard-padding;
-  @extend .no-side-padding;
+.standard-padding, %standard-padding { padding: 40px 15px 60px 15px; }
+.standard-padding-full {
+  @extend %standard-padding;
+  @extend %no-side-padding;
 }
 
 /* Text Alignments */
@@ -26,9 +22,18 @@ img { max-width: 100%; }
 .uppercase { text-transform: uppercase; }
 
 /*Text Colors*/
-.medium-teal {color:$mediumteal;}
-.white {color:$white;}
-.red{color:$rackspace-red;}
-.black {color:$black;}
-.darkest-gray{color:$darkest-gray;}
+.black { color: $black; }
+.darkest-gray { color: $darkest-gray; }
+.medium-teal { color: $mediumteal; }
+.red { color: $rackspace-red; }
+.white { color: $white; }
 
+.clear-fixed-top {
+  margin-top: $navbar-height;
+}
+
+@media screen and (min-width: $screen-md-min){
+  .clear-fixed-top {
+    margin-top: 89px;
+  }
+}

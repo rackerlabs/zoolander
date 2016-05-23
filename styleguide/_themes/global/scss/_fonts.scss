@@ -3,125 +3,55 @@ $subhead: 'Montserrat', Helvetica, Arial, sans-serif;
 $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
 
-body, p{
-  color:$darkest-gray;
-  font-family:$copy;
-  @extend .left;
-  font-weight:300;
-  line-height: 1.5em;
-  margin: 0 0 1em;
-}
-
-h1, h2, h3{
-  font-family:$heading;
-  color:$darkest-gray;
-  @extend .uppercase;
-  font-weight: 400;
-}
-
-h4, h5, h6{
-  font-family: $subhead;
-  color:$darkest-gray;
-  @extend .uppercase;
-  @extend .left;
-  line-height: 1.45em;
-}
-
-h1{
-  font-size: 3em;
-  text-align: center;
-}
-h2 {
-  font-size:2em;
-  line-height:1.25em;
-}
-h3 {
-  font-size:1.25em;
-  line-height:1.25em;
-  margin: 10px 0;
-}
-.semi-bold, strong{font-weight: 600;}
-
-code, .lrembedtxt{
-  font-family: $code;
-}
-
-a {
-  color: $dark-gray;
-  text-decoration: none;
-  line-height: 16px;
-  font-weight:400;
-  cursor: pointer;
-  &:hover{
-      text-decoration:underline;
-      color:$bright-blue;
-    }
-}
-
 i {
-  line-height: normal;
-  color: black;
-  font-style: normal;
-  speak: none;
+  color: $black;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
+  speak: none;
+  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
-  color:$black;
-  &.rsweb{
-    font-family: 'rsweb'!important;
-    font-size:5em;
+  -webkit-font-smoothing: antialiased;
+  &.rsweb {
+    font-family: 'rsweb' !important;
+    font-size: 5em;
   }
-  &.rs-4x{
-  font-size:4em;
+  &.rs-4x {
+    font-size: 4em;
   }
-}
-
-.fa-check{
-  color: $darkteal;
 }
 
 ul.checks{
-  list-style:none;
-  padding-left:1.3em;
-  &.teal{
-    li:before{color:$darkteal;}
+  list-style: none;
+  padding-left: 1.3em;
+  &.teal {
+    li:before { color: $darkteal; }
   }
-  &.green{
-    li:before{color:$signup-green;}
+  &.green {
+    li:before { color: $signup-green; }
   }
   li{
-    list-style:none;
+    list-style: none;
     margin-left: 1em;
     &:before {
-    content: "\f00c";
-    font-family: FontAwesome;
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
+      content: "\f00c";
+      display: inline-block;
+      font-family: FontAwesome;
+      margin-left: -1.3em;
+      width: 1.3em;
     }
   }
 }
 
+.copyright { font-size: .75em; }
+
+.fa-check { color: $darkteal; }
+
 .read-more {
   margin-top: 20px;
-  a{
-    @extend .white;
+  a {
+    color: $white;
     text-decoration: none;
   }
-}
-
-ul {
-  list-style: disc;
-  @extend .left;
-}
-li {
-  @extend .no-padding;
-}
-
-.copyright{
-  font-size: .75em;
 }

@@ -1,49 +1,26 @@
 $ceiling-margin: floor($navbar-margin-bottom / 4);
 $ceiling-font-size: 11px;
 
-@media screen and (min-width: $screen-sm-min) {
-
-}
-
-.ceiling{
+.ceiling {
   @extend .navbar;
   @extend .navbar-default;
   @extend .visible-md;
   @extend .visible-lg;
-
+  background: $white;
+  border: none;
+  font-size: $ceiling-font-size;
   margin: 0;
   min-height: $line-height-computed;
-  background: white;
-  font-size: $ceiling-font-size;
-  border: none;
-
   a {
-    font-size: $ceiling-font-size;
     color: $text-color;
-    vertical-align: middle;
+    font-size: $ceiling-font-size;
     line-height: 2.6;
+    vertical-align: middle;
   }
-
-  .navbar-left:first-child {
-    margin-left: 0;
-    padding-left: $ceiling-margin;
-  }
-
-  .navbar-right{
-    ul.dropdown-menu {
-      margin-right: floor($ceiling-margin / 2);
-    }
-    &:last-child{
-      margin-right: 0;
-    }
-  }
-
-
   ul.menu-inline {
     @extend .list-inline;
     margin-bottom: 0;
-
-    > li{
+    > li {
       margin: $ceiling-margin 0;
       padding: 0;
       &:after {
@@ -53,12 +30,10 @@ $ceiling-font-size: 11px;
         content: " ";
       }
     }
-
     .dropdown-menu {
       padding: 0;
     }
-
-    .dropdown{
+    .dropdown {
       padding: 0;
       &:after {
         content: "";
@@ -66,49 +41,40 @@ $ceiling-font-size: 11px;
       ul, li, a {
         margin: 0;
       }
-
       > a {
         @extend .btn;
         @extend .btn-default;
         font-size: $ceiling-font-size;
       }
-
     }
-
     /** TODO: Refactor as a mixin **/
     .dropdown-green {
-      background-color: #5aaa28;
-      color: white;
-      li a{
-        color: white;
+      background-color: $signup-green;
+      color: $white;
+      li a {
+        color: $white;
         &:hover {
           background-color: #468b24;
         }
       }
     }
-
     .dropdown > a.dropdown-green {
-      background-color: #5aaa28;
-      color: white;
-
+      background-color: $signup-green;
+      color: $white;
       &:hover, &:focus, &:active {
         background-color: #468b24;
-        color: white;
+        color: $white;
       }
-
     }
-
     .dropdown.open > a.dropdown-green {
-      background-color: #5aaa28;
-      color: white;
-
+      background-color: $signup-green;
+      color: $white;
       &:focus, &:active {
         background-color: #468b24;
-        color: white;
+        color: $white;
       }
-
-      li a{
-        color: white;
+      li a {
+        color: $white;
         &:hover {
           background-color: #468b24;
         }
@@ -116,4 +82,18 @@ $ceiling-font-size: 11px;
     }
     /** End Refactor block **/
   }
+  .navbar-left:first-child {
+    margin-left: 0;
+    padding-left: $ceiling-margin;
+  }
+  .navbar-right {
+    ul.dropdown-menu {
+      margin-right: floor($ceiling-margin / 2);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
+
+@media screen and (min-width: $screen-sm-min) {}

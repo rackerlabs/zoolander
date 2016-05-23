@@ -1,77 +1,77 @@
-.nav-tabs{
- @extend .center;
- border:none;
- margin-bottom:0px;
-  &>li{
-    border-top: 5px solid $darkteal;
-    padding:0px;
+.nav-tabs {
+  border: none;
+  margin-bottom: 0;
+  text-align: center;
+  &>li {
     background-color:$darkteal;
-    float:none;
-    display:inline-block;
+    border-top: 5px solid $darkteal;
+    display: inline-block;
+    float: none;
+    padding: 0;
     //snowflake
-    &.enterprise{
+    &.enterprise {
+      background-color: $darkest-gray;
       border-top: 5px solid $darkest-gray;
-      background-color:$darkest-gray;
-        &:hover, &:active{
+        &:hover, &:active {
         border-top: 5px solid $darkest-gray;
-        a{
+        a {
           background-color: $white;
           > * {
-            color:$darkest-gray;
+            color: $darkest-gray;
           }
-          &:hover{
-            text-decoration:none;
+          &:hover {
+            text-decoration: none;
           }
         }
       }
     }
-    a{
-      border-radius:0px;
-      margin: 0px;
+    a {
+      border: none;
+      border-radius: 0;
+      margin: 0;
       padding: 10px 20px;
-      border:none;
-      text-decoration:none;
+      text-decoration: none;
       > * {
-        @extend .white;
-        @extend .center;
-        margin:0px;
+        color: $white;
+        margin: 0;
+        text-align: center;
       }
     }
-    &:hover{
+    &:hover {
       border-top: 5px solid $white;
-      a{
+      a {
         background-color: $darkteal;
       }
     }
-    &.active{
-      background-color:$white;
-      a{
-        border:none!important;
-        > * {
-          color: $darkteal;
-          @extend .center;
-        }
-      }
+    &.active {
+      background-color: $white;
       //snowflake
       &.enterprise {
-        a{
-          > * {
-            color:$darkest-gray;
-          }
-        }
-        &:hover{
+        &:hover {
           border-top: 5px solid $darkest-gray;
         }
+        a {
+          > * {
+            color: $darkest-gray;
+          }
+        }
       }
-      &:hover{
+      &:hover {
         border-top: 5px solid $darkteal;
+      }
+      a {
+        border: none !important;
+        > * {
+          color: $darkteal;
+          text-align: center;
+        }
       }
     }
   }
 }
 
 @media only screen and (max-width : 992px) {
-  #myTab .tab-content{
-    display:none;
+  #myTab .tab-content {
+    display: none;
   }
 }

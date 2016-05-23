@@ -1,17 +1,20 @@
+<!-- Additional Resources Pattern -->
+
 <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
 <% if(!type) { var type = "pdf"; } %>
 <% if(!desc) { var desc = "Extended the title max characters count to 73, so it can do the talking."; } %>
-<!-- Additional Resources Pattern -->
+<% if(!icon_class) { var icon_class = "fa fa-suitcase"; } %>
+
 <!-- Icon Options -->
 <!--
 Case Study: fa-suitcase
-Github: fa-github-square
-News and Articles: fa-newspaper-o
-Blog/RSS: fa-rss-square
-Video: fa-youtube-play
-PDF: fa-file-pdf-o
-API/Code: fa-file-code-o
-Support/KC: fa-wrench
+Github: fa fa-github-square
+News and Articles: fa fa-newspaper-o
+Blog/RSS: fa fa-rss-square
+Video: fa fa-youtube-play
+PDF: fa fa-file-pdf-o
+API/Code: fa fa-file-code-o
+Support/KC: fa fa-wrench
 -->
 
 <a href="http://www.google.com">
@@ -21,7 +24,7 @@ Support/KC: fa-wrench
       <p><%- desc %></p>
     </div>
     <div class="col-sm-1 hidden-xs arrow">
-      <i class="fa fa-angle-right"></i>
+      <i class="<%- icon_class %>"></i>
     </div>
   </div>
 </a>
