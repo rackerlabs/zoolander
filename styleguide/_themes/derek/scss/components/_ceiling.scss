@@ -12,12 +12,12 @@ $ceiling-font-size: 10px;
   @extend .visible-lg;
   @extend .uppercase;
   @extend .semi-bold;
-
+  @extend .no-border;
   margin: 0;
   min-height: $line-height-computed;
-  background: white;
+  background: $white;
   font-size: $ceiling-font-size;
-  border: none;
+  border-radius: 0px;
 
   a {
     font-size: $ceiling-font-size;
@@ -56,6 +56,10 @@ $ceiling-font-size: 10px;
 
     .dropdown-menu {
       padding: 0;
+      min-width:0px;
+      li a{
+        padding: 3px floor($ceiling-margin * 2);
+      }
     }
 
     .dropdown{
@@ -118,5 +122,22 @@ $ceiling-font-size: 10px;
       }
     }
     /** End Refactor block **/
+  }
+}
+
+.navbar-brand{
+  padding: 5px 10px;
+  background-color: $rackspace-red;
+  img{
+    max-width: $full-width;
+    max-height: 100%;
+  }
+}
+.ceiling.lp{
+  ul{
+    padding-top: $ceiling-margin;
+    a{
+      font-size: 13px;
+    }
   }
 }
