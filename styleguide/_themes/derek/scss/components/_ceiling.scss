@@ -1,5 +1,5 @@
 $ceiling-margin: floor($navbar-margin-bottom / 4);
-$ceiling-font-size: 11px;
+$ceiling-font-size: 10px;
 
 @media screen and (min-width: $screen-sm-min) {
 
@@ -10,6 +10,8 @@ $ceiling-font-size: 11px;
   @extend .navbar-default;
   @extend .visible-md;
   @extend .visible-lg;
+  @extend .uppercase;
+  @extend .semi-bold;
 
   margin: 0;
   min-height: $line-height-computed;
@@ -21,7 +23,7 @@ $ceiling-font-size: 11px;
     font-size: $ceiling-font-size;
     color: $text-color;
     vertical-align: middle;
-    line-height: 2.6;
+    line-height: 16px;
   }
 
   .navbar-left:first-child {
@@ -44,13 +46,11 @@ $ceiling-font-size: 11px;
     margin-bottom: 0;
 
     > li{
-      margin: $ceiling-margin 0;
-      padding: 0;
-      &:after {
-        content: "|";
-      }
-      &:last-child::after {
-        content: " ";
+      margin: floor($ceiling-margin + 2) 0;
+      border-right: 1px solid $darkest-gray;
+      padding: 0 floor($ceiling-margin + 2);
+      &.no-border, &:last-child{
+        border: none;
       }
     }
 
@@ -65,52 +65,55 @@ $ceiling-font-size: 11px;
       }
       ul, li, a {
         margin: 0;
+        background-color: $medium-gray;
+        @extend .white;
+        &:hover, &:focus, &:active {
+          background-color: lighten($medium-gray, 5%);
+        }
       }
-
       > a {
         @extend .btn;
         @extend .btn-default;
+        background-color: $medium-gray;
         font-size: $ceiling-font-size;
-      }
-
-    }
-
-    /** TODO: Refactor as a mixin **/
-    .dropdown-green {
-      background-color: #5aaa28;
-      color: white;
-      li a{
-        color: white;
-        &:hover {
-          background-color: #468b24;
+        border: none;
+        border-radius: 0px;
+        &:hover, &:focus, &:active {
+          background-color: lighten($medium-gray, 5%);
+          @extend .white;
         }
       }
     }
 
-    .dropdown > a.dropdown-green {
-      background-color: #5aaa28;
-      color: white;
 
-      &:hover, &:focus, &:active {
-        background-color: #468b24;
-        color: white;
+
+    .dropdown > .dropdown-green {
+      background-color: $signup-green;
+      @extend .white;
+      ul, li, a {
+        background-color: $signup-green;
+        &:hover, &:focus, &:active {
+          background-color: lighten($signup-green, 5%);
+          @extend .white;
+        }
       }
-
+      &:hover, &:focus, &:active {
+        background-color: lighten($signup-green, 5%);
+        @extend .white;
+      }
     }
 
     .dropdown.open > a.dropdown-green {
-      background-color: #5aaa28;
-      color: white;
-
+      background-color: $signup-green;
+      @extend .white;
       &:focus, &:active {
-        background-color: #468b24;
-        color: white;
+        background-color: lighten($signup-green, 5%);
+        @extend .white;
       }
-
       li a{
-        color: white;
+        @extend .white;
         &:hover {
-          background-color: #468b24;
+          background-color: lighten($signup-green, 5%);
         }
       }
     }
