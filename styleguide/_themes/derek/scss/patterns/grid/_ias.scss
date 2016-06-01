@@ -1,0 +1,25 @@
+.ias-body {
+  text-align: center;
+}
+.ias-cta {
+  color: $rackspace-red;
+  font-weight: 600;
+  text-align: center;
+}
+.ias-header {
+  text-align: center;
+}
+.ias-img {
+  float: none;
+  margin: 0 auto;
+}
+.ias-link {
+  display: block;
+  padding: 20px 10px 0;
+}
+.ias-link-hover {
+  &:hover {
+    background-color: $light-gray;
+    text-decoration: none;
+  }
+}
