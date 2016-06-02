@@ -1,5 +1,9 @@
 .basement{
-  &, *{
-    font-size: 1.2rem;
-  }
+  padding: 10px 0;
+}
+.basement-region-select{
+  font-size: 1.2rem;
+}
+.basement-copyright{
+  color: $medium-gray;
 }

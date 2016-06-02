@@ -42,6 +42,14 @@ $body-bg:  #fff !default;
   right: 0;
 }
 
+.modal-no-header.close{
+  padding: 5px 10px;
+  z-index: 999;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
 .circle{
   border: solid 2px $darkest-gray;
   border-radius: 50%;
