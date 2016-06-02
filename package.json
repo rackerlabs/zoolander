@@ -11,7 +11,10 @@
     "gh-pages": "./build-pages.sh",
     "preversion": "npm run harp compile styleguide dist && git add .",
     "postversion": "git push && git push --tags",
-    "migrate": "./scripts/pull-flat-site.js"
+    "migrate": "./scripts/pull-flat-site.js",
+    "test:visual": "nohup npm start & (cd ./node_modules/backstopjs && npm run test)",
+    "test:visual:init": "nohup npm start & (cd ./node_modules/backstopjs && npm run reference)",
+    "backstop-update": "node ./scripts/update-backstop-urls.js"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
@@ -20,8 +23,11 @@
     "harp": "^0.20.1"
   },
   "devDependencies": {
+    "backstopjs": "^1.2.1",
     "colors": "^1.1.2",
+    "fs-extra": "^0.30.0",
     "request": "^2.72.0",
-    "shortid": "^2.2.6"
+    "shortid": "^2.2.6",
+    "walk": "^2.3.9"
   }
 }
