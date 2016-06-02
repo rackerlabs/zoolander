@@ -1,0 +1,12 @@
+.rug{
+  .rugSubhead{
+    font-size: 37px;
+    line-height: 24px;
+  }
+  &, *{
+    @extend .white;
+  }
+  .contactLink{
+    margin-top: 11px;
+  }
+}
