@@ -20,10 +20,14 @@ $ceiling-font-size: 10px;
   border-radius: 0px;
 
   a {
-    font-size: $ceiling-font-size;
     color: $text-color;
-    vertical-align: middle;
+    font-size: $ceiling-font-size;
     line-height: 16px;
+    text-decoration: none;
+    vertical-align: middle;
+    &:hover {
+      color: $bright-blue;
+    }
   }
 
   .navbar-left:first-child {
