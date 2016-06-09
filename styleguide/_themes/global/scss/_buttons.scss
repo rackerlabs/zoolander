@@ -29,7 +29,7 @@
 .button.lead {
   @extend .white;
   background-color: $signup-green;
-  &:hover, &:active, &:visited{
+  &:hover {
     background-color: lighten($signup-green, 5%);
     @extend .white;
   }
@@ -38,7 +38,7 @@
 .button.leaving {
   @extend .white;
   background-color: $mustard;
-  &:hover, &:active, &:visited{
+  &:hover {
     background-color: lighten($mustard, 5%);
     @extend .white;
   }

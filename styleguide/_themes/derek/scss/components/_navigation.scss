@@ -1,3 +1,7 @@
+.nav > li > a:focus {
+  background-color: $signup-green;
+}
+
 .main-nav {
   border: 0;
   background: $brand-black;
@@ -64,7 +68,7 @@
     padding: 7px 7px 6px;
     border-bottom: solid transparent 4px;
     @extend .left;
-    &:hover, &.selected{
+    &:hover {
         border-bottom: solid $darkteal 4px;
         background-color: transparent;
       }
@@ -72,14 +76,14 @@
       @extend .white;
       font-weight: 400;
       text-decoration: none;
-      &:hover, &:focus{
+      &:hover {
         background-color: transparent;
         text-decoration: none;
       }
     }
     &.no-hover{
       float: right;
-      &:hover, &:focus{
+      &:hover {
         border-bottom: solid transparent 4px;
       }
     }
