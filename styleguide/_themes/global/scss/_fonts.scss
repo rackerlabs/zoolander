@@ -3,125 +3,123 @@ $subhead: 'Montserrat', Helvetica, Arial, sans-serif;
 $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
 
-body, p{
-  color:$darkest-gray;
-  font-family:$copy;
-  @extend .left;
-  font-weight:300;
+body, p {
+  color: $darkest-gray;
+  font-family: $copy;
+  font-weight: 300;
   line-height: 1.5em;
   margin: 0 0 1em;
+  text-align: left;
 }
 
-h1, h2, h3{
-  font-family:$heading;
-  color:$darkest-gray;
-  @extend .uppercase;
+h1, h2, h3 {
+  color: $darkest-gray;
+  font-family: $heading;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
-h4, h5, h6{
+h4, h5, h6 {
+  color: $darkest-gray;
   font-family: $subhead;
-  color:$darkest-gray;
-  @extend .uppercase;
-  @extend .left;
   line-height: 1.45em;
+  text-transform: uppercase;
+  text-align: left;
 }
 
-h1{
+h1 {
   font-size: 3em;
   text-align: center;
 }
+
 h2 {
-  font-size:2em;
-  line-height:1.25em;
+  font-size: 2em;
+  line-height: 1.25em;
 }
 h3 {
-  font-size:1.25em;
-  line-height:1.25em;
+  font-size: 1.25em;
+  line-height: 1.25em;
   margin: 10px 0;
-}
-.semi-bold, strong{font-weight: 600;}
-
-code, .lrembedtxt{
-  font-family: $code;
 }
 
 a {
-  color: $dark-gray;
-  text-decoration: none;
-  line-height: 16px;
-  font-weight:400;
   cursor: pointer;
-  &:hover{
-      text-decoration:underline;
-      color:$bright-blue;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: underline;
+  &:hover {
+      color: $bright-blue;      
     }
 }
 
 i {
-  line-height: normal;
-  color: black;
+  color: $black;
   font-style: normal;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
   font-variant: normal;
-  text-transform: none;
+  font-weight: normal;
   line-height: 1;
+  speak: none;
+  text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color:$black;
-  &.rsweb{
-    font-family: 'rsweb'!important;
-    font-size:5em;
+  &.rsweb {
+    font-family: 'rsweb' !important;
+    font-size: 5em;
   }
-  &.rs-4x{
-  font-size:4em;
-  }
-}
-
-.fa-check{
-  color: $darkteal;
-}
-
-ul.checks{
-  list-style:none;
-  padding-left:1.3em;
-  &.teal{
-    li:before{color:$darkteal;}
-  }
-  &.green{
-    li:before{color:$signup-green;}
-  }
-  li{
-    list-style:none;
-    margin-left: 1em;
-    &:before {
-    content: "\f00c";
-    font-family: FontAwesome;
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
-    }
-  }
-}
-
-.read-more {
-  margin-top: 20px;
-  a{
-    @extend .white;
-    text-decoration: none;
+  &.rs-4x {
+    font-size: 4em;
   }
 }
 
 ul {
   list-style: disc;
-  @extend .left;
-}
-li {
-  @extend .no-padding;
+  text-align: left;
 }
 
-.copyright{
+ul.checks {
+  list-style: none;
+  padding-left: 1.3em;
+  &.teal {
+    li:before { color: $darkteal; }
+  }
+  &.green {
+    li:before { color: $signup-green; }
+  }
+  li {
+    list-style: none;
+    margin-left: 1em;
+    &:before {
+      content: "\f00c";
+      display: inline-block;
+      font-family: FontAwesome;
+      margin-left: -1.3em;
+      width: 1.3em;
+    }
+  }
+}
+
+li {
+  padding: 0;
+}
+
+code, .lrembedtxt {
+  font-family: $code;
+}
+
+.copyright {
   font-size: .75em;
 }
+
+.fa-check {
+  color: $darkteal;
+}
+
+.read-more {
+  margin-top: 20px;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.semi-bold, strong { font-weight: 600; }

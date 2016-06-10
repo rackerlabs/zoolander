@@ -8,6 +8,7 @@
 
   .navbar-nav > li > a {
     color: #E0E0E0;
+    text-decoration: none;
     &:hover, &:focus {
       color: $brand-black;
       background: #ccc;
@@ -18,6 +19,7 @@
     border: #ccc 1px solid;
     > li > a {
       padding: 3px 10px;
+      text-decoration: none;
     }
 
     .dropdown-header {

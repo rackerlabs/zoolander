@@ -1,10 +1,25 @@
-.rug-phone-numbers{
-  margin-top:6px;
+.rug-contact-link {
+  margin-top: 11px;
 }
-.rug-subhead{
+
+.rug-link {
+  color: $white;
+  text-decoration: none;
+}
+
+.rug-link-hover {
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.rug-phone-numbers {
+  margin-top: 6px;
+  padding: 0;
+}
+
+.rug-subhead {
   font-size: 37px;
   line-height: 24px;
-}
-.rug-contact-link{
-  margin-top: 11px;
 }
