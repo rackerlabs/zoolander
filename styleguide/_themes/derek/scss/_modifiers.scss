@@ -16,20 +16,30 @@ $body-bg:  #fff !default;
 .bg-crumpled-paper { background-color: $light-gray; background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png); }
 
 //centered-divs
-.center-block{ margin: 0 auto; float:none;}
+.center-block { margin: 0 auto; float: none; }
 
 //equal height columns
-.row-eq-height {
+.row-eq-height, .flex-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
 }
 
+.flex-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  & > * {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width : 770px) {
   //equal height columns remove in small
-  .row-eq-height {
-  display: block;
+  .row-eq-height, .flex-container {
+    display: block;
   }
 }
 
