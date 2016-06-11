@@ -1,12 +1,19 @@
 .footer-menu-link {
   font-size: 1.2rem;
-  color: darken($light-gray, 15%);
+  color: $medium-light-gray;
+  text-decoration: none;
+  &:hover {
+    color: $medium-light-gray;
+    text-decoration: underline;
+  }
 }
 
 .footer-tab-link {
   font-size: 1.3rem;
   text-transform: uppercase;
   color: $white;
+  text-decoration: none;
+
   &:hover, &:focus {
     cursor: default;
     text-decoration: none;
