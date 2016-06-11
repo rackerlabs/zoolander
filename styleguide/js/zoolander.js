@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
     jQuery ('.title a').click(function (event) {
       jQuery (this).parent().parent().find('.fa-arrow-right').animate({  borderSpacing: +90 }, {
       step: function(now,fx) {
-          $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+          $(this).css('-webkit-transform','rotate('+now+'deg)');
           $(this).css('-moz-transform','rotate('+now+'deg)');
           $(this).css('transform','rotate('+now+'deg)');
           counter = 1;
@@ -29,6 +29,7 @@ jQuery(document).ready(function ($) {
       duration:'slow'
       },'linear');
     });
+
+    $('#footer-accordion').tabCollapse();
+
 });
-
-
