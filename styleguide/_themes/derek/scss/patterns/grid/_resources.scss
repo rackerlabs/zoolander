@@ -87,7 +87,7 @@
   }
 }
 
-@media only screen and (max-width : 770px) {
+@media only screen and (max-width : $screen-sm) {
   .additional-resource {
     .row-eq-height{
       display:flex;

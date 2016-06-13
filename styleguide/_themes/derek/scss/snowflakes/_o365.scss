@@ -30,8 +30,8 @@
   border-bottom:$light-gray;
   min-height: 225px;
 }
-  
-  
+
+
   a.js-tabcollapse-panel-heading{
       text-decoration:none;
     }
@@ -176,8 +176,8 @@
       width: 20%;
    }
  }
- 
- @media only screen and (max-width : 992px) {
+
+ @media only screen and (max-width : $screen-md) {
   .rocket{
     background-image:none;
   }
