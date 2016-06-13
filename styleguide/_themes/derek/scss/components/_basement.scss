@@ -7,3 +7,9 @@
 .basement-copyright{
   color: $medium-gray;
 }
+
+@media only screen and (min-width : $screen-md) {
+ .basement-region-list-americas {
+    column-count: 2;
+  }
+}
