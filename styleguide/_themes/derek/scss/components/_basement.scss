@@ -3,13 +3,39 @@
 }
 .basement-region-select{
   font-size: 1.2rem;
+  float: left;
 }
 .basement-copyright{
   color: $medium-gray;
 }
-
-@media only screen and (min-width : $screen-md) {
- .basement-region-list-americas {
-    column-count: 2;
-  }
+.basement-flag-icon {
+  background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/sprites/global_flags.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: 15px;
+  width: 20px;
+  float: left;
+  margin: 4px 0 0 5px;
 }
+
+.basement-flag-argentina { background-position: 0px -280px; }
+.basement-flag-australia { background-position: 0px -40px; }
+.basement-flag-austria { background-position: 0px -360px; }
+.basement-flag-brazil { background-position: 0px -240px; }
+.basement-flag-chile { background-position: 0px -300px; }
+.basement-flag-china { background-position: 0px -400px; }
+.basement-flag-colombia { background-position: 0px -220px; }
+.basement-flag-germany { background-position: 0px -100px; }
+.basement-flag-hk, .basement-flag-hongkong { background-position: 0px -120px; }
+.basement-flag-in, .basement-flag-india { background-position: 0px -440px; }
+.basement-flag-mexico { background-position: 0px -260px; }
+.basement-flag-netherlands { background-position: 0px -140px; }
+.basement-flag-peru { background-position: 0px -320px; }
+.basement-flag-ph, .basement-flag-philippines { background-position: 0px -420px; }
+.basement-flag-sa { background-position: 0px -180px; }
+.basement-flag-sg, .basement-flag-singapore { background-position: 0px -460px; }
+.basement-flag-switzerland { background-position: 0px -380px; }
+.basement-flag-uae { background-position: 0px -200px; }
+.basement-flag-uk, .basement-flag-unitedkingdom { background-position: 0px -20px; }
+.basement-flag-usa, .basement-flag-unitedstates { background-position: 0px 0px; }
+.basement-flag-venezuela { background-position: 0px -340px; }
