@@ -42,7 +42,7 @@
   line-height: 20px;
 }
 
-@media only screen and (max-width: $screen-sm) {
+@media only screen and (max-width: $screen-xs-max) {
   .footer-menu-link {
     display: block;
     background-color: lighten($blue-gray, 5%);
