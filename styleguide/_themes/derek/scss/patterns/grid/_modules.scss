@@ -68,6 +68,27 @@
   }
 }
 
+//cornerPocket incubation
+.cornerPocket{
+  @extend .standard-padding-top;
+  margin-top: 40px;
+  border-left: 1px solid $light-gray;
+  padding-left: 20px;
+}
+
+.cornerPocket-heading{
+  @extend .no-margin;
+}
+
+.cornerPocket-callout{
+  @extend .medium-teal;
+  @extend .no-margin;
+}
+
+.cornerPocket-text{
+  @extend .no-margin;
+}
+
 //temp fixes -- need to get into calc
 #calculator{
   h3{
