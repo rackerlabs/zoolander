@@ -5,3 +5,4 @@ bower_components
 .DS_Store
 Gemfile.lock
 styleguide/css/*.css
+backstop_data/bitmaps_test
