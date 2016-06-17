@@ -9,4 +9,6 @@ files:
 rules:
   no-url-protocols: 0
   class-name-format:
-    - convention: "^([a-z0-9]+([A-Z][a-z0-9]+)*)(-{1}([a-z0-9]+([A-Z][a-z0-9]+)*)){0,2}$"
+    - 1
+    - convention: ^([a-z0-9]+([A-Z][a-z0-9]+)*)(-{1}([a-z0-9]+([A-Z][a-z0-9]+)*)){0,2}$
+    - convention-explanation: 'Classes should be camelCase and separated by no more than 2 hyphens'
