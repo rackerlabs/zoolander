@@ -1,33 +1,41 @@
-.features{
+.features {
   display: flex;
-  .icon{
-    background-color:$darkteal;
-    display: flex;
+
+  &.three-up {
+    display: block;
+  }
+
+  ul {
+    li {
+      margin-left: 1em;
+    }
+  }
+
+  .desc {
+    background-color: $white;
+    margin: 0 15px 0 0;
+    overflow: auto;
+  }
+
+  .icon {
     align-items: center;
+    background-color: $darkteal;
+    display: flex;
     justify-content: center;
   }
-  .desc{
-    background-color:$white;
-    overflow:auto;
-    margin: 0px 15px 0px 0px;
-  }
-  &.three-up{
-    display:block;
-  }
-  ul li{
-    margin-left: 1em;
-  }
+
   .rsweb {
-    @extend .white;
+    color: $white;
   }
 }
 
-@media only screen and (max-width : $screen-sm) {
-  .features{
-    display:block;
+@media only screen and (max-width: $screen-sm) {
+  .features {
+    display: block;
     margin-top: 10px;
-    .desc{
-      margin:0px;
+
+    .desc {
+      margin: 0;
     }
   }
 }
