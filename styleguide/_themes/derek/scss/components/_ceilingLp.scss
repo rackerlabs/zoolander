@@ -1,0 +1,56 @@
+.ceilingLp {
+  background: $white;
+  border-bottom: 1px solid $light-gray;
+}
+
+.ceilingLp-brand {
+  background-color: $rackspace-red;
+  float: left;
+  height: 50px;
+  margin: 0 (-$grid-gutter-width / 2);
+  padding: 5px 10px;
+}
+
+.ceilingLp-brand-logo {
+  max-height: 100%;
+  max-width: $full-width;
+}
+
+.ceilingLp-container {
+  padding: 0;
+}
+
+.ceilingLp-menuInline {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.ceilingLp-menuInline-item {
+  display: inline-block;
+  font-weight: 500;
+  margin: floor($ceiling-margin + 2) 0;
+  padding: floor($ceiling-margin) floor($ceiling-margin + 2);
+  text-transform: uppercase;
+}
+
+.ceilingLp-menuInline-link {
+  color: $text-color;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+.ceilingLp-menuInline-noLink {
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+.ceilingLp-phone {
+  float: right;
+}

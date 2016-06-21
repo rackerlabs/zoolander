@@ -1,147 +1,162 @@
+// see styleguide/_themes/global/scss/_bootstrap_overrides.scss for sass lint overrides.
+
 $ceiling-margin: floor($navbar-margin-bottom / 4);
 $ceiling-font-size: 10px;
 
-@media screen and (min-width: $screen-sm-min) {
-
-}
-
-.ceiling{
-  @extend .navbar;
-  @extend .navbar-default;
-  @extend .visible-md;
-  @extend .visible-lg;
-  @extend .uppercase;
-  @extend .semi-bold;
-  @extend .no-border;
+.ceiling {
+  background: $white;
+  border: 0;
+  border-radius: 0;
+  display: none;
+  font-size: $ceiling-font-size;
+  font-weight: 600;
   margin: 0;
   min-height: $line-height-computed;
-  background: $white;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .ceiling {
+    display: block;
+  }
+}
+
+.ceiling-container {
+  padding: 0;
+}
+
+.ceiling-menuInline {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: -5px;
+  padding-left: 0;
+}
+
+.ceiling-menuInline-item {
+  border-right: 1px solid $darkest-gray;
+  display: inline-block;
+  font-weight: 500;
+  margin: floor($ceiling-margin + 2) 0;
+  padding: floor($ceiling-margin) floor($ceiling-margin + 2);
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+.ceiling-menuInline-itemPartners {
+  border: 0;
+}
+
+.ceiling-menuInline-link {
+  color: $text-color;
   font-size: $ceiling-font-size;
-  border-radius: 0px;
+  line-height: 16px;
+  text-decoration: none;
+  vertical-align: middle;
 
-  a {
+  &:hover {
     color: $text-color;
-    font-size: $ceiling-font-size;
-    line-height: 16px;
-    text-decoration: none;
-    vertical-align: middle;
-    &:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
+}
 
-  .navbar-left:first-child {
+.ceiling-menuInline-noLink {
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+.ceiling-menuContact {
+  float: left;
+
+  &:first-child {
     margin-left: 0;
-    padding-left: $ceiling-margin;
-  }
-
-  .navbar-right{
-    ul.dropdown-menu {
-      margin-right: floor($ceiling-margin / 2);
-    }
-    &:last-child{
-      margin-right: 0;
-    }
-  }
-
-
-  ul.menu-inline {
-    @extend .list-inline;
-    margin-bottom: 0;
-
-    > li{
-      margin: floor($ceiling-margin + 2) 0;
-      border-right: 1px solid $darkest-gray;
-      padding: 0 floor($ceiling-margin + 2);
-      &.no-border, &:last-child{
-        border: none;
-      }
-    }
-
-    .dropdown-menu {
-      padding: 0;
-      min-width:0px;
-      li a{
-        padding: 3px floor($ceiling-margin * 2);
-      }
-    }
-
-    .dropdown{
-      padding: 0;
-      &:after {
-        content: "";
-      }
-      ul, li, a {
-        margin: 0;
-        background-color: $medium-gray;
-        @extend .white;
-        &:hover, &:focus, &:active {
-          background-color: lighten($medium-gray, 5%);
-        }
-      }
-      > a {
-        @extend .btn;
-        @extend .btn-default;
-        background-color: $medium-gray;
-        font-size: $ceiling-font-size;
-        border: none;
-        border-radius: 0px;
-        &:hover, &:focus, &:active {
-          background-color: lighten($medium-gray, 5%);
-          @extend .white;
-        }
-      }
-    }
-
-
-
-    .dropdown > .dropdown-green {
-      background-color: $signup-green;
-      @extend .white;
-      ul, li, a {
-        background-color: $signup-green;
-        &:hover, &:focus, &:active {
-          background-color: lighten($signup-green, 5%);
-          @extend .white;
-        }
-      }
-      &:hover, &:focus, &:active {
-        background-color: lighten($signup-green, 5%);
-        @extend .white;
-      }
-    }
-
-    .dropdown.open > a.dropdown-green {
-      background-color: $signup-green;
-      @extend .white;
-      &:focus, &:active {
-        background-color: lighten($signup-green, 5%);
-        @extend .white;
-      }
-      li a{
-        @extend .white;
-        &:hover {
-          background-color: lighten($signup-green, 5%);
-        }
-      }
-    }
-    /** End Refactor block **/
   }
 }
 
-.navbar-brand{
-  padding: 5px 10px;
-  background-color: $rackspace-red;
-  img{
-    max-width: $full-width;
-    max-height: 100%;
+.ceiling-menuNav {
+  float: right;
+  width: auto;
+
+  &:last-child {
+    margin-right: 0;
   }
 }
-.ceiling.lp{
-  ul{
-    padding-top: $ceiling-margin;
-    a{
-      font-size: 13px;
-    }
+
+.ceiling-dropdown {
+  border: 0;
+  padding: 0;
+  position: relative;
+
+  &:after {
+    content: '';
+  }
+
+  &.open > .ceiling-dropdownMenu {
+    display: block;
+  }
+}
+
+.ceiling-dropdownMenu {
+  border-radius: 0;
+  color: $white;
+  display: none;
+  left: auto;
+  list-style: none;
+  margin: 3px 0 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.ceiling-dropdownMenu-item {
+  color: $white;
+  font-size: $ceiling-font-size;
+  margin: 0;
+  padding: 0;
+}
+
+.ceiling-dropdownMenu-gray {
+  background-color: $medium-gray;
+}
+
+.ceiling-dropdownMenu-green {
+  background-color: $signup-green;
+}
+
+.ceiling-dropdownToggle {
+  color: $white;
+  font-size: $ceiling-font-size;
+  line-height: 20px;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.ceiling-dropdownToggle-green {
+  background-color: $signup-green;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($signup-green, 5%);
+  }
+}
+
+.ceiling-dropdownToggle-gray {
+  background-color: $medium-gray;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($medium-gray, 5%);
   }
 }
