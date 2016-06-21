@@ -15,8 +15,11 @@
   },
   "homepage": {
     "css": "css/derek.css"
-  }, 
+  },
   "forms": {
+    "css": "css/derek.css"
+  },
+  "font-usage": {
     "css": "css/derek.css"
   }
 }

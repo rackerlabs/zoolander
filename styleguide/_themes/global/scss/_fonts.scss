@@ -1,4 +1,4 @@
-$heading: 'Quicksand', Helvetica, Arial, sans-serif;
+$heading: 'Open Sans', Helvetica, Arial, sans-serif;
 $subhead: 'Montserrat', Helvetica, Arial, sans-serif;
 $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
@@ -16,7 +16,7 @@ h1, h2, h3{
   font-family:$heading;
   color:$darkest-gray;
   @extend .uppercase;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 h4, h5, h6{
