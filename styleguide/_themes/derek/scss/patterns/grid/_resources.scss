@@ -1,99 +1,122 @@
 .additional-resource {
   display: flex;
-  .icon{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-basis: 25%;
-      font-size: 3vw;
-      @extend .white;
-      font-family: FontAwesome;
-      &.pdf{
-        background-color:$rackspace-red;
-        &:after{
-          content: "\f1c1";
-        }
-      }
-      &.github{
-        background-color:$purple;
-        &:after{
-          content: "\f092";
-        }
-      }
-      &.support{
-        background-color:$darkteal;
-        &:after{
-          content: "\f0ad";
-        }
-      }
-      &.video{
-        background-color:$blue-gray;
-        &:after{
-          content: "\f16a";
-        }
-      }
-      &.case-study{
-        background-color:$steel-blue;
-        &:after{
-          content: "\f0f2";
-        }
-      }
-      &.news{
-        background-color:$mustard;
-        &:after{
-          content: "\f1ea";
-        }
-      }
-      &.api{
-        background-color:$dark-gray;
-        &:after{
-          content: "\f1c9";
-        }
-      }
-      &.rss{
-        background-color:$magento-orange;
-        &:after{
-          content: "\f143";
-        }
-      }
+
+  &:hover {
+    .desc {
+      background-color: $light-gray-white;
     }
-  .desc{
-    overflow:auto;
-    margin: 0px;
-    padding: 20px;
-    background-color:$white;
-    border: 1px solid $light-gray-white;
   }
-  .arrow{
+
+  a {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2vw;
-    background-color: $light-gray-white;
-  }
-  .row-eq-height{
-    margin:10px;
-    flex-grow: 2;
-  }
-  a{
+    text-decoration: none;
     width: 100%;
-    display: flex;
-    text-decoration:none;
   }
-  &:hover{
-   .desc{
+
+  .arrow {
+    align-items: center;
     background-color: $light-gray-white;
+    display: flex;
+    font-size: 2vw;
+    justify-content: center;
+  }
+
+  .desc {
+    background-color: $white;
+    border: 1px solid $light-gray-white;
+    margin: 0;
+    overflow: auto;
+    padding: 20px;
+  }
+
+  .icon {
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-basis: 25%;
+    font-family: FontAwesome;
+    font-size: 3vw;
+    justify-content: center;
+
+    &.api {
+      background-color: $dark-gray;
+
+      &:after {
+        content: '\f1c9';
+      }
     }
+
+    &.case-study {
+      background-color: $steel-blue;
+
+      &:after {
+        content: '\f0f2';
+      }
+    }
+
+    &.github {
+      background-color: $purple;
+
+      &:after {
+        content: '\f092';
+      }
+    }
+
+    &.pdf {
+      background-color: $rackspace-red;
+
+      &:after {
+        content: '\f1c1';
+      }
+    }
+
+    &.support {
+      background-color: $darkteal;
+
+      &:after {
+        content: '\f0ad';
+      }
+    }
+
+    &.video {
+      background-color: $blue-gray;
+
+      &:after {
+        content: '\f16a';
+      }
+    }
+
+    &.news {
+      background-color: $mustard;
+
+      &:after {
+        content: '\f1ea';
+      }
+    }
+
+    &.rss {
+      background-color: $magento-orange;
+
+      &:after {
+        content: '\f143';
+      }
+    }
+  }
+
+  .row-eq-height {
+    flex-grow: 2;
+    margin: 10px;
   }
 }
 
-@media only screen and (max-width : $screen-sm) {
+@media only screen and (max-width: $screen-sm) {
   .additional-resource {
-    .row-eq-height{
-      display:flex;
-    }
-    .icon{
+    .icon {
       font-size: 2em;
+    }
+
+    .row-eq-height {
+      display: flex;
     }
   }
 }
