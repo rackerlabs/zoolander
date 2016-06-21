@@ -1,77 +1,94 @@
-.nav-tabs{
- @extend .center;
- border:none;
- margin-bottom:0px;
-  &>li{
+.nav-tabs {
+  border: 0;
+  margin-bottom: 0;
+  text-align: center;
+
+  & > li {
+    background-color: $darkteal;
     border-top: 5px solid $darkteal;
-    padding:0px;
-    background-color:$darkteal;
-    float:none;
-    display:inline-block;
-    //snowflake
-    &.enterprise{
-      border-top: 5px solid $darkest-gray;
-      background-color:$darkest-gray;
-        &:hover, &:active{
-        border-top: 5px solid $darkest-gray;
-        a{
-          background-color: $white;
-          > * {
-            color:$darkest-gray;
-          }
-          &:hover{
-            text-decoration:none;
-          }
-        }
-      }
-    }
-    a{
-      border-radius:0px;
-      margin: 0px;
-      padding: 10px 20px;
-      border:none;
-      text-decoration:none;
-      > * {
-        @extend .white;
-        @extend .center;
-        margin:0px;
-      }
-    }
-    &:hover{
+    display: inline-block;
+    float: none;
+    padding: 0;
+
+    &:hover {
       border-top: 5px solid $white;
-      a{
+
+      a {
         background-color: $darkteal;
       }
     }
-    &.active{
-      background-color:$white;
-      a{
-        border:none!important;
-        > * {
-          color: $darkteal;
-          @extend .center;
-        }
+
+    &.active {
+      background-color: $white;
+
+      &:hover {
+        border-top: 5px solid $darkteal;
       }
-      //snowflake
+
       &.enterprise {
-        a{
+        a {
           > * {
-            color:$darkest-gray;
+            color: $darkest-gray;
           }
         }
-        &:hover{
+
+        &:hover {
           border-top: 5px solid $darkest-gray;
         }
       }
-      &:hover{
-        border-top: 5px solid $darkteal;
+
+      a {
+        border: 0;
+
+        > * {
+          color: $darkteal;
+          text-align: center;
+        }
+      }
+    }
+
+    &.enterprise {
+      background-color: $darkest-gray;
+      border-top: 5px solid $darkest-gray;
+
+      &:hover,
+      &:active {
+        border-top: 5px solid $darkest-gray;
+
+        a {
+          background-color: $white;
+
+          > * {
+            color: $darkest-gray;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    a {
+      border: 0;
+      border-radius: 0;
+      margin: 0;
+      padding: 10px 20px;
+      text-decoration: none;
+
+      > * {
+        color: $white;
+        margin: 0;
+        text-align: center;
       }
     }
   }
 }
 
-@media only screen and (max-width : $screen-md) {
-  #myTab .tab-content{
-    display:none;
+@media only screen and (max-width: $screen-md) {
+  #myTab {
+    .tab-content {
+      display: none;
+    }
   }
 }
