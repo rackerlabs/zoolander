@@ -1,23 +1,26 @@
-.banner{
-  background-size: cover;
+.banner {
   background-repeat: no-repeat;
-  @extend .white;
+  background-size: cover;
+  color: $white;
   font-family: $heading;
-  &.medium{
-    height: 225px;
-    .banner-text{
-      margin-top: 10%;
-    }
-  }
-  &.large{
+
+  &.large {
     height: 375px;
-    .banner-text{
+
+    .banner-text {
       margin-top: 18%;
     }
   }
-  &.outlook {
-    background-image: url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/o365-overview.jpg");
-  }
+
+  &.medium {
+    height: 225px;
+
+    .banner-text {
+      margin-top: 10%;
+    }
   }
 
-  
+  &.outlook {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/o365-overview.jpg');
+  }
+}
