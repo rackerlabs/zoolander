@@ -1,104 +1,111 @@
-.valueProp{
-  margin:10px;
+.cornerPocket {
+  border-left: 1px solid $light-gray;
+  margin-top: 40px;
+  padding-left: 20px;
 }
-.list-grid{
-  ul{
-    padding-left:1.3em;
-    li{
+
+.cornerPocket-callout {
+  color: $mediumteal;
+  margin: 0;
+}
+
+.cornerPocket-heading {
+  margin: 0;
+}
+
+.cornerPocket-text {
+  margin: 0;
+}
+
+.customer_stories_logos {
+  img {
+    max-height: 40px;
+    padding: 1% 2%;
+    text-align: center;
+    vertical-align: middle;
+
+    &:hover {
+      background-color: rgba(0, 5, 10, .1);
+      cursor: pointer;
+    }
+  }
+}
+
+.expertise-container {
+  background-size: cover;
+  padding: 60px 0;
+
+  p {
+    background-color: $rackspace-red;
+    color: $white;
+    display: table;
+    font-size: 4.4rem;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -.007em;
+    line-height: 175%;
+    margin-bottom: 5px;
+    padding: 0 20px;
+    text-align: left;
+    text-transform: none;
+    vertical-align: center;
+  }
+}
+
+.list-grid {
+  ul {
+    padding-left: 1.3em;
+
+    li {
       margin-left: 1em;
     }
   }
 }
 
-//not yet patterns -- saving for incubation
-.customer_stories_logos {
-  img {
-    max-height: 40px;
-    padding: 1% 2%;
-    @extend .center;
-    vertical-align: middle;
-    &:hover {
-      background-color: rgba(0, 5, 10, 0.1);
-      cursor: pointer;
-    }
-  }
-}
-.technologies {
-  h3{
-    & + p {
-      padding-top: 8px;
-      font-size: 15px;
-      font-weight: 300;
-      line-height: 150%;
-    }
-  }
-}
 .techapps {
   img {
     max-height: 80px;
     max-width: 140px;
     padding: 2%;
-    @extend .center;
+    text-align: center;
     vertical-align: middle;
-    }
-    span{
+  }
+
+  span {
     &:hover {
-      background-color: rgba(0, 5, 10, 0.1);
+      background-color: rgba(0, 5, 10, .1);
       cursor: pointer;
     }
   }
 }
-.expertise-container{
-  background-size: cover;
-  padding: 60px 0;
-  p {
-    background-color: $rackspace-red;
-    @extend .white;
-    display: table;
-    font-style: normal;
-    font-size: 4.4rem;
-    font-weight: 300;
-    letter-spacing: -0.007em;
-    line-height: 175%;
-    vertical-align: center;
-    padding: 0 20px;
-    margin-bottom: 5px;
-    text-align: left;
-    text-transform: none;
+
+.technologies {
+  h3 {
+    & + p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 150%;
+      padding-top: 8px;
+    }
   }
 }
 
-//cornerPocket incubation
-.cornerPocket{
-  @extend .standard-padding-top;
-  margin-top: 40px;
-  border-left: 1px solid $light-gray;
-  padding-left: 20px;
+.valueProp {
+  margin: 10px;
 }
 
-.cornerPocket-heading{
-  @extend .no-margin;
-}
-
-.cornerPocket-callout{
-  @extend .medium-teal;
-  @extend .no-margin;
-}
-
-.cornerPocket-text{
-  @extend .no-margin;
-}
-
-//temp fixes -- need to get into calc
-#calculator{
-  h3{
-    font-size:16px!important;
+#calculator {
+  h3 {
+    font-size: 16px;
   }
-  button{
-    padding:0px;
+
+  button {
+    padding: 0;
   }
-  .cart-total h2{
-    line-height: 30px;
+
+  .cart-total {
+    h2 {
+      line-height: 30px;
+    }
   }
 }
-
