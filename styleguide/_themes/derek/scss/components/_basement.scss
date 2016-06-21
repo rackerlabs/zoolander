@@ -1,42 +1,85 @@
-.basement{
+// Basement Flag Mixin
+@mixin basement-flag($country, $x, $y) {
+  .basement-flag-#{$country} {
+    background-position: $x $y;
+  }
+}
+
+// Basement Classes
+.basement {
   padding: 10px 15px;
 }
-.basement-region-select{
-  font-size: 1.2rem;
-  float: left;
-}
-.basement-copyright{
+
+.basement-copyright {
   color: $medium-gray;
   text-align: right;
 }
-.basement-flag-icon {
-  background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/sprites/global_flags.png);
-  background-repeat: no-repeat;
+
+.basement-flag {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/sprites/global_flags.png');
   background-position: 0 0;
-  height: 15px;
-  width: 20px;
+  background-repeat: no-repeat;
   float: left;
+  height: 15px;
   margin: 4px 0 0 5px;
+  width: 20px;
 }
 
-.basement-flag-argentina { background-position: 0px -280px; }
-.basement-flag-australia { background-position: 0px -40px; }
-.basement-flag-austria { background-position: 0px -360px; }
-.basement-flag-brazil { background-position: 0px -240px; }
-.basement-flag-chile { background-position: 0px -300px; }
-.basement-flag-china { background-position: 0px -400px; }
-.basement-flag-colombia { background-position: 0px -220px; }
-.basement-flag-germany { background-position: 0px -100px; }
-.basement-flag-hk, .basement-flag-hongkong { background-position: 0px -120px; }
-.basement-flag-in, .basement-flag-india { background-position: 0px -440px; }
-.basement-flag-mexico { background-position: 0px -260px; }
-.basement-flag-netherlands { background-position: 0px -140px; }
-.basement-flag-peru { background-position: 0px -320px; }
-.basement-flag-ph, .basement-flag-philippines { background-position: 0px -420px; }
-.basement-flag-sa { background-position: 0px -180px; }
-.basement-flag-sg, .basement-flag-singapore { background-position: 0px -460px; }
-.basement-flag-switzerland { background-position: 0px -380px; }
-.basement-flag-uae { background-position: 0px -200px; }
-.basement-flag-uk, .basement-flag-unitedkingdom { background-position: 0px -20px; }
-.basement-flag-usa, .basement-flag-unitedstates { background-position: 0px 0px; }
-.basement-flag-venezuela { background-position: 0px -340px; }
+@include basement-flag(argentina, 0, -280px);
+
+@include basement-flag(australia, 0, -40px);
+
+@include basement-flag(austria, 0, -360px);
+
+@include basement-flag(brazil, 0, -240px);
+
+@include basement-flag(chile, 0, -300px);
+
+@include basement-flag(china, 0, -400px);
+
+@include basement-flag(colombia, 0, -220px);
+
+@include basement-flag(germany, 0, -100px);
+
+@include basement-flag(hk, 0, -120px);
+
+@include basement-flag(hongkong, 0, -120px);
+
+@include basement-flag(in, 0, -440px);
+
+@include basement-flag(india, 0, -440px);
+
+@include basement-flag(mexico, 0, -260px);
+
+@include basement-flag(netherlands, 0, -140px);
+
+@include basement-flag(peru, 0, -320px);
+
+@include basement-flag(ph, 0, -420px);
+
+@include basement-flag(philippines, 0, -420px);
+
+@include basement-flag(sa, 0, -180px);
+
+@include basement-flag(sg, 0, -460px);
+
+@include basement-flag(singapore, 0, -460px);
+
+@include basement-flag(switzerland, 0, -380px);
+
+@include basement-flag(uae, 0, -200px);
+
+@include basement-flag(uk, 0, -20px);
+
+@include basement-flag(unitedkingdom, 0, -20px);
+
+@include basement-flag(usa, 0, 0);
+
+@include basement-flag(unitedstates, 0, 0);
+
+@include basement-flag(venezuela, 0, -340px);
+
+.basement-region-select {
+  float: left;
+  font-size: 1.2rem;
+}
