@@ -1,45 +1,68 @@
-.rug-to-top{
-  background-color:$darkteal;
-  @extend .half-padding;
-  @extend .center;
-  a{
-    @extend h4;
-    @extend .white;
-    @extend .center;
-    text-decoration:none;
-    &:hover, &:visited, &:focus{
-      @extend .white;
-      text-decoration:none;
+.rug-to-top {
+  background-color: $darkteal;
+  padding: 20px 15px 30px;
+  text-align: center;
+
+  a {
+    color: $white;
+    font-family: $subhead;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.45em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:visited,
+    &:focus {
+      color: $white;
+      text-decoration: none;
     }
-    i{
-      font-size:1.5em;
-      font-family:'fontAwesome';
-      @extend .white;
-      margin:10px 0px 0px 15px;
+
+    i {
+      color: $white;
+      font-family: FontAwesome;
+      font-size: 1.5em;
+      margin: 10px 0 0 15px;
     }
   }
 }
 
-#top-link-desktop a{
-  background-color:$darkteal;
-  @extend .white;
-  @extend h4;
-  @extend .center;
-  text-decoration:none;
-  position: fixed;
-  bottom: 0;
-  right: 5px;
-  width: 35px;
-  padding: 0px;
-  height: 35px;
-  z-index: 100;
-  display: none;
-  &:hover, &:visited, &:focus{
-    @extend .white;
-  }
-  i{
-    font-size:1.1em;
-    padding-top:10px;
-    @extend .white;
+#top-link-desktop {
+  a {
+    background-color: $darkteal;
+    bottom: 0;
+    color: $white;
+    display: none;
+    font-family: $subhead;
+    font-size: 18px;
+    font-weight: 500;
+    height: 35px;
+    line-height: 1.45em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    position: fixed;
+    right: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 35px;
+    z-index: 100;
+
+    &:hover,
+    &:focus,
+    &:visited {
+      color: $white;
+    }
+
+    i {
+      color: $white;
+      font-size: 1.1em;
+      padding-top: 10px;
+    }
   }
 }
