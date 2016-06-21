@@ -1,29 +1,29 @@
 @import 'modifiers';
-@import 'components/_ceiling';
-@import 'components/_navigation';
-@import 'components/_banners';
+@import 'components/ceiling';
+@import 'components/navigation';
+@import 'components/banners';
 @import 'components/rsweb-font-style';
-@import 'components/_tabs';
-@import 'components/_back-to-top';
-@import 'components/_rug';
-@import 'components/_footer';
-@import 'components/_basement';
-@import 'components/_regionSelector';
-@import 'patterns/_quote';
-@import 'patterns/grid/_modules';
-@import 'patterns/grid/_keyOffers';
-@import 'patterns/grid/_businessResource';
-@import 'patterns/grid/_productFeatures';
-@import 'patterns/grid/_resources';
-@import 'snowflakes/_homepage';
-@import 'snowflakes/_o365';
+@import 'components/tabs';
+@import 'components/back-to-top';
+@import 'components/rug';
+@import 'components/footer';
+@import 'components/basement';
+@import 'components/regionSelector';
+@import 'patterns/quote';
+@import 'patterns/grid/modules';
+@import 'patterns/grid/keyOffers';
+@import 'patterns/grid/businessResource';
+@import 'patterns/grid/productFeatures';
+@import 'patterns/grid/resources';
+@import 'snowflakes/homepage';
+@import 'snowflakes/o365';
 
 
 .clear-fixed-top {
   margin-top: $navbar-height;
 }
 
-@media screen and (min-width: $screen-md-min){
+@media screen and (min-width: $screen-md-min) {
   .clear-fixed-top {
     margin-top: 89px;
   }
