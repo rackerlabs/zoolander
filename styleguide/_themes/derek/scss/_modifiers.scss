@@ -19,6 +19,7 @@ $body-bg:  #fff !default;
 .bg-white{ background-color: $white;}
 .bg-medium-teal { background: $mediumteal; }
 .bg-crumpled-paper { background-color: $light-gray; background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png); }
+.bg-border{border-top:1px solid $light-gray-white; border-bottom:1px solid $light-gray-white;}
 
 //centered-divs
 .center-block{ margin: 0 auto; float:none;}
