@@ -1,70 +1,116 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
-
-
-//** label overrides
-label, .label {font-weight:500;}
-
-label.label-default,
-.label.label-default,
-label.label-primary,
-.label.label-primary {
-  color: #fff;
+label,
+.label {
+  font-weight: 500;
 }
 
-//** table overrides
-.table > thead > tr > th {
-  font-weight: unset;
+label {
+  &.label-default,
+  &.label-primary {
+    color: $white;
+  }
 }
 
-//** label / input field overrides
-.has-warning .help-block, .has-warning .control-label, .has-warning .radio, .has-warning .checkbox, .has-warning .radio-inline, .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
-  color: #eb6800;
-}
-.has-warning .form-control {
-  background-color: rgba(235, 104, 0, 0.1);
-  border-color: #eb6800;
-}
-.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
-  color: #eb0022;
-}
-.has-error .form-control {
-  background-color: rgba(235, 0, 34, 0.1);
-  border-color: #eb0022;
-}
-.has-success .help-block,
-.has-success .control-label,
-.has-success .radio,
-.has-success .checkbox,
-.has-success .radio-inline,
-.has-success .checkbox-inline,
-.has-success.radio label,
-.has-success.checkbox label,
-.has-success.radio-inline label,
-.has-success.checkbox-inline label {
-  color: #008500;
+.label {
+  &.label-default,
+  &.label-primary {
+    color: $white;
+  }
 }
 
-.has-success .form-control {
-  background-color: rgba(0, 133, 0, 0.1);
-  border-color: #008500;
+table {
+  width: 100%;
 }
 
-//** tabs overrides
+.has-error {
+  &.radio,
+  &.checkbox,
+  &.radio-inline,
+  &.checkbox-inline {
+    color: #eb0022;
+  }
+
+  .checkbox,
+  .checkbox-inline,
+  .control-label,
+  .help-block,
+  .radio,
+  .radio-inline {
+    color: #eb0022;
+  }
+
+  .form-control {
+    background-color: rgba(235, 0, 34, .1);
+    border-color: #eb0022;
+  }
+}
+
+.has-success {
+  &.checkbox,
+  &.checkbox-inline,
+  &.radio,
+  &.radio-inline {
+    color: #008500;
+  }
+
+  .checkbox,
+  .checkbox-inline,
+  .control-label,
+  .help-block,
+  .radio,
+  .radio-inline {
+    color: #008500;
+  }
+
+  .form-control {
+    background-color: rgba(0, 133, 0, .1);
+    border-color: #008500;
+  }
+}
+
+.has-warning {
+  &.checkbox,
+  &.checkbox-inline,
+  &.radio,
+  &.radio-inline {
+    label {
+      color: #eb6800;
+    }
+  }
+
+  .checkbox,
+  .checkbox-inline,
+  .control-label,
+  .help-block,
+  .radio,
+  .radio-inline {
+    color: #eb6800;
+  }
+
+  .form-control {
+    background-color: rgba(235, 104, 0, .1);
+    border-color: #eb6800;
+  }
+}
+
 .nav-tabs {
   margin-bottom: 1.5em;
 }
 
-.tab-content{
-  background-color:$white;
-  padding:15px;
-  position: relative;
-  overflow: auto;
-}
-.panel{
-  margin-bottom:0px;
-  background-color:transparent;
-  box-shadow:none;
+.panel {
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
 }
 
-table{width: 100%;}
+.tab-content {
+  background-color: $white;
+  overflow: auto;
+  padding: 15px;
+  position: relative;
+}
+
+.table > thead > tr > th {
+  font-weight: unset;
+}
