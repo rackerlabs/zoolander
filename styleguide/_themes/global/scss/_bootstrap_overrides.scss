@@ -1,0 +1,19 @@
+// Purpose of this file is to add bootstrap overrides that require nesting not permitted by sass linter.
+
+// Ceiling
+.ceiling-dropdownMenu a.ceiling-dropdownMenu-link {
+  color: $white;
+  display: block;
+  padding: 3px (floor($navbar-margin-bottom / 4) * 2);
+  text-decoration: none;
+}
+
+.ceiling-dropdownMenu-gray a.ceiling-dropdownMenu-link:hover {
+  background-color: lighten($medium-gray, 5%);
+  color: $white;
+}
+
+.ceiling-dropdownMenu-green a.ceiling-dropdownMenu-link:hover {
+  background-color: lighten($signup-green, 5%);
+  color: $white;
+}
