@@ -30,7 +30,8 @@
 }
 
 .rug-link-hover {
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $white;
     text-decoration: underline;
   }
