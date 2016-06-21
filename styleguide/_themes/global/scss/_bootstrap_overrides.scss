@@ -17,3 +17,8 @@
   background-color: lighten($signup-green, 5%);
   color: $white;
 }
+
+// Footer
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+  border: 0;
+}
