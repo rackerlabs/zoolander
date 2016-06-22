@@ -9,7 +9,7 @@
     "harp": "harp ",
     "harp:compile": "npm run harp compile styleguide dist",
     "start": "harp server styleguide",
-    "gh-pages": "./build-pages.sh",
+    "gh-pages": "./scripts/build-pages.sh",
     "preversion": "npm run harp compile styleguide dist && git rm -rf backstop_data && npm run test:visual:init && git add .",
     "postversion": "git push && git push --tags",
     "migrate": "./scripts/pull-flat-site.js",
