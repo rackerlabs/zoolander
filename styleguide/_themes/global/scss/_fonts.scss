@@ -58,7 +58,7 @@ ul {
 
     &.teal {
       li {
-        &:before {
+        &::before {
           color: $darkteal;
         }
       }
@@ -66,7 +66,7 @@ ul {
 
     &.green {
       li {
-        &:before {
+        &::before {
           color: $signup-green;
           }
         }
@@ -76,7 +76,7 @@ ul {
       list-style: none;
       margin-left: 1em;
 
-      &:before {
+      &::before {
         content: '\f00c';
         display: inline-block;
         font-family: FontAwesome;

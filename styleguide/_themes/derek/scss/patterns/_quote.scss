@@ -13,7 +13,7 @@ cite {
   font-style: italic;
   white-space: pre;
 
-  &:before {
+  &::before {
     content: '—';
     max-height: 1px;
   }
