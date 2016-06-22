@@ -41,7 +41,7 @@
     &.api {
       background-color: $dark-gray;
 
-      &:after {
+      &::after {
         content: '\f1c9';
       }
     }
@@ -49,7 +49,7 @@
     &.case-study {
       background-color: $steel-blue;
 
-      &:after {
+      &::after {
         content: '\f0f2';
       }
     }
@@ -57,7 +57,7 @@
     &.github {
       background-color: $purple;
 
-      &:after {
+      &::after {
         content: '\f092';
       }
     }
@@ -65,7 +65,7 @@
     &.pdf {
       background-color: $rackspace-red;
 
-      &:after {
+      &::after {
         content: '\f1c1';
       }
     }
@@ -73,7 +73,7 @@
     &.support {
       background-color: $darkteal;
 
-      &:after {
+      &::after {
         content: '\f0ad';
       }
     }
@@ -81,7 +81,7 @@
     &.video {
       background-color: $blue-gray;
 
-      &:after {
+      &::after {
         content: '\f16a';
       }
     }
@@ -89,7 +89,7 @@
     &.news {
       background-color: $mustard;
 
-      &:after {
+      &::after {
         content: '\f1ea';
       }
     }
@@ -97,7 +97,7 @@
     &.rss {
       background-color: $magento-orange;
 
-      &:after {
+      &::after {
         content: '\f143';
       }
     }

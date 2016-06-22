@@ -16,7 +16,7 @@
     "test:visual": "nohup npm start & (cd ./node_modules/backstopjs && npm run test)",
     "test:visual:init": "nohup npm start & (cd ./node_modules/backstopjs && npm run reference)",
     "backstop-update": "node ./scripts/update-backstop-urls.js",
-    "sass-lint": "sass-lint -v ",
+    "sass-lint": "sass-lint -v --max-warnings 126",
     "hooks": "cp ./hooks .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
     "postinstall": "npm run hooks"
   },
