@@ -1,0 +1,22 @@
+@mixin make-container-fluid {
+  @include container-fixed;
+}
+
+@mixin make-container {
+  @include make-container-fluid;
+  max-width: 960px;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+%row {
+  @include make-row;
+}

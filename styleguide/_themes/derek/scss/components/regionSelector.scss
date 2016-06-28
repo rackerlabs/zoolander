@@ -30,59 +30,59 @@
   width: 20px;
 }
 
-@include flag-icon(argentina, 0, -280px);
+@include flag-icon('argentina', 0, -280px);
 
-@include flag-icon(australia, 0, -40px);
+@include flag-icon('australia', 0, -40px);
 
-@include flag-icon(austria, 0, -360px);
+@include flag-icon('austria', 0, -360px);
 
-@include flag-icon(brazil, 0, -240px);
+@include flag-icon('brazil', 0, -240px);
 
-@include flag-icon(chile, 0, -300px);
+@include flag-icon('chile', 0, -300px);
 
-@include flag-icon(china, 0, -400px);
+@include flag-icon('china', 0, -400px);
 
-@include flag-icon(colombia, 0, -220px);
+@include flag-icon('colombia', 0, -220px);
 
-@include flag-icon(germany, 0, -100px);
+@include flag-icon('germany', 0, -100px);
 
-@include flag-icon(hk, 0, -120px);
+@include flag-icon('hk', 0, -120px);
 
-@include flag-icon(hongkong, 0, -120px);
+@include flag-icon('hongkong', 0, -120px);
 
-@include flag-icon(in, 0, -440px);
+@include flag-icon('in', 0, -440px);
 
-@include flag-icon(india, 0, -440px);
+@include flag-icon('india', 0, -440px);
 
-@include flag-icon(mexico, 0, -260px);
+@include flag-icon('mexico', 0, -260px);
 
-@include flag-icon(netherlands, 0, -140px);
+@include flag-icon('netherlands', 0, -140px);
 
-@include flag-icon(peru, 0, -320px);
+@include flag-icon('peru', 0, -320px);
 
-@include flag-icon(ph, 0, -420px);
+@include flag-icon('ph', 0, -420px);
 
-@include flag-icon(philippines, 0, -420px);
+@include flag-icon('philippines', 0, -420px);
 
-@include flag-icon(sa, 0, -180px);
+@include flag-icon('sa', 0, -180px);
 
-@include flag-icon(sg, 0, -460px);
+@include flag-icon('sg', 0, -460px);
 
-@include flag-icon(singapore, 0, -460px);
+@include flag-icon('singapore', 0, -460px);
 
-@include flag-icon(switzerland, 0, -380px);
+@include flag-icon('switzerland', 0, -380px);
 
-@include flag-icon(uae, 0, -200px);
+@include flag-icon('uae', 0, -200px);
 
-@include flag-icon(uk, 0, -20px);
+@include flag-icon('uk', 0, -20px);
 
-@include flag-icon(unitedkingdom, 0, -20px);
+@include flag-icon('unitedkingdom', 0, -20px);
 
-@include flag-icon(usa, 0, 0);
+@include flag-icon('usa', 0, 0);
 
-@include flag-icon(unitedstates, 0, 0);
+@include flag-icon('unitedstates', 0, 0);
 
-@include flag-icon(venezuela, 0, -340px);
+@include flag-icon('venezuela', 0, -340px);
 
 .regionSelector-flag-link {
   text-decoration: none;
