@@ -18,39 +18,12 @@ html(lang="en")
     link(href="css/main.css", rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Open+Sans:700,300,200,600,800,400|Quicksand:400,300|Montserrat:400,700", rel="stylesheet")
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet")
+    script(src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous")
 
-
-  body.clear-navbar
-    nav.navbar.navbar-inverse.navbar-fixed-top
-      .container
-        .navbar-header
-          button.navbar-toggle.collapsed(
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbar"
-            aria-expanded="false"
-            aria-controls="navbar"
-          )
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href="") #{ public._data.index.title }
-        #navbar.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li.dropdown
-              a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false") Themes
-                span.caret
-              ul.dropdown-menu(role="menu")
-                li: a(href="global") Global Base
-                li: a(href="derek") Derek
-            li: a(href="getting-started.html") Getting Started
-            li: a(href="about.html") About
 
     block content
 
 
-    script(src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
     script(src="/js/zoolander.js")
     script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js")
