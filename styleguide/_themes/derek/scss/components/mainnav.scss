@@ -1,0 +1,354 @@
+//main nav
+.main-nav {
+  background: $dark-gray;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+
+  .navbar-menuContainer {
+    border: 0;
+    max-height: none;
+    padding: 0;
+  }
+}
+
+.navbar-nav {
+
+  .navbar-topLink {
+    color: $white;
+    display: block;
+    padding: 21px 15px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      background: $medium-dark-gray;
+    }
+  }
+
+  .navbar-topItem {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &.open {
+      > .navbar-topLink {
+        background: $medium-dark-gray;
+      }
+    }
+
+    .navbar-dropDownLink {
+      color: $white;
+      font-size: .8em;
+      font-style: italic;
+      padding: 5px 20px;
+      text-decoration: none;
+      text-transform: none;
+
+      &:hover,
+      &:visited,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.navbar-dropDown-trigger {
+
+  &::after {
+    content: '\f0da';
+    float: right;
+    font-family: 'FontAwesome';
+  }
+}
+
+.navbar-container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0;
+}
+
+.navbar-footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-footerLink {
+  @include subhead;
+  color: $white;
+}
+
+//make sure menu aligns with right side of buttons in desktop
+.navbar-menu {
+  float: right;
+  width: auto;
+}
+
+.navbar-dropDownMenu {
+  background: $medium-dark-gray;
+  border: 0;
+  border-radius: 0;
+  min-width: 230px;
+  padding: 0;
+}
+
+.navbar-dropDownItem {
+  position: relative;
+
+  &:hover {
+    background-color: $medium-gray;
+  }
+}
+
+.navbar-tertiary-dropDownMenu {
+  background-color: $medium-gray;
+  border: 0;
+  box-shadow: none;
+  left: 100%;
+  margin: 0;
+  min-width: auto;
+  padding: 0;
+  position: absolute;
+  top: 0;
+}
+
+.navbar-tertiary-dropDownItem {
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+
+.navbar-dropDownSub {
+  position: relative;
+
+  &:hover {
+    .navbar-dropDownMenu {
+      display: block;
+    }
+  }
+}
+
+.navbar-dropDownSub > .navbar-dropDown-trigger {
+
+  &::after {
+    content: '\f0da';
+    float: right;
+    font-family: FontAwesome;
+  }
+}
+
+.navbar-brand {
+  background-color: $medium-dark-gray;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg');
+  background-position: 10px 14px;
+  background-repeat: no-repeat;
+  background-size: 140px 36px;
+  height: 63px;
+  position: relative;
+  width: 160px;
+}
+
+.navbar-search {
+  background-color: $medium-dark-gray;
+  border-top: 1px solid $dark-gray;
+  display: none;
+  overflow: auto;
+  padding: 10px;
+}
+
+.navbar-searchContainer {
+  float: right;
+  width: 300px;
+}
+
+.navbar-phoneicon,
+.navbar-chaticon,
+.navbar-hamburger,
+.navbar-searchicon {
+  text-align: center;
+
+  &::after {
+    color: $white;
+    display: none;
+    font-family: FontAwesome;
+    padding: 23px 0;
+  }
+}
+
+.navbar-hamburger {
+  &::after {
+    content: '\f00d';
+    font-size: 5.5vw;
+  }
+
+  &.collapsed {
+    &::after {
+      content: '\f0c9';
+    }
+  }
+}
+
+.navbar-phoneicon {
+  float: right;
+
+  &::after {
+    content: '\f10b';
+    font-size: 7.5vw;
+  }
+}
+
+.navbar-chaticon {
+  float: right;
+
+  &::after {
+    content: '\f086';
+    font-size: 6.5vw;
+  }
+}
+
+.navbar-searchicon {
+  float: right;
+  width: 50px;
+
+  &::after {
+    content: '\f002';
+    display: inline-block;
+    font-size: 1vw;
+    margin-right: 25px;
+  }
+}
+
+.navbar-activeArrow {
+  border-bottom: 10px solid $medium-dark-gray;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -1px;
+  display: none;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.navbar-searchInput {
+  border: 1px solid $light-gray;
+  outline: none;
+  padding: 3px;
+  width: 80%;
+}
+
+.navbar-searchButton {
+  float: right;
+  margin: 0;
+  opacity: .7;
+  padding: 6.5px;
+  width: 20%;
+}
+
+
+//main nav show dropdowns on hover on desktop
+@media only screen and (min-width: $screen-md-min) {
+  .dropdown {
+    &:hover {
+      .navbar-dropDownMenu {
+        display: block;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: $screen-sm-max) {
+  .navbar-nav {
+
+    .navbar-topItem {
+      font-size: 1.07rem;
+    }
+
+    .navbar-topLink {
+      padding: 21px 9px;
+    }
+  }
+
+  .navbar-container {
+    max-width: $screen-md;
+  }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  //mainnav side caret for dropdowns
+  .navbar-dropDown-trigger {
+
+    &::after {
+      content: '\f0da';
+      font-family: FontAwesome;
+      margin-left: 10px;
+    }
+  }
+
+  .navbar-nav {
+    margin: 0 0 7.5px;
+
+    .navbar-topItem {
+      font-size: 1rem;
+    }
+
+    .navbar-topLink {
+      padding: 21px 9px;
+    }
+  }
+
+  .navbar-topLink {
+    height: 50px;
+    padding-top: 15px;
+  }
+
+  .navbar-brand {
+    @include make-xs-column(4);
+    background-position: center;
+  }
+
+  .navbar-activeArrow {
+    left: 0;
+    right: 0;
+  }
+
+  .navbar-searchContainer {
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .main-nav {
+
+    .navbar-phoneicon,
+    .navbar-chaticon,
+    .navbar-hamburger,
+    .navbar-searchicon {
+      @include make-xs-column(2);
+
+      &::after {
+        display: inline-block;
+      }
+    }
+
+    .navbar-searchicon {
+      float: left;
+
+      &::after {
+        font-size: 5vw;
+        margin: 0;
+      }
+    }
+
+    //make sure menu aligns with right side of buttons
+    .navbar-menu {
+      float: left;
+      min-height: 1020px;
+      width: 100%;
+    }
+  }
+}

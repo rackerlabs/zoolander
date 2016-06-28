@@ -3,8 +3,22 @@ $subhead: 'Montserrat', Helvetica, Arial, sans-serif;
 $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
 
-body,
-p {
+@mixin heading {
+  color: $darkest-gray;
+  font-family: $heading;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+@mixin subhead {
+  color: $darkest-gray;
+  font-family: $subhead;
+  line-height: 1.45em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+@mixin copy {
   color: $darkest-gray;
   font-family: $copy;
   font-weight: 300;
@@ -13,39 +27,34 @@ p {
   text-align: left;
 }
 
-h1,
-h2,
-h3 {
-  color: $darkest-gray;
-  font-family: $heading;
-  font-weight: 200;
-  text-transform: uppercase;
-}
-
-h4,
-h5,
-h6 {
-  color: $darkest-gray;
-  font-family: $subhead;
-  line-height: 1.45em;
-  text-align: left;
-  text-transform: uppercase;
+body,
+p {
+  @include copy;
 }
 
 h1 {
+  @include heading;
   font-size: 3em;
   text-align: center;
 }
 
 h2 {
+  @include heading;
   font-size: 2em;
   line-height: 1.25em;
 }
 
 h3 {
+  @include heading;
   font-size: 1.25em;
   line-height: 1.25em;
   margin: 10px 0;
+}
+
+h4,
+h5,
+h6 {
+  @include subhead;
 }
 
 ul {
