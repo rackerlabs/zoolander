@@ -57,6 +57,7 @@
 }
 
 .navbar-dropDown-trigger {
+  display: block;
 
   &::after {
     content: '\f0da';
