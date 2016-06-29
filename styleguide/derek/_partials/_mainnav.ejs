@@ -1,33 +1,153 @@
 <!--[navigation]-->
-  <nav class="main-nav navbar navbar-default">
-      <div class="container">
+  <nav class="main-nav navbar">
+      <div class="navbar-container">
           <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
+              <a class="navbar-hamburger collapsed" data-toggle="collapse" data-target="#main-navigation"></a>
+              <a class="navbar-searchicon hidden-sm hidden-md hidden-lg hidden-xl" id="search"><span class="navbar-activeArrow"></span></a>
               <a class="navbar-brand" href=""><span class="sr-only">Rackspace the #1 managed cloud company</span></a>
+              <a class="navbar-chaticon" href="#" title="Live Sales Chat"></a>
+              <a class="navbar-phoneicon" href="#" title="Sales/Support Call"></a>
           </div>
-          <div class="collapse navbar-collapse" id="main-navigation">
-              <ul class="nav navbar-nav">
-                  <li class="active"><a href="javascript:">Why Rackspace</a></li>
-                  <li><a href="javascript:">Dedicated Hosting</a></li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-          Drop Down<span class="caret"></span></a>
-                      <ul class="dropdown-menu" role="menu">
-                          <li class="dropdown-header">Test</li>
-                          <li><a href="#">Link</a></li>
-                          <li class="dropdown-header">Test</li>
-                          <li><a href="#">Link</a></li>
-                      </ul>
+          <a class="navbar-searchicon navbar-searchDesktop hidden-xs" id="searchDesktop"><span class="navbar-activeArrow"></span></a>
+          <div class="collapse navbar-collapse navbar-menuContainer" id="main-navigation">=
+            <ul class="nav navbar-nav navbar-menu">
+              <li class="navbar-topItem"><a href="javascript:void(0)" class="navbar-topLink">Why Rackspace</a></li>
+              <li class="navbar-topItem"><a href="javascript:void(0)" class="navbar-topLink">Dedicated Hosting</a></li>
+              <li class="navbar-topItem">
+                <span class="navbar-topLink dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cloud</span>
+                <ul class="dropdown-menu navbar-dropDownMenu">
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Public Cloud</a></li>
+                  <li class="navbar-dropDownItem navbar-tertiary-dropDownTrigger">
+                    <a href="javascript:void(0)" class="navbar-dropDownLink navbar-dropDown-trigger">Private Cloud</a>
+                    <ul class="dropdown-menu navbar-dropDownMenu navbar-tertiary-dropDownMenu">
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">VMware vCloud®</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">OpenStack</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Microsoft Private Cloud</a></li>
+                    </ul>
                   </li>
-              </ul>
-          </div>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Hybrid Cloud</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Fanatical Support for AWS</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Fanatical Support for Microsoft Azure</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Fanatical Support for Office 365</a></li>
+                </ul>
+              </li>
+              <li class="navbar-topItem">
+                <span class="navbar-topLink dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Infrastructure</span>
+                <ul class="dropdown-menu navbar-dropDownMenu">
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Dedicated Hosting</a></li>
+                  <li class="navbar-dropDownItem navbar-tertiary-dropDownTrigger">
+                    <a href="javascript:void(0)" class="navbar-dropDownLink navbar-dropDown-trigger active">Compute</a>
+                    <ul class="dropdown-menu navbar-dropDownMenu navbar-tertiary-dropDownMenu">
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" column="0" class="navbar-dropDownLink">Virtual Cloud Servers</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">OnMetal Cloud Servers</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">VMware Virtual Servers</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Rapid Deployment Servers</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Dedicated Servers</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-dropDownItem navbar-tertiary-dropDownTrigger">
+                    <a href="javascript:void(0)" class="navbar-dropDownLink navbar-dropDown-trigger active">Network </a>
+                    <ul class="dropdown-menu navbar-dropDownMenu navbar-tertiary-dropDownMenu">
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud Networks</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud Load Balancers</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud DNS </a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">RackConnect®</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Custom Networking</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-dropDownItem navbar-tertiary-dropDownTrigger">
+                    <a href="javascript:void(0)" class="navbar-dropDownLink navbar-dropDown-trigger active">Storage</a>
+                    <ul class="dropdown-menu navbar-dropDownMenu navbar-tertiary-dropDownMenu">
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud Block Storage</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud Backup </a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Custom Storage</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud Files</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Rackspace CDN</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-dropDownItem navbar-tertiary-dropDownTrigger">
+                    <a href="javascript:void(0)" class="navbar-dropDownLink navbar-dropDown-trigger active">Infrastructure &amp; Developer Tools</a>
+                    <ul class="dropdown-menu navbar-dropDownMenu navbar-tertiary-dropDownMenu">
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud Orchestration</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Auto Scale</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Mailgun Email Automation</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Rackspace Monitoring</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud Queues</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-dropDownItem navbar-tertiary-dropDownTrigger">
+                    <a href="javascript:void(0)" class="navbar-dropDownLink navbar-dropDown-trigger active">Database &amp; Data Analytics </a>
+                    <ul class="dropdown-menu navbar-dropDownMenu navbar-tertiary-dropDownMenu">
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Cloud Databases</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Managed Cloud Big Data</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">DBA Services</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Managed Dedicated Big Data</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-dropDownItem navbar-tertiary-dropDownTrigger">
+                    <a href="javascript:void(0)" class="navbar-dropDownLink navbar-dropDown-trigger">Email Hosting</a>
+                    <ul class="dropdown-menu navbar-dropDownMenu navbar-tertiary-dropDownMenu">
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Office 365</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Exchange Solutions</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Hosted Exchange</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Exchange Hybrid</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Rackspace Email</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Google Apps for Work</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Email Archiving</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-dropDownItem navbar-tertiary-dropDownTrigger">
+                    <a href="/productivity-collaboration" class="navbar-dropDownLink navbar-dropDown-trigger">Productivity and Collaboration</a>
+                    <ul class="dropdown-menu navbar-dropDownMenu navbar-tertiary-dropDownMenu">
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Office 365</a></li>
+                      <li class="navbar-tertiary-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Sharepoint</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Simple Websites</a></li>
+                </ul>
+              </li>
+              <li class="navbar-topItem">
+                <span class="navbar-topLink dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Solutions</span>
+                <ul class="dropdown-menu navbar-dropDownMenu">
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" column="1" columntitle="1" class="navbar-dropDownLink active">Managed Offerings</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Ecommerce</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Email Hosting</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Productivity and Collaboration</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Web Content Management</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Data Services</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Web and Mobile Apps</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Managed Security &amp; Compliance</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" column="1" columntitle="1" class="navbar-dropDownLink active">Services</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Professional Services</a></li>
+                </ul>
+              </li>
+              <li class="navbar-topItem">
+                <span class="navbar-topLink dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support</span>
+                <ul class="dropdown-menu navbar-dropDownMenu">
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Support Home</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" target="_blank" class="navbar-dropDownLink">Knowledge Center</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" target="_blank" class="navbar-dropDownLink">Community</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" target="_blank" class="navbar-dropDownLink">API Documentation</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" target="_blank" class="navbar-dropDownLink">System Status</a></li>
+                  <li class="navbar-dropDownItem"><a href="javascript:void(0)" class="navbar-dropDownLink">Infrastructure Service Levels</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="navbar-footer hidden-md hidden-lg hidden-xl">
+              <a href="#" class="navbar-footerLink">Login</a>
+              <a href="#" class="navbar-footerLink">Sign Up</a>
+            </div>
+        </div>
       </div>
   </nav>
-<!--End Fixed Top-->
+  <div class="navbar-search">
+  <!--to restrict width on desktop-->
+    <div class="navbar-container">
+      <div class="navbar-searchContainer">
+        <input type="search" class="navbar-searchInput" placeholder="Search Term" />
+        <button class="navbar-searchButton button lead">Search</button>
+      </div>
+    </div>
+  </div>
 </div>
 <!--[/navigation]-->

@@ -1,0 +1,87 @@
+//subnav
+.subnav {
+  background-color: $blue-gray;
+  border-radius: 0;
+
+  .nav > li > a:focus {
+    background-color: transparent;
+  }
+
+  .nav > li.no-hover > a:focus {
+    background-color: $signup-green;
+  }
+
+  .subnav-inside {
+    width: 100%;
+  }
+
+  .navbar-header {
+
+    .col-xs-10 {
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+  }
+
+  .button {
+    margin: 7px 0;
+  }
+
+  .icon-bar {
+    background-color: $white;
+  }
+
+  li {
+    @extend %left;
+    border-bottom: solid transparent 4px;
+    padding: 7px 7px 6px;
+
+    &:hover {
+      background-color: transparent;
+      border-bottom: solid $darkteal 4px;
+    }
+
+    a {
+      @extend %white;
+      font-weight: 400;
+      text-decoration: none;
+
+      &:hover {
+        background-color: transparent;
+        text-decoration: none;
+      }
+    }
+
+    &.no-hover {
+      float: right;
+
+      &:hover {
+        border-bottom: solid transparent 4px;
+      }
+
+    }
+
+  }
+}
+
+//subnav
+@media only screen and (max-width: $screen-md-max) {
+  .subnav li {
+    font-size: .86em;
+    margin: 0;
+    padding: 7px 0 6px;
+  }
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  //subnav
+  .subnav li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
