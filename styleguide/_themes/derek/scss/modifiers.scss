@@ -52,7 +52,6 @@ $body-bg:  #fff !default;
 
 //equal height columns
 .row-eq-height {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
@@ -71,6 +70,7 @@ $body-bg:  #fff !default;
   height: 10%;
   position: absolute;
   right: 0;
+  width: 100%;
 }
 
 .modal-no-header {
