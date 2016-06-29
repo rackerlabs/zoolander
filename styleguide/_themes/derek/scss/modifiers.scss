@@ -130,3 +130,9 @@ $body-bg:  #fff !default;
     color: $white;
   }
 }
+
+.flex-center-all {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
