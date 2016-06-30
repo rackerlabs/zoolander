@@ -17,6 +17,7 @@
   .navbar-topLink {
     color: $white;
     display: block;
+    line-height: 2.1rem;
     padding: 21px 15px;
     text-decoration: none;
 
@@ -43,7 +44,8 @@
       color: $white;
       font-size: .8em;
       font-style: italic;
-      padding: 5px 20px;
+      line-height: 1.5em;
+      padding: 4px 15px;
       text-decoration: none;
       text-transform: none;
 
@@ -268,6 +270,10 @@
 
     .navbar-topItem {
       font-size: 1.07rem;
+
+      .navbar-dropDownLink {
+        padding: 5px 15px 5px 25px;
+      }
     }
 
     .navbar-topLink {
@@ -299,18 +305,16 @@
     }
 
     .navbar-topLink {
-      padding: 21px 9px;
+      height: 50px;
+      padding-top: 15px;
     }
   }
 
-  .navbar-topLink {
-    height: 50px;
-    padding-top: 15px;
-  }
 
   .navbar-brand {
     @include make-xs-column(4);
     background-position: center;
+    background-size: 110px 36px;
   }
 
   .navbar-activeArrow {
