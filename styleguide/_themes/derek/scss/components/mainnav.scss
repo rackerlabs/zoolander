@@ -43,9 +43,8 @@
     .navbar-dropDownLink {
       color: $white;
       font-size: .8em;
-      font-style: italic;
       line-height: 1.5em;
-      padding: 4px 15px;
+      padding: 6px 15px;
       text-decoration: none;
       text-transform: none;
 
@@ -63,8 +62,10 @@
 
   &::after {
     content: '\f0da';
-    float: right;
     font-family: 'FontAwesome';
+    position: absolute;
+    right: 10px;
+    top: 8px;
   }
 }
 
@@ -113,7 +114,6 @@
   box-shadow: none;
   left: 100%;
   margin: 0;
-  min-width: auto;
   padding: 0;
   position: absolute;
   top: 0;
@@ -122,7 +122,7 @@
 .navbar-tertiary-dropDownItem {
 
   &:hover {
-    background-color: $light-gray;
+    background-color: lighten($medium-gray, 5%);
   }
 }
 
@@ -216,7 +216,7 @@
 
 .navbar-searchicon {
   float: right;
-  width: 50px;
+  width: 12px;
 
   &::after {
     content: '\f002';
@@ -255,6 +255,10 @@
 
 //main nav show dropdowns on hover on desktop
 @media only screen and (min-width: $screen-md-min) {
+  .navbar-searchicon {
+    margin-left: 12px;
+  }
+
   .dropdown {
     &:hover {
       .navbar-dropDownMenu {
@@ -272,7 +276,7 @@
       font-size: 1.07rem;
 
       .navbar-dropDownLink {
-        padding: 5px 15px 5px 25px;
+        padding: 8px 15px 8px 25px;
       }
     }
 
