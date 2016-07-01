@@ -36,8 +36,8 @@
   }
 
   li {
-    @extend %left;
     border-bottom: solid transparent 4px;
+    float: left;
     padding: 7px 7px 6px;
 
     &:hover {
@@ -46,7 +46,7 @@
     }
 
     a {
-      @extend %white;
+      color: $white;
       font-weight: 400;
       text-decoration: none;
 
