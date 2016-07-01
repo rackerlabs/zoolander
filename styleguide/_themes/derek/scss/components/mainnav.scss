@@ -158,7 +158,6 @@
 
 .navbar-search {
   background-color: $medium-dark-gray;
-  border-top: 1px solid $dark-gray;
   display: none;
   overflow: auto;
   padding: 10px;
@@ -253,12 +252,18 @@
 }
 
 
-//main nav show dropdowns on hover on desktop
-@media only screen and (min-width: $screen-md-min) {
+@media only screen and (min-width: $screen-sm-min) {
   .navbar-searchicon {
     margin-left: 12px;
   }
 
+  .navbar-activeArrow {
+    margin: 0 0 0 -5px;
+  }
+}
+
+//main nav show dropdowns on hover on desktop
+@media only screen and (min-width: $screen-md-min) {
   .dropdown {
     &:hover {
       .navbar-dropDownMenu {
