@@ -4,11 +4,16 @@
 }
 
 .ceilingLp-brand {
-  background-color: $rackspace-red;
+  background-color: $medium-dark-gray;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg');
+  background-position: 9px 10px;
+  background-repeat: no-repeat;
+  background-size: 111px 29px;
   float: left;
   height: 50px;
   margin: 0 (-$grid-gutter-width / 2);
-  padding: 5px 10px;
+  position: relative;
+  width: 127px;
 }
 
 .ceilingLp-brand-logo {
