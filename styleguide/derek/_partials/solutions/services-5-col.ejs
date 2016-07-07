@@ -1,27 +1,23 @@
 <!-- Infrastructure and Services section (repeated infserve pattern) -->
 <!-- 5 column -->
-<div class="container infrastructure-and-services-container">
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="center">5 columns</h2>
+<div class="ias-container">
+  <h2 class="ias-title">5 columns</h2>
+  <div class="ias-row">
+    <div class="ias5-col">
+      <%- partial("../grid/widget/ias") %>
+    </div>
+    <div class="ias5-col">
+      <%- partial("../grid/widget/ias-no-hover") %>
+    </div>
+    <div class="ias5-col">
+      <%- partial("../grid/widget/ias-no-hover") %>
     </div>
   </div>
-  <div class="row row-eq-height">
-    <div class="col-md-4 col-sm-6 clickarea">
+  <div class="ias-row">
+    <div class="ias5-col ias5-col-push">
       <%- partial("../grid/widget/ias") %>
     </div>
-    <div class="col-md-4 col-sm-6 clickarea">
-      <%- partial("../grid/widget/ias") %>
-    </div>
-    <div class="col-md-4 col-sm-6 clickarea">
-      <%- partial("../grid/widget/ias") %>
-    </div>
-  </div>
-  <div class="row row-eq-height">
-    <div class="col-md-4 col-sm-6 col-md-push-2 clickarea">
-      <%- partial("../grid/widget/ias") %>
-    </div>
-    <div class="col-md-4 col-sm-6 col-md-push-2 clickarea">
+    <div class="ias5-col ias5-col-push">
       <%- partial("../grid/widget/ias") %>
     </div>
   </div>
