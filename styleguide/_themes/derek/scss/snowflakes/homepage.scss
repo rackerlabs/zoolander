@@ -31,9 +31,9 @@
   .product{
     p{ margin-bottom:30px; }
     &:hover{
-      @extend .bg-light-gray;
-      hr{ border-color:$mediumteal; }
-      h3, a{ color:$mediumteal; }
+      @extend .bg-gray-light;
+      hr{ border-color:$brand-secondary; }
+      h3, a{ color:$brand-secondary; }
     }
   }
 }

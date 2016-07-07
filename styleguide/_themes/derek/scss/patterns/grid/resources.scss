@@ -3,7 +3,7 @@
 
   &:hover {
     .desc {
-      background-color: $light-gray-white;
+      background-color: $gray-lightest;
     }
   }
 
@@ -15,7 +15,7 @@
 
   .arrow {
     align-items: center;
-    background-color: $light-gray-white;
+    background-color: $gray-lightest;
     display: flex;
     font-size: 2vw;
     justify-content: center;
@@ -23,7 +23,7 @@
 
   .desc {
     background-color: $white;
-    border: 1px solid $light-gray-white;
+    border: 1px solid $gray-lightest;
     margin: 0;
     overflow: auto;
     padding: 20px;
@@ -39,7 +39,7 @@
     justify-content: center;
 
     &.api {
-      background-color: $dark-gray;
+      background-color: $gray-dark;
 
       &::after {
         content: '\f1c9';
@@ -47,7 +47,7 @@
     }
 
     &.case-study {
-      background-color: $steel-blue;
+      background-color: $blue-steel;
 
       &::after {
         content: '\f0f2';
@@ -63,7 +63,7 @@
     }
 
     &.pdf {
-      background-color: $rackspace-red;
+      background-color: $brand-primary;
 
       &::after {
         content: '\f1c1';
@@ -71,7 +71,7 @@
     }
 
     &.support {
-      background-color: $darkteal;
+      background-color: $teal-dark;
 
       &::after {
         content: '\f0ad';
@@ -95,7 +95,7 @@
     }
 
     &.rss {
-      background-color: $magento-orange;
+      background-color: $orange;
 
       &::after {
         content: '\f143';
