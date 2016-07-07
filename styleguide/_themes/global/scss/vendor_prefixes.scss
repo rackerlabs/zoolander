@@ -1,0 +1,43 @@
+// Purpose of this file is to add mixins for vendor prefixes in order to pass sass-lint errors.
+
+// For reference, the following is a list of all vendor-prefix mixins already provided by bootstrap:
+// - animation($animation);
+// - animation-name($name);
+// - animation-duration($duration);
+// - animation-timing-function($timing-function);
+// - animation-delay($delay);
+// - animation-iteration-count($iteration-count);
+// - animation-direction($direction);
+// - animation-fill-mode($fill-mode);
+// - backface-visibility($visibility);
+// - box-shadow($shadow...);
+// - box-sizing($boxmodel);
+// - content-columns($column-count, $column-gap: $grid-gutter-width);
+// - hyphens($mode: auto);
+// - placeholder($color: $input-color-placeholder);
+// - scale($ratio...);
+// - scaleX($ratio);
+// - scaleY($ratio);
+// - skew($x, $y);
+// - translate($x, $y);
+// - translate3d($x, $y, $z);
+// - rotate($degrees);
+// - rotateX($degrees);
+// - rotateY($degrees);
+// - perspective($perspective);
+// - perspective-origin($perspective);
+// - transform-origin($origin);
+// - transition($transition...);
+// - transition-property($transition-property...);
+// - transition-delay($transition-delay);
+// - transition-duration($transition-duration...);
+// - transition-timing-function($timing-function);
+// - transition-transform($transition...);
+// - user-select($select);
+
+@mixin flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}

@@ -1,0 +1,115 @@
+.ias-container {
+  @include container-fixed;
+  max-width: 960px;
+  padding: $standard-padding;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+.ias-row {
+  @include make-row;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .ias-row {
+    @include flex-box;
+  }
+}
+
+.ias-col-full {
+  @include make-md-column(12);
+  @include flex-box;
+}
+
+.ias-col-half {
+  @include make-sm-column(6);
+  @include flex-box;
+}
+
+.ias-col-third {
+  @include make-xs-column(12);
+  @include make-sm-column(4);
+  @include flex-box;
+}
+
+.ias5-col-push {
+  @include make-sm-column-push(2);
+}
+
+.ias5-col {
+  @include make-sm-column(4);
+  @include flex-box;
+}
+
+.ias-title {
+  text-align: center;
+}
+
+.iasWidget {
+  padding: 20px 10px 0;
+  width: $full-width;
+}
+
+.iasWidget-body {
+  color: $darkest-gray;
+  font-family: $copy;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.iasWidget-col-full {
+  @include make-md-column(12);
+}
+
+.iasWidget-cta {
+  color: $rackspace-red;
+  font-family: $copy;
+  font-weight: 600;
+  text-align: center;
+}
+
+.iasWidget-header {
+  color: $darkest-gray;
+  font-family: $heading;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.25em;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.iasWidget-hover {
+  text-decoration: none;
+
+  &:hover {
+    background-color: $light-gray;
+    text-decoration: none;
+  }
+}
+
+.iasWidget-img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 25%;
+}
+
+.iasWidget-row {
+  @include make-row;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .iasWidget-img {
+    width: 33.3%;
+  }
+}
