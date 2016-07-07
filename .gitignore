@@ -7,3 +7,4 @@ Gemfile.lock
 styleguide/css/*.css
 backstop_data/bitmaps_test
 npm-debug.log
+nohup.out

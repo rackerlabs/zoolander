@@ -1,0 +1,66 @@
+.swatch-color {
+  height: 100px;
+  //colors
+  &.mediumteal { @extend %bg-medium-teal; }
+  &.signup-green { background-color: $brand-success; }
+  &.orange { background-color: $orange; }
+  &.purple { background-color: $purple; }
+  &.mustard { background-color: $mustard; }
+
+  //grays
+  &.gray-light { background-color: $gray-lighter; }
+  &.medium-gray { background-color: $gray-base; }
+  &.medium-dark-gray { background-color: $gray-darker; }
+  &.darkest-gray { background-color: $gray-darkest; }
+
+  &:hover {
+
+    .swatch-copy-button {
+      @extend %center;
+      background-color: $gray-lightest;
+      display: block;
+      font-family: $subhead;
+      opacity: .85;
+      padding: 10px;
+      position: absolute;
+      text-transform: uppercase;
+      top: 60px;
+      width: 88%;
+    }
+  }
+}
+
+.swatch-color-lighter {
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  width: 40px;
+  &.signup-green { background-color: lighten($brand-success, 5%); }
+  &.mustard { background-color: lighten($mustard, 5%); }
+  &.mediumteal { background-color: $teal-dark; }
+}
+
+.swatch-color-darker {
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  width: 40px;
+  &.mustard { background-color: darken($mustard, 10%); }
+}
+
+.swatch-footer {
+  background-color: $white;
+  margin: 0;
+  overflow: auto;
+  padding: 5px;
+}
+
+.swatch-copy-button {
+  display: none;
+}
+
+.swatch-copy {
+  display: none;
+}
