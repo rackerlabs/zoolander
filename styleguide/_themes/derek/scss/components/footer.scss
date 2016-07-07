@@ -14,12 +14,12 @@
 }
 
 .footer-menu-link {
-  color: $medium-light-gray;
+  color: $gray-light;
   font-size: 1.2rem;
   text-decoration: none;
 
   &:hover {
-    color: $medium-light-gray;
+    color: $gray-light;
     text-decoration: underline;
   }
 }
@@ -58,7 +58,7 @@
       padding: 0;
 
       a {
-        color: darken($light-gray, 15%);
+        color: darken($gray-lighter, 15%);
       }
     }
 

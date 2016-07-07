@@ -1,11 +1,11 @@
 .cornerPocket {
-  border-left: 1px solid $light-gray;
+  border-left: 1px solid $gray-lighter;
   margin-top: 40px;
   padding-left: 20px;
 }
 
 .cornerPocket-callout {
-  color: $mediumteal;
+  color: $brand-secondary;
   margin: 0;
 }
 
@@ -36,7 +36,7 @@
   padding: 60px 0;
 
   p {
-    background-color: $rackspace-red;
+    background-color: $brand-primary;
     color: $white;
     display: table;
     font-size: 4.4rem;

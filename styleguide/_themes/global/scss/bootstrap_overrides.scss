@@ -9,12 +9,12 @@
 }
 
 .ceiling-dropdownMenu-gray a.ceiling-dropdownMenu-link:hover {
-  background-color: lighten($medium-gray, 5%);
+  background-color: lighten($gray-base, 5%);
   color: $white;
 }
 
 .ceiling-dropdownMenu-green a.ceiling-dropdownMenu-link:hover {
-  background-color: lighten($signup-green, 5%);
+  background-color: lighten($brand-success, 5%);
   color: $white;
 }
 
@@ -28,5 +28,5 @@
   background-color: transparent;
 }
 .nav > li.no-hover > a:focus {
-  background-color: $signup-green;
+  background-color: $brand-success;
 }

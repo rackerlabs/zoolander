@@ -21,5 +21,8 @@
   },
   "font-usage": {
     "css": "css/derek.css"
+  },
+  "swatches": {
+    "css": "css/derek.css"
   }
 }

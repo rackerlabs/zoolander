@@ -4,8 +4,8 @@
   text-align: center;
 
   & > li {
-    background-color: $darkteal;
-    border-top: 5px solid $darkteal;
+    background-color: $dark-teal;
+    border-top: 5px solid $dark-teal;
     display: inline-block;
     float: none;
     padding: 0;
@@ -14,7 +14,7 @@
       border-top: 5px solid $white;
 
       a {
-        background-color: $darkteal;
+        background-color: $dark-teal;
       }
     }
 
@@ -22,18 +22,18 @@
       background-color: $white;
 
       &:hover {
-        border-top: 5px solid $darkteal;
+        border-top: 5px solid $dark-teal;
       }
 
       &.enterprise {
         a {
           > * {
-            color: $darkest-gray;
+            color: $gray-darkest;
           }
         }
 
         &:hover {
-          border-top: 5px solid $darkest-gray;
+          border-top: 5px solid $gray-darkest;
         }
       }
 
@@ -41,25 +41,25 @@
         border: 0;
 
         > * {
-          color: $darkteal;
+          color: $dark-teal;
           text-align: center;
         }
       }
     }
 
     &.enterprise {
-      background-color: $darkest-gray;
-      border-top: 5px solid $darkest-gray;
+      background-color: $gray-darkest;
+      border-top: 5px solid $gray-darkest;
 
       &:hover,
       &:active {
-        border-top: 5px solid $darkest-gray;
+        border-top: 5px solid $gray-darkest;
 
         a {
           background-color: $white;
 
           > * {
-            color: $darkest-gray;
+            color: $gray-darkest;
           }
 
           &:hover {

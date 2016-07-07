@@ -1,17 +1,18 @@
 .resource {
   background-color: $white;
-  border-top: 12px solid $bright-green;
+  border-top: 12px solid $steel-blue;
   margin: 10px;
   overflow: auto;
   padding: 20px 20px 5px;
   position: relative;
 
   &:hover {
-    background-color: $bright-green;
-    border-top: 12px solid rgba(0, 0, 0, .2);
+    background-color: $steel-blue;
+    border-top: 12px solid rgba(0, 0, 0, .4);
 
     h3,
-    h6 {
+    h6,
+    p {
       color: $white;
     }
 
@@ -30,7 +31,7 @@
   }
 
   a {
-    color: $medium-dark-gray;
+    color: $gray-darker;
     font-weight: 600;
     margin-top: 1em;
     padding-bottom: 20px;
