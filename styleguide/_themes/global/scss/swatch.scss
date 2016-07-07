@@ -1,27 +1,31 @@
 //Path to CDN
 $images: 'https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com';
 
-//Colors
-$white: #fff;
-$light-gray-white: #efefef;
-$light-gray: #dedede;
-$medium-light-gray: #b8b8b8;
-$medium-gray: #666;
-$medium-dark-gray: #4c4c4c;
-$dark-gray: #333;
-$darkest-gray: #2a2a2a;
-$blue-gray: #2e3238;
-$black: #000;
+//primary colors
+$rackspace-red:     #c40022;
+$signup-green:      #5aaa28;
+$medium-teal:       #0dcfd9;
+$dark-teal:         #00b4c3;
 
-$decision-engine-blue: #3295e3;
-$bright-blue: #0071db;
-$steel-blue: #007295;
-$mediumteal: #0dcfd9;
-$darkteal: #00b4c3;
-$rackspace-red: #c40022;
+//our primaries defined in bootstrap variables - here as reference
+$brand-primary:     $rackspace-red !default;
+$brand-secondary:   $medium-teal   !default;
+$brand-success:     $signup-green  !default;
 
-$bright-green: #23cd69;
-$magento-orange: #ed672f;
-$purple: #784b91;
-$signup-green: #5aaa28;
-$mustard: #f6b100;
+//accent colors
+$magento-orange:    #ed672f;
+$purple:            #784b91;
+$mustard:           #f6b100;
+$steel-blue:        #007295;
+$blue-gray:         #2e3238;
+
+//Grays already defined in bootstrap variables - here as reference
+$white:             #fff    !default;
+$black:             #000    !default;
+$gray-base:         #666    !default;
+$gray-darker:       #4c4c4c !default;
+$gray-dark:         #333    !default;
+$gray-darkest:      #2a2a2a !default;
+$gray-light:        #b8b8b8 !default;
+$gray-lighter:      #dedede !default;
+$gray-lightest:     #efefef !default;

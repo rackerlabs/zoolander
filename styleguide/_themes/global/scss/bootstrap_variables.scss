@@ -7,17 +7,26 @@ $bootstrap-sass-asset-helper: false !default;
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
+$white:                  #fff    !default;
+$black:                  #000    !default;
+$gray-base:              #666    !default;
+//bootstrap doesnt like leaving this out
+$gray:                   #666    !default;
+$gray-darker:            #4c4c4c !default;
+$gray-dark:              #333    !default;
+$gray-darkest:           #2a2a2a !default;
+$gray-light:             #b8b8b8 !default;
+$gray-lighter:           #dedede !default;
+$gray-lightest:          #efefef !default;
 
-$gray-base:              #10141a !default;
-$gray-darker:            #2e3238 !default;
-$gray-dark:              #4c5056 !default;
-$gray:                   #60646a !default;
-$gray-light:             #888c92 !default;
-$gray-lighter:           #c4c8ce !default;
-$gray-lightest:          #e2e6ec !default;
+//added for ordering issues
+$rackspace-red:     #c40022;
+$signup-green:      #5aaa28;
+$medium-teal:       #0dcfd9;
 
-$brand-primary:         #c40022 !default;
-$brand-success:         #7beb9a !default;
+$brand-primary:         $rackspace-red  !default;
+$brand-secondary:       $medium-teal    !default;
+$brand-success:         $signup-green   !default;
 $brand-info:            #c4c8ce !default;
 $brand-warning:         #ffe970 !default;
 $brand-danger:          #ffb16d !default;
@@ -28,7 +37,7 @@ $brand-danger:          #ffb16d !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               $white !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 

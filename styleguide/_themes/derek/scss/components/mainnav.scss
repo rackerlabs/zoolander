@@ -1,6 +1,6 @@
 //main nav
 .main-nav {
-  background: $dark-gray;
+  background: $gray-dark;
   border: 0;
   border-radius: 0;
   margin: 0;
@@ -25,7 +25,7 @@
     &:focus,
     &:active,
     &:visited {
-      background: $medium-dark-gray;
+      background: $gray-darker;
     }
   }
 
@@ -36,7 +36,7 @@
 
     &.open {
       > .navbar-topLink {
-        background: $medium-dark-gray;
+        background: $gray-darker;
       }
     }
 
@@ -111,7 +111,7 @@
 }
 
 .navbar-dropDownMenu {
-  background: $medium-dark-gray;
+  background: $gray-darker;
   border: 0;
   border-radius: 0;
   min-width: 230px;
@@ -122,12 +122,12 @@
   position: relative;
 
   &:hover {
-    background-color: $medium-gray;
+    background-color: $gray-base;
   }
 }
 
 .navbar-tertiary-dropDownMenu {
-  background-color: $medium-gray;
+  background-color: $gray-base;
   border: 0;
   box-shadow: none;
   left: 100%;
@@ -139,7 +139,7 @@
 
 .navbar-tertiary-dropDownItem {
   &:hover {
-    background-color: lighten($medium-gray, 5%);
+    background-color: lighten($gray-base, 5%);
   }
 }
 
@@ -163,7 +163,7 @@
 }
 
 .navbar-brand {
-  background-color: $medium-dark-gray;
+  background-color: $gray-darker;
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg');
   background-position: 10px 14px;
   background-repeat: no-repeat;
@@ -174,7 +174,7 @@
 }
 
 .navbar-search {
-  background-color: $medium-dark-gray;
+  background-color: $gray-darker;
   display: none;
   overflow: auto;
   padding: 10px;
@@ -233,7 +233,7 @@
     display: block;
 
     &::after {
-      color: $medium-dark-gray;
+      color: $gray-darker;
     }
   }
 }
@@ -251,7 +251,7 @@
 }
 
 .navbar-activeArrow {
-  border-bottom: 10px solid $medium-dark-gray;
+  border-bottom: 10px solid $gray-darker;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   bottom: -1px;
@@ -262,7 +262,7 @@
 }
 
 .navbar-searchInput {
-  border: 1px solid $light-gray;
+  border: 1px solid $gray-lighter;
   outline: none;
   padding: 3px;
   width: 80%;
