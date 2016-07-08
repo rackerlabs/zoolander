@@ -40,11 +40,11 @@
   @include flex-box;
 }
 
-.ias5-col-push {
+.ias-col5-push {
   @include make-sm-column-push(2);
 }
 
-.ias5-col {
+.ias-col5 {
   @include make-sm-column(4);
   @include flex-box;
 }
@@ -59,12 +59,16 @@
 }
 
 .iasWidget-body {
-  color: $darkest-gray;
-  font-family: $copy;
-  font-weight: 300;
-  line-height: 1.5em;
-  margin: 0 0 1em;
   text-align: center;
+  padding-bottom: 20px;
+}
+
+.iasWidget-bottom {
+  bottom: 0;
+  height: 10%;
+  position: absolute;
+  right: 0;
+  width: 100%;
 }
 
 .iasWidget-col-full {
@@ -73,18 +77,11 @@
 
 .iasWidget-cta {
   color: $rackspace-red;
-  font-family: $copy;
   font-weight: 600;
   text-align: center;
 }
 
 .iasWidget-header {
-  color: $darkest-gray;
-  font-family: $heading;
-  font-size: 1.25em;
-  font-weight: 400;
-  line-height: 1.25em;
-  margin: 10px 0;
   text-align: center;
 }
 
