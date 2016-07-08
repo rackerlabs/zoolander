@@ -1,0 +1,65 @@
+.announcement-container {
+  background-color: $white;
+  border-bottom: 1px solid $light-gray;
+  border-right: 1px solid $light-gray;
+  border-top: 1px solid $light-gray;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  width: $full-width;
+}
+
+.announcement-icon {
+  @include make-md-column(2);
+}
+
+.announcement-message {
+  @include make-md-column(10);
+  padding-top: 12px;
+}
+
+.announcement-close {
+  height: 10px;
+  position: absolute;
+  right: 8px;
+  text-decoration: none;
+  top: 8px;
+  width: 10px;
+  z-index: 5;
+
+  &::before {
+    content: '\f00d';
+    font-family: FontAwesome;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//Offer announcements
+.announcement-offer {
+  border-left: 8px solid $mediumteal;
+}
+
+//Warning announcements
+.announcement-warning {
+  border-left: 8px solid $mustard;
+}
+
+//Danger announcements
+.announcement-danger {
+  border-left: 8px solid $rackspace-red;
+}
+
+//Success announcements
+.announcement-success {
+  border-left: 8px solid $signup-green;
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .announcement-icon {
+    width: $full-width;
+  }
+}
