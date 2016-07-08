@@ -17,7 +17,7 @@
     "test:visual:init": "nohup npm start & (cd ./node_modules/backstopjs && npm run reference)",
     "backstop-update": "node ./scripts/update-backstop-urls.js",
     "sass-lint": "sass-lint -v --max-warnings 127",
-    "hooks": "cp ./hooks .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
+    "hooks": "./scripts/hooks.sh",
     "postinstall": "npm run hooks"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
