@@ -1,13 +1,38 @@
 extends ../_layouts/page.jade
 
 block page
-    h1 Derek Theme
+  .container.standard-padding
+    .row.half-padding-full
+      .col-md-12
+        h4.red.no-margin Welcome to the
+        h2.no-margin Global Ecomm Theme
+        h4.red.no-margin Derek Zoolander
 
-    p Common components found throughout Rackspace web properties.
+    .row.half-padding-full
+      .col-md-12
+        p If you want all the global elements stacked with Global Ecomm's patterns, modifiers, global elements and all the goodies just copy the links below
+        code.language-javascript
+          = '<link href="https://043a96a8a2caadd9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/global/css/global.css" />'
+              br
+        code.language-javascript
+          = '<link href="https://043a96a8a2caadd9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/derek/css/derek.css" />'
+              br
+          code.language-javascript
+            = '<script src="https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/global/js/global.bundle.js"></script>'
 
-    h2 FAQ
+    .row.half-padding-full
+      .col-md-12
+        h6 helpful links
+        ul.nav.nav-pills.nav-stacked
+          li
+            a(href="derek/examples") Examples
+          li
+            a(href="derek/development") Development
+          li
+            a(href="derek/workflow") Workflow/Process
 
-    p Why are some componets missing?
-
-       Because this theme is not complete. Have a look in [Incubation](incubation) tab for any new components that have not
-       become officially supported components.
+    .row.half-padding-full
+      .col-md-12
+        h2.red Our Story
+      .col-md-8
+        p The story how zoolander came to be. Its mission and the global ecomm manifesto

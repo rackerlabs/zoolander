@@ -18,6 +18,11 @@
   ],
   "scenarios": [
     {
+      "label": "/derek/assets/typography.html",
+      "delay": 500,
+      "url": "http://localhost:9000/derek/assets/typography.html"
+    },
+    {
       "label": "/derek/examples/forms.html",
       "delay": 500,
       "url": "http://localhost:9000/derek/examples/forms.html"
@@ -33,9 +38,9 @@
       "url": "http://localhost:9000/derek/examples/landing-page.html"
     },
     {
-      "label": "/derek/examples/office365.html",
+      "label": "/derek/examples/section-overview.html",
       "delay": 500,
-      "url": "http://localhost:9000/derek/examples/office365.html"
+      "url": "http://localhost:9000/derek/examples/section-overview.html"
     },
     {
       "label": "/derek/examples/solutions.html",
