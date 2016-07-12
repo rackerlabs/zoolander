@@ -28,7 +28,7 @@ table {
   &.checkbox,
   &.radio-inline,
   &.checkbox-inline {
-    color: #eb0022;
+    color: $brand-danger;
   }
 
   .checkbox,
@@ -37,12 +37,12 @@ table {
   .help-block,
   .radio,
   .radio-inline {
-    color: #eb0022;
+    color: $brand-danger;
   }
 
   .form-control {
     background-color: rgba(235, 0, 34, .1);
-    border-color: #eb0022;
+    border-color: $brand-danger;
   }
 }
 
@@ -51,7 +51,7 @@ table {
   &.checkbox-inline,
   &.radio,
   &.radio-inline {
-    color: #008500;
+    color: $brand-success;
   }
 
   .checkbox,
@@ -60,12 +60,12 @@ table {
   .help-block,
   .radio,
   .radio-inline {
-    color: #008500;
+    color: $brand-success;
   }
 
   .form-control {
     background-color: rgba(0, 133, 0, .1);
-    border-color: #008500;
+    border-color: $brand-success;
   }
 }
 
@@ -75,7 +75,7 @@ table {
   &.radio,
   &.radio-inline {
     label {
-      color: #eb6800;
+      color: $brand-warning;
     }
   }
 
@@ -85,12 +85,12 @@ table {
   .help-block,
   .radio,
   .radio-inline {
-    color: #eb6800;
+    color: $brand-warning;
   }
 
   .form-control {
     background-color: rgba(235, 104, 0, .1);
-    border-color: #eb6800;
+    border-color: $brand-warning;
   }
 }
 
