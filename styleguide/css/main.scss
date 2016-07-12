@@ -1,41 +1,55 @@
-body {
-  margin-top: 60px;
+$white: #fff;
+$light-gray-white: #efefef;
+$dark-gray: #333;
+$medium-gray: #666;
+
+
+.mainContainer {
+  padding: 40px 0;
+  transition: margin-left .5s;
+  width: 100%;
 }
 
-code {
-  background: #3b3f45;
-  color: #e0e0d7;
+.navZoolander-container {
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  transition: .5s;
+  width: 0;
+  z-index: 1;
 }
 
-.card {
-  background: #fdfdfd;
-  border-top: solid 8px #bfbfbf;
-  box-shadow: 0 0 0 rgba(0, 0, 0, .25);
-  margin: 1.5em;
-
-  .blue {
-    border-top-color: #739eaf;
-  }
+.navZoolander-list,
+.navZoolander-dropdown {
+  list-style-type: none;
+  padding: 10px;
 }
 
-.documentation {
-  padding: 2em;
+.navZoolander-item {
+  color: $white;
+  padding: 10px;
 }
 
-.header {
-  background-color: #2e3238;
-  color: #fff;
-  padding: 1em 0;
+.navZoolander-link,
+.navZoolander-dropdownLink {
+  color: $white;
+  text-decoration: none;
+  transition: .3s;
 }
 
-.highlight {
-  margin-top: 10px;
+.closebtn {
+  margin-left: 50px;
+  position: absolute;
+  right: 25px;
+  top: 0;
 }
 
-.icon-grid-item {
-  margin-top: 1em;
-}
-
-.right {
-  float: right;
+.openbtn {
+  background-color: $dark-gray;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 0;
 }

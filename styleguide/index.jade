@@ -1,29 +1,32 @@
 extends ./_layouts/default.jade
 
 block content
-  .container
-    .jumbotron
-      h1 Zoolander
-      p Corporate brand style guide for Rackspace websites.
+  .container.standard-padding
     .row
       .col-lg-12
-        h2 Quick Start
-        p Rackspace flavored Bootstrap assets. Add the following to your HTML template.</p>
+        h4.red Welcome Friends &amp; Family
+        h2.no-margin Rackspace Online Repository
+        h4.red of all things Web
+
+    .row.half-padding-top
+      .col-md-3.half-padding-top
+        img.half-padding-top(src="imgs/brandValues.png")
+
+    .row
+      .col-lg-12
+        h4 expert. confident. helpful. results-obssesed.
+        p Driven by a culture of achieving, Rackers place a significant value in information sharing and to put it simply... Getting things done. The goal of Project Zoolander is not simply to create a styleguide for ants but to make development and unification of a 6,000+ person company something so much more digestible. With this online tool we strive to inform the masses and uphold the brand values while making all of our lives just a little bit easier.
+
+    .row
+      .col-lg-12
+        h6 Quick Start
         pre
           code.language-javascript
             = '<link href="https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/global/css/global.css">'
             br/
+          code.language-javascript
             = '<script src="https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/global/js/global.bundle.js"></script>'
-            br/
-    .row.text-center
-      .col-md-4
-        h2 Global Base
-        p Vanilla Bootstrap 3.x with styles defaulted to match Rackspace corporate brand.
-        a(href="global"): img.img-thumbnail(src="imgs/global.png")
-      .col-md-4
-        h2 Derek
-        p Extended version of Global Base with shared components.
-        a(href="derek"): img.img-thumbnail(src="imgs/pending.png")
-      .col-md-4
-        h2 Coming Soon!
-        p Or never who knows
+
+    .row
+      .col-lg-12
+        a(href="derek"): h6 View Global Ecomm Theme

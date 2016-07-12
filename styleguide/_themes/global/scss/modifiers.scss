@@ -53,6 +53,24 @@ img { max-width: 100%; }
   padding: $standard-padding-full;
 }
 
+//equal height columns
+.row-eq-height {
+  @include flex-box;
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  //equal height columns remove in small
+  .row-eq-height {
+    display: block;
+  }
+}
+
+//centered-divs
+.center-block {
+  float: none;
+  margin: 0 auto;
+}
+
 // Text Alignments
 .center,
 .centered {
@@ -69,6 +87,39 @@ img { max-width: 100%; }
 
 .uppercase {
   text-transform: $uppercase;
+}
+
+.bg-steel-blue {
+  background-color: $blue-steel;
+}
+
+.bg-blue-gray {
+  background-color: $blue-gray;
+}
+
+.bg-red {
+  background-color: $brand-primary;
+}
+
+.bg-dark-gray {
+  background-color: $gray-darkest;
+}
+
+.bg-light-gray {
+  background-color: $gray-lightest;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-medium-teal {
+  background: $brand-secondary;
+}
+
+.bg-crumpled-paper {
+  background-color: $gray-light;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png');
 }
 
 // Text Colors

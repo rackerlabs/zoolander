@@ -16,13 +16,58 @@ html(lang="en")
 
     link(href="#{ css }", rel="stylesheet")
     link(href="css/main.css", rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css?family=Open+Sans:700,300,200,600,800,400|Quicksand:400,300|Montserrat:400,700", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:700,300,200,600,800,400|Khand:700,600,500|Montserrat:400,700", rel="stylesheet")
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet")
     script(src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous")
     script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/modernizr.min.js")
 
-    block content
+  .container-fluid
+    .row.row-eq-height
+      .navZoolander-container.bg-blue-gray#navZoolander-container
+        a(href="javascript:void(0)", onclick="closeNav()").closebtn: i.fa.fa-times.white.fa-2x
+        ul.navZoolander-list
+          li.navZoolander-item
+            a(href="/").navZoolander-link Welcome
+          li.navZoolander-item
+            a(href="global/").navZoolander-link.navZoolander-hasDropdown Global Brand
+              ul.navZoolander-dropdown
+                li.navZoolander-dropdownItem
+                  a(href="global/brand-elements").navZoolander-dropdownLink Brand Elements
+          li.navZoolander-item
+            a(href="global/voice").navZoolander-link Voice and Tone
+          li.navZoolander-item
+            a(href="global/components").navZoolander-link Components
+          li.navZoolander-item
+            a(href="derek/assets").navZoolander-link Assets/Elements
+              ul.navZoolander-dropdown
+                li.navZoolander-dropdownItem
+                  a(href="derek/assets/icon-font").navZoolander-dropdownLink Icon Font
+                li.navZoolander-dropdownItem
+                  a(href="derek/assets/forms").navZoolander-dropdownLink Forms
+                li.navZoolander-dropdownItem
+                  a(href="derek/assets/buttons").navZoolander-dropdownLink Buttons/CTAs
+                li.navZoolander-dropdownItem
+                  a(href="derek/assets/typography").navZoolander-dropdownLink Typography
+                li.navZoolander-dropdownItem
+                  a(href="derek/assets/photography").navZoolander-dropdownLink Photography/Banners
+                li.navZoolander-dropdownItem
+                  a(href="derek/assets/icon-font").navZoolander-dropdownLink Tabs
+                li.navZoolander-dropdownItem
+                  a(href="derek/assets/icon-font").navZoolander-dropdownLink Tables
+          li.navZoolander-item
+            a(href="derek/").navZoolander-link.navZoolander-hasDropdown Derek Theme
+              ul.navZoolander-dropdown
+                li.navZoolander-item
+                  a(href="derek/examples").navZoolander-link Examples
+                li.navZoolander-item
+                  a(href="derek/development").navZoolander-link Development
+                li.navZoolander-item
+                  a(href="derek/workflow").navZoolander-link Workflow/Process
 
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
-    script(src="/js/zoolander.js")
-    script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js")
+      .mainContainer#mainContainer
+        a(href="javascript:void(0)", onclick="openNav()").openbtn: i.fa.fa-bars.white.fa-2x
+        block content
+
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
+  script(src="/js/zoolander.js")
+  script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js")
