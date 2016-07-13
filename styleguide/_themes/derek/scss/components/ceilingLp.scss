@@ -10,9 +10,13 @@
   background-size: 111px 29px;
   float: left;
   height: 50px;
-  margin: 0 (-$grid-gutter-width / 2);
+  margin: 0;
   position: relative;
   width: 127px;
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  margin: 0 (-$grid-gutter-width / 2);
 }
 
 .ceilingLp-brand-logo {
