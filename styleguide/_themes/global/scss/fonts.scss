@@ -181,20 +181,24 @@ i {
 blockquote {
   border-left: 0;
   font-size: 1.75rem;
-  font-weight: 300;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 2.5rem;
   margin-bottom: 0;
 }
 
 cite {
-  color: $teal-dark;
+  color: $gray-light;
   display: block;
   font-family: $copy;
-  font-size: .9em;
-  font-style: italic;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
   white-space: pre-line;
 
   &::before {
-    content: '—';
+    content: '— ';
     max-height: 1px;
   }
 }

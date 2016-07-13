@@ -1,65 +1,293 @@
+//to support legacy for now
+
 .homepage-hero {
   @extend .full-width;
-  height: 100%;
-  overflow: visible;
-  background-repeat: no-repeat;
-  top: 60px;
-  margin-bottom: 40px;
   background-image: url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg");
   background-position: 25% 50%;
-  position: relative;
+  background-repeat: no-repeat;
   background-size: auto;
   border-bottom: 0;
+  height: 100%;
+  margin-bottom: 40px;
+  overflow: visible;
+  position: relative;
+  top: 60px;
   h2 {
-    padding-top: 20px;
-    font-size: 34px;
-    line-height: 40px;
-    font-weight: 300;
     @extend .white;
     @extend .left;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 40px;
+    padding-top: 20px;
   }
   p {
+    font-size: 16px;
     letter-spacing: 1px;
     line-height: 24px;
-    font-size: 16px;
     padding-bottom: 10px;
   }
 }
 
 #hosting-options {
-  text-align:center;
-  .product{
-    p{ margin-bottom:30px; }
-    &:hover{
+  text-align: center;
+  .product {
+    p { margin-bottom: 30px; }
+    &:hover {
       @extend .bg-light-gray;
-      hr{ border-color:$brand-secondary; }
-      h3, a{ color:$brand-secondary; }
+      hr { border-color: $brand-secondary; }
+      h3, a { color: $brand-secondary; }
     }
   }
 }
 
 #solutions {
-  a{ text-decoration:none; }
-  .solution:hover{
-    .border-white{
-     border-color:$mustard;
-     i{ color:$mustard; }
+  a { text-decoration: none; }
+  .solution:hover {
+    .border-white {
+     border-color: $mustard;
+     i { color: $mustard; }
     }
-    h6{ color: $mustard; }
   }
 }
 
-#quadrant{
-  background-image:url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.png");
-  background-repeat:no-repeat;
-  padding: 20px 0px;
-  background-size: 40%;
-  background-position: 13% bottom;
-}
 
-.form-inline{
-  button, .button{
-  width: auto;
+//new code
+
+.hostingOptions-hoverArea {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
+.hostingOptions-productRow {
+  @extend .row-eq-height;
+}
+
+.hostingOptions-product {
+  @include make-sm-column(3);
+  @include make-xs-column(6);
+  color: $gray-base;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    hr {
+      border-color: $brand-primary;
+    }
+
+    .hostingOptions-title {
+      color: $brand-primary;
+    }
+  }
+}
+
+.hostingOptions-logoRow {
+  @include make-row;
+}
+
+.hostingOptions-logo {
+  @include make-sm-column(5);
+  @include make-sm-column-push(3.5);
+  @include make-xs-column(3);
+  @include make-xs-column-push(4.5);
+  text-align: center;
+}
+
+.hostingOptions-logoWide {
+  @include make-sm-column(10);
+  @include make-sm-column-push(1);
+  @include make-xs-column(6);
+  @include make-xs-column-push(3);
+}
+
+.hostingOptions-titleRow {
+  @include make-row;
+}
+
+.hostingOptions-title {
+  @include make-sm-column(12);
+}
+
+.hostingOptions-hrContainer {
+  @include make-xs-column(6);
+  @include make-xs-column-push(3);
+}
+
+.hostingOptions-hr {
+  border: 0;
+  border-top: 1px solid $gray-light;
+  margin: 0 0 10px;
+}
+
+.hostingOptions-textContainer {
+  @include make-sm-column(12);
+  clear: both;
+}
+
+.hostingOptions-text {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.hostingOptions-learnMoreBottom {
+  @extend .bottom;
+}
+
+.hostingOptions-learnMore {
+  color: $brand-primary;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+
+//solutions
+.solutions {
+  padding: $standard-padding;
+}
+
+.solutions-hoverArea {
+  text-decoration: none;
+
+  &:hover {
+
+    .border-white {
+      border-color: $mustard;
+    }
+
+    h6,
+    .rsweb {
+      color: $mustard;
+    }
+  }
+}
+
+//ctp
+
+.ctp {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/city_imagev2.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ctp-button {
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+//quadrant
+
+.quadrant {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.png');
+  background-position: 23% bottom;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  padding: 20px 0;
+  padding-bottom: 0;
+}
+
+.quadrant-row {
+  @include make-row;
+}
+
+.quadrant-textContainer {
+  @include make-sm-column(6);
+  @include make-sm-column-push(6);
+}
+
+.quadrant-title,
+.quadrant-text {
+  text-align: right;
+}
+
+.quadrant-buttonContainer {
+  @include make-sm-column(6);
+  @include make-sm-column-push(6);
+  @include make-xs-column(6);
+  @include make-xs-column-push(3);
+  padding: $half-padding-full;
+  text-align: right;
+}
+
+.logoShowcase-image {
+  max-height: 40px;
+  max-width: 75%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.logoShowcase-row {
+  @include make-row;
+}
+
+.logoShowcase-logoItem {
+  display: inline-block;
+  padding: 1rem .75rem 0;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: $screen-sm-max) {
+
+  .logoShowcase-logoItem {
+    max-width: 100px;
+    padding: 0;
+  }
+
+  .quadrant {
+    background-position: 0% bottom;
+    background-repeat: no-repeat;
+    background-size: 54%;
+  }
+
+}
+
+@media only screen and (min-width: 1850) {
+  .quadrant {
+    background-position: 30% bottom;
+    background-size: 30%;
+  }
+}
+
+
+@media only screen and (max-width: $screen-xs-max) {
+
+  .quadrant-title,
+  .quadrant-text,
+  .quadrant-buttonContainer {
+    text-align: center;
+  }
+
+  .quadrant {
+    background-image: none;
+  }
+
+  .logoShowcase {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hostingOptions-logoWide {
+    left: 5%;
+    width: 90%;
+  }
+
+  .hostingOptions-logo {
+    left: 25%;
+    width: 50%;
+  }
+}
