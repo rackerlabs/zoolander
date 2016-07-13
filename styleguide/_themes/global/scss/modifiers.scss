@@ -1,18 +1,28 @@
 $full-width: 100%;
+$half-padding: 20px 15px 30px;
+$half-padding-full: 20px 0 30px;
 
 img { max-width: 100%; }
 
 // Layout
-.full-width {
+@mixin full-width {
   width: $full-width;
 }
 
+@mixin half-padding {
+  padding: $half-padding;
+}
+
+@mixin half-padding-full {
+  padding: $half-padding-full;
+}
+
 .half-padding {
-  padding: 20px 15px 30px;
+  padding: $half-padding;
 }
 
 .half-padding-full {
-  padding: 20px 0 30px;
+  padding: $half-padding-full;
 }
 
 .half-padding-top {

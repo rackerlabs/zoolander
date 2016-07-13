@@ -40,12 +40,17 @@ $body-bg:  #fff !default;
 }
 
 .bg-crumpled-paper {
+  background: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/crumpled-paperBG.jpg') repeat 0 0;
   background-color: $light-gray;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png');
 }
 
 //centered-divs
 .center-block {
+  float: none;
+  margin: 0 auto;
+}
+
+@mixin center-block {
   float: none;
   margin: 0 auto;
 }
@@ -93,7 +98,7 @@ $body-bg:  #fff !default;
 }
 
 .border-white {
-  border: solid 1px $white;
+  border: solid 2px $white;
   padding: 15px;
 }
 
