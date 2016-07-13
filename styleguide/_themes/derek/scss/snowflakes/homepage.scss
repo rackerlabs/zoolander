@@ -1,32 +1,27 @@
-.homepage-hero {
-  @extend .full-width;
-  height: 100%;
-  overflow: visible;
-  background-repeat: no-repeat;
-  top: 60px;
-  margin-bottom: 40px;
-  background-image: url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg");
+.homepageHero {
+  @include full-width;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg');
   background-position: 25% 50%;
-  position: relative;
-  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-bottom: 0;
-  h2 {
-    padding-top: 20px;
-    font-size: 34px;
-    line-height: 40px;
-    font-weight: 300;
-    @extend .white;
-    @extend .left;
-  }
-  p{
-    letter-spacing: 1px;
-    line-height: 24px;
-    font-size: 16px;
-    padding-bottom: 10px;
-  }
+  height: 100%;
+  margin-bottom: 40px;
+  overflow: visible;
+  position: relative;
+  top: 60px;
 }
 
-#hosting-options{
+.homepageHero-title {
+  @extend %left;
+  color: $white;
+  font-size: 34px;
+  font-weight: 200;
+  line-height: 40px;
+  padding-top: 20px;
+}
+
+#hosting-option {
   text-align:center;
   .product{
     p{ margin-bottom:30px; }
@@ -38,28 +33,127 @@
   }
 }
 
-#solutions{
-  a{ text-decoration:none; }
-  .solution:hover{
-    .border-white{
-     border-color:$mustard;
-     i{ color:$mustard; }
+.homepageHero-subtext {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  padding-bottom: 10px;
+}
+
+
+//text color changes when whole area is hovered over
+.hostingOptions-product {
+  text-align: center;
+
+  &:hover {
+    hr {
+      border-color: $darkteal;
     }
-    h6{ color: $mustard; }
+
+    .hostingOptions-title {
+      color: $darkteal;
+    }
   }
 }
 
-#quadrant{
-  background-image:url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.png");
-  background-repeat:no-repeat;
-  padding: 20px 0px;
-  background-size: 40%;
-  background-position: 13% bottom;
+.hostingOptions-hr {
+  border: 0;
+  border-top: 1px solid $light-gray;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.form-inline{
-  button, .button{
-  width: auto;
+.hostingOptions-hoverArea {
+  color: $medium-gray;
+  text-decoration: none;
+}
+
+.hostingOptions-text {
+  margin-bottom: 30px;
+}
+
+.hostingOptions-learnMore {
+  color: $darkteal;
+  font-size: .9em;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.solutions-hoverArea {
+  text-decoration: none;
+
+  &:hover {
+
+    .border-white {
+      border-color: $mustard;
+    }
+
+    h6 {
+      color: $mustard;
+    }
   }
 }
 
+.ctp {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/city_imagev2.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ctp-button {
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.quadrant {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.png');
+  background-position: 23% bottom;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  padding: 20px 0;
+  padding-bottom: 0;
+}
+
+
+@media only screen and (max-width: 991px) {
+  .quadrant {
+    background-image: none;
+  }
+}
+
+@media only screen and (min-width: 1850) {
+  .quadrant {
+    background-position: 30% bottom;
+    background-size: 30%;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .homepageHero {
+    margin-bottom: 0;
+    top: 0;
+  }
+
+  .homepageHero-title {
+    font-size: 1.9em;
+    line-height: 1.2em;
+    padding: 10px 0 0;
+  }
+
+  .homepageHero-subtext {
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 0;
+  }
+
+  .last-solution {
+    @include center-block;
+  }
+}

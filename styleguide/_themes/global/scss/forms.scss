@@ -114,3 +114,9 @@ table {
 .table > thead > tr > th {
   font-weight: unset;
 }
+
+.form-inline{
+  button, .button{
+  width: auto;
+  }
+}

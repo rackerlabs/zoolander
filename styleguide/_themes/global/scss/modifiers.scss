@@ -16,7 +16,7 @@ $uppercase: uppercase;
 img { max-width: 100%; }
 
 // Layout
-.full-width {
+@mixin full-width {
   width: $full-width;
 }
 
