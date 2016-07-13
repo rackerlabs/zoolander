@@ -54,6 +54,23 @@
         background-color: transparent;
       }
     }
+
+    .navbar-dropDownLabel {
+      color: $light-gray;
+      font-size: .9em;
+      line-height: 1.5em;
+      margin: 0;
+      padding: 6px 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 100%;
+
+      &:hover,
+      &:visited,
+      &:focus {
+        background-color: $medium-dark-gray;
+      }
+    }
   }
 }
 
