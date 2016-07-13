@@ -50,3 +50,46 @@ npm ERR! There is likely additional logging output above.
 
 npm ERR! Please include the following file with any support request:
 npm ERR!     /Users/davi0040/github/zoolander/npm-debug.log
+
+> zoolander@0.8.1 start /Users/davi0040/github/zoolander
+> harp server styleguide
+
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:9000
+  at Object.exports._errnoException (util.js:870:11)
+  at exports._exceptionWithHostPort (util.js:893:20)
+  at Server._listen2 (net.js:1234:14)
+  at listen (net.js:1270:10)
+  at net.js:1379:9
+  at nextTickCallbackWith3Args (node.js:453:9)
+  at process._tickCallback (node.js:359:17)
+  at Function.Module.runMain (module.js:443:11)
+  at startup (node.js:139:18)
+  at node.js:968:3
+
+
+npm ERR! Darwin 15.5.0
+npm ERR! argv "/usr/local/Cellar/node4-lts/4.4.5/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v4.4.5
+npm ERR! npm  v2.15.4
+npm ERR! code ELIFECYCLE
+npm ERR! zoolander@0.8.1 start: `harp server styleguide`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the zoolander@0.8.1 start script 'harp server styleguide'.
+npm ERR! This is most likely a problem with the zoolander package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     harp server styleguide
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs zoolander
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR! 
+npm ERR!     npm owner ls zoolander
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/davi0040/github/zoolander/npm-debug.log
