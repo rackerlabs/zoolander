@@ -4,14 +4,14 @@ $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
 
 @mixin heading {
-  color: $darkest-gray;
+  color: $gray-darkest;
   font-family: $heading;
   font-weight: 200;
   text-transform: uppercase;
 }
 
 @mixin subhead {
-  color: $darkest-gray;
+  color: $gray-darkest;
   font-family: $subhead;
   line-height: 1.45em;
   text-align: left;
@@ -19,7 +19,7 @@ $code: Tahoma, Arial, Geneva, Helvetica;
 }
 
 @mixin copy {
-  color: $darkest-gray;
+  color: $gray-darkest;
   font-family: $copy;
   font-weight: 300;
   line-height: 1.5em;
@@ -68,7 +68,7 @@ ul {
     &.teal {
       li {
         &::before {
-          color: $darkteal;
+          color: $teal-dark;
         }
       }
     }
@@ -76,7 +76,7 @@ ul {
     &.green {
       li {
         &::before {
-          color: $signup-green;
+          color: $brand-success;
           }
         }
       }
@@ -101,14 +101,14 @@ li {
 }
 
 a {
-  color: $dark-gray;
+  color: $gray-dark;
   cursor: pointer;
   font-weight: 400;
   line-height: 16px;
   text-decoration: underline;
 
   &:hover {
-    color: $bright-blue;
+    color: $brand-secondary;
   }
 }
 
@@ -144,7 +144,7 @@ i {
 }
 
 .fa-check {
-  color: $darkteal;
+  color: $teal-dark;
 }
 
 .read-more {

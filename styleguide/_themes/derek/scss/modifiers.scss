@@ -11,8 +11,8 @@ $body-bg:  #fff !default;
 }
 
 // Background Variations
-.bg-steel-blue {
-  background-color: $steel-blue;
+.bg-blue-steel {
+  background-color: $blue-steel;
 }
 
 .bg-blue-gray {
@@ -20,15 +20,15 @@ $body-bg:  #fff !default;
 }
 
 .bg-red {
-  background-color: $rackspace-red;
+  background-color: $brand-primary;
 }
 
-.bg-dark-gray {
-  background-color: $darkest-gray;
+.bg-gray-dark {
+  background-color: $gray-darkest;
 }
 
 .bg-light-gray {
-  background-color: $light-gray-white;
+  background-color: $gray-lightest;
 }
 
 .bg-white {
@@ -36,11 +36,11 @@ $body-bg:  #fff !default;
 }
 
 .bg-medium-teal {
-  background: $mediumteal;
+  background: $brand-secondary;
 }
 
 .bg-crumpled-paper {
-  background-color: $light-gray;
+  background-color: $gray-lighter;
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png');
 }
 
@@ -52,9 +52,7 @@ $body-bg:  #fff !default;
 
 //equal height columns
 .row-eq-height {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+  @include flex-box;
 }
 
 @media only screen and (max-width: $screen-sm) {
@@ -85,7 +83,7 @@ $body-bg:  #fff !default;
 
 .circle {
   background-color: $body-bg;
-  border: solid 2px $darkest-gray;
+  border: solid 2px $gray-darkest;
   border-radius: 50%;
   display: inline-block;
   margin-bottom: 15px;
@@ -114,14 +112,14 @@ $body-bg:  #fff !default;
   }
 
   &:hover {
-    background-color: $light-gray;
+    background-color: $gray-lighter;
     cursor: pointer;
   }
 }
 
 .river-light {
   .pattern-header {
-    color: $darkest-gray;
+    color: $gray-darkest;
   }
 }
 

@@ -1,8 +1,8 @@
 .announcement-container {
   background-color: $white;
-  border-bottom: 1px solid $light-gray;
-  border-right: 1px solid $light-gray;
-  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $gray-light;
+  border-right: 1px solid $gray-light;
+  border-top: 1px solid $gray-light;
   margin-bottom: 10px;
   overflow: hidden;
   padding: 10px;
@@ -40,22 +40,22 @@
 
 //Offer announcements
 .announcement-offer {
-  border-left: 8px solid $mediumteal;
+  border-left: 8px solid $brand-secondary;
 }
 
 //Warning announcements
 .announcement-warning {
-  border-left: 8px solid $mustard;
+  border-left: 8px solid $brand-warning;
 }
 
 //Danger announcements
 .announcement-danger {
-  border-left: 8px solid $rackspace-red;
+  border-left: 8px solid $brand-danger;
 }
 
 //Success announcements
 .announcement-success {
-  border-left: 8px solid $signup-green;
+  border-left: 8px solid $brand-success;
 }
 
 @media only screen and (max-width: $screen-xs-max) {

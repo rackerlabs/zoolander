@@ -1,9 +1,10 @@
 .ceilingLp {
   background: $white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 .ceilingLp-brand {
-  background-color: $medium-dark-gray;
+  background-color: $gray-darker;
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg');
   background-position: 9px 10px;
   background-repeat: no-repeat;

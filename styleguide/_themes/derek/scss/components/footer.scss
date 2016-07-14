@@ -1,3 +1,7 @@
+.footer {
+  background-color: $gray-dark;
+}
+
 .footer-menu {
   list-style: none;
   margin: 0;
@@ -10,12 +14,12 @@
 }
 
 .footer-menu-link {
-  color: $medium-light-gray;
+  color: $gray-light;
   font-size: 1.2rem;
   text-decoration: none;
 
   &:hover {
-    color: $medium-light-gray;
+    color: $gray-light;
     text-decoration: underline;
   }
 }
@@ -54,7 +58,7 @@
       padding: 0;
 
       a {
-        color: darken($light-gray, 15%);
+        color: darken($gray-lighter, 15%);
       }
     }
 
@@ -77,8 +81,8 @@
     }
 
     .panel-title {
-      background-color: $blue-gray;
-      border-bottom: 1px solid lighten($blue-gray, 5%);
+      background-color: $gray-dark;
+      border-bottom: 1px solid lighten($gray-dark, 5%);
       padding-left: 0;
       padding-right: 0;
       text-align: center;
@@ -98,13 +102,13 @@
   }
 
   .footer-menu-link {
-    background-color: lighten($blue-gray, 5%);
+    background-color: lighten($gray-dark, 5%);
     display: block;
     margin: 0;
     padding: 15px;
 
     &:hover {
-      background-color: lighten($blue-gray, 8%);
+      background-color: lighten($gray-dark, 8%);
     }
   }
 

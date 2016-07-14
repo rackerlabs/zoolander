@@ -6,6 +6,7 @@ files:
     - 'styleguide/_themes/derek/scss/components/rsweb-font-style.scss'
     - 'styleguide/_themes/global/scss/bootstrap_variables.scss'
     - 'styleguide/_themes/global/scss/bootstrap_overrides.scss'
+    - 'styleguide/_themes/global/scss/vendor_prefixes.scss'
 rules:
   no-url-protocols: 0
   class-name-format:
