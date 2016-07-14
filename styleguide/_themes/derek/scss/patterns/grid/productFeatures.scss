@@ -1,7 +1,7 @@
-.features {
+.features-container {
   display: flex;
 
-  &.three-up {
+  &.features-threeUp {
     display: block;
   }
 
@@ -11,17 +11,18 @@
     }
   }
 
-  .desc {
+  .features-desc {
     background-color: $white;
     margin: 0 15px 0 0;
     overflow: auto;
   }
 
-  .icon {
+  .features-icon {
     align-items: center;
     background-color: $darkteal;
     display: flex;
     justify-content: center;
+    padding: 10px;
   }
 
   .rsweb {
@@ -30,11 +31,11 @@
 }
 
 @media only screen and (max-width: $screen-sm) {
-  .features {
+  .features-container {
     display: block;
     margin-top: 10px;
 
-    .desc {
+    .features-desc {
       margin: 0;
     }
   }
