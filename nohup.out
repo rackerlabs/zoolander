@@ -179,3 +179,12 @@ npm ERR! There is likely additional logging output above.
 
 npm ERR! Please include the following file with any support request:
 npm ERR!     /Users/davi0040/github/zoolander/npm-debug.log
+
+> zoolander@0.8.4 start /Users/john7352/code/zoolander
+> harp server styleguide
+
+------------
+Harp v0.20.3 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------
