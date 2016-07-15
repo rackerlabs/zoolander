@@ -10,8 +10,7 @@
     <div class="row row-eq-height">
       <div class="col-sm-3 col-xs-6 swatch">
         <div class="swatch-color bg-red">
-          <div class="swatch-copy-button">
-            <input id="swatch-copy" class="swatch-copy" value="c40022" type="text"/>
+          <div class="swatch-copy-button" data-value="c40022">
             <a data-copytarget="#swatch-copy">Copy</a>
           </div>
         </div>
@@ -23,8 +22,7 @@
       <div class="col-sm-3 col-xs-6">
         <div class="swatch-color signup-green">
           <div class="swatch-color-lighter signup-green" data-toggle="tooltip" data-placement="right" title="Hover State lighten($brand-success, 5%)"></div>
-          <div class="swatch-copy-button">
-              <input id="swatch-copy" class="swatch-copy" value="5aaa28" type="text"/>
+          <div class="swatch-copy-button" data-value="5aaa28">
               <a data-copytarget="#swatch-copy">Copy</a>
           </div>
         </div>
@@ -36,8 +34,7 @@
       <div class="col-sm-3 col-xs-6">
         <div class="swatch-color bg-medium-teal">
           <div class="swatch-color-darker mediumteal"></div>
-          <div class="swatch-copy-button">
-            <input id="swatch-copy" class="swatch-copy" value="0DCFD9" type="text"/>
+          <div class="swatch-copy-button" data-value="0DCFD9">
             <a data-copytarget="#swatch-copy" class="center">Copy</a>
           </div>
         </div>
@@ -48,8 +45,7 @@
       </div>
       <div class="col-sm-3 col-xs-6">
         <div class="swatch-color bg-blue-gray">
-          <div class="swatch-copy-button">
-            <input id="swatch-copy" class="swatch-copy" value="2e3238" type="text"/>
+          <div class="swatch-copy-button" data-value="2e3238">
             <a data-copytarget="#swatch-copy" class="center">Copy</a>
           </div>
         </div>
@@ -69,8 +65,7 @@
         <div class="swatch-color mustard">
           <div class="swatch-color-lighter mustard"></div>
           <div class="swatch-color-darker mustard"></div>
-          <div class="swatch-copy-button">
-              <input id="swatch-copy" class="swatch-copy" value="5aaa28" type="text"/>
+          <div class="swatch-copy-button" data-value="5aaa28">
               <a data-copytarget="#swatch-copy">Copy</a>
           </div>
         </div>
@@ -81,8 +76,7 @@
       </div>
       <div class="col-sm-3 col-xs-6">
         <div class="swatch-color orange">
-          <div class="swatch-copy-button">
-              <input id="swatch-copy" class="swatch-copy" value="5aaa28" type="text"/>
+          <div class="swatch-copy-button" data-value="5aaa28">
               <a data-copytarget="#swatch-copy">Copy</a>
           </div>
         </div>
@@ -93,8 +87,7 @@
       </div>
       <div class="col-sm-3 col-xs-6">
         <div class="swatch-color purple">
-          <div class="swatch-copy-button">
-              <input id="swatch-copy" class="swatch-copy" value="5aaa28" type="text"/>
+          <div class="swatch-copy-button" data-value="5aaa28">
               <a data-copytarget="#swatch-copy">Copy</a>
           </div>
         </div>
@@ -105,8 +98,7 @@
       </div>
       <div class="col-sm-3 col-xs-6">
         <div class="swatch-color bg-blue-steel">
-          <div class="swatch-copy-button">
-              <input id="swatch-copy" class="swatch-copy" value="5aaa28" type="text"/>
+          <div class="swatch-copy-button" data-value="5aaa28">
               <a data-copytarget="#swatch-copy">Copy</a>
           </div>
         </div>
@@ -183,29 +175,27 @@
   </div>
 </div>
 
+<!--thinking there should be a different js file that doesnt get included into www for this sort of js.-->
 <script>
 (function() {
   'use strict';
-  document.body.addEventListener('click', copy, true);
-  function copy(e) {
-    var
-      t = e.target,
-      c = t.dataset.copytarget,
-      inp = (c ? document.querySelector(c) : null);
+  $('.swatch-copy-button').click(function copy(e) {
+    var element = $(e.target);
+    element.append('<input class="copy" type="text" value="' + element.data('value') + '">');
 
-    // is element selectable?
-    if (inp && inp.select) {
-      inp.select();
+    var copy = element.find('.copy');
+    copy[0].select();
 
-      try {
-        document.execCommand('copy');
-        inp.blur();
-      }
-      catch (err) {
-        alert('please press copy link to copy');
-      }
+    try {
+      document.execCommand('copy');
+      copy.blur();
     }
-  }
+    catch (err) {
+      alert('please press copy link to copy');
+    }
+
+    copy.remove();
+  });
 })();
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
