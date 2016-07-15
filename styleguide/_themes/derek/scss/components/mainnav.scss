@@ -195,7 +195,7 @@
     color: $white;
     display: none;
     font-family: FontAwesome;
-    padding: 23px 0;
+    padding: 23px 0 24px;
   }
 }
 
@@ -308,6 +308,10 @@
       .navbar-dropDownLink {
         padding: 8px 15px 8px 25px;
       }
+
+      .navbar-dropDownLabel {
+        padding: 8px 15px 1px 25px;
+      }
     }
 
     .navbar-topLink {
@@ -316,6 +320,7 @@
   }
 
   .navbar-container {
+    border-bottom: 1px solid $medium-dark-gray;
     max-width: $screen-md;
   }
 }
@@ -336,6 +341,20 @@
 
     .navbar-topItem {
       font-size: 1rem;
+
+      .navbar-dropDownMenu {
+        background: $medium-dark-gray;
+      }
+
+      .navbar-tertiary-dropDownMenu {
+        background-color: transparent;
+      }
+    }
+
+    .navbar-tertiary-dropDownItem {
+      &:hover {
+        background-color: transparent;
+      }
     }
 
     .navbar-topLink {
@@ -368,6 +387,7 @@
     .navbar-hamburger,
     .navbar-searchicon {
       @include make-xs-column(2);
+      border-left: solid 1px $medium-dark-gray;
 
       &::after {
         display: inline-block;
@@ -381,6 +401,10 @@
         font-size: 5vw;
         margin: 0;
       }
+    }
+
+    .navbar-chaticon {
+      border-left: 0;
     }
 
     //make sure menu aligns with right side of buttons
