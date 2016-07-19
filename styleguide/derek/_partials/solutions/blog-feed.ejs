@@ -1,0 +1,28 @@
+<!--  IMPLEMENTATION GUIDELINES -->
+
+<!--
+Limit to excerpt 150 characters - I cant implement with pure css because it needs to be multiple lines. Should culminate in an ellipsis.
+
+Limit Title to 19 characters and also culminate in ellipsis
+
+Date should be written as Month (spelled out), date, yyyy
+
+Link should always be "Read More" and will redirect to the blog post on blog
+
+Byline has to have "By:" prepended to all the author names.
+
+Should bring in featured image and no other. A filter has been applied in css.
+-->
+
+
+<div class="standard-padding bg-light-gray">
+  <div class="container">
+    <div class="row row-eq-height">
+        <%- partial("../grid/widget/blog-feed-item", {desc: "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. Pro gravida dolor sit amet lacus pro gravida dolors."}) %>
+
+        <%- partial("../grid/widget/blog-feed-item", {desc: "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. Pro gravida dolor sit amet lacus pro gravida dolors."}) %>
+
+        <%- partial("../grid/widget/blog-feed-item", {desc: "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. Pro gravida dolor sit amet lacus pro gravida dolors. "}) %>
+    </div>
+  </div>
+</div>
