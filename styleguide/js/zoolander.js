@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
   //main nav functionality
   jQuery ("#search,#searchDesktop").click(function(){
     $(".navbar-search").slideToggle();
@@ -14,11 +14,37 @@ jQuery(document).ready(function() {
     $(".navbar-search").slideUp();
     $(".navbar-activeArrow").fadeOut();
   })
-  jQuery (".navbar-tertiary-dropDownTrigger").hover(function(e){
-    var current=$(this).find('.navbar-tertiary-dropDownMenu');
-    current.toggle();
-    e.stopPropagation();
-  });
+
+  // Special mobile functionality.  
+  var isMainNavScrolling = false;
+  var dropDownTrigger = function (e) {
+    if (!isMainNavScrolling) {
+      var $current = $(this).find('.navbar-tertiary-dropDownMenu');
+      var $siblings = $(this).siblings('.navbar-tertiary-dropDownTrigger').find('.navbar-tertiary-dropDownMenu');
+      $current.toggle();
+      $siblings.hide();
+      e.preventDefault();
+    }
+  };
+
+  if (Modernizr.touch) {
+    // Fix for known bootstrap scroll height bug: https://github.com/twbs/bootstrap/issues/12738
+    var fixScrollBug = function() {
+      $(".navbar-collapse").css({maxHeight: $(window).height() - $(".navbar-header").height() + "px"});
+    };
+    fixScrollBug();
+    window.addEventListener("resize", fixScrollBug);
+    $('.navbar-tertiary-dropDownLink').on('touchstart touchend', function(e) {
+      e.stopPropagation();
+    });
+    // Indicate whether or not we're currently scrolling, or tapping on a link.
+    $(".navbar-tertiary-dropDownTrigger")
+        .on('touchstart', function (e) { isMainNavScrolling = false; })
+        .on('touchmove', function (e) { isMainNavScrolling = true; })
+        .on('touchend', dropDownTrigger);
+  } else {
+    $(".navbar-tertiary-dropDownTrigger").hover(dropDownTrigger);
+  }
 
   //back to top
   var offset = 250;

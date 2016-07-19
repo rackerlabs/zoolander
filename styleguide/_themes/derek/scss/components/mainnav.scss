@@ -7,7 +7,6 @@
 
   .navbar-menuContainer {
     border: 0;
-    height: 1020px;
     max-height: none;
     padding: 0;
   }
@@ -41,7 +40,8 @@
       }
     }
 
-    .navbar-dropDownLink {
+    .navbar-dropDownLink,
+    .navbar-tertiary-dropDownLink {
       color: $white;
       font-size: .8em;
       line-height: 1.5em;
@@ -138,7 +138,6 @@
 }
 
 .navbar-tertiary-dropDownItem {
-
   &:hover {
     background-color: lighten($medium-gray, 5%);
   }
@@ -308,7 +307,8 @@
       font-size: 1.07rem;
 
       .navbar-dropDownLink,
-      .navbar-dropDownLabel {
+      .navbar-dropDownLabel,
+      .navbar-tertiary-dropDownLink {
         padding: 7px 15px 7px 25px;
       }
 
@@ -376,7 +376,7 @@
       }
 
       .navbar-tertiary-dropDownMenu {
-        background-color: transparent;
+        background-color: $medium-gray;
       }
     }
 
@@ -395,7 +395,7 @@
   .navbar-brand {
     @include make-xs-column(4);
     background-position: center;
-    background-size: 110px 36px;
+    background-size: 100px 36px;
   }
 
   .navbar-activeArrow {
@@ -438,8 +438,13 @@
     //make sure menu aligns with right side of buttons
     .navbar-menu {
       float: left;
-      min-height: 1020px;
       width: 100%;
+    }
+  }
+
+  .navbar-dropDownItem {
+    &:hover {
+      background: transparent;
     }
   }
 }
