@@ -76,7 +76,7 @@
 }
 
 .iasWidget-cta {
-  color: $rackspace-red;
+  color: $brand-primary;
   font-weight: 600;
   text-align: center;
 }
@@ -89,7 +89,7 @@
   text-decoration: none;
 
   &:hover {
-    background-color: $light-gray;
+    background-color: $gray-light;
     text-decoration: none;
   }
 }
