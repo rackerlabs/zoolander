@@ -1,5 +1,5 @@
 @mixin blogFeed-textElements {
-  color: $medium-light-gray;
+  color: $gray-light;
   font-size: .9em;
   font-weight: 400;
   line-height: 1.5em;
@@ -41,7 +41,7 @@
 }
 
 .blogFeed-title {
-  color: $medium-dark-gray;
+  color: $gray-darker;
 }
 
 .blogFeed-author {
@@ -59,7 +59,7 @@
   text-decoration: none;
 
   &:hover {
-    color: $medium-light-gray;
+    color: $gray-light;
   }
 }
 
