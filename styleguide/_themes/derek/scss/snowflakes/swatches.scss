@@ -1,16 +1,16 @@
 .swatch-color {
   height: 100px;
   //colors
-  &.mediumteal { @extend %bg-medium-teal; }
+  &.brand-secondary { @extend %bg-brand-secondary; }
   &.signup-green { background-color: $brand-success; }
-  &.magento-orange { background-color: $magento-orange; }
+  &.magento-orange { background-color: $orange; }
   &.purple { background-color: $purple; }
   &.mustard { background-color: $mustard; }
 
   //grays
-  &.light-gray { background-color: $gray-lighter; }
-  &.medium-gray { background-color: $gray-base; }
-  &.medium-dark-gray { background-color: $gray-darker; }
+  &.gray-light { background-color: $gray-lighter; }
+  &.gray-base { background-color: $gray-base; }
+  &.gray-darker { background-color: $gray-darker; }
   &.darkest-gray { background-color: $gray-darkest; }
 
   &:hover {
@@ -38,7 +38,7 @@
   width: 40px;
   &.signup-green { background-color: lighten($brand-success, 5%); }
   &.mustard { background-color: lighten($mustard, 5%); }
-  &.mediumteal { background-color: $dark-teal; }
+  &.brand-secondary { background-color: $teal-dark; }
 }
 
 .swatch-color-darker {

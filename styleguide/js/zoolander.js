@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
     $(".navbar-activeArrow").fadeOut();
   })
 
-  // Special mobile functionality.  
+  // Special mobile functionality.
   var isMainNavScrolling = false;
   var dropDownTrigger = function (e) {
     if (!isMainNavScrolling) {
@@ -78,3 +78,33 @@ jQuery(document).ready(function($) {
 
     $('#footer-accordion').tabCollapse();
 });
+
+
+//swatches copy button
+(function() {
+  'use strict';
+  document.body.addEventListener('click', copy, true);
+  function copy(e) {
+    var
+      t = e.target,
+      c = t.dataset.copytarget,
+      inp = (c ? document.querySelector(c) : null);
+
+    // is element selectable?
+    if (inp && inp.select) {
+      inp.select();
+
+      try {
+        document.execCommand('copy');
+        inp.blur();
+      }
+      catch (err) {
+        alert('please press copy link to copy');
+      }
+    }
+  }
+})();
+(function ($) {
+  $('[data-toggle="tooltip"]').tooltip();
+})(jQuery);
+

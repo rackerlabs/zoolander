@@ -57,7 +57,7 @@
     }
 
     .navbar-dropDownLabel {
-      color: $light-gray;
+      color: $gray-light;
       font-size: .9em;
       line-height: 1.5em;
       margin: 0;
@@ -69,7 +69,7 @@
       &:hover,
       &:visited,
       &:focus {
-        background-color: $medium-dark-gray;
+        background-color: $gray-dark;
       }
     }
   }
@@ -323,7 +323,7 @@
   }
 
   .navbar-container {
-    border-bottom: 1px solid $medium-dark-gray;
+    border-bottom: 1px solid $gray-dark;
     max-width: $screen-md;
   }
 }
@@ -372,11 +372,11 @@
       font-size: 1rem;
 
       .navbar-dropDownMenu {
-        background: $medium-dark-gray;
+        background: $gray-dark;
       }
 
       .navbar-tertiary-dropDownMenu {
-        background-color: $medium-gray;
+        background-color: $gray-base;
       }
     }
 
@@ -415,7 +415,7 @@
     .navbar-hamburger,
     .navbar-searchicon {
       @include make-xs-column(2);
-      border-left: solid 1px $medium-dark-gray;
+      border-left: solid 1px $gray-darker;
 
       &::after {
         display: inline-block;

@@ -8,12 +8,12 @@ $table-padding: 20px 5px;
 .productTable-feature,
 .productTable-featureItem,
 .productTable-name {
-  border: 1px solid $light-gray;
+  border: 1px solid $gray-light;
 }
 
 .productTable-name {
   @include heading;
-  background-color: $darkteal;
+  background-color: $teal-dark;
   color: $white;
   padding: $table-padding;
   text-align: center;
@@ -21,7 +21,7 @@ $table-padding: 20px 5px;
 
 .productTable-feature {
   @include subhead;
-  color: $darkteal;
+  color: $teal-dark;
   padding: $table-padding;
   text-align: center;
 }
@@ -37,14 +37,14 @@ $table-padding: 20px 5px;
 
 .offered {
   &::before {
-    color: $darkteal;
+    color: $teal-dark;
     content: '\f00c';
   }
 }
 
 .notOffered {
   &::before {
-    color: $light-gray;
+    color: $gray-light;
     content: '\f00d';
   }
 }
@@ -83,7 +83,7 @@ $table-padding: 20px 5px;
     justify-content: center;
 
     :first-child {
-      background: $light-gray;
+      background: $gray-light;
       display: block;
       width: 100%;
     }

@@ -15,7 +15,7 @@ a {
 }
 
 .panel-default>.panel-heading {
-  background-color: $dark-teal;
+  background-color: $teal-dark;
 
   &.enterprise {
     background-color: $gray-darkest;
@@ -51,7 +51,7 @@ a {
 
   h3 {
     &.teal {
-      color: $dark-teal;
+      color: $teal-dark;
     }
   }
 
@@ -109,7 +109,7 @@ a {
   }
 
   .fa-arrow-right {
-    border: 2px solid $dark-teal;
+    border: 2px solid $teal-dark;
     border-radius: 50%;
     font-size: 1em;
     margin-top: 0;
@@ -132,7 +132,7 @@ a {
     min-height: 222px;
 
     &.business {
-      background-color: $dark-teal;
+      background-color: $teal-dark;
     }
 
     &.enterprise {
@@ -201,7 +201,7 @@ a {
 
   #business {
     .check {
-      color: $dark-teal;
+      color: $teal-dark;
     }
 
     #enterprise {

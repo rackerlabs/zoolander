@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <div class="swatch-color bg-medium-teal">
+        <div class="swatch-color bg-brand-secondary">
           <div class="swatch-color-darker mediumteal"></div>
           <div class="swatch-copy-button">
             <input id="swatch-copy" class="swatch-copy" value="0DCFD9" type="text"/>
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="swatch-footer">
-          <h6>$medium-teal</h6>
+          <h6>$brand-secondary</h6>
           <h6>#0DCFD9</h6>
         </div>
       </div>
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="swatch-footer">
-          <h6>$magento-orange</h6>
+          <h6>$orange</h6>
           <h6>#ed672f</h6>
         </div>
       </div>
@@ -111,7 +111,7 @@
           </div>
         </div>
         <div class="swatch-footer">
-          <h6>$steel-blue</h6>
+          <h6>$blue-steel</h6>
           <h6>#007295</h6>
         </div>
       </div>
@@ -131,7 +131,7 @@
         </div>
       </div>
       <div class="col-sm-2 col-xs-6">
-        <div class="swatch-color light-gray">
+        <div class="swatch-color gray-light">
         </div>
         <div class="swatch-footer">
           <h6>$gray-lighter</h6>
@@ -139,7 +139,7 @@
         </div>
       </div>
       <div class="col-sm-2 col-xs-6">
-        <div class="swatch-color medium-gray">
+        <div class="swatch-color gray-base">
         </div>
         <div class="swatch-footer">
           <h6>$gray-base</h6>
@@ -147,7 +147,7 @@
         </div>
       </div>
       <div class="col-sm-2 col-xs-6">
-        <div class="swatch-color medium-dark-gray">
+        <div class="swatch-color gray-darker">
         </div>
         <div class="swatch-footer">
           <h6>$gray-darker</h6>
@@ -158,7 +158,7 @@
         <div class="swatch-color bg-dark-gray">
         </div>
         <div class="swatch-footer">
-          <h6>$gray-dark</h6>
+          <h6>$gray-darkest</h6>
           <h6>#333</h6>
         </div>
       </div>
@@ -182,33 +182,3 @@
     </div>
   </div>
 </div>
-
-<!--thinking there should be a different js file that doesnt get included into www for this sort of js.-->
-<script>
-(function() {
-  'use strict';
-  document.body.addEventListener('click', copy, true);
-  function copy(e) {
-    var
-      t = e.target,
-      c = t.dataset.copytarget,
-      inp = (c ? document.querySelector(c) : null);
-
-    // is element selectable?
-    if (inp && inp.select) {
-      inp.select();
-
-      try {
-        document.execCommand('copy');
-        inp.blur();
-      }
-      catch (err) {
-        alert('please press copy link to copy');
-      }
-    }
-  }
-})();
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-</script>

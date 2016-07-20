@@ -47,7 +47,7 @@
     }
 
     &.case-study {
-      background-color: $steel-blue;
+      background-color: $blue-steel;
 
       &::after {
         content: '\f0f2';
@@ -71,7 +71,7 @@
     }
 
     &.support {
-      background-color: $dark-teal;
+      background-color: $teal-dark;
 
       &::after {
         content: '\f0ad';
@@ -95,7 +95,7 @@
     }
 
     &.rss {
-      background-color: $magento-orange;
+      background-color: $orange;
 
       &::after {
         content: '\f143';

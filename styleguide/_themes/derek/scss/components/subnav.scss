@@ -42,7 +42,7 @@
 
     &:hover {
       background-color: transparent;
-      border-bottom: solid $dark-teal 4px;
+      border-bottom: solid $teal-dark 4px;
     }
 
     a {
@@ -67,7 +67,7 @@
 
     &.selected {
       background-color: transparent;
-      border-bottom: solid $darkteal 4px;
+      border-bottom: solid $teal-dark 4px;
     }
   }
 }

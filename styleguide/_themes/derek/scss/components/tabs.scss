@@ -4,8 +4,8 @@
   text-align: center;
 
   & > li {
-    background-color: $dark-teal;
-    border-top: 5px solid $dark-teal;
+    background-color: $teal-dark;
+    border-top: 5px solid $teal-dark;
     display: inline-block;
     float: none;
     padding: 0;
@@ -14,7 +14,7 @@
       border-top: 5px solid $white;
 
       a {
-        background-color: $dark-teal;
+        background-color: $teal-dark;
       }
     }
 
@@ -22,7 +22,7 @@
       background-color: $white;
 
       &:hover {
-        border-top: 5px solid $dark-teal;
+        border-top: 5px solid $teal-dark;
       }
 
       &.enterprise {
@@ -41,7 +41,7 @@
         border: 0;
 
         > * {
-          color: $dark-teal;
+          color: $teal-dark;
           text-align: center;
         }
       }
