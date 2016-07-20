@@ -1,3 +1,54 @@
+@mixin button {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .85em;
+  font-weight: 600;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;;
+  width: 100%;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin button-lead {
+  background-color: $brand-success;
+  color: $white;
+
+  &:hover {
+    background-color: lighten($brand-success, 5%);
+    color: $white;
+  }
+}
+
+@mixin button-learning {
+  background: $white;
+  border: 3px solid $brand-secondary;
+  color: $gray-dark;
+  padding: 12px 20px;
+
+  &:hover {
+    background-color: $brand-secondary;
+    color: $white;
+  }
+}
+
+@mixin button-leaving {
+  background-color: $mustard;
+  color: $white;
+
+  &:hover {
+    background-color: lighten($mustard, 5%);
+    color: $white;
+  }
+}
+
 .banner {
   .button {
     background: transparent;
@@ -15,53 +66,18 @@
 }
 
 .button {
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  cursor: pointer;
-  display: inline-block;
-  font-size: .85em;
-  font-weight: 600;
-  padding: 15px 20px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;;
-  width: 100%;
-
-  &:hover {
-    text-decoration: none;
-  }
+  @include button;
 
   &.lead {
-    background-color: $brand-success;
-    color: $white;
-
-    &:hover {
-      background-color: lighten($brand-success, 5%);
-      color: $white;
-    }
+    @include button-lead;
   }
 
   &.learning {
-    background: $white;
-    border: 3px solid $brand-secondary;
-    color: $gray-dark;
-    padding: 12px 20px;
-
-    &:hover {
-      background-color: $brand-secondary;
-      color: $white;
-    }
+    @include button-learning;
   }
 
   &.leaving {
-    background-color: $mustard;
-    color: $white;
-
-    &:hover {
-      background-color: lighten($mustard, 5%);
-      color: $white;
-    }
+    @include button-leaving;
   }
 }
 
