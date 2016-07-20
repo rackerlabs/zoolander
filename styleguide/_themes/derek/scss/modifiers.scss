@@ -23,11 +23,11 @@ $body-bg:  #fff !default;
   background-color: $brand-primary;
 }
 
-.bg-dark-gray {
+.bg-gray-dark {
   background-color: $gray-darkest;
 }
 
-.bg-gray-light {
+.bg-light-gray {
   background-color: $gray-lightest;
 }
 
@@ -52,9 +52,7 @@ $body-bg:  #fff !default;
 
 //equal height columns
 .row-eq-height {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+  @include flex-box;
 }
 
 @media only screen and (max-width: $screen-sm) {

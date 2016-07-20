@@ -9,8 +9,8 @@
 
   //grays
   &.gray-light { background-color: $gray-lighter; }
-  &.medium-gray { background-color: $gray-base; }
-  &.medium-dark-gray { background-color: $gray-darker; }
+  &.gray-base { background-color: $gray-base; }
+  &.gray-darker { background-color: $gray-darker; }
   &.darkest-gray { background-color: $gray-darkest; }
 
   &:hover {

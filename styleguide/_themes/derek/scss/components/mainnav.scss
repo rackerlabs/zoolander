@@ -40,7 +40,8 @@
       }
     }
 
-    .navbar-dropDownLink {
+    .navbar-dropDownLink,
+    .navbar-tertiary-dropDownLink {
       color: $white;
       font-size: .8em;
       line-height: 1.5em;
@@ -137,7 +138,6 @@
 }
 
 .navbar-tertiary-dropDownItem {
-
   &:hover {
     background-color: lighten($gray-base, 5%);
   }
@@ -195,7 +195,7 @@
     color: $white;
     display: none;
     font-family: FontAwesome;
-    padding: 23px 0;
+    padding: 23px 0 24px;
   }
 }
 
@@ -290,6 +290,7 @@
 //main nav show dropdowns on hover on desktop
 @media only screen and (min-width: $screen-md-min) {
   .dropdown {
+
     &:hover {
       .navbar-dropDownMenu {
         display: block;
@@ -305,8 +306,14 @@
     .navbar-topItem {
       font-size: 1.07rem;
 
-      .navbar-dropDownLink {
-        padding: 8px 15px 8px 25px;
+      .navbar-dropDownLink,
+      .navbar-dropDownLabel,
+      .navbar-tertiary-dropDownLink {
+        padding: 7px 15px 7px 25px;
+      }
+
+      .navbar-dropDownLabel {
+        padding-bottom: 1px;
       }
     }
 
@@ -316,7 +323,34 @@
   }
 
   .navbar-container {
+    border-bottom: 1px solid $gray-darker;
     max-width: $screen-md;
+  }
+}
+
+@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+  .navbar-menu {
+    float: left;
+    margin-left: 10px;
+  }
+
+  .navbar-dropDown-trigger {
+
+    &::after {
+      content: '\f0d9';
+      left: 10px;
+    }
+  }
+
+  .navbar-dropDownMenu {
+    left: initial;
+    right: 0;
+  }
+
+  .navbar-tertiary-dropDownMenu {
+    left: -98%;
+    right: initial;
   }
 }
 
@@ -336,6 +370,20 @@
 
     .navbar-topItem {
       font-size: 1rem;
+
+      .navbar-dropDownMenu {
+        background: $gray-darker;
+      }
+
+      .navbar-tertiary-dropDownMenu {
+        background-color: $gray-base;
+      }
+    }
+
+    .navbar-tertiary-dropDownItem {
+      &:hover {
+        background-color: transparent;
+      }
     }
 
     .navbar-topLink {
@@ -344,11 +392,10 @@
     }
   }
 
-
   .navbar-brand {
     @include make-xs-column(4);
     background-position: center;
-    background-size: 110px 36px;
+    background-size: 100px 36px;
   }
 
   .navbar-activeArrow {
@@ -368,6 +415,7 @@
     .navbar-hamburger,
     .navbar-searchicon {
       @include make-xs-column(2);
+      border-left: solid 1px $gray-darker;
 
       &::after {
         display: inline-block;
@@ -383,11 +431,20 @@
       }
     }
 
+    .navbar-chaticon {
+      border-left: 0;
+    }
+
     //make sure menu aligns with right side of buttons
     .navbar-menu {
       float: left;
-      min-height: 1020px;
       width: 100%;
+    }
+  }
+
+  .navbar-dropDownItem {
+    &:hover {
+      background: transparent;
     }
   }
 }

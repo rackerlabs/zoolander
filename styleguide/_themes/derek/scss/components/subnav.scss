@@ -65,6 +65,10 @@
 
     }
 
+    &.selected {
+      background-color: transparent;
+      border-bottom: solid $teal-dark 4px;
+    }
   }
 }
 

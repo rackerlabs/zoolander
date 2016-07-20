@@ -1,4 +1,17 @@
+$center: center;
 $full-width: 100%;
+$standard-padding: 40px 15px 60px 15px;
+$standard-padding-full: 40px 0 60px;
+$half-padding: 20px 15px 30px;
+$half-padding-full:  20px 0 30px;
+$half-padding-top: 20px;
+$left: left;
+$no-margin: 0;
+$no-padding: 0;
+$no-side-padding-left: 0;
+$no-side-padding-right: 0;
+$right: right;
+$uppercase: uppercase;
 
 img { max-width: 100%; }
 
@@ -8,54 +21,54 @@ img { max-width: 100%; }
 }
 
 .half-padding {
-  padding: 20px 15px 30px;
+  padding: $half-padding;
 }
 
 .half-padding-full {
-  padding: 20px 0 30px;
+  padding: $half-padding-full;
 }
 
 .half-padding-top {
-  padding-top: 20px;
+  padding-top: $half-padding-top;
 }
 
 .no-margin {
-  margin: 0;
+  margin: $no-margin;
 }
 
 .no-padding {
-  padding: 0;
+  padding: $no-padding;
 }
 
 .no-side-padding {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: $no-side-padding-left;
+  padding-right: $no-side-padding-right;
 }
 
 .standard-padding {
-  padding: 40px 15px 60px;
+  padding: $standard-padding;
 }
 
 .standard-padding-full {
-  padding: 40px 0 60px;
+  padding: $standard-padding-full;
 }
 
 // Text Alignments
 .center,
 .centered {
-  text-align: center;
+  text-align: $center;
 }
 
 .left {
-  text-align: left;
+  text-align: $left;
 }
 
 .right {
-  text-align: right;
+  text-align: $right;
 }
 
 .uppercase {
-  text-transform: uppercase;
+  text-transform: $uppercase;
 }
 
 // Text Colors
