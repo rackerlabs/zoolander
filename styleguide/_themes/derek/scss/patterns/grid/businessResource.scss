@@ -1,13 +1,13 @@
 .resource {
   background-color: $white;
-  border-top: 12px solid $steel-blue;
+  border-top: 12px solid $blue-steel;
   margin: 10px;
   overflow: auto;
   padding: 20px 20px 5px;
   position: relative;
 
   &:hover {
-    background-color: $steel-blue;
+    background-color: $blue-steel;
     border-top: 12px solid rgba(0, 0, 0, .4);
 
     h3,

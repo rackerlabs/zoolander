@@ -68,7 +68,7 @@ ul {
     &.teal {
       li {
         &::before {
-          color: $dark-teal;
+          color: $teal-dark;
         }
       }
     }
@@ -144,7 +144,7 @@ i {
 }
 
 .fa-check {
-  color: $dark-teal;
+  color: $teal-dark;
 }
 
 .read-more {
