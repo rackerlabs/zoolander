@@ -5,7 +5,7 @@ a {
 }
 
 .enterprise-collapse {
-  background-color: $darkest-gray;
+  background-color: $gray-darkest;
 }
 
 .panel-body {
@@ -15,10 +15,10 @@ a {
 }
 
 .panel-default>.panel-heading {
-  background-color: $darkteal;
+  background-color: $teal-dark;
 
   &.enterprise {
-    background-color: $darkest-gray;
+    background-color: $gray-darkest;
   }
 
   .panel-title {
@@ -51,7 +51,7 @@ a {
 
   h3 {
     &.teal {
-      color: $darkteal;
+      color: $teal-dark;
     }
   }
 
@@ -70,7 +70,7 @@ a {
   tr {
     td {
       &.col-md-2 {
-        border: 1px solid $light-gray-white;
+        border: 1px solid $gray-lightest;
         padding: 20px 15px;
         width: 14%;
 
@@ -82,16 +82,16 @@ a {
   }
 
   .border-right {
-    border-right: solid 1px $light-gray-white;
+    border-right: solid 1px $gray-lightest;
   }
 
   .check {
-    color: $darkest-gray;
+    color: $gray-darkest;
   }
 
   .col-md-3 {
     background-color: transparent;
-    border-right: 1px solid $light-gray-white;
+    border-right: 1px solid $gray-lightest;
     padding: 20px 15px;
 
     &.pricing {
@@ -109,7 +109,7 @@ a {
   }
 
   .fa-arrow-right {
-    border: 2px solid $darkteal;
+    border: 2px solid $teal-dark;
     border-radius: 50%;
     font-size: 1em;
     margin-top: 0;
@@ -117,7 +117,7 @@ a {
   }
 
   .half-padding {
-    border-top: 1px solid $light-gray-white;
+    border-top: 1px solid $gray-lightest;
   }
 
   .lead-cell {
@@ -128,15 +128,15 @@ a {
     background-color: transparent;
     border-bottom: transparent;
     border-radius: 0;
-    border-right: solid 1px $light-gray;
+    border-right: solid 1px $gray-lighter;
     min-height: 222px;
 
     &.business {
-      background-color: $darkteal;
+      background-color: $teal-dark;
     }
 
     &.enterprise {
-      background-color: $darkest-gray;
+      background-color: $gray-darkest;
     }
   }
 
@@ -165,23 +165,23 @@ a {
   }
 
   .row {
-    border: 1px solid $light-gray-white;
+    border: 1px solid $gray-lightest;
   }
 
   .times {
-    color: $light-gray;
+    color: $gray-lighter;
   }
 
   .title {
-    background-color: $light-gray-white;
-    border: 1px solid $light-gray;
+    background-color: $gray-lightest;
+    border: 1px solid $gray-lighter;
     padding: 20px 0;
     text-align: center;
   }
 
   .triangle {
     border-left: 110px solid transparent;
-    border-top: 90px solid $mediumteal;
+    border-top: 90px solid $brand-secondary;
     position: absolute;
     right: -1px;
     top: -1px;
@@ -201,20 +201,20 @@ a {
 
   #business {
     .check {
-      color: $darkteal;
+      color: $teal-dark;
     }
 
     #enterprise {
       .check {
-        color: $darkest-gray;
+        color: $gray-darkest;
       }
     }
   }
 }
 
 .pricing-header-row {
-  background-color: $light-gray-white;
-  border-bottom: $light-gray;
+  background-color: $gray-lightest;
+  border-bottom: $gray-lighter;
   min-height: 225px;
 }
 
