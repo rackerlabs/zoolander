@@ -35,6 +35,12 @@
 // - transition-transform($transition...);
 // - user-select($select);
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
 @mixin flex-box {
   display: -webkit-box;
   display: -ms-flexbox;
