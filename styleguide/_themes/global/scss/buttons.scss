@@ -8,7 +8,7 @@
       color: $white;
 
       &:hover {
-        background-color: $mediumteal;
+        background-color: $brand-secondary;
       }
     }
   }
@@ -33,23 +33,23 @@
   }
 
   &.lead {
-    background-color: $signup-green;
+    background-color: $brand-success;
     color: $white;
 
     &:hover {
-      background-color: lighten($signup-green, 5%);
+      background-color: lighten($brand-success, 5%);
       color: $white;
     }
   }
 
   &.learning {
     background: $white;
-    border: 3px solid $mediumteal;
-    color: $dark-gray;
+    border: 3px solid $brand-secondary;
+    color: $gray-dark;
     padding: 12px 20px;
 
     &:hover {
-      background-color: $mediumteal;
+      background-color: $brand-secondary;
       color: $white;
     }
   }

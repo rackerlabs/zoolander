@@ -33,7 +33,7 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-menuInline-item {
-  border-right: 1px solid $medium-light-gray;
+  border-right: 1px solid $gray-light;
   display: inline-block;
   font-weight: 500;
   margin: floor($ceiling-margin + 2) 0;
@@ -49,14 +49,14 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-menuInline-link {
-  color: $medium-dark-gray;
+  color: $gray-darker;
   font-size: $ceiling-font-size;
   line-height: 16px;
   text-decoration: none;
   vertical-align: middle;
 
   &:hover {
-    color: $medium-dark-gray;
+    color: $gray-darker;
     text-decoration: underline;
   }
 }
@@ -119,11 +119,11 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-dropdownMenu-gray {
-  background-color: $medium-dark-gray;
+  background-color: $gray-base;
 }
 
 .ceiling-dropdownMenu-green {
-  background-color: $signup-green;
+  background-color: $brand-success;
 }
 
 .ceiling-dropdownToggle {
@@ -142,21 +142,21 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-dropdownToggle-green {
-  background-color: $signup-green;
+  background-color: $brand-success;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: lighten($signup-green, 5%);
+    background-color: lighten($brand-success, 5%);
   }
 }
 
 .ceiling-dropdownToggle-gray {
-  background-color: $medium-gray;
+  background-color: $gray-base;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: lighten($medium-gray, 5%);
+    background-color: lighten($gray-base, 5%);
   }
 }
