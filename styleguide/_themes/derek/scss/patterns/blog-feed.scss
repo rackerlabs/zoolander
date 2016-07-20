@@ -1,0 +1,71 @@
+@mixin blogFeed-textElements {
+  color: $medium-light-gray;
+  font-size: .9em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.blogFeed-date,
+.blogFeed-excerpt,
+.blogFeed-author,
+.blogFeed-link,
+.blogFeed-linkIcon {
+  @include blogFeed-textElements;
+}
+
+.blogFeed-item {
+  @include make-md-column(4);
+  margin: 15px 5px;
+}
+
+.blogFeed-row {
+  @include make-row;
+}
+
+.blogFeed-imageContainer {
+  @include make-md-column(11);
+  padding: 0;
+}
+
+.blogFeed-image {
+  @include sepia-filter;
+}
+
+.blogFeed-textContainer {
+  @include make-md-column(11);
+  background-color: $white;
+}
+
+.blogFeed-date {
+  padding-top: 15px;
+}
+
+.blogFeed-title {
+  color: $medium-dark-gray;
+}
+
+.blogFeed-author {
+  font-size: .7em;
+}
+
+.blogFeed-hr {
+  margin-bottom: 5px;
+}
+
+.blogFeed-link {
+  @include center-block;
+  padding: 5px 0 15px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    color: $medium-light-gray;
+  }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+
+  .blogFeed-imageContainer {
+    display: none;
+  }
+}
