@@ -45,9 +45,15 @@ $body-bg:  #fff !default;
 }
 
 //centered-divs
-.center-block {
+@mixin center-block {
+  display: block;
   float: none;
   margin: 0 auto;
+}
+
+//making sure to support the class
+.center-block {
+  @include center-block;
 }
 
 //equal height columns

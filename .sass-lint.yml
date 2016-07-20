@@ -12,4 +12,8 @@ rules:
   class-name-format:
     - 1
     - convention: ^([a-z0-9]+([A-Z][a-z0-9]+)*)(-{1}([a-z0-9]+([A-Z][a-z0-9]+)*)){0,2}$
+    - convention-explanation: 'Classes should be camelCase and separated by no more than 5 hyphens'
+  mixin-name-format:
+    - 1
+    - convention: ^([a-z0-9]+([A-Z][a-z0-9]+)*)(-{1}([a-z0-9]+([A-Z][a-z0-9]+)*)){0,5}$
     - convention-explanation: 'Classes should be camelCase and separated by no more than 2 hyphens'
