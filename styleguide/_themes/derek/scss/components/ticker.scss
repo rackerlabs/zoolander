@@ -35,16 +35,16 @@ $ticker-span-bg: rgba(200, 0, 0, .5);
 }
 
 .ticker-label {
-  @include make-md-column(4);
+  @include make-md-column(3);
   color: $white;
   font-family: $subhead;
-  padding: 30px 0;
+  padding: 40px 0;
   text-align: center;
   text-transform: uppercase;
 }
 
 .ticker-countdown-column {
-  @include make-md-column(4);
+  @include make-md-column(5);
   padding: 0;
 }
 
@@ -83,7 +83,7 @@ $ticker-span-bg: rgba(200, 0, 0, .5);
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/swirlBG.svg');
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 65%;
   }
 
   .ticker-span-bg {
@@ -91,5 +91,11 @@ $ticker-span-bg: rgba(200, 0, 0, .5);
     font-size: 24px;
     line-height: 30px;
     padding: 2px;
+  }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .ticker-row {
+    background-size: 85%;
   }
 }
