@@ -24,6 +24,7 @@ $table-padding: 20px 5px;
   color: $teal-dark;
   padding: $table-padding;
   text-align: center;
+  width: 20%;
 }
 
 .productTable-featureItem {
@@ -73,6 +74,10 @@ $table-padding: 20px 5px;
     :first-child {
       display: none;
     }
+  }
+
+  .productTable-feature {
+    width: 100%;
   }
 
   .productTable-feature,
