@@ -409,3 +409,43 @@ Harp v0.20.3 – Chloi Inc. 2012–2015
 Your server is listening at http://localhost:9000/
 Press Ctl+C to stop the server
 ------------
+
+> zoolander@0.8.11 start /Users/john7352/code/zoolander
+> harp server styleguide
+
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:9000
+  at Object.exports._errnoException (util.js:837:11)
+  at exports._exceptionWithHostPort (util.js:860:20)
+  at Server._listen2 (net.js:1231:14)
+  at listen (net.js:1267:10)
+  at net.js:1376:9
+  at doNTCallback3 (node.js:440:9)
+  at process._tickCallback (node.js:346:17)
+  at Function.Module.runMain (module.js:477:11)
+  at startup (node.js:117:18)
+  at node.js:951:3
+
+
+npm ERR! Darwin 13.4.0
+npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v4.0.0
+npm ERR! npm  v2.14.2
+npm ERR! code ELIFECYCLE
+npm ERR! zoolander@0.8.11 start: `harp server styleguide`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the zoolander@0.8.11 start script 'harp server styleguide'.
+npm ERR! This is most likely a problem with the zoolander package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     harp server styleguide
+npm ERR! You can get their info via:
+npm ERR!     npm owner ls zoolander
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/john7352/code/zoolander/npm-debug.log
