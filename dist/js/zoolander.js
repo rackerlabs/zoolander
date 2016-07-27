@@ -108,3 +108,18 @@ jQuery(document).ready(function($) {
   $('[data-toggle="tooltip"]').tooltip();
 })(jQuery);
 
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("navZoolander-container").style.width = "250px";
+    document.getElementById("mainContainer").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("navZoolander-container").style.width = "0";
+    document.getElementById("mainContainer").style.marginLeft = "0";
+}
+
+jQuery(".navZoolander-hasDropdown").hover(function(){
+  $(this).find('.navZoolander-dropdown').fadeToggle();
+});
