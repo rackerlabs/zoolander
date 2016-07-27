@@ -1,24 +1,3 @@
-blockquote {
-  border-left: 0;
-  font-size: 1.75rem;
-  font-weight: 300;
-  margin-bottom: 0;
-}
-
-cite {
-  color: $teal-dark;
-  display: block;
-  font-family: $copy;
-  font-size: .9em;
-  font-style: italic;
-  white-space: pre;
-
-  &::before {
-    content: '—';
-    max-height: 1px;
-  }
-}
-
 .quote-icon {
   padding: 20px;
 }

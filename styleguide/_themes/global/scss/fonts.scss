@@ -60,41 +60,55 @@ h6 {
 ul {
   list-style: disc;
   text-align: left;
+}
 
-  &.checks {
-    list-style: none;
-    padding-left: 1.3em;
+.twoColumnList {
+  column-count: 2;
+}
 
-    &.teal {
-      li {
-        &::before {
-          color: $teal-dark;
-        }
-      }
-    }
 
-    &.green {
-      li {
-        &::before {
-          color: $brand-success;
-          }
-        }
-      }
+.checks,
+.times {
+  list-style: none;
+  padding-left: 1.3em;
 
+  &.teal {
     li {
-      list-style: none;
-      margin-left: 1em;
-
       &::before {
-        content: '\f00c';
-        display: inline-block;
-        font-family: FontAwesome;
-        margin-left: -1.3em;
-        width: 1.3em;
+        color: $teal-dark;
       }
     }
   }
+
+  &.green {
+    li {
+      &::before {
+        color: $brand-success;
+        }
+      }
+    }
+
+  li {
+    list-style: none;
+    margin-left: 1em;
+
+    &::before {
+      display: inline-block;
+      font-family: FontAwesome;
+      margin-left: -1.3em;
+      width: 1.3em;
+    }
+  }
 }
+
+.checks li::before{
+  content: '\f00c';
+}
+
+.times li::before{
+  content: '\f00d';
+}
+
 
 li {
   padding: 0;
@@ -158,4 +172,25 @@ i {
 
 .copyright {
   font-size: .75em;
+}
+
+blockquote {
+  border-left: 0;
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+cite {
+  color: $teal-dark;
+  display: block;
+  font-family: $copy;
+  font-size: .9em;
+  font-style: italic;
+  white-space: pre;
+
+  &::before {
+    content: '—';
+    max-height: 1px;
+  }
 }

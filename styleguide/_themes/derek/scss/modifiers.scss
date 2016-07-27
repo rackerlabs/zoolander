@@ -10,64 +10,6 @@ $body-bg:  #fff !default;
   padding: 12px 0;
 }
 
-// Background Variations
-.bg-steel-blue {
-  background-color: $blue-steel;
-}
-
-.bg-blue-gray {
-  background-color: $blue-gray;
-}
-
-.bg-red {
-  background-color: $brand-primary;
-}
-
-.bg-dark-gray {
-  background-color: $gray-darkest;
-}
-
-.bg-light-gray {
-  background-color: $gray-lightest;
-}
-
-.bg-white {
-  background-color: $white;
-}
-
-.bg-medium-teal {
-  background: $brand-secondary;
-}
-
-.bg-crumpled-paper {
-  background-color: $gray-lighter;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png');
-}
-
-//centered-divs
-@mixin center-block {
-  display: block;
-  float: none;
-  margin: 0 auto;
-}
-
-//making sure to support the class
-.center-block {
-  @include center-block;
-}
-
-//equal height columns
-.row-eq-height {
-  @include flex-box;
-}
-
-@media only screen and (max-width: $screen-sm) {
-  //equal height columns remove in small
-  .row-eq-height {
-    display: block;
-  }
-}
-
 //absolutely positioning an element to the bottom of its container
 .bottom {
   bottom: 0;

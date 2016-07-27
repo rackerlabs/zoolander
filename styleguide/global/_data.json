@@ -2,5 +2,9 @@
   "index": {
     "theme_name": "global",
     "title": "Zoolander | Global"
+  },
+  "voice": {
+    "theme_name": "global",
+    "title": "Voice and Tone"
   }
 }
