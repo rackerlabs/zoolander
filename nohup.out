@@ -450,3 +450,4 @@ npm ERR! There is likely additional logging output above.
 npm ERR! Please include the following file with any support request:
 npm ERR!     /Users/john7352/code/zoolander/npm-debug.log
 nohup: can't detach from console: Undefined error: 0
+nohup: can't detach from console: Undefined error: 0
