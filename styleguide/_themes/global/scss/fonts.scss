@@ -3,22 +3,23 @@ $subhead: 'Montserrat', Helvetica, Arial, sans-serif;
 $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
 
-@mixin heading {
-  color: $gray-darkest;
+@mixin heading($color: $gray-darkest) {
+  color: $color;
   font-family: $heading;
   font-weight: 200;
   text-transform: uppercase;
 }
 
-@mixin subhead {
-  color: $gray-darkest;
+@mixin subhead($color: $gray-darkest) {
+  color: $color;
   font-family: $subhead;
+  font-weight: 500;
   line-height: 1.45em;
   text-align: left;
   text-transform: uppercase;
 }
 
-@mixin copy {
+@mixin copy($color: $gray-darkest) {
   color: $gray-darkest;
   font-family: $copy;
   font-weight: 300;
