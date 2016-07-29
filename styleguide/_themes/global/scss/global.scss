@@ -11,3 +11,9 @@
 @import 'buttons';
 @import 'banners';
 @import 'bootstrap_overrides';
+
+@media screen and (min-width: $screen-md-min) {
+  .container {
+    width: 960px;
+  }
+}
