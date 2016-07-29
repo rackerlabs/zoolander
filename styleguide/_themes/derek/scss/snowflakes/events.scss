@@ -276,6 +276,11 @@
   margin-bottom: 2rem;
 }
 
+.event-mapCanvas {
+  height: 250px;
+  width: 100%;
+}
+
 .event-row {
   @include make-row;
 }
@@ -318,9 +323,12 @@
     padding-left: .6rem;
   }
 
-
   .event-map {
     padding-left: 0;
+  }
+
+  .event-mapCanvas {
+    height: 400px;
   }
 }
 
