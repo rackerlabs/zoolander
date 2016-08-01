@@ -1,4 +1,4 @@
-$heading: 'Khand', Helvetica, Arial, sans-serif;
+$heading: 'Open Sans', Helvetica, Arial, sans-serif;
 $subhead: 'Montserrat', Helvetica, Arial, sans-serif;
 $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
@@ -6,7 +6,7 @@ $code: Tahoma, Arial, Geneva, Helvetica;
 @mixin heading($color: $gray-darkest) {
   color: $color;
   font-family: $heading;
-  font-weight: 600;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -35,26 +35,19 @@ p {
 
 h1 {
   @include heading;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
 }
 
 h2 {
   @include heading;
-  font-size: 3rem;
-  line-height: 3rem;
-}
-
-.imacBanner {
-  @include heading($white);
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 3.75rem;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
 }
 
 h3 {
   @include heading;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 1.75rem;
   margin: 10px 0;
 }

@@ -41,6 +41,12 @@
   border-radius: $radius;
 }
 
+@mixin transform($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
 @mixin flex-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,4 +57,8 @@
 @mixin sepia-filter {
   -webkit-filter: sepia(.9);
   filter: sepia(90%);
+}
+
+@mixin text-stroke($width, $color) {
+  -webkit-text-stroke: $width $color;
 }

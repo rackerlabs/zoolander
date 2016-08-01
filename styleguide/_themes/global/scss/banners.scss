@@ -24,3 +24,122 @@
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/o365-overview.jpg');
   }
 }
+
+.banner-headline {
+  @include heading($white);
+  font-size: 4rem;
+  line-height: 3.75rem;
+  text-align: center;
+}
+
+
+.imacBanner {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/o365-overview.jpg');
+  background-size: cover;
+  color: $white;
+  overflow: hidden;
+
+  &.small {
+    height: 250px;
+    padding-top: 50px;
+  }
+
+  &.medium {
+    height: 300px;
+    padding-top: 50px;
+  }
+
+  &.large {
+    height: 350px;
+    padding-top: 50px;
+  }
+}
+
+.imacBanner-container {
+  @include make-container;
+}
+
+.imacBanner-textRow {
+  @include make-row;
+}
+
+.imacBanner-headline {
+  @include heading($white);
+  font-family: 'Khand';
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: .9;
+  margin: 0;
+}
+
+.imacBanner-textContainer {
+  border: 3px solid $white;
+  margin: auto;
+  padding: 15px;
+  position: relative;
+}
+
+.imacBanner-buttonRow {
+  @include make-row;
+  padding: $half-padding-full;
+}
+
+.imacBanner-button {
+  @include make-sm-column(3);
+  background-color: $brand-primary;
+  color: $white;
+  font-weight: 600;
+  margin-left: 10px;
+
+  &:hover {
+    background-color: darken($brand-primary, 5%);
+    color: $white;
+  }
+}
+
+.imacBanner-buttonIcon {
+  @include text-stroke(1px, $white);
+  color: $white;
+  float: right;
+  margin-top: 3px;
+}
+
+.line {
+  @include transform(45deg);
+  background-color: $white;
+  display: block;
+  height: 35rem;
+  position: absolute;
+  width: 3px;
+
+  &.left-top {
+    left: -3px;
+    top: -2px;
+    transform-origin: 1px 0;
+  }
+
+  &.left-bottom {
+    left: -2px;
+    top: 100%;
+    transform-origin: 1px 0;
+  }
+
+  &.right-bottom {
+    left: 100%;
+    top: 100%;
+    transform-origin: -1px 2px;
+  }
+}
+
+
+@media only screen and (max-width: $screen-xs-max) {
+  .imacBanner {
+    background-color: $black;
+    background-image: none;
+    padding: 10px;
+  }
+
+  .imacBanner-button {
+    width: 75%;
+  }
+}
