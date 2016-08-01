@@ -1,0 +1,21 @@
+.lead-row {
+  @import make-row;
+}
+
+.lead-container {
+  @import make-md-column(10);
+  @import make-md-column-push(1);
+}
+
+.lead-title {
+  text-align: $center;
+}
+
+.lead-text {
+  text-align: $center;
+}
+
+//to support legacy
+.lead {
+  text-align: $center;
+}

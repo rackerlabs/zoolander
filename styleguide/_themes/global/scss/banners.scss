@@ -24,3 +24,34 @@
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/o365-overview.jpg');
   }
 }
+
+.banner-headline {
+  @include heading($white);
+  font-size: 3em;
+  line-height: 1em;
+  text-align: center;
+}
+
+
+.imacBanner-container {
+  background-color: $brand-primary;
+  color: $white;
+
+  &.large {
+    height: 300px;
+    padding-top: 30px;
+  }
+}
+
+.imacBanner-headline {
+  @include heading($white);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin: 0;
+}
+
+.imacBanner-text {
+  border: 3px solid $white;
+  padding: 15px;
+}

@@ -35,13 +35,13 @@ p {
 
 h1 {
   @include heading;
-  font-size: 3em;
+  font-size: 2.25em;
   text-align: center;
 }
 
 h2 {
   @include heading;
-  font-size: 2em;
+  font-size: 1.75em;
   line-height: 1.25em;
 }
 
@@ -102,11 +102,11 @@ ul {
   }
 }
 
-.checks li::before{
+.checks li::before {
   content: '\f00c';
 }
 
-.times li::before{
+.times li::before {
   content: '\f00d';
 }
 
