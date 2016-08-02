@@ -10,7 +10,7 @@
     "harp:compile": "npm run harp compile styleguide dist",
     "start": "harp server styleguide",
     "gh-pages": "./scripts/build-pages.sh",
-    "preversion": "npm run harp compile styleguide dist && rm -rf backstop_data && npm run test:visual:init && git add .",
+    "preversion": "npm run harp compile styleguide dist && git add .",
     "postversion": "git push && git push --tags",
     "migrate": "./scripts/pull-flat-site.js",
     "test:visual": "nohup npm start & (cd ./node_modules/backstopjs && npm run test)",
