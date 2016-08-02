@@ -1,7 +1,7 @@
 .swatch-color {
   height: 100px;
   //colors
-  &.brand-secondary { @extend %bg-medium-teal; }
+  &.brand-secondary { @extend .bg-medium-teal; }
   &.signup-green { background-color: $brand-success; }
   &.magento-orange { background-color: $orange; }
   &.purple { background-color: $purple; }
@@ -16,13 +16,13 @@
   &:hover {
 
     .swatch-copy-button {
-      @extend %center;
       background-color: $gray-lightest;
       display: block;
       font-family: $subhead;
       opacity: .85;
       padding: 10px;
       position: absolute;
+      text-align: center;
       text-transform: uppercase;
       top: 60px;
       width: 88%;
