@@ -1,5 +1,28 @@
 .events-banner {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/solve-banner.jpg');
+  @include make-container-fluid;
+  @include make-banner;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/solve-bannerv2.jpg');
+  height: $banner-height-medium;
+  margin-top: 24px;
+}
+
+.events-bannerRow {
+  @include make-row;
+}
+
+.events-bannerCol {
+  @include make-sm-column(6);
+  @include make-sm-column-push(3);
+  text-align: center;
+}
+
+.events-bannerTitle {
+  @include heading($white);
+  font-size: $font-size-h1;
+  line-height: 1.1em;
+  margin-bottom: .5rem;
+  margin-top: $banner-text-margin-medium;
+  text-align: center;
 }
 
 // Main Events Page.
@@ -138,7 +161,7 @@
   @include make-md-column(7);
   font-size: 2rem;
   line-height: 4rem;
-  padding: 0 1.5rem 0 3rem;
+  padding: 0 1.5rem;
   text-transform: uppercase;
 }
 
@@ -243,6 +266,7 @@
   font-size: 2.5rem;
   line-height: 1.5em;
   margin-bottom: .5rem;
+  margin-top: 0;
   padding: $no-padding;
 }
 
@@ -336,6 +360,14 @@
   .event,
   .eventsOverview {
     padding: $standard-padding;
+  }
+
+  .eventsOverview-weekEvent-headerTitle {
+    padding: 0 1.5rem 0 3rem;
+  }
+
+  .events-banner {
+    margin-top: 58px;
   }
 
   .eventsOverview-weekEvent-date {

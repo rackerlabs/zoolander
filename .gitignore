@@ -2,6 +2,7 @@
 .sass-cache
 node_modules
 bower_components
+dist
 .DS_Store
 Gemfile.lock
 styleguide/css/*.css
