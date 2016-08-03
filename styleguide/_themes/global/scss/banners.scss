@@ -1,22 +1,31 @@
-.banner {
+@mixin make-banner {
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;
   font-family: $heading;
+}
+
+$banner-height-large: 375px;
+$banner-height-medium: 225px;
+$banner-text-margin-large: 18%;
+$banner-text-margin-medium: 10%;
+
+.banner {
+  @include make-banner;
 
   &.large {
-    height: 375px;
+    height: $banner-height-large;
 
     .banner-text {
-      margin-top: 18%;
+      margin-top: $banner-text-margin-large;
     }
   }
 
   &.medium {
-    height: 225px;
+    height: $banner-height-medium;
 
     .banner-text {
-      margin-top: 10%;
+      margin-top: $banner-text-margin-medium;
     }
   }
 

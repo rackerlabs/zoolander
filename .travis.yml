@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "4.2.4"
 env:
+  - CMD="sass:compile"
   - CMD="sass-lint"
 #  - CMD="test:visual"
 install:
