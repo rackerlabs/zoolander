@@ -44,6 +44,7 @@
 
 .iasWidget {
   padding: 20px 10px 0;
+  text-decoration: none;
   width: $full-width;
 }
 
@@ -75,8 +76,6 @@
 }
 
 .iasWidget-hover {
-  text-decoration: none;
-
   &:hover {
     background-color: $gray-light;
     text-decoration: none;

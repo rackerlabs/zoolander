@@ -1,35 +1,64 @@
-.offerBox {
+.keyoffers-col-half {
+  @include make-sm-column(6);
+  @include flex-box;
+}
+
+.keyoffers-col-third {
+  @include make-xs-column(12);
+  @include make-md-column(4);
+  @include flex-box;
+}
+
+.keyoffersWidget {
   background: $white;
-  background-clip: padding-box;
-  margin: 10px;
+  display: block;
+  margin-bottom: 10px;
   padding: 25px;
+  text-decoration: none;
+}
 
-  p {
-    line-height: 1.7em;
-    padding-bottom: 10px;
+.keyoffersWidget-body {
+  line-height: 1.7em;
+  padding-bottom: 10px;
+}
+
+.keyoffersWidget-bottom-text {
+  bottom: 0;
+  color: $brand-primary;
+  float: left;
+  font-weight: 600;
+  left: 40px;
+  padding-bottom: 5px;
+  position: absolute;
+}
+
+.keyoffersWidget-col-full {
+  @include make-md-column(12);
+  padding-bottom: 20px;
+}
+
+.keyoffersWidget-header {
+  color: $brand-primary;
+}
+
+.keyoffersWidget-hover {
+  &:hover {
+    background-color: $gray-light;
+    text-decoration: none;
   }
+}
 
-  .bottom {
-    i {
-      bottom: 0;
-      float: right;
-      height: 50px;
-      position: absolute;
-      right: 15px;
-      width: 50px;
-    }
+.keyoffersWidget-icon {
+  bottom: 0;
+  color: $gray-base;
+  float: right;
+  font-family: 'rsweb';
+  font-size: 45px;
+  height: 65px;
+  position: absolute;
+  right: 35px;
+}
 
-    p {
-      bottom: 0;
-      float: left;
-      left: 25px;
-      padding-bottom: 0;
-      position: absolute;
-    }
-  }
-
-  .rsweb {
-    color: $gray-base;
-    font-size: 3em;
-  }
+.keyoffersWidget-row {
+  @include make-row;
 }
