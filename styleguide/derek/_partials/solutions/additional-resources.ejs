@@ -1,48 +1,57 @@
+<%
+
+var resourceRow, resourceColumn, resourceContainer;
+
+if (isSubpanel) {
+  resourceColumn = 'col-sm-12';
+  resourceRow = 'row';
+  resouceContainer = 'container-fluid';
+}
+else {
+  resourceContainer = 'container';
+  resourceColumn = 'col-sm-6';
+  resourceRow = 'row row-eq-height';
+}
+
+%>
+
 <!-- Additional Resources -->
 <div class="half-padding-full">
-  <div class="container additional-resources-container">
-    <h4>Additional Resources</h4>
-    <h6>Resource Options</h6>
-    <ul class="twoColumnList">
-      <li>Case Study</li>
-      <li>Github</li>
-      <li>News</li>
-      <li>Blog</li>
-      <li>Video</li>
-      <li>PDF</li>
-      <li>API</li>
-      <li>Support</li>
-    </ul>
+  <div class="<%- resourceContainer %> additional-resources-container">
+    <div class="zoolanderTooltip" data-toggle="tooltip" data-placement="right" data-html="true" title='Additional Resources<br />Resource Options:<br /><ul class="twoColumnList"><li>Case Study</li><li>Github</li><li>News</li><li>Blog</li><li>Video</li><li>PDF</li><li>API</li><li>Support</li></ul>'></div>
+
+    <% if (!isSubpanel) { %>
     <!-- 6 column layout -->
     <div class="row">
       <div class="col-md-12">
         <h3>Six Column</h3>
       </div>
     </div>
-    <div class="row row-eq-height">
-      <div class="col-sm-6 additional-resource">
+    <% } %>
+
+    <div class="<%- resourceRow %>">
+      <div class="<%- resourceColumn %> additional-resource">
         <%- partial("../grid/widget/additional-resource", {type: "video"}) %>
       </div>
-      <div class="col-sm-6 additional-resource">
+      <div class="<%- resourceColumn %> additional-resource">
         <%- partial("../grid/widget/additional-resource", {type: "rss", desc: "This is an example business resource. This is an example business resource. This is an example business resource. This is an example business resource."}) %>
       </div>
     </div>
-    <div class="row row-eq-height">
-      <div class="col-sm-6 additional-resource">
+    <div class="<%- resourceRow %>">
+      <div class="<%- resourceColumn %> additional-resource">
         <%- partial("../grid/widget/additional-resource", {type: "case-study"}) %>
       </div>
-      <div class="col-sm-6 additional-resource">
+      <div class="<%- resourceColumn %> additional-resource">
         <%- partial("../grid/widget/additional-resource", {type: "github"}) %>
       </div>
     </div>
-    <div class="row row-eq-height">
-      <div class="col-sm-6 additional-resource">
+    <div class="<%- resourceRow %>">
+      <div class="<%- resourceColumn %> additional-resource">
         <%- partial("../grid/widget/additional-resource", {type: "api"}) %>
       </div>
-      <div class="col-sm-6 additional-resource">
+      <div class="<%- resourceColumn %> additional-resource">
         <%- partial("../grid/widget/additional-resource", {type: "rss"}) %>
       </div>
     </div>
   </div>
 </div>
-

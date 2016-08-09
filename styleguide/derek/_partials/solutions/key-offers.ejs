@@ -1,32 +1,51 @@
+<%
+var keyOffersThirdClass, keyOffersHalfClass, equalHeightClass, paddingClass, container, wrapperClass;
+if (isSubpanel) {
+  keyOffersThirdClass = 'keyoffers-col-full';
+  keyOffersHalfClass = 'keyoffers-col-full';
+  equalHeightClass = '';
+  paddingClass = 'half-padding';
+  container = 'container-fluid';
+  wrapperClass = '';
+}
+else {
+  keyOffersThirdClass = 'keyoffers-col-third';
+  keyOffersHalfClass = 'keyoffers-col-half';
+  equalHeightClass = 'row-eq-height';
+  paddingClass = 'standard-padding';
+  container = 'container';
+  wrapperClass = 'bg-light-gray';
+}
+%>
 <!-- Key Offers -->
-<div class="bg-light-gray">
-  <div class="container standard-padding">
-    <h4>Key Offers</h4>
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="center">This a offers headline with a max of 50 characters</h2>
-      </div>
-    </div>
+<div class="<%- wrapperClass %>">
+  <div class="<%- container %> <%- paddingClass %>">
+    <div class="zoolanderTooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="Key Offers<br />This a offers headline with a max of 50 characters"></div>
 
+    <%
+    // To keep subpanels page shorter, we'll just skip the the 3 columns options.
+    if (!isSubpanel) {
+    %>
     <h2 class="center">3 Columns</h2>
-    <div class="row row-eq-height">
-      <div class="keyoffers-col-third">
+    <div class="row <%- equalHeightClass %>">
+      <div class="<%- keyOffersThirdClass %>">
         <%- partial("../grid/widget/key-offer", {desc: "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. 150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. 150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. 150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo."}) %>
       </div>
-      <div class="keyoffers-col-third">
+      <div class="<%- keyOffersThirdClass %>">
         <%- partial("../grid/widget/key-offer") %>
       </div>
-      <div class="keyoffers-col-third">
+      <div class="<%- keyOffersThirdClass %>">
         <%- partial("../grid/widget/key-offer-no-hover") %>
       </div>
     </div>
 
     <h2 class="center">2 Columns</h2>
-    <div class="row row-eq-height">
-      <div class="keyoffers-col-half">
+    <% } %>
+    <div class="row <%- equalHeightClass %>">
+      <div class="<%- keyOffersHalfClass %>">
         <%- partial("../grid/widget/key-offer", {desc: "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. 150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. 150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. 150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo."}) %>
       </div>
-      <div class="keyoffers-col-half">
+      <div class="<%- keyOffersHalfClass %>">
         <%- partial("../grid/widget/key-offer-no-hover") %>
       </div>
     </div>

@@ -1,0 +1,55 @@
+.cta-container {
+  @include make-container;
+  padding: $half-padding-full;
+}
+
+.cta-row {
+  @include make-row;
+}
+
+.cta-columnBody,
+.cta-columnTitle {
+  @include make-md-column(8);
+  @include make-md-column-push(2);
+  text-align: center;
+}
+
+.cta-columnButton {
+  @include make-sm-column(6);
+  @include make-sm-column-push(3);
+  @include make-md-column(4);
+  @include make-md-column-push(4);
+}
+
+.cta-columnIcon {
+  @include make-xs-column(2);
+  @include make-xs-column-push(5);
+  text-align: center;
+}
+
+.cta-columnSecondary {
+  @include make-md-column(8);
+  @include make-md-column-push(2);
+  font-weight: 600;
+  text-align: center;
+}
+
+.subpanel {
+  .cta-columnButton {
+    @include make-sm-column(10);
+    @include make-sm-column-push(1);
+    @include make-md-column(10);
+    @include make-md-column-push(1);
+  }
+
+  .cta-columnBody,
+  .cta-columnSecondary,
+  .cta-columnTitle {
+    @include make-md-column(12);
+    @include make-md-column-push(0);
+  }
+
+  .cta-columnIcon {
+    padding: 0 5px;
+  }
+}

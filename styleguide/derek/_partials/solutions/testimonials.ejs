@@ -1,26 +1,44 @@
+<%
+var iconClass, logoClass, paddingClass, quoteClass, container;
+if (isSubpanel) {
+  iconClass = 'col-xs-3';
+  logoClass = 'col-xs-3';
+  paddingClass = 'half-padding';
+  quoteClass = 'col-xs-12';
+  container = 'container-fluid';
+}
+else {
+  iconClass = 'col-xs-3 col-md-1';
+  logoClass = 'col-xs-3 col-md-1';
+  paddingClass = 'standard-padding';
+  quoteClass = 'col-md-8';
+  container = 'container';
+}
+%>
 <!-- Testimonials -->
-<div class="bg-blue-gray standard-padding">
-  <div class="container">
-    <h4 class="white">Quote</h4>
-    <div class="row">
+<div class="bg-blue-gray <%- paddingClass %>">
+  <div class="<%- container %>">
+    <div class="zoolanderTooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="Quote"></div>
+
+    <div class="row center-block">
       <div class="col-md-12">
-        <h2 class="center white">TRUSTED BY THE BRANDS YOU KNOW</h2>
+        <h2 class="center white">Trusted by the brands you know</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-1 col-xs-3 center-block quote-icon">
+    <div class="row center-block">
+      <div class="<%- iconClass %> center-block quote-icon">
         <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/icons/quote-teal.png" alt="">
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-8 center-block">
+    <div class="row center-block">
+      <div class="<%- quoteClass %> center-block">
         <blockquote class="center white">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
         <cite class="center">Brian McManus, Senior Director of Technology - Under Armour</cite>
       </div>
     </div>
     <!--Option for logo-->
-    <div class="row red semi-bold">
-      <div class="col-md-1 col-xs-3 center-block">
+    <div class="row center-block red semi-bold">
+      <div class="<%- logoClass %> center-block">
         <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png" alt="">
       </div>
     </div>

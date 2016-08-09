@@ -1,13 +1,9 @@
-$white: #fff;
-$light-gray-white: #efefef;
-$dark-gray: #333;
-$medium-gray: #666;
-
+@import '../_themes/global/scss/vendor_prefixes';
+@import '../_themes/global/scss/swatch';
 
 .mainContainer {
   padding: 40px 0;
   transition: margin-left .5s;
-  width: 100%;
 }
 
 .navZoolander-container {
@@ -47,9 +43,32 @@ $medium-gray: #666;
 }
 
 .openbtn {
-  background-color: $dark-gray;
+  background-color: $gray-dark;
   left: 0;
   padding: 10px;
   position: absolute;
   top: 0;
+}
+
+.zoolanderTooltip {
+  @include border-radius(50%);
+
+  background: $gray-lighter;
+  border: 1px solid $gray-light;
+  cursor: pointer;
+  font-size: .9rem;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  width: 20px;
+  z-index: 1000;
+
+  &:hover {
+    background: $gray-light;
+  }
+
+  &::before {
+    content: '?';
+  }
 }

@@ -1,5 +1,3 @@
-$hover-color: 12px solid rgba(0, 0, 0, .4);
-
 .businessResource-widget {
   @include make-md-column(12);
   background-color: $white;
@@ -17,7 +15,7 @@ $hover-color: 12px solid rgba(0, 0, 0, .4);
 .businessResource-widget-hover {
   &:hover {
     background-color: $blue-steel;
-    border-top: $hover-color;
+    border-top: 12px solid rgba(0, 0, 0, .4);
     text-decoration: none;
 
     h3,
@@ -49,5 +47,10 @@ $hover-color: 12px solid rgba(0, 0, 0, .4);
 
 .businessResource-half {
   @include make-sm-column(6);
+  @include flex-box;
+}
+
+.businessResource-full {
+  @include make-xs-column(12);
   @include flex-box;
 }

@@ -1,23 +1,39 @@
+<%
+var ias5Column, ias5ColumnPush, iasContainer;
+
+if (isSubpanel) {
+  iasContainer = 'container-fluid half-padding';
+  ias5Column = 'ias-col-full';
+  ias5ColumnPush = '';
+}
+else {
+  iasContainer = 'ias-container';
+  ias5Column = 'ias-col5';
+  ias5ColumnPush = 'ias-col5-push';
+}
+%>
+
 <!-- Infrastructure and Services section (repeated infserve pattern) -->
 <!-- 5 column -->
-<div class="ias-container">
-  <h2 class="ias-title">5 columns</h2>
+<div class="<%- iasContainer %>">
+  <div class="zoolanderTooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="5 columns"></div>
+
   <div class="ias-row">
-    <div class="ias-col5">
+    <div class="<%- ias5Column %>">
       <%- partial("../grid/widget/ias") %>
     </div>
-    <div class="ias-col5">
+    <div class="<%- ias5Column %>">
       <%- partial("../grid/widget/ias-no-hover") %>
     </div>
-    <div class="ias-col5">
+    <div class="<%- ias5Column %>">
       <%- partial("../grid/widget/ias-no-hover") %>
     </div>
   </div>
   <div class="ias-row">
-    <div class="ias-col5 ias-col5-push">
+    <div class="<%- ias5Column + ' ' + ias5ColumnPush %>">
       <%- partial("../grid/widget/ias") %>
     </div>
-    <div class="ias-col5 ias-col5-push">
+    <div class="<%- ias5Column + ' ' + ias5ColumnPush %>">
       <%- partial("../grid/widget/ias") %>
     </div>
   </div>

@@ -7,12 +7,6 @@
   @include make-row;
 }
 
-@media only screen and (min-width: $screen-sm-min) {
-  .ias-row {
-    @include flex-box;
-  }
-}
-
 .ias-col-full {
   @include make-md-column(12);
   @include flex-box;
@@ -63,6 +57,7 @@
 
 .iasWidget-col-full {
   @include make-md-column(12);
+  margin-bottom: 20px;
 }
 
 .iasWidget-cta {
@@ -93,7 +88,17 @@
   @include make-row;
 }
 
+.subpanel {
+  .ias-row {
+    display: block;
+  }
+}
+
 @media only screen and (min-width: $screen-sm-min) {
+  .ias-row {
+    @include flex-box;
+  }
+
   .iasWidget-img {
     width: 33.3%;
   }
