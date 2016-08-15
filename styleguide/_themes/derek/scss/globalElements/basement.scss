@@ -15,6 +15,12 @@
   text-align: right;
 }
 
+.basementLp-copyright {
+  color: $gray-light;
+  margin-top: 5px;
+  text-align: right;
+}
+
 .basement-flag-icon {
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/sprites/global_flags.png');
   background-position: 0 0;
@@ -82,4 +88,56 @@
 .basement-region-select {
   float: left;
   font-size: 1.2rem;
+}
+
+.basement-iconList {
+  list-style: none;
+  margin-left: -5px;
+  padding-left: 0;
+}
+
+.basement-iconListItem {
+  float: left;
+}
+
+.fa-stack-1x {
+  color: $white;
+}
+
+//classes and variables for social links
+
+$facebook-swatch:   #3b5998;
+$twitter-swatch:    #00aced;
+$youtube-swatch:    #b00;
+$linkedin-swatch:   #007bb6;
+$googleplus-swatch: #dd4b39;
+
+.fa-facebook-official {
+  &::before {
+    color: $facebook-swatch;
+  }
+}
+
+.fa-twitter-square {
+  &::before {
+    color: $twitter-swatch;
+  }
+}
+
+.fa-youtube-square {
+  &::before {
+    color: $youtube-swatch;
+  }
+}
+
+.fa-linkedin-square {
+  &::before {
+    color: $linkedin-swatch;
+  }
+}
+
+.fa-google-plus-square {
+  &::before {
+    color: $googleplus-swatch;
+  }
 }
