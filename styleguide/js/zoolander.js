@@ -43,7 +43,9 @@ jQuery(document).ready(function($) {
         .on('touchmove', function (e) { isMainNavScrolling = true; })
         .on('touchend', dropDownTrigger);
   } else {
-    $(".navbar-tertiary-dropDownTrigger").hover(dropDownTrigger);
+    $(".navbar-tertiary-dropDownTrigger")
+      .hover(dropDownTrigger)
+      .on('click', function (e) { e.stopPropagation(); });
   }
 
   //back to top

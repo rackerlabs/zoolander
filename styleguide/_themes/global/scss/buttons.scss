@@ -20,6 +20,7 @@
 @mixin button-lead {
   background-color: $brand-success;
   color: $white;
+  margin-bottom: 0;
 
   &:hover {
     background-color: lighten($brand-success, 5%);

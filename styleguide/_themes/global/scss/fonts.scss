@@ -191,7 +191,7 @@ cite {
   font-family: $copy;
   font-size: .9em;
   font-style: italic;
-  white-space: pre;
+  white-space: pre-line;
 
   &::before {
     content: '—';

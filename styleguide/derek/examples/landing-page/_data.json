@@ -1,0 +1,15 @@
+{
+  "index": {
+    "css": "css/derek.css",
+    "theme_name": "derek"
+  },
+  "cta-LP": {
+    "css": "css/derek.css"
+  },
+  "video-LP": {
+    "css": "css/derek.css"
+  },
+  "form-LP": {
+    "css": "css/derek.css"
+  }
+}
