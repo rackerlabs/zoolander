@@ -19,23 +19,7 @@
 </div>
 
 <!--Subnav-->
-<nav class="navbar subnav">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" data-toggle="collapse" data-target="#subnav" aria-expanded="false" aria-controls="subnav" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-    </div>
-    <div id="subnav" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav subnav-inside">
-        <li><a href="/dedicated-servers">Dedicated Overview</a></li>
-        <li><a href="/dedicated-servers/hosting">Dedicated Servers</a></li>
-        <li><a href="/dedicated-servers/vmware">VMware</a></li>
-        <li><a href="/dedicated-servers/database-services">Managed Databases</a></li>
-        <li><a href="/dedicated-servers/data-storage">Dedicated Storage</a></li>
-        <li class="no-hover"><button class="button lead" href="#chat">Chat Now</button></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<%- partial("../_partials/solutions/subnav") %>
 
 <!-- main content wrap -->
 <div id="content-wrap" class="styleguide">
