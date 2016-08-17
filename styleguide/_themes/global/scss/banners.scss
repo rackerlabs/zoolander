@@ -36,31 +36,127 @@ $banner-text-margin-medium: 10%;
 
 .banner-headline {
   @include heading($white);
-  font-size: 3em;
-  line-height: 1em;
+  font-size: 4rem;
+  line-height: 3.75rem;
   text-align: center;
 }
 
 
-.imacBanner-container {
-  background-color: $brand-primary;
+.imacBanner {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/o365-overview.jpg');
+  background-size: cover;
   color: $white;
+  margin-top: 50px;
+  overflow: hidden;
+  padding: 50px 0;
+}
 
-  &.large {
-    height: 300px;
-    padding-top: 30px;
-  }
+.imacBanner-container {
+  @include make-container;
+  @include fadein(1s);
+}
+
+.imacBanner-textRow {
+  @include make-row;
+}
+
+.imacBanner-headlineLarge {
+  @include make-sm-column(7);
+}
+
+.imacBanner-headlineMedium {
+  @include make-sm-column(6);
+}
+
+.imacBanner-headlineSmall {
+  @include make-sm-column(5);
 }
 
 .imacBanner-headline {
   @include heading($white);
+  // will be removing this line when imac comes out because we're actually going to be switching the heading mixin to use Khand anyways
+  font-family: 'Khand';
   font-size: 4rem;
   font-weight: 700;
-  line-height: 3.75rem;
+  line-height: .9em;
   margin: 0;
 }
 
-.imacBanner-text {
+.imacBanner-textContainer {
   border: 3px solid $white;
+  margin: 0 auto;
   padding: 15px;
+  position: relative;
+}
+
+.imacBanner-buttonRow {
+  @include make-row;
+  padding-top: 20px;
+}
+
+.imacBanner-button {
+  @include make-sm-column(3);
+  @include button;
+  background-color: $brand-primary;
+  color: $white;
+  font-weight: 600;
+  margin-left: 20px;
+
+  &:hover {
+    background-color: darken($brand-primary, 5%);
+    color: $white;
+  }
+}
+
+.imacBanner-buttonIcon {
+  @include text-stroke(1px, $white);
+  color: $white;
+  float: right;
+  margin-top: 3px;
+}
+
+.line {
+  @include rotate(45deg);
+  background-color: $white;
+  display: block;
+  height: 45rem;
+  position: absolute;
+  width: 3px;
+
+  &.left-top {
+    left: -3px;
+    top: -2px;
+    transform-origin: 1px 0;
+  }
+
+  &.left-bottom {
+    left: -2px;
+    top: 100%;
+    transform-origin: 1px 0;
+  }
+
+  &.right-bottom {
+    left: 100%;
+    top: 100%;
+    transform-origin: -1px 2px;
+  }
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  .imacBanner {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .imacBanner {
+    background-color: $black;
+    background-image: none;
+    padding: 40px 15px;
+  }
+
+  .imacBanner-button {
+    margin-left: 20px;
+    width: 70%;
+  }
 }
