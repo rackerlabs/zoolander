@@ -114,3 +114,54 @@ table {
 .table > thead > tr > th {
   font-weight: unset;
 }
+
+.formModal-closeIcon {
+  font-size: 25px;
+  opacity: .7;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.formModal-title {
+  text-align: center;
+}
+
+.formModal-content {
+  border-radius: 0;
+  padding: 15px;
+}
+
+.formModal-header {
+  border-bottom: 0;
+}
+
+.formModal-body {
+  padding: 10px 20px;
+}
+
+.formModal-label {
+  color: $gray-darkest;
+}
+
+.formModal-required {
+  color: $brand-danger;
+}
+
+.formModal-input {
+  background-color: $gray-lightest;
+  border: 1px solid transparent;
+  box-shadow: none;
+
+  &:focus {
+    border-color: $brand-secondary;
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .formModal-dialog {
+    width: 440px;
+  }
+}
