@@ -75,13 +75,13 @@
 //subnav
 @media only screen and (max-width: $screen-md-max) {
   .subnav li {
-    font-size: .86em;
+    font-size: .8em;
     margin: 0;
     padding: 7px 0 6px;
   }
 }
 
-@media only screen and (max-width: $screen-sm-max) {
+@media only screen and (max-width: $screen-xs-max) {
   //subnav
   .subnav li {
     margin: 0;
