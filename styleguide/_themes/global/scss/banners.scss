@@ -115,7 +115,7 @@ $banner-text-margin-medium: 10%;
   margin-top: 3px;
 }
 
-.line {
+.imacBanner-line {
   @include rotate(45deg);
   background-color: $white;
   display: block;
