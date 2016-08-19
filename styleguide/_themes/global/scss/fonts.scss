@@ -24,13 +24,16 @@ $code: Tahoma, Arial, Geneva, Helvetica;
   font-family: $copy;
   font-weight: 300;
   line-height: 1.5em;
-  margin: 0 0 1em;
   text-align: left;
 }
 
-body,
+body {
+  @include copy;
+}
+
 p {
   @include copy;
+  margin: 0 0 1em;
 }
 
 h1 {

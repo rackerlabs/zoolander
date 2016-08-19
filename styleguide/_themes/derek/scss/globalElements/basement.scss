@@ -5,6 +5,15 @@
   }
 }
 
+//Social Icon Color Mixin
+@mixin basement-beforeColor($class, $color) {
+  #{$class} {
+    &::before {
+      color: $color;
+    }
+  }
+}
+
 // Basement Classes
 .basement {
   padding: 10px 15px;
@@ -12,6 +21,12 @@
 
 .basement-copyright {
   color: $gray-base;
+  text-align: right;
+}
+
+.basementLp-copyright {
+  color: $gray-light;
+  margin-top: 5px;
   text-align: right;
 }
 
@@ -83,3 +98,27 @@
   float: left;
   font-size: 1.2rem;
 }
+
+.basement-iconList {
+  list-style: none;
+  margin-left: -5px;
+  padding-left: 0;
+}
+
+.basement-iconListItem {
+  float: left;
+}
+
+.basement-iconBg {
+  color: $white;
+  display: inline-block;
+  font: 1.83em FontAwesome;
+  text-rendering: auto;
+  top: .5px;
+}
+
+@include basement-beforeColor('.fa-facebook-official', #3b5998);
+@include basement-beforeColor('.fa-twitter-square', #00aced);
+@include basement-beforeColor('.fa-youtube-square', #b00);
+@include basement-beforeColor('.fa-linkedin-square', #007bb6);
+@include basement-beforeColor('.fa-google-plus-square', #dd4b39);

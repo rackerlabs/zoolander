@@ -17,6 +17,15 @@
   width: 127px;
 }
 
+.ceilingLp-pageTitle {
+  float: left;
+  margin: 7px 0 0 20px;
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  @include responsive-invisibility('.ceilingLp-pageTitle');
+}
+
 @media only screen and (min-width: $screen-md-min) {
   margin: 0 (-$grid-gutter-width / 2);
 }
