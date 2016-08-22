@@ -1,14 +1,24 @@
-.resource {
+$hover-color: 12px solid rgba(0, 0, 0, .4);
+
+.businessResource-widget {
+  @include make-md-column(12);
   background-color: $white;
   border-top: 12px solid $blue-steel;
-  margin: 10px;
+  color: $gray-darker;
+  font-weight: 600;
+  margin-bottom: 10px;
   overflow: auto;
-  padding: 20px 20px 5px;
+  padding: 20px 30px;
   position: relative;
+  text-decoration: none;
+}
 
+
+.businessResource-widget-hover {
   &:hover {
     background-color: $blue-steel;
-    border-top: 12px solid rgba(0, 0, 0, .4);
+    border-top: $hover-color;
+    text-decoration: none;
 
     h3,
     h6,
@@ -29,23 +39,15 @@
       }
     }
   }
+}
 
-  a {
-    color: $gray-darker;
-    font-weight: 600;
-    margin-top: 1em;
-    padding-bottom: 20px;
-    text-decoration: none;
-  }
+.businessResource-third {
+  @include make-xs-column(12);
+  @include make-md-column(4);
+  @include flex-box;
+}
 
-  img {
-    display: inline-block;
-    margin-right: 10px;
-    padding-top: 10px;
-    width: 60px;
-
-    &.hover {
-      display: none;
-    }
-  }
+.businessResource-half {
+  @include make-sm-column(6);
+  @include flex-box;
 }
