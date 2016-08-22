@@ -1,10 +1,9 @@
-$hover-color: 12px solid rgba(0, 0, 0, .4);
-
 .businessResource-widget {
   @include make-md-column(12);
   background-color: $white;
   border-top: 12px solid $blue-steel;
   color: $gray-darker;
+  display: block;
   font-weight: 600;
   margin-bottom: 10px;
   overflow: auto;
@@ -13,11 +12,10 @@ $hover-color: 12px solid rgba(0, 0, 0, .4);
   text-decoration: none;
 }
 
-
 .businessResource-widget-hover {
   &:hover {
     background-color: $blue-steel;
-    border-top: $hover-color;
+    border-top: 12px solid rgba(0, 0, 0, .4);
     text-decoration: none;
 
     h3,

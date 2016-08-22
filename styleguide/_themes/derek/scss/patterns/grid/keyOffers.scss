@@ -22,12 +22,13 @@
   padding-bottom: 10px;
 }
 
-.keyoffersWidget-bottom-text {
+.keyoffersWidget-bottomText {
   bottom: 0;
   color: $brand-primary;
   float: left;
   font-weight: 600;
   left: 40px;
+  margin-bottom: 1em;
   padding-bottom: 5px;
   position: absolute;
 }
@@ -53,7 +54,7 @@
   color: $gray-base;
   float: right;
   font-family: 'rsweb';
-  font-size: 45px;
+  font-size: 1rem;
   height: 65px;
   position: absolute;
   right: 35px;
