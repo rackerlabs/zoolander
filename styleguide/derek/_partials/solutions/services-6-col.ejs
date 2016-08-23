@@ -1,26 +1,40 @@
+<%
+var iasThirdColumn, iasContainer;
+
+if (isSubpanel) {
+  iasContainer = 'container-fluid half-padding';
+  iasThirdColumn = 'ias-col-full';
+}
+else {
+  iasContainer = 'ias-container';
+  iasThirdColumn = 'ias-col-third';
+}
+%>
+
 <!-- Infrastructure and Services section (repeated infserve pattern) -->
 <!-- 6 column -->
-<div class="ias-container">
-  <h2 class="ias-title">6 columns</h2>
+<div class="<%- iasContainer %>">
+  <div class="zoolanderTooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="6 columns"></div>
+
   <div class="ias-row">
-    <div class="ias-col-third">
+    <div class="<%- iasThirdColumn %>">
       <%- partial("../grid/widget/ias", {desc: "This description cannot be longer than 75 characters including all spaces. This description cannot be longer than 75 characters including all spaces."}) %>
     </div>
-    <div class="ias-col-third">
+    <div class="<%- iasThirdColumn %>">
       <%- partial("../grid/widget/ias") %>
     </div>
-    <div class="ias-col-third">
+    <div class="<%- iasThirdColumn %>">
       <%- partial("../grid/widget/ias-no-hover") %>
     </div>
   </div>
   <div class="ias-row">
-    <div class="ias-col-third">
+    <div class="<%- iasThirdColumn %>">
       <%- partial("../grid/widget/ias") %>
     </div>
-    <div class="ias-col-third">
+    <div class="<%- iasThirdColumn %>">
       <%- partial("../grid/widget/ias-no-hover") %>
     </div>
-    <div class="ias-col-third">
+    <div class="<%- iasThirdColumn %>">
       <%- partial("../grid/widget/ias") %>
     </div>
   </div>

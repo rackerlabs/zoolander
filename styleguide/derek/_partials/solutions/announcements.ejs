@@ -1,13 +1,19 @@
-<div class="standard-padding bg-light-gray">
-  <div class="container">
+<%
+var wrapperClasses, containerClass;
+if (isSubpanel) {
+  containerClass = 'container-fluid';
+  wrapperClasses = 'half-padding';
+}
+else {
+  containerClass = 'container';
+  wrapperClasses = 'bg-light-gray standard-padding';
+}
+%>
+<div class="<%- wrapperClasses %>">
+  <div class="<%- containerClass %>">
+    <div class="zoolanderTooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="Announcements"></div>
 
-    <div class="row">
-      <div class="center-block">
-        <h2 class="center teal">Announcements</h2>
-      </div>
-    </div>
-
-    <div class="row">
+    <div class="row center-block">
       <div class="alert announcement-container announcement-offer fade in row-eq-height">
         <a href="#" data-dismiss="alert" class="announcement-close"></a>
         <div class="announcement-icon flex-center-all"><i class="rsweb idio-piggy"></div>
@@ -17,7 +23,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row center-block">
       <div class="alert announcement-container announcement-warning fade in row-eq-height">
         <a href="#" data-dismiss="alert" class="announcement-close"></a>
         <div class="announcement-icon flex-center-all"><i class="rsweb idio-piggy"></div>
@@ -30,7 +36,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row center-block">
       <div class="alert announcement-container announcement-danger fade in row-eq-height">
         <a href="#" data-dismiss="alert" class="announcement-close"></a>
         <div class="announcement-icon flex-center-all"><i class="rsweb idio-piggy"></div>
@@ -43,7 +49,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row center-block">
       <div class="alert announcement-container announcement-success fade in row-eq-height">
         <a href="#" data-dismiss="alert" class="announcement-close"></a>
         <div class="announcement-icon flex-center-all"><i class="rsweb idio-piggy"></div>

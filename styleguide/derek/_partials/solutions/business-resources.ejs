@@ -1,18 +1,51 @@
+<%
+var resourceRow, resourceContainer, resourceHalfColumn, resourceThirdColumn, wrapperClasses;
+
+if (isSubpanel) {
+  wrapperClasses = 'half-padding';
+  resourceHalfColumn = 'businessResource-full';
+  resourceThirdColumn = 'businessResource-full';
+  resourceRow = 'row';
+  resourceContainer = 'container-fluid';
+}
+else {
+  wrapperClasses = 'bg-light-gray standard-padding';
+  resourceHalfColumn = 'businessResource-half';
+  resourceThirdColumn = 'businessResource-third';
+  resourceRow = 'row row-eq-height';
+  resourceContainer = 'container';
+}
+
+ %>
+
 <!-- Business Resources -->
-<div class="bg-light-gray standard-padding">
-  <div class="container">
-    <h4>Business Resource (being deprecated soon)</h4>
+<div class="<%- wrapperClasses %>">
+  <div class="<%- resourceContainer %>">
+    <div class="zoolanderTooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="Business Resource (being deprecated soon)"></div>
+
+    <% if (!isSubpanel) { %>
+    <h4 class="center">3 Column</h4>
     <div class="row row-eq-height">
-      <div class="col-md-4 resource">
+      <div class="<%- resourceThirdColumn %>">
         <%- partial("../grid/widget/business-resource", {desc: "This is an example business resource. This is an example business resource. This is an example business resource. This is an example business resource. This is an example business resource. This is an example business resource. This is an example business resource. This is an example business resource."}) %>
       </div>
-      <div class="col-md-4 resource">
+      <div class="<%- resourceThirdColumn %>">
         <%- partial("../grid/widget/business-resource") %>
       </div>
-      <div class="col-md-4 resource">
+      <div class="<%- resourceThirdColumn %>">
+        <%- partial("../grid/widget/business-resource-no-hover") %>
+      </div>
+    </div>
+    <h4 class="center">2 Column</h4>
+    <% } %>
+
+    <div class="<%- resourceRow %>">
+      <div class="<%- resourceHalfColumn %>">
         <%- partial("../grid/widget/business-resource") %>
+      </div>
+      <div class="<%- resourceHalfColumn %>">
+        <%- partial("../grid/widget/business-resource-no-hover") %>
       </div>
     </div>
   </div>
 </div>
-

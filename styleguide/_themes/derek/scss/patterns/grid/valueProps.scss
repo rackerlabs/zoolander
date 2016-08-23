@@ -1,0 +1,21 @@
+.valueProps {
+  @include make-container;
+  padding: $half-padding-full;
+}
+
+.valueProps-row {
+  @include make-row;
+}
+
+.valueProps-column {
+  @include make-sm-column(6);
+  @include make-md-column(4);
+}
+
+.subpanel {
+  .valueProps-column {
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    margin-bottom: 20px;
+  }
+}

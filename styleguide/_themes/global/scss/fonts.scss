@@ -20,7 +20,7 @@ $code: Tahoma, Arial, Geneva, Helvetica;
 }
 
 @mixin copy($color: $gray-darkest) {
-  color: $gray-darkest;
+  color: $color;
   font-family: $copy;
   font-weight: 300;
   line-height: 1.5em;
@@ -196,5 +196,11 @@ cite {
   &::before {
     content: '—';
     max-height: 1px;
+  }
+}
+
+.subpanel {
+  cite {
+    white-space: normal;
   }
 }

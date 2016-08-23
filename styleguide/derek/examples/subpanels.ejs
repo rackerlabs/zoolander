@@ -1,0 +1,160 @@
+<%
+
+// List of available layouts.
+var layouts = {
+  '50_50': {
+    'title': '50/50 Layout',
+    'class_left': 'col-md-6',
+    'class_right': 'col-md-6'
+  },
+  '67_33': {
+    'title': '67/33 Layout',
+    'class_left': 'col-md-8',
+    'class_right': 'col-md-4'
+  }
+};
+
+// List of available patterns sorted by title.
+var patterns = {
+  'announcements': {'title': 'Announcements'},
+  'additional-resources': {'title': 'Additional Resources'},
+  'business-resources': {'title': 'Business Resources'},
+  'cta': {'title': 'CTA'},
+  'features': {'title': 'Features'},
+  'services-3-col': {'title': 'IAS: 3 cols'},
+  'services-4-col': {'title': 'IAS: 4 cols'},
+  'services-5-col': {'title': 'IAS: 5 cols'},
+  'services-6-col': {'title': 'IAS: 6 cols'},
+  'key-offers': {'title': 'Key Offers'},
+  'lead': {'title': 'Lead'},
+  'list': {'title': 'List'},
+  'testimonials': {'title': 'Quote'},
+  'text': {'title': 'Text'},
+  'value-prop': {'title': 'Value Prop'}
+};
+%>
+
+<div class="container-fluid">
+  <div class="row standard-padding-full center-block">
+    <div class="col-md-12">
+      <h5 class="red">Global Ecomm Subpanels</h5>
+      <h2 class="no-margin">Yo dawg, I heard you like panels, so we put panels inside of panels.</h2>
+    </div>
+  </div>
+</div>
+
+<div id="pattern-selector" class="bg-steel-blue half-padding-full">
+  <div class="container">
+    <div class="row center-block">
+      <div class="col-sm-3">
+        <select id="mp-layout" name="layout">
+          <% for (var layout in layouts) { %>
+          <option value="<%- layout %>"><%- layouts[layout].title %></option>
+          <% } %>
+        </select>
+      </div>
+      <div class="col-sm-3">
+        <select id="mp-pattern-left" name="pattern_left">
+          <% for (var pattern in patterns) { %>
+          <option value="<%- pattern %>">[Left] <%- patterns[pattern].title %></option>
+          <% } %>
+        </select>
+      </div>
+      <div class="col-sm-3">
+        <select id="mp-pattern-right" name="pattern_right">
+          <% for (var pattern in patterns) { %>
+          <option value="<%- pattern %>">[Right] <%- patterns[pattern].title %></option>
+          <% } %>
+        </select>
+      </div>
+      <div class="col-sm-3 text-right">
+        <input type="submit" class="btn btn-xs btn-default" id="search-mini-panels" value="Go to Panel"/>
+        <input type="reset" class="btn btn-xs btn-info" id="reset-mini-panels" value="Back to Top"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%
+for (var layout in layouts) {
+  for (var pattern_left in patterns) {
+    for (var pattern_right in patterns) {
+      var anchor_id = 'pattern_' + layout + '_' + pattern_left + '_' + pattern_right;
+      var class_left = layouts[layout].class_left;
+      var class_right = layouts[layout].class_right;
+      var section_title = layouts[layout].title + ' (' + patterns[pattern_left].title + '/' + patterns[pattern_right].title + ')';
+      var file_left = '../_partials/solutions/' + pattern_left;
+      var file_right = '../_partials/solutions/' + pattern_right;
+%>
+
+<div id="<%- anchor_id %>" class="container half-padding">
+  <h4><%- section_title %></h4>
+  <div class="row">
+    <div class="subpanel <%- class_left %>">
+      <%- partial(file_left, {isSubpanel: true}) %>
+    </div>
+    <div class="subpanel <%- class_right %>">
+      <%- partial(file_right, {isSubpanel: true}) %>
+    </div>
+  </div>
+</div>
+<hr/>
+<%
+    }
+  }
+}
+%>
+
+<script type="text/javascript">
+(function ($) {
+  var selectorHeight = 0;
+  var initialOffset = 0;
+  var lastPosition = '';
+  var $patternSelector = $('#pattern-selector');
+  var $body = $('body');
+  var $body_html = $('body, html');
+  var $layout = $('#mp-layout');
+  var $pattern_left = $('#mp-pattern-left');
+  var $pattern_right = $('#mp-pattern-right');
+
+
+  // On scroll, check if we're scrolled past the selector. If so, fix the position to the top.
+  $(window).scroll(function (e) {
+    var scrollTop = $(document).scrollTop();
+    if (scrollTop > initialOffset) {
+      if (lastPosition != 'fixed') {
+        $patternSelector.css({'position': 'fixed', 'top': 0, 'z-index': 100000, 'width': '100%'});
+        $body.css({'padding-top': selectorHeight});
+        lastPosition = 'fixed';
+      }
+    }
+    else {
+      if (lastPosition != 'relative') {
+        $patternSelector.css({'position': 'relative'});
+        $body.css({'padding-top': 0});
+        lastPosition = 'relative';
+      }
+    }
+  });
+
+  // Initialize our selector height and offset and build button behavior.
+  $(document).ready(function () {
+    selectorHeight = parseInt($patternSelector.css('height'), 10);
+    initialOffset = parseInt($patternSelector.offset().top, 10);
+    $(window).trigger('scroll');
+
+    $('#reset-mini-panels').click(function (e) {
+      $body_html.animate({scrollTop: 0}, 250)
+    });
+
+    $('#search-mini-panels').click(function (e) {
+      var layout = $layout.val();
+      var pattern_left = $pattern_left.val();
+      var pattern_right = $pattern_right.val();
+      var id = '#pattern_' + layout + '_' + pattern_left + '_' + pattern_right;
+
+      $body_html.animate({scrollTop: $(id).offset().top - selectorHeight}, 250);
+    });
+  });
+})(jQuery);
+</script>

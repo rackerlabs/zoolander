@@ -1,20 +1,34 @@
+<%
+var iasHalfColumn, iasContainer;
+
+if (isSubpanel) {
+  iasContainer = 'container-fluid half-padding';
+  iasHalfColumn = 'ias-col-full';
+}
+else {
+  iasContainer = 'ias-container';
+  iasHalfColumn = 'ias-col-half';
+}
+%>
+
 <!-- Infrastructure and Services section (repeated infserve pattern) -->
 <!-- 4 column -->
-<div class="ias-container">
-  <h2 class="ias-title">4 columns</h2>
+<div class="<%- iasContainer %>">
+  <div class="zoolanderTooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="4 columns"></div>
+
   <div class="ias-row">
-    <div class="ias-col-half">
+    <div class="<%- iasHalfColumn %>">
       <%- partial("../grid/widget/ias") %>
     </div>
-    <div class="ias-col-half">
+    <div class="<%- iasHalfColumn %>">
       <%- partial("../grid/widget/ias-no-hover") %>
     </div>
   </div>
   <div class="ias-row">
-    <div class="ias-col-half">
+    <div class="<%- iasHalfColumn %>">
       <%- partial("../grid/widget/ias") %>
     </div>
-    <div class="ias-col-half">
+    <div class="<%- iasHalfColumn %>">
       <%- partial("../grid/widget/ias-no-hover") %>
     </div>
   </div>

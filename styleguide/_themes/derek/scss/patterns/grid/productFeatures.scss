@@ -1,4 +1,5 @@
 .features-container {
+  @include make-md-column(6);
   display: flex;
 
   &.features-threeUp {
@@ -27,6 +28,17 @@
 
   .rsweb {
     color: $white;
+  }
+}
+
+.subpanel {
+  .features-container {
+    @include make-md-column(12);
+    margin: 5px 0;
+
+    .rsweb {
+      font-size: 4em;
+    }
   }
 }
 

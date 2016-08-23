@@ -1,8 +1,13 @@
-.lead-row {
-  @include make-row;
+.lead-container {
+  @include make-container;
 }
 
-.lead-container {
+.lead-row {
+  @include make-row;
+  margin: 0 auto;
+}
+
+.lead-column {
   @include make-md-column(10);
   @include make-md-column-push(1);
   text-align: center;
@@ -20,4 +25,3 @@
 .lead {
   text-align: center;
 }
-

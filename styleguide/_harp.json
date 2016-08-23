@@ -1,6 +1,7 @@
 {
   "globals": {
     "base": "/",
-    "css": "css/global.css"
+    "css": "css/global.css",
+    "isSubpanel": false
   }
 }
