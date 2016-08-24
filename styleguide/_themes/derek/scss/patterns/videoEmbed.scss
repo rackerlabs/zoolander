@@ -1,9 +1,6 @@
 .videoEmbed-title {
+  margin-top: 0;
   text-align: center;
-}
-
-.videoEmbed-row {
-  @include make-row;
 }
 
 .videoEmbed-column {

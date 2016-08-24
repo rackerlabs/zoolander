@@ -1,0 +1,46 @@
+.subpanelWell {
+  margin-bottom: 1em;
+  padding: $half-padding;
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    margin-top: 0;
+  }
+}
+
+.subpanelWell-steel-blue {
+  background-color: $blue-steel;
+}
+
+.subpanelWell-blue-gray {
+  background-color: $blue-gray;
+}
+
+.subpanelWell-red {
+  background-color: $brand-primary;
+}
+
+.subpanelWell-dark-gray {
+  background-color: $gray-darkest;
+}
+
+.subpanelWell-light-gray {
+  background-color: $gray-lightest;
+}
+
+.subpanelWell-white {
+  background-color: $white;
+}
+
+.subpanelWell-medium-teal {
+  background: $brand-secondary;
+}
+
+.subpanelWell-crumpled-paper {
+  background-color: $gray-light;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png');
+}

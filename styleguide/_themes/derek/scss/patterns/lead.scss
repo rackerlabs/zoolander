@@ -1,23 +1,9 @@
-.lead-row {
-  @include make-row;
-}
-
-.lead-container {
-  @include make-md-column(10);
-  @include make-md-column-push(1);
-  text-align: center;
+.lead,
+.lead-text {
+  text-align: left;
 }
 
 .lead-title {
-  text-align: center;
+  margin-top: 0;
+  text-align: left;
 }
-
-.lead-text {
-  text-align: center;
-}
-
-//to support legacy
-.lead {
-  text-align: center;
-}
-

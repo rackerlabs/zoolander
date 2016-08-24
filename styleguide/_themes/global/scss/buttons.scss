@@ -21,6 +21,7 @@
   background-color: $brand-success;
   color: $white;
   margin-bottom: 0;
+  text-align: center;
 
   &:hover {
     background-color: lighten($brand-success, 5%);
