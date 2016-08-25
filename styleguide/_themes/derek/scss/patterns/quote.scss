@@ -1,9 +1,26 @@
-.quote-icon {
-  padding: 20px;
+.quote-blockquote {
+  padding-bottom: 10px;
 }
 
-.read-more {
-  img {
-    max-height: 40px;
-  }
+.quote-cite {
+  padding-bottom: 15px;
+}
+
+.quote-cite-break {
+  border-top: 1px solid $teal-dark;
+  padding-bottom: 10px;
+  width: 15px;
+}
+
+.quote-icon {
+  max-width: 40px;
+  padding: 20px 0;
+}
+
+.quote-logo {
+  max-width: 115px;
+}
+
+.quote-split-video {
+  padding-top: 20px;
 }
