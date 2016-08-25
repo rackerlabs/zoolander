@@ -1,65 +1,90 @@
+.form-inline {
+  button,
+  .button {
+    width: auto;
+  }
+}
+
 .homepage-hero {
-  @extend .full-width;
-  height: 100%;
-  overflow: visible;
-  background-repeat: no-repeat;
-  top: 60px;
-  margin-bottom: 40px;
-  background-image: url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg");
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg');
   background-position: 25% 50%;
-  position: relative;
+  background-repeat: no-repeat;
   background-size: auto;
   border-bottom: 0;
+  height: 100%;
+  margin-bottom: 40px;
+  overflow: visible;
+  position: relative;
+  top: 60px;
+  width: 100%;
+
   h2 {
-    padding-top: 20px;
+    color: $white;
     font-size: 34px;
-    line-height: 40px;
     font-weight: 300;
-    @extend .white;
-    @extend .left;
+    line-height: 40px;
+    padding-top: 20px;
+    text-align: left;
   }
+
   p {
+    font-size: 16px;
     letter-spacing: 1px;
     line-height: 24px;
-    font-size: 16px;
     padding-bottom: 10px;
   }
 }
 
-#hosting-options {
-  text-align:center;
-  .product{
-    p{ margin-bottom:30px; }
-    &:hover{
-      @extend .bg-light-gray;
-      hr{ border-color:$brand-secondary; }
-      h3, a{ color:$brand-secondary; }
-    }
-  }
-}
-
-#solutions{
-  a{ text-decoration:none; }
-  .solution:hover{
-    .border-white{
-     border-color:$mustard;
-     i{ color:$mustard; }
-    }
-    h6{ color: $mustard; }
-  }
-}
-
-#quadrant{
-  background-image:url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.png");
-  background-repeat:no-repeat;
-  padding: 20px 0px;
-  background-size: 40%;
+#quadrant {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.png');
   background-position: 13% bottom;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  padding: 20px 0;
 }
 
-.form-inline{
-  button, .button{
-  width: auto;
+#hosting-options {
+  text-align: center;
+
+  .product {
+    p {
+      margin-bottom: 30px;
+    }
+
+    &:hover {
+      background-color: $light-gray;
+
+      hr {
+        border-color: $brand-secondary;
+      }
+
+      h3,
+      a {
+        color: $brand-secondary;
+      }
+    }
   }
 }
 
+#solutions {
+  a {
+    text-decoration: none;
+  }
+
+  .solution {
+
+    &:hover {
+      h6 {
+        color: $mustard;
+      }
+
+      .border-white {
+        border-color: $mustard;
+
+        i {
+          color: $mustard;
+        }
+      }
+    }
+  }
+}

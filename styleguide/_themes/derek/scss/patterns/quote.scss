@@ -1,9 +1,22 @@
+.quote-blockquote {
+  padding-bottom: 10px;
+}
+
+.quote-cite {
+  padding-bottom: 15px;
+}
+
+.quote-cite-break {
+  border-top: 1px solid $teal-dark;
+  padding-bottom: 10px;
+  width: 15px;
+}
+
 .quote-icon {
   padding: 20px;
 }
 
-.read-more {
-  img {
-    max-height: 40px;
-  }
+.quote-logo {
+  max-width: 110px;
+  padding-bottom: 20px;
 }
