@@ -1,15 +1,14 @@
 <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-<% if(!desc) { var desc = "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo."; } %>
+<% if(!desc) { var desc = "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present."; } %>
 <!-- Key Offers Pattern -->
-<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+<div class="keyoffersWidget">
   <div class="keyoffersWidget-row">
     <div class="keyoffersWidget-col-full">
       <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
       <p class="keyoffersWidget-body"><%- desc %></p>
     </div>
-    <div class="keyoffersWidget-bottomText">Read More</div>
     <div class="keyoffersWidget-icon">
       <i class="rsweb idio-high-five"></i>
     </div>
   </div>
-</a>
+</div>

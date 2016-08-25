@@ -7,12 +7,6 @@
   @include make-row;
 }
 
-@media only screen and (min-width: $screen-sm-min) {
-  .ias-row {
-    @include flex-box;
-  }
-}
-
 .ias-col-full {
   @include make-md-column(12);
   @include flex-box;
@@ -43,7 +37,9 @@
 }
 
 .iasWidget {
+  display: block;
   padding: 20px 10px 0;
+  text-decoration: none;
   width: $full-width;
 }
 
@@ -75,8 +71,6 @@
 }
 
 .iasWidget-hover {
-  text-decoration: none;
-
   &:hover {
     background-color: $gray-light;
     text-decoration: none;
@@ -95,6 +89,10 @@
 }
 
 @media only screen and (min-width: $screen-sm-min) {
+  .ias-row {
+    @include flex-box;
+  }
+
   .iasWidget-img {
     width: 33.3%;
   }
