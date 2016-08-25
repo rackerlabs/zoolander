@@ -94,6 +94,26 @@ table {
   }
 }
 
+.lpForm-container {
+  @include make-container;
+  margin-top: -240px;
+}
+
+.lpForm {
+  @include make-sm-column(4);
+  @include make-sm-column-push(8);
+  @include make-xs-column(12);
+  background-color: $white;
+  border: 1px solid $gray-lighter;
+  padding: $half-padding;
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .lpForm-container {
+    margin-top: 0;
+  }
+}
+
 .nav-tabs {
   margin-bottom: 1.5em;
 }

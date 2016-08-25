@@ -1,0 +1,13 @@
+.videoEmbed-title {
+  text-align: center;
+}
+
+.videoEmbed-row {
+  @include make-row;
+}
+
+.videoEmbed-column {
+  @include make-md-column(6);
+  @include make-md-column-push(3);
+  padding: $half-padding-full;
+}
