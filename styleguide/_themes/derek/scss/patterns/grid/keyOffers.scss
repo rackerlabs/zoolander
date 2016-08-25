@@ -9,6 +9,10 @@
   @include flex-box;
 }
 
+.keyoffers-flex {
+  @include flex-box;
+}
+
 .keyoffersWidget {
   background: $white;
   display: block;
