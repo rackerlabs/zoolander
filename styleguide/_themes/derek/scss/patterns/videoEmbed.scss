@@ -4,7 +4,6 @@
 }
 
 .videoEmbed-column {
-  @include make-md-column(6);
-  @include make-md-column-push(3);
+  @include make-md-column(12);
   padding: $half-padding-full;
 }
