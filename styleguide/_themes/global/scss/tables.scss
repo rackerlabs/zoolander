@@ -8,7 +8,7 @@ $table-padding: 20px 5px;
 .productTable-feature,
 .productTable-featureItem,
 .productTable-name {
-  border: 1px solid $gray-light;
+  border: 1px solid $gray-lighter;
 }
 
 .productTable-name {
@@ -45,7 +45,7 @@ $table-padding: 20px 5px;
 
 .notOffered {
   &::before {
-    color: $gray-light;
+    color: $gray-lighter;
     content: '\f00d';
   }
 }
@@ -88,7 +88,7 @@ $table-padding: 20px 5px;
     justify-content: center;
 
     :first-child {
-      background: $gray-light;
+      background: $gray-lighter;
       display: block;
       width: 100%;
     }

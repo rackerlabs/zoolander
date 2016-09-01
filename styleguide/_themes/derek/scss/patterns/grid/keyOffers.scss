@@ -49,20 +49,23 @@
 
 .keyoffersWidget-hover {
   &:hover {
-    background-color: $gray-light;
+    background-color: $gray-lighter;
     text-decoration: none;
   }
 }
 
 .keyoffersWidget-icon {
   bottom: 0;
-  color: $gray-base;
   float: right;
-  font-family: 'rsweb';
-  font-size: 1rem;
+  font-size: .9rem;
   height: 65px;
   position: absolute;
   right: 35px;
+
+  & .rsweb {
+    color: $gray-base;
+    font-family: 'rsweb';
+  }
 }
 
 .keyoffersWidget-row {
