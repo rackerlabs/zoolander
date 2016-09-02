@@ -22,15 +22,30 @@
   color: $white;
 }
 
-// Footer
-.panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border: 0;
-}
-
 // Navs
 .nav > li > a:focus {
   background-color: transparent;
 }
 .nav > li.no-hover > a:focus {
   background-color: $brand-success;
+}
+
+// Footer
+.footer {
+  li {
+    a {
+      &:focus {
+        color: $gray-light;
+        text-decoration: none;
+      }
+
+      &.active {
+        color: $gray-light;
+      }
+    }
+  }
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border: 0;
 }
