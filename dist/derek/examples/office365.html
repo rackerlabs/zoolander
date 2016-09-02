@@ -216,23 +216,37 @@
 </div>
 
 <!--Subnav-->
+<!-- subnav -->
 <nav class="navbar subnav">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" data-toggle="collapse" data-target="#subnav" aria-expanded="false" aria-controls="subnav" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+  <div class="subnav-container">
+    <div class="subnav-header">
+      <div class="subnav-collapseBtn">
+        <button type="button" data-toggle="collapse" data-target="#subnav" aria-expanded="false" aria-controls="subnav" class="navbar-toggle collapsed subnav-toggleBtn">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar subnav-iconBar"></span>
+          <span class="icon-bar subnav-iconBar"></span>
+          <span class="icon-bar subnav-iconBar"></span>
+        </button>
+      </div>
+      <div class="subnav-pageTitleContainer">
+        <h6 class="subnav-pageTitle">OpenStack Public Cloud</h6>
+      </div>
     </div>
-    <div id="subnav" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav subnav-inside">
-        <li><a href="/dedicated-servers">Dedicated Overview</a></li>
-        <li><a href="/dedicated-servers/hosting">Dedicated Servers</a></li>
-        <li><a href="/dedicated-servers/vmware">VMware</a></li>
-        <li><a href="/dedicated-servers/database-services">Managed Databases</a></li>
-        <li><a href="/dedicated-servers/data-storage">Dedicated Storage</a></li>
-        <li class="no-hover"><button class="button lead" href="#chat">Chat Now</button></li>
+    <div id="subnav" class="subnav-collapseContainer collapse navbar-collapse">
+      <ul class="subnav-links">
+        <li class="subnav-item subnav-item-active"><a class="subnav-link subnav-link-active" href="/dedicated-servers">Dedicated Overview</a></li>
+        <li class="subnav-item"><a class="subnav-link" href="/dedicated-servers/hosting">Dedicated Servers</a></li>
+        <li class="subnav-item"><a class="subnav-link" href="/dedicated-servers/vmware">VMware</a></li>
+        <li class="subnav-item"><a class="subnav-link" href="/dedicated-servers/database-services">Managed Databases</a></li>
+        <li class="subnav-item"><a class="subnav-link" href="/dedicated-servers/data-storage">Dedicated Storage</a></li>
+        <li class="subnav-item subnav-noHover">
+          <a class="subnav-leadBtn" href="https://www.rackspace.com">Chat Now</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- main content wrap -->
 <div id="content-wrap" class="styleguide">
