@@ -26,6 +26,7 @@
 .nav > li > a:focus {
   background-color: transparent;
 }
+
 .nav > li.no-hover > a:focus {
   background-color: $brand-success;
 }
@@ -48,4 +49,14 @@
 
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border: 0;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+
+  .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
+    &:focus,
+    &:hover {
+      background-color: $gray-darker;
+    }
+  }
 }

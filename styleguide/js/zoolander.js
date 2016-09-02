@@ -1,52 +1,84 @@
 jQuery(document).ready(function($) {
   //main nav functionality
+  var $topLevelDropDown = $('.navbar-topItem > .dropdown-toggle');
+  var $navBurger = $(".navbar-hamburger");
+
   jQuery ("#search,#searchDesktop").click(function(){
     $(".navbar-search").slideToggle();
     $(".navbar-activeArrow").fadeToggle();
     $(".navbar-menuContainer").removeClass("in");
-    $(".navbar-hamburger").addClass("collapsed");
+    $navBurger.addClass("collapsed");
   });
+
   jQuery (".navbar-searchInput").click(function(){
     $(".navbar-searchButton").css('opacity', 1);
-  })
-  jQuery (".navbar-hamburger").click(function(){
-    $(".navbar-hamburger").toggleClass("collapsed");
+  });
+
+  $navBurger.click(function(){
+    $navBurger.toggleClass("collapsed");
     $(".navbar-search").slideUp();
     $(".navbar-activeArrow").fadeOut();
-  })
+
+    //reset dopdown carrets if collapsing the menu
+    if($(this).hasClass('collapsed')){
+      $topLevelDropDown.removeClass('navbar-dropDown-triggerActive');
+    }
+  });
+
+  //Toggle the open arrows on, top level, non drop down links
+  $('.navbar-topLink:not(.navbar-topLink.dropdown-toggle)').click(function(){
+    var $el = $(this).parent();
+    $el.siblings().find('.navbar-dropDown-triggerActive').removeClass('navbar-dropDown-triggerActive');
+    $el.siblings().find('.navbar-tertiary-dropDownMenu').hide();
+  });
+
+  //Toggle arrows for top level drop down links
+  $topLevelDropDown.click(function(){
+    var $el = $(this);
+    $el.toggleClass('navbar-dropDown-triggerActive');
+    $el.parent().siblings().find('.dropdown-toggle').removeClass('navbar-dropDown-triggerActive');
+  });
 
   // Special mobile functionality.
   var isMainNavScrolling = false;
-  var dropDownTrigger = function (e) {
+  var dropDownTrigger = function (trigger) {
     if (!isMainNavScrolling) {
-      var $current = $(this).find('.navbar-tertiary-dropDownMenu');
-      var $siblings = $(this).siblings('.navbar-tertiary-dropDownTrigger').find('.navbar-tertiary-dropDownMenu');
+      var $el = trigger;
+      var $current = $el.find('.navbar-tertiary-dropDownMenu');
+      var $siblings = $el.siblings('.navbar-tertiary-dropDownTrigger').find('.navbar-tertiary-dropDownMenu');
+      $el.find('.navbar-dropDownLink').toggleClass('navbar-dropDown-triggerActive');
+      //remove siblings open arrows
+      $el.siblings('.navbar-tertiary-dropDownTrigger').find('.navbar-dropDownLink').removeClass('navbar-dropDown-triggerActive');
+
       $current.toggle();
       $siblings.hide();
-      e.preventDefault();
     }
   };
 
-  if (Modernizr.touch) {
-    // Fix for known bootstrap scroll height bug: https://github.com/twbs/bootstrap/issues/12738
-    var fixScrollBug = function() {
-      $(".navbar-collapse").css({maxHeight: $(window).height() - $(".navbar-header").height() + "px"});
-    };
-    fixScrollBug();
-    window.addEventListener("resize", fixScrollBug);
-    $('.navbar-tertiary-dropDownLink').on('touchstart touchend', function(e) {
+  // Indicate whether or not we're currently scrolling, or tapping on a link.
+  // Fix for known bootstrap scroll height bug: https://github.com/twbs/bootstrap/issues/12738
+  var fixScrollBug = function() {
+    $(".navbar-collapse").css({maxHeight: $(window).height() - $(".navbar-header").height() + "px"});
+  };
+  fixScrollBug();
+  window.addEventListener("resize", fixScrollBug);
+
+  //set the trigger to show drop downs on hover or clicks depending on viewport
+  var $viewPort;
+  $(".navbar-tertiary-dropDownTrigger")
+    .click(function(e){
       e.stopPropagation();
+      $viewPort = parseInt($(window).outerWidth());
+      if ($viewPort < 768){
+        dropDownTrigger($(this));
+      }
+    })
+    .hover(function(){
+      $viewPort = parseInt($(window).outerWidth());
+      if ($viewPort > 768){
+        dropDownTrigger($(this));
+      }
     });
-    // Indicate whether or not we're currently scrolling, or tapping on a link.
-    $(".navbar-tertiary-dropDownTrigger")
-        .on('touchstart', function (e) { isMainNavScrolling = false; })
-        .on('touchmove', function (e) { isMainNavScrolling = true; })
-        .on('touchend', dropDownTrigger);
-  } else {
-    $(".navbar-tertiary-dropDownTrigger")
-      .hover(dropDownTrigger)
-      .on('click', function (e) { e.stopPropagation(); });
-  }
 
   //back to top
   var offset = 250;
