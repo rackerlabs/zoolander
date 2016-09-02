@@ -18,6 +18,10 @@
   color: $white;
 }
 
+.subnav-item-active a.subnav-link-active {
+  color: $white;
+}
+
 // Footer
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border: 0;
