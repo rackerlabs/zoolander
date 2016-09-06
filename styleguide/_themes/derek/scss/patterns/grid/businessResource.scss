@@ -49,3 +49,7 @@
   @include make-sm-column(6);
   @include flex-box;
 }
+
+.resource {
+  @include flex-box;
+}
