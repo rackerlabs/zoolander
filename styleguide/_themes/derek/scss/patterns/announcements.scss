@@ -1,65 +1,52 @@
-.announcement-container {
+.announcement-wrapper {
   background-color: $white;
   border-bottom: 1px solid $gray-light;
   border-right: 1px solid $gray-light;
   border-top: 1px solid $gray-light;
   margin-bottom: 10px;
   overflow: hidden;
-  padding: 10px;
-  position: relative;
-  width: $full-width;
+  padding: 10px 0;
 }
 
 .announcement-icon {
   @include make-md-column(2);
+  @include flex-box;
+  font-size: 5rem;
+
+  .fa {
+    color: $gray-base;
+  }
 }
 
 .announcement-message {
   @include make-md-column(10);
+  @include flex-box;
   padding-top: 12px;
 }
 
-.announcement-close {
-  height: 10px;
-  position: absolute;
-  right: 8px;
-  text-decoration: none;
-  top: 8px;
-  width: 10px;
-  z-index: 5;
-
-  &::before {
-    content: '\f00d';
-    font-family: FontAwesome;
-  }
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-//Offer announcements
-.announcement-offer {
-  border-left: 8px solid $brand-secondary;
-}
-
-//Warning announcements
-.announcement-warning {
-  border-left: 8px solid $brand-warning;
-}
-
-//Danger announcements
-.announcement-danger {
+//Alert announcements
+.announcement-alert {
   border-left: 8px solid $brand-danger;
 }
 
-//Success announcements
-.announcement-success {
+//General announcements
+.announcement-general {
+  border-left: 8px solid $brand-warning;
+}
+
+//New Product announcements
+.announcement-newProduct {
+  border-left: 8px solid $brand-secondary;
+}
+
+//Promotion announcements
+.announcement-promotion {
   border-left: 8px solid $brand-success;
 }
 
 @media only screen and (max-width: $screen-xs-max) {
-  .announcement-icon {
+  .announcement-icon,
+  .announcement-message {
     width: $full-width;
   }
 }

@@ -1,64 +1,18 @@
-<div class="standard-padding bg-light-gray">
-  <div class="container">
-
-    <div class="row">
-      <div class="center-block">
-        <h2 class="center teal">Announcements</h2>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="alert announcement-container announcement-offer fade in row-eq-height">
-        <a href="#" data-dismiss="alert" class="announcement-close"></a>
-        <div class="announcement-icon flex-center-all"><i class="rsweb idio-piggy"></div>
-        <div class="announcement-message">
-          <p>Lorem ipsum dolor sit amet, cum cras lectus consectetuer dictum.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="alert announcement-container announcement-warning fade in row-eq-height">
-        <a href="#" data-dismiss="alert" class="announcement-close"></a>
-        <div class="announcement-icon flex-center-all"><i class="rsweb idio-piggy"></div>
-        <div class="announcement-message">
-          <p>Lorem ipsum dolor sit amet, cum cras lectus consectetuer dictum.
-          Suscipit porta, enim id metus dicta ultrices, id orci urna, adipiscing
-          lectus mattis. Tristique nibh et, consectetuer faucibus cras nec mollis
-          vehicula etiam, sit eu luctus facilisi tincidunt a.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="alert announcement-container announcement-danger fade in row-eq-height">
-        <a href="#" data-dismiss="alert" class="announcement-close"></a>
-        <div class="announcement-icon flex-center-all"><i class="rsweb idio-piggy"></div>
-        <div class="announcement-message">
-          <p>Lorem ipsum dolor sit amet, cum cras lectus consectetuer dictum.
-          Suscipit porta, enim id metus dicta ultrices, id orci urna, adipiscing
-          lectus mattis. Tristique nibh et, consectetuer faucibus cras nec mollis
-          vehicula etiam, sit eu luctus facilisi tincidunt a.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="alert announcement-container announcement-success fade in row-eq-height">
-        <a href="#" data-dismiss="alert" class="announcement-close"></a>
-        <div class="announcement-icon flex-center-all"><i class="rsweb idio-piggy"></div>
-        <div class="announcement-message">
-          <p>Lorem ipsum dolor sit amet, cum cras lectus consectetuer dictum.
-          Suscipit porta, enim id metus dicta ultrices, id orci urna, adipiscing
-          lectus mattis. Tristique nibh et, consectetuer faucibus cras nec mollis
-          vehicula etiam, sit eu luctus facilisi tincidunt a.</p>
-          <p>Lorem ipsum dolor sit amet, cum cras lectus consectetuer dictum.
-          Suscipit porta, enim id metus dicta ultrices, id orci urna, adipiscing
-          lectus mattis. Tristique nibh et, consectetuer faucibus cras nec mollis
-          vehicula etiam, sit eu luctus facilisi tincidunt a.</p>
-        </div>
-      </div>
-    </div>
-
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+<%
+if(!desc) { var desc = "Lorem ipsum dolor sit amet, cum cras lectus consectetuer dictum. Suscipit porta, enim id metus dicta ultrices, id orci urna, adipiscing lectus mattis. Tristique nibh et, consectetuer faucibus cras nec mollis vehicula etiam, sit eu luctus facilisi tincidunt a."; }
+if(!type) { var type = 'general'; }
+var icons = {
+  'alert' : 'fa-exclamation-circle',
+  'general' : 'fa-bullhorn',
+  'newProduct' : 'fa-server',
+  'promotion' : 'fa-money'
+};
+%>
+<div class="announcement-wrapper announcement-<%- type %> fade in row-eq-height">
+  <div class="announcement-icon flex-center-all"><i class="fa <%- icons[type] %>" aria-hidden="true"></i></div>
+  <div class="announcement-message">
+    <p><%- desc %></p>
   </div>
 </div>
+
