@@ -21,7 +21,7 @@
 .announcement-message {
   @include make-md-column(10);
   @include flex-box;
-  padding-top: 12px;
+  padding: 12px 15px;
 }
 
 //Alert announcements
