@@ -28,7 +28,10 @@ $table-padding: 20px 5px;
 }
 
 .productTable-featureItem {
-  &::before {
+  padding: 20px;
+  vertical-align: text-top;
+
+  &::after {
     @include center-block;
     font-family: FontAwesome;
     padding: 10px 0;
@@ -37,20 +40,28 @@ $table-padding: 20px 5px;
 }
 
 .offered {
-  &::before {
+  vertical-align: inherit;
+
+  &::after {
     color: $teal-dark;
     content: '\f00c';
   }
 }
 
 .notOffered {
-  &::before {
+  vertical-align: inherit;
+
+  &::after {
     color: $gray-lighter;
     content: '\f00d';
   }
 }
 
-@media screen and (max-width: 768px) {
+.productTable-mobileTitle {
+  display: none;
+}
+
+@media screen and (max-width: $screen-xs-max) {
   .productTable {
     display: flex;
     flex-flow: column;
@@ -59,9 +70,11 @@ $table-padding: 20px 5px;
   }
 
   .productTable-row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    display: block;
+  }
+
+  .productTable-header {
+    display: none;
   }
 
   .productTable-name {
@@ -82,29 +95,25 @@ $table-padding: 20px 5px;
 
   .productTable-feature,
   .productTable-featureItem {
-    display: flex;
-    flex-flow: row;
-    flex-grow: 1;
-    justify-content: center;
+    display: block;
 
     :first-child {
-      background: $gray-lighter;
+      background: $gray-lightest;
       display: block;
       width: 100%;
     }
   }
 
-  .horizontal-scroll {
+  .productTable-featureItem {
+    padding: 8px;
+
+    &::after {
+      display: inline-block;
+      margin-left: 15px;
+    }
+  }
+
+  .productTable-mobileTitle  {
     display: block;
-
-    .productTable-row {
-      display: table-row;
-    }
-
-    .productTable-name,
-    .productTable-featureItem {
-      display: table-cell;
-      padding: 10px;
-    }
   }
 }
