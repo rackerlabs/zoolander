@@ -145,12 +145,6 @@
 
 .navbar-dropDownSub {
   position: relative;
-
-  &:hover {
-    .navbar-dropDownMenu {
-      display: block;
-    }
-  }
 }
 
 .navbar-dropDownSub > .navbar-dropDown-trigger {
@@ -287,15 +281,19 @@
   }
 }
 
-//main nav show dropdowns on hover on desktop
+//main nav on desktop
 @media only screen and (min-width: $screen-md-min) {
-  .dropdown {
+  .dropdown-toggle {
 
-    &:hover {
-      .navbar-dropDownMenu {
-        display: block;
-      }
+    &::after {
+      content: '\f0d7';
+      font-family: 'FontAwesome';
+      margin-left: 10px;
     }
+  }
+
+  .navbar-dropDown-triggerActive {
+    background-color: $gray;
   }
 }
 
@@ -318,7 +316,7 @@
     }
 
     .navbar-topLink {
-      padding: 21px 9px;
+      padding: 21px 8px;
     }
   }
 
@@ -332,6 +330,15 @@
   .navbar-menu {
     float: left;
     margin-left: 10px;
+  }
+
+  .dropdown-toggle {
+
+    &::after {
+      content: '\f0d7';
+      font-family: 'FontAwesome';
+      margin-left: 3px;
+    }
   }
 
   .navbar-dropDown-trigger {
@@ -364,11 +371,37 @@
     }
   }
 
+  .dropdown-toggle {
+
+    &::after {
+      content: '\f0da';
+      font-family: FontAwesome;
+      margin-left: 10px;
+    }
+  }
+
+  .navbar-dropDown-triggerActive {
+    background-color: $gray-darker;
+    display: block;
+
+    &::after {
+      content: '\f0d7';
+      top: 6px;
+    }
+  }
+
   .navbar-nav {
     margin: 0 0 7.5px;
 
     .navbar-topItem {
-      font-size: 1rem;
+      font-size: 1.45rem;
+
+      .navbar-dropDownLink,
+      .navbar-dropDownLabel,
+      .navbar-tertiary-dropDownLink {
+        border-bottom: 1px solid $gray-darker;
+        font-size: 1.45rem;
+      }
 
       .navbar-dropDownMenu {
         background: $gray-dark;
