@@ -20,10 +20,15 @@
   </div>
 </div>
 
+<!-- Lead -->
 <div class="container">
-  <h4>Text</h4>
+  <h4>Lead</h4>
   <p>Limit to one paragraph</p>
-  <%- partial('../_partials/solutions/lead.ejs') %>
+  <div class="row">
+    <div class="col-xs-12">
+      <%- partial('../_partials/solutions/lead.ejs') %>
+    </div>
+  </div>
 </div>
 
 <%- partial('../_partials/solutions/key-offers.ejs') %>
@@ -31,6 +36,7 @@
 <%- partial('../_partials/solutions/customer-stories.ejs') %>
 <%- partial('../_partials/solutions/services-3-col.ejs') %>
 
+<!-- Video -->
 <div class="container">
   <h4>Video</h4>
   <div class="videoEmbed-row">
@@ -48,10 +54,56 @@
 <%- partial('../_partials/solutions/tabs.ejs') %>
 <%- partial('../_partials/solutions/features.ejs') %>
 <%- partial('../_partials/solutions/lists.ejs') %>
-<%- partial('../_partials/solutions/announcements.ejs') %>
+
+<!-- Announcements -->
+<div class="container">
+  <h4>Announcements</h4>
+  <div class="row">
+    <div class="col-xs-12">
+      <%- partial('../_partials/solutions/announcements.ejs', {
+        'type': 'newProduct',
+        'desc': 'This is a New Product. Vivamus quis sem sollicitudin, cursus tellus eget, tempor ex. Suspendisse ut magna condimentum, blandit sem vel, auctor urna. Aenean eu auctor erat. '
+      }) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%- partial('../_partials/solutions/announcements.ejs', {
+        'type': 'alert',
+        'desc': 'This is an Alert. Vivamus quis sem sollicitudin, cursus tellus eget, tempor ex. Suspendisse ut magna condimentum, blandit sem vel, auctor urna. Aenean eu auctor erat. Aliquam lobortis posuere porta. In nec sagittis dolor. Proin et augue fringilla, aliquet mauris quis, pretium quam. Vestibulum leo turpis, porttitor et ipsum sit amet, porta gravida nibh.'
+      }) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%- partial('../_partials/solutions/announcements.ejs', {
+        'type': 'general',
+        'desc': 'This is a General Announcement. Vivamus quis sem sollicitudin, cursus tellus eget, tempor ex. Suspendisse ut magna condimentum, blandit sem vel, auctor urna. Aenean eu auctor erat. Aliquam lobortis posuere porta. In nec sagittis dolor. Proin et augue fringilla, aliquet mauris quis, pretium quam. Vestibulum leo turpis, porttitor et ipsum sit amet, porta gravida nibh.'
+      }) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%- partial('../_partials/solutions/announcements.ejs', {
+        'type': 'promotion',
+        'desc': 'This is a Promotion. Vivamus quis sem sollicitudin, cursus tellus eget, tempor ex. Suspendisse ut magna condimentum, blandit sem vel, auctor urna. Aenean eu auctor erat. Aliquam lobortis posuere porta. In nec sagittis dolor. Proin et augue fringilla, aliquet mauris quis, pretium quam. Vestibulum leo turpis, porttitor et ipsum sit amet, porta gravida nibh.'
+      }) %>
+    </div>
+  </div>
+</div>
+</div>
+
 <%- partial('../_partials/solutions/blog-feed.ejs') %>
 
+<!-- Text -->
 <div class="container">
   <h4>Text</h4>
-  <%- partial('../_partials/solutions/text.ejs') %>
+  <div class="row">
+    <div class="col-xs-12">
+      <%- partial('../_partials/solutions/text.ejs') %>
+    </div>
+  </div>
 </div>

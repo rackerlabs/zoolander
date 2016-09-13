@@ -3,6 +3,16 @@
   .lead-title  {
     text-align: left;
   }
+
+  // Announcements in subpanels should mimic mobile mode.
+  .announcement-icon,
+  .announcement-message {
+    width: $full-width;
+  }
+
+  .announcement-wrapper {
+    display: block;
+  }
 }
 
 .subpanelWell {
