@@ -18,6 +18,7 @@
   display: block;
   margin-bottom: 10px;
   padding: 25px;
+  position: relative;
   text-decoration: none;
   width: 100%;
 }
@@ -32,7 +33,7 @@
   color: $brand-primary;
   float: left;
   font-weight: 600;
-  left: 40px;
+  left: 25px;
   margin-bottom: 1em;
   padding-bottom: 5px;
   position: absolute;
