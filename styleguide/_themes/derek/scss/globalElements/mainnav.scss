@@ -152,7 +152,7 @@
   &::after {
     content: '\f0da';
     float: right;
-    font-family: FontAwesome;
+    font-family: 'FontAwesome';
   }
 }
 
@@ -188,7 +188,7 @@
   &::after {
     color: $white;
     display: none;
-    font-family: FontAwesome;
+    font-family: 'FontAwesome';
     padding: 23px 0 24px;
   }
 }
@@ -283,7 +283,7 @@
 
 //main nav on desktop
 @media only screen and (min-width: $screen-md-min) {
-  .dropdown-toggle {
+  .navbar-topLink-dropDown {
 
     &::after {
       content: '\f0d7';
@@ -332,7 +332,7 @@
     margin-left: 10px;
   }
 
-  .dropdown-toggle {
+  .navbar-topLink-dropDown {
 
     &::after {
       content: '\f0d7';
@@ -366,16 +366,16 @@
 
     &::after {
       content: '\f0da';
-      font-family: FontAwesome;
+      font-family: 'FontAwesome';
       margin-left: 10px;
     }
   }
 
-  .dropdown-toggle {
+  .navbar-topLink-dropDown {
 
     &::after {
       content: '\f0da';
-      font-family: FontAwesome;
+      font-family: 'FontAwesome';
       margin-left: 10px;
     }
   }
