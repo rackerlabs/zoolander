@@ -7,3 +7,12 @@
   @include make-md-column(12);
   padding: $half-padding-full;
 }
+
+.embed-responsive {
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+}
