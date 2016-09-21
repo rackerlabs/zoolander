@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
   //main nav functionality
-  var $topLevelDropDown = $('.navbar-topItem > .dropdown-toggle');
+  var $topLevelDropDown = $('.navbar-topItem > .navbar-topLink-dropDown');
   var $navBurger = $(".navbar-hamburger");
 
   jQuery ("#search,#searchDesktop").click(function(){
@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
   });
 
   //Toggle the open arrows on, top level, non drop down links
-  $('.navbar-topLink:not(.navbar-topLink.dropdown-toggle)').click(function(){
+  $('.navbar-topLink:not(.navbar-topLink.navbar-topLink-dropDown)').click(function(){
     var $el = $(this).parent();
     $el.siblings().find('.navbar-dropDown-triggerActive').removeClass('navbar-dropDown-triggerActive');
     $el.siblings().find('.navbar-tertiary-dropDownMenu').hide();
@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
   $topLevelDropDown.click(function(){
     var $el = $(this);
     $el.toggleClass('navbar-dropDown-triggerActive');
-    $el.parent().siblings().find('.dropdown-toggle').removeClass('navbar-dropDown-triggerActive');
+    $el.parent().siblings().find('.navbar-topLink-dropDown').removeClass('navbar-dropDown-triggerActive');
   });
 
   // Special mobile functionality.

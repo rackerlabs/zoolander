@@ -139,6 +139,12 @@ $ceiling-font-size: 10px;
     color: $white;
     text-decoration: none;
   }
+
+  &::after {
+    content: '\f0d7';
+    font-family: 'FontAwesome';
+    margin-left: 5px;
+  }
 }
 
 .ceiling-dropdownToggle-green {
