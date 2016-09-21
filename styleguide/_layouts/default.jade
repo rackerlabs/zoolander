@@ -24,49 +24,58 @@ html(lang="en")
 
   .container-fluid
     .row.row-eq-height
-      .navZoolander-container.bg-blue-gray#navZoolander-container
-        a(href="javascript:void(0)", onclick="closeNav()").closebtn: i.fa.fa-times.white.fa-2x
+      .navZoolander-container
         ul.navZoolander-list
           li.navZoolander-item
             a(href="/").navZoolander-link Welcome
+
           li.navZoolander-item
-            a(href="global/").navZoolander-link.navZoolander-hasDropdown Global Brand
-              ul.navZoolander-dropdown
-                li.navZoolander-dropdownItem
-                  a(href="global/brand-elements").navZoolander-dropdownLink Brand Elements
+            a(href="#").navZoolander-link.navZoolander-hasDropdown Global Brand
+            ul.navZoolander-dropdown
+              li.navZoolander-item
+                 a(href="global/").navZoolander-dropdownLink Overview
+              li.navZoolander-item
+                 a(href="global/brand-elements").navZoolander-dropdownLink Brand Elements
+
           li.navZoolander-item
             a(href="global/voice").navZoolander-link Voice and Tone
+
           li.navZoolander-item
             a(href="global/components").navZoolander-link Components
+
           li.navZoolander-item
-            a(href="derek/assets").navZoolander-link Assets/Elements
-              ul.navZoolander-dropdown
-                li.navZoolander-dropdownItem
-                  a(href="derek/assets/icon-font").navZoolander-dropdownLink Icon Font
-                li.navZoolander-dropdownItem
-                  a(href="derek/assets/forms").navZoolander-dropdownLink Forms
-                li.navZoolander-dropdownItem
-                  a(href="derek/assets/buttons").navZoolander-dropdownLink Buttons/CTAs
-                li.navZoolander-dropdownItem
-                  a(href="derek/assets/typography").navZoolander-dropdownLink Typography
-                li.navZoolander-dropdownItem
-                  a(href="derek/assets/photography").navZoolander-dropdownLink Photography/Banners
-                li.navZoolander-dropdownItem
-                  a(href="derek/assets/icon-font").navZoolander-dropdownLink Tabs
-                li.navZoolander-dropdownItem
-                  a(href="derek/assets/icon-font").navZoolander-dropdownLink Tables
+            a(href="#").navZoolander-link.navZoolander-hasDropdown Assets/Elements
+            ul.navZoolander-dropdown
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/").navZoolander-dropdownLink Overview
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/icon-font").navZoolander-dropdownLink Icon Font
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/forms").navZoolander-dropdownLink Forms
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/buttons").navZoolander-dropdownLink Buttons/CTAs
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/typography").navZoolander-dropdownLink Typography
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/photography").navZoolander-dropdownLink Photography/Banners
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/icon-font").navZoolander-dropdownLink Tabs
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/icon-font").navZoolander-dropdownLink Tables
+
           li.navZoolander-item
-            a(href="derek/").navZoolander-link.navZoolander-hasDropdown Derek Theme
-              ul.navZoolander-dropdown
-                li.navZoolander-item
-                  a(href="derek/examples").navZoolander-link Examples
-                li.navZoolander-item
-                  a(href="derek/development").navZoolander-link Development
-                li.navZoolander-item
-                  a(href="derek/workflow").navZoolander-link Workflow/Process
+            a(href="#").navZoolander-link.navZoolander-hasDropdown Derek Theme
+            ul.navZoolander-dropdown
+              li.navZoolander-item
+                a(href="derek/").navZoolander-dropdownLink Overview
+              li.navZoolander-item
+                a(href="derek/examples").navZoolander-dropdownLink Examples
+              li.navZoolander-item
+                a(href="derek/development").navZoolander-dropdownLink Development
+              li.navZoolander-item
+                a(href="derek/workflow").navZoolander-dropdownLink Workflow/Process
 
   .mainContainer#mainContainer
-    a(href="javascript:void(0)", onclick="openNav()").openbtn: i.fa.fa-bars.white.fa-2x
     block content
 
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")

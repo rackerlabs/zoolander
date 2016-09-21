@@ -2,53 +2,78 @@ $white: #fff;
 $light-gray-white: #efefef;
 $dark-gray: #333;
 $medium-gray: #666;
-
+$bg-blue-gray: #2e3238;
 
 .mainContainer {
-  transition: margin-left .5s;
+  padding-left: 260px;
   width: 100%;
 }
 
 .navZoolander-container {
+  background-color: $bg-blue-gray;
   height: 100%;
   left: 0;
   overflow-x: hidden;
   position: fixed;
   top: 0;
   transition: .5s;
-  width: 0;
+  width: 250px;
   z-index: 1;
 }
 
 .navZoolander-list,
 .navZoolander-dropdown {
   list-style-type: none;
-  padding: 10px;
+  padding: 0;
 }
 
 .navZoolander-item {
   color: $white;
-  padding: 10px;
+  padding: 0;
 }
 
 .navZoolander-link,
 .navZoolander-dropdownLink {
   color: $white;
+  display: block;
   text-decoration: none;
   transition: .3s;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-blue-gray;
+    color: $light-gray-white;
+    text-decoration: none;
+  }
 }
 
-.closebtn {
-  margin-left: 50px;
-  position: absolute;
-  right: 25px;
-  top: 0;
+.navZoolander-link {
+  padding: 12px 15px;
 }
 
-.openbtn {
-  background-color: $dark-gray;
-  left: 0;
-  padding: 10px;
-  position: absolute;
-  top: 0;
+.navZoolander-dropdownLink {
+  background-color: lighten($bg-blue-gray, 8%);
+  padding: 12px 35px;
+}
+
+.navZoolander-hasDropdown {
+
+  &::after {
+    content: '\f0da';
+    font-family: FontAwesome;
+    margin-left: 10px;
+  }
+}
+
+.navZoolander-dropdown {
+  display: none;
+}
+
+.hasDropDown-active {
+
+  &::after {
+    content: '\f0d7';
+    transition-duration: .5s;
+  }
 }
