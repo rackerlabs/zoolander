@@ -1,0 +1,37 @@
+<!-- Announcements -->
+<div class="container">
+  <h4>Announcements</h4>
+  <div class="row row-eq-height">
+    <div class="col-sm-12">
+      <%- partial('../../_partials/cards/announcements.ejs', {
+        'type': 'newProduct',
+        'desc': 'This is a New Product. Vivamus quis sem sollicitudin, cursus tellus eget, tempor ex. Suspendisse ut magna condimentum, blandit sem vel, auctor urna. Aenean eu auctor erat. '
+      }) %>
+    </div>
+  </div>
+
+  <div class="row row-eq-height">
+    <div class="col-sm-6 panel-flex">
+      <%- partial('../../_partials/cards/announcements.ejs', {
+        'type': 'alert',
+        'desc': 'This is an Alert. Vivamus quis sem sollicitudin, cursus tellus eget, tempor ex. Suspendisse ut magna condimentum, blandit sem vel, auctor urna. Aenean eu auctor erat. Aliquam lobortis posuere porta. In nec sagittis dolor. Proin et augue fringilla, aliquet mauris quis, pretium quam. Vestibulum leo turpis, porttitor et ipsum sit amet, porta gravida nibh.'
+      }) %>
+    </div>
+
+    <div class="col-sm-6 panel-flex">
+      <%- partial('../../_partials/cards/announcements.ejs', {
+        'type': 'general',
+        'desc': 'This is a General Announcement. Vivamus quis sem sollicitudin, cursus tellus eget, tempor ex. Suspendisse ut magna condimentum, blandit sem vel, auctor urna. Aenean eu auctor erat. Aliquam lobortis posuere porta. In nec sagittis dolor. Proin et augue fringilla, aliquet mauris quis, pretium quam. Vestibulum leo turpis, porttitor et ipsum sit amet, porta gravida nibh.'
+      }) %>
+    </div>
+  </div>
+
+  <div class="row row-eq-height">
+    <div class="col-xs-12">
+      <%- partial('../../_partials/cards/announcements.ejs', {
+        'type': 'promotion',
+        'desc': 'This is a Promotion. Vivamus quis sem sollicitudin, cursus tellus eget, tempor ex. Suspendisse ut magna condimentum, blandit sem vel, auctor urna. Aenean eu auctor erat. Aliquam lobortis posuere porta. In nec sagittis dolor. Proin et augue fringilla, aliquet mauris quis, pretium quam. Vestibulum leo turpis, porttitor et ipsum sit amet, porta gravida nibh.'
+      }) %>
+    </div>
+  </div>
+</div>

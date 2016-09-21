@@ -1,5 +1,6 @@
-.features-container {
-  display: flex;
+.features-wrapper {
+  @include flex-box;
+  margin-bottom: 1em;
 
   &.features-threeUp {
     display: block;
