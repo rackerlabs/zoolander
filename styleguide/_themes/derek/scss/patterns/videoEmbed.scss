@@ -9,10 +9,5 @@
 }
 
 .embed-responsive {
-  &::after {
-    content: '';
-    display: block;
-    height: 0;
-    padding-bottom: 56.25%;
-  }
+  position: static;
 }
