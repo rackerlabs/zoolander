@@ -52,13 +52,13 @@
 </div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h4 class="red">Annotations</h4><p class="copyright">Example of an annotation</p><p>add the class below to a p tag in order to produce a small annotation, copyright or legal disclaimer</p><code>.copyright</code></div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h5>NEED TO ADD</h5><p>links (normal and red), font mixins, available colors for text and use cases</p></div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h4 class="red">Lists</h4><p>There is a pattern for a list content type available. When using the pattern or inputting a list elsewhere there are options for styling. The default is discs but you can use <code> <ul class="checks"> </ul></code> for check marks and these can have color added with either <code> <ul class="checks green"> or <ul class="checks teal"> </ul></ul></code></p><h4>Lists</h4>
 <div class="row half-padding-top">
   <div class="col-md-4">
-    <%- partial("../grid/widget/list.ejs") %>
+    <%- partial("../cards/list.ejs") %>
   </div>
   <div class="col-md-4">
-    <%- partial("../grid/widget/list.ejs", {list_classes: "checks green"}) %>
+    <%- partial("../cards/list.ejs", {list_classes: "checks green"}) %>
   </div>
   <div class="col-md-4">
-    <%- partial("../grid/widget/list.ejs", {items: ["Live, US-based support team", "Remotely log in and troubleshoot Virtual Machines, OS and Apps", "Dedicated account team", "15-Minute Response Time SLA to monitoring notifications", "Live, US-based support team", "Live, US-based support team"]}) %>
+    <%- partial("../cards/list.ejs", {items: ["Live, US-based support team", "Remotely log in and troubleshoot Virtual Machines, OS and Apps", "Dedicated account team", "15-Minute Response Time SLA to monitoring notifications", "Live, US-based support team", "Live, US-based support team"]}) %>
   </div>
 </div>
 </div>
