@@ -6,7 +6,7 @@
   display: inline-block;
   font-size: .85em;
   font-weight: 600;
-  padding: 8px 20px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -33,6 +33,7 @@
   background: $white;
   border: 3px solid $brand-secondary;
   color: $gray-dark;
+  padding: 12px 20px;
 
   &:hover {
     background-color: $brand-secondary;
@@ -93,7 +94,7 @@
     display: inline-block;
     font-size: .85em;
     font-weight: 600;
-    padding: 8px 20px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;;

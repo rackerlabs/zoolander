@@ -1,5 +1,6 @@
 .additional-resource {
-  display: flex;
+  @include flex-box;
+  width: 100%;
 
   &:hover {
     .desc {

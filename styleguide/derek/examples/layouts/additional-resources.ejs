@@ -1,0 +1,32 @@
+<!-- Additional Resources: 33/34/33 -->
+<div class="container half-padding-full">
+  <h4>Additional Resources</h4>
+  <div class="row row-eq-height">
+    <div class="col-sm-4 panel-flex">
+      <%- partial('../../_partials/cards/additional-resource.ejs') %>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <%- partial('../../_partials/cards/additional-resource.ejs', {
+        type: 'video',
+        desc: 'This is short'
+      }) %>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <%- partial('../../_partials/cards/additional-resource.ejs', {
+        type: 'rss',
+        desc: 'This is extra long. This is extra long. This is extra long. This is extra long. This is extra long. This is extra long. This is extra long. This is extra long. This is extra long. This is extra long.'
+      }) %>
+    </div>
+  </div>
+  <div class="row row-eq-height">
+    <div class="col-sm-6 panel-flex">
+      <%- partial('../../_partials/cards/additional-resource.ejs', {type: 'news'}) %>
+    </div>
+    <div class="col-sm-6 panel-flex">
+      <%- partial('../../_partials/cards/additional-resource.ejs', {
+        type: 'support',
+        desc: 'This is short'
+      }) %>
+    </div>
+  </div>
+</div>

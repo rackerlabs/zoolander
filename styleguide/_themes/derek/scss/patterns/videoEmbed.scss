@@ -7,3 +7,7 @@
   @include make-md-column(12);
   padding: $half-padding-full;
 }
+
+.embed-responsive {
+  position: static;
+}

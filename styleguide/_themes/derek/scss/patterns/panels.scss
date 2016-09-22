@@ -1,4 +1,11 @@
+.panel-flex {
+  @include flex-box;
+  justify-content: center;
+}
+
 .subpanel {
+  margin-bottom: 1em;
+
   .lead,
   .lead-title  {
     text-align: left;
@@ -16,7 +23,6 @@
 }
 
 .subpanelWell {
-  margin-bottom: 1em;
   padding: $half-padding;
 
   h1,

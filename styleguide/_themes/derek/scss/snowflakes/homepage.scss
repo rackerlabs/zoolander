@@ -2,7 +2,7 @@
 
 .homepage-hero {
   @extend .full-width;
-  background-image: url("https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg");
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg');
   background-position: 25% 50%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -44,14 +44,19 @@
   a { text-decoration: none; }
   .solution:hover {
     .border-white {
-     border-color: $mustard;
-     i { color: $mustard; }
+      border-color: $mustard;
+      i { color: $mustard; }
     }
   }
 }
 
 
 //new code
+
+.clear-container {
+  @include make-sm-column(6);
+  clear: both;
+}
 
 .hostingOptions-hoverArea {
   text-decoration: none;
@@ -66,7 +71,6 @@
 }
 
 .hostingOptions-product {
-  @include make-sm-column(3);
   @include make-xs-column(6);
   color: $gray-base;
   text-align: center;
@@ -242,9 +246,8 @@
 
 @media only screen and (max-width: $screen-sm-max) {
 
-  .logoShowcase-logoItem {
-    max-width: 100px;
-    padding: 0;
+  .logoShowcase {
+    display: none;
   }
 
   .quadrant {
@@ -255,7 +258,7 @@
 
 }
 
-@media only screen and (min-width: 1850) {
+@media only screen and (min-width: 1850px) {
   .quadrant {
     background-position: 30% bottom;
     background-size: 30%;
