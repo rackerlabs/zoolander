@@ -186,7 +186,7 @@ blockquote {
 }
 
 cite {
-  color: $teal-dark;
+  color: $gray-light;
   display: block;
   font-family: $copy;
   font-size: .9em;
@@ -194,7 +194,7 @@ cite {
   white-space: pre-line;
 
   &::before {
-    content: '—';
+    content: '— ';
     max-height: 1px;
   }
 }
