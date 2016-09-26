@@ -184,4 +184,9 @@ table {
   .formModal-dialog {
     width: 440px;
   }
+  .form-inline {
+    button, .button{
+      width: auto;
+    }
+  }
 }
