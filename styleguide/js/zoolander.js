@@ -148,3 +148,19 @@ $('.navZoolander-hasDropdown').unbind().click(function(e){
   $el.next('.navZoolander-dropdown').slideToggle(200);
   $el.toggleClass('hasDropDown-active');
 });
+
+//Slide toggle the zoolander nav
+var zoolanderSlideBtn = $('.navZoolander-slideBtn');
+zoolanderSlideBtn.unbind().click(function(e){
+  e.preventDefault();
+  var $me = $(this);
+  $me.toggleClass('navZoolander-slideBtn-collapsed');
+  $me.next('.navZoolander-container').toggleClass('navZoolander-container-collapsed');
+  $('.mainContainer').toggleClass('mainContainer-collapsed');
+});
+
+//Zoolander only solution for auto collapsing menu on example pages
+var url = window.location.pathname;
+if(url.match(/\/derek\/examples\//gi) && url != '/derek/examples/' && url != '/derek/examples/landing-page/'){
+    zoolanderSlideBtn.trigger('click');
+}

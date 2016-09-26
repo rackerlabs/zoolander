@@ -6,19 +6,57 @@ $bg-blue-gray: #2e3238;
 
 .mainContainer {
   padding-left: 260px;
+  transition: .5s;
   width: 100%;
+}
+
+.mainContainer-collapsed {
+  padding-left: 0;
 }
 
 .navZoolander-container {
   background-color: $bg-blue-gray;
   height: 100%;
   left: 0;
-  overflow-x: hidden;
+  overflow: auto;
   position: fixed;
   top: 0;
   transition: .5s;
   width: 250px;
-  z-index: 1;
+  z-index: 9999;
+}
+
+.navZoolander-slideBtn {
+  background-color: $bg-blue-gray;
+  border: 0;
+  color: $light-gray-white;
+  left: 250px;
+  padding: 8px 15px;
+  position: fixed;
+  transition: .5s;
+  z-index: 9999;
+
+  &::after {
+    content: '\f053';
+    font-family: 'FontAwesome';
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.navZoolander-container-collapsed {
+  margin-left: -250px;
+}
+
+.navZoolander-slideBtn-collapsed {
+  left: 0;
+
+  &::after {
+    content: '\f054';
+    font-family: 'FontAwesome';
+  }
 }
 
 .navZoolander-list,
