@@ -48,7 +48,7 @@ $banner-text-margin-medium: 10%;
   color: $white;
   margin-top: 50px;
   overflow: hidden;
-  padding: 70px 0 50px 0;
+  padding: 95px 0 50px 0;
 }
 
 .imacBanner-container {
@@ -144,15 +144,16 @@ $banner-text-margin-medium: 10%;
 
 @media only screen and (max-width: $screen-sm-max) {
   .imacBanner {
-    margin-top: 40px;
+    padding: 63px 15px 50px;
   }
 }
 
 @media only screen and (max-width: $screen-xs-max) {
   .imacBanner {
+    background-blend-mode: color;
     background-color: $black;
     background-image: none;
-    padding: 40px 15px;
+    padding: 63px 15px 50px;
   }
 
   .imacBanner-button {
