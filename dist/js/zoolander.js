@@ -111,8 +111,28 @@ jQuery(document).ready(function($) {
     });
 
     $('#footer-accordion').tabCollapse();
+    //initialize the responsive tables
+    $('.productTable').responsiveTable();
 });
 
+//responsive table jQuery plugin
+(function($){
+  'use strict';
+  $.fn.responsiveTable = function(){
+    var $table = $(this);
+    $table.each(function(){
+      var $el = $(this);
+      var $cellTitle = $el.find('.productTable-name');
+      //place table head titles into each cell as labels
+      $el.find('tbody tr td').each(function(){
+        var $index = $(this).index();
+        $(this).prepend('<strong class="productTable-mobileTitle">' + $cellTitle.eq($index).html() + ' </strong>');
+      });
+    });
+    //allow this plugin to be chainable via jQuery
+    return this;
+  };
+}(jQuery)); //to protect and scope the JQuery alias = $
 
 //swatches copy button
 (function() {
