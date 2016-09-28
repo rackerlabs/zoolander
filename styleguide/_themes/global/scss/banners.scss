@@ -105,6 +105,7 @@ $banner-text-margin-medium: 10%;
   color: $white;
   font-weight: 600;
   margin-left: 20px;
+  padding: 8px 20px;
 
   &:hover {
     background-color: darken($brand-primary, 5%);
