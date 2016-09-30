@@ -1,0 +1,76 @@
+<%
+var images = [
+  'https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/Redhat-Logo-Whitev2.png',
+  'https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png',
+  'https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/yetiLogo_main.png'
+];
+%>
+
+<%- partial("../_partials/_ceiling") %>
+<%- partial("../_partials/_mainnav") %>
+
+<!--Header Short-->
+<div class="imacBanner imacBanner-stories">
+  <div class="imacBanner-container">
+    <div class="imacBanner-textRow">
+      <div class="imacBanner-textContainer imacBanner-headlineSmall">
+        <h2 class="imacBanner-headline">Customer Stories</h2>
+        <span class="imacBanner-line left-top"></span>
+        <span class="imacBanner-line left-bottom"></span>
+        <span class="imacBanner-line right-bottom"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Story Region -->
+<div class="container standard-padding">
+  <div class="row">
+    <div class="storyOverview-searchFilter">
+      <div class="storyOverview-searchFilter-label">Find A Story</div>
+      <div class="storyOverview-searchFilter-eventType">
+        <form method="post" action="javascript:void(0);">
+          <select class="storyOverview-searchFilter-select">
+            <option disabled="disabled" selected="selected">Industry</option>
+            <option value="1">All</option>
+            <option value="2">Advertising</option>
+            <option value="3">Agency</option>
+            <option value="4">...</option>
+          </select>
+          <select class="storyOverview-searchFilter-select">
+            <option disabled="disabled" selected="selected">Product</option>
+            <option value="1">All</option>
+            <option value="2">Cloud Backup</option>
+            <option value="3">Cloud Block Storage</option>
+            <option value="4">...</option>
+          </select>
+          <select class="storyOverview-searchFilter-select">
+            <option disabled="disabled" selected="selected">Region</option>
+            <option value="1">All</option>
+            <option value="2">Asia</option>
+            <option value="3">Australia</option>
+            <option value="4">...</option>
+          </select>
+          <input type="submit" class="storyOverview-searchFilter-submit" value="Show Results"/>
+        </form>
+      </div>
+    </div>
+    <div class="storyOverview-searchResults">
+      <% for (var row = 0; row < 4; row++) { %>
+      <div class="row">
+        <% for (var col = 0; col < 3; col++) { %>
+          <div class="storyOverview-item">
+            <div class="storyOverview-itemInner">
+              <a href="/derek/examples/stories-interior" class="storyOverview-logo" style="background-image: url('<%- images[(col + row) % 3] %>');">Under Armour</a>
+            </div>
+          </div>
+        <% } %>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<%- partial("../_partials/_rug") %>
+<%- partial("../_partials/_footer") %>
+<%- partial("../_partials/_basement") %>

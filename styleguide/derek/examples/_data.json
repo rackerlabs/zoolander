@@ -30,6 +30,12 @@
   "events-interior": {
     "css": "css/derek.css"
   },
+  "stories": {
+    "css": "css/derek.css"
+  },
+  "stories-interior": {
+    "css": "css/derek.css"
+  },
   "subpanels": {
     "css": "css/derek.css"
   }

@@ -1,11 +1,12 @@
 <!-- For the sake of page-load time on zoolander, if we're within a subpanel, just show screenshot, not full video. -->
 <% if (!isSubpanel) { var isSubpanel = false; } %>
+<% if (!videoId) { var videoId = 'duqBHik7nRo'; } %>
 
 <h5 class="videoEmbed-title">Video Title</h5>
 <div class="embed-responsive embed-responsive-16by9">
   <% if (isSubpanel) { %>
   <img class="embed-responsive-item" src="http://img.youtube.com/vi/duqBHik7nRo/maxresdefault.jpg"/>
   <% } else { %>
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/duqBHik7nRo"></iframe>
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%- videoId %>"></iframe>
   <% } %>
 </div>

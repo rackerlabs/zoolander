@@ -17,7 +17,7 @@
     "test:visual:init": "nohup npm start & (cd ./node_modules/backstopjs && npm run reference)",
     "backstop-update": "node ./scripts/update-backstop-urls.js",
     "sass:compile": "node-sass --output-style=compressed --quiet -o /tmp styleguide/css",
-    "sass-lint": "sass-lint -v --max-warnings 58",
+    "sass-lint": "sass-lint -v --max-warnings 54",
     "hooks": "./scripts/hooks.sh",
     "postinstall": "npm run hooks"
   },
