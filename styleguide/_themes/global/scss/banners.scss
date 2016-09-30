@@ -51,9 +51,9 @@ $banner-text-margin-medium: 10%;
   background-position: right center;
   background-size: cover;
   color: $white;
-  margin-top: 50px;
+  margin-top: 98px;
   overflow: hidden;
-  padding: 95px 0 50px 0;
+  padding: 50px 0;
 }
 
 .imacBanner-container {
@@ -79,8 +79,6 @@ $banner-text-margin-medium: 10%;
 
 .imacBanner-headline {
   @include heading($white);
-  // will be removing this line when imac comes out because we're actually going to be switching the heading mixin to use Khand anyways
-  font-family: 'Khand';
   font-size: 4rem;
   font-weight: 700;
   line-height: .9em;
@@ -148,9 +146,17 @@ $banner-text-margin-medium: 10%;
   }
 }
 
+.landingpage-wrapper {
+
+  .imacBanner {
+    margin-top: 50px;
+  }
+}
+
 @media only screen and (max-width: $screen-sm-max) {
   .imacBanner {
-    padding: 63px 15px 50px;
+    margin-top: 63px;
+    padding: 50px 15px;
   }
 }
 
@@ -167,7 +173,7 @@ $banner-text-margin-medium: 10%;
     background-blend-mode: color;
     background-color: $black;
     background-image: none;
-    padding: 63px 15px 50px;
+    padding: 50px 15px;
   }
 
   .imacBanner-button {
