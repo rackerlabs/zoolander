@@ -1,0 +1,102 @@
+.imacBanner-stories {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/racker-working-1.jpg');
+}
+
+.story-colLeft {
+  @include make-md-column(6);
+}
+
+.story-colRight {
+  @include make-md-column(5);
+  @include make-md-column-push(1);
+}
+
+.story-title {
+  text-align: left;
+}
+
+.story-titleWrapper {
+  @include make-md-column(12);
+}
+
+.story-caseStudyButton {
+  @include button;
+  @include button-learning;
+  margin-bottom: 1rem;
+  width: auto;
+}
+
+.storyOverview-searchFilter {
+  @include make-sm-column(4);
+  @include make-md-column(3);
+  background: $teal-dark;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.storyOverview-searchFilter-label {
+  color: $white;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.storyOverview-searchFilter-select {
+  background: $white;
+  display: block;
+  margin: 1rem auto 0;
+  max-width: 200px;
+  width: $full-width;
+}
+
+.storyOverview-searchFilter-submit {
+  background: $gray-base;
+  border: 0;
+  color: $white;
+  display: block;
+  font-size: 1.2rem;
+  margin: 1rem auto 0;
+  max-width: 200px;
+  text-transform: uppercase;
+  width: $full-width;
+
+  &:hover {
+    background: $gray-dark;
+  }
+}
+
+.storyOverview-searchResults {
+  @include make-sm-column(7);
+  @include make-sm-column-push(1);
+  @include make-md-column(8);
+  @include make-md-column-push(1);
+  margin-bottom: 3rem;
+}
+
+
+.storyOverview-item {
+  @include make-sm-column(4);
+  margin-bottom: 1rem;
+  padding: 0 .6rem;
+}
+
+.storyOverview-itemInner {
+  border: 1px solid $gray-light;
+  padding: 5px;
+}
+
+.storyOverview-logo {
+  background-color: $gray-base;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75px;
+  display: block;
+  min-height: 125px;
+  padding: 15px 5px;
+  text-indent: -10000px;
+
+  &:hover {
+    background-color: $gray-dark;
+  }
+}
