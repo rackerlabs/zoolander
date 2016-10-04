@@ -1,5 +1,19 @@
 .imacBanner-stories {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/racker-working-1.jpg');
+  background-color: $black;
+  background-image: none;
+  min-height: inherit;
+}
+
+.imacBanner-storiesTextRow {
+  position: relative;
+}
+
+.imacBanner-storyLogoImage {
+  height: 95px;
+  position: absolute;
+  right: 0;
+  top: -15px;
+  width: auto;
 }
 
 .story-colLeft {
@@ -99,4 +113,8 @@
   &:hover {
     background-color: $gray-dark;
   }
+}
+
+@media (max-width: $screen-xs-max) {
+  @include responsive-invisibility('.imacBanner-storyLogo');
 }
