@@ -3,14 +3,14 @@
   border-radius: 0;
   box-shadow: none;
   cursor: pointer;
-  display: inline-block;
+  display: table;
   font-size: .85em;
   font-weight: 600;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 15px 70px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%;
 
   &:hover {
     text-decoration: none;
@@ -33,7 +33,7 @@
   background: $white;
   border: 3px solid $brand-secondary;
   color: $gray-dark;
-  padding: 12px 20px;
+  padding: 12px 70px;
 
   &:hover {
     background-color: $brand-secondary;
