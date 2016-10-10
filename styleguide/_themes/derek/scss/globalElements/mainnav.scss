@@ -270,6 +270,14 @@
   width: 28%;
 }
 
+// After-nav offsets.
+.contentOffset {
+  margin-top: 98px;
+}
+
+.contentOffset-landingPage {
+  margin-top: 50px;
+}
 
 @media only screen and (min-width: $screen-sm-min) {
   .navbar-searchicon {
@@ -322,6 +330,10 @@
 
   .navbar-container {
     max-width: $screen-md;
+  }
+
+  .contentOffset {
+    margin-top: 63px;
   }
 }
 

@@ -45,13 +45,11 @@ $banner-text-margin-medium: 10%;
   text-align: center;
 }
 
-
 .imacBanner {
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/collaboration-2.jpg');
   background-position: right center;
   background-size: cover;
   color: $white;
-  margin-top: 98px;
   min-height: 220px;
   overflow: hidden;
   padding: 50px 0;
@@ -147,16 +145,8 @@ $banner-text-margin-medium: 10%;
   }
 }
 
-.landingpage-wrapper {
-
-  .imacBanner {
-    margin-top: 50px;
-  }
-}
-
 @media only screen and (max-width: $screen-sm-max) {
   .imacBanner {
-    margin-top: 63px;
     padding: 50px 15px;
   }
 }
