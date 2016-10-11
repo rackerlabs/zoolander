@@ -19,6 +19,11 @@
   padding: 10px $grid-gutter-width / 2;
 }
 
+.basement-container {
+  @include make-container;
+  padding: 10px 0;
+}
+
 .basement-copyright {
   color: $gray-base;
   text-align: right;
