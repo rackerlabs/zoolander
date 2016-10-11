@@ -5,6 +5,7 @@
 
 .subnav-container {
   @include make-container;
+  padding: 0;
 }
 
 .subnav-links {
@@ -123,6 +124,10 @@
 
   .subnav-noHover {
     margin: 5px 0;
+  }
+
+  .subnav-container {
+    width: 100%;
   }
 }
 
