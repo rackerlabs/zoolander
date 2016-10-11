@@ -349,7 +349,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         50px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -893,9 +893,3 @@ $hr-border:                   $gray-lighter !default;
 
 
 $font_path: 'https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/fonts/';
-
-$brand-black: $gray-base;
-$brand-yellow: #f6b100;
-$brand-yellow-dark: #f6a100;
-$brand-blue: #1ae9ef;
-$brand-blue-dark: #0dcfd9;
