@@ -15,10 +15,13 @@
 }
 
 // Basement Classes
+<<<<<<< 936f0b660b91283d5bc18c6d0e7477c39ba9bf67
 .basement {
   padding: 20px ($grid-gutter-width / 2) 10px;
 }
 
+=======
+>>>>>>> rsweb-7524-gutter-widths
 .basement-container {
   @include make-container;
   padding: 10px 0;
