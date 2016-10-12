@@ -9,9 +9,9 @@
 }
 
 .announcement-icon {
-  @include make-md-column(2);
+  @include make-md-column(1);
   @include flex-box;
-  font-size: 5rem;
+  font-size: 3rem;
 
   .fa {
     color: $gray-base;
