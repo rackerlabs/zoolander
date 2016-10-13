@@ -15,10 +15,10 @@ var layouts = {
 
 // List of available patterns sorted by title.
 var patterns = {
-  'announcements': {'title' : 'Announcement'},
-  'lead': {'title': 'Lead'},
-  'text': {'title': 'Text'},
-  'video': {'title' : 'Video'}
+  'announcements': {'title' : 'Announcement', 'path' : 'cards'},
+  'lead': {'title': 'Lead', 'path' : 'solutions'},
+  'text': {'title': 'Text', 'path' : 'solutions'},
+  'video': {'title' : 'Video', 'path' : 'solutions'}
 };
 %>
 
@@ -85,8 +85,8 @@ for (var layout in layouts) {
       var class_left = layouts[layout].class_left;
       var class_right = layouts[layout].class_right;
       var section_title = layouts[layout].title + ': ' + patterns[pattern_left].title + '/' + patterns[pattern_right].title + '';
-      var file_left = '../_partials/solutions/' + pattern_left;
-      var file_right = '../_partials/solutions/' + pattern_right;
+      var file_left = '../_partials/' + patterns[pattern_left].path + '/' + pattern_left;
+      var file_right = '../_partials/' + patterns[pattern_right].path + '/' + pattern_right;
 %>
 
 <div class="container half-padding">
