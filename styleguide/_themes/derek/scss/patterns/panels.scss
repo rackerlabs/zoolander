@@ -1,5 +1,6 @@
 .panel-flex {
   @include flex-box;
+  @include flex-vertical;
   justify-content: center;
 }
 
