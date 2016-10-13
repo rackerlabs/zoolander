@@ -1,5 +1,10 @@
 .panel-flex {
   @include flex-box;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
   justify-content: center;
 }
 
