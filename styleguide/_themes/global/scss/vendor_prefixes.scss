@@ -54,6 +54,14 @@
   display: flex;
 }
 
+@mixin flex-vertical {
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
 @mixin sepia-filter {
   -webkit-filter: sepia(.9);
   filter: sepia(90%);
