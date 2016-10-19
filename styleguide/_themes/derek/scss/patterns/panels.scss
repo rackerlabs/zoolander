@@ -1,8 +1,15 @@
+.panel-pane {
+  width: 100%;
+}
+
 .panel-flex {
   @include flex-box;
-  @include flex-vertical;
   justify-content: center;
   width: 100%;
+}
+
+.panel-flexVertical {
+  @include flex-vertical;
 }
 
 .subpanel {
