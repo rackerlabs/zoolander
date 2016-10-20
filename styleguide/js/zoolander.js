@@ -28,15 +28,20 @@ jQuery(document).ready(function($) {
   //Toggle the open arrows on, top level, non drop down links
   $('.navbar-topLink:not(.navbar-topLink.navbar-topLink-dropDown)').click(function(){
     var $el = $(this).parent();
-    $el.siblings().find('.navbar-dropDown-triggerActive').removeClass('navbar-dropDown-triggerActive');
+    $el.siblings().removeClass('navbar-dropDown-triggerActive');
     $el.siblings().find('.navbar-tertiary-dropDownMenu').hide();
   });
 
   //Toggle arrows for top level drop down links
   $topLevelDropDown.click(function(){
     var $el = $(this);
+    var $siblings = $el.parent().siblings().find('.navbar-topLink-dropDown');
+    var $tertiaryTrigger = $('.navbar-tertiary-dropDownTrigger span');
     $el.toggleClass('navbar-dropDown-triggerActive');
-    $el.parent().siblings().find('.navbar-topLink-dropDown').removeClass('navbar-dropDown-triggerActive');
+    //hides open tertiary navs and removes active class from other dropdowns
+    $siblings.removeClass('navbar-dropDown-triggerActive');
+    $tertiaryTrigger.removeClass('navbar-dropDown-triggerActive');
+    $('.navbar-tertiary-dropDownMenu').hide();
   });
 
   // Special mobile functionality.
@@ -46,10 +51,9 @@ jQuery(document).ready(function($) {
       var $el = trigger;
       var $current = $el.find('.navbar-tertiary-dropDownMenu');
       var $siblings = $el.siblings('.navbar-tertiary-dropDownTrigger').find('.navbar-tertiary-dropDownMenu');
+      $el.siblings('.navbar-tertiary-dropDownTrigger').find('.navbar-dropDownLink').removeClass('navbar-dropDown-triggerActive');
       $el.find('.navbar-dropDownLink').toggleClass('navbar-dropDown-triggerActive');
       //remove siblings open arrows
-      $el.siblings('.navbar-tertiary-dropDownTrigger').find('.navbar-dropDownLink').removeClass('navbar-dropDown-triggerActive');
-
       $current.toggle();
       $siblings.hide();
     }
@@ -69,7 +73,7 @@ jQuery(document).ready(function($) {
     .click(function(e){
       e.stopPropagation();
       $viewPort = parseInt($(window).outerWidth());
-      if ($viewPort < 768){
+      if ($viewPort <= 768){
         dropDownTrigger($(this));
       }
     })
@@ -78,6 +82,7 @@ jQuery(document).ready(function($) {
       if ($viewPort > 768){
         dropDownTrigger($(this));
       }
+
     });
 
   //back to top

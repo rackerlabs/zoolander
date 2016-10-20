@@ -51,12 +51,28 @@
   border: 0;
 }
 
-@media screen and (max-width: $screen-sm-max) {
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
   .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
+    background: $gray-darker;
+
+    &:focus,
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+  .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
+
     &:focus,
     &:hover {
       background-color: $gray-darker;
     }
+  }
+  .navbar-nav .navbar-topLink-dropDown.navbar-topLink:hover {
+    background-color: $gray-dark;
   }
 }
