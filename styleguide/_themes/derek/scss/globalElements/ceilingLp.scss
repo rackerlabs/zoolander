@@ -47,7 +47,7 @@
 
 .ceilingLp-menuInline-item {
   display: inline-block;
-  font-weight: 500;
+  font-weight: $font-weight-black;
   margin: floor($ceiling-margin + 2) 0;
   padding: floor($ceiling-margin) floor($ceiling-margin + 2);
   text-transform: uppercase;

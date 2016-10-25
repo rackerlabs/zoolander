@@ -5,7 +5,7 @@
   cursor: pointer;
   display: inline-block;
   font-size: .85em;
-  font-weight: 600;
+  font-weight: $font-weight-black;
   padding: 15px 20px;
   text-align: center;
   text-decoration: none;
@@ -93,7 +93,7 @@
     cursor: pointer;
     display: inline-block;
     font-size: .85em;
-    font-weight: 600;
+    font-weight: $font-weight-black;
     padding: 15px 20px;
     text-align: center;
     text-decoration: none;

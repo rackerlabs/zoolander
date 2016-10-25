@@ -7,7 +7,7 @@
     color: $white;
     font-family: $subhead;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: $font-weight-black;
     line-height: 1.45em;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -39,7 +39,7 @@
     display: none;
     font-family: $subhead;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: $font-weight-black;
     height: 35px;
     line-height: 1.45em;
     margin-bottom: 10px;

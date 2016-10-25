@@ -31,7 +31,7 @@
 
   .navbar-topItem {
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: $font-weight-bold;
     text-transform: uppercase;
 
     &.open {

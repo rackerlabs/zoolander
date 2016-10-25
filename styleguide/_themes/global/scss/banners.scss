@@ -101,7 +101,7 @@ $banner-text-margin-medium: 10%;
   @include button;
   background-color: $brand-primary;
   color: $white;
-  font-weight: 600;
+  font-weight: $font-weight-black;
   margin-left: 20px;
   padding: 8px 20px;
 
