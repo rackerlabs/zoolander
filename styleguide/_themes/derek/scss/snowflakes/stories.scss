@@ -13,12 +13,16 @@
   position: relative;
 }
 
-.imacBanner-storyLogoImage {
-  height: 95px;
+.imacBanner-storyLogo {
+  @include flex-box;
+  @include flex-center;
+  height: 65px;
   position: absolute;
   right: 0;
-  top: -15px;
-  width: auto;
+}
+
+.imacBanner-storyLogoImage {
+  max-height: 95px;
 }
 
 .story-colLeft {
