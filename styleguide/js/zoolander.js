@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
     .click(function(e){
       e.stopPropagation();
       $viewPort = parseInt($(window).outerWidth());
-      if ($viewPort < 768){
+      if ($viewPort <= 768){
         dropDownTrigger($(this));
       }
     })
