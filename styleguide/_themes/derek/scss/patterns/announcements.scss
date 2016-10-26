@@ -18,9 +18,33 @@
   }
 }
 
+.announcement-link {
+  line-height: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $blue-gray;
+    text-decoration: none;
+  }
+}
+
+.announcement-linkText {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.announcement-link-hover {
+
+  &:hover {
+    background-color: $gray-lightest;
+    color: $blue-gray;
+  }
+}
+
 .announcement-message {
   @include make-md-column(10);
-  @include flex-box;
   padding: 12px 15px;
 }
 
@@ -48,5 +72,13 @@
   .announcement-icon,
   .announcement-message {
     width: $full-width;
+  }
+
+  .announcement-head {
+    text-align: center;
+  }
+
+  .announcement-linkText {
+    text-align: center;
   }
 }

@@ -9,10 +9,13 @@ var icons = {
   'promotion' : 'fa-money'
 };
 %>
-<div class="announcement-wrapper announcement-<%- type %> row-eq-height">
-  <div class="announcement-icon flex-center-all"><i class="fa <%- icons[type] %>" aria-hidden="true"></i></div>
-  <div class="announcement-message">
-    <h3 class="announcement-head">Header Here</h3>
-    <%- desc %>
+<a href="javascript: void(0)" class="announcement-link">
+  <div class="announcement-wrapper announcement-<%- type %> row-eq-height announcement-link-hover">
+    <div class="announcement-icon flex-center-all"><i class="fa <%- icons[type] %>" aria-hidden="true"></i></div>
+    <div class="announcement-message">
+      <h3 class="announcement-head">Header Here</h3>
+      <%- desc %>
+      <span class="announcement-linkText">View More</span>
+    </div>
   </div>
-</div>
+</a>

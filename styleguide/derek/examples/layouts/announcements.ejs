@@ -1,5 +1,16 @@
 <!-- Announcements -->
 <div class="container">
+  <h3>Link Announcement</h3>
+  <div class="row row-eq-height">
+    <div class="col-sm-12">
+      <%- partial('../../_partials/cards/announcements-link.ejs', {
+        'type': 'newProduct',
+        'desc': 'This is a New Product. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.'
+      }) %>
+    </div>
+  </div>
+
+  <h3>Standard Announcement</h3>
   <div class="row row-eq-height">
     <div class="col-sm-12">
       <%- partial('../../_partials/cards/announcements.ejs', {

@@ -26,6 +26,11 @@
     width: $full-width;
   }
 
+  .announcement-head,
+  .announcement-linkText {
+    text-align: center;
+  }
+
   .announcement-wrapper {
     display: block;
   }
