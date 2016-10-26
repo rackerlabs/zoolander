@@ -1,3 +1,8 @@
+.story-container {
+  @include make-container;
+  padding: $standard-padding;
+}
+
 .imacBanner-stories {
   background-color: $black;
   background-image: none;
@@ -8,12 +13,16 @@
   position: relative;
 }
 
-.imacBanner-storyLogoImage {
-  height: 95px;
+.imacBanner-storyLogo {
+  @include flex-box;
+  @include flex-center;
+  height: 65px;
   position: absolute;
   right: 0;
-  top: -15px;
-  width: auto;
+}
+
+.imacBanner-storyLogoImage {
+  max-height: 95px;
 }
 
 .story-colLeft {
@@ -100,21 +109,38 @@
   padding: 5px;
 }
 
-.storyOverview-logo {
-  background-color: $gray-base;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 75px;
-  display: block;
-  min-height: 125px;
-  padding: 15px 5px;
-  text-indent: -10000px;
+.storyOverview-itemLink {
+  @include flex-box;
+  @include flex-center;
+  background: $gray-base;
+  height: 125px;
+  text-align: center;
+  text-decoration: none;
 
   &:hover {
     background-color: $gray-dark;
+    text-decoration: none;
   }
+}
+
+.storyOverview-logo {
+  max-width: 50%;
+}
+
+.storyOverview-logoText {
+  color: $white;
+  font-size: 1.8rem;
+  max-width: 80%;
 }
 
 @media (max-width: $screen-xs-max) {
   @include responsive-invisibility('.imacBanner-storyLogo');
+
+  .story-container {
+    padding: 0 $grid-gutter-width / 2;
+  }
+
+  .storyOverview-logo {
+    max-width: 120px;
+  }
 }
