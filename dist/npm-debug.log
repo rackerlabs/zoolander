@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node4-lts/4.4.5/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'test:visual' ]
+2 info using npm@2.15.4
+3 info using node@v4.4.5
+4 verbose run-script [ 'pretest:visual', 'test:visual', 'posttest:visual' ]
+5 info pretest:visual zoolander@0.10.5
+6 info test:visual zoolander@0.10.5
+7 verbose unsafe-perm in lifecycle true
+8 info zoolander@0.10.5 Failed to exec test:visual script
+9 verbose stack Error: zoolander@0.10.5 test:visual: `nohup npm start & (cd ./node_modules/backstopjs && npm run test)`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at EventEmitter.emit (events.js:172:7)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at ChildProcess.emit (events.js:172:7)
+9 verbose stack     at maybeClose (internal/child_process.js:827:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+10 verbose pkgid zoolander@0.10.5
+11 verbose cwd /Users/davi0040/github/zoolander/styleguide
+12 error Darwin 15.6.0
+13 error argv "/usr/local/Cellar/node4-lts/4.4.5/bin/node" "/usr/local/bin/npm" "run" "test:visual"
+14 error node v4.4.5
+15 error npm  v2.15.4
+16 error code ELIFECYCLE
+17 error zoolander@0.10.5 test:visual: `nohup npm start & (cd ./node_modules/backstopjs && npm run test)`
+17 error Exit status 1
+18 error Failed at the zoolander@0.10.5 test:visual script 'nohup npm start & (cd ./node_modules/backstopjs && npm run test)'.
+18 error This is most likely a problem with the zoolander package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     nohup npm start & (cd ./node_modules/backstopjs && npm run test)
+18 error You can get information on how to open an issue for this project with:
+18 error     npm bugs zoolander
+18 error Or if that isn't available, you can get their info via:
+18 error
+18 error     npm owner ls zoolander
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
