@@ -1,35 +1,3 @@
-//to support legacy for now
-
-.homepage-hero {
-  @extend .full-width;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg');
-  background-position: 25% 50%;
-  background-repeat: no-repeat;
-  background-size: auto;
-  border-bottom: 0;
-  height: 100%;
-  margin-bottom: 40px;
-  overflow: visible;
-  position: relative;
-  top: 60px;
-
-  h2 {
-    @extend .white;
-    @extend .left;
-    font-size: 34px;
-    font-weight: 300;
-    line-height: 40px;
-    padding-top: 20px;
-  }
-
-  p {
-    font-size: 16px;
-    letter-spacing: 1px;
-    line-height: 24px;
-    padding-bottom: 10px;
-  }
-}
-
 #hosting-options {
   text-align: center;
 

@@ -31,38 +31,36 @@ html(lang="en")
             a(href="/").navZoolander-link Welcome
 
           li.navZoolander-item
-            a(href="#").navZoolander-link.navZoolander-hasDropdown Global Brand
+            a(href="#").navZoolander-link.navZoolander-hasDropdown Rackspace Brand Guidelines
             ul.navZoolander-dropdown
               li.navZoolander-item
-                 a(href="global/").navZoolander-dropdownLink Overview
+                a(href="global/").navZoolander-dropdownLink Overview
               li.navZoolander-item
-                 a(href="global/brand-elements").navZoolander-dropdownLink Brand Elements
+                a(href="global/brand-elements").navZoolander-dropdownLink Brand Elements
+              li.navZoolander-item
+                a(href="global/voice").navZoolander-dropdownLink Voice and Tone
 
           li.navZoolander-item
-            a(href="global/voice").navZoolander-link Voice and Tone
-
-          li.navZoolander-item
-            a(href="global/components").navZoolander-link Components
-
-          li.navZoolander-item
-            a(href="#").navZoolander-link.navZoolander-hasDropdown Assets/Elements
+            a(href="#").navZoolander-link.navZoolander-hasDropdown Zoolander Global Elements
             ul.navZoolander-dropdown
               li.navZoolander-dropdownItem
                 a(href="derek/assets/").navZoolander-dropdownLink Overview
-              li.navZoolander-dropdownItem
-                a(href="derek/assets/icon-font").navZoolander-dropdownLink Icon Font
-              li.navZoolander-dropdownItem
-                a(href="derek/assets/forms").navZoolander-dropdownLink Forms
-              li.navZoolander-dropdownItem
-                a(href="derek/assets/buttons").navZoolander-dropdownLink Buttons/CTAs
               li.navZoolander-dropdownItem
                 a(href="derek/assets/typography").navZoolander-dropdownLink Typography
               li.navZoolander-dropdownItem
                 a(href="derek/assets/photography").navZoolander-dropdownLink Photography/Banners
               li.navZoolander-dropdownItem
-                a(href="derek/assets/icon-font").navZoolander-dropdownLink Tabs
+                a(href="derek/assets/swatches").navZoolander-dropdownLink Colors/Swatches
               li.navZoolander-dropdownItem
-                a(href="derek/examples/tables").navZoolander-dropdownLink Tables
+                a(href="derek/assets/icon-font").navZoolander-dropdownLink Icon Font
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/buttons").navZoolander-dropdownLink Buttons/CTAs
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/tables").navZoolander-dropdownLink Tables
+              li.navZoolander-dropdownItem
+                a(href="derek/assets/forms").navZoolander-dropdownLink Forms
+
+          //Add in themes dropdown when there are multiple
 
           li.navZoolander-item
             a(href="#").navZoolander-link.navZoolander-hasDropdown Derek Theme
@@ -70,11 +68,11 @@ html(lang="en")
               li.navZoolander-item
                 a(href="derek/").navZoolander-dropdownLink Overview
               li.navZoolander-item
-                a(href="derek/examples").navZoolander-dropdownLink Examples
+                a(href="derek/solutions").navZoolander-dropdownLink Solutions
               li.navZoolander-item
-                a(href="derek/development").navZoolander-dropdownLink Development
+                a(href="derek/templates").navZoolander-dropdownLink Templates
               li.navZoolander-item
-                a(href="derek/workflow").navZoolander-dropdownLink Workflow/Process
+                a(href="derek/incubation").navZoolander-dropdownLink Incubation/ Dev Sandbox
 
   .mainContainer#mainContainer
     block content

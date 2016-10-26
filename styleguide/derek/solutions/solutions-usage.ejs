@@ -9,6 +9,8 @@
       <li>Try to fit your content in any of these very diverse patterns BEFORE utilizing the general content type</li>
       <li>Try to use an icon from our ever growing icon library before utilizing an image if at all possible</li>
       <li>Keep river headlines (h2s) under 65 characters</li>
+      <li>Have all pages should begin with a lead that is not included within a river</li>
+      <li>When reusing the same nodes keep it on the same background and in the same style</li>
     </ul>
   </div>
   <div class="col-md-6">
@@ -30,7 +32,8 @@
 <!-- Lead -->
 <div class="container">
   <h4>Lead</h4>
-  <p>The page's h1 is the title of the lead so only one lead is allowed on a page, however you must have one on the page in order to have an h1. Please make sure this title is as succinct and helpful as possible for SEO purposes. Limit text to one paragraph.</p>
+  <h6>Required Fileds: Headline, Body</h6>
+  <p>The page's h1 is the title of the lead so only one lead is allowed on a page, however you must have one on the page in order to have an h1. Please make sure this title is as succinct and helpful as possible for SEO purposes. Limit text to one paragraph. <span class="uppercase">All pages should begin with a lead that is not included within a river</span></p>
   <div class="row">
     <div class="col-md-6">
       <h4 class="red">DO</h4>
@@ -61,6 +64,7 @@
 <!-- Text -->
 <div class="container">
   <h4>Text</h4>
+  <h6>Required Fileds: Body</h6>
   <p>The text pattern can be used for text areas on the page when you do not want it to contain an H1. It should also be used in any text splits. ie. a mini panel that has text/video or text/image split.</p>
   <div class="row">
     <div class="col-md-6">
@@ -91,6 +95,7 @@
 
 <div class="container">
   <h4>Value Prop</h4>
+  <h6>Required Fileds: Headline, Body, Icon/Image <span class="red">For each card</span></h6>
   <h6>Character Limit: <br/>
     Headline - 50. <br/>
     Description - 200.</h6>
@@ -115,7 +120,7 @@
   <div class="row">
     <div class="col-xs-12">
       <h5 class="red">Example:</h5>
-      <%- partial('layouts/value-props.ejs') %>
+      <%- partial('../layouts/value-props.ejs') %>
     </div>
   </div>
 </div>
@@ -124,6 +129,7 @@
 
 <div class="container">
   <h4>Infrastructure and Services</h4>
+  <h6>Required Fileds: Headline, Body, Icon/Image <span class="red">For each card</span></h6>
   <h6>Character Limit: <br/>
     Headline - 50. <br/>
     Description - 150.</h6>
@@ -148,7 +154,7 @@
   <div class="row">
     <div class="col-xs-12">
       <h5 class="red">Example:</h5>
-      <%- partial('layouts/ias.ejs') %>
+      <%- partial('../layouts/ias.ejs') %>
     </div>
   </div>
 </div>
@@ -157,6 +163,7 @@
 
 <div class="container">
   <h4>Key Offers</h4>
+  <h6>Required Fileds: Headline, Body, Icon/Image <span class="red">For each card</span></h6>
   <h6>Character Limit: <br/>
     River Headline - 65 <br/>
     Headline - 30. <br/>
@@ -182,11 +189,12 @@
   </div>
   <h5 class="red">Example:</h5>
 </div>
-<%- partial('layouts/key-offers.ejs') %>
+<%- partial('../layouts/key-offers.ejs') %>
 
 
 <div class="container">
   <h4>Features</h4>
+  <h6>Required Fileds: Headline, Body, Icon/Image <span class="red">For each card</span></h6>
   <h6>Character Limit: <br/>
     Headline - 30. <br/>
     Description - 200.<br/>
@@ -217,12 +225,13 @@
 </div>
 <div class="bg-light-gray">
   <div class="container half-padding">
-    <%- partial('layouts/lists.ejs') %>
+    <%- partial('../layouts/lists.ejs') %>
   </div>
 </div>
 
 <div class="container">
   <h4>Testimonials</h4>
+  <h6>Required Fileds: Quote, Attribution</h6>
   <h6>Character Limit: <br/>
     Split Quote Text - 150 <br/>
     Full Width Quote Text - 260</h6>
@@ -259,6 +268,7 @@
   <div class="row">
     <div class="col-md-6">
       <h4>Video</h4>
+      <h6>Required Fileds: Video Link</h6>
       <p>The Video pattern should be used to add dynamic and more visually impactful content to the page. This content should be supporting or explaining the product or service for the page the user is on. It should only be used full width on the video landing page. All other uses should be split with text, a lead or a cta.</p>
       <h4 class="red">DO</h4>
       <ul class="checks">
@@ -285,7 +295,7 @@
 
 <div class="container">
   <h4>CTA</h4>
-  <h6>Under Construction</h6>
+  <h6>Required Fileds: Headline and/or Subhead, Button Type</h6>
   <%- partial('../_partials/solutions/cta.ejs') %>
 </div>
 
@@ -293,6 +303,7 @@
 
 <div class="container">
   <h4>Tabs</h4>
+  <h6>Required Fileds: Headline, Body</h6>
   <h6>Character Limit: <br/>
     Headline - 15. <br/>
     Content - no limit.</h6>
@@ -322,6 +333,7 @@
 <!-- Announcements -->
 <div class="container">
   <h4>Announcements</h4>
+  <h6>Required Fileds: Headline, Body, Announcement type</h6>
   <h6>Character Limit: <br/>
     Title - 150 <br/>
     Text - 250</h6>
@@ -350,24 +362,26 @@
   </div>
   <h5 class="red">Example:</h5>
 </div>
-<%- partial('layouts/announcements.ejs') %>
+<%- partial('../layouts/announcements.ejs') %>
 
 
 <hr>
 
 <div class="container">
   <h4>Awards</h4>
+  <h6>Required Fileds: Headline, Subhead</h6>
   <h6>Character Limit: <br/>
     Headline - 5. <br/>
     Subhead - 50.
     Subtext - 50. <br/></h6>
   <p>The Awards and Certifications pattern can be used for featuring awards, certifications or honors within a river.</p>
   <h5 class="red">Example:</h5>
-  <%- partial('layouts/awards.ejs') %>
+  <%- partial('../layouts/awards.ejs') %>
 </div>
 
 <div class="container">
   <h4>Additional Resources</h4>
+  <h6>Required Fileds: Headline, Body, Icon (with one of the below values)</h6>
   <h6>Character Limit: <br/>
     Headline - 50. <br/>
     Description - 100.</h6>
@@ -401,7 +415,7 @@
   <div class="row">
     <div class="col-xs-12">
       <h5 class="red">Example:</h5>
-      <%- partial('layouts/additional-resources.ejs') %>
+      <%- partial('../layouts/additional-resources.ejs') %>
     </div>
   </div>
 </div>
