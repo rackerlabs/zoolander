@@ -3,10 +3,15 @@ $subhead: 'Khand', Helvetica, Arial, sans-serif;
 $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
 
+$font-weight-normal: normal;
+$font-weight-regular: 300;
+$font-weight-bold: 400;
+$font-weight-black: 600;
+
 @mixin heading($color: $gray-darkest) {
   color: $color;
   font-family: $heading;
-  font-weight: 600;
+  font-weight: $font-weight-black;
   text-transform: uppercase;
 }
 
@@ -22,7 +27,7 @@ $code: Tahoma, Arial, Geneva, Helvetica;
 @mixin copy($color: $gray-darkest) {
   color: $color;
   font-family: $copy;
-  font-weight: 300;
+  font-weight: $font-weight-regular;
   line-height: 1.5em;
   text-align: left;
 }
@@ -133,7 +138,7 @@ li {
 a {
   color: $gray-dark;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: $font-weight-bold;
   line-height: 16px;
   text-decoration: underline;
 
@@ -144,7 +149,7 @@ a {
 
 strong,
 .semi-bold {
-  font-weight: 600;
+  font-weight: $font-weight-black;
 }
 
 code,
@@ -193,7 +198,7 @@ i {
 blockquote {
   border-left: 0;
   font-size: 1.75rem;
-  font-weight: 200;
+  font-weight: $font-weight-regular;
   letter-spacing: 2px;
   line-height: 2.5rem;
   margin-bottom: 0;
@@ -205,7 +210,7 @@ cite {
   font-family: $copy;
   font-size: 1rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: $font-weight-black;
   text-transform: uppercase;
   white-space: pre-line;
 

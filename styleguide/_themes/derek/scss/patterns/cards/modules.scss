@@ -41,7 +41,7 @@
     display: table;
     font-size: 4.4rem;
     font-style: normal;
-    font-weight: 300;
+    font-weight: $font-weight-regular;
     letter-spacing: -.007em;
     line-height: 175%;
     margin-bottom: 5px;
@@ -83,7 +83,7 @@
   h3 {
     & + p {
       font-size: 15px;
-      font-weight: 300;
+      font-weight: $font-weight-regular;
       line-height: 150%;
       padding-top: 8px;
     }

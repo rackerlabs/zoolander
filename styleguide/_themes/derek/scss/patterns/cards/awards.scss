@@ -4,9 +4,9 @@
 
 .awards-title {
   color: $brand-primary;
-  font-family: 'Khand';
+  font-family: $heading;
   font-size: 3.75rem;
-  font-weight: 400;
+  font-weight: $font-weight-bold;
   line-height: 3rem;
   margin: 0;
   padding: 0;

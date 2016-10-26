@@ -54,6 +54,12 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
+//added for ordering
+$font-weight-normal: normal;
+$font-weight-regular: 300;
+$font-weight-bold: 400;
+$font-weight-black: 600;
+
 $font-family-sans-serif:  "Khand", Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
@@ -78,7 +84,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    $font-family-sans-serif !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    $font-weight-black !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
@@ -159,7 +165,7 @@ $table-border-color:            $gray-lighter !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                400 !default;
+$btn-font-weight:                $font-weight-black !default;
 
 $btn-default-color:              $gray-dark !default;
 $btn-default-bg:                 #fff !default;
@@ -839,7 +845,7 @@ $carousel-caption-color:                      #fff !default;
 //
 //##
 
-$close-font-weight:           bold !default;
+$close-font-weight:           $font-weight-black !default;
 $close-color:                 #000 !default;
 $close-text-shadow:           0 1px 0 #fff !default;
 
