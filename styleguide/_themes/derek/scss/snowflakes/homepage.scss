@@ -12,6 +12,7 @@
   overflow: visible;
   position: relative;
   top: 60px;
+
   h2 {
     @extend .white;
     @extend .left;
@@ -20,6 +21,7 @@
     line-height: 40px;
     padding-top: 20px;
   }
+
   p {
     font-size: 16px;
     letter-spacing: 1px;
@@ -30,22 +32,42 @@
 
 #hosting-options {
   text-align: center;
+
   .product {
-    p { margin-bottom: 30px; }
+
+    p {
+      margin-bottom: 30px;
+    }
+
     &:hover {
       @extend .bg-light-gray;
-      hr { border-color: $brand-secondary; }
-      h3, a { color: $brand-secondary; }
+
+      hr {
+        border-color: $brand-secondary;
+	  }
+
+      h3,
+      a {
+        color: $brand-secondary;
+	  }
     }
   }
 }
 
 #solutions {
-  a { text-decoration: none; }
+
+  a {
+    text-decoration: none;
+  }
+
   .solution:hover {
+
     .border-white {
       border-color: $mustard;
-      i { color: $mustard; }
+
+      i {
+        color: $mustard;
+	  }
     }
   }
 }
