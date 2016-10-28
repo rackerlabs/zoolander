@@ -41,7 +41,7 @@ table {
   }
 
   .form-control {
-    background-color: rgba(235, 0, 34, .1);
+    background-color: lighten($brand-danger, 10);
     border-color: $brand-danger;
   }
 }
@@ -64,7 +64,7 @@ table {
   }
 
   .form-control {
-    background-color: rgba(0, 133, 0, .1);
+    background-color: lighten($brand-success, 10);
     border-color: $brand-success;
   }
 }
@@ -89,7 +89,7 @@ table {
   }
 
   .form-control {
-    background-color: rgba(235, 104, 0, .1);
+    background-color: lighten($brand-warning, 10);
     border-color: $brand-warning;
   }
 }
