@@ -28,15 +28,20 @@ jQuery(document).ready(function($) {
   //Toggle the open arrows on, top level, non drop down links
   $('.navbar-topLink:not(.navbar-topLink.navbar-topLink-dropDown)').click(function(){
     var $el = $(this).parent();
-    $el.siblings().find('.navbar-dropDown-triggerActive').removeClass('navbar-dropDown-triggerActive');
+    $el.siblings().removeClass('navbar-dropDown-triggerActive');
     $el.siblings().find('.navbar-tertiary-dropDownMenu').hide();
   });
 
   //Toggle arrows for top level drop down links
   $topLevelDropDown.click(function(){
     var $el = $(this);
+    var $siblings = $el.parent().siblings().find('.navbar-topLink-dropDown');
+    var $tertiaryTrigger = $('.navbar-tertiary-dropDownTrigger span');
     $el.toggleClass('navbar-dropDown-triggerActive');
-    $el.parent().siblings().find('.navbar-topLink-dropDown').removeClass('navbar-dropDown-triggerActive');
+    //hides open tertiary navs and removes active class from other dropdowns
+    $siblings.removeClass('navbar-dropDown-triggerActive');
+    $tertiaryTrigger.removeClass('navbar-dropDown-triggerActive');
+    $('.navbar-tertiary-dropDownMenu').hide();
   });
 
   // Special mobile functionality.
@@ -69,7 +74,7 @@ jQuery(document).ready(function($) {
     .click(function(e){
       e.stopPropagation();
       $viewPort = parseInt($(window).outerWidth());
-      if ($viewPort < 768){
+      if ($viewPort <= 768){
         dropDownTrigger($(this));
       }
     })

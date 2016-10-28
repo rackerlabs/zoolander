@@ -23,7 +23,6 @@
 
     &:hover,
     &:focus,
-    &:active,
     &:visited {
       background: $gray-darker;
     }
@@ -122,7 +121,7 @@
   position: relative;
 
   &:hover {
-    background-color: $gray-base;
+    background-color: $gray;
   }
 }
 
@@ -338,7 +337,6 @@
 
   .navbar-menu {
     float: left;
-    margin-left: 10px;
   }
 
   .navbar-topLink-dropDown {
@@ -364,8 +362,7 @@
   }
 
   .navbar-tertiary-dropDownMenu {
-    left: -98%;
-    right: initial;
+    right: 100%;
   }
 }
 
@@ -390,7 +387,6 @@
   }
 
   .navbar-dropDown-triggerActive {
-    background-color: $gray-darker;
     display: block;
 
     &::after {
