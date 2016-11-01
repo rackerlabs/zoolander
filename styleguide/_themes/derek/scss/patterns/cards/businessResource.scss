@@ -16,7 +16,7 @@
 .businessResource-widget-hover {
   &:hover {
     background-color: $blue-steel;
-    border-top: 12px solid rgba(0, 0, 0, .4);
+    border-top: 12px solid darken($blue-steel, 20);
     text-decoration: none;
 
     h3,

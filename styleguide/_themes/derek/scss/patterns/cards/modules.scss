@@ -25,7 +25,6 @@
     vertical-align: middle;
 
     &:hover {
-      background-color: rgba(0, 5, 10, .1);
       cursor: pointer;
     }
   }
@@ -73,7 +72,7 @@
 
   span {
     &:hover {
-      background-color: rgba(0, 5, 10, .1);
+      background-color: $blue-steel;
       cursor: pointer;
     }
   }
