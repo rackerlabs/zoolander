@@ -14,26 +14,24 @@
 }
 
 .blogFeed-item {
-  @include make-md-column(4);
+  background-color: $white;
   margin: 15px 5px;
-}
-
-.blogFeed-row {
-  @include make-row;
+  padding-bottom: 64px;
+  position: relative;
+  width: 100%;
 }
 
 .blogFeed-imageContainer {
-  @include make-md-column(11);
   padding: 0;
 }
 
 .blogFeed-image {
   @include sepia-filter;
+  width: 100%;
 }
 
 .blogFeed-textContainer {
-  @include make-md-column(11);
-  background-color: $white;
+  padding: 0 15px;
 }
 
 .blogFeed-date {
@@ -61,6 +59,13 @@
   &:hover {
     color: $gray-light;
   }
+}
+
+.blogFeed-linkContainer {
+  bottom: 0;
+  left: 15px;
+  position: absolute;
+  right: 15px;
 }
 
 @media only screen and (max-width: $screen-xs-max) {
