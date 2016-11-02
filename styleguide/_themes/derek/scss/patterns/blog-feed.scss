@@ -27,6 +27,7 @@
 
 .blogFeed-image {
   @include sepia-filter;
+  width: 100%;
 }
 
 .blogFeed-textContainer {
