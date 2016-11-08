@@ -32,8 +32,8 @@
   }
 }
 
-@media only screen and (max-width: $screen-sm) {
-  .features-container {
+@media only screen and (max-width: $screen-sm-min) {
+  .features-wrapper {
     display: block;
     margin-top: 10px;
 
