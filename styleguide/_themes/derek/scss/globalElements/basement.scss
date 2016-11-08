@@ -16,7 +16,7 @@
 
 // Basement Classes
 .basement {
-  padding: 10px $grid-gutter-width / 2;
+  padding: 20px ($grid-gutter-width / 2) 10px;
 }
 
 .basement-copyright {
