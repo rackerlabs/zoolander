@@ -9,6 +9,7 @@ files:
     - 'styleguide/_themes/global/scss/vendor_prefixes.scss'
 rules:
   no-url-protocols: 0
+  no-url-domains: 0
   class-name-format:
     - 1
     - convention: ^([a-z0-9]+([A-Z][a-z0-9]+)*)(-{1}([a-z0-9]+([A-Z][a-z0-9]+)*)){0,3}$
