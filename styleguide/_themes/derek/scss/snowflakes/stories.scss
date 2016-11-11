@@ -49,6 +49,10 @@
   width: auto;
 }
 
+.story-video {
+  position: relative;
+}
+
 .storyOverview-searchFilter {
   @include make-sm-column(4);
   @include make-md-column(3);
