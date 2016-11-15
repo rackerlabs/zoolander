@@ -114,16 +114,16 @@
 }
 
 .hostingOptions-logo {
-  @include make-sm-column(5);
-  @include make-sm-column-push(3.5);
+  @include make-sm-column(3.5);
+  @include make-sm-column-push(4.25);
   @include make-xs-column(3);
   @include make-xs-column-push(4.5);
   text-align: center;
 }
 
 .hostingOptions-logoWide {
-  @include make-sm-column(10);
-  @include make-sm-column-push(1);
+  @include make-sm-column(7);
+  @include make-sm-column-push(2.5);
   @include make-xs-column(6);
   @include make-xs-column-push(3);
 }
@@ -254,6 +254,7 @@
 
 .logoShowcase-row {
   @include make-row;
+  text-align: center;
 }
 
 .logoShowcase-logoItem {

@@ -1,10 +1,5 @@
 $body-bg:  #fff !default;
 
-// Temporary to restrict to 960px
-.container {
-  max-width: 960px;
-}
-
 // Component
 .river {
   padding: 12px 0;
@@ -40,7 +35,7 @@ $body-bg:  #fff !default;
 
 .border-white {
   border: solid 1px $white;
-  padding: 15px;
+  padding: 35px;
 }
 
 .clickarea {
