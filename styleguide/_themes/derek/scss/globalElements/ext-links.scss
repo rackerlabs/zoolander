@@ -1,0 +1,15 @@
+.extLink {
+
+  &::after {
+    content: '\f08e';
+    font-family: 'FontAwesome';
+    margin-left: 5px;
+  }
+}
+
+.extLink-small {
+
+  &::after {
+    font-size: .8em;
+  }
+}
