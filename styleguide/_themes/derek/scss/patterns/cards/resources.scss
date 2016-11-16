@@ -27,16 +27,16 @@
     border: 1px solid $gray-lightest;
     margin: 0;
     overflow: auto;
-    padding: 20px;
+    padding: 10px 20px;
   }
 
   .icon {
     align-items: center;
     color: $white;
     display: flex;
-    flex-basis: 25%;
+    flex-basis: 15%;
     font-family: FontAwesome;
-    font-size: 3vw;
+    font-size: 2vw;
     justify-content: center;
 
     &.api {

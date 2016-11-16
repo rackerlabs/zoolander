@@ -22,10 +22,13 @@
 
 .rug-icon {
   color: $white;
+  margin-left: 15px;
 }
 
 .rug-link {
+  @include subhead;
   color: $white;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -39,12 +42,13 @@
 
 .rug-phone-text {
   color: $white;
-  padding: 7px 0 0 5px;
+  float: left;
+  padding: 7px 15px;
 }
 
 .rug-subhead {
   color: $white;
-  font-size: 37px;
-  line-height: 24px;
+  font-size: 4.25rem;
+  line-height: 3.25rem;
   margin: 0;
 }
