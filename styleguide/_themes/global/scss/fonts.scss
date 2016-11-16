@@ -24,20 +24,15 @@ $font-weight-black: 600;
   text-align: left;
 }
 
-@mixin copy($color: $gray-darkest) {
-  color: $color;
+body {
+  color: $gray-darkest;
   font-family: $copy;
   font-weight: $font-weight-regular;
   line-height: 1.5em;
   text-align: left;
 }
 
-body {
-  @include copy;
-}
-
 p {
-  @include copy;
   margin: 0 0 1em;
 }
 
