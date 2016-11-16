@@ -8,11 +8,15 @@
 // Region Selector Classes
 .regionSelector-americas {
   @include make-md-column(6);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .regionSelector-asia-pacific {
   @include make-sm-column(6);
   @include make-md-column(3);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .regionSelector-close {
@@ -25,6 +29,8 @@
 .regionSelector-europe {
   @include make-sm-column(6);
   @include make-md-column(3);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .regionSelector-flag-icon {
@@ -113,11 +119,13 @@
 
 .regionSelector-row {
   @include make-row;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 @media only screen and (min-width: $screen-sm-min) {
   .regionSelector-americas-list {
     column-count: 2;
-    column-gap: $grid-gutter-width;
+    column-gap: 15px;
   }
 }
