@@ -1,6 +1,7 @@
 //main nav
 .main-nav {
-  background: $gray-dark;
+  @include subhead;
+  background: $white;
   border: 0;
   border-radius: 0;
   margin: 0;
@@ -15,23 +16,24 @@
 .navbar-nav {
 
   .navbar-topLink {
-    color: $white;
+    color: $gray-darker;
     display: block;
+    font-weight: $font-weight-black;
     line-height: 2.1rem;
-    padding: 21px 10px;
+    padding: 20px 30px;
     text-decoration: none;
 
     &:hover,
     &:focus,
     &:visited {
-      background: $gray-darker;
+      background-color: transparent;
+      border-bottom: 3px solid $brand-primary;
     }
   }
 
   .navbar-topItem {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: $font-weight-bold;
-    text-transform: uppercase;
 
     &.open {
       > .navbar-topLink {
@@ -41,7 +43,7 @@
 
     .navbar-dropDownLink,
     .navbar-tertiary-dropDownLink {
-      color: $white;
+      color: $gray-darker;
       font-size: .95em;
       line-height: 1.5em;
       padding: 6px 15px;
@@ -62,7 +64,6 @@
       margin: 0;
       padding: 6px 15px;
       text-decoration: none;
-      text-transform: uppercase;
       width: 100%;
 
       &:hover,
@@ -105,7 +106,7 @@
 
 //make sure menu aligns with right side of buttons in desktop
 .navbar-menu {
-  float: right;
+  float: left;
   width: auto;
 }
 
@@ -121,7 +122,7 @@
   position: relative;
 
   &:hover {
-    background-color: $gray;
+    background-color: $gray-base;
   }
 }
 
@@ -156,14 +157,11 @@
 }
 
 .navbar-brand {
-  background-color: $gray-darker;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg');
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/sexyNav.png');
   background-position: 10px 14px;
   background-repeat: no-repeat;
-  background-size: 140px 36px;
-  height: 63px;
   position: relative;
-  width: 160px;
+  width: 150px;
 }
 
 .navbar-search {
@@ -173,11 +171,6 @@
   padding: 10px;
 }
 
-.navbar-searchContainer {
-  float: right;
-  width: 300px;
-}
-
 .navbar-phoneicon,
 .navbar-chaticon,
 .navbar-hamburger,
@@ -185,7 +178,7 @@
   text-align: center;
 
   &::after {
-    color: $white;
+    color: $gray-darkest;
     display: none;
     font-family: 'FontAwesome';
     padding: 23px 0 24px;
@@ -231,15 +224,18 @@
   }
 }
 
-.navbar-searchicon {
+.navbar-searchContainer {
+  border-left: solid 1px $gray-darker;
   float: right;
-  width: 12px;
+}
+
+.navbar-searchicon {
 
   &::after {
+    color: $gray-dark;
     content: '\f002';
     display: inline-block;
-    font-size: 1vw;
-    margin-right: 25px;
+    font-size: 1.5vw;
   }
 }
 
@@ -439,11 +435,6 @@
   .navbar-activeArrow {
     left: 0;
     right: 0;
-  }
-
-  .navbar-searchContainer {
-    margin-right: auto;
-    width: 100%;
   }
 
   .main-nav {

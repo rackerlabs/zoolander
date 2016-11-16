@@ -1,10 +1,10 @@
 // see styleguide/_themes/global/scss/_bootstrap_overrides.scss for sass lint overrides.
 
 $ceiling-margin: floor($navbar-margin-bottom / 4);
-$ceiling-font-size: 10px;
+$ceiling-font-size: 1.5rem;
 
 .ceiling {
-  background: $white;
+  background: $blue-gray;
   border: 0;
   border-radius: 0;
   display: none;
@@ -12,7 +12,6 @@ $ceiling-font-size: 10px;
   font-weight: $font-weight-black;
   margin: 0;
   min-height: $line-height-computed;
-  text-transform: uppercase;
 }
 
 @media screen and (min-width: $screen-md-min) {
@@ -33,15 +32,12 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-menuInline-item {
-  border-right: 1px solid $gray-light;
+  border-left: 1px solid $white;
   display: inline-block;
+  font-family: $subhead;
   font-weight: $font-weight-bold;
   margin: floor($ceiling-margin + 2) 0;
   padding: 0 floor($ceiling-margin + 2);
-
-  &:last-child {
-    border: 0;
-  }
 }
 
 .ceiling-menuInline-itemPartners {
@@ -127,6 +123,7 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-dropdownToggle {
+  border-left: 1px solid $gray-lightest;
   color: $white;
   font-size: $ceiling-font-size;
   line-height: 20px;
