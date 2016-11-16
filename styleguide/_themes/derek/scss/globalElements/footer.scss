@@ -2,6 +2,11 @@
   background-color: $gray-dark;
 }
 
+.footer-container {
+  @include make-container;
+  padding: 0;
+}
+
 .footer-menu {
   list-style: none;
   margin: 0;
