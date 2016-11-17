@@ -315,46 +315,44 @@
   <!--[rug]-->
 <div class="hidden-xs hidden-sm rug">
   <div class="container rug-container">
-    <div class="row">
-      <div class="col-sm-3">
-        <h5 class="rug-head">We've got your back</h5>
-        <h4 class="rug-subhead">24<small>x</small>7<small>x</small>365</h4>
-      </div>
-      <div class="col-sm-3">
-        <div class="row">
-          <div class="col-md-2">
-            <i class="fa fa-mobile fa-4x rug-icon"></i>
-          </div>
-          <div class="col-md-10 rug-phone-text">
-            <a class="rug-link rug-link-hover" href="tel:+18448585963">1-844-858-5963</a> Sales<br>
-            <a class="rug-link rug-link-hover" href="tel:+18009614454">1-800-961-4454</a> Support
-          </div>
+    <div class="col-md-3">
+      <h5 class="rug-head">We've got your back</h5>
+      <h4 class="rug-subhead">24<small>x</small>7<small>x</small>365</h4>
+    </div>
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-3 col-lg-2">
+          <i class="fa fa-mobile fa-4x rug-icon"></i>
+        </div>
+        <div class="col-md-9 col-lg-10 rug-phone-text">
+          <a class="rug-link rug-link-hover" href="tel:+18448585963">1-844-858-5963</a> Sales<br>
+          <a class="rug-link rug-link-hover" href="tel:+18009614454">1-800-961-4454</a> Support
         </div>
       </div>
-      <div class="col-sm-3">
-        <a href="#chat">
-          <div class="row">
-            <div class="col-md-3">
-              <i class="fa fa-comments fa-3x rug-icon"></i>
-            </div>
-            <div class="col-md-9 rug-link rug-link-hover rug-chat-text">
-              Live Sales Chat
-            </div>
+    </div>
+    <div class="col-md-3">
+      <a href="#chat">
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <i class="fa fa-comments fa-3x rug-icon"></i>
           </div>
-        </a>
-      </div>
-      <div class="col-sm-3">
-        <a href="/information/contactus#form">
-          <div class="row">
-            <div class="col-md-3">
-              <i class="fa fa-envelope-o fa-3x rug-icon"></i>
-            </div>
-            <div class="col-md-9 rug-link rug-link-hover rug-email-text">
-              Email Us
-            </div>
+          <div class="col-md-8 col-lg-9 rug-link rug-link-hover rug-chat-text">
+            Live Sales Chat
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="/information/contactus#form">
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <i class="fa fa-envelope-o fa-3x rug-icon"></i>
+          </div>
+          <div class="col-md-8 col-lg-9 rug-link rug-link-hover rug-email-text">
+            Email Us
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </div>
@@ -362,7 +360,7 @@
 
   <!--[footernav]-->
 <div class="half-padding-full footer">
-    <div class="container">
+    <div class="footer-container">
         <div class="row">
             <ul id="footer-accordion" class="footer-tabs">
                 <li class="col-sm-6"><a href="#footer-tab-1" class="footer-tab-link" data-toggle="tab">About Rackspace</a></li>
@@ -419,9 +417,9 @@
 
   <!--[basement]-->
 <div class="bg-dark-gray">
-  <div class="container basement">
+  <div class="basement-container">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <div class="region-select">
           <span class="uppercase white basement-region-select">Change your region:</span>
           <a class="basement-flag-link" data-toggle="modal" id="region" data-target="#regionSelect">
@@ -429,7 +427,7 @@
           </a>
         </div>
       </div>
-      <div class="col-sm-3 col-sm-push-6">
+      <div class="col-sm-3 col-sm-push-5">
         <p class="uppercase copyright basement-copyright">&reg; 2016 Rackspace US, Inc.</p>
         <div id="teconsent" style="display:none"></div>
       </div>
@@ -437,5 +435,156 @@
   </div>
 </div>
 <!--[/basement]-->
+
+<!-- Region Select Modal -->
+<div class="modal fade" id="regionSelect" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <button type="button" class="regionSelector-close close modal-no-header" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-body">
+        <div class="regionSelector-row">
+          <div class="regionSelector-americas">
+            <h3>Americas</h3>
+            <ul class="regionSelector-list regionSelector-americas-list">
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-unitedstates"></span>
+                  <strong>United States</strong> / English
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/es-us">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-unitedstates"></span>
+                  <strong>United States</strong> / Spanish
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/es-ar">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-argentina"></span>
+                  <strong>Argentina</strong> / Spanish
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/pt-br">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-brazil"></span>
+                  <strong>Brazil</strong> / Portuguese
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/es-cl">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-chile"></span>
+                  <strong>Chile</strong> / Spanish
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/es-co">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-colombia"></span>
+                  <strong>Colombia</strong> / Spanish
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/es-mx">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-mexico"></span>
+                  <strong>Mexico</strong> / Spanish
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/es-pe">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-peru"></span>
+                  <strong>Peru</strong> / Spanish
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/es-ve">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-venezuela"></span>
+                  <strong>Venezuela</strong> / Spanish
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="regionSelector-europe">
+            <h3>Europe</h3>
+            <ul class="regionSelector-list regionSelector-europe-list">
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://www.rackspace.co.uk">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-unitedkingdom"></span>
+                  <strong>United Kingdom</strong> / English
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://www.rackspace.nl">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-netherlands"></span>
+                  <strong>Netherlands</strong> / Dutch
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="/de">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-germany"></span>
+                  <strong>Germany</strong> / German
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="/de">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-switzerland"></span>
+                  <strong>Switzerland</strong> / German
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="/de">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-austria"></span>
+                  <strong>Austria</strong> / German
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="regionSelector-asia-pacific">
+            <h3>Asia Pacific</h3>
+            <ul class="regionSelector-list regionSelector-asia-pacific-list">
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/en-au">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-australia"></span>
+                  <strong>Australia</strong> / English
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/en-hk">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-hongkong"></span>
+                  <strong>Hong Kong</strong> / English
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/en-in">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-india"></span>
+                  <strong>India</strong> / English
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/en-ph">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-philippines"></span>
+                  <strong>Philippines</strong> / English
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="http://local.rackspace.com:7080/en-sg">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-singapore"></span>
+                  <strong>Singapore</strong> / English
+                </a>
+              </li>
+              <li class="regionSelector-list-item">
+                <a class="regionSelector-flag-link" href="/cn">
+                  <span class="regionSelector-flag-icon regionSelector-flag-icon-china"></span>
+                  <strong>China</strong> / Chinese
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </div></div><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><script src="/js/zoolander.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js"></script><script>$(".imacBanner-headline").fitText(1.1, { maxFontSize: '45px' });</script></html>

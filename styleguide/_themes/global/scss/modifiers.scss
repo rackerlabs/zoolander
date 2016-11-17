@@ -1,9 +1,9 @@
 $center: center;
 $full-width: 100%;
-$standard-padding: 40px 15px 60px 15px;
+$standard-padding: 40px ($grid-gutter-width / 2) 60px;
 $standard-padding-full: 40px 0 60px;
 $standard-padding-top: 40px 0 0;
-$half-padding: 20px 15px 30px;
+$half-padding: 20px ($grid-gutter-width / 2) 30px;
 $half-padding-full:  20px 0 30px;
 $half-padding-top: 20px;
 $left: left;

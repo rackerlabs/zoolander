@@ -16,7 +16,12 @@
 
 // Basement Classes
 .basement {
-  padding: 10px 15px;
+  padding: 20px ($grid-gutter-width / 2) 10px;
+}
+
+.basement-container {
+  @include make-container;
+  padding: 10px 0;
 }
 
 .basement-copyright {
