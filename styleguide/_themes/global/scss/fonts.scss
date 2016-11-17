@@ -12,7 +12,6 @@ $font-weight-black: 600;
   color: $color;
   font-family: $heading;
   font-weight: $font-weight-black;
-  text-transform: uppercase;
 }
 
 @mixin subhead($color: $gray-darkest) {
