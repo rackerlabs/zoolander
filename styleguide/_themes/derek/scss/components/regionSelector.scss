@@ -1,6 +1,6 @@
 // Flag icon mixin
 @mixin flag-icon($country, $x, $y) {
-  .regionSelector-flag-icon-#{$country} {
+  #{'.regionSelector-flag-icon-' + $country} {
     background-position: $x $y;
   }
 }

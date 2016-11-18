@@ -1,6 +1,6 @@
 // Basement Flag Mixin
 @mixin basement-flag($country, $x, $y) {
-  .basement-flag-#{$country} {
+  #{'.basement-flag-' + $country} {
     background-position: $x $y;
   }
 }

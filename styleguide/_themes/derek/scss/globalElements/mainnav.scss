@@ -221,14 +221,6 @@
     content: '\f086';
     font-size: 6.5vw;
   }
-
-  &.chat_hidden {
-    display: block;
-
-    &::after {
-      color: $gray-darker;
-    }
-  }
 }
 
 .navbar-searchicon {
