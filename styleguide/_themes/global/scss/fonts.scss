@@ -116,12 +116,20 @@ ul {
   }
 }
 
-.checks li::before {
-  content: '\f00c';
+.checks {
+  li {
+    &::before {
+      content: '\f00c';
+    }
+  }
 }
 
-.times li::before {
-  content: '\f00d';
+.times {
+  li {
+    &::before {
+      content: '\f00d';
+    }
+  }
 }
 
 
