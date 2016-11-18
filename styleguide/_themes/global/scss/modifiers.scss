@@ -2,6 +2,7 @@ $center: center;
 $full-width: 100%;
 $standard-padding: 40px ($grid-gutter-width / 2) 60px;
 $standard-padding-full: 40px 0 60px;
+$standard-padding-top: 40px 0 0;
 $half-padding: 20px ($grid-gutter-width / 2) 30px;
 $half-padding-full:  20px 0 30px;
 $half-padding-top: 20px;
@@ -51,6 +52,10 @@ img { max-width: 100%; }
 
 .standard-padding-full {
   padding: $standard-padding-full;
+}
+
+.standard-padding-top {
+  padding: $standard-padding-top;
 }
 
 //equal height columns
@@ -119,7 +124,7 @@ img { max-width: 100%; }
 
 .bg-crumpled-paper {
   background-color: $gray-light;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/bg-crumpled-paper.png');
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/BGcrumpled-paper.jpg');
 }
 
 // Text Colors

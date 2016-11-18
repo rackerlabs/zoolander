@@ -38,28 +38,6 @@ $body-bg:  #fff !default;
   padding: 35px;
 }
 
-.clickarea {
-  background-color: $white;
-  padding: 25px;
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  &:hover {
-    background-color: $gray-lighter;
-    cursor: pointer;
-  }
-}
-
 .river-light {
   .pattern-header {
     color: $gray-darkest;
