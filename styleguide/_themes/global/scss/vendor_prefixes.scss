@@ -88,6 +88,11 @@
   animation: fadein $duration;
 }
 
+@mixin font-smoothing {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }

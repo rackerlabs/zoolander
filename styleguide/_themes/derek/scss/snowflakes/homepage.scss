@@ -8,7 +8,7 @@
     }
 
     &:hover {
-      @extend .bg-light-gray;
+      background-color: $gray-lightest;
 
       hr {
         border-color: $brand-secondary;
@@ -58,7 +58,7 @@
 }
 
 .hostingOptions-productRow {
-  @extend .row-eq-height;
+  @include flex-box;
 }
 
 .hostingOptions-product {
@@ -127,7 +127,11 @@
 }
 
 .hostingOptions-learnMoreBottom {
-  @extend .bottom;
+  bottom: 0;
+  height: 10%;
+  position: absolute;
+  right: 0;
+  width: 100%;
 }
 
 .hostingOptions-learnMore {
@@ -270,6 +274,11 @@
   .logoShowcase {
     display: none;
   }
+
+  //equal height columns remove in small
+  .hostingOptions-productRow {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -283,3 +292,4 @@
     width: 50%;
   }
 }
+
