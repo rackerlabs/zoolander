@@ -26,7 +26,7 @@
 
 .basement-copyright {
   color: $gray-base;
-  text-align: right;
+  text-align: center;
 }
 
 .basementLp-copyright {
@@ -39,9 +39,11 @@
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/sprites/global_flags.png');
   background-position: 0 0;
   background-repeat: no-repeat;
-  float: left;
+  display: inline-block;
   height: 15px;
-  margin: 4px 0 0 5px;
+  margin: 0 0 0 5px;
+  position: relative;
+  top: 4px;
   width: 20px;
 }
 
@@ -100,7 +102,6 @@
 @include basement-flag(venezuela, 0, -340px);
 
 .basement-region-select {
-  float: left;
   font-size: 1.2rem;
 }
 
@@ -122,8 +123,22 @@
   top: .5px;
 }
 
+.region-select {
+  text-align: center;
+}
+
 @include basement-beforeColor('.fa-facebook-official', #3b5998);
 @include basement-beforeColor('.fa-twitter-square', #00aced);
 @include basement-beforeColor('.fa-youtube-square', #b00);
 @include basement-beforeColor('.fa-linkedin-square', #007bb6);
 @include basement-beforeColor('.fa-google-plus-square', #dd4b39);
+
+@media screen and (min-width: $screen-sm-min) {
+  .basement-copyright {
+    text-align: right;
+  }
+
+  .region-select {
+    text-align: left;
+  }
+}
