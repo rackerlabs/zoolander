@@ -1,0 +1,21 @@
+.pager {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pager-previous {
+  display: inline;
+  margin-right: 2.5rem;
+}
+
+.pager-next {
+  display: inline;
+  margin-left: 2.5rem;
+}
+
+.pager-current {
+  display: inline;
+  padding: .25rem;
+}
