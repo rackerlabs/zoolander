@@ -1,28 +1,5 @@
-.events-banner {
-  @include make-container-fluid;
-  @include make-banner;
+.imacBanner-events {
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/solve-bannerv2.jpg');
-  height: $banner-height-medium;
-  margin-top: 24px;
-}
-
-.events-bannerRow {
-  @include make-row;
-}
-
-.events-bannerCol {
-  @include make-sm-column(6);
-  @include make-sm-column-push(3);
-  text-align: center;
-}
-
-.events-bannerTitle {
-  @include heading($white);
-  font-size: $font-size-h1;
-  line-height: 1.1em;
-  margin-bottom: .5rem;
-  margin-top: $banner-text-margin-medium;
-  text-align: center;
 }
 
 // Main Events Page.
