@@ -97,21 +97,17 @@ ul {
   list-style: none;
   padding-left: 1.3em;
 
-  &.teal {
-    li {
-      &::before {
-        color: $teal-dark;
-      }
+  &.teal > li {
+    &::before {
+      color: $teal-dark;
     }
   }
 
-  &.green {
-    li {
-      &::before {
-        color: $brand-success;
-        }
-      }
+  &.green > li {
+    &::before {
+      color: $brand-success;
     }
+  }
 
   li {
     list-style: none;
