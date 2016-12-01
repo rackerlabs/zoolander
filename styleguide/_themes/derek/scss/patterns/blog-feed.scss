@@ -1,24 +1,18 @@
-@mixin blogFeed-textElements {
-  color: $gray-light;
-  font-size: .9em;
-  font-weight: $font-weight-bold;
-  line-height: 1.5em;
-}
-
-.blogFeed-date,
-.blogFeed-excerpt,
-.blogFeed-author,
-.blogFeed-link,
-.blogFeed-linkIcon {
-  @include blogFeed-textElements;
-}
-
 .blogFeed-item {
   background-color: $white;
   margin: 15px 5px;
   padding-bottom: 64px;
   position: relative;
   width: 100%;
+
+  &:hover {
+    background-color: $gray-lighter;
+    text-decoration: none;
+
+    .blogFeed-hr {
+      border-top-color: $gray-light;
+    }
+  }
 }
 
 .blogFeed-imageContainer {
@@ -26,7 +20,6 @@
 }
 
 .blogFeed-image {
-  @include sepia-filter;
   width: 100%;
 }
 
@@ -38,10 +31,6 @@
   padding-top: 15px;
 }
 
-.blogFeed-title {
-  color: $gray-darker;
-}
-
 .blogFeed-author {
   font-size: .7em;
 }
@@ -50,15 +39,10 @@
   margin-bottom: 5px;
 }
 
-.blogFeed-link {
-  @include center-block;
-  padding: 5px 0 15px;
+.blogFeed-more {
+  color: $brand-primary;
+  font-weight: $font-weight-black;
   text-align: center;
-  text-decoration: none;
-
-  &:hover {
-    color: $gray-light;
-  }
 }
 
 .blogFeed-linkContainer {
