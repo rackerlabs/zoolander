@@ -5,7 +5,7 @@
   }
 }
 
-//Social Icon Color Mixin
+// Social Icon Color Mixin
 @mixin basement-beforeColor($class, $color) {
   #{$class} {
     &::before {
@@ -36,7 +36,6 @@
 }
 
 .basement-flag-icon {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/sprites/global_flags.png');
   background-position: 0 0;
   background-repeat: no-repeat;
   display: inline-block;
