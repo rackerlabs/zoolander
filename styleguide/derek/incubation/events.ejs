@@ -1,0 +1,78 @@
+<%- partial("../_partials/_ceiling") %>
+<%- partial("../_partials/_mainnav") %>
+<div class="contentOffset">
+  <!-- Banner Region -->
+  <div class="imacBanner imacBanner-events">
+    <div class="imacBanner-container">
+      <div class="imacBanner-textRow">
+        <div class="imacBanner-textContainer imacBanner-headlineSmall">
+          <h2 class="imacBanner-headline">
+            <div class="field-banner-header">
+              Rackspace Events Calendar
+            </div>
+          </h2>
+          <div class="imacBanner-line left-top"></div>
+          <div class="imacBanner-line left-bottom"></div>
+          <div class="imacBanner-line right-bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-light-gray">
+    <div class="eventsOverview">
+      <div class="eventsOverview-row">
+        <div class="eventsOverview-searchFilter">
+          <div class="eventsOverview-searchFilter-label">Find An Event</div>
+          <div class="eventsOverview-searchFilter-eventType">
+            <form method="post" action="javascript:void(0);">
+              <select class="eventsOverview-searchFilter-eventTypeSelect">
+                <option disabled="disabled" selected="selected">Event Type</option>
+                <option value="1">All</option>
+                <option value="2">Customer Events</option>
+                <option value="3">Field Events</option>
+                <option value="4">Forum</option>
+                <option value="5">Tradeshow/Conference</option>
+                <option value="6">Training</option>
+                <option value="7">Webinar</option>
+              </select>
+              <input type="submit" class="eventsOverview-searchFilter-eventTypeSubmit" value="Show Results"/>
+            </form>
+          </div>
+        </div>
+        <div class="eventsOverview-searchResults">
+          <% for(var i = 0; i < 4; i++) { %>
+            <div class="eventsOverview-weekTitle">
+              Week of September <%= i * 7 + 1 %>, 2016
+            </div>
+            <% for(var j = i; j < i + i % 3 + 1; j++) { %>
+              <div class="eventsOverview-weekEvent">
+                <div class="eventsOverview-weekEvent-header">
+                  <div class="eventsOverview-weekEvent-headerTitle">Rackspace::Solve San Francisco</div>
+                  <div class="eventsOverview-weekEvent-headerLocation">San Francisco, CA</div>
+                </div>
+                <div class="eventsOverview-weekEvent-date">September <%= i * 7 + 1 + j %>, 2016</div>
+                <div class="eventsOverview-weekEvent-details">
+                  Andouille corned beef pig doner. Jowl frankfurter ball tip flank short loin short ribs. Tri-tip prosciutto leberkas capicola pork belly fatback meatball, biltong venison jerky hamburger picanha. Corned beef turducken tongue ribeye, shankle salami boudin. Boudin doner shankle t-bone ball tip short loin tongue short ribs ham.
+                </div>
+                <a class="eventsOverview-weekEvent-learnMore" href="/derek/incubation/events-interior">Learn More</a>
+              </div>
+            <% } %>
+          <% } %>
+          <ul class="eventsOverview-pagination">
+            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPagePrev" href="javascript:void(0)">&lt;</a></li>
+            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">1</a></li>
+            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPageActive" href="javascript:void(0)">2</a></li>
+            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">3</a></li>
+            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">4</a></li>
+            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPageNext" href="javascript:void(0)">&gt;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%- partial("../_partials/_rug") %>
+<%- partial("../_partials/_footer") %>
+<%- partial("../_partials/_basement") %>
+</div>

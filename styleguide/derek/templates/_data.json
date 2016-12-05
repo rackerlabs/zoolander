@@ -1,0 +1,12 @@
+{
+  "index": {
+    "css": "css/derek.css",
+    "theme_name": "derek"
+  },
+  "section-overview": {
+    "css": "css/derek.css"
+  },
+  "product-overview": {
+    "css": "css/derek.css"
+  }
+}

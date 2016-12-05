@@ -1,3 +1,4 @@
+//used for events
 @mixin make-banner {
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,46 +11,11 @@ $banner-height-medium: 225px;
 $banner-text-margin-large: 18%;
 $banner-text-margin-medium: 10%;
 
-.banner {
-  @include make-banner;
-
-  &.large {
-    height: $banner-height-large;
-
-    .banner-text {
-      margin-top: $banner-text-margin-large;
-    }
-  }
-
-  &.medium {
-    height: $banner-height-medium;
-
-    .banner-text {
-      margin-top: $banner-text-margin-medium;
-    }
-  }
-
-  &.outlook {
-    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/o365-overview.jpg');
-  }
-
-  .header-content {
-    margin-top: 25px;
-  }
-}
-
-.banner-headline {
-  @include heading($white);
-  font-size: 4rem;
-  line-height: 3.75rem;
-  text-align: center;
-}
 
 .imacBanner {
+  @include make-banner;
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/collaboration-2.jpg');
   background-position: right center;
-  background-size: cover;
-  color: $white;
   min-height: 220px;
   overflow: hidden;
   padding: 50px 0;
@@ -82,6 +48,7 @@ $banner-text-margin-medium: 10%;
   font-weight: 700;
   line-height: .9em;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .imacBanner-textContainer {
@@ -152,14 +119,6 @@ $banner-text-margin-medium: 10%;
 }
 
 @media only screen and (max-width: $screen-xs-max) {
-  .banner {
-    min-height: 200px;
-
-    .header-content {
-      margin-top: 19px;
-    }
-  }
-
   .imacBanner {
     background-blend-mode: color;
     background-color: $black;

@@ -1,13 +1,14 @@
 // see styleguide/_themes/global/scss/_bootstrap_overrides.scss for sass lint overrides.
 
 $ceiling-margin: floor($navbar-margin-bottom / 4);
-$ceiling-font-size: 1.5rem;
+$navigation-font-size: 1.25rem;
 
 .ceiling {
   background: $blue-gray;
   border: 0;
   border-radius: 0;
-  font-size: $ceiling-font-size;
+  font-family: $copy;
+  font-size: $navigation-font-size;
   font-weight: $font-weight-black;
   margin: 0;
   min-height: $line-height-computed;
@@ -21,7 +22,6 @@ $ceiling-font-size: 1.5rem;
   .ceiling-container {
     margin: 0 auto;
     max-width: 1280px;
-    padding: 0;
     width: 100%;
   }
 }
@@ -36,35 +36,32 @@ $ceiling-font-size: 1.5rem;
 .ceiling-menuInline-item {
   border-left: 1px solid $gray-base;
   display: inline-block;
-  font-family: $subhead;
+  float: left;
   font-weight: $font-weight-bold;
-  height: 40px;
-  padding: 10px floor($ceiling-margin + 5);
+
+  &.open,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($blue-gray, 10%);
+    cursor: pointer;
+  }
 }
 
 .ceiling-menuInline-link {
   color: $white;
-  font-size: $ceiling-font-size;
+  display: block;
+  font-size: $navigation-font-size;
   line-height: 16px;
+  padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
   vertical-align: middle;
 
-  &:hover {
-    color: $gray-darker;
-    text-decoration: underline;
-  }
-}
-
-.ceiling-menuInline-noLink {
-  line-height: 16px;
-  vertical-align: middle;
-}
-
-.ceiling-menuContact {
-  float: left;
-
-  &:first-child {
-    margin-left: 0;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    text-decoration: none;
   }
 }
 
@@ -90,12 +87,12 @@ $ceiling-font-size: 1.5rem;
 }
 
 .ceiling-dropdownMenu {
+  background-color: darken($blue-gray, 5%);
   border-radius: 0;
   color: $white;
   display: none;
   left: auto;
   list-style: none;
-  margin: 2px 0 0;
   padding: 0;
   position: absolute;
   right: 0;
@@ -105,23 +102,21 @@ $ceiling-font-size: 1.5rem;
 
 .ceiling-dropdownMenu-item {
   color: $white;
-  font-size: $ceiling-font-size;
+  font-size: $navigation-font-size;
   margin: 0;
   padding: 0;
-}
 
-.ceiling-dropdownMenu-gray {
-  background-color: $gray-base;
-}
-
-.ceiling-dropdownMenu-green {
-  background-color: $brand-success;
+  &:hover {
+    background-color: $brand-success;
+  }
 }
 
 .ceiling-dropdownToggle {
   color: $white;
-  font-size: $ceiling-font-size;
-  line-height: 20px;
+  display: block;
+  font-size: $navigation-font-size;
+  line-height: 16px;
+  padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
 
   &:hover,
@@ -135,25 +130,5 @@ $ceiling-font-size: 1.5rem;
     content: '\f0d7';
     font-family: 'FontAwesome';
     margin-left: 5px;
-  }
-}
-
-.ceiling-dropdownToggle-green {
-  background-color: $brand-success;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: lighten($brand-success, 5%);
-  }
-}
-
-.ceiling-dropdownToggle-gray {
-  background-color: $gray-base;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: lighten($gray-base, 5%);
   }
 }

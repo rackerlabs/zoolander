@@ -12,7 +12,6 @@ $font-weight-black: 600;
   color: $color;
   font-family: $heading;
   font-weight: $font-weight-black;
-  text-transform: uppercase;
 }
 
 @mixin subhead($color: $gray-darkest) {
@@ -24,21 +23,26 @@ $font-weight-black: 600;
   text-align: left;
 }
 
-@mixin copy($color: $gray-darkest) {
-  color: $color;
+body {
+  color: $gray-darkest;
   font-family: $copy;
   font-weight: $font-weight-regular;
   line-height: 1.5em;
   text-align: left;
 }
 
-body {
-  @include copy;
+p {
+  margin: 0 0 1em;
 }
 
-p {
-  @include copy;
-  margin: 0 0 1em;
+p > a {
+  cursor: pointer;
+  font-weight: $font-weight-bold;
+  text-decoration: underline;
+
+  &:hover {
+    color: $brand-secondary;
+  }
 }
 
 h1 {
@@ -93,21 +97,17 @@ ul {
   list-style: none;
   padding-left: 1.3em;
 
-  &.teal {
-    li {
-      &::before {
-        color: $teal-dark;
-      }
+  &.teal > li {
+    &::before {
+      color: $teal-dark;
     }
   }
 
-  &.green {
-    li {
-      &::before {
-        color: $brand-success;
-        }
-      }
+  &.green > li {
+    &::before {
+      color: $brand-success;
     }
+  }
 
   li {
     list-style: none;
@@ -122,29 +122,25 @@ ul {
   }
 }
 
-.checks li::before {
-  content: '\f00c';
+.checks {
+  li {
+    &::before {
+      content: '\f00c';
+    }
+  }
 }
 
-.times li::before {
-  content: '\f00d';
+.times {
+  li {
+    &::before {
+      content: '\f00d';
+    }
+  }
 }
 
 
 li {
   padding: 0;
-}
-
-a {
-  color: $gray-dark;
-  cursor: pointer;
-  font-weight: $font-weight-bold;
-  line-height: 16px;
-  text-decoration: underline;
-
-  &:hover {
-    color: $brand-secondary;
-  }
 }
 
 strong,
@@ -158,8 +154,7 @@ code,
 }
 
 i {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  @include font-smoothing;
   color: $black;
   font-style: normal;
   font-variant: normal;

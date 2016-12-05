@@ -1,7 +1,7 @@
 .extLink {
-
   &::after {
     content: '\f08e';
+    display: inline-block;
     font-family: 'FontAwesome';
     margin-left: 5px;
   }

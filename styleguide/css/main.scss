@@ -23,7 +23,7 @@ $bg-blue-gray: #2e3238;
   top: 0;
   transition: .5s;
   width: 250px;
-  z-index: 9999;
+  z-index: 1040;
 }
 
 .navZoolander-slideBtn {
@@ -34,7 +34,7 @@ $bg-blue-gray: #2e3238;
   padding: 8px 15px;
   position: fixed;
   transition: .5s;
-  z-index: 9999;
+  z-index: 1040;
 
   &::after {
     content: '\f053';

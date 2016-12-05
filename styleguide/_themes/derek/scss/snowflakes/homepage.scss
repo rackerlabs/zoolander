@@ -1,80 +1,3 @@
-//to support legacy for now
-
-.homepage-hero {
-  @extend .full-width;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/homepage.jpg');
-  background-position: 25% 50%;
-  background-repeat: no-repeat;
-  background-size: auto;
-  border-bottom: 0;
-  height: 100%;
-  margin-bottom: 40px;
-  overflow: visible;
-  position: relative;
-  top: 60px;
-
-  h2 {
-    @extend .white;
-    @extend .left;
-    font-size: 34px;
-    font-weight: 300;
-    line-height: 40px;
-    padding-top: 20px;
-  }
-
-  p {
-    font-size: 16px;
-    letter-spacing: 1px;
-    line-height: 24px;
-    padding-bottom: 10px;
-  }
-}
-
-#hosting-options {
-  text-align: center;
-
-  .product {
-
-    p {
-      margin-bottom: 30px;
-    }
-
-    &:hover {
-      @extend .bg-light-gray;
-
-      hr {
-        border-color: $brand-secondary;
-	  }
-
-      h3,
-      a {
-        color: $brand-secondary;
-	  }
-    }
-  }
-}
-
-#solutions {
-
-  a {
-    text-decoration: none;
-  }
-
-  .solution:hover {
-
-    .border-white {
-      border-color: $mustard;
-
-      i {
-        color: $mustard;
-	  }
-    }
-  }
-}
-
-
-//new code
-
 .clear-container {
   @include make-sm-column(6);
   clear: both;
@@ -89,7 +12,7 @@
 }
 
 .hostingOptions-productRow {
-  @extend .row-eq-height;
+  @include flex-box;
 }
 
 .hostingOptions-product {
@@ -114,16 +37,16 @@
 }
 
 .hostingOptions-logo {
-  @include make-sm-column(5);
-  @include make-sm-column-push(3.5);
+  @include make-sm-column(3.5);
+  @include make-sm-column-push(4.25);
   @include make-xs-column(3);
   @include make-xs-column-push(4.5);
   text-align: center;
 }
 
 .hostingOptions-logoWide {
-  @include make-sm-column(10);
-  @include make-sm-column-push(1);
+  @include make-sm-column(7);
+  @include make-sm-column-push(2.5);
   @include make-xs-column(6);
   @include make-xs-column-push(3);
 }
@@ -158,7 +81,11 @@
 }
 
 .hostingOptions-learnMoreBottom {
-  @extend .bottom;
+  bottom: 0;
+  height: 10%;
+  position: absolute;
+  right: 0;
+  width: 100%;
 }
 
 .hostingOptions-learnMore {
@@ -254,6 +181,7 @@
 
 .logoShowcase-row {
   @include make-row;
+  text-align: center;
 }
 
 .logoShowcase-logoItem {
@@ -299,6 +227,11 @@
 
   .logoShowcase {
     display: none;
+  }
+
+  //equal height columns remove in small
+  .hostingOptions-productRow {
+    display: block;
   }
 }
 

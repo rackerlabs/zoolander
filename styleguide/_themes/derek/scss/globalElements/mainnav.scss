@@ -1,9 +1,8 @@
-//main nav
 .main-nav {
-  @include subhead;
   background: $white;
   border: 0;
   border-radius: 0;
+  font-family: $copy;
   margin: 0;
 
   .navbar-menuContainer {
@@ -21,7 +20,7 @@
     display: block;
     font-weight: $font-weight-black;
     line-height: 2.1rem;
-    padding: 20px 23px;
+    padding: 20px 23px 17px;
     text-decoration: none;
 
     &:hover,
@@ -33,7 +32,7 @@
   }
 
   .navbar-topItem {
-    font-size: 1.5rem;
+    font-size: $navigation-font-size;
     font-weight: $font-weight-bold;
 
     &.open {
@@ -46,27 +45,12 @@
     .navbar-dropDownLink,
     .navbar-tertiary-dropDownLink {
       color: $white;
-      font-size: .95em;
-      line-height: 1.5em;
+      cursor: pointer;
+      font-size: $navigation-font-size;
+      line-height: 2rem;
       padding: 6px 15px;
       text-decoration: none;
       text-transform: none;
-
-      &:hover,
-      &:visited,
-      &:focus {
-        background-color: transparent;
-      }
-    }
-
-    .navbar-dropDownLabel {
-      color: $gray-light;
-      font-size: .95em;
-      line-height: 1.5em;
-      margin: 0;
-      padding: 6px 15px;
-      text-decoration: none;
-      width: 100%;
 
       &:hover,
       &:visited,
@@ -95,17 +79,6 @@
   padding: 0;
 }
 
-.navbar-footer {
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-}
-
-.navbar-footerLink {
-  @include subhead;
-  color: $white;
-}
-
 //make sure menu aligns with right side of buttons in desktop
 .navbar-menu {
   float: left;
@@ -124,12 +97,13 @@
   position: relative;
 
   &:hover {
-    background-color: $gray-base;
+    background-color: darken($brand-primary, 5%);
+    cursor: pointer;
   }
 }
 
 .navbar-tertiary-dropDownMenu {
-  background-color: $gray-base;
+  background-color: darken($brand-primary, 5%);
   border: 0;
   box-shadow: none;
   left: 100%;
@@ -141,20 +115,8 @@
 
 .navbar-tertiary-dropDownItem {
   &:hover {
-    background-color: lighten($gray-base, 5%);
-  }
-}
-
-.navbar-dropDownSub {
-  position: relative;
-}
-
-.navbar-dropDownSub > .navbar-dropDown-trigger {
-
-  &::after {
-    content: '\f0da';
-    float: right;
-    font-family: 'FontAwesome';
+    background-color: darken($brand-primary, 10%);
+    cursor: pointer;
   }
 }
 
@@ -162,21 +124,31 @@
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/slimLogo.svg');
   background-position: left top;
   background-repeat: no-repeat;
-  height: 40px;
-  margin-left: 20px;
+  height: 35px;
+  margin: 5px 20px;
   position: relative;
   width: 150px;
 }
 
 .navbar-phoneicon,
 .navbar-chaticon,
+.navbar-emailicon,
 .navbar-searchicon {
+  display: block;
+  padding: 12px floor($ceiling-margin + 5);
   text-align: center;
 
-  &::after {
+  &::before {
     color: $white;
     font-family: 'FontAwesome';
-    //padding: 23px 0 24px;
+    font-size: $navigation-font-size;
+    margin-right: 5px;
+  }
+
+  &:hover {
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
   }
 }
 
@@ -184,13 +156,8 @@
   &::after {
     content: '\f00d';
     display: none;
-    font-size: 5.5vw;
-  }
-
-  &.collapsed {
-    &::after {
-      content: '\f0c9';
-    }
+    font-family: 'FontAwesome';
+    font-size: 2rem;
   }
 }
 
@@ -198,14 +165,17 @@
   color: $white;
   text-decoration: none;
 
-  &::after {
+  &::before {
     content: '\f095';
-    font-size: 2rem;
   }
+}
 
-  &:hover {
-    color: $white;
-    text-decoration: none;
+.navbar-emailicon {
+  color: $white;
+  text-decoration: none;
+
+  &::before {
+    content: '\f0e0';
   }
 }
 
@@ -213,22 +183,8 @@
   color: $white;
   text-decoration: none;
 
-  &::after {
+  &::before {
     content: '\f086';
-    font-size: 2rem;
-  }
-
-  &:hover {
-    color: $white;
-    text-decoration: none;
-  }
-
-  &.chat_hidden {
-    display: block;
-
-    &::after {
-      color: $gray-darker;
-    }
   }
 }
 
@@ -242,12 +198,13 @@
 }
 
 //main nav on desktop
-@media only screen and (min-width: $screen-md-min) {
+@media only screen and (min-width: $screen-xs-max) {
   .navbar-topLink-dropDown {
 
     &::after {
       content: '\f0d7';
       font-family: 'FontAwesome';
+      line-height: 1rem;
       margin-left: 10px;
     }
   }
@@ -258,12 +215,12 @@
   .navbar-nav {
 
     .navbar-topItem {
-      font-size: 1.25rem;
+      font-size: $navigation-font-size;
 
       .navbar-dropDownLink,
       .navbar-dropDownLabel,
       .navbar-tertiary-dropDownLink {
-        font-size: 1.25rem;
+        font-size: $navigation-font-size;
         padding: 7px 15px 7px 25px;
       }
 
@@ -321,17 +278,17 @@
     margin: 0 0 7.5px;
 
     .navbar-topItem {
-      font-size: 1.45rem;
+      font-size: $navigation-font-size;
 
       .navbar-dropDownLink,
       .navbar-dropDownLabel {
         border-bottom: 1px solid darken($brand-primary, 5%);
-        font-size: 1.45rem;
+        font-size: $navigation-font-size;
       }
 
       .navbar-tertiary-dropDownLink {
-        border-bottom: 1px solid darken($gray-base, 5%);
-        font-size: 1.45rem;
+        border-bottom: 1px solid darken($brand-primary, 10%);
+        font-size: $navigation-font-size;
       }
 
       .navbar-dropDownMenu {
@@ -339,7 +296,7 @@
       }
 
       .navbar-tertiary-dropDownMenu {
-        background-color: $gray-base;
+        background-color: darken($brand-primary, 5%);
       }
     }
 
@@ -356,24 +313,23 @@
   }
 
   .navbar-brand {
-    @include make-xs-column(4);
-    background-size: 100px 36px;
-  }
-
-  .navbar-activeArrow {
-    left: 0;
-    right: 0;
+    @include make-sm-column(4);
+    background-size: 95px 38px;
+    margin: 0;
+    padding: 0;
+    width: 95px;
   }
 
   .main-nav {
 
     .navbar-phoneicon,
     .navbar-chaticon,
+    .navbar-emailicon,
     .navbar-searchicon {
       @include make-xs-column(2);
       border-left: solid 1px $gray-darker;
 
-      &::after {
+      &::before {
         display: inline-block;
       }
     }
@@ -383,6 +339,7 @@
       &::after {
         content: '\f0c9';
         display: inline-block;
+        margin: 15px 10px;
       }
     }
 
@@ -395,7 +352,7 @@
       }
     }
 
-    .navbar-chaticon {
+    .navbar-phoneicon {
       border-left: 0;
     }
 
@@ -476,3 +433,27 @@
     content: '\f002';
   }
 }
+
+.navbar-menuInline {
+  float: right;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.menuInline-itemMobile {
+  border: 0;
+}
+
+.menuInline-linkMobile {
+  color: $gray-darkest;
+  padding: 18px 10px;
+
+  &:active {
+    color: $gray-darkest;
+  }
+}
+

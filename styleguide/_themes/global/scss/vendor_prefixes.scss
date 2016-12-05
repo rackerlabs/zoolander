@@ -82,11 +82,6 @@
   justify-content: center;
 }
 
-@mixin sepia-filter {
-  -webkit-filter: sepia(.9);
-  filter: sepia(90%);
-}
-
 @mixin text-stroke($width, $color) {
   -webkit-text-stroke: $width $color;
 }
@@ -97,6 +92,11 @@
   -ms-animation: fadein $duration;
   -o-animation: fadein $duration;
   animation: fadein $duration;
+}
+
+@mixin font-smoothing {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 @keyframes fadein {

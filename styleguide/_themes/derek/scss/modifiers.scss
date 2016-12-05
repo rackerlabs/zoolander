@@ -1,10 +1,5 @@
 $body-bg:  #fff !default;
 
-// Temporary to restrict to 960px
-.container {
-  max-width: 960px;
-}
-
 // Component
 .river {
   padding: 12px 0;
@@ -40,29 +35,7 @@ $body-bg:  #fff !default;
 
 .border-white {
   border: solid 1px $white;
-  padding: 15px;
-}
-
-.clickarea {
-  background-color: $white;
-  padding: 25px;
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  &:hover {
-    background-color: $gray-lighter;
-    cursor: pointer;
-  }
+  padding: 35px;
 }
 
 .river-light {

@@ -1,6 +1,6 @@
 // Flag icon mixin
 @mixin flag-icon($country, $x, $y) {
-  .regionSelector-flag-icon-#{$country} {
+  #{'.regionSelector-flag-icon-' + $country} {
     background-position: $x $y;
   }
 }
@@ -8,11 +8,15 @@
 // Region Selector Classes
 .regionSelector-americas {
   @include make-md-column(6);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .regionSelector-asia-pacific {
   @include make-sm-column(6);
   @include make-md-column(3);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .regionSelector-close {
@@ -25,10 +29,11 @@
 .regionSelector-europe {
   @include make-sm-column(6);
   @include make-md-column(3);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .regionSelector-flag-icon {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/sprites/global_flags.png');
   background-position: 0 0;
   background-repeat: no-repeat;
   float: left;
@@ -113,11 +118,13 @@
 
 .regionSelector-row {
   @include make-row;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 @media only screen and (min-width: $screen-sm-min) {
   .regionSelector-americas-list {
     column-count: 2;
-    column-gap: $grid-gutter-width;
+    column-gap: 15px;
   }
 }

@@ -51,10 +51,21 @@
   border: 0;
 }
 
+// Since chat_hidden has JS attached to it, just moving it here for now instead of changing classes.
+.navbar-chaticon {
+  &.chat_hidden {
+    display: block;
+
+    &::after {
+      color: $gray-darker;
+    }
+  }
+}
+
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
   .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
-    background: $gray-darker;
+    background: darken($brand-primary, 5%);
   }
 }
 
@@ -64,7 +75,7 @@
 
     &:focus,
     &:hover {
-      background-color: $gray-darker;
+      background-color: darken($brand-primary, 5%);
     }
   }
 
@@ -73,7 +84,7 @@
   }
 
   .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
-    background: $gray-darker;
+    background: darken($brand-primary, 5%);
   }
 
 }
