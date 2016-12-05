@@ -47,6 +47,17 @@
   transform: rotate($degrees);
 }
 
+@mixin expand-left($duration) {
+  -moz-transition: width ($duration);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: width ($duration);
+}
+
+@mixin opacity($level) {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=($level))';
+  filter: alpha(opacity=($level));
+}
+
 @mixin flex-box {
   display: -webkit-box;
   display: -ms-flexbox;

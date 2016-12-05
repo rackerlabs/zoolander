@@ -7,21 +7,23 @@ $ceiling-font-size: 1.5rem;
   background: $blue-gray;
   border: 0;
   border-radius: 0;
-  display: none;
   font-size: $ceiling-font-size;
   font-weight: $font-weight-black;
   margin: 0;
   min-height: $line-height-computed;
 }
 
-@media screen and (min-width: $screen-md-min) {
+@media screen and (min-width: $screen-xs-min) {
   .ceiling {
     display: block;
   }
-}
 
-.ceiling-container {
-  padding: 0;
+  .ceiling-container {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .ceiling-menuInline {
@@ -32,20 +34,16 @@ $ceiling-font-size: 1.5rem;
 }
 
 .ceiling-menuInline-item {
-  border-left: 1px solid $white;
+  border-left: 1px solid $gray-base;
   display: inline-block;
   font-family: $subhead;
   font-weight: $font-weight-bold;
-  margin: floor($ceiling-margin + 2) 0;
-  padding: 0 floor($ceiling-margin + 2);
-}
-
-.ceiling-menuInline-itemPartners {
-  border: 0;
+  height: 40px;
+  padding: 10px floor($ceiling-margin + 5);
 }
 
 .ceiling-menuInline-link {
-  color: $gray-darker;
+  color: $white;
   font-size: $ceiling-font-size;
   line-height: 16px;
   text-decoration: none;
@@ -80,8 +78,6 @@ $ceiling-font-size: 1.5rem;
 }
 
 .ceiling-dropdown {
-  border: 0;
-  padding: 0;
   position: relative;
 
   &::after {
@@ -123,11 +119,9 @@ $ceiling-font-size: 1.5rem;
 }
 
 .ceiling-dropdownToggle {
-  border-left: 1px solid $gray-lightest;
   color: $white;
   font-size: $ceiling-font-size;
   line-height: 20px;
-  padding: $padding-base-vertical $padding-base-horizontal;
   text-decoration: none;
 
   &:hover,

@@ -16,11 +16,12 @@
 .navbar-nav {
 
   .navbar-topLink {
+    border-bottom: 3px solid transparent;
     color: $gray-darker;
     display: block;
     font-weight: $font-weight-black;
     line-height: 2.1rem;
-    padding: 20px 30px;
+    padding: 20px 23px;
     text-decoration: none;
 
     &:hover,
@@ -37,13 +38,14 @@
 
     &.open {
       > .navbar-topLink {
-        background: $gray-darker;
+        background: $brand-primary;
+        color: $white;
       }
     }
 
     .navbar-dropDownLink,
     .navbar-tertiary-dropDownLink {
-      color: $gray-darker;
+      color: $white;
       font-size: .95em;
       line-height: 1.5em;
       padding: 6px 15px;
@@ -89,7 +91,7 @@
 
 .navbar-container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1280px;
   padding: 0;
 }
 
@@ -111,7 +113,7 @@
 }
 
 .navbar-dropDownMenu {
-  background: $gray-darker;
+  background: $brand-primary;
   border: 0;
   border-radius: 0;
   min-width: 230px;
@@ -157,37 +159,31 @@
 }
 
 .navbar-brand {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/sexyNav.png');
-  background-position: 10px 14px;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/slimLogo.svg');
+  background-position: left top;
   background-repeat: no-repeat;
+  height: 40px;
+  margin-left: 20px;
   position: relative;
   width: 150px;
 }
 
-.navbar-search {
-  background-color: $gray-darker;
-  display: none;
-  overflow: auto;
-  padding: 10px;
-}
-
 .navbar-phoneicon,
 .navbar-chaticon,
-.navbar-hamburger,
 .navbar-searchicon {
   text-align: center;
 
   &::after {
-    color: $gray-darkest;
-    display: none;
+    color: $white;
     font-family: 'FontAwesome';
-    padding: 23px 0 24px;
+    //padding: 23px 0 24px;
   }
 }
 
 .navbar-hamburger {
   &::after {
     content: '\f00d';
+    display: none;
     font-size: 5.5vw;
   }
 
@@ -199,20 +195,32 @@
 }
 
 .navbar-phoneicon {
-  float: right;
+  color: $white;
+  text-decoration: none;
 
   &::after {
-    content: '\f10b';
-    font-size: 7.5vw;
+    content: '\f095';
+    font-size: 2rem;
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
   }
 }
 
 .navbar-chaticon {
-  float: right;
+  color: $white;
+  text-decoration: none;
 
   &::after {
     content: '\f086';
-    font-size: 6.5vw;
+    font-size: 2rem;
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
   }
 
   &.chat_hidden {
@@ -224,48 +232,6 @@
   }
 }
 
-.navbar-searchContainer {
-  border-left: solid 1px $gray-darker;
-  float: right;
-}
-
-.navbar-searchicon {
-
-  &::after {
-    color: $gray-dark;
-    content: '\f002';
-    display: inline-block;
-    font-size: 1.5vw;
-  }
-}
-
-.navbar-activeArrow {
-  border-bottom: 10px solid $gray-darker;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  bottom: -1px;
-  display: none;
-  margin: auto;
-  position: absolute;
-  width: 0;
-}
-
-.navbar-searchInput {
-  border: 1px solid $gray-lighter;
-  outline: none;
-  padding: 3px;
-  width: 72%;
-}
-
-.navbar-searchButton {
-  float: right;
-  font-size: 1.2rem;
-  margin: 0;
-  opacity: .7;
-  padding: 6.5px;
-  width: 28%;
-}
-
 // After-nav offsets.
 .contentOffset {
   margin-top: 98px;
@@ -273,16 +239,6 @@
 
 .contentOffset-landingPage {
   margin-top: 50px;
-}
-
-@media only screen and (min-width: $screen-sm-min) {
-  .navbar-searchicon {
-    margin-left: 12px;
-  }
-
-  .navbar-activeArrow {
-    margin: 0 0 0 -5px;
-  }
 }
 
 //main nav on desktop
@@ -302,12 +258,12 @@
   .navbar-nav {
 
     .navbar-topItem {
-      font-size: 1.07rem;
+      font-size: 1.25rem;
 
       .navbar-dropDownLink,
       .navbar-dropDownLabel,
       .navbar-tertiary-dropDownLink {
-        font-size: .8em;
+        font-size: 1.25rem;
         padding: 7px 15px 7px 25px;
       }
 
@@ -317,7 +273,7 @@
     }
 
     .navbar-topLink {
-      padding: 21px 8px;
+      padding: 20px 10px;
     }
   }
 
@@ -330,38 +286,7 @@
   }
 }
 
-@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
-  .navbar-menu {
-    float: left;
-  }
-
-  .navbar-topLink-dropDown {
-
-    &::after {
-      content: '\f0d7';
-      font-family: 'FontAwesome';
-      margin-left: 3px;
-    }
-  }
-
-  .navbar-dropDown-trigger {
-
-    &::after {
-      content: '\f0d9';
-      left: 10px;
-    }
-  }
-
-  .navbar-dropDownMenu {
-    left: initial;
-    right: 0;
-  }
-
-  .navbar-tertiary-dropDownMenu {
-    right: 100%;
-  }
-}
 
 @media only screen and (max-width: $screen-xs-max) {
   //mainnav side caret for dropdowns
@@ -399,9 +324,13 @@
       font-size: 1.45rem;
 
       .navbar-dropDownLink,
-      .navbar-dropDownLabel,
+      .navbar-dropDownLabel {
+        border-bottom: 1px solid darken($brand-primary, 5%);
+        font-size: 1.45rem;
+      }
+
       .navbar-tertiary-dropDownLink {
-        border-bottom: 1px solid $gray-darker;
+        border-bottom: 1px solid darken($gray-base, 5%);
         font-size: 1.45rem;
       }
 
@@ -428,7 +357,6 @@
 
   .navbar-brand {
     @include make-xs-column(4);
-    background-position: center;
     background-size: 100px 36px;
   }
 
@@ -441,12 +369,19 @@
 
     .navbar-phoneicon,
     .navbar-chaticon,
-    .navbar-hamburger,
     .navbar-searchicon {
       @include make-xs-column(2);
       border-left: solid 1px $gray-darker;
 
       &::after {
+        display: inline-block;
+      }
+    }
+
+    .navbar-hamburger {
+
+      &::after {
+        content: '\f0c9';
         display: inline-block;
       }
     }
@@ -475,5 +410,69 @@
     &:hover {
       background: transparent;
     }
+  }
+}
+
+.navbar-search {
+  @include expand-left(.3s);
+  float: right;
+  height: 60px;
+  min-width: 60px;
+  overflow: hidden;
+  position: relative;
+  transition: width .3s;
+  width: 0%;
+}
+
+.navbar-search-input {
+  background: $white;
+  border: 0;
+  border-left: 1px solid $gray-base;
+  height: 60px;
+  margin: 0;
+  outline: none;
+  padding: 20px 65px 20px 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+
+.navbar-icon-search,
+.navbar-search-submit  {
+  cursor: pointer;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 60px;
+}
+
+.navbar-search-submit {
+  @include opacity(0);
+  background: $white;
+  border: 0;
+  color: transparent;
+  opacity: 0;
+  outline: 0;
+  z-index: -1;
+}
+
+.navbar-icon-search {
+  background: $white;
+  color: $gray-darker;
+  font-family: FontAwesome;
+  text-transform: none;
+  z-index: 90;
+
+  &::before {
+    content: '\f002';
   }
 }

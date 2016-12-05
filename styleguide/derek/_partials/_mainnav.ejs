@@ -1,10 +1,14 @@
 <!--[navigation]-->
   <nav class="main-nav navbar">
       <div class="navbar-container">
-          <div class="navbar-searchContainer hidden-xs">
-            <a class="navbar-searchicon navbar-searchDesktop" id="searchDesktop"></a>
-            <span class="navbar-searchText">Search</span>
-          </div>
+          <a class="navbar-hamburger collapsed" data-toggle="collapse" data-target="#main-navigation"></a>
+          <div id="navbar-search" class="navbar-search hidden-xs">
+        		<form>
+        			<input class="navbar-search-input" placeholder="Search" type="text" value="" name="search" id="search">
+        			<input class="navbar-search-submit" type="submit" value="">
+        			<span class="navbar-icon-search"></span>
+        		</form>
+        	</div>
           <div class="collapse navbar-collapse navbar-menuContainer" id="main-navigation">
             <ul class="nav navbar-nav navbar-menu">
               <li class="navbar-topItem"><a href="javascript:void(0)" class="navbar-topLink">Why Rackspace</a></li>
@@ -131,14 +135,5 @@
         </div>
       </div>
   </nav>
-  <div class="navbar-search">
-  <!--to restrict width on desktop-->
-    <div class="navbar-container">
-      <div class="navbar-searchContainer">
-        <input type="search" class="navbar-searchInput" placeholder="Search Term" />
-        <button class="navbar-searchButton button lead">Search</button>
-      </div>
-    </div>
-  </div>
 </div>
 <!--[/navigation]-->

@@ -55,11 +55,6 @@
 
   .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
     background: $gray-darker;
-
-    &:focus,
-    &:hover {
-      background-color: transparent;
-    }
   }
 }
 
@@ -72,7 +67,30 @@
       background-color: $gray-darker;
     }
   }
-  .navbar-nav .navbar-topLink-dropDown.navbar-topLink:hover {
-    background-color: $gray-dark;
+
+  .navbar-dropDownMenu > li.navbar-dropDownItem {
+    background-color: $brand-primary;
   }
+
+  .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
+    background: $gray-darker;
+  }
+
+}
+
+.navbar-search.navbar-search-open,
+.no-js .navbar-search {
+  width: 20%;
+}
+
+.navbar-search-open > .navbar-icon-search,
+.no-js > .navbar-search > .navbar-icon-search {
+  background: $white;
+  color: $gray-darker;
+  z-index: 11;
+}
+
+.navbar-search-open .navbar-search-submit,
+.no-js > .navbar-search > .navbar-search-submit {
+  z-index: 90;
 }
