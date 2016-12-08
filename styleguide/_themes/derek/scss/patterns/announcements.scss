@@ -11,7 +11,7 @@
 .announcement-icon {
   @include make-md-column(1);
   @include flex-box;
-  font-size: 3rem;
+  font-size: 4rem;
 
   .fa {
     color: $gray-base;

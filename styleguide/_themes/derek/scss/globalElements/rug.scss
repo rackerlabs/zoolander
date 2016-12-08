@@ -7,8 +7,17 @@
   padding: 15px 0 0 5px;
 }
 
+//Quick and Dirty fix before we take out the rug.
 .rug-container {
   padding: 15px 0;
+
+  .fa-3x {
+    font-size: 2.5em;
+  }
+
+  .fa-4x {
+    font-size: 3.5em;
+  }
 }
 
 .rug-email-text {
@@ -43,7 +52,9 @@
 .rug-phone-text {
   color: $white;
   float: left;
-  padding: 7px 15px;
+  font-size: 1.35rem;
+  line-height: 1.5rem;
+  padding: 7px 20px;
 }
 
 .rug-subhead {
