@@ -186,6 +186,6 @@ zoolanderSlideBtn.unbind().click(function(e){
 
 //Zoolander only solution for auto collapsing menu on example pages
 var url = window.location.pathname;
-if(url.match(/\/derek\/incubation\//gi) && url != '/derek/incubation/' || url.match(/\/derek\/solutions\//gi) && url != '/derek/solutions/'){
+if((url.match(/\/derek\/incubation\//gi) && url != '/derek/incubation/') || (url.match(/\/derek\/solutions\//gi) && url != '/derek/solutions/') || (url.match(/\/derek\/templates\//gi) && url != '/derek/templates/')){
     zoolanderSlideBtn.trigger('click');
 }
