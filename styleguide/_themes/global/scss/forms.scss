@@ -188,6 +188,23 @@ table {
   height: auto;
 }
 
+.form-actions {
+  .throbber {
+    animation: rotate .8s infinite linear;
+    background: none;
+    border: 2px solid $black;
+    border-radius: 50%;
+    border-right-color: transparent;
+    height: 15px;
+    width: 15px;
+
+    @keyframes rotate {
+      0%    { transform: rotate(0deg); }
+      100%  { transform: rotate(360deg); }
+    }
+  }
+}
+
 @media (min-width: $screen-sm-min) {
   .formModal-dialog {
     width: 440px;
