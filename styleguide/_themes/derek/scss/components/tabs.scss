@@ -1,94 +1,133 @@
-.nav-tabs {
-  border: 0;
+.rsTabs {
+  border-bottom: 0;
+  margin: 0 auto;
+  max-width: $screen-lg-min;
+}
+
+.rsTab-tab {
+  border: 1px solid $gray-lighter;
   margin-bottom: 0;
-  text-align: center;
+  padding: 0;
 
-  & > li {
-    background-color: $teal-dark;
-    border-top: 5px solid $teal-dark;
-    display: inline-block;
-    float: none;
-    padding: 0;
+  &:first-child {
+    margin-left: 10px;
+  }
 
-    &:hover {
-      border-top: 5px solid $white;
+  & > .rsTab-link {
+    @include border-radius(0);
+    border: 0;
+    border-color: transparent;
+    display: block;
+    margin-right: 0;
+    padding: 10px 15px;
 
-      a {
-        background-color: $teal-dark;
-      }
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &.active {
+    background-color: $rackspace-red;
+    border: 1px solid $rackspace-red;
+    border-bottom: 0;
+    color: $white;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 9;
+
+    &::before {
+      background: $rackspace-red;
+      content: '';
+      height: 4px;
+      left: -1px;
+      position: absolute;
+      right: -1px;
+      top: -4px;
+      z-index: 9;
     }
 
-    &.active {
-      background-color: $white;
+    & > .rsTab-link {
+      background-color: transparent;
+      border: 0;
+      color: $white;
 
       &:hover {
-        border-top: 5px solid $teal-dark;
-      }
-
-      &.enterprise {
-        a {
-          > * {
-            color: $gray-darkest;
-          }
-        }
-
-        &:hover {
-          border-top: 5px solid $gray-darkest;
-        }
-      }
-
-      a {
+        background-color: $rackspace-red;
         border: 0;
-
-        > * {
-          color: $teal-dark;
-          text-align: center;
-        }
-      }
-    }
-
-    &.enterprise {
-      background-color: $gray-darkest;
-      border-top: 5px solid $gray-darkest;
-
-      &:hover,
-      &:active {
-        border-top: 5px solid $gray-darkest;
-
-        a {
-          background-color: $white;
-
-          > * {
-            color: $gray-darkest;
-          }
-
-          &:hover {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-
-    a {
-      border: 0;
-      border-radius: 0;
-      margin: 0;
-      padding: 10px 20px;
-      text-decoration: none;
-
-      > * {
         color: $white;
-        margin: 0;
-        text-align: center;
+      }
+
+      &:focus {
+        background-color: $rackspace-red;
+        border: 0;
+        color: $white;
       }
     }
   }
 }
 
-@media only screen and (max-width: $screen-md) {
-  .my-tab {
-    .tab-content {
-      display: none;
+.rsTabs-content {
+  border-bottom: 2px solid $rackspace-red;
+  border-top: 2px solid $rackspace-red;
+  margin: 0 auto 10px;
+  max-width: $screen-lg-min;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Overrides for the tabCollapse plugin & bootstrap panel classes
+.rsTabs-container {
+  padding: $half-padding-full;
+
+  .rsTab-tab {
+    display: inline-block;
+  }
+
+  .panel {
+    @include border-radius(0);
+    border-left: 1px solid $gray-lighter;
+    border-right: 1px solid $gray-lighter;
+    border-top: 1px solid $gray-lighter;
+
+    & + .panel {
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 0;
+    }
+  }
+
+  .collapse {
+
+    &.in {
+      border-bottom: 2px solid $rackspace-red;
+    }
+  }
+
+  .panel-default {
+
+    .panel-heading {
+      @include border-radius(0);
+      padding: 0;
+    }
+
+    .rsTab-link {
+      background-color: $rackspace-red;
+      color: $white;
+      display: block;
+      padding: 10px 15px;
+    }
+
+    .collapsed {
+      background-color: $white;
+      color: $gray-darkest;
+    }
+
+    .panel-title {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

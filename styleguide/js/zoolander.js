@@ -102,7 +102,7 @@ jQuery(document).ready(function($) {
   });
 
   //tab collapse
-  $('#myTab').tabCollapse();
+  $('.rsTabs').tabCollapse();
     jQuery ('.title a').click(function (event) {
       jQuery (this).parent().parent().find('.fa-arrow-right').animate({  borderSpacing: +90 }, {
       step: function(now,fx) {
