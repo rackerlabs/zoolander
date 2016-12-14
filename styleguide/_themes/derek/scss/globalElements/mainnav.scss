@@ -30,7 +30,7 @@
 
   .navbar-topItem {
     font-size: 1.3rem;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-regular;
     text-transform: uppercase;
 
     &.open {
@@ -188,7 +188,8 @@
     color: $white;
     display: none;
     font-family: 'FontAwesome';
-    padding: 20px 0 22px;
+    line-height: 1vw;
+    padding: 30px 0;
   }
 }
 
@@ -231,7 +232,8 @@
   &::after {
     content: '\f002';
     display: inline-block;
-    font-size: 1vw;
+    font-size: 1.25rem;
+    line-height: 0;
     margin-right: 25px;
   }
 }
@@ -249,6 +251,7 @@
 
 .navbar-searchInput {
   border: 1px solid $gray-lighter;
+  font-size: 1.25rem;
   outline: none;
   padding: 3px;
   width: 72%;
@@ -447,6 +450,7 @@
     .navbar-searchicon {
       @include make-xs-column(2);
       border-left: solid 1px $gray-darker;
+      height: 63px;
 
       &::after {
         display: inline-block;
@@ -458,6 +462,7 @@
 
       &::after {
         font-size: 5vw;
+        line-height: 1vw;
         margin: 0;
       }
     }

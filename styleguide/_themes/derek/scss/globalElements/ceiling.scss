@@ -38,7 +38,7 @@ $ceiling-font-size: 10px;
 .ceiling-menuInline-item {
   border-right: 1px solid $gray-light;
   display: inline-block;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-regular;
   margin: floor($ceiling-margin + 2) 0;
   padding: 0 floor($ceiling-margin + 2);
 
