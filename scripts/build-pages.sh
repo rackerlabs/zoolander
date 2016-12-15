@@ -14,5 +14,5 @@ echo -e "node_modules" > .gitignore
 git add .gitignore
 git add .
 git commit -n -m 'Github Pages'
-git push origin gh-pages -f
+git push upstream gh-pages -f
 git checkout master

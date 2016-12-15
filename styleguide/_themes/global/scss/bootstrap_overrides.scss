@@ -31,6 +31,10 @@
   background-color: $brand-success;
 }
 
+.dropdown-menu > li > a {
+  font-weight: $font-weight-black;
+}
+
 // Footer
 .footer {
   li {
@@ -87,21 +91,4 @@
     background: darken($brand-primary, 5%);
   }
 
-}
-
-.navbar-search.navbar-search-open,
-.no-js .navbar-search {
-  width: 20%;
-}
-
-.navbar-search-open > .navbar-icon-search,
-.no-js > .navbar-search > .navbar-icon-search {
-  background: $white;
-  color: $gray-darker;
-  z-index: 11;
-}
-
-.navbar-search-open .navbar-search-submit,
-.no-js > .navbar-search > .navbar-search-submit {
-  z-index: 90;
 }

@@ -1,7 +1,7 @@
 {
   "name": "zoolander",
   "description": "Derek Zoolander's Corporate Style Guide to Help Product Teams Build Ridiculously Good Looking Websites",
-  "version": "0.13.18",
+  "version": "0.13.31",
   "authors": [
     "Rackspace Web Team <rswebdev@rackspace.com>"
   ],
@@ -17,7 +17,7 @@
     "test:visual:init": "nohup npm start & (cd ./node_modules/backstopjs && npm run reference)",
     "backstop-update": "node ./scripts/update-backstop-urls.js",
     "sass:compile": "node-sass --output-style=compressed --quiet -o /tmp styleguide/css",
-    "sass-lint": "sass-lint -v --max-warnings 13",
+    "sass-lint": "sass-lint -v",
     "hooks": "./scripts/hooks.sh",
     "postinstall": "npm run hooks"
   },

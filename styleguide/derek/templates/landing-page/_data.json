@@ -11,5 +11,11 @@
   },
   "form-LP": {
     "css": "css/derek.css"
+  },
+  "lockedContent-pdf": {
+    "css": "css/derek.css"
+  },
+  "lockedContent-video": {
+    "css": "css/derek.css"
   }
 }

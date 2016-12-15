@@ -2,6 +2,7 @@
   background: $white;
   border: 0;
   border-radius: 0;
+  box-shadow: 0 6px 12px $black-shadow;
   font-family: $copy;
   margin: 0;
 
@@ -33,7 +34,7 @@
 
   .navbar-topItem {
     font-size: $navigation-font-size;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-black;
 
     &.open {
       > .navbar-topLink {
@@ -48,7 +49,7 @@
       cursor: pointer;
       font-size: $navigation-font-size;
       line-height: 2rem;
-      padding: 6px 15px;
+      padding: 6px 25px;
       text-decoration: none;
       text-transform: none;
 
@@ -125,7 +126,7 @@
   background-position: left top;
   background-repeat: no-repeat;
   height: 35px;
-  margin: 5px 20px;
+  margin: 5px 10px;
   position: relative;
   width: 150px;
 }
@@ -145,7 +146,9 @@
     margin-right: 5px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: $white;
     cursor: pointer;
     text-decoration: none;
@@ -158,6 +161,7 @@
     display: none;
     font-family: 'FontAwesome';
     font-size: 2rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -198,7 +202,7 @@
 }
 
 //main nav on desktop
-@media only screen and (min-width: $screen-xs-max) {
+@media only screen and (min-width: $screen-sm-min) {
   .navbar-topLink-dropDown {
 
     &::after {
@@ -206,6 +210,22 @@
       font-family: 'FontAwesome';
       line-height: 1rem;
       margin-left: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+  .navbar-nav {
+
+    .navbar-topItem {
+      font-size: $navigation-font-size;
+
+      .navbar-dropDownLink,
+      .navbar-dropDownLabel,
+      .navbar-tertiary-dropDownLink {
+        font-size: $navigation-font-size;
+        padding: 7px 15px 7px 12px;
+      }
     }
   }
 }
@@ -221,7 +241,6 @@
       .navbar-dropDownLabel,
       .navbar-tertiary-dropDownLink {
         font-size: $navigation-font-size;
-        padding: 7px 15px 7px 25px;
       }
 
       .navbar-dropDownLabel {
@@ -230,7 +249,13 @@
     }
 
     .navbar-topLink {
-      padding: 20px 10px;
+      padding: 18px 10px;
+
+      &:hover,
+      &:focus,
+      &:visited {
+        border-bottom: 0;
+      }
     }
   }
 
@@ -241,11 +266,19 @@
   .contentOffset {
     margin-top: 63px;
   }
+
+  .navbar-phoneicon,
+  .navbar-chaticon,
+  .navbar-emailicon {
+    padding: 12px $ceiling-margin;
+  }
 }
 
-
-
 @media only screen and (max-width: $screen-xs-max) {
+  .ceiling-menuInline-item {
+    font-size: 1rem;
+  }
+
   //mainnav side caret for dropdowns
   .navbar-dropDown-trigger {
 
@@ -315,7 +348,7 @@
   .navbar-brand {
     @include make-sm-column(4);
     background-size: 95px 38px;
-    margin: 0;
+    margin: 0 0 0 5px;
     padding: 0;
     width: 95px;
   }
@@ -328,6 +361,7 @@
     .navbar-searchicon {
       @include make-xs-column(2);
       border-left: solid 1px $gray-darker;
+      height: 63px;
 
       &::before {
         display: inline-block;
@@ -339,7 +373,7 @@
       &::after {
         content: '\f0c9';
         display: inline-block;
-        margin: 15px 10px;
+        margin: 17px 10px;
       }
     }
 
@@ -348,6 +382,7 @@
 
       &::after {
         font-size: 5vw;
+        line-height: 1vw;
         margin: 0;
       }
     }
@@ -370,10 +405,17 @@
   }
 }
 
+@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  .navbar-brand {
+    margin: 5px 0;
+  }
+}
+
 .navbar-search {
   @include expand-left(.3s);
   float: right;
-  height: 60px;
+  height: 100%;
+  min-height: 61px;
   min-width: 60px;
   overflow: hidden;
   position: relative;
@@ -385,8 +427,10 @@
   background: $white;
   border: 0;
   border-left: 1px solid $gray-base;
-  height: 60px;
+  font-size: 1.25rem;
+  height: 100%;
   margin: 0;
+  min-height: 61px;
   outline: none;
   padding: 20px 65px 20px 20px;
   position: absolute;
@@ -456,4 +500,6 @@
     color: $gray-darkest;
   }
 }
+
+
 

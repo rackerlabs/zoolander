@@ -4,7 +4,7 @@ $ceiling-margin: floor($navbar-margin-bottom / 4);
 $navigation-font-size: 1.25rem;
 
 .ceiling {
-  background: $blue-gray;
+  background: $gray-dark;
   border: 0;
   border-radius: 0;
   font-family: $copy;
@@ -14,15 +14,16 @@ $navigation-font-size: 1.25rem;
   min-height: $line-height-computed;
 }
 
+.ceiling-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 5px;
+  width: 100%;
+}
+
 @media screen and (min-width: $screen-xs-min) {
   .ceiling {
     display: block;
-  }
-
-  .ceiling-container {
-    margin: 0 auto;
-    max-width: 1280px;
-    width: 100%;
   }
 }
 
@@ -37,7 +38,7 @@ $navigation-font-size: 1.25rem;
   border-left: 1px solid $gray-base;
   display: inline-block;
   float: left;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-black;
 
   &.open,
   &:hover,

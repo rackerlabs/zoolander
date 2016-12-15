@@ -4,8 +4,7 @@ $copy: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code: Tahoma, Arial, Geneva, Helvetica;
 
 $font-weight-normal: normal;
-$font-weight-regular: 300;
-$font-weight-bold: 400;
+$font-weight-regular: 400;
 $font-weight-black: 600;
 
 @mixin heading($color: $gray-darkest) {
@@ -24,10 +23,10 @@ $font-weight-black: 600;
 }
 
 body {
+  @include font-smoothing;
   color: $gray-darkest;
   font-family: $copy;
   font-weight: $font-weight-regular;
-  line-height: 1.5em;
   text-align: left;
 }
 
@@ -37,7 +36,7 @@ p {
 
 p > a {
   cursor: pointer;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-regular;
   text-decoration: underline;
 
   &:hover {
@@ -165,7 +164,7 @@ i {
 
   &.rsweb {
     font-family: 'rsweb';
-    font-size: 5em;
+    font-size: 4.5em;
   }
 
   &.rs-4x {
