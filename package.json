@@ -36,5 +36,11 @@
     "request": "^2.72.0",
     "shortid": "^2.2.6",
     "walk": "^2.3.9"
-  }
+  },
+  "files": [
+    "dist",
+    "scripts",
+    "styleguide",
+    "README.md"
+  ]
 }
