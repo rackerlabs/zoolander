@@ -1,13 +1,15 @@
 <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
 <% if(!desc) { var desc = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis."; } %>
 <!-- Product Features Pattern -->
-<div class="features-wrapper">
-  <div class="col-md-2 features-icon">
-    <i class="rsweb srv-design-build"></i>
+<div class="feature">
+  <div class="feature-iconWrapper">
+    <i class="feature-icon srv-design-build rsweb"></i>
   </div>
-  <div class="col-md-10 features-desc">
-    <h4>Example Title</h4>
-    <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
-    <p><%- desc %></p>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p><%- desc %></p>
+    </div>
   </div>
 </div>
