@@ -49,13 +49,13 @@
   <h4>H4 。子標題的一個實例。題？</h4>
   <p>複製正文文本的例子。感嘆！</p>
 </div>
-</div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h4 class="red">Annotations</h4><p class="copyright">Example of an annotation</p><p>add the class below to a p tag in order to produce a small annotation, copyright or legal disclaimer</p><code>.copyright</code></div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h5>NEED TO ADD</h5><p>links (normal and red), font mixins, available colors for text and use cases</p></div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h4 class="red">Lists</h4><p>There is a pattern for a list content type available. When using the pattern or inputting a list elsewhere there are options for styling. The default is discs and in order to have the correct alignment you'll need to add <code> <ul class="discs"> </ul></code> but you can use <code> <ul class="checks"> </ul></code> for check marks and these can have color added with either <code> <ul class="checks green"> or <ul class="checks teal"> </ul></ul></code> You can also use <code> <ul class="times"> </ul></code> to get the x's</p><h4>Lists</h4>
+</div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h4 class="red">Annotations</h4><p class="copyright">Example of an annotation</p><p>add the class below to a p tag in order to produce a small annotation, copyright or legal disclaimer</p><code>.copyright</code></div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h5>NEED TO ADD</h5><p>links (normal and red), font mixins, available colors for text and use cases</p></div></div><hr><div class="row half-padding-full"><div class="col-md-12"><h4 class="red">Lists</h4><p>There is a pattern for a list content type available. When using the pattern or inputting a list elsewhere there are options for styling. The default is discs and in order to have the correct alignment you'll need to add <code> <ul class="discs"> </ul></code> There is an option for checks and x's but those should only be used in tables. Example: <code> <ul class="checks green"> </ul></code> for check marks and <code> <ul class="times"> </ul></code> to get the x's</p><h4>Lists</h4>
 <div class="row half-padding-top">
   <div class="col-md-4">
     <%- partial("../cards/list.ejs") %>
   </div>
   <div class="col-md-4">
-    <%- partial("../cards/list.ejs", {list_classes: "checks green"}) %>
+    <%- partial("../cards/list.ejs", {list_classes: "discs"}) %>
   </div>
   <div class="col-md-4">
     <%- partial("../cards/list.ejs", {items: ["Live, US-based support team", "Remotely log in and troubleshoot Virtual Machines, OS and Apps", "Dedicated account team", "15-Minute Response Time SLA to monitoring notifications", "Live, US-based support team", "Live, US-based support team"]}) %>
