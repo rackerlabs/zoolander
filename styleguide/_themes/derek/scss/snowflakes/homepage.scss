@@ -18,6 +18,7 @@
 .hostingOptions-product {
   @include make-xs-column(6);
   color: $gray-base;
+  margin-bottom: 25px;
   text-align: center;
   text-decoration: none;
 
@@ -232,6 +233,10 @@
   //equal height columns remove in small
   .hostingOptions-productRow {
     display: block;
+  }
+
+  .hostingOptions-product {
+    width: 100%;
   }
 }
 
