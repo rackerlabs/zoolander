@@ -6,19 +6,17 @@
   font-family: $heading;
 }
 
-$banner-height-large: 375px;
-$banner-height-medium: 225px;
-$banner-text-margin-large: 18%;
-$banner-text-margin-medium: 10%;
-
-
 .imacBanner {
   @include make-banner;
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/collaboration-2.jpg');
   background-position: right center;
-  min-height: 220px;
+  height: 270px;
   overflow: hidden;
   padding: 50px 0;
+}
+
+.imacBanner-withCta {
+  height: 340px;
 }
 
 .imacBanner-container {
@@ -114,7 +112,16 @@ $banner-text-margin-medium: 10%;
 
 @media only screen and (max-width: $screen-sm-max) {
   .imacBanner {
+    height: 250px;
     padding: 50px 15px;
+  }
+
+  .imacBanner-withCta {
+    height: 300px;
+  }
+
+  .imacBanner-button {
+    font-size: 1.2rem;
   }
 }
 
@@ -123,7 +130,12 @@ $banner-text-margin-medium: 10%;
     background-blend-mode: color;
     background-color: $black;
     background-image: none;
+    height: 270px;
     padding: 50px 15px;
+  }
+
+  .imacBanner-withCta {
+    height: 330px;
   }
 
   .imacBanner-button {

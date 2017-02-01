@@ -5,6 +5,7 @@
 .panel-flex {
   @include flex-box;
   justify-content: center;
+  min-width: 1px;
   width: 100%;
 }
 

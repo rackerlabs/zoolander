@@ -1,6 +1,9 @@
-.value-prop {
+.valueProp {
   padding-bottom: 20px;
   text-align: center;
+}
+
+.valueProp-icon {
 
   .rsweb {
     font-size: 7rem;
@@ -9,7 +12,22 @@
 
 .valueProp-img {
   display: block;
+  float: none;
   height: auto;
   margin: 0 auto;
-  width: 25%;
+  max-height: 100%;
+}
+
+.valueProp-link {
+  color: $rackspace-red;
+  font-weight: $font-weight-black;
+}
+
+.valueProp-media {
+  height: 65px;
+  margin-bottom: 15px;
+}
+
+.valueProp-row {
+  @include make-row;
 }
