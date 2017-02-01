@@ -21,14 +21,14 @@
 
 .feature-content {
   @include make-md-column(10);
-  background-color: $white;
+  border-bottom: 2px solid $gray-lighter;
   margin: 0 15px 0 0;
   overflow: auto;
 }
 
 .feature-header {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.75em;
+  font-weight: 600;
   letter-spacing: .05em;
   line-height: 1.45em;
   margin: 13.5px 0;
@@ -37,18 +37,15 @@
 .feature-icon {
 
   &.rsweb {
-    color: $white;
+    color: $gray-darker;
     font-size: 5rem;
   }
 }
 
 .feature-iconWrapper {
-  @include flex-box;
   @include make-md-column(2);
-  align-items: center;
-  background-color: $teal-dark;
-  justify-content: center;
-  padding: 10px;
+  padding: 18px 10px 10px;
+  text-align: center;
 }
 
 @media only screen and (max-width: $screen-sm-min) {
