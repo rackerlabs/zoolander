@@ -21,7 +21,8 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "harp": "^0.20.1"
+    "harp": "^0.20.1",
+    "rsweb_fonts": "git+ssh://git@github.rackspace.com:rswebteam/rsweb_fonts.git"
   },
   "devDependencies": {
     "fs-extra": "^0.30.0",
