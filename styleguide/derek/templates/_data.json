@@ -4,7 +4,8 @@
     "theme_name": "derek"
   },
   "section-overview": {
-    "css": "css/derek.css"
+    "css": "css/derek.css",
+    "fonts": "css/fonts.min.css"
   },
   "product-overview": {
     "css": "css/derek.css"

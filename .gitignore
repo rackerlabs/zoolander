@@ -5,6 +5,9 @@ bower_components
 dist
 .DS_Store
 Gemfile.lock
+iconfont/build/config.scss
+iconfont/build/map.scss
 styleguide/css/*.css
+!styleguide/css/fonts.min.css
 backstop_data/bitmaps_test
 npm-debug.log
