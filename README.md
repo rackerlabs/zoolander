@@ -26,17 +26,6 @@ npm install
 npm start
 ```
 
-## Visual Testing
-To capture a baseline of snapshots run:
-```
-npm run test:visual:init
-```
-
-To run tests of the latest changes run against the baseline, run:
-```
-npm run test:visual
-```
-
 ## Versioning
 
 Use the following command to bump current version
