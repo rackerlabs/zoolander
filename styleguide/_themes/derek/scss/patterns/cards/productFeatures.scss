@@ -16,6 +16,10 @@
 .feature-bodyWrapper {
   a {
     text-decoration: underline;
+
+    &:hover {
+      color: $brand-secondary;
+    }
   }
 }
 
@@ -31,21 +35,34 @@
   font-weight: 600;
   letter-spacing: .05em;
   line-height: 1.45em;
-  margin: 13.5px 0;
+  margin: 13.5px 0 5px;
 }
 
-.feature-icon {
+.feature-iconWrapper {
 
-  &.rsweb {
+  .rsweb {
     color: $gray-darker;
     font-size: 5rem;
   }
 }
 
-.feature-iconWrapper {
+.feature-imgWrapper {
+  min-width: 50px;
+}
+
+.feature-media {
   @include make-md-column(2);
   padding: 18px 10px 10px;
   text-align: center;
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+
+  .feature-imgWrapper {
+    float: none;
+    margin: 0 auto;
+    width: 50px;
+  }
 }
 
 @media only screen and (max-width: $screen-sm-min) {
