@@ -1,11 +1,12 @@
-.lead,
-.lead-text {
-  font-family: $copy;
-  font-weight: $font-weight-regular;
-  text-align: center;
+.lead-bodyWrapper {
+  margin-bottom: 14px;
 }
 
-.lead-title {
+.lead-header {
   margin-top: 0;
+}
+
+.lead-wrapper {
+  font-family: $copy;
   text-align: center;
 }
