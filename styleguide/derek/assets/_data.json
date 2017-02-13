@@ -11,9 +11,11 @@
     "css": "css/derek.css"
   },
   "font-usage": {
-    "css": "css/derek.css"
+    "css": "css/derek.css",
+    "fonts": "css/fonts.min.css"
   },
   "icon-font": {
-    "css": "css/derek.css"
+    "css": "css/derek.css",
+    "fonts": "css/fonts.min.css"
   }
 }

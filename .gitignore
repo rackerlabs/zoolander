@@ -6,5 +6,6 @@ dist
 .DS_Store
 Gemfile.lock
 styleguide/css/*.css
+styleguide/font
 backstop_data/bitmaps_test
 npm-debug.log
