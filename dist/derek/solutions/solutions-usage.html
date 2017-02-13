@@ -419,7 +419,6 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
     <div class="col-md-6">
       <h4 class="red">DO</h4>
       <ul class="checks">
-        <li>Place on background color</li>
         <li>Always utilize rsweb icons for icon images</li>
         <li>Include a headline as well as desciption</li>
         <li>Add supporting features in lists</li>
@@ -428,6 +427,7 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
     <div class="col-md-6">
       <h4 class="red">DONT</h4>
       <ul class="times">
+        <li>Place on a BG color darker than light-gray</li>
         <li>Exceed character limit</li>
         <li>Try not to use more than 4 cards whenever possible</li>
         <li>Use colored check marks in lists</li>
@@ -447,14 +447,18 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
             <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
 
 <!-- Product Features Pattern -->
-<div class="features-wrapper">
-  <div class="col-md-2 features-icon">
-    <i class="rsweb srv-design-build"></i>
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <i class="feature-icon srv-design-build rsweb"></i>
+    </div>
   </div>
-  <div class="col-md-10 features-desc">
-    <h4>Example Title</h4>
-    <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+    </div>
   </div>
 </div>
 
@@ -467,14 +471,18 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
             <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
 
 <!-- Product Features Pattern -->
-<div class="features-wrapper">
-  <div class="col-md-2 features-icon">
-    <i class="rsweb srv-design-build"></i>
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <i class="feature-icon srv-design-build rsweb"></i>
+    </div>
   </div>
-  <div class="col-md-10 features-desc">
-    <h4>Example Title</h4>
-    <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
-    <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+    </div>
   </div>
 </div>
 
@@ -489,14 +497,18 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
             <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
 
 <!-- Product Features Pattern -->
-<div class="features-wrapper">
-  <div class="col-md-2 features-icon">
-    <i class="rsweb srv-design-build"></i>
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <i class="feature-icon srv-design-build rsweb"></i>
+    </div>
   </div>
-  <div class="col-md-10 features-desc">
-    <h4>Example Title</h4>
-    <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
-    <p>consectetuer</p>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>consectetuer</p>
+    </div>
   </div>
 </div>
 
@@ -506,20 +518,20 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
       <div class="col-sm-6 panel-flex">
         <div class="subpanel panel-flex">
           <div class="subpanel-inner panel-flex">
-            <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-<!-- Product Features Pattern -->
-<div class="features-wrapper">
-  <div class="col-md-2 features-icon">
-    <i class="rsweb srv-design-build"></i>
-  </div>
-  <div class="col-md-10 features-desc">
-    <h4>Example Title</h4>
-    <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
-  </div>
-</div>
-
+            <div class="feature">
+              <div class="feature-media">
+                <div class="feature-imgWrapper">
+                  <img class="feature-img" src="https://placeholdit.imgix.net/~text?txtsize=30&txt=%5Bplaceholder%5D&w=200&h=150">
+                </div>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-header">Example Title</h3>
+                <div class="feature-bodyWrapper">
+                  <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
