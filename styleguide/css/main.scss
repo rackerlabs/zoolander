@@ -37,8 +37,8 @@ $bg-blue-gray: #2e3238;
   z-index: 1040;
 
   &::after {
-    content: '\f053';
-    font-family: 'FontAwesome';
+    content: '\f104';
+    font-family: 'rswebfonts';
   }
 
   &:focus {
@@ -54,8 +54,8 @@ $bg-blue-gray: #2e3238;
   left: 0;
 
   &::after {
-    content: '\f054';
-    font-family: 'FontAwesome';
+    content: '\f105';
+    font-family: 'rswebfonts';
   }
 }
 
@@ -98,8 +98,8 @@ $bg-blue-gray: #2e3238;
 .navZoolander-hasDropdown {
 
   &::after {
-    content: '\f0da';
-    font-family: FontAwesome;
+    content: '\e801';
+    font-family: rswebfonts;
     margin-left: 10px;
   }
 }
@@ -111,7 +111,7 @@ $bg-blue-gray: #2e3238;
 .hasDropDown-active {
 
   &::after {
-    content: '\f0d7';
+    content: '\e806';
     transition-duration: .5s;
   }
 }

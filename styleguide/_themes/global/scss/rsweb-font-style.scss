@@ -1,17 +1,64 @@
 @font-face {
-    font-family: 'rsweb';
-    src:    url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/font/icon/rsweb.eot');
-    src:    url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/font/icon/rsweb.eot#iefix') format('embedded-opentype'),
-        url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/font/icon/rsweb.ttf') format('truetype'),
-        url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/font/icon/rsweb.woff') format('woff'),
-        url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/font/icon/rsweb.svg') format('svg');
+    font-family: 'rswebfonts';
+    src: url("../font/rswebfonts.eot?62628514");
+    src: url("../font/rswebfonts.eot?62628514#iefix") format("embedded-opentype"), url("../font/rswebfonts.woff2?62628514") format("woff2"), url("../font/rswebfonts.woff?62628514") format("woff"), url("../font/rswebfonts.ttf?62628514") format("truetype"), url("../font/rswebfonts.svg?62628514#rswebfont") format("svg");
     font-weight: normal;
+    font-style: normal
+}
+
+.fa,
+.rsweb {
+    font-family: "rswebfonts";
     font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.fa-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear
+}
+
+.fa-pulse {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8)
+}
+
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
 }
 
 i.rsweb {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'rsweb' !important;
+    font-family: 'rswebfonts' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -24,208 +71,245 @@ i.rsweb {
     -moz-osx-font-smoothing: grayscale;
 }
 
-$icons: (
-  auto-compute: (char: "\e900"),
-  auto-maintenance: (char: "\e901"),
-  auto-os-maintenance: (char: "\e902"),
-  auto-patching: (char: "\e903"),
-  auto-process: (char: "\e904"),
-  auto-protection: (char: "\e905"),
-  auto-scripts: (char: "\e906"),
-  cl-autoscale: (char: "\e907"),
-  cl-backup: (char: "\e908"),
-  cl-big-data: (char: "\e909"),
-  cl-block-storage: (char: "\e90a"),
-  cl-cdn: (char: "\e90b"),
-  cl-control-panel: (char: "\e90c"),
-  cl-databases: (char: "\e90d"),
-  cl-dns: (char: "\e90e"),
-  cl-email: (char: "\e90f"),
-  cl-email-archive: (char: "\e910"),
-  cl-files: (char: "\e911"),
-  cl-hybrid: (char: "\e912"),
-  cl-images: (char: "\e913"),
-  cl-load-balancers: (char: "\e914"),
-  cl-monitoring: (char: "\e915"),
-  cl-networks: (char: "\e916"),
-  cl-office: (char: "\e917"),
-  cl-orchestration: (char: "\e918"),
-  cl-private-cloud: (char: "\e919"),
-  cl-queues: (char: "\e91a"),
-  cl-registry: (char: "\e91b"),
-  cl-scale-apps: (char: "\e91c"),
-  cl-security: (char: "\e91d"),
-  cl-server-lg: (char: "\e91e"),
-  cl-server-md: (char: "\e91f"),
-  cl-server-sm: (char: "\e920"),
-  cl-servers: (char: "\e921"),
-  cl-sites: (char: "\e922"),
-  cl-tools: (char: "\e923"),
-  cont-design: (char: "\e924"),
-  cont-monitoring: (char: "\e925"),
-  cont-support: (char: "\e926"),
-  ded-api-services: (char: "\e927"),
-  ded-backup: (char: "\e928"),
-  ded-big-data: (char: "\e929"),
-  ded-control-panel: (char: "\e92a"),
-  ded-data-replication: (char: "\e92b"),
-  ded-databases: (char: "\e92c"),
-  ded-email: (char: "\e92d"),
-  ded-hosting: (char: "\e92e"),
-  ded-load-balancers: (char: "\e92f"),
-  ded-log-management: (char: "\e930"),
-  ded-managed-virualization: (char: "\e931"),
-  ded-monitoring: (char: "\e932"),
-  ded-security: (char: "\e933"),
-  ded-server-lg: (char: "\e934"),
-  ded-server-md: (char: "\e935"),
-  ded-server-sm: (char: "\e936"),
-  ded-server-xl: (char: "\e937"),
-  ded-storage: (char: "\e938"),
-  ded-support: (char: "\e939"),
-  gen-antivirus: (char: "\e93a"),
-  gen-assistance: (char: "\e93b"),
-  gen-bolt-fill: (char: "\e93c"),
-  gen-bolt-gear: (char: "\e93d"),
-  gen-bolt-outline: (char: "\e93e"),
-  gen-building-lg: (char: "\e93f"),
-  gen-building-md: (char: "\e940"),
-  gen-building-sm: (char: "\e941"),
-  gen-bummed: (char: "\e942"),
-  gen-calculator: (char: "\e943"),
-  gen-chart: (char: "\e944"),
-  gen-choice: (char: "\e9c3"),
-  gen-clock: (char: "\e945"),
-  gen-cloud: (char: "\e946"),
-  gen-code: (char: "\e947"),
-  gen-data-replication: (char: "\e948"),
-  gen-desktop: (char: "\e949"),
-  gen-ecommerce: (char: "\e94a"),
-  gen-flame: (char: "\e94b"),
-  gen-flame-shield: (char: "\e94c"),
-  gen-global: (char: "\e94d"),
-  gen-global-traffic: (char: "\e94e"),
-  gen-growth: (char: "\e94f"),
-  gen-hard-drive: (char: "\e950"),
-  gen-help: (char: "\e951"),
-  gen-install: (char: "\e952"),
-  gen-key: (char: "\e953"),
-  gen-laptop: (char: "\e954"),
-  gen-license: (char: "\e955"),
-  gen-lock-shield: (char: "\e956"),
-  gen-locked-checked-shield: (char: "\e957"),
-  gen-netowkring: (char: "\e958"),
-  gen-network-connection: (char: "\e959"),
-  gen-os: (char: "\e95a"),
-  gen-patching-shield: (char: "\e95b"),
-  gen-payment: (char: "\e95c"),
-  gen-pdf: (char: "\e95d"),
-  gen-performance: (char: "\e95e"),
-  gen-power: (char: "\e95f"),
-  gen-processor: (char: "\e960"),
-  gen-ram: (char: "\e961"),
-  gen-server-instance: (char: "\e962"),
-  gen-server-instances: (char: "\e963"),
-  gen-server-rack: (char: "\e964"),
-  gen-server-room: (char: "\e965"),
-  gen-servers: (char: "\e966"),
-  gen-servers2: (char: "\e967"),
-  gen-shield: (char: "\e968"),
-  gen-ssd: (char: "\e969"),
-  gen-stacks: (char: "\e96a"),
-  gen-stoked: (char: "\e96b"),
-  gen-stopwatch: (char: "\e96c"),
-  gen-support: (char: "\e96d"),
-  gen-uptime: (char: "\e96e"),
-  gen-user: (char: "\e96f"),
-  gen-web: (char: "\e970"),
-  gen-webpage: (char: "\e971"),
-  gen-workers: (char: "\e972"),
-  idio-binoculars: (char: "\e973"),
-  idio-brain: (char: "\e974"),
-  idio-cloud-education: (char: "\e975"),
-  idio-cycle: (char: "\e976"),
-  idio-diamond: (char: "\e977"),
-  idio-fist: (char: "\e978"),
-  idio-focus: (char: "\e979"),
-  idio-heart: (char: "\e97a"),
-  idio-high-five: (char: "\e97b"),
-  idio-people: (char: "\e97c"),
-  idio-piggy: (char: "\e97d"),
-  idio-piggy-money: (char: "\e97e"),
-  idio-spaceship: (char: "\e97f"),
-  idio-straightjacket: (char: "\e980"),
-  idio-target: (char: "\e981"),
-  idio-torch: (char: "\e982"),
-  idio-trophy: (char: "\e983"),
-  idio-winner: (char: "\e984"),
-  mng-24x7: (char: "\e985"),
-  mng-access: (char: "\e986"),
-  mng-advisors: (char: "\e987"),
-  mng-anti-virus: (char: "\e988"),
-  mng-apps: (char: "\e989"),
-  mng-backup: (char: "\e98a"),
-  mng-cloud: (char: "\e98b"),
-  mng-code-assist: (char: "\e98c"),
-  mng-databases: (char: "\e98d"),
-  mng-firewall: (char: "\e98e"),
-  mng-generic: (char: "\e98f"),
-  mng-guarantee: (char: "\e990"),
-  mng-infrastructure: (char: "\e991"),
-  mng-installation: (char: "\e992"),
-  mng-log-manager: (char: "\e993"),
-  mng-monitoring: (char: "\e994"),
-  mng-os-support: (char: "\e995"),
-  mng-patching: (char: "\e996"),
-  mng-performance: (char: "\e997"),
-  mng-power: (char: "\e998"),
-  mng-rapid-deployment: (char: "\e999"),
-  mng-response: (char: "\e99a"),
-  mng-security: (char: "\e99b"),
-  mng-security-guidance: (char: "\e99c"),
-  mng-service: (char: "\e99d"),
-  mng-stack: (char: "\e99e"),
-  mng-storage: (char: "\e99f"),
-  mng-support: (char: "\e9a0"),
-  mng-threat: (char: "\e9a1"),
-  mng-virtualization: (char: "\e9a2"),
-  srv-advisory: (char: "\e9a3"),
-  srv-anti-virus: (char: "\e9a4"),
-  srv-architecture: (char: "\e9a5"),
-  srv-archiving: (char: "\e9a6"),
-  srv-backup: (char: "\e9a7"),
-  srv-backups: (char: "\e9a8"),
-  srv-caching: (char: "\e9a9"),
-  srv-code-deployment: (char: "\e9aa"),
-  srv-content-management: (char: "\e9ab"),
-  srv-custom-apps: (char: "\e9ac"),
-  srv-data-storage: (char: "\e9ad"),
-  srv-database: (char: "\e9ae"),
-  srv-design-build: (char: "\e9af"),
-  srv-design-build-2: (char: "\e9b0"),
-  srv-devops: (char: "\e9b1"),
-  srv-digital: (char: "\e9b2"),
-  srv-disaster-recovery: (char: "\e9b3"),
-  srv-ecommerce: (char: "\e9b4"),
-  srv-email: (char: "\e9b5"),
-  srv-engineer-support: (char: "\e9b6"),
-  srv-guidance: (char: "\e9b7"),
-  srv-mailgun: (char: "\e9b8"),
-  srv-migration: (char: "\e9b9"),
-  srv-monitoring: (char: "\e9ba"),
-  srv-rich-media: (char: "\e9bb"),
-  srv-saas: (char: "\e9bc"),
-  srv-ssl: (char: "\e9bd"),
-  srv-test-dev: (char: "\e9be"),
-  srv-virtualization: (char: "\e9bf"),
-  srv-vpn: (char: "\e9c0"),
-  srv-web-hosting: (char: "\e9c1"),
-  srv-website: (char: "\e9c2"),
-);
+.fa-envelope-o:before { content: '\2709'; } /* '✉' */
+.fa-print:before { content: '\e800'; } /* '' */
+.fa-caret-right:before { content: '\e801'; } /* '' */
+.fa-comments:before { content: '\e802'; } /* '' */
+.fa-times:before { content: '\e803'; } /* '' */
+.fa-exclamation-circle:before { content: '\e804'; } /* '' */
+.fa-bullhorn:before { content: '\e805'; } /* '' */
+.fa-caret-down:before { content: '\e806'; } /* '' */
+.fa-check:before { content: '\e807'; } /* '' */
+.fa-wrench:before { content: '\e808'; } /* '' */
+.fa-plus:before { content: '\e809'; } /* '' */
+.fa-globe:before { content: '\e80a'; } /* '' */
+.fa-gear:before { content: '\e80b'; } /* '' */
+.fa-external-link:before { content: '\f08e'; } /* '' */
+.fa-twitter:before { content: '\f099'; } /* '' */
+.fa-facebook:before { content: '\f09a'; } /* '' */
+.fa-arrow-circle-up:before { content: '\f0aa'; } /* '' */
+.fa-square:before { content: '\f0c8'; } /* '' */
+.fa-google-plus-square:before { content: '\f0d4'; } /* '' */
+.fa-google-plus:before { content: '\f0d5'; } /* '' */
+.fa-money:before { content: '\f0d6'; } /* '' */
+.fa-linkedin:before { content: '\f0e1'; } /* '' */
+.fa-suitcase:before { content: '\f0f2'; } /* '' */
+.fa-angle-right:before { content: '\f105'; } /* '' */
+.fa-mobile:before { content: '\f10b'; } /* '' */
+.fa-quote-left:before { content: '\f10d'; } /* '' */
+.fa-quote-right:before { content: '\f10e'; } /* '' */
+.fa-spinner:before { content: '\f110'; } /* '' */
+.fa-rss-square:before { content: '\f143'; } /* '' */
+.fa-file-text:before { content: '\f15c'; } /* '' */
+.fa-youtube-square:before { content: '\f166'; } /* '' */
+.fa-youtube-play:before { content: '\f16a'; } /* '' */
+.fa-arrow-circle-o-left:before { content: '\f190'; } /* '' */
+.fa-file-pdf-o:before { content: '\f1c1'; } /* '' */
+.fa-file-code-o:before { content: '\f1c9'; } /* '' */
+.fa-circle-o-notch:before { content: '\f1ce'; } /* '' */
+.fa-newspaper-o:before { content: '\f1ea'; } /* '' */
+.fa-facebook-official:before { content: '\f230'; } /* '' */
+.fa-server:before { content: '\f233'; } /* '' */
+.fa-github-square:before { content: '\f300'; } /* '' */
+.fa-twitter-square:before { content: '\f304'; } /* '' */
+.fa-linkedin-square:before { content: '\f30c'; } /* '' */
+.fa-search:before { content: '🔍'; } /* '\1f50d' */
+.fa-user-plus:before { content: '\f234'; } /* '' */
+.fa-sign-in:before { content: '\e80d'; } /* '' */
 
-
-@each $className, $icon in $icons {
-    .#{$className}:before {
-        content: map-get($icon, char);
-    }
-}
+.auto-compute:before { content: '\e900'; } /* '' */
+.auto-maintenance:before { content: '\e901'; } /* '' */
+.auto-os-maintenance:before { content: '\e902'; } /* '' */
+.auto-patching:before { content: '\e903'; } /* '' */
+.auto-process:before { content: '\e904'; } /* '' */
+.auto-protection:before { content: '\e905'; } /* '' */
+.auto-scripts:before { content: '\e906'; } /* '' */
+.cl-autoscale:before { content: '\e907'; } /* '' */
+.cl-backup:before { content: '\e908'; } /* '' */
+.cl-big-data:before { content: '\e909'; } /* '' */
+.cl-block-storage:before { content: '\e90a'; } /* '' */
+.cl-cdn:before { content: '\e90b'; } /* '' */
+.cl-control-panel:before { content: '\e90c'; } /* '' */
+.cl-databases:before { content: '\e90d'; } /* '' */
+.cl-dns:before { content: '\e90e'; } /* '' */
+.cl-email:before { content: '\e90f'; } /* '' */
+.cl-email-archive:before { content: '\e910'; } /* '' */
+.cl-files:before { content: '\e911'; } /* '' */
+.cl-hybrid:before { content: '\e912'; } /* '' */
+.cl-images:before { content: '\e913'; } /* '' */
+.cl-load-balancers:before { content: '\e914'; } /* '' */
+.cl-monitoring:before { content: '\e915'; } /* '' */
+.cl-networks:before { content: '\e916'; } /* '' */
+.cl-office:before { content: '\e917'; } /* '' */
+.cl-orchestration:before { content: '\e918'; } /* '' */
+.cl-private-cloud:before { content: '\e919'; } /* '' */
+.cl-queues:before { content: '\e91a'; } /* '' */
+.cl-registry:before { content: '\e91b'; } /* '' */
+.cl-scale-apps:before { content: '\e91c'; } /* '' */
+.cl-security:before { content: '\e91d'; } /* '' */
+.cl-server-lg:before { content: '\e91e'; } /* '' */
+.cl-server-md:before { content: '\e91f'; } /* '' */
+.cl-server-sm:before { content: '\e920'; } /* '' */
+.cl-servers:before { content: '\e921'; } /* '' */
+.cl-sites:before { content: '\e922'; } /* '' */
+.cl-tools:before { content: '\e923'; } /* '' */
+.cont-design:before { content: '\e924'; } /* '' */
+.cont-monitoring:before { content: '\e925'; } /* '' */
+.cont-support:before { content: '\e926'; } /* '' */
+.ded-api-services:before { content: '\e927'; } /* '' */
+.ded-backup:before { content: '\e928'; } /* '' */
+.ded-big-data:before { content: '\e929'; } /* '' */
+.ded-control-panel:before { content: '\e92a'; } /* '' */
+.ded-data-replication:before { content: '\e92b'; } /* '' */
+.ded-databases:before { content: '\e92c'; } /* '' */
+.ded-email:before { content: '\e92d'; } /* '' */
+.ded-hosting:before { content: '\e92e'; } /* '' */
+.ded-load-balancers:before { content: '\e92f'; } /* '' */
+.ded-log-management:before { content: '\e930'; } /* '' */
+.ded-managed-virualization:before { content: '\e931'; } /* '' */
+.ded-monitoring:before { content: '\e932'; } /* '' */
+.ded-security:before { content: '\e933'; } /* '' */
+.ded-server-lg:before { content: '\e934'; } /* '' */
+.ded-server-md:before { content: '\e935'; } /* '' */
+.ded-server-sm:before { content: '\e936'; } /* '' */
+.ded-server-xl:before { content: '\e937'; } /* '' */
+.ded-storage:before { content: '\e938'; } /* '' */
+.ded-support:before { content: '\e939'; } /* '' */
+.gen-antivirus:before { content: '\e93a'; } /* '' */
+.gen-assistance:before { content: '\e93b'; } /* '' */
+.gen-bolt-fill:before { content: '\e93c'; } /* '' */
+.gen-bolt-gear:before { content: '\e93d'; } /* '' */
+.gen-bolt-outline:before { content: '\e93e'; } /* '' */
+.gen-building-lg:before { content: '\e93f'; } /* '' */
+.gen-building-md:before { content: '\e940'; } /* '' */
+.gen-building-sm:before { content: '\e941'; } /* '' */
+.gen-bummed:before { content: '\e942'; } /* '' */
+.gen-calculator:before { content: '\e943'; } /* '' */
+.gen-chart:before { content: '\e944'; } /* '' */
+.gen-choice:before { content: '\e9c3'; } /* '' */
+.gen-clock:before { content: '\e945'; } /* '' */
+.gen-cloud:before { content: '\e946'; } /* '' */
+.gen-code:before { content: '\e947'; } /* '' */
+.gen-data-replication:before { content: '\e948'; } /* '' */
+.gen-desktop:before { content: '\e949'; } /* '' */
+.gen-ecommerce:before { content: '\e94a'; } /* '' */
+.gen-flame:before { content: '\e94b'; } /* '' */
+.gen-flame-shield:before { content: '\e94c'; } /* '' */
+.gen-global:before { content: '\e94d'; } /* '' */
+.gen-global-traffic:before { content: '\e94e'; } /* '' */
+.gen-growth:before { content: '\e94f'; } /* '' */
+.gen-hard-drive:before { content: '\e950'; } /* '' */
+.gen-help:before { content: '\e951'; } /* '' */
+.gen-install:before { content: '\e952'; } /* '' */
+.gen-key:before { content: '\e953'; } /* '' */
+.gen-laptop:before { content: '\e954'; } /* '' */
+.gen-license:before { content: '\e955'; } /* '' */
+.gen-lock-shield:before { content: '\e956'; } /* '' */
+.gen-locked-checked-shield:before { content: '\e957'; } /* '' */
+.gen-netowkring:before { content: '\e958'; } /* '' */
+.gen-network-connection:before { content: '\e959'; } /* '' */
+.gen-os:before { content: '\e95a'; } /* '' */
+.gen-patching-shield:before { content: '\e95b'; } /* '' */
+.gen-payment:before { content: '\e95c'; } /* '' */
+.gen-pdf:before { content: '\e95d'; } /* '' */
+.gen-performance:before { content: '\e95e'; } /* '' */
+.gen-power:before { content: '\e95f'; } /* '' */
+.gen-processor:before { content: '\e960'; } /* '' */
+.gen-ram:before { content: '\e961'; } /* '' */
+.gen-server-instance:before { content: '\e962'; } /* '' */
+.gen-server-instances:before { content: '\e963'; } /* '' */
+.gen-server-rack:before { content: '\e964'; } /* '' */
+.gen-server-room:before { content: '\e965'; } /* '' */
+.gen-servers:before { content: '\e966'; } /* '' */
+.gen-servers2:before { content: '\e967'; } /* '' */
+.gen-shield:before { content: '\e968'; } /* '' */
+.gen-ssd:before { content: '\e969'; } /* '' */
+.gen-stacks:before { content: '\e96a'; } /* '' */
+.gen-stoked:before { content: '\e96b'; } /* '' */
+.gen-stopwatch:before { content: '\e96c'; } /* '' */
+.gen-support:before { content: '\e96d'; } /* '' */
+.gen-uptime:before { content: '\e96e'; } /* '' */
+.gen-user:before { content: '\e96f'; } /* '' */
+.gen-web:before { content: '\e970'; } /* '' */
+.gen-webpage:before { content: '\e971'; } /* '' */
+.gen-workers:before { content: '\e972'; } /* '' */
+.idio-binoculars:before { content: '\e973'; } /* '' */
+.idio-brain:before { content: '\e974'; } /* '' */
+.idio-cloud-education:before { content: '\e975'; } /* '' */
+.idio-cycle:before { content: '\e976'; } /* '' */
+.idio-diamond:before { content: '\e977'; } /* '' */
+.idio-fist:before { content: '\e978'; } /* '' */
+.idio-focus:before { content: '\e979'; } /* '' */
+.idio-heart:before { content: '\e97a'; } /* '' */
+.idio-high-five:before { content: '\e97b'; } /* '' */
+.idio-people:before { content: '\e97c'; } /* '' */
+.idio-piggy:before { content: '\e97d'; } /* '' */
+.idio-piggy-money:before { content: '\e97e'; } /* '' */
+.idio-spaceship:before { content: '\e97f'; } /* '' */
+.idio-straightjacket:before { content: '\e980'; } /* '' */
+.idio-target:before { content: '\e981'; } /* '' */
+.idio-torch:before { content: '\e982'; } /* '' */
+.idio-trophy:before { content: '\e983'; } /* '' */
+.idio-winner:before { content: '\e984'; } /* '' */
+.mng-24x7:before { content: '\e985'; } /* '' */
+.mng-access:before { content: '\e986'; } /* '' */
+.mng-advisors:before { content: '\e987'; } /* '' */
+.mng-anti-virus:before { content: '\e988'; } /* '' */
+.mng-apps:before { content: '\e989'; } /* '' */
+.mng-backup:before { content: '\e98a'; } /* '' */
+.mng-cloud:before { content: '\e98b'; } /* '' */
+.mng-code-assist:before { content: '\e98c'; } /* '' */
+.mng-databases:before { content: '\e98d'; } /* '' */
+.mng-firewall:before { content: '\e98e'; } /* '' */
+.mng-generic:before { content: '\e98f'; } /* '' */
+.mng-guarantee:before { content: '\e990'; } /* '' */
+.mng-infrastructure:before { content: '\e991'; } /* '' */
+.mng-installation:before { content: '\e992'; } /* '' */
+.mng-log-manager:before { content: '\e993'; } /* '' */
+.mng-monitoring:before { content: '\e994'; } /* '' */
+.mng-os-support:before { content: '\e995'; } /* '' */
+.mng-patching:before { content: '\e996'; } /* '' */
+.mng-performance:before { content: '\e997'; } /* '' */
+.mng-power:before { content: '\e998'; } /* '' */
+.mng-rapid-deployment:before { content: '\e999'; } /* '' */
+.mng-response:before { content: '\e99a'; } /* '' */
+.mng-security:before { content: '\e99b'; } /* '' */
+.mng-security-guidance:before { content: '\e99c'; } /* '' */
+.mng-service:before { content: '\e99d'; } /* '' */
+.mng-stack:before { content: '\e99e'; } /* '' */
+.mng-storage:before { content: '\e99f'; } /* '' */
+.mng-support:before { content: '\e9a0'; } /* '' */
+.mng-threat:before { content: '\e9a1'; } /* '' */
+.mng-virtualization:before { content: '\e9a2'; } /* '' */
+.srv-advisory:before { content: '\e9a3'; } /* '' */
+.srv-anti-virus:before { content: '\e9a4'; } /* '' */
+.srv-architecture:before { content: '\e9a5'; } /* '' */
+.srv-archiving:before { content: '\e9a6'; } /* '' */
+.srv-backup:before { content: '\e9a7'; } /* '' */
+.srv-backups:before { content: '\e9a8'; } /* '' */
+.srv-caching:before { content: '\e9a9'; } /* '' */
+.srv-code-deployment:before { content: '\e9aa'; } /* '' */
+.srv-content-management:before { content: '\e9ab'; } /* '' */
+.srv-custom-apps:before { content: '\e9ac'; } /* '' */
+.srv-data-storage:before { content: '\e9ad'; } /* '' */
+.srv-database:before { content: '\e9ae'; } /* '' */
+.srv-design-build:before { content: '\e9af'; } /* '' */
+.srv-design-build-2:before { content: '\e9b0'; } /* '' */
+.srv-devops:before { content: '\e9b1'; } /* '' */
+.srv-digital:before { content: '\e9b2'; } /* '' */
+.srv-disaster-recovery:before { content: '\e9b3'; } /* '' */
+.srv-ecommerce:before { content: '\e9b4'; } /* '' */
+.srv-email:before { content: '\e9b5'; } /* '' */
+.srv-engineer-support:before { content: '\e9b6'; } /* '' */
+.srv-guidance:before { content: '\e9b7'; } /* '' */
+.srv-mailgun:before { content: '\e9b8'; } /* '' */
+.srv-migration:before { content: '\e9b9'; } /* '' */
+.srv-monitoring:before { content: '\e9ba'; } /* '' */
+.srv-rich-media:before { content: '\e9bb'; } /* '' */
+.srv-saas:before { content: '\e9bc'; } /* '' */
+.srv-ssl:before { content: '\e9bd'; } /* '' */
+.srv-test-dev:before { content: '\e9be'; } /* '' */
+.srv-virtualization:before { content: '\e9bf'; } /* '' */
+.srv-vpn:before { content: '\e9c0'; } /* '' */
+.srv-web-hosting:before { content: '\e9c1'; } /* '' */
+.srv-website:before { content: '\e9c2'; } /* '' */

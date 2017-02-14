@@ -35,7 +35,7 @@ $table-padding: 20px 5px;
 
   &::after {
     @include center-block;
-    font-family: FontAwesome;
+    font-family: rswebfonts;
     padding: 10px 0;
     text-align: center;
   }
@@ -46,7 +46,7 @@ $table-padding: 20px 5px;
 
   &::after {
     color: $signup-green;
-    content: '\f00c';
+    content: '\e807';
   }
 }
 
@@ -55,7 +55,7 @@ $table-padding: 20px 5px;
 
   &::after {
     color: $gray-lighter;
-    content: '\f00d';
+    content: '\e803';
   }
 }
 
