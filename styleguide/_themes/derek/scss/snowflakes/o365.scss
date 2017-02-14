@@ -83,10 +83,6 @@ a {
     border-right: solid 1px $gray-lightest;
   }
 
-  .check {
-    color: $gray-darkest;
-  }
-
   .col-md-3 {
     background-color: transparent;
     border-right: 1px solid $gray-lightest;
@@ -194,18 +190,6 @@ a {
       color: $white;
       line-height: 1em;
       text-align: center;
-    }
-  }
-
-  .business {
-    .check {
-      color: $teal-dark;
-    }
-
-    .enterprise {
-      .check {
-        color: $gray-darkest;
-      }
     }
   }
 }
