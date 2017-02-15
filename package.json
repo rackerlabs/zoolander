@@ -6,6 +6,9 @@
     "Rackspace Web Team <rswebdev@rackspace.com>"
   ],
   "scripts": {
+    "font:open": "node_modules/fontello-cli/bin/fontello-cli open --config iconfont/config.json",
+    "font:update": "node_modules/fontello-cli/bin/fontello-cli install --config iconfont/config.json --css iconfont/css --font iconfont/font",
+    "font:build": "./scripts/build-fonts.sh",
     "harp": "harp ",
     "harp:compile": "npm run harp compile styleguide dist",
     "start": "harp server styleguide",
@@ -21,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
+    "fontello-cli": "^0.4.0",
     "harp": "^0.20.1"
   },
   "devDependencies": {

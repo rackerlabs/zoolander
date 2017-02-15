@@ -78,8 +78,8 @@
   display: block;
 
   &::after {
-    content: '\f0da';
-    font-family: 'FontAwesome';
+    content: '\e801';
+    font-family: 'rswebfonts';
     position: absolute;
     right: 10px;
     top: 8px;
@@ -149,9 +149,9 @@
 .navbar-dropDownSub > .navbar-dropDown-trigger {
 
   &::after {
-    content: '\f0da';
+    content: '\e801';
     float: right;
-    font-family: 'FontAwesome';
+    font-family: 'rswebfonts';
   }
 }
 
@@ -187,7 +187,7 @@
   &::after {
     color: $white;
     display: none;
-    font-family: 'FontAwesome';
+    font-family: 'rswebfonts';
     line-height: 1vw;
     padding: 30px 0;
   }
@@ -195,7 +195,7 @@
 
 .navbar-hamburger {
   &::after {
-    content: '\f00d';
+    content: '\e803';
     font-size: 5.5vw;
   }
 
@@ -220,7 +220,7 @@
   float: right;
 
   &::after {
-    content: '\f086';
+    content: '\e802';
     font-size: 6.5vw;
   }
 }
@@ -230,7 +230,7 @@
   width: 12px;
 
   &::after {
-    content: '\f002';
+    content: '\1f50d';
     display: inline-block;
     font-size: 1.25rem;
     line-height: 0;
@@ -290,8 +290,8 @@
   .navbar-topLink-dropDown {
 
     &::after {
-      content: '\f0d7';
-      font-family: 'FontAwesome';
+      content: '\e806';
+      font-family: 'rswebfonts';
       margin-left: 10px;
     }
   }
@@ -339,8 +339,8 @@
   .navbar-topLink-dropDown {
 
     &::after {
-      content: '\f0d7';
-      font-family: 'FontAwesome';
+      content: '\e806';
+      font-family: 'rswebfonts';
       margin-left: 3px;
     }
   }
@@ -348,7 +348,7 @@
   .navbar-dropDown-trigger {
 
     &::after {
-      content: '\f0d9';
+      content: '\e801';
       left: 10px;
     }
   }
@@ -368,8 +368,8 @@
   .navbar-dropDown-trigger {
 
     &::after {
-      content: '\f0da';
-      font-family: 'FontAwesome';
+      content: '\e801';
+      font-family: 'rswebfonts';
       margin-left: 10px;
     }
   }
@@ -377,8 +377,8 @@
   .navbar-topLink-dropDown {
 
     &::after {
-      content: '\f0da';
-      font-family: 'FontAwesome';
+      content: '\e801';
+      font-family: 'rswebfonts';
       margin-left: 10px;
     }
   }
@@ -387,7 +387,7 @@
     display: block;
 
     &::after {
-      content: '\f0d7';
+      content: '\e806';
       top: 6px;
     }
   }
