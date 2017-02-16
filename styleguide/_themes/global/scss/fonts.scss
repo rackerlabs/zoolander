@@ -93,7 +93,6 @@ ul {
 .checks,
 .times {
   list-style: none;
-  padding-left: 1.3em;
 
   &.teal > li {
     &::before {
@@ -172,7 +171,7 @@ i {
 }
 
 .fa-check {
-  color: $teal-dark;
+  color: $signup-green;
 }
 
 .read-more {
