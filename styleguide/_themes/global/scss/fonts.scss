@@ -89,6 +89,23 @@ ul {
   column-count: 2;
 }
 
+.checkList {
+  list-style: none;
+
+  > li {
+    list-style: none;
+    margin-left: 1em;
+
+    &::before {
+      color: $brand-success;
+      content: '\f00c';
+      display: inline-block;
+      font-family: FontAwesome;
+      margin-left: -1.3em;
+      width: 1.3em;
+    }
+  }
+}
 
 .checks,
 .times {
