@@ -155,3 +155,17 @@ img { max-width: 100%; }
 .white {
   color: $white;
 }
+
+@media only screen and (min-width: $screen-lg-min) {
+  .half-padding,
+  .standard-padding {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+
+  .half-padding-full,
+  .standard-padding-full {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+  }
+}

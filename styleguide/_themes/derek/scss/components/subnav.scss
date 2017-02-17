@@ -4,7 +4,8 @@
 }
 
 .subnav-container {
-  @include make-container;
+  margin: 0 auto;
+  max-width: $screen-md-max;
   padding: 0;
 }
 
@@ -55,8 +56,8 @@
   border-bottom: solid transparent 4px;
   float: left;
   height: 50px;
-  margin: 10px 0 0;
-  padding: 7px 10px 6px;
+  margin-top: 10px;
+  padding: 7px ($grid-gutter-width / 4) 6px;
 
   &:hover {
     background-color: transparent;
@@ -107,7 +108,7 @@
 
 .subnav-noHover {
   float: right;
-  margin: 5px 0;
+  margin: 5px $grid-gutter-width 5px 0;
   padding: 8px 0;
 
   &:hover {
@@ -118,12 +119,7 @@
 @media only screen and (max-width: $screen-md-max) {
   .subnav-item {
     font-size: .9em;
-    margin: 10px 0 0;
     padding: 7px 10px 6px;
-  }
-
-  .subnav-noHover {
-    margin: 5px 0;
   }
 
   .subnav-container {
@@ -140,7 +136,7 @@
     border-bottom: 0;
     border-left: 2px solid transparent;
     height: auto;
-    margin: 0;
+    margin-top: 0;
     padding: 10px 8px;
     width: $full-width;
 
@@ -159,11 +155,16 @@
   }
 
   .subnav-noHover {
-    margin: 0;
     padding-left: 8px;
 
     &:hover {
       border-left: solid transparent 2px;
     }
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min + $grid-gutter-width * 2) {
+  .subnav-noHover {
+    margin-right: 0;
   }
 }

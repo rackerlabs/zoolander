@@ -1,7 +1,7 @@
 {
   "name": "zoolander",
   "description": "Derek Zoolander's Corporate Style Guide to Help Product Teams Build Ridiculously Good Looking Websites",
-  "version": "0.13.31",
+  "version": "0.13.47",
   "authors": [
     "Rackspace Web Team <rswebdev@rackspace.com>"
   ],
@@ -12,10 +12,6 @@
     "gh-pages": "./scripts/build-pages.sh",
     "preversion": "npm run harp compile styleguide dist && git add -f dist",
     "postversion": "git push && git push --tags",
-    "migrate": "./scripts/pull-flat-site.js",
-    "test:visual": "nohup npm start & (cd ./node_modules/backstopjs && npm run test)",
-    "test:visual:init": "nohup npm start & (cd ./node_modules/backstopjs && npm run reference)",
-    "backstop-update": "node ./scripts/update-backstop-urls.js",
     "sass:compile": "node-sass --output-style=compressed --quiet -o /tmp styleguide/css",
     "sass-lint": "sass-lint -v",
     "hooks": "./scripts/hooks.sh",
@@ -28,13 +24,17 @@
     "harp": "^0.20.1"
   },
   "devDependencies": {
-    "backstopjs": "^1.2.1",
-    "colors": "^1.1.2",
     "fs-extra": "^0.30.0",
     "node-sass": "^3.8.0",
     "sass-lint": "^1.0.1",
     "request": "^2.72.0",
     "shortid": "^2.2.6",
     "walk": "^2.3.9"
-  }
+  },
+  "files": [
+    "dist",
+    "scripts",
+    "styleguide",
+    "README.md"
+  ]
 }

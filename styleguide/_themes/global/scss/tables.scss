@@ -14,9 +14,9 @@ $table-padding: 20px 5px;
 }
 
 .productTable-name {
-  @include heading;
-  background-color: $teal-dark;
+  background-color: $gray-base;
   color: $white;
+  font-size: 1.5rem;
   padding: $table-padding;
   text-align: center;
 }
@@ -45,7 +45,7 @@ $table-padding: 20px 5px;
   vertical-align: inherit;
 
   &::after {
-    color: $teal-dark;
+    color: $signup-green;
     content: '\f00c';
   }
 }

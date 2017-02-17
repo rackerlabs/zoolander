@@ -55,9 +55,18 @@
     <div class="col-xs-12">
       <h5 class="red">Example:</h5>
       <!-- Lead pattern -->
-<h1 class="lead-title">Title goes here</h1>
-<p class="lead lead-text">Bacon ipsum dolor amet minim tri-tip pork chop fatback pork loin, salami shoulder pastrami cow id tongue aliquip nostrud. Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est. In dolor qui pastrami, proident velit laborum prosciutto shoulder. Cow in cillum, dolor kielbasa ut occaecat aute irure.</p>
-
+<!--
+.lead class naming not used in alignment with typical pattern structure
+instead here .lead-wrapper is used to avoid having to override bootstrap base class
+ -->
+<div class="lead-wrapper">
+  <div class="lead-headerWrapper">
+    <h1 class="lead-header">Title goes here</h1>
+  </div>
+  <div class="lead-bodyWrapper">
+    <p>Bacon ipsum dolor amet minim tri-tip pork chop fatback pork loin, salami shoulder pastrami cow id tongue aliquip nostrud. Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est. In dolor qui pastrami, proident velit laborum prosciutto shoulder. Cow in cillum, dolor kielbasa ut occaecat aute irure.</p>
+  </div>
+</div>
 
     </div>
   </div>
@@ -135,12 +144,22 @@
 
 <!-- Value Props Pattern -->
 
-<div class="value-prop">
-  <div class="center">
-    <i class="rsweb idio-brain"></i>
+<div class="valueProp">
+  <div class="valueProp-row">
+    <div class="valueProp-media">
+      <div class="valueProp-icon">
+        <i class="rsweb idio-brain"></i>
+      </div>
+    </div>
   </div>
-  <h3 class="center">This a value headline with a max of 50 characters</h3>
-  <p class="center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+  <div class="valueProp-row">
+    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
+  </div>
+  <div class="valueProp-row">
+    <div class="valueProp-body">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+    </div>
+  </div>
 </div>
 
     </div>
@@ -149,12 +168,22 @@
 
 <!-- Value Props Pattern -->
 
-<div class="value-prop">
-  <div class="center">
-    <i class="rsweb idio-brain"></i>
+<div class="valueProp">
+  <div class="valueProp-row">
+    <div class="valueProp-media">
+      <div class="valueProp-icon">
+        <i class="rsweb idio-brain"></i>
+      </div>
+    </div>
   </div>
-  <h3 class="center">This a value headline with a max of 50 characters</h3>
-  <p class="center">consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+  <div class="valueProp-row">
+    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
+  </div>
+  <div class="valueProp-row">
+    <div class="valueProp-body">
+      <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+    </div>
+  </div>
 </div>
 
     </div>
@@ -163,12 +192,20 @@
 
 <!-- Value Props Pattern -->
 
-<div class="value-prop">
-  <div class="center">
-    <i class="rsweb idio-brain"></i>
+<div class="valueProp">
+  <div class="valueProp-row">
+    <div class="valueProp-media">
+      <img class="valueProp-img" src="https://placeholdit.imgix.net/~text?txtsize=30&txt=%5Bplaceholder%5D&w=200&h=150">
+    </div>
   </div>
-  <h3 class="center">This a value headline with a max of 50 characters</h3>
-  <p class="center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+  <div class="valueProp-row">
+    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
+  </div>
+  <div class="valueProp-row">
+    <div class="valueProp-body">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+    </div>
+  </div>
 </div>
 
     </div>
@@ -382,7 +419,6 @@
     <div class="col-md-6">
       <h4 class="red">DO</h4>
       <ul class="checks">
-        <li>Place on background color</li>
         <li>Always utilize rsweb icons for icon images</li>
         <li>Include a headline as well as desciption</li>
         <li>Add supporting features in lists</li>
@@ -391,15 +427,118 @@
     <div class="col-md-6">
       <h4 class="red">DONT</h4>
       <ul class="times">
+        <li>Place on a BG color darker than light-gray</li>
         <li>Exceed character limit</li>
         <li>Try not to use more than 4 cards whenever possible</li>
+        <li>Use colored check marks in lists</li>
       </ul>
     </div>
   </div>
   <h5 class="red">Example:</h5>
 </div>
 <div class="bg-light-gray half-padding">
-  
+  <!-- Features: 50/50 -->
+<div class="bg-light-gray half-padding">
+  <div class="container">
+    <div class="row row-eq-height">
+      <div class="col-sm-6 panel-flex">
+        <div class="subpanel panel-flex">
+          <div class="subpanel-inner panel-flex">
+            <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Product Features Pattern -->
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <i class="feature-icon srv-design-build rsweb"></i>
+    </div>
+  </div>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 panel-flex">
+        <div class="subpanel panel-flex">
+          <div class="subpanel-inner panel-flex">
+            <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Product Features Pattern -->
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <i class="feature-icon srv-design-build rsweb"></i>
+    </div>
+  </div>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-eq-height">
+      <div class="col-sm-6 panel-flex">
+        <div class="subpanel panel-flex">
+          <div class="subpanel-inner panel-flex">
+            <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Product Features Pattern -->
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <i class="feature-icon srv-design-build rsweb"></i>
+    </div>
+  </div>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>consectetuer</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 panel-flex">
+        <div class="subpanel panel-flex">
+          <div class="subpanel-inner panel-flex">
+            <div class="feature">
+              <div class="feature-media">
+                <div class="feature-imgWrapper">
+                  <img class="feature-img" src="https://placeholdit.imgix.net/~text?txtsize=30&txt=%5Bplaceholder%5D&w=200&h=150">
+                </div>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-header">Example Title</h3>
+                <div class="feature-bodyWrapper">
+                  <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 <div class="bg-light-gray">
   <div class="container half-padding">
@@ -415,7 +554,7 @@
 <!-- Features List Pattern -->
 <div class="col-xs-12">
   <h4 class="center">Optional List Title</h4>
-  <ul class="checks teal">
+  <ul class="discs">
     
       <li>Live, US-based support team</li>
     
@@ -461,7 +600,7 @@
 <!-- Features List Pattern -->
 <div class="col-xs-12">
   <h4 class="center">Optional List Title</h4>
-  <ul class="checks teal">
+  <ul class="discs">
     
       <li>Live, US-based support team</li>
     
@@ -611,27 +750,32 @@
 <div class="container">
   <h4>CTA</h4>
   <h6>Required Fileds: Headline and/or Subhead, Button Type</h6>
+  <div class="half-padding">
   <!-- CTA -->
-<div class="cta-container">
-  <div class="cta-iconRow">
-    <i class="cta-icon rsweb gen-assistance"></i>
-  </div>
-  <div class="cta-titleRow">
-    <h2 class="cta-title">Talk to a Rackspace Specialist</h2>
-  </div>
-  <div class="cta-subheadRow">
-    <p class="cta-subhead">Combine the benefits of exchange with the savings of Rackspace email</p>
-  </div>
-  <div class="cta-buttonRow">
-    <div class="cta-buttonContainer">
-      <a class="cta-button">Talk to a Specialist</a>
+  <div class="cta">
+    <div class="cta-row">
+      <div class="cta-iconWrapper">
+        <i class="rsweb gen-assistance"></i>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="cta-headerWrapper">
+        <h2>Talk to a Rackspace Specialist</h2>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="cta-buttonWrapper">
+        <a class="cta-button">Talk to a Specialist</a>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="cta-subheadWrapper">
+        <p class="cta-subhead">Call <a href="javascript:void(0)">1-855-715-7307</a> to start saving</p>
+      </div>
     </div>
   </div>
-  <div class="cta-subtextRow">
-    <h6 class="cta-subtext">Call 1-855-715-7307 to start saving</h6>
-  </div>
+  <!-- end CTA -->
 </div>
-
 
 </div>
 

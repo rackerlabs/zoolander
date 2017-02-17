@@ -18,6 +18,7 @@
 .hostingOptions-product {
   @include make-xs-column(6);
   color: $gray-base;
+  margin-bottom: 25px;
   text-align: center;
   text-decoration: none;
 
@@ -141,7 +142,7 @@
 //quadrant
 
 .quadrant {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.png');
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.jpg');
   background-position: 23% bottom;
   background-repeat: no-repeat;
   background-size: 35%;
@@ -232,6 +233,10 @@
   //equal height columns remove in small
   .hostingOptions-productRow {
     display: block;
+  }
+
+  .hostingOptions-product {
+    width: 100%;
   }
 }
 

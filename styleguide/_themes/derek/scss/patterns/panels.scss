@@ -5,6 +5,7 @@
 .panel-flex {
   @include flex-box;
   justify-content: center;
+  min-width: 1px;
   width: 100%;
 }
 
@@ -16,8 +17,7 @@
   margin-bottom: 1em;
 
   .lead,
-  .lead-title,
-  .lead-text {
+  .lead-wrapper {
     text-align: left;
   }
 
