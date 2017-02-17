@@ -24,6 +24,17 @@
     -moz-osx-font-smoothing: grayscale
 }
 
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+  font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+.fa-2x { font-size: 2em; }
+.fa-3x { font-size: 3em; }
+.fa-4x { font-size: 4em; }
+.fa-5x { font-size: 5em; }
+
 .fa-spin {
     -webkit-animation: fa-spin 2s infinite linear;
     animation: fa-spin 2s infinite linear
@@ -105,6 +116,7 @@ i.rsweb {
 .fa-youtube-play:before { content: '\f16a'; } /* '' */
 .fa-arrow-circle-o-left:before { content: '\f190'; } /* '' */
 .fa-file-pdf-o:before { content: '\f1c1'; } /* '' */
+.fa-phone:before { content: '\e80c'; } /* '' */
 .fa-file-code-o:before { content: '\f1c9'; } /* '' */
 .fa-circle-o-notch:before { content: '\f1ce'; } /* '' */
 .fa-newspaper-o:before { content: '\f1ea'; } /* '' */

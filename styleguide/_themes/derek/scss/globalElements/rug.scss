@@ -1,65 +1,92 @@
 .rug {
   background-color: $gray-dark;
-  border-bottom: 1px solid $gray-darker;
+  border-bottom: 1px solid $gray-base;
 }
 
-.rug-chat-text {
-  padding: 15px 0 0 5px;
+.rug-wrapper {
+  @include make-container;
+  padding: 0;
 }
 
-//Quick and Dirty fix before we take out the rug.
-.rug-container {
-  padding: 15px 0;
-
-  .fa-3x {
-    font-size: 2.5em;
-  }
-
-  .fa-4x {
-    font-size: 3.5em;
-  }
+.rug-headerWrapper {
+  @include make-lg-column(1);
+  @include make-md-column(2.75);
+  padding: 15px 0 20px;
 }
 
-.rug-email-text {
-  padding: 15px 0 0 5px;
+.rug-headerWrapperBorder {
+  border-left: 1px solid $gray-base;
+  padding-left: 15px;
 }
 
 .rug-head {
   color: $white;
   margin: 0;
+  padding: 0;
+}
+
+.rug-subhead {
+  color: $white;
+  font-size: 1.05rem;
+  line-height: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.rug-subheadLink {
+  color: $white;
+
+  &:hover {
+    color: $gray-light;
+  }
+}
+
+.rug-contactOption {
+  @include make-lg-column(2);
+  @include make-md-column(2);
+  margin-top: 5px;
+  padding: 15px 0;
+}
+
+.rug-iconWrapper {
+  @include make-lg-column(1);
+  @include make-md-column(1);
 }
 
 .rug-icon {
   color: $white;
-  margin-left: 15px;
+}
+
+.rug-iconPhone {
+  @include rotate(20deg);
+  margin: 2px 0 0 15px;
 }
 
 .rug-link {
+  @include make-lg-column(9);
+  @include make-md-column(8);
   @include subhead;
   color: $white;
-  font-size: 1.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 3.45rem;
   text-decoration: none;
 }
 
 .rug-link-hover {
   &:hover,
   &:focus {
-    color: $white;
-    text-decoration: underline;
+    color: $gray-light;
+    text-decoration: none;
   }
 }
 
-.rug-phone-text {
-  color: $white;
-  float: left;
-  font-size: 1.35rem;
-  line-height: 1.5rem;
-  padding: 7px 20px;
+@media only screen and (max-width: $screen-md-max) {
+  .rug-subhead {
+    font-size: 1rem;
+  }
 }
 
-.rug-subhead {
-  color: $white;
-  font-size: 4.25rem;
-  line-height: 3.25rem;
-  margin: 0;
+@media only screen and (max-width: $screen-sm-max) {
+  @include responsive-invisibility('.rug');
 }
