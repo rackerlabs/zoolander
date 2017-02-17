@@ -1,14 +1,15 @@
 // see styleguide/_themes/global/scss/_bootstrap_overrides.scss for sass lint overrides.
 
 $ceiling-margin: floor($navbar-margin-bottom / 4);
-$navigation-font-size: 1.25rem;
+$navigation-font-size: 1.4rem;
+$navigation-font-size-medium: 1.25rem;
 
 .ceiling {
   background: $gray-dark;
   border: 0;
   border-radius: 0;
   font-family: $copy;
-  font-size: $navigation-font-size;
+  font-size: $navigation-font-size-medium;
   font-weight: $font-weight-black;
   margin: 0;
   min-height: $line-height-computed;
@@ -52,8 +53,8 @@ $navigation-font-size: 1.25rem;
 .ceiling-menuInline-link {
   color: $white;
   display: block;
-  font-size: $navigation-font-size;
-  line-height: 16px;
+  font-size: $navigation-font-size-medium;
+  line-height: 18px;
   padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
   vertical-align: middle;
@@ -103,7 +104,7 @@ $navigation-font-size: 1.25rem;
 
 .ceiling-dropdownMenu-item {
   color: $white;
-  font-size: $navigation-font-size;
+  font-size: $navigation-font-size-medium;
   margin: 0;
   padding: 0;
 
@@ -115,8 +116,8 @@ $navigation-font-size: 1.25rem;
 .ceiling-dropdownToggle {
   color: $white;
   display: block;
-  font-size: $navigation-font-size;
-  line-height: 16px;
+  font-size: $navigation-font-size-medium;
+  line-height: 18px;
   padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
 

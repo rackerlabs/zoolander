@@ -39,6 +39,7 @@
     &.open {
       > .navbar-topLink {
         background: $brand-primary;
+        border-bottom: 3px transparent solid;
         color: $white;
       }
     }
@@ -98,13 +99,13 @@
   position: relative;
 
   &:hover {
-    background-color: darken($brand-primary, 5%);
+    background-color: darken($brand-primary, 10%);
     cursor: pointer;
   }
 }
 
 .navbar-tertiary-dropDownMenu {
-  background-color: darken($brand-primary, 5%);
+  background-color: darken($brand-primary, 10%);
   border: 0;
   box-shadow: none;
   left: 100%;
@@ -116,7 +117,7 @@
 
 .navbar-tertiary-dropDownItem {
   &:hover {
-    background-color: darken($brand-primary, 10%);
+    background-color: darken($brand-primary, 15%);
     cursor: pointer;
   }
 }
@@ -194,7 +195,7 @@
 
 // After-nav offsets.
 .contentOffset {
-  margin-top: 98px;
+  margin-top: 94px;
 }
 
 .contentOffset-landingPage {
@@ -203,6 +204,10 @@
 
 //main nav on desktop
 @media only screen and (min-width: $screen-sm-min) {
+  .contentOffset {
+    margin-top: 107px;
+  }
+
   .navbar-topLink-dropDown {
 
     &::after {
@@ -218,13 +223,17 @@
   .navbar-nav {
 
     .navbar-topItem {
-      font-size: $navigation-font-size;
+      font-size: $navigation-font-size-medium;
 
       .navbar-dropDownLink,
       .navbar-dropDownLabel,
       .navbar-tertiary-dropDownLink {
-        font-size: $navigation-font-size;
+        font-size: $navigation-font-size-medium;
         padding: 7px 15px 7px 12px;
+      }
+
+      .navbar-dropDownLabel {
+        padding-bottom: 1px;
       }
     }
   }
@@ -234,24 +243,9 @@
 @media only screen and (max-width: $screen-sm-max) {
   .navbar-nav {
 
-    .navbar-topItem {
-      font-size: $navigation-font-size;
-
-      .navbar-dropDownLink,
-      .navbar-dropDownLabel,
-      .navbar-tertiary-dropDownLink {
-        font-size: $navigation-font-size;
-      }
-
-      .navbar-dropDownLabel {
-        padding-bottom: 1px;
-      }
-    }
-
     .navbar-topLink {
-      padding: 18px 10px;
+      padding: 19px 10px;
 
-      &:hover,
       &:focus,
       &:visited {
         border-bottom: 0;
@@ -261,10 +255,6 @@
 
   .navbar-container {
     max-width: $screen-md;
-  }
-
-  .contentOffset {
-    margin-top: 63px;
   }
 
   .navbar-phoneicon,
@@ -421,6 +411,10 @@
   position: relative;
   transition: width .3s;
   width: 0%;
+}
+
+.navbar-searchExpanded {
+  width: 18%;
 }
 
 .navbar-search-input {

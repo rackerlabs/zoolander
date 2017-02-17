@@ -183,14 +183,17 @@ if((url.match(/\/derek\/incubation\//gi) && url != '/derek/incubation/') || (url
 
 
 //search
-var $searchContainer = $('#navbar-search');
-var $searchSubmit = $searchContainer.find('.navbar-icon-search');
+var searchContainer = $('#navbar-search');
+var searchSubmit = searchContainer.find('.navbar-icon-search');
+var searchBox = searchContainer.find('.navbar-search-input');
 
-$searchSubmit.click(function() {
-  if ($searchContainer.hasClass('expanded')) {
-    $searchContainer.css({'width':'0'}).removeClass('expanded');
+searchSubmit.on('click', function() {
+  if (searchContainer.hasClass('navbar-searchExpanded')) {
+    searchContainer.removeClass('navbar-searchExpanded');
+    searchBox.trigger('blur');
   }
   else {
-    $searchContainer.css({'width':'18%'}).addClass('expanded');
+    searchContainer.addClass('navbar-searchExpanded');
+    searchBox.trigger('focus');
   }
 });
