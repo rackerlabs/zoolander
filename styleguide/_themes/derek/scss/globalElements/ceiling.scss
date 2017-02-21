@@ -1,30 +1,30 @@
 // see styleguide/_themes/global/scss/_bootstrap_overrides.scss for sass lint overrides.
 
 $ceiling-margin: floor($navbar-margin-bottom / 4);
-$ceiling-font-size: 10px;
+$navigation-font-size: 1.4rem;
+$navigation-font-size-medium: 1.25rem;
 
 .ceiling {
-  background: $white;
+  background: $gray-dark;
   border: 0;
   border-radius: 0;
-  display: none;
-  font-size: $ceiling-font-size;
+  font-family: $copy;
+  font-size: $navigation-font-size-medium;
   font-weight: $font-weight-black;
   margin: 0;
   min-height: $line-height-computed;
-  text-transform: uppercase;
 }
 
-@media screen and (min-width: $screen-md-min) {
+.ceiling-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 5px;
+  width: 100%;
+}
+
+@media screen and (min-width: $screen-xs-min) {
   .ceiling {
     display: block;
-  }
-
-  .ceiling-container {
-    margin: 0 auto;
-    max-width: 1280px;
-    padding: 0;
-    width: 100%;
   }
 }
 
@@ -36,45 +36,34 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-menuInline-item {
-  border-right: 1px solid $gray-light;
+  border-left: 1px solid $gray-base;
   display: inline-block;
-  font-weight: $font-weight-regular;
-  margin: floor($ceiling-margin + 2) 0;
-  padding: 0 floor($ceiling-margin + 2);
+  float: left;
+  font-weight: $font-weight-black;
 
-  &:last-child {
-    border: 0;
+  &.open,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($blue-gray, 10%);
+    cursor: pointer;
   }
-}
-
-.ceiling-menuInline-itemPartners {
-  border: 0;
 }
 
 .ceiling-menuInline-link {
-  color: $gray-darker;
-  cursor: pointer;
-  font-size: $ceiling-font-size;
-  line-height: 16px;
+  color: $white;
+  display: block;
+  font-size: $navigation-font-size-medium;
+  line-height: 18px;
+  padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
   vertical-align: middle;
 
-  &:hover {
-    color: $gray-darker;
-    text-decoration: underline;
-  }
-}
-
-.ceiling-menuInline-noLink {
-  line-height: 16px;
-  vertical-align: middle;
-}
-
-.ceiling-menuContact {
-  float: left;
-
-  &:first-child {
-    margin-left: 0;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    text-decoration: none;
   }
 }
 
@@ -88,8 +77,6 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-dropdown {
-  border: 0;
-  padding: 0;
   position: relative;
 
   &::after {
@@ -102,12 +89,12 @@ $ceiling-font-size: 10px;
 }
 
 .ceiling-dropdownMenu {
+  background-color: darken($blue-gray, 5%);
   border-radius: 0;
   color: $white;
   display: none;
   left: auto;
   list-style: none;
-  margin: 2px 0 0;
   padding: 0;
   position: absolute;
   right: 0;
@@ -117,24 +104,21 @@ $ceiling-font-size: 10px;
 
 .ceiling-dropdownMenu-item {
   color: $white;
-  font-size: $ceiling-font-size;
+  font-size: $navigation-font-size-medium;
   margin: 0;
   padding: 0;
-}
 
-.ceiling-dropdownMenu-gray {
-  background-color: $gray-base;
-}
-
-.ceiling-dropdownMenu-green {
-  background-color: $brand-success;
+  &:hover {
+    background-color: $brand-success;
+  }
 }
 
 .ceiling-dropdownToggle {
   color: $white;
-  font-size: $ceiling-font-size;
-  line-height: 20px;
-  padding: $padding-base-vertical $padding-base-horizontal;
+  display: block;
+  font-size: $navigation-font-size-medium;
+  line-height: 18px;
+  padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
 
   &:hover,
@@ -148,25 +132,5 @@ $ceiling-font-size: 10px;
     content: '\f0d7';
     font-family: 'FontAwesome';
     margin-left: 5px;
-  }
-}
-
-.ceiling-dropdownToggle-green {
-  background-color: $brand-success;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: lighten($brand-success, 5%);
-  }
-}
-
-.ceiling-dropdownToggle-gray {
-  background-color: $gray-base;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: lighten($gray-base, 5%);
   }
 }

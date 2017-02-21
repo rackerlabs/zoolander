@@ -3,21 +3,8 @@ jQuery(document).ready(function($) {
   var $topLevelDropDown = $('.navbar-topItem > .navbar-topLink-dropDown');
   var $navBurger = $(".navbar-hamburger");
 
-  jQuery ("#search,#searchDesktop").click(function(){
-    $(".navbar-search").slideToggle();
-    $(".navbar-activeArrow").fadeToggle();
-    $(".navbar-menuContainer").removeClass("in");
-    $navBurger.addClass("collapsed");
-  });
-
-  jQuery (".navbar-searchInput").click(function(){
-    $(".navbar-searchButton").css('opacity', 1);
-  });
-
   $navBurger.click(function(){
     $navBurger.toggleClass("collapsed");
-    $(".navbar-search").slideUp();
-    $(".navbar-activeArrow").fadeOut();
 
     //reset dopdown carrets if collapsing the menu
     if($(this).hasClass('collapsed')){
@@ -163,10 +150,14 @@ jQuery(document).ready(function($) {
     }
   }
 })();
+
+//tooltip
 (function ($) {
   $('[data-toggle="tooltip"]').tooltip();
 })(jQuery);
 
+
+//dropdowns
 $('.navZoolander-hasDropdown').unbind().click(function(e){
   e.preventDefault();
   var $el = $(this);
@@ -189,3 +180,20 @@ var url = window.location.pathname;
 if((url.match(/\/derek\/incubation\//gi) && url != '/derek/incubation/') || (url.match(/\/derek\/solutions\//gi) && url != '/derek/solutions/') || (url.match(/\/derek\/templates\//gi) && url != '/derek/templates/')){
     zoolanderSlideBtn.trigger('click');
 }
+
+
+//search
+var searchContainer = $('#navbar-search');
+var searchSubmit = searchContainer.find('.navbar-icon-search');
+var searchBox = searchContainer.find('.navbar-search-input');
+
+searchSubmit.on('click', function() {
+  if (searchContainer.hasClass('navbar-searchExpanded')) {
+    searchContainer.removeClass('navbar-searchExpanded');
+    searchBox.trigger('blur');
+  }
+  else {
+    searchContainer.addClass('navbar-searchExpanded');
+    searchBox.trigger('focus');
+  }
+});

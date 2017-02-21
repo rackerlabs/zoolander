@@ -31,6 +31,10 @@
   background-color: $brand-success;
 }
 
+.dropdown-menu > li > a {
+  font-weight: $font-weight-black;
+}
+
 // Footer
 .footer {
   li {
@@ -65,12 +69,7 @@
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
   .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
-    background: $gray-darker;
-
-    &:focus,
-    &:hover {
-      background-color: transparent;
-    }
+    background: darken($brand-primary, 5%);
   }
 }
 
@@ -80,10 +79,16 @@
 
     &:focus,
     &:hover {
-      background-color: $gray-darker;
+      background-color: darken($brand-primary, 5%);
     }
   }
-  .navbar-nav .navbar-topLink-dropDown.navbar-topLink:hover {
-    background-color: $gray-dark;
+
+  .navbar-dropDownMenu > li.navbar-dropDownItem {
+    background-color: $brand-primary;
   }
+
+  .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
+    background: darken($brand-primary, 5%);
+  }
+
 }
