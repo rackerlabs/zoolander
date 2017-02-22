@@ -15,10 +15,12 @@
 
 .feature-bodyWrapper {
   a {
+    font-size: 1.5rem;
+    font-weight: $font-weight-black;
     text-decoration: underline;
 
     &:hover {
-      color: $brand-secondary;
+      color: $brand-primary;
     }
   }
 }
@@ -31,11 +33,11 @@
 }
 
 .feature-header {
-  font-size: 1.75em;
-  font-weight: 600;
-  letter-spacing: .05em;
-  line-height: 1.45em;
-  margin: 13.5px 0 5px;
+  margin: 13px 0 2px;
+}
+
+.features-media {
+  display: block;
 }
 
 .feature-iconWrapper {
@@ -74,4 +76,9 @@
   .feature-bodyWrapper {
     margin: 0;
   }
+
+  .feature-media {
+    display: none;
+  }
+
 }
