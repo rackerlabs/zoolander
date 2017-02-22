@@ -108,16 +108,6 @@ img {
 }
 
 
-// Horizontal rules
-
-hr {
-  margin-top:    $line-height-computed;
-  margin-bottom: $line-height-computed;
-  border: 0;
-  border-top: 1px solid $hr-border;
-}
-
-
 // Only display content to screen readers
 //
 // See: http://a11yproject.com/posts/how-to-hide-content
