@@ -21,11 +21,11 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "harp": "^0.20.1"
+    "harp": ">0.20.1"
   },
   "devDependencies": {
     "fs-extra": "^0.30.0",
-    "node-sass": "^3.8.0",
+    "node-sass": ">3.8.0",
     "sass-lint": "^1.0.1",
     "request": "^2.72.0",
     "shortid": "^2.2.6",
