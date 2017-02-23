@@ -7,6 +7,7 @@ files:
     - 'styleguide/_themes/global/scss/bootstrap_variables.scss'
     - 'styleguide/_themes/global/scss/bootstrap_overrides.scss'
     - 'styleguide/_themes/global/scss/vendor_prefixes.scss'
+    - 'styleguide/_themes/global/scss/scaffolding.scss'
 rules:
   no-url-protocols: 0
   no-url-domains: 0
