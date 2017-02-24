@@ -6,7 +6,8 @@
   display: inline-block;
   font-family: $copy;
   font-size: 1.5rem;
-  font-weight: $font-weight-black;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-computed;
   margin: 0 auto;
   padding: 11px 50px;
   text-align: center;
@@ -30,10 +31,8 @@
 }
 
 @mixin button-learning {
-  background: $white;
-  border: 3px solid $brand-secondary;
-  color: $gray-dark;
-  padding: 12px 20px;
+  border: $brand-secondary 3px solid;
+  padding: 8px 50px;
 
   &:hover {
     background-color: $brand-secondary;
@@ -42,11 +41,17 @@
 }
 
 @mixin button-leaving {
-  background-color: $mustard;
+  background-color: $blue-login;
   color: $white;
 
+  &::before {
+    content: '\f090';
+    font-family: 'fontawesome';
+    margin-right: 10px;
+  }
+
   &:hover {
-    background-color: lighten($mustard, 5%);
+    background-color: lighten($blue-login, 5%);
     color: $white;
   }
 }
@@ -57,7 +62,6 @@
   &.lead {
     @include button-lead;
     font-family: $copy;
-    font-weight: $font-weight-regular;
   }
 
   &.learning {
