@@ -131,3 +131,42 @@
     }
   }
 }
+
+@media only screen and (min-width: $screen-sm-min) {
+  .rsTabsVertical-container {
+    @include flex-box;
+    padding-bottom: $grid-gutter-width / 4;
+    padding-top: $grid-gutter-width / 4;
+  }
+
+  .rsTabsVertical {
+    padding-right: 0;
+    width: 15%;
+  }
+
+  .rsTabsVertical-content {
+    border-bottom: 0;
+    border-left: 2px solid $rackspace-red;
+    border-top: 0;
+    margin-bottom: -10px;
+    padding-left: 25px;
+    width: 85%;
+  }
+
+  .rsTabVertical-tab {
+    border-right: 0;
+    margin-left: 10px;
+    padding-right: 10px;
+    text-align: right;
+    width: 100%;
+
+    &:first-child {
+      margin-top: 15px;
+    }
+
+    &.active {
+      left: -10px;
+      padding-right: 0;
+    }
+  }
+}
