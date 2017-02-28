@@ -1,11 +1,11 @@
 .rsTabs {
   border-bottom: 0;
   margin: 0 auto;
-  max-width: $screen-lg-min;
 }
 
 .rsTab-tab {
   border: 1px solid $gray-lighter;
+  display: inline-block;
   margin-bottom: 0;
   padding: 0;
 
@@ -35,17 +35,6 @@
     position: relative;
     z-index: 9;
 
-    &::before {
-      background: $rackspace-red;
-      content: '';
-      height: 4px;
-      left: -1px;
-      position: absolute;
-      right: -1px;
-      top: -4px;
-      z-index: 9;
-    }
-
     & > .rsTab-link {
       background-color: transparent;
       border: 0;
@@ -66,23 +55,9 @@
   }
 }
 
-.rsTabs-content {
-  border-bottom: 2px solid $rackspace-red;
-  border-top: 2px solid $rackspace-red;
-  margin: 0 auto 10px;
-  max-width: $screen-lg-min;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 // Overrides for the tabCollapse plugin & bootstrap panel classes
 .rsTabs-container {
   padding: $half-padding-full;
-
-  .rsTab-tab {
-    display: inline-block;
-  }
 
   .panel {
     @include border-radius(0);
@@ -132,24 +107,55 @@
   }
 }
 
-@media only screen and (min-width: $screen-sm-min) {
+@media (min-width: $screen-sm-min) {
+  // Horizontal Tabs
+  .rsTabsHorizontal {
+    max-width: $screen-lg-min;
+  }
+
+  .rsTabsHorizontal-content {
+    border-bottom: 2px solid $rackspace-red;
+    border-top: 2px solid $rackspace-red;
+    margin: 0 auto 10px;
+    max-width: $screen-lg-min;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .rsTabsHorizontal-tab {
+    &.active {
+      &::before {
+        background: $rackspace-red;
+        content: '';
+        height: 4px;
+        left: -1px;
+        position: absolute;
+        right: -1px;
+        top: -4px;
+        z-index: 9;
+      }
+    }
+  }
+
+  // Vertical Tabs
+  .rsTabsVertical {
+    padding-right: 0;
+    width: 15%;
+  }
+
   .rsTabsVertical-container {
     @include flex-box;
     padding-bottom: $grid-gutter-width / 4;
     padding-top: $grid-gutter-width / 4;
   }
 
-  .rsTabsVertical {
-    padding-right: 0;
-    width: 15%;
-  }
-
   .rsTabsVertical-content {
-    border-bottom: 0;
     border-left: 2px solid $rackspace-red;
-    border-top: 0;
     margin-bottom: -10px;
+    padding-bottom: 0;
     padding-left: 25px;
+    padding-right: 0;
     width: 85%;
   }
 
