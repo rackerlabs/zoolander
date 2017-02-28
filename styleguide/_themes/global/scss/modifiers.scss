@@ -76,6 +76,18 @@ img { max-width: 100%; }
   margin: 0 auto;
 }
 
+// Horizontal rules
+hr {
+  border: 0;
+  border-top: 1px solid $gray-lighter;
+  margin-bottom: $line-height-computed / 4;
+  margin-top:    $line-height-computed / 4;
+}
+
+.hr-red {
+  border-top: 1px solid $rackspace-red;
+}
+
 // Text Alignments
 .center,
 .centered {
@@ -94,6 +106,8 @@ img { max-width: 100%; }
   text-transform: $uppercase;
 }
 
+
+//Backgrounds
 .bg-steel-blue {
   background-color: $blue-steel;
 }
@@ -125,6 +139,11 @@ img { max-width: 100%; }
 .bg-crumpled-paper {
   background-color: $gray-light;
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/elements/BGcrumpled-paper.jpg');
+}
+
+.bg-red-border {
+  border-bottom: 1px solid $rackspace-red;
+  border-top: 1px solid $rackspace-red;
 }
 
 // Text Colors
