@@ -309,6 +309,7 @@
     Headline - 15. <br/>
     Content - no limit.</h6>
   <p>The Tabs pattern can be used for pages that are content heavy but can be organized into sections. This can save significant scroll space while allowing for content to be as lengthy as possible.</p>
+  <p>Vertical tabs are only to be used for product showcases. All other uses of tabs should use horizontal.</p>
   <div class="row">
     <div class="col-md-6">
       <h4 class="red">DO</h4>
@@ -316,6 +317,8 @@
         <li>Place on background color</li>
         <li>Use any available content, splits or panels within the internal area</li>
         <li>Use to categorize similar content in an efficient way</li>
+        <li>Use horizontal tabs for anything other than product showcases</li>
+        <li>Use vertical tabs for product showcases</li>
       </ul>
     </div>
     <div class="col-md-6">
@@ -323,12 +326,24 @@
       <ul class="times">
         <li>Exceed title character limit to avoid breaking the container</li>
         <li>Place within a container. The white area should be full width</li>
+        <li>Use horizontal tabs for product showcases</li>
+        <li>Use vertical tabs for anything other than product showcases</li>
       </ul>
     </div>
   </div>
-  <h5 class="red">Example:</h5>
+  <h5 class="red">Horizontal Example:</h5>
 </div>
 <%- partial('../_partials/solutions/tabs.ejs') %>
+
+<div class="container">
+  <h5 class="red">Vertical Example:</h5>
+</div>
+
+<div class="container">
+  <div class="row">
+    <%- partial('../_partials/solutions/tabs-vertical.ejs') %>
+  </div>
+</div>
 
 
 <!-- Announcements -->
