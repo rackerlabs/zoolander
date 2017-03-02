@@ -31,7 +31,9 @@
 }
 
 @mixin button-learning {
+  background-color: $white;
   border: $brand-secondary 3px solid;
+  color: $gray-darkest;
   padding: 8px 50px;
 
   &:hover {
