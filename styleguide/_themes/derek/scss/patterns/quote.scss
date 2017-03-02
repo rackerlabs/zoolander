@@ -1,9 +1,22 @@
-.quote-icon {
-  padding: 20px;
+.testimonial-img {
+  max-height: 40px;
 }
 
-.read-more {
-  img {
-    max-height: 40px;
+.testimonial-imgWrapper {
+  @include make-md-column(1);
+  @include make-xs-column(3);
+}
+
+.testimonial-content {
+  @include make-md-column(8);
+  padding: $standard-padding;
+}
+
+@media (min-width: 1px) {
+  .testimonial-content,
+  .testimonial-imgWrapper {
+    display: block;
+    float: none;
+    margin: 0 auto;
   }
 }
