@@ -1,15 +1,15 @@
-.backtotop-container {
+.backtotop-wrapper {
   background-color: $gray-darkest;
+  display: none;
   padding: 10px 15px;
   text-align: center;
-  display: none;
 
   &:hover {
     background-color: darken($gray-darkest, 5%);
   }
 }
 
-.backtotop-wrapper {
+.backtotop-linkwrapper {
   @include make-md-column(12);
 }
 
@@ -38,7 +38,7 @@
 }
 
 @media only screen and (max-width: $screen-sm-max) {
-  .backtotop-container {
+  .backtotop-wrapper {
     display: block;
   }
 }
