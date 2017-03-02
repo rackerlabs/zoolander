@@ -788,6 +788,7 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
     Headline - 15. <br>
     Content - no limit.</h6>
   <p>The Tabs pattern can be used for pages that are content heavy but can be organized into sections. This can save significant scroll space while allowing for content to be as lengthy as possible.</p>
+  <p>Vertical tabs are only to be used for product showcases. All other uses of tabs should use horizontal.</p>
   <div class="row">
     <div class="col-md-6">
       <h4 class="red">DO</h4>
@@ -795,6 +796,8 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
         <li>Place on background color</li>
         <li>Use any available content, splits or panels within the internal area</li>
         <li>Use to categorize similar content in an efficient way</li>
+        <li>Use horizontal tabs for anything other than product showcases</li>
+        <li>Use vertical tabs for product showcases</li>
       </ul>
     </div>
     <div class="col-md-6">
@@ -802,19 +805,21 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
       <ul class="times">
         <li>Exceed title character limit to avoid breaking the container</li>
         <li>Place within a container. The white area should be full width</li>
+        <li>Use horizontal tabs for product showcases</li>
+        <li>Use vertical tabs for anything other than product showcases</li>
       </ul>
     </div>
   </div>
-  <h5 class="red">Example:</h5>
+  <h5 class="red">Horizontal Example:</h5>
 </div>
-<div class="rsTabs-container">
-  <ul class="nav nav-tabs rsTabs">
-    <li class="rsTab-tab active"><a class="rsTab-link" href="#tab-1" data-toggle="tab">Tab 1</a></li>
-    <li class="rsTab-tab"><a class="rsTab-link" href="#tab-2" data-toggle="tab">Tab 2</a></li>
-    <li class="rsTab-tab"><a class="rsTab-link" href="#tab-3" data-toggle="tab">Tab 3</a></li>
-    <li class="rsTab-tab"><a class="rsTab-link" href="#tab-4" data-toggle="tab">Tab 4</a></li>
+<div class="rsTabs-container rsTabsHorizontal-container">
+  <ul class="nav nav-tabs rsTabs rsTabsHorizontal">
+    <li class="rsTab-tab active"><a class="rsTab-link rsTabHorizontal-link" href="#tab-1" data-toggle="tab">Tab 1</a></li>
+    <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-2" data-toggle="tab">Tab 2</a></li>
+    <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-3" data-toggle="tab">Tab 3</a></li>
+    <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-4" data-toggle="tab">Tab 4</a></li>
   </ul>
-  <div id="myTabContent" class="tab-content rsTabs-content">
+  <div id="myTabContent" class="tab-content rsTabs-content rsTabsHorizontal-content">
       <div class="tab-pane active" id="tab-1">
           <p>Raw denim you probably haven't...</p>
       </div>
@@ -873,6 +878,81 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
   </div>
 </div>
 
+
+<div class="container">
+  <h5 class="red">Vertical Example:</h5>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="rsTabs-container rsTabsVertical-container">
+  <ul class="nav nav-tabs rsTabs rsTabsVertical">
+    <li class="rsTab-tab rsTabVertical-tab active"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-1" data-toggle="tab">Tab 1</a></li>
+    <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-2" data-toggle="tab">Tab 2</a></li>
+    <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-3" data-toggle="tab">Tab 3</a></li>
+    <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-4" data-toggle="tab">Tab 4</a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content rsTabs-content rsTabsVertical-content">
+      <div class="tab-pane active" id="tab-vertical-1">
+          <p>Raw denim you probably haven't...</p>
+      </div>
+      <div class="tab-pane" id="tab-vertical-2">
+          <p>Food truck fixie locavore, accus...</p>
+      </div>
+      <div class="tab-pane" id="tab-vertical-3">
+        <p>
+          Activated charcoal blog polaroid, next level four loko
+          listicle vice swag neutra authentic. Actually green juice
+          vape, +1 mlkshk woke meh before they sold out kombucha.
+          Letterpress banh mi narwhal, everyday carry craft beer
+          man braid you probably haven't heard of them. 90's iPhone
+          bushwick hella distillery, artisan tilde readymade before
+          they sold out pickled man braid swag yuccie.
+        </p>
+        <p>
+          Letterpress banh mi narwhal, everyday carry craft beer
+          man braid you probably haven't heard of them. 90's iPhone
+          bushwick hella distillery, artisan tilde readymade before
+          they sold out pickled man braid swag yuccie.
+        </p>
+      </div>
+      <div class="tab-pane" id="tab-vertical-4">
+        <p>
+          Activated charcoal blog polaroid, next level four loko
+          listicle vice swag neutra authentic. Actually green juice
+          vape, +1 mlkshk woke meh before they sold out kombucha.
+          Letterpress banh mi narwhal, everyday carry craft beer
+          man braid you probably haven't heard of them. 90's iPhone
+          bushwick hella distillery, artisan tilde readymade before
+          they sold out pickled man braid swag yuccie.
+        </p>
+        <p>
+          Letterpress banh mi narwhal, everyday carry craft beer
+          man braid you probably haven't heard of them. 90's iPhone
+          bushwick hella distillery, artisan tilde readymade before
+          they sold out pickled man braid swag yuccie.
+        </p>
+        <p>
+          Activated charcoal blog polaroid, next level four loko
+          listicle vice swag neutra authentic. Actually green juice
+          vape, +1 mlkshk woke meh before they sold out kombucha.
+          Letterpress banh mi narwhal, everyday carry craft beer
+          man braid you probably haven't heard of them. 90's iPhone
+          bushwick hella distillery, artisan tilde readymade before
+          they sold out pickled man braid swag yuccie.
+        </p>
+        <p>
+          Letterpress banh mi narwhal, everyday carry craft beer
+          man braid you probably haven't heard of them. 90's iPhone
+          bushwick hella distillery, artisan tilde readymade before
+          they sold out pickled man braid swag yuccie.
+        </p>
+      </div>
+  </div>
+</div>
+
+  </div>
+</div>
 
 
 <!-- Announcements -->
