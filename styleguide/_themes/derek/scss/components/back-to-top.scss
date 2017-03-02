@@ -1,68 +1,45 @@
-.rug-to-top {
-  background-color: $teal-dark;
-  padding: 20px 15px 30px;
+.backtotop-container {
+  background-color: $gray-darkest;
+  padding: 10px 15px;
   text-align: center;
+  display: none;
 
-  a {
-    color: $white;
-    font-family: $subhead;
-    font-size: 18px;
-    font-weight: $font-weight-black;
-    line-height: 1.45em;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover,
-    &:visited,
-    &:focus {
-      color: $white;
-      text-decoration: none;
-    }
-
-    i {
-      color: $white;
-      font-family: rswebfonts;
-      font-size: 1.5em;
-      margin: 10px 0 0 15px;
-    }
+  &:hover {
+    background-color: darken($gray-darkest, 5%);
   }
 }
 
-.top-link-desktop {
-  a {
-    background-color: $teal-dark;
-    bottom: 0;
+.backtotop-wrapper {
+  @include make-md-column(12);
+}
+
+.backtotop-link {
+  color: $white;
+  font-family: $subhead;
+  font-size: 2rem;
+  font-weight: $font-weight-black;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:visited,
+  &:focus {
     color: $white;
-    display: none;
-    font-family: $subhead;
-    font-size: 18px;
-    font-weight: $font-weight-black;
-    height: 35px;
-    line-height: 1.45em;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 0;
-    position: fixed;
-    right: 5px;
-    text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    width: 35px;
-    z-index: 100;
-
-    &:hover,
-    &:focus,
-    &:visited {
-      color: $white;
-    }
-
-    i {
-      color: $white;
-      font-size: 1.1em;
-      padding-top: 10px;
-    }
   }
 }
+
+.backtotop-icon {
+  color: $white;
+  font-family: rswebfonts;
+  font-size: 1.75rem;
+  margin: 5px 0 0 10px;
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  .backtotop-container {
+    display: block;
+  }
+}
+
