@@ -34,14 +34,19 @@ p {
   margin: 0 0 1em;
 }
 
-p > a {
+@mixin standard-link {
+  color: $rackspace-red;
   cursor: pointer;
   font-weight: $font-weight-regular;
   text-decoration: underline;
 
   &:hover {
-    color: $brand-secondary;
+    color: darken($rackspace-red, 10%);
   }
+}
+
+p > a {
+  @include standard-link;
 }
 
 h1 {
@@ -164,11 +169,11 @@ i {
 }
 
 .read-more {
-  margin-top: 20px;
+  color: $brand-primary;
+  text-decoration: underline;
 
-  a {
-    color: $white;
-    text-decoration: none;
+  &:hover {
+    color: darken($brand-primary, 5%);
   }
 }
 

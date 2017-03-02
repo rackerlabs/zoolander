@@ -15,13 +15,7 @@
 
 .feature-bodyWrapper {
   a {
-    font-size: 1.5rem;
-    font-weight: $font-weight-black;
-    text-decoration: underline;
-
-    &:hover {
-      color: $brand-primary;
-    }
+    @include standard-link;
   }
 }
 
