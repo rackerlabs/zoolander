@@ -67,8 +67,8 @@
   display: block;
 
   &::after {
-    content: '\f0da';
-    font-family: 'FontAwesome';
+    content: '\e801';
+    font-family: 'rswebfonts';
     position: absolute;
     right: 10px;
     top: 8px;
@@ -142,7 +142,7 @@
 
   &::before {
     color: $white;
-    font-family: 'FontAwesome';
+    font-family: 'rswebfonts';
     font-size: $navigation-font-size;
     margin-right: 5px;
   }
@@ -158,9 +158,9 @@
 
 .navbar-hamburger {
   &::after {
-    content: '\f00d';
+    content: '\e803';
     display: none;
-    font-family: 'FontAwesome';
+    font-family: 'rswebfonts';
     font-size: 2rem;
     line-height: 1.5rem;
   }
@@ -171,7 +171,7 @@
   text-decoration: none;
 
   &::before {
-    content: '\f095';
+    content: '\e80c';
   }
 }
 
@@ -189,7 +189,7 @@
   text-decoration: none;
 
   &::before {
-    content: '\f086';
+    content: '\e802';
   }
 }
 
@@ -211,8 +211,8 @@
   .navbar-topLink-dropDown {
 
     &::after {
-      content: '\f0d7';
-      font-family: 'FontAwesome';
+      content: '\e806';
+      font-family: 'rswebfonts';
       line-height: 1rem;
       margin-left: 10px;
     }
@@ -273,8 +273,8 @@
   .navbar-dropDown-trigger {
 
     &::after {
-      content: '\f0da';
-      font-family: 'FontAwesome';
+      content: '\e801';
+      font-family: 'rswebfonts';
       margin-left: 10px;
     }
   }
@@ -282,8 +282,8 @@
   .navbar-topLink-dropDown {
 
     &::after {
-      content: '\f0da';
-      font-family: 'FontAwesome';
+      content: '\e801';
+      font-family: 'rswebfonts';
       margin-left: 10px;
     }
   }
@@ -292,7 +292,7 @@
     display: block;
 
     &::after {
-      content: '\f0d7';
+      content: '\e806';
       top: 6px;
     }
   }
@@ -462,12 +462,12 @@
 .navbar-icon-search {
   background: $white;
   color: $gray-darker;
-  font-family: FontAwesome;
+  font-family: rswebfonts;
   text-transform: none;
   z-index: 90;
 
   &::before {
-    content: '\f002';
+    content: '\1f50d';
   }
 }
 
@@ -493,6 +493,3 @@
     color: $gray-darkest;
   }
 }
-
-
-

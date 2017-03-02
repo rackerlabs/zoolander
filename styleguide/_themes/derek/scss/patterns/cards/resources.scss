@@ -35,7 +35,7 @@
     color: $white;
     display: flex;
     flex-basis: 15%;
-    font-family: FontAwesome;
+    font-family: rswebfonts;
     font-size: 2vw;
     justify-content: center;
 
@@ -59,7 +59,7 @@
       background-color: $purple;
 
       &::after {
-        content: '\f092';
+        content: '\f300';
       }
     }
 
@@ -75,7 +75,7 @@
       background-color: $teal-dark;
 
       &::after {
-        content: '\f0ad';
+        content: '\e808';
       }
     }
 

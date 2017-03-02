@@ -100,7 +100,7 @@ ul {
 
     &::before {
       display: inline-block;
-      font-family: FontAwesome;
+      font-family: rswebfonts;
       margin-left: -1.3em;
       width: 1.3em;
     }
@@ -111,7 +111,7 @@ ul {
   li {
     &::before {
       color: $signup-green;
-      content: '\f00c';
+      content: '\e807';
     }
   }
 }
@@ -119,7 +119,7 @@ ul {
 .times {
   li {
     &::before {
-      content: '\f00d';
+      content: '\e803';
     }
   }
 }
@@ -150,7 +150,7 @@ i {
   text-transform: none;
 
   &.rsweb {
-    font-family: 'rsweb';
+    font-family: 'rswebfonts';
     font-size: 4.5em;
   }
 
