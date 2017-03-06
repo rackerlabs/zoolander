@@ -1,0 +1,23 @@
+.portfolio-wrapper {
+  .keyoffersWidget {
+    background: $gray-lightest;
+  }
+
+  .keyoffersWidget-hover {
+    &:hover {
+      background: $gray-lighter;
+    }
+  }
+}
+
+.portfolio-row {
+  @include make-row;
+}
+
+@media (min-width: $screen-sm-min) {
+  .portfolio-row {
+    @include flex-box;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
