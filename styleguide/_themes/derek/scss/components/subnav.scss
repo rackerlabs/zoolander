@@ -1,5 +1,6 @@
 .subnav {
   background-color: $gray-dark;
+  border-bottom: 0;
   border-radius: 0;
 }
 
@@ -108,8 +109,7 @@
 
 .subnav-noHover {
   float: right;
-  margin: 5px $grid-gutter-width 5px 0;
-  padding: 8px 0;
+  margin-top: 1px;
 
   &:hover {
     border-bottom: solid transparent 4px;
