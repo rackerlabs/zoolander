@@ -164,26 +164,6 @@ a {
     padding: 20px 0;
     text-align: center;
   }
-
-  .triangle {
-    border-left: 110px solid transparent;
-    border-top: 90px solid $brand-secondary;
-    position: absolute;
-    right: -1px;
-    top: -1px;
-  }
-
-  .triangle-text {
-    position: absolute;
-    right: 8px;
-    top: 0;
-
-    h4 {
-      color: $white;
-      line-height: 1em;
-      text-align: center;
-    }
-  }
 }
 
 .pricing-header-row {

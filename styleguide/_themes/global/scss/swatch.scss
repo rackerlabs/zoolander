@@ -4,17 +4,17 @@ $images: 'https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.
 //primary colors
 $rackspace-red:     #c40022;
 $signup-green:      #5aaa28;
-$teal-medium:       #0dcfd9;
-$teal-dark:         #00b4c3;
+$mustard:           #f6b100;
 
 //accent colors
 $orange:            #f63;
 $purple:            #639;
-$mustard:           #f6b100;
+$teal-medium:       #0dcfd9;
+$teal-dark:         #00b4c3;
+$blue-login:        #0c808c;
 $blue-steel:        #0d1b2a;
 //depreciating blue-gray. Don't use for additional elements.
 $blue-gray:         #2e3238;
-$blue-login:        #0c808c;
 
 //Grays already defined in bootstrap variables - here as reference
 $white:             #fff    !default;
@@ -29,7 +29,7 @@ $gray-lightest:     #efefef !default;
 
 //our primaries defined in bootstrap variables - here as reference
 $brand-primary:     $rackspace-red !default;
-$brand-secondary:   $teal-medium   !default;
+$brand-secondary:   $mustard       !default;
 $brand-success:     $signup-green  !default;
 $brand-warning:     $orange        !default;
 $brand-danger:      $rackspace-red !default;

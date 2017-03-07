@@ -5,7 +5,7 @@
   &.signup-green { background-color: $brand-success; }
   &.magento-orange { background-color: $orange; }
   &.purple { background-color: $purple; }
-  &.mustard { background-color: $mustard; }
+  &.teal { background-color: $teal-medium; }
 
   //grays
   &.gray-light { background-color: $gray-lighter; }
@@ -37,8 +37,8 @@
   top: 0;
   width: 40px;
   &.signup-green { background-color: lighten($brand-success, 5%); }
-  &.mustard { background-color: lighten($mustard, 5%); }
-  &.brand-secondary { background-color: $teal-dark; }
+  &.teal { background-color: lighten($teal-medium, 5%); }
+  &.brand-secondary { background-color: lighten($brand-secondary, 5%); }
 }
 
 .swatch-color-darker {
@@ -47,7 +47,7 @@
   right: 15px;
   top: 40px;
   width: 40px;
-  &.mustard { background-color: darken($mustard, 10%); }
+  &.teal { background-color: $teal-dark; }
 }
 
 .swatch-footer {

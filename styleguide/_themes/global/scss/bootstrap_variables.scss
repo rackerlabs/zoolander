@@ -22,13 +22,14 @@ $gray-lightest:          #efefef !default;
 //added for ordering issues
 $rackspace-red:     #c40022;
 $signup-green:      #5aaa28;
-$teal-medium:       #0dcfd9;
+$mustard:           #f6b100;
+$teal-dark:         #00b4c3;
 $orange:            #f63;
 
 $brand-primary:         $rackspace-red  !default;
-$brand-secondary:       $teal-medium    !default;
+$brand-secondary:       $mustard        !default;
 $brand-success:         $signup-green   !default;
-$brand-info:            #c4c8ce         !default;
+$brand-info:            $teal-dark      !default;
 $brand-warning:         $orange         !default;
 $brand-danger:          $rackspace-red  !default;
 

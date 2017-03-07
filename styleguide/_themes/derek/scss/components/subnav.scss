@@ -1,6 +1,6 @@
 .subnav {
   background-color: $gray-dark;
-  border-bottom: 0;
+  border: 0;
   border-radius: 0;
 }
 
@@ -11,8 +11,30 @@
 }
 
 .subnav-links {
-  list-style-type: none;
+  list-style: none;
+  margin: 0;
   padding: 0;
+}
+
+.subnav-link {
+  border-bottom: 3px solid transparent;
+  color: $white;
+  display: block;
+  font-size: $navigation-font-size;
+  font-weight: $font-weight-black;
+  line-height: 2.1rem;
+  padding: 20px 13px 17px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+    background-color: transparent;
+    border-bottom: 3px solid $brand-primary;
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 .subnav-header {
@@ -38,7 +60,7 @@
 .subnav-pageTitleContainer {
   @include make-xs-column(11);
   display: none;
-  margin-top: 5px;
+  margin-top: 0;
 }
 
 .subnav-pageTitle {
@@ -54,44 +76,12 @@
 }
 
 .subnav-item {
-  border-bottom: solid transparent 4px;
   float: left;
-  height: 50px;
-  margin-top: 10px;
-  padding: 7px ($grid-gutter-width / 4) 6px;
-
-  &:hover {
-    background-color: transparent;
-    border-bottom: solid $teal-dark 4px;
-  }
-
-  &:focus {
-    background-color: transparent;
-  }
-}
-
-.subnav-item-active {
-  background-color: transparent;
-  border-bottom: solid $teal-dark 4px;
-}
-
-.subnav-link {
-  color: $white;
-  font-size: .95em;
-  font-weight: $font-weight-regular;
-  padding-bottom: 16px;
-  padding-top: 12px;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    background-color: transparent;
-    color: $white;
-    text-decoration: none;
-  }
 }
 
 .subnav-link-active {
+  background-color: transparent;
+  border-bottom: solid $brand-primary 3px;
   color: $white;
   text-decoration: none;
 }
@@ -99,6 +89,9 @@
 .subnav-leadBtn {
   @include button;
   @include button-lead;
+  font-size: $navigation-font-size;
+  font-weight: 600;
+  line-height: 2.1rem;
   padding: 8px 10px;
 
   &:focus {
@@ -109,7 +102,7 @@
 
 .subnav-noHover {
   float: right;
-  margin-top: 1px;
+  margin-top: 11px;
 
   &:hover {
     border-bottom: solid transparent 4px;
@@ -118,8 +111,9 @@
 
 @media only screen and (max-width: $screen-md-max) {
   .subnav-item {
+    border-bottom: 0;
     font-size: .9em;
-    padding: 7px 10px 6px;
+    padding: 0 5px;
   }
 
   .subnav-container {
@@ -132,17 +126,24 @@
     padding-top: 5px;
   }
 
+  .subnav-link {
+    border-bottom: 0;
+
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+
   .subnav-item {
     border-bottom: 0;
     border-left: 2px solid transparent;
     height: auto;
     margin-top: 0;
-    padding: 10px 8px;
     width: $full-width;
 
     &:hover {
       border-bottom: 0;
-      border-left: 2px solid $teal-dark;
+      border-left: 2px solid $brand-primary;
     }
   }
 
