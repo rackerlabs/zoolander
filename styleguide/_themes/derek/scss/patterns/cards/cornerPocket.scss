@@ -1,0 +1,36 @@
+.cornerPocket-wrapper {
+  background-color: $gray-darkest;
+  color: $white;
+  padding: 15px;
+}
+
+.cornerPocket-borderWrapper {
+  border: 4px solid $white;
+  padding: 10px;
+}
+
+.cornerPocket-callout {
+  @include heading;
+  color: $white;
+  font-size: 3.75rem;
+  line-height: 4.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.cornerPocket-heading {
+  @include heading;
+  color: $white;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.cornerPocket-text {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 0;
+}
