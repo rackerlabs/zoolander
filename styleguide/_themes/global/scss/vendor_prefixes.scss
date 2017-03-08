@@ -41,12 +41,6 @@
   border-radius: $radius;
 }
 
-@mixin rotate($degrees) {
-  -webkit-transform: rotate($degrees);
-  -ms-transform: rotate($degrees);
-  transform: rotate($degrees);
-}
-
 @mixin expand-left($duration) {
   -moz-transition: width ($duration);
   -webkit-backface-visibility: hidden;
