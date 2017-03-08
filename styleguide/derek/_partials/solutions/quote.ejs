@@ -1,30 +1,20 @@
-<!-- Testimonials -->
-<div class="bg-blue-gray standard-padding">
-  <div class="container">
-    <h4 class="white">Quote Split</h4>
-    <div id="quote">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-8 center-block">
-              <blockquote class="center white">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
-              <cite class="center">Brian McManus, Senior Director of Technology - Under Armour</cite>
-            </div>
-          </div>
-          <!--Option for logo-->
-          <div class="row red semi-bold half-padding-top">
-            <div class="col-md-2 col-xs-2 center-block">
-              <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/duqBHik7nRo"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+<% if(!textWrapperClass) { var textWrapperClass = "quote-textWrapper"; } %>
+<% if(!blockquote) { var blockquote = "Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done."; } %>
+<% if(!name) { var name = "Brian McManus"; } %>
+<% if(!position) { var position = "Senior Director of Technology"; } %>
+<% if(!logoClass) { var logoClass = "quote-logo"; } %>
+<% if(!logoImg) { var logoImg = "https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png"; } %>
+<!-- Quote Partial -->
+
+<div class="<%- textWrapperClass %>">
+  <blockquote class="quote-blockquote"><%- blockquote %></blockquote>
+  <p class="quote-attrName"><%- name %></p>
+  <p class="quote-attrPosition"><%- position %></p>
+</div>
+<!--Option for logo-->
+<div class="quote-logoWrapper">
+  <div class="<%- logoClass %>">
+    <img src="<%- logoImg %>" alt="">
   </div>
 </div>
-

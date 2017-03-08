@@ -1,3 +1,70 @@
+.quote {
+  background-color: $blue-gray;
+  padding: $half-padding;
+}
+
+.quote-wrapper {
+  @include make-container;
+}
+
+.quote-textWrapper {
+  @include make-md-column(6);
+  @include center-block;
+}
+
+.quote-split-textWrapper {
+  @include make-md-column(10);
+  @include center-block;
+}
+
+.quote-blockquote {
+  color: $white;
+  padding: 10px 15px 20px;
+  text-align: center;
+
+  &::before {
+    content: open-quote;
+  }
+
+  &::after {
+    content: close-quote;
+  }
+}
+
+.quote-attrName {
+  color: $mustard;
+  font-size: 1.85rem;
+  font-weight: $font-weight-black;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.quote-attrPosition {
+  color: $white;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.quote-logoWrapper {
+  @include make-row;
+  padding: $half-padding-top;
+}
+
+.quote-logo {
+  @include make-xs-column(3);
+  @include make-sm-column(2);
+  @include make-lg-column(1);
+  @include center-block;
+}
+
+.quote-split-logo {
+  @include make-xs-column(3);
+  @include make-sm-column(2);
+  @include make-md-column(3);
+  @include center-block;
+}
+
 .quote-icon {
   padding: 20px;
 }
@@ -5,5 +72,21 @@
 .read-more {
   img {
     max-height: 40px;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .quote-textWrapper,
+  .quote-split-textWrapper,
+  .quote-logo,
+  .quote-split-logo {
+    float: none;
+  }
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .quote-logo,
+  .quote-split-logo {
+    float: none;
   }
 }
