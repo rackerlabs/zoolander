@@ -723,20 +723,31 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
   </div>
   <h5 class="red">Example:</h5>
 </div>
-<!-- Testimonials -->
-<div class="bg-blue-gray standard-padding">
-  <div class="container">
+<!-- Quote Full Width -->
+<div class="quote">
+  <div class="quote-wrapper">
     <div class="row">
-      <div class="col-md-8 center-block">
-        <blockquote class="center white">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
-        <cite class="center">Brian McManus, Senior Director of Technology - Under Armour</cite>
-      </div>
-    </div>
-    <!--Option for logo-->
-    <div class="row red semi-bold half-padding-top">
-      <div class="col-md-1 col-xs-3 center-block">
-        <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png" alt="">
-      </div>
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+
+
+<!-- Quote Partial -->
+
+<div class="quote-textWrapper">
+  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
+  <p class="quote-attrName">Brian McManus</p>
+  <p class="quote-attrPosition">Senior Director of Technology</p>
+</div>
+<!--Option for logo-->
+<div class="quote-logoWrapper">
+  <div class="quote-logo">
+    <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png" alt="">
+  </div>
+</div>
+
     </div>
   </div>
 </div>
@@ -745,35 +756,50 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
 <div class="container half-padding-top">
   <h5 class="red">Example of Split Quote:</h5>
 </div>
-<!-- Testimonials -->
-<div class="bg-blue-gray standard-padding">
-  <div class="container">
-    <h4 class="white">Quote Split</h4>
-    <div id="quote">
-      <div class="row">
+<!-- Quote Split -->
+<div class="quote">
+  <div class="quote-wrapper">
+    <div class="row">
         <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-8 center-block">
-              <blockquote class="center white">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
-              <cite class="center">Brian McManus, Senior Director of Technology - Under Armour</cite>
-            </div>
-          </div>
-          <!--Option for logo-->
-          <div class="row red semi-bold half-padding-top">
-            <div class="col-md-2 col-xs-2 center-block">
-              <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png" alt="">
-            </div>
-          </div>
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+
+
+<!-- Quote Partial -->
+
+<div class="quote-split-textWrapper">
+  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
+  <p class="quote-attrName">Brian McManus</p>
+  <p class="quote-attrPosition">Senior Director of Technology</p>
+</div>
+<!--Option for logo-->
+<div class="quote-logoWrapper">
+  <div class="quote-split-logo">
+    <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png" alt="">
+  </div>
+</div>
+
         </div>
         <div class="col-md-6">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/duqBHik7nRo"></iframe>
-          </div>
+          <!-- For the sake of page-load time on zoolander, if we're within a subpanel, just show screenshot, not full video. -->
+
+
+
+<h5 class="videoEmbed-title">Video Title</h5>
+<div class="embed-responsive embed-responsive-16by9">
+  
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/duqBHik7nRo"></iframe>
+  
+</div>
+
         </div>
       </div>
     </div>
   </div>
-</div>
+
 
 
 
