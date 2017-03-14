@@ -107,6 +107,14 @@
   }
 }
 
+.rsTabs-contentBody {
+  margin-bottom: 25px;
+}
+
+.rsTabsHorizontal-contentHeader {
+  text-align: center;
+}
+
 @media (min-width: $screen-sm-min) {
   // Horizontal Tabs
   .rsTabsHorizontal {
@@ -157,6 +165,10 @@
     padding-left: 25px;
     padding-right: 0;
     width: 85%;
+  }
+
+  .rsTabsVertical-contentHeader {
+    margin-top: 0;
   }
 
   .rsTabVertical-tab {

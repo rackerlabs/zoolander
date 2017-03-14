@@ -1,0 +1,60 @@
+<%
+  if(!title) { var title = "Portfolio Tab Title"; }
+  if(!rowCt) { var rowCt = 2; }
+%>
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader"><%- title %></h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <%- partial('../cards/key-offer.ejs') %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <%- partial('../cards/key-offer-no-hover.ejs') %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <%- partial('../cards/key-offer.ejs') %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% if (rowCt > 1) { %>
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <%- partial('../cards/key-offer-no-hover.ejs') %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel">
+        <div class="subpanel-inner panel-flex">
+          <%- partial('../cards/key-offer.ejs') %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <%- partial('../cards/key-offer-no-hover.ejs') %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
