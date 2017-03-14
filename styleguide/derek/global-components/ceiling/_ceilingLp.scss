@@ -1,39 +1,61 @@
 .ceilingLp {
   background: $white;
   box-shadow: 0 6px 12px $black-shadow;
-  line-height: 47px;
+}
+
+.ceiling-menuInline-item {
+  border-left: 1px solid $gray-light;
+}
+
+.navbar-phoneiconLp,
+.navbar-chaticonLp,
+.navbar-emailiconLp {
+  color: $gray-darkest;
+
+  &:hover {
+    color: $gray-darkest;
+  }
+
+  &::before {
+    color: $gray-darkest;
+  }
 }
 
 .ceilingLp-brand {
-  background-color: $gray-darker;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg');
-  background-position: 9px 10px;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/rs-logo-black.svg');
+  background-position: left 50%;
   background-repeat: no-repeat;
-  background-size: 111px 29px;
+  background-size: 100% 79%;
   float: left;
-  height: 50px;
-  margin: 0;
+  height: 35px;
+  margin: 5px 10px;
   position: relative;
-  width: 127px;
-}
-
-.ceilingLp-pageTitle {
-  float: left;
-  margin: 0 0 0 20px;
+  transition-duration: .3s;
+  width: 150px;
 }
 
 @media only screen and (max-width: $screen-xs-max) {
   @include responsive-invisibility('.ceilingLp-pageTitle');
+
+  .navbar-phoneiconLp,
+  .navbar-chaticonLp,
+  .navbar-emailiconLp {
+    padding: 15px 0;
+  }
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  .basement-iconListItem {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: $screen-md-min) {
   margin: 0 (-$grid-gutter-width / 2);
 }
 
-.ceilingLp-brand-logo {
-  display: block;
-  height: 100%;
-  max-width: $full-width;
+.ceilingLp-container {
+  padding: 0;
 }
 
 .ceilingLp-menuInline {
@@ -42,29 +64,11 @@
 }
 
 .ceilingLp-menuInline-item {
-  display: inline-block;
-  font-size: $navigation-font-size;
-  font-weight: $font-weight-black;
-  margin: 0;
-  padding: 0 floor($ceiling-margin + 2);
-  text-transform: uppercase;
-}
 
-.ceilingLp-menuInline-link {
-  color: $text-color;
-  text-decoration: none;
-  vertical-align: middle;
-
-  &:hover {
-    color: $text-color;
-    text-decoration: underline;
+  &.open,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $gray-lightest;
   }
-}
-
-.ceilingLp-menuInline-noLink {
-  vertical-align: middle;
-}
-
-.ceilingLp-phone {
-  float: right;
 }
