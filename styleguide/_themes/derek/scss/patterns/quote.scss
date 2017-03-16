@@ -8,27 +8,14 @@
 }
 
 .quote-textWrapper {
-  @include make-md-column(6);
   @include center-block;
-}
-
-.quote-split-textWrapper {
-  @include make-md-column(10);
-  @include center-block;
+  max-width: 590px;
 }
 
 .quote-blockquote {
   color: $white;
   padding: 10px 15px 20px;
   text-align: center;
-
-  &::before {
-    content: open-quote;
-  }
-
-  &::after {
-    content: close-quote;
-  }
 }
 
 .quote-attrName {
@@ -52,17 +39,8 @@
 }
 
 .quote-logo {
-  @include make-xs-column(3);
-  @include make-sm-column(2);
-  @include make-lg-column(1);
   @include center-block;
-}
-
-.quote-split-logo {
-  @include make-xs-column(3);
-  @include make-sm-column(2);
-  @include make-md-column(3);
-  @include center-block;
+  max-width: 83px;
 }
 
 .quote-icon {
@@ -72,21 +50,5 @@
 .read-more {
   img {
     max-height: 40px;
-  }
-}
-
-@media screen and (min-width: $screen-md-min) {
-  .quote-textWrapper,
-  .quote-split-textWrapper,
-  .quote-logo,
-  .quote-split-logo {
-    float: none;
-  }
-}
-
-@media screen and (max-width: $screen-sm-max) {
-  .quote-logo,
-  .quote-split-logo {
-    float: none;
   }
 }
