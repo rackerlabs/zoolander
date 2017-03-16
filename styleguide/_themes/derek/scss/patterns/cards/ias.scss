@@ -46,6 +46,10 @@
   .rsweb {
     font-size: 7rem;
   }
+
+  a {
+    @include standard-link;
+  }
 }
 
 .iasWidget-bottom {

@@ -2,6 +2,10 @@
   margin-bottom: 14px;
 }
 
+.lead-bodyWrapper > a {
+  @include standard-link;
+}
+
 .lead-header {
   margin-top: 0;
 }
@@ -9,4 +13,8 @@
 .lead-wrapper {
   font-family: $copy;
   text-align: center;
+}
+
+.lead-link {
+  @include standard-link;
 }

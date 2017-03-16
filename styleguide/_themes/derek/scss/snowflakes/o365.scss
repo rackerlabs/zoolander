@@ -41,14 +41,6 @@ a {
 .pricing {
   background-color: $white;
 
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
   h3 {
     &.teal {
       color: $teal-dark;

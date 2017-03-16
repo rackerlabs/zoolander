@@ -80,6 +80,14 @@
   margin: 10px;
 }
 
+.node-text > a {
+  @include standard-link;
+}
+
+.node-general > a {
+  @include standard-link;
+}
+
 .calculator {
   h3 {
     font-size: 16px;

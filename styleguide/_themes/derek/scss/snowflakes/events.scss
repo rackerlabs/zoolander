@@ -145,6 +145,7 @@
 .eventsOverview-weekEvent-learnMore {
   @include button;
   @include button-learning;
+  color: $gray-darkest;
   margin-bottom: 1rem;
   width: auto;
 }

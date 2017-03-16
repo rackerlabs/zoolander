@@ -43,6 +43,7 @@
   }
 
   a {
-    text-decoration: underline;
+    @include standard-link;
+    color: $gray-darkest;
   }
 }
