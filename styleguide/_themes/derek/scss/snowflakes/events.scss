@@ -106,12 +106,13 @@
   background: $white;
   border: 1px solid $gray-light;
   margin: 0 0 .75rem;
+  overflow: hidden;
   text-align: center;
 }
 
 .eventsOverview-weekEvent-date {
-  @include subhead($white);
-  background: $teal-dark;
+  @include subhead($gray-darker);
+  border-bottom: 1px solid $gray-light;
   padding: .5rem 1.5rem;
   text-align: center;
 }
@@ -127,6 +128,7 @@
 .eventsOverview-weekEvent-headerLocation {
   @include make-xs-column(12);
   @include make-md-column(5);
+  background-color: $gray-lightest;
   font-size: 1.2rem;
   line-height: 4rem;
   padding: 0 3rem 0 1.5rem;
@@ -136,6 +138,7 @@
 .eventsOverview-weekEvent-headerTitle {
   @include make-xs-column(12);
   @include make-md-column(7);
+  background-color: $gray-lightest;
   font-size: 2rem;
   line-height: 4rem;
   padding: 0 1.5rem;
@@ -298,6 +301,7 @@
   .eventsOverview-searchFilter,
   .eventsOverview-searchResults {
     margin-bottom: 0;
+    width: 100%;
   }
 
   .event-backToEvents {
@@ -341,7 +345,7 @@
   }
 
   .eventsOverview-weekEvent-headerTitle {
-    padding: 0 1.5rem 0 3rem;
+    padding: 0 1.5rem 0 4rem;
   }
 
   .events-banner {
@@ -359,6 +363,10 @@
   .event-info-headerType,
   .eventsOverview-weekEvent-headerLocation {
     text-align: right;
+  }
+
+  .eventsOverview-weekEvent-headerLocation {
+    padding-right: 4rem;
   }
 
   .eventsOverview-weekEvent {
