@@ -2,24 +2,23 @@
 
 $ceiling-margin: floor($navbar-margin-bottom / 4);
 $navigation-font-size: 1.2rem;
-$navigation-font-size-medium: 1.15rem;
+$navigation-font-size-medium: 1.05rem;
+$navigation-font-size-xsmall: .9rem;
+$ceiling-font-size: $navigation-font-size-medium;
 
 .ceiling {
   background: $gray-dark;
   border: 0;
   border-radius: 0;
   font-family: $copy;
-  font-size: $navigation-font-size-medium;
+  font-size: $ceiling-font-size;
   font-weight: $font-weight-black;
   margin: 0;
   min-height: $line-height-computed;
 }
 
 .ceiling-container {
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 0 5px;
-  width: 100%;
+  @include make-container;
 }
 
 .navbar-phoneicon {
@@ -149,7 +148,7 @@ $navigation-font-size-medium: 1.15rem;
 
 .ceiling-dropdownMenu-item {
   color: $white;
-  font-size: $navigation-font-size-medium;
+  font-size: $ceiling-font-size;
   margin: 0;
   padding: 0;
 
@@ -188,6 +187,10 @@ $navigation-font-size-medium: 1.15rem;
 @media screen and (max-width: $screen-xs-max) {
   .ceiling-menuInline-item {
     font-size: 1rem;
+  }
+
+  .ceiling-container {
+    padding: 0;
   }
 }
 
