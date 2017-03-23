@@ -1,8 +1,8 @@
 // see styleguide/_themes/global/scss/_bootstrap_overrides.scss for sass lint overrides.
 
 $ceiling-margin: floor($navbar-margin-bottom / 4);
-$navigation-font-size: 1.4rem;
-$navigation-font-size-medium: 1.25rem;
+$navigation-font-size: 1.2rem;
+$navigation-font-size-medium: 1.15rem;
 
 .ceiling {
   background: $gray-dark;
@@ -22,9 +22,54 @@ $navigation-font-size-medium: 1.25rem;
   width: 100%;
 }
 
-@media screen and (min-width: $screen-xs-min) {
-  .ceiling {
-    display: block;
+.navbar-phoneicon {
+  color: $white;
+  text-decoration: none;
+
+  &::before {
+    content: '\e80c';
+  }
+}
+
+.navbar-emailicon {
+  color: $white;
+  text-decoration: none;
+
+  &::before {
+    content: '\f0e0';
+  }
+}
+
+.navbar-chaticon {
+  color: $white;
+  text-decoration: none;
+
+  &::before {
+    content: '\e802';
+  }
+}
+
+.navbar-phoneicon,
+.navbar-chaticon,
+.navbar-emailicon,
+.navbar-searchicon {
+  display: block;
+  padding: 15px floor($ceiling-margin + 5);
+  text-align: center;
+
+  &::before {
+    color: $white;
+    font-family: 'rswebfonts';
+    font-size: $navigation-font-size;
+    margin-right: 5px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
   }
 }
 
@@ -39,6 +84,7 @@ $navigation-font-size-medium: 1.25rem;
   border-left: 1px solid $gray-base;
   display: inline-block;
   float: left;
+  font-size: 1.15rem;
   font-weight: $font-weight-black;
 
   &.open,
@@ -54,7 +100,6 @@ $navigation-font-size-medium: 1.25rem;
   color: $white;
   display: block;
   font-size: $navigation-font-size-medium;
-  line-height: 18px;
   padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
   vertical-align: middle;
@@ -117,7 +162,6 @@ $navigation-font-size-medium: 1.25rem;
   color: $white;
   display: block;
   font-size: $navigation-font-size-medium;
-  line-height: 18px;
   padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
 
@@ -132,5 +176,30 @@ $navigation-font-size-medium: 1.25rem;
     content: '\e806';
     font-family: 'rswebfonts';
     margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: $screen-xs-min) {
+  .ceiling {
+    display: block;
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .ceiling-menuInline-item {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .ceiling-menuInline-item {
+    font-size: .9rem;
+  }
+
+  .navbar-phoneicon,
+  .navbar-chaticon,
+  .navbar-emailicon,
+  .navbar-searchicon {
+    padding: 15px floor($ceiling-margin);
   }
 }
