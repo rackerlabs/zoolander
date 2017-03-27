@@ -1,0 +1,26 @@
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+<% if(!title) { var title = "Pain Point / Use Case"; } %>
+<% if(!subhead) { var subhead = "Expand on Value Props or Pain Points"; } %>
+<% if(!image) { var image = "http://placehold.it/350x250"; } %>
+<% if(!desc) { var desc = "Text goes here for pain points or use cases for the targeted product, solution, service, or industry. Pair with a related image, screenshot, or other asset to the right. Finish off this section with links to relevant product/service/solution pages. Solve with: Use Case Examples"; } %>
+<!-- Internal Tab Section -->
+<div class="half-padding-full">
+<h2 class="center"><%- title %></h2>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <h4><%- subhead %></h4>
+          <p><%- desc %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <img src="<%- image %>"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

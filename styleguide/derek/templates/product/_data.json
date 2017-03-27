@@ -3,10 +3,13 @@
     "css": "css/derek.css",
     "theme_name": "derek"
   },
-  "solution-overview": {
+  "product-overview": {
     "css": "css/derek.css"
   },
-  "product-overview": {
+  "product-detail": {
+    "css": "css/derek.css"
+  },
+  "product-category": {
     "css": "css/derek.css"
   }
 }

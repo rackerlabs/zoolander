@@ -19,14 +19,17 @@ Should bring in featured image and no other. A filter has been applied in css.
   <div class="container">
     <h2>Feed Title</h2>
     <div class="row row-eq-height">
-      <div class="col-sm-4 panel-flex">
-        <%- partial("../cards/blog-feed-item", {desc: "150 max character count here."}) %>
+      <div class="col-sm-3 panel-flex">
+        <%- partial("../cards/blog-feed-item") %>
       </div>
-      <div class="col-sm-4 panel-flex">
-        <%- partial("../cards/blog-feed-item", {desc: "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. Pro gravida dolor sit amet lacus pro gravida dolors."}) %>
+      <div class="col-sm-3 panel-flex">
+        <%- partial("../cards/blog-feed-item") %>
       </div>
-      <div class="col-sm-4 panel-flex">
-        <%- partial("../cards/blog-feed-item", {desc: "150 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. "}) %>
+      <div class="col-sm-3 panel-flex">
+        <%- partial("../cards/blog-feed-item") %>
+      </div>
+      <div class="col-sm-3 panel-flex">
+        <%- partial("../cards/blog-feed-item") %>
       </div>
     </div>
   </div>

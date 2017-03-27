@@ -3,10 +3,13 @@
     "css": "css/derek.css",
     "theme_name": "derek"
   },
-  "solution-overview": {
+  "educational": {
     "css": "css/derek.css"
   },
-  "product-overview": {
+  "industry": {
+    "css": "css/derek.css"
+  },
+  "certification": {
     "css": "css/derek.css"
   }
 }
