@@ -8,7 +8,7 @@
   "scripts": {
     "harp": "harp ",
     "harp:compile": "npm run harp compile styleguide dist",
-    "start": "harp server styleguide",
+    "start": "concurrently 'harp server styleguide' 'browser-sync start --config bs-config.js'",
     "gh-pages": "./scripts/build-pages.sh",
     "preversion": "npm run babel && npm run harp compile styleguide dist && git add -f dist",
     "postversion": "git push && git push --tags",
@@ -24,11 +24,13 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
+    "concurrently": "^3.4.0",
     "harp": "^0.20.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-preset-env": "^1.2.2",
+    "browser-sync": "^2.18.8",
     "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.1.2",
     "eslint-plugin-import": "^2.2.0",
