@@ -1,8 +1,10 @@
 .swatch-color {
   height: 100px;
   //colors
+  &.brand-primary { background-color: $brand-primary; }
   &.brand-secondary { background-color: $brand-secondary; }
   &.signup-green { background-color: $brand-success; }
+  &.blue-steel { background-color: $blue-steel; }
   &.magento-orange { background-color: $orange; }
   &.purple { background-color: $purple; }
   &.teal { background-color: $teal-medium; }
