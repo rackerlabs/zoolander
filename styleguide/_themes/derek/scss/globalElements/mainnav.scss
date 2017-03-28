@@ -284,6 +284,19 @@
     width: 95px;
   }
 
+  .navbar-phoneicon,
+  .navbar-chaticon,
+  .navbar-emailicon,
+  .navbar-searchicon {
+
+    &::before {
+      font-size: 1.85rem;
+      line-height: 2rem;
+      margin-right: 0;
+      padding: 0 23px;
+    }
+  }
+
   .main-nav {
 
     .navbar-hamburger {
@@ -292,16 +305,6 @@
         content: '\f0c9';
         display: inline-block;
         margin: 17px 10px;
-      }
-    }
-
-    .navbar-searchicon {
-      float: left;
-
-      &::after {
-        font-size: 5vw;
-        line-height: 1vw;
-        margin: 0;
       }
     }
 

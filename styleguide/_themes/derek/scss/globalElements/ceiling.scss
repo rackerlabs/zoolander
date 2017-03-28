@@ -200,6 +200,6 @@ $navigation-font-size-medium: 1.15rem;
   .navbar-chaticon,
   .navbar-emailicon,
   .navbar-searchicon {
-    padding: 15px floor($ceiling-margin);
+    padding: 15px 0;
   }
 }
