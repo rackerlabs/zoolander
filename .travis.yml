@@ -4,6 +4,7 @@ node_js:
 env:
   - CMD="sass:compile"
   - CMD="sass-lint"
+  - CMD="js-lint"
 #  - CMD="test:visual"
 install:
   - "npm install"
