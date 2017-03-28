@@ -43,3 +43,22 @@ Run the following command to deploy to github pages!
 ```
 npm run gh-pages
 ```
+
+## JS Linting
+
+Use the following command to manually lint zoolander JS
+
+```
+npm run js-lint
+```
+
+## ES6 JS
+
+Use the following command to manually transpile Zoolander JS
+
+```shell
+npm run babel
+
+#to watch js files
+npm run babel:watch
+```

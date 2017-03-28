@@ -10,12 +10,15 @@
     "harp:compile": "npm run harp compile styleguide dist",
     "start": "harp server styleguide",
     "gh-pages": "./scripts/build-pages.sh",
-    "preversion": "npm run harp compile styleguide dist && git add -f dist",
+    "preversion": "npm run babel && npm run harp compile styleguide dist && git add -f dist",
     "postversion": "git push && git push --tags",
     "sass:compile": "node-sass --output-style=compressed --quiet -o /tmp styleguide/css",
     "sass-lint": "sass-lint -v",
     "hooks": "./scripts/hooks.sh",
-    "postinstall": "npm run hooks"
+    "postinstall": "npm run hooks",
+    "js-lint": "eslint styleguide/derek styleguide/global",
+    "babel": "rm -rf styleguide/js && babel styleguide/global styleguide/derek --out-dir styleguide/js",
+    "babel:watch": "babel styleguide/global styleguide/derek --out-dir styleguide/js --watch"
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
@@ -24,10 +27,15 @@
     "harp": "^0.20.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.2.2",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.2",
+    "eslint-plugin-import": "^2.2.0",
     "fs-extra": "^0.30.0",
     "node-sass": "^3.8.0",
-    "sass-lint": "^1.0.1",
     "request": "^2.72.0",
+    "sass-lint": "^1.0.1",
     "shortid": "^2.2.6",
     "walk": "^2.3.9"
   },
