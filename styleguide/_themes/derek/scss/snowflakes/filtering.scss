@@ -1,0 +1,116 @@
+.rsFilter-section {
+  overflow: hidden;
+}
+
+.rsFilter-bar {
+  @include make-sm-column(2);
+  background-color: $gray-lighter;
+  padding: 0 20px;
+}
+
+.rsFilter-hamburger {
+  background-color: transparent;
+  border: 0;
+  display: inline-block;
+  padding: 8px 12px;
+
+  &::before {
+    content: '\f0c9';
+    font-family: 'rswebfonts';
+  }
+
+  &:hover {
+    background-color: $gray-light;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.rsFilter-mobileTitle {
+  @include subhead($gray-darker);
+  display: inline-block;
+  text-align: center;
+}
+
+.rsFilter-form {
+  display: none;
+  opacity: 0;
+  padding-bottom: 10px;
+  transition-duration: .1s;
+}
+
+.rsFilter-mobileForm {
+  display: block;
+}
+
+.rsFilter-mobileForm-effect {
+  opacity: 1;
+}
+
+.rsFilter-formTitle {
+  @include subhead($gray-darker);
+  display: none;
+  text-align: center;
+}
+
+.rsFilter-formSelect {
+  background: $white;
+  display: block;
+  margin: 1rem auto 0;
+  max-width: 200px;
+  width: $full-width;
+}
+
+.rsFilter-button {
+  background-color: $gray-base;
+  border: 0;
+  color: $white;
+  display: block;
+  margin: 1rem auto 0;
+  max-width: 200px;
+  padding: 0 15px;
+  text-align: center;
+  white-space: normal;
+  width: $full-width;
+
+  &:hover {
+    background-color: $gray-darker;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.rsFilter-content {
+  @include make-sm-column(10);
+  padding: 25px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .rsFilter-bar {
+    padding: 20px;
+  }
+
+  .rsFilter-hamburger {
+    display: none;
+  }
+
+  .rsFilter-mobileTitle {
+    display: none;
+  }
+
+  .rsFilter-form {
+    display: block;
+    opacity: 1;
+    padding-bottom: 0;
+    transition-duration: 0s;
+  }
+
+  .rsFilter-formTitle {
+    display: block;
+  }
+}
