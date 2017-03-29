@@ -205,27 +205,29 @@
     </div>
   </div>
 
-  <div class="bg-light-gray">
-    <div class="eventsOverview">
-      <div class="eventsOverview-row">
-        <div class="eventsOverview-searchFilter">
-          <div class="eventsOverview-searchFilter-label">Find An Event</div>
-          <div class="eventsOverview-searchFilter-eventType">
-            <form method="post" action="javascript:void(0);">
-              <select class="eventsOverview-searchFilter-eventTypeSelect">
-                <option disabled="disabled" selected="selected">Event Type</option>
-                <option value="1">All</option>
-                <option value="2">Customer Events</option>
-                <option value="3">Field Events</option>
-                <option value="4">Forum</option>
-                <option value="5">Tradeshow/Conference</option>
-                <option value="6">Training</option>
-                <option value="7">Webinar</option>
+  <div class="rsFilter-section">
+    <div class="rsFilter-row row-eq-height">
+      <div class="rsFilter-bar">
+        <button class="rsFilter-hamburger"></button>
+        <div class="rsFilter-mobileTitle">Find an Event</div>
+        <form class="rsFilter-form">
+          <div class="rsFilter-formTitle">Find an Event</div>
+            <div class="form-item form-type-select form-item-tid-1">
+              <select class="rsFilter-formSelect form-select">
+                <option value="All" selected="selected">- Any -</option>
+                <option value="92">Custom Events</option>
+                <option value="82">Field Events</option>
+                <option value="101">Forum</option>
+                <option value="102">Tradeshow/Conference</option>
+                <option value="102">Training</option>
+                <option value="102">Webinar</option>
               </select>
-              <input type="submit" class="eventsOverview-searchFilter-eventTypeSubmit" value="Show Results">
-            </form>
-          </div>
-        </div>
+            </div>
+          <button class="rsFilter-button">Show Results</button>
+        </form>
+      </div>
+      <div class="rsFilter-content">
+        <!--Any filterable content goes here-->
         <div class="eventsOverview-searchResults">
           
             <div class="eventsOverview-weekTitle">
@@ -343,6 +345,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
   <div class="backtotop-wrapper">
