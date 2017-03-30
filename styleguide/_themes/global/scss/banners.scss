@@ -22,10 +22,7 @@
 .imacBanner-container {
   @include make-container;
   @include fadein(1s);
-}
-
-.imacBanner-textRow {
-  @include make-row;
+  padding: 0 45px;
 }
 
 .imacBanner-headlineLarge {
@@ -54,6 +51,11 @@
   margin: 0 auto;
   padding: 15px;
   position: relative;
+}
+
+.imacBanner-textRow {
+  @include make-row;
+  padding: 0 25px;
 }
 
 .imacBanner-buttonRow {
@@ -113,7 +115,11 @@
 @media only screen and (max-width: $screen-sm-max) {
   .imacBanner {
     height: 250px;
-    padding: 50px 15px;
+    padding: 50px 0;
+  }
+
+  .imacBanner-container {
+    padding: 0 35px;
   }
 
   .imacBanner-withCta {

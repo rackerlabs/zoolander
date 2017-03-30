@@ -1,10 +1,10 @@
 .footer {
   background-color: $gray-dark;
+  padding: 20px 0;
 }
 
 .footer-container {
   @include make-container;
-  padding: 0;
 }
 
 .footer-menu {

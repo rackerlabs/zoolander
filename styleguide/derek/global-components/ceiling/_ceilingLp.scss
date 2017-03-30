@@ -36,10 +36,6 @@
   max-width: $full-width;
 }
 
-.ceilingLp-container {
-  padding: 0;
-}
-
 .ceilingLp-menuInline {
   list-style: none;
   margin-bottom: 0;
@@ -47,7 +43,7 @@
 
 .ceilingLp-menuInline-item {
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: $navigation-font-size;
   font-weight: $font-weight-black;
   margin: 0;
   padding: 0 floor($ceiling-margin + 2);
