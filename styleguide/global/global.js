@@ -92,8 +92,6 @@ jQuery(document).ready(($) => {
       duration: 'slow',
     }, 'linear');
   });
-
-  $('#footer-accordion').tabCollapse();
 });
 
 // responsive table jQuery plugin
