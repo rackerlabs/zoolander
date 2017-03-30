@@ -1,66 +1,51 @@
-<div class="contentOffset-landingPage">
+<div class="container standard-padding">
+  <!--Lead Pattern-->
+  <%- partial("../../_partials/solutions/lead.ejs") %>
+  <div class="row row-eq-height half-padding-top">
 
-  <%- partial("../../global-components/ceiling/ceilingLp") %>
+    <!--Video Pattern Half Width Centered-->
+    <div class="col-sm-6 center-block">
+      <%- partial("../../_partials/solutions/video.ejs") %>
+    </div>
+  </div>
+</div>
 
-  <%- partial("../../_partials/solutions/header-smallIMAC.ejs") %>
+<!--Features Pattern-->
+<%- partial('../../layouts/features.ejs') %>
 
-  <div class="container standard-padding">
+<!--CTA Pattern-->
+<%- partial("../../_partials/solutions/cta-bottom.ejs") %>
 
-    <!--Lead Pattern-->
-    <%- partial("../../_partials/solutions/lead.ejs") %>
-    <div class="row row-eq-height half-padding-top">
+<div class="bg-light-gray half-padding">
+  <div class="container">
+    <div class="row row-eq-height">
 
-      <!--Video Pattern Half Width Centered-->
-      <div class="col-sm-6 center-block">
-        <%- partial("../../_partials/solutions/video.ejs") %>
+    <!--Text Pattern-->
+      <div class="col-sm-6">
+        <h2>Title of this section of text</h2>
+        <%- partial("../../_partials/solutions/text.ejs") %>
+        <a href="#" class="button learning">Download the whitepaper</a>
+      </div>
+
+      <!--Image Pattern-->
+      <div class="col-sm-6">
+        <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/cloud/IMAC%20landing%20pages/transforming-it-pdf-cover.jpg" class="center-block">
       </div>
     </div>
   </div>
+</div>
 
-  <!--Features Pattern-->
-  <%- partial('../../layouts/features.ejs') %>
-
-  <!--CTA Pattern-->
-  <%- partial("../../_partials/solutions/cta-bottom.ejs") %>
-
-  <div class="bg-light-gray half-padding">
-    <div class="container">
-      <div class="row row-eq-height">
-
-      <!--Text Pattern-->
-        <div class="col-sm-6">
-          <h2>Title of this section of text</h2>
-          <%- partial("../../_partials/solutions/text.ejs") %>
-          <a href="#" class="button learning">Download the whitepaper</a>
-        </div>
-
-        <!--Image Pattern-->
-        <div class="col-sm-6">
-          <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/cloud/IMAC%20landing%20pages/transforming-it-pdf-cover.jpg" class="center-block">
-        </div>
+<!-- Quadrant -->
+<div class="quadrant" id="quadrant">
+  <div class="container">
+    <div class="quadrant-row">
+      <div class="quadrant-textContainer">
+        <h2 class="quadrant-title">Fanatical Support wherever you are, day or night, we have you covered 24x7x365</h2>
+        <p class="quadrant-text">We're more than just a hosting provider - we're your trusted service partner, and we're ready to help solve the toughest problems. Gartner has recognized us as a leader in their <a href="[rsweb:about:cloud-enabled]">Magic Quadrant for Cloud Enabled Managed Hosting.</a></p>
+          <div class="quadrant-buttonContainer">
+            <a class="button learning" href="#">Learn More</a>
+          </div>
       </div>
     </div>
   </div>
-
-  <!-- Quadrant -->
-  <div class="quadrant" id="quadrant">
-    <div class="container">
-      <div class="quadrant-row">
-        <div class="quadrant-textContainer">
-          <h2 class="quadrant-title">Fanatical Support wherever you are, day or night, we have you covered 24x7x365</h2>
-          <p class="quadrant-text">We're more than just a hosting provider - we're your trusted service partner, and we're ready to help solve the toughest problems. Gartner has recognized us as a leader in their <a href="[rsweb:about:cloud-enabled]">Magic Quadrant for Cloud Enabled Managed Hosting.</a></p>
-            <div class="quadrant-buttonContainer">
-              <a class="button learning" href="#">Learn More</a>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <%- partial("../../_partials/_back-to-top") %>
-
-  <%- partial("../../global-components/rug/rug") %>
-  <%- partial("../../global-components/footer/footerLp") %>
-  <%- partial("../../global-components/basement/basement") %>
-
 </div>

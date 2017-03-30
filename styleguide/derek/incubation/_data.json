@@ -1,7 +1,8 @@
 {
   "index": {
     "css": "css/derek.css",
-    "theme_name": "derek"
+    "theme_name": "derek",
+    "layout": "_index"
   },
   "office365": {
     "css": "css/derek.css"
@@ -23,5 +24,9 @@
   },
   "subpanels": {
     "css": "css/derek.css"
+  },
+  "imac": {
+    "css": "css/derek.css",
+    "layout": "_index"
   }
 }

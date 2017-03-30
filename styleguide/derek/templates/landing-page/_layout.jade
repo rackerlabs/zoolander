@@ -1,0 +1,8 @@
+extends ../../../_layouts/page
+
+block content
+  !=partial("../../global-components/ceiling/ceilingLp")
+  .contentOffset-landingPage
+  !=partial("../../_partials/solutions/header-smallIMAC")
+    != yield
+  !=partial("../../global-components/footer/footerLp")

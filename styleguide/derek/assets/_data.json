@@ -1,14 +1,14 @@
 {
   "index": {
     "css": "css/derek.css",
-    "theme_name": "derek",
-    "layout": false
+    "theme_name": "derek"
   },
   "forms": {
     "css": "css/derek.css"
   },
   "swatches": {
-    "css": "css/derek.css"
+    "css": "css/derek.css",
+    "layout": "_example"
   },
   "font-usage": {
     "css": "css/derek.css"

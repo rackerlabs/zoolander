@@ -24,16 +24,20 @@ html(lang="en")
     script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/jquery.fittext.js")
     script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js")
 
-  .container-fluid
     .row.row-eq-height
       button.navZoolander-slideBtn.navZoolander-leftArrow
       .navZoolander-container
+        .siteHeader-logo
+          .siteHeader-logoImg
         ul.navZoolander-list
           li.navZoolander-item
-            a(href="/").navZoolander-link Welcome
+            a(href="#").navZoolander-link.navZoolander-hasDropdown Home
+            ul.navZoolander-dropdown
+              li.navZoolander-item
+                a(href="/").navZoolander-dropdownLink Welcome
 
           li.navZoolander-item
-            a(href="#").navZoolander-link.navZoolander-hasDropdown Rackspace Brand Guidelines
+            a(href="#").navZoolander-link.navZoolander-hasDropdown Rackspace Brand
             ul.navZoolander-dropdown
               li.navZoolander-item
                 a(href="global/").navZoolander-dropdownLink Overview
@@ -43,7 +47,7 @@ html(lang="en")
                 a(href="global/voice").navZoolander-dropdownLink Voice and Tone
 
           li.navZoolander-item
-            a(href="#").navZoolander-link.navZoolander-hasDropdown Zoolander Global Elements
+            a(href="#").navZoolander-link.navZoolander-hasDropdown Global Elements
             ul.navZoolander-dropdown
               li.navZoolander-dropdownItem
                 a(href="derek/assets/").navZoolander-dropdownLink Overview
@@ -74,7 +78,7 @@ html(lang="en")
               li.navZoolander-item
                 a(href="derek/templates").navZoolander-dropdownLink Templates
               li.navZoolander-item
-                a(href="derek/incubation").navZoolander-dropdownLink Incubation/ Dev Sandbox
+                a(href="derek/incubation").navZoolander-dropdownLink Dev Sandbox
 
   .mainContainer#mainContainer
     block content

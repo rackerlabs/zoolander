@@ -1,7 +1,7 @@
 {
   "index": {
     "css": "css/derek.css",
-    "theme_name": "derek"
+    "layout": "_index"
   },
   "cta-LP": {
     "css": "css/derek.css"
