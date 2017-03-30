@@ -2,14 +2,14 @@
 @import '../../../derek/global-components/ceiling/ceiling';
 @import '../../../derek/global-components/ceiling/ceilingLp';
 @import 'globalElements/ext-links';
-@import 'globalElements/mainnav';
+@import '../../../derek/global-components/nav/nav';
 @import '../../../derek/global-components/rug/rug';
 @import '../../../derek/global-components/footer/footer';
 @import '../../../derek/global-components/basement/basement';
 @import '../../../derek/global-components/subnav/subnav';
 @import 'components/tabs';
 @import 'components/back-to-top';
-@import 'components/regionSelector';
+@import '../../../derek/global-components/region-select/region-select';
 @import 'components/pager';
 @import 'patterns/announcements';
 @import 'patterns/blog-feed';
