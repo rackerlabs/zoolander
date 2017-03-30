@@ -1,82 +1,72 @@
-<%- partial("../global-components/ceiling/ceiling") %>
-<%- partial("../global-components/nav/nav") %>
-<div class="contentOffset">
-  <!-- Banner Region -->
-  <div class="imacBanner imacBanner-events">
-    <div class="imacBanner-container">
-      <div class="imacBanner-textRow">
-        <div class="imacBanner-textContainer imacBanner-headlineSmall">
-          <h2 class="imacBanner-headline">
-            <div class="field-banner-header">
-              Rackspace Events Calendar
-            </div>
-          </h2>
-          <div class="imacBanner-line left-top"></div>
-          <div class="imacBanner-line left-bottom"></div>
-          <div class="imacBanner-line right-bottom"></div>
-        </div>
+<!-- Banner Region -->
+<div class="imacBanner imacBanner-events">
+  <div class="imacBanner-container">
+    <div class="imacBanner-textRow">
+      <div class="imacBanner-textContainer imacBanner-headlineSmall">
+        <h2 class="imacBanner-headline">
+          <div class="field-banner-header">
+            Rackspace Events Calendar
+          </div>
+        </h2>
+        <div class="imacBanner-line left-top"></div>
+        <div class="imacBanner-line left-bottom"></div>
+        <div class="imacBanner-line right-bottom"></div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="rsFilter-section">
-    <div class="rsFilter-row row-eq-height">
-      <div class="rsFilter-bar">
-        <button class="rsFilter-hamburger"></button>
-        <div class="rsFilter-mobileTitle">Find an Event</div>
-        <form class="rsFilter-form">
-          <div class="rsFilter-formTitle">Find an Event</div>
-            <div class="form-item form-type-select form-item-tid-1">
-              <select class="rsFilter-formSelect form-select">
-                <option value="All" selected="selected">- Any -</option>
-                <option value="92">Custom Events</option>
-                <option value="82">Field Events</option>
-                <option value="101">Forum</option>
-                <option value="102">Tradeshow/Conference</option>
-                <option value="102">Training</option>
-                <option value="102">Webinar</option>
-              </select>
-            </div>
-          <button class="rsFilter-button">Show Results</button>
-        </form>
-      </div>
-      <div class="rsFilter-content">
-        <!--Any filterable content goes here-->
-        <div class="eventsOverview-searchResults">
-          <% for(var i = 0; i < 4; i++) { %>
-            <div class="eventsOverview-weekTitle">
-              Week of September <%= i * 7 + 1 %>, 2016
-            </div>
-            <% for(var j = i; j < i + i % 3 + 1; j++) { %>
-              <div class="eventsOverview-weekEvent">
-                <div class="eventsOverview-weekEvent-header">
-                  <div class="eventsOverview-weekEvent-headerTitle">Rackspace::Solve San Francisco</div>
-                  <div class="eventsOverview-weekEvent-headerLocation">San Francisco, CA</div>
-                </div>
-                <div class="eventsOverview-weekEvent-date">September <%= i * 7 + 1 + j %>, 2016</div>
-                <div class="eventsOverview-weekEvent-details">
-                  Andouille corned beef pig doner. Jowl frankfurter ball tip flank short loin short ribs. Tri-tip prosciutto leberkas capicola pork belly fatback meatball, biltong venison jerky hamburger picanha. Corned beef turducken tongue ribeye, shankle salami boudin. Boudin doner shankle t-bone ball tip short loin tongue short ribs ham.
-                </div>
-                <a class="eventsOverview-weekEvent-learnMore" href="/derek/incubation/events-interior">Learn More</a>
+<div class="rsFilter-section">
+  <div class="rsFilter-row row-eq-height">
+    <div class="rsFilter-bar">
+      <button class="rsFilter-hamburger"></button>
+      <div class="rsFilter-mobileTitle">Find an Event</div>
+      <form class="rsFilter-form">
+        <div class="rsFilter-formTitle">Find an Event</div>
+          <div class="form-item form-type-select form-item-tid-1">
+            <select class="rsFilter-formSelect form-select">
+              <option value="All" selected="selected">- Any -</option>
+              <option value="92">Custom Events</option>
+              <option value="82">Field Events</option>
+              <option value="101">Forum</option>
+              <option value="102">Tradeshow/Conference</option>
+              <option value="102">Training</option>
+              <option value="102">Webinar</option>
+            </select>
+          </div>
+        <button class="rsFilter-button">Show Results</button>
+      </form>
+    </div>
+    <div class="rsFilter-content">
+      <!--Any filterable content goes here-->
+      <div class="eventsOverview-searchResults">
+        <% for(var i = 0; i < 4; i++) { %>
+          <div class="eventsOverview-weekTitle">
+            Week of September <%= i * 7 + 1 %>, 2016
+          </div>
+          <% for(var j = i; j < i + i % 3 + 1; j++) { %>
+            <div class="eventsOverview-weekEvent">
+              <div class="eventsOverview-weekEvent-header">
+                <div class="eventsOverview-weekEvent-headerTitle">Rackspace::Solve San Francisco</div>
+                <div class="eventsOverview-weekEvent-headerLocation">San Francisco, CA</div>
               </div>
-            <% } %>
+              <div class="eventsOverview-weekEvent-date">September <%= i * 7 + 1 + j %>, 2016</div>
+              <div class="eventsOverview-weekEvent-details">
+                Andouille corned beef pig doner. Jowl frankfurter ball tip flank short loin short ribs. Tri-tip prosciutto leberkas capicola pork belly fatback meatball, biltong venison jerky hamburger picanha. Corned beef turducken tongue ribeye, shankle salami boudin. Boudin doner shankle t-bone ball tip short loin tongue short ribs ham.
+              </div>
+              <a class="eventsOverview-weekEvent-learnMore" href="/derek/incubation/events-interior">Learn More</a>
+            </div>
           <% } %>
-          <ul class="eventsOverview-pagination">
-            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPagePrev" href="javascript:void(0)">&lt;</a></li>
-            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">1</a></li>
-            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPageActive" href="javascript:void(0)">2</a></li>
-            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">3</a></li>
-            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">4</a></li>
-            <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPageNext" href="javascript:void(0)">&gt;</a></li>
-          </ul>
-        </div>
+        <% } %>
+        <ul class="eventsOverview-pagination">
+          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPagePrev" href="javascript:void(0)">&lt;</a></li>
+          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">1</a></li>
+          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPageActive" href="javascript:void(0)">2</a></li>
+          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">3</a></li>
+          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">4</a></li>
+          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPageNext" href="javascript:void(0)">&gt;</a></li>
+        </ul>
       </div>
     </div>
-
   </div>
-
-  <%- partial("../_partials/_back-to-top") %>
-  <%- partial("../global-components/rug/rug") %>
-  <%- partial("../global-components/footer/footer") %>
-  <%- partial("../global-components/basement/basement") %>
 </div>

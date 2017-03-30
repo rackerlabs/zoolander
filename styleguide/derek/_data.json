@@ -1,9 +1,10 @@
 {
   "index": {
     "css": "css/derek.css",
-    "theme_name": "derek"
+    "theme_name": "derek",
+    "template": false
   },
-  "bootstrap": {
+  "workflow": {
     "css": "css/derek.css",
     "theme_name": "derek"
   }

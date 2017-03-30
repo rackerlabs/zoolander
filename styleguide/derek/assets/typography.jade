@@ -1,75 +1,73 @@
-.container.standard-padding
+.row.half-padding-full
+  .col-md-12
+    h1.red.left Typography
+  .col-md-6
+    p Every visual element of our brand says something about us — even down to the fonts we use and how we use them. The specific styles, sizes and weights communicate the essence of the brand and place our brand within a meaningful hierarchy.
 
-  .row.half-padding-full
-    .col-md-12
-      h1.red.left Typography
-    .col-md-6
-      p Every visual element of our brand says something about us — even down to the fonts we use and how we use them. The specific styles, sizes and weights communicate the essence of the brand and place our brand within a meaningful hierarchy.
-
-  .row.half-padding-full
-    .col-md-12
-      h4.red Heading Usage
-      p h1 - h3 can be used in <code>$darkest-gray</code> and <code>$white</code> only and all caps only.
-        br
-        | They all use Open Sans <code>$heading</code>, uppercase <code>.uppercase;</code>, and font-weight of 200.
-      include ../_partials/typography/heading.ejs
-
-  hr
-
-  .row.half-padding-full
-    .col-md-12
-      h4.red Subhead Usage
-      p H4-h6 can be used in title case only.
+.row.half-padding-full
+  .col-md-12
+    h4.red Heading Usage
+    p h1 - h3 can be used in <code>$darkest-gray</code> and <code>$white</code> only and all caps only.
       br
-      | They use Khand <code>$subhead</code> and a font-weight of 400.
-      include ../_partials/typography/subhead.ejs
+      | They all use Open Sans <code>$heading</code>, uppercase <code>.uppercase;</code>, and font-weight of 200.
+    include ../_partials/typography/heading.ejs
 
-  hr
+hr
 
-  .row.half-padding-full
-    .col-md-12
-      h2.red Body Copy
-      p Body copy blocks should be left aligned by default. It should only center if the pattern centers it automatically.
-      p Do not exceed more than two links per paragraph and links should not be more than four words long. Links outside of the paragraph tag but within the text block should be text links with the class .read-more, never buttons.
-      h4 Example:
-      include ../_partials/typography/body-copy.ejs
+.row.half-padding-full
+  .col-md-12
+    h4.red Subhead Usage
+    p H4-h6 can be used in title case only.
+    br
+    | They use Khand <code>$subhead</code> and a font-weight of 400.
+    include ../_partials/typography/subhead.ejs
 
-  hr
+hr
 
-  .row.half-padding-full
-    .col-md-12
-      h4.red Translation Preview
-      p What will our headlines, subhead and body copy look like in various languages?
-      include ../_partials/typography/translations.ejs
+.row.half-padding-full
+  .col-md-12
+    h2.red Body Copy
+    p Body copy blocks should be left aligned by default. It should only center if the pattern centers it automatically.
+    p Do not exceed more than two links per paragraph and links should not be more than four words long. Links outside of the paragraph tag but within the text block should be text links with the class .read-more, never buttons.
+    h4 Example:
+    include ../_partials/typography/body-copy.ejs
 
-  hr
+hr
 
-  .row.half-padding-full
-    .col-md-12
-      h4.red Annotations
-      p.copyright Example of an annotation
-      p add the class below to a p tag in order to produce a small annotation, copyright or legal disclaimer
-      code .copyright
+.row.half-padding-full
+  .col-md-12
+    h4.red Translation Preview
+    p What will our headlines, subhead and body copy look like in various languages?
+    include ../_partials/typography/translations.ejs
 
-  hr
+hr
 
-  .row.half-padding-full
-    .col-md-12
-      h5 NEED TO ADD
-      p links (normal and red), font mixins, available colors for text and use cases
+.row.half-padding-full
+  .col-md-12
+    h4.red Annotations
+    p.copyright Example of an annotation
+    p add the class below to a p tag in order to produce a small annotation, copyright or legal disclaimer
+    code .copyright
 
-  hr
+hr
 
-  .row.half-padding-full
-    .col-md-12
-      h4.red Lists
-      p There is a pattern for a list content type available. When using the pattern or inputting a list elsewhere there are options for styling. The default is discs and in order to have the correct alignment you'll need to add <code> <ul  class="discs"> </code> There is an option for checks and x's but those should only be used in tables. Example: <code> <ul class="checks green"> </code> for check marks and <code> <ul class="times"> </code> to get the x's
-      include ../_partials/typography/lists.ejs
+.row.half-padding-full
+  .col-md-12
+    h5 NEED TO ADD
+    p links (normal and red), font mixins, available colors for text and use cases
 
-  hr
+hr
 
-  .row
-    .col-md-12
-      h4 Quotes
-      blockquote A quote about something
-      cite attribution to a person or company
+.row.half-padding-full
+  .col-md-12
+    h4.red Lists
+    p There is a pattern for a list content type available. When using the pattern or inputting a list elsewhere there are options for styling. The default is discs and in order to have the correct alignment you'll need to add <code> <ul  class="discs"> </code> There is an option for checks and x's but those should only be used in tables. Example: <code> <ul class="checks green"> </code> for check marks and <code> <ul class="times"> </code> to get the x's
+    include ../_partials/typography/lists.ejs
+
+hr
+
+.row
+  .col-md-12
+    h4 Quotes
+    blockquote A quote about something
+    cite attribution to a person or company

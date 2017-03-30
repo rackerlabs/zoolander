@@ -1,9 +1,11 @@
 {
   "index": {
+    "css": "css/derek.css",
     "theme_name": "global",
     "title": "Zoolander | Global"
   },
   "voice": {
+    "css": "css/derek.css",
     "theme_name": "global",
     "title": "Voice and Tone"
   }
