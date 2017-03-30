@@ -1,12 +1,10 @@
 {
   "index": {
-    "css": "css/derek.css",
     "theme_name": "global",
-    "title": "Zoolander | Global"
+    "title": "Zoolander"
   },
-  "voice": {
-    "css": "css/derek.css",
+  "living-styleguide": {
     "theme_name": "global",
-    "title": "Voice and Tone"
+    "title": "Zoolander | Incubation"
   }
 }
