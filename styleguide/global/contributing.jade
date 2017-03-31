@@ -1,0 +1,101 @@
+.row
+  .col-md-12
+    h2.red Contributing to Zoolander
+    p We love contribution and collaboration but as any developer knows that means we need to get on a set of standards to make sure everything runs as smoothly, and as light as possible. Here's how to get involved.
+
+.row.half-padding-top
+  .col-md-12
+    h4 How to utilize and consume Zoolander
+    p Zoolander employs themes for keeping our code separate and mostly platform agnostic. Think of "global" as a parent theme. These styles get loaded into all child themes. This styling includes brand elements and styles such as, swatches, fonts, scaffolding and the styles necessary to use the Rackspace brand icon font. All other themes are children of this and have their own style sheets that make having an ownable design between teams possible.
+    p We utilize modular file structure very similar to atomic design principles and in order to bolster that and prevent conflicts between code we also follow maintainable code styles. Both of these have their own sections below.
+
+hr
+
+.row.half-padding-top
+  .col-md-12
+    h4 Getting Started
+    p
+      a(href="https://github.com/rackerlabs/zoolander") Fork our repo!
+    p Look over the readme to get started
+
+hr
+
+.row.half-padding-top
+  .col-md-12
+    h4 MaintainableCSS
+
+    h5 What is it?
+    p MaintainableCSS is an approach to writing modular, scalable and maintainable CSS.
+
+    h5 Why do we use it?
+    ul
+      li Theres no downloads. It's not a downloadable framework. No libraries. It's just a conventions and practices.
+      li It's scalable. Whether we're writing a theme for a one page app or the entire ecommerce site it scales with the code base and we never run the risk of overwriting styles.
+      li It's extremely modular. This goes back to following atomic design. All of our patterns, pages everything are in modules that are easy to view and change and most of all extremely easy to iterate on. In this way we can change the styling of elements within the styleguide and don't have to change the code on a CMS or external platform. All our bootstrap columns, rows and containers are also in the stylesheet. If something changes it only happens in styling and the platform code is unaffected.
+    h5 Tell me more
+    p To see our style of writing maintainable css take a look around the repo but generally we follow the moduleName-elementName-state method for example valueProps-linkText-active
+    p For more documentation and guides check out the full MaintainableCSS guide &nbsp;
+      a(href="http://maintainablecss.com/") here
+
+hr
+
+.row.half-padding-top
+  .col-md-12
+    h4 Linting and standards
+    p We employ a sass linter and a js linter. We don't like heavy nesting and neither does our linter. A large part of this is making sure our code stays maintainable. If things are following our naming conventions then nesting won't be necessary outside of bootstrap overrides, which have their own file.
+    p We try to utilize variables and helper classes as often as possible. That means if you are putting in font weights and colors outside of the font and swatch file you're probably doing it wrong. This helps us stay flexible and agile and are able to make larger sweeping changes to the site with minimal effort.
+
+hr
+
+
+.row.half-padding-top
+  .col-md-12
+    h4 Committing Angular style
+    p We adhere to the angular style commit message. This ensures that we can easily tell in the change log what sort of changes occured when and to what theme. It also holds us accountable, making sure we are properly documenting our work and PRs.
+
+    h5 The commit message structure
+
+    h6 Type.
+    p The first portion, the type, is specifying in general what type of task you were doing. The options are below:
+    ul
+      li feat (feature)
+      li fix (bug fix)
+      li docs (documentation)
+      li style (formatting, missing semi colons, …)
+      li refactor
+      li test (when adding missing tests)
+      li chore (maintain)
+    h6 Scope.
+    p This is where the change is taking place. For example when creating this PR my commit message would read docs(global) so far. If this was documentation for the ecommerce theme it would read docs(derek).
+    h6 Text.
+    p This would specify in a quick glance what you were doing. For example our commit message so far would be docs(global): add code contribution documentation. Don't use tenses in your text section. Avoid changed and changing and stick to Change. Avoid capitalization.
+    h6 Message Body. (PR description)
+    p We include this in the PR description instead of the commit message. It should include the name of the ticket associated with the PR. It should include where the change can be viewed, how the change changed the code and how to test the desired result. This should also include the motivation for the change or problem statement. This should also say if there is another repository needed and what will need to change there.
+
+hr
+
+.row.half-padding-top
+  .col-md-12
+    h4 Reviews, Labeling and Branch Naming
+
+    h5 Reviews
+    p In order to merge anything into the Zoolander repo we require at least two reviews. One of these reviews is from design and one is from development. That means that whatever gets changes in Zoolander is ensured to effect design in a positive way or not at all and that the code is fully vetted and tested. Larger changes go through more code review and a longer QE process. When opening a PR ensure the PR description includes everything detailed in the "message body" description above then add labels for "needs design review" and "needs development review" and then select reviewers. One from design and one from development at least.
+
+    h5 Labeling
+    p Within the Zoolander repo we have an extensive list of labels. These include labels for needing reviews, QE and holding a PR until work in another repo can be completed making sure those who are code reviewing or doing QE are aware of the PR or ticket status. It also includes labeling that is actionable for the person who submitted the PR. Such as; needs rebase, work in progress and question. These are extremely helpful and I suggest looking through them and familiarizing yourself with them.
+
+    h5 Branch Names
+    p Every one of our PRs is associated with a ticket in JIRA. This ensures we're staying on goals and tasks, that we have context for our changes and that our work is tracked. This also is extremely helpful when employing a dev branch for stakeholder review so that the naming is associated with the task number. No capitalization in branch names. Our branch names should look similar to this: rsweb-1234-name-of-task
+
+hr
+
+.row.half-padding-top
+  .col-md-12
+    h4 Testing and Comms
+
+    h5 Testing
+    p When we are making changes to the styleguide we have to be very aware of how many pages across the ecommerce site and potentially others that we are effecting. Because of this we have a mandatory 2 +1s in code review, then a thorough QE process with backstopJS image capturing and browerstack mobile testing. Then if we are employing a dev branch the url is sent to stakeholders who also have to approve in order to merge.
+
+    h5 Comms
+    p When deploying we ensure that every stakeholder for the site is aware via slack. For very visible changes we make sure leadership sends out more widespread comms to the business units.
+
