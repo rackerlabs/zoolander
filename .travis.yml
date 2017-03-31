@@ -3,9 +3,8 @@ node_js:
   - "4.2.4"
 env:
   - CMD="sass:compile"
-  - CMD="sass-lint"
-  - CMD="js-lint"
-#  - CMD="test:visual"
+  - CMD="lint:sass"
+  - CMD="lint:js"
 install:
   - "npm install"
 script:
