@@ -2,15 +2,15 @@ extends ./_layouts/default.jade
 
 block content
   .container.standard-padding
-    .row.half-padding-full
+    .row
       .col-lg-12
         h4.red Welcome Friends &amp; Family
         h2.no-margin Rackspace Online Repository
         h4.red of all things Web
 
-    .row.half-padding-top
-      .col-md-3.half-padding-top
-        img.half-padding-top(src="imgs/brandValues.png")
+    .row.standard-padding-top
+      .col-md-3
+        img(src="imgs/brandValues.png")
 
     .row
       .col-lg-12
@@ -18,8 +18,14 @@ block content
         p Driven by a culture of achieving, Rackers place a significant value in information sharing and to put it simply... Getting things done. The goal of Project Zoolander is not simply to create a styleguide for ants but to make development and unification of a 6,000+ person company something so much more digestible. With this online tool we strive to inform the masses and uphold the brand values while making all of our lives just a little bit easier.
 
     .row
-      .col-lg-12
-        h6 Quick Start
+      .col-md-12
+        h5 Learn About Zoolander
+        p
+          a(href="global/styleguide") What is a Living Styleguide?
+
+    .row
+      .col-md-12
+        h5 Quick Start
         pre
           code.language-javascript
             = '<link href="https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/global/css/global.css">'
@@ -28,5 +34,6 @@ block content
             = '<script src="https://043a96a8a2caa9c57463-9701ce6e6cbd7003c5a8a25a5a69546c.ssl.cf5.rackcdn.com/v1.1/global/js/global.bundle.js"></script>'
 
     .row
-      .col-lg-12
-        a(href="derek"): h6 View Global Ecomm Theme
+      .col-md-12
+        p
+          a(href="derek") View Global Ecomm Theme
