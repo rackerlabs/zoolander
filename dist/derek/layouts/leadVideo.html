@@ -1,6 +1,6 @@
-<div class="container half-padding-full">
-  <div class="row">
-    <div class="col-sm-9">
+<div class="container standard-padding-top">
+  <div class="row flex-row">
+    <div class="col-md-9 flex-all">
       <div class="subpanel">
         <div class="subpanel-inner">
           <!-- Lead pattern -->
@@ -21,15 +21,18 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
         </div>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-md-3 flex-all">
       <div class="subpanel">
         <div class="subpanel-inner">
-          <div class="cornerPocket-wrapper">
-  <div class="cornerPocket-borderWrapper">
-  	<p class="cornerPocket-heading">Starting at</h3>
-  	<p class="cornerPocket-callout">$0.015/hr</h2>
-  	<p class="cornerPocket-text">High availability without a long-term contract</p>
-	</div>
+          <!-- For the sake of page-load time on zoolander, if we're within a subpanel, just show screenshot, not full video. -->
+
+
+
+<h5 class="videoEmbed-title">Video Title</h5>
+<div class="embed-responsive embed-responsive-16by9">
+  
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/duqBHik7nRo"></iframe>
+  
 </div>
 
         </div>
