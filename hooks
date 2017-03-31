@@ -5,6 +5,6 @@
 # exit with non-zero status after issuing an appropriate message if
 # it wants to stop the commit.
 
-npm run sass-lint
-npm run js-lint
+npm run lint:sass
+npm run lint:js
 
