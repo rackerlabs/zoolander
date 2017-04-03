@@ -12,7 +12,7 @@
 @import '../../../derek/global-components/region-select/region-select';
 @import 'components/pager';
 @import '../../../derek/pattern-components/announcements/announcements';
-@import 'patterns/blog-feed';
+@import '../../../derek/pattern-components/blog-feed/blog-feed';
 @import 'patterns/image';
 @import 'patterns/lead';
 @import 'patterns/quote';
@@ -22,10 +22,10 @@
 @import 'patterns/cards/modules';
 @import 'patterns/cards/cornerPocket';
 @import 'patterns/cards/keyOffers';
-@import 'patterns/cards/businessResource';
+@import '../../../derek/pattern-components/business-resources/business-resources';
 @import 'patterns/cards/productFeatures';
 @import 'patterns/cards/valueProp';
-@import 'patterns/cards/ias';
+@import '../../../derek/pattern-components/ias/ias';
 @import '../../../derek/pattern-components/additional-resources/additional-resources';
 @import '../../../derek/pattern-components/awards/awards';
 @import 'snowflakes/homepage';
