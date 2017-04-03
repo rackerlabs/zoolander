@@ -231,6 +231,7 @@
 .icon-rss-square { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf143;&nbsp;'); }
 .icon-file-text { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf15c;&nbsp;'); }
 .icon-youtube-square { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf166;&nbsp;'); }
+.icon-youtube { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf167;&nbsp;'); }
 .icon-youtube-play { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf16a;&nbsp;'); }
 .icon-arrow-circle-o-left { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf190;&nbsp;'); }
 .icon-file-pdf-o { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1c1;&nbsp;'); }
