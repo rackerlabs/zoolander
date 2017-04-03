@@ -11,7 +11,7 @@
 @import '../../../derek/global-components/back-to-top/back-to-top';
 @import '../../../derek/global-components/region-select/region-select';
 @import 'components/pager';
-@import 'patterns/announcements';
+@import '../../../derek/pattern-components/announcements/announcements';
 @import 'patterns/blog-feed';
 @import 'patterns/image';
 @import 'patterns/lead';
@@ -26,8 +26,8 @@
 @import 'patterns/cards/productFeatures';
 @import 'patterns/cards/valueProp';
 @import 'patterns/cards/ias';
-@import 'patterns/cards/resources';
-@import 'patterns/cards/awards';
+@import '../../../derek/pattern-components/additional-resources/additional-resources';
+@import '../../../derek/pattern-components/awards/awards';
 @import 'snowflakes/homepage';
 @import 'snowflakes/swatches';
 @import 'snowflakes/o365';
