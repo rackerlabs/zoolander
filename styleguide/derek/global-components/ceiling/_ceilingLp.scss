@@ -1,25 +1,33 @@
 .ceilingLp {
   background: $white;
   box-shadow: 0 6px 12px $black-shadow;
-  line-height: 47px;
+}
+
+.navbar-phoneiconLp,
+.navbar-chaticonLp,
+.navbar-emailiconLp {
+  color: $gray-darkest;
+
+  &:hover {
+    color: $gray-darkest;
+  }
+
+  &::before {
+    color: $gray-darkest;
+  }
 }
 
 .ceilingLp-brand {
-  background-color: $gray-darker;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg');
-  background-position: 9px 10px;
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/rs-logo-black.svg');
+  background-position: left 50%;
   background-repeat: no-repeat;
-  background-size: 111px 29px;
+  background-size: 100% 79%;
   float: left;
-  height: 50px;
-  margin: 0;
+  height: 35px;
+  margin: 5px 10px;
   position: relative;
-  width: 127px;
-}
-
-.ceilingLp-pageTitle {
-  float: left;
-  margin: 0 0 0 20px;
+  transition-duration: .3s;
+  width: 150px;
 }
 
 @media only screen and (max-width: $screen-xs-max) {
@@ -36,6 +44,11 @@
   max-width: $full-width;
 }
 
+.ceilingLp-container {
+  padding: 0;
+
+}
+
 .ceilingLp-menuInline {
   list-style: none;
   margin-bottom: 0;
@@ -48,23 +61,11 @@
   margin: 0;
   padding: 0 floor($ceiling-margin + 2);
   text-transform: uppercase;
-}
 
-.ceilingLp-menuInline-link {
-  color: $text-color;
-  text-decoration: none;
-  vertical-align: middle;
-
-  &:hover {
-    color: $text-color;
-    text-decoration: underline;
+  &.open,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $gray-lightest;
   }
-}
-
-.ceilingLp-menuInline-noLink {
-  vertical-align: middle;
-}
-
-.ceilingLp-phone {
-  float: right;
 }
