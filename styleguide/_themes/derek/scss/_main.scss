@@ -7,9 +7,10 @@
 @import '../../../derek/global-components/footer/footer';
 @import '../../../derek/global-components/basement/basement';
 @import '../../../derek/global-components/subnav/subnav';
-@import 'components/tabs';
 @import '../../../derek/global-components/back-to-top/back-to-top';
 @import '../../../derek/global-components/region-select/region-select';
+@import '../../../derek/pattern-components/headers/headers';
+@import '../../../derek/pattern-components/tabs/tabs';
 @import 'components/pager';
 @import '../../../derek/pattern-components/announcements/announcements';
 @import '../../../derek/pattern-components/blog-feed/blog-feed';
@@ -18,7 +19,6 @@
 @import '../../../derek/pattern-components/quotes/quotes';
 @import '../../../derek/pattern-components/video/video-embed';
 @import 'patterns/panels';
-@import 'patterns/portfolio';
 @import 'patterns/cards/modules';
 @import '../../../derek/pattern-components/leads/lead-corner-pocket/corner-pocket';
 @import '../../../derek/pattern-components/key-offers/key-offers';

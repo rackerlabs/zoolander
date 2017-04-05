@@ -1,8 +1,6 @@
 jQuery(document).ready(($) => {
-  // tab collapse
-  $('.rsTabs').tabCollapse();
-  jQuery('.title a').click((e) => {
-    const $el = jQuery(e.currentTarget).parent().parent().find('.fa-arrow-right');
+  $('.title a').click((e) => {
+    const $el = $(e.currentTarget).parent().parent().find('.fa-arrow-right');
 
     $el.animate({ borderSpacing: +90 }, {
       step: (now) => {
@@ -176,7 +174,7 @@ jQuery(document).ready(($) => {
   $('[data-toggle="tooltip"]').tooltip();
 
   // dropdowns
-  jQuery('.navZoolander-hasDropdown').unbind().click((e) => {
+  $('.navZoolander-hasDropdown').unbind().click((e) => {
     e.preventDefault();
     const $el = jQuery(e.currentTarget);
     $el.next('.navZoolander-dropdown').slideToggle(200);
