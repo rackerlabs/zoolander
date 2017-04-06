@@ -1,10 +1,8 @@
 'use strict';
 
 jQuery(document).ready(function ($) {
-  // tab collapse
-  $('.rsTabs').tabCollapse();
-  jQuery('.title a').click(function (e) {
-    var $el = jQuery(e.currentTarget).parent().parent().find('.fa-arrow-right');
+  $('.title a').click(function (e) {
+    var $el = $(e.currentTarget).parent().parent().find('.fa-arrow-right');
 
     $el.animate({ borderSpacing: +90 }, {
       step: function step(now) {
@@ -174,7 +172,7 @@ jQuery(document).ready(function ($) {
   $('[data-toggle="tooltip"]').tooltip();
 
   // dropdowns
-  jQuery('.navZoolander-hasDropdown').unbind().click(function (e) {
+  $('.navZoolander-hasDropdown').unbind().click(function (e) {
     e.preventDefault();
     var $el = jQuery(e.currentTarget);
     $el.next('.navZoolander-dropdown').slideToggle(200);
