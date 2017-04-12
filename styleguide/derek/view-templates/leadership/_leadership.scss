@@ -1,0 +1,51 @@
+.leadership-individual {
+  margin: 20px auto;
+}
+
+.leadership-image {
+  @include center-block;
+}
+
+.leadership-imageWrapper {
+  display: none;
+}
+
+.leadership-attrWrapper {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.leadership-name {
+  margin-bottom: 0;
+}
+
+.leadership-nameCenter {
+  text-align: center;
+}
+
+.leadership-title {
+  margin: 0;
+}
+
+.leadership-titleCenter {
+  text-align: center;
+}
+
+.leadership-linkWrapper {
+  margin-top: 0;
+}
+
+.leadership-link {
+  @include standard-link;
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .leadership-imageWrapper {
+    display: block;
+  }
+
+  .leadership-linkWrapper {
+    margin-top: 20px;
+  }
+}
