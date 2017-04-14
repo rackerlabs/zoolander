@@ -98,7 +98,7 @@ $ceiling-font-size: $navigation-font-size-medium;
 .ceiling-menuInline-link {
   color: $white;
   display: block;
-  font-size: $navigation-font-size-medium;
+  font-size: 1.15rem;
   padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
   vertical-align: middle;
@@ -160,7 +160,7 @@ $ceiling-font-size: $navigation-font-size-medium;
 .ceiling-dropdownToggle {
   color: $white;
   display: block;
-  font-size: $navigation-font-size-medium;
+  font-size: 1.15rem;
   padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
 
