@@ -1,5 +1,10 @@
 $table-padding: 20px 5px;
 
+.dd-wrap {
+  background-color: $gray-darkest;
+  border: 1px solid $gray-lighter;
+}
+
 .productTable {
   border-collapse: collapse;
   width: 100%;
