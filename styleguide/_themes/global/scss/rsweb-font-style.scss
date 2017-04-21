@@ -138,6 +138,8 @@ i.rsweb {
 .fa-github-square:before { content: '\f300'; } /* '' */
 .fa-twitter-square:before { content: '\f304'; } /* '' */
 .fa-linkedin-square:before { content: '\f30c'; } /* '' */
+.fa-menu:before { content: '\f0c9'; } /* '' */
+.fa-mail-alt:before { content: '\f0e0'; } /* '' */
 .fa-search:before { content: '🔍'; } /* '\1f50d' */
 .fa-user-plus:before { content: '\f234'; } /* '' */
 .fa-sign-in:before { content: '\e80d'; } /* '' */
@@ -157,7 +159,7 @@ i.rsweb {
 .gen-news:before { content: '\e81b'; } /* '' */
 .gen-moving:before { content: '\e81c'; } /* '' */
 .gen-license-1:before { content: '\e81d'; } /* '' */
-.gen-laptop-code:before { content: '\e81e'; } /* '' */
+.gen-laptop-code:before, .gen-laptop:before { content: '\e81e'; } /* '' */
 .gen-iot:before { content: '\e81f'; } /* '' */
 .gen-help:before { content: '\e820'; } /* '' */
 .gen-documents:before { content: '\e821'; } /* '' */
@@ -351,7 +353,7 @@ i.rsweb {
 .srv-content-management:before { content: '\e9ab'; } /* '' */
 .srv-data-storage:before { content: '\e9ad'; } /* '' */
 .srv-database:before { content: '\e9ae'; } /* '' */
-.srv-design-build:before { content: '\e9af'; } /* '' */
+.srv-design-build-2:before, .srv-design-build:before { content: '\e9af'; } /* '' */
 .srv-devops:before { content: '\e9b1'; } /* '' */
 .srv-digital:before { content: '\e9b2'; } /* '' */
 .srv-disaster-recovery:before { content: '\e9b3'; } /* '' */
