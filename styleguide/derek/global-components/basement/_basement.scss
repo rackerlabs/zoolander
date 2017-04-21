@@ -15,9 +15,10 @@
   padding: 10px 25px;
 }
 
-.basement-copyright {
+.basement-copyright,
+.basementLp-copyright {
   color: $gray-base;
-  text-align: center;
+  text-align: right;
 }
 
 .basement-currency,
@@ -149,11 +150,15 @@
   @include make-md-column(4);
 }
 
-@media screen and (min-width: $screen-sm-min) {
-  .basement-copyright {
-    text-align: right;
-  }
 
+@media screen and (max-width: $screen-sm-max) {
+  .basement-copyright,
+  .basementLp-copyright {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) {
   .basement-currency,
   .region-select {
     text-align: left;
