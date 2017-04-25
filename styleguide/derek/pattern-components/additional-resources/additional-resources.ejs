@@ -1,19 +1,21 @@
 <!-- Additional Resources: 33/34/33 -->
-<div class="half-padding-full bg-light-gray">
+<div class="half-padding-full">
   <div class="container">
     <div class="row row-eq-height">
       <div class="col-sm-4 panel-flex">
-        <%- partial('_partials/additional-resource.ejs') %>
+        <%- partial('_partials/additional-resource.ejs', {
+          type: 'pdf',
+          title: 'This is a really ridiculously long resource title'
+        })%>
       </div>
       <div class="col-sm-4 panel-flex">
         <%- partial('_partials/additional-resource.ejs', {
-          type: 'video'
+          type: 'news'
         }) %>
       </div>
       <div class="col-sm-4 panel-flex">
         <%- partial('_partials/additional-resource.ejs', {
-          type: 'rss',
-          desc: 'consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m'
+          type: 'rss'
         }) %>
       </div>
     </div>

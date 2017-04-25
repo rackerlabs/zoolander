@@ -1,124 +1,93 @@
-.additional-resource {
-  @include flex-box;
-  width: 100%;
+// Resource Icon Color
+@mixin resource-iconBorderColor($class, $color, $content) {
+  #{$class} {
+    border-bottom: 7px solid $color;
+    border-top: 2px solid transparent;
 
-  &:hover {
-    .desc {
-      background-color: $gray-lightest;
+    &:hover {
+      background-color: darken($gray-lightest, 2%);
+      border-top: 2px solid $color;
+      transition-duration: .4s;
     }
-  }
 
-  a {
-    display: flex;
-    text-decoration: none;
-    width: 100%;
-  }
+    .resource-iconWrapper {
+      border-bottom: 0;
 
-  .arrow {
-    align-items: center;
-    background-color: $gray-lightest;
-    display: flex;
-    font-size: 2vw;
-    justify-content: center;
-  }
-
-  .desc {
-    background-color: $white;
-    border: 1px solid $gray-lightest;
-    margin: 0;
-    overflow: auto;
-    padding: 10px 20px;
-  }
-
-  .icon {
-    align-items: center;
-    color: $white;
-    display: flex;
-    flex-basis: 15%;
-    font-family: rswebfonts;
-    font-size: 2vw;
-    justify-content: center;
-
-    &.api {
-      background-color: $gray-dark;
-
-      &::after {
-        content: '\f1c9';
+      &::before {
+        color: $color;
+        content: $content;
       }
     }
-
-    &.case-study {
-      background-color: $blue-steel;
-
-      &::after {
-        content: '\f0f2';
-      }
-    }
-
-    &.github {
-      background-color: $purple;
-
-      &::after {
-        content: '\f300';
-      }
-    }
-
-    &.pdf {
-      background-color: $brand-primary;
-
-      &::after {
-        content: '\f1c1';
-      }
-    }
-
-    &.support {
-      background-color: $teal-dark;
-
-      &::after {
-        content: '\e808';
-      }
-    }
-
-    &.video {
-      background-color: $blue-gray;
-
-      &::after {
-        content: '\f16a';
-      }
-    }
-
-    &.news {
-      background-color: $mustard;
-
-      &::after {
-        content: '\f1ea';
-      }
-    }
-
-    &.rss {
-      background-color: $orange;
-
-      &::after {
-        content: '\f143';
-      }
-    }
-  }
-
-  .row-eq-height {
-    flex-grow: 2;
-    margin: 10px;
-    min-height: 7.8rem;
   }
 }
 
-@media only screen and (max-width: $screen-sm) {
-  .additional-resource {
-    .icon {
-      font-size: 2em;
-    }
+.resourceWrapper {
+  @include flex-box;
+  background-color: $gray-lightest;
+  margin: 10px 0;
+  padding: 5px 30px;
+  width: 100%;
 
+  a {
+    text-decoration: none;
+    width: 100%;
+  }
+}
+
+.resource-titleRow {
+  @include make-row;
+  border-bottom: $gray-lighter 1px solid;
+}
+
+.resource-titleWrapper {
+  @include make-sm-column(10);
+  margin-top: 10px;
+}
+
+.resource-iconWrapper {
+  @include make-sm-column(2);
+  display: block;
+  font-family: rswebfonts;
+  font-size: 4rem;
+}
+
+.resource-descRow {
+  @include make-row;
+}
+
+.resource-descWrapper {
+  @include make-xs-column(12);
+  margin-top: 15px;
+}
+
+.resource-linkWrapper {
+  @include make-xs-column(12);
+}
+
+.resource-link {
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  .resourceWrapper {
     .row-eq-height {
       display: flex;
     }
   }
 }
+
+@media only screen and (max-width: $screen-md-max) {
+  .resource-iconWrapper {
+    display: none;
+  }
+}
+
+//had to make maintainable
+@include resource-iconBorderColor('.resource-apiIcon', $gray-dark, '\f1c9');
+@include resource-iconBorderColor('.resource-caseStudyIcon', $blue-login, '\f0f2');
+@include resource-iconBorderColor('.resource-githubIcon', $purple, '\f300');
+@include resource-iconBorderColor('.resource-supportIcon', $teal-dark, '\e808');
+@include resource-iconBorderColor('.resource-newsIcon', $mustard, '\f1ea');
+@include resource-iconBorderColor('.resource-rssIcon', $orange, '\f143');
+@include resource-iconBorderColor('.resource-pdfIcon', $brand-primary, '\f1c1');
+@include resource-iconBorderColor('.resource-videoIcon', $blue-gray, '\f16a');
