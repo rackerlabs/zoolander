@@ -17,6 +17,11 @@ $uppercase: uppercase;
 img { max-width: 100%; }
 
 // Layout
+.derek-paddedContainer {
+  @include make-container;
+  padding: $standard-padding;
+}
+
 .full-width {
   width: $full-width;
 }
