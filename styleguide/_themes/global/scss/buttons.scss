@@ -24,6 +24,7 @@
   color: $white;
   margin-bottom: 0;
   text-align: center;
+  text-decoration: none;
 
   &:hover {
     background-color: lighten($brand-success, 5%);
@@ -36,6 +37,7 @@
   border: $teal-dark 3px solid;
   color: $gray-darkest;
   padding: 8px 50px;
+  text-decoration: none;
 
   &:hover {
     background-color: $teal-dark;
@@ -46,6 +48,7 @@
 @mixin button-leaving {
   background-color: $blue-login;
   color: $white;
+  text-decoration: none;
 
   &::before {
     content: '\e80d';
