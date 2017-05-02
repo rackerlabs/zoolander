@@ -10,5 +10,8 @@
   },
   "docs": {
     "css": "css/derek.css"
+  },
+  "webinar": {
+    "css": "css/derek.css"
   }
 }
