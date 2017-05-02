@@ -3,6 +3,11 @@
   #{$class} {
     .resourcecenter-visualWrapper {
       background-image: url('http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/resource-center/#{$image}');
+
+      @if $class == '.resourcecenter-video' {
+        height: auto;
+        margin-bottom: 120px;
+      }
     }
 
     &.resourcecenter-dividerWrapper {
@@ -10,7 +15,7 @@
 
       .resourcecenter-divider {
         &::after {
-          color: lighten($color, 10%);
+          color: mix($color, $white, 60%);
           content: $content;
         }
       }
@@ -65,3 +70,4 @@
 @include resourcecenter-type('.resourcecenter-code', $purple, '\f300', 'code-template-graphic.png');
 @include resourcecenter-type('.resourcecenter-docs', $teal-dark, '\e808', 'suppoerDocs-template-graphic.png');
 @include resourcecenter-type('.resourcecenter-webinar', $mustard, '\e808', 'webinar-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-video', $blue-gray, '\f16a', '');

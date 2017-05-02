@@ -13,5 +13,8 @@
   },
   "webinar": {
     "css": "css/derek.css"
+  },
+  "video": {
+    "css": "css/derek.css"
   }
 }
