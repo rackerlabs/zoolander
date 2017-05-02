@@ -59,6 +59,17 @@
   }
 }
 
+@mixin button-download {
+  background-color: $brand-primary;
+  color: $white;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: lighten($brand-primary, 5%);
+    color: $white;
+  }
+}
+
 .button {
   @include button;
 
