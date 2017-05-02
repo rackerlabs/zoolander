@@ -1,7 +1,10 @@
+// Version control for rswebfonts
+$font-version: "1.0.0";
+
 @font-face {
     font-family: 'rswebfonts';
-    src: url("../font/rswebfonts.eot?62628514");
-    src: url("../font/rswebfonts.eot?62628514#iefix") format("embedded-opentype"), url("../font/rswebfonts.woff2?62628514") format("woff2"), url("../font/rswebfonts.woff?62628514") format("woff"), url("../font/rswebfonts.ttf?62628514") format("truetype"), url("../font/rswebfonts.svg?62628514#rswebfont") format("svg");
+    src: url("../font/rswebfonts.eot?#{$font-version}");
+    src: url("../font/rswebfonts.eot?#{$font-version}#iefix") format("embedded-opentype"), url("../font/rswebfonts.woff2?#{$font-version}") format("woff2"), url("../font/rswebfonts.woff?#{$font-version}") format("woff"), url("../font/rswebfonts.ttf?#{$font-version}") format("truetype"), url("../font/rswebfonts.svg?#{$font-version}#rswebfont") format("svg");
     font-weight: normal;
     font-style: normal
 }

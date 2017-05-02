@@ -8,7 +8,7 @@
 .icon-bullhorn { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe805;&nbsp;'); }
 .icon-caret-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe806;&nbsp;'); }
 .icon-check { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe807;&nbsp;'); }
-.icon-wrench { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe808;&nbsp;'); }
+.icon-code-script { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe808;&nbsp;'); }
 .icon-plus { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe809;&nbsp;'); }
 .icon-globe { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80a;&nbsp;'); }
 .icon-gear { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80b;&nbsp;'); }
@@ -69,6 +69,7 @@
 .icon-srv-storage-server { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe844;&nbsp;'); }
 .icon-srv-container-server { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe845;&nbsp;'); }
 .icon-srv-content-management-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe846;&nbsp;'); }
+.icon-wrench { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe847;&nbsp;'); }
 .icon-idio-sales-funnel { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe848;&nbsp;'); }
 .icon-srv-custom-apps { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe849;&nbsp;'); }
 .icon-idio-sales-growth { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84a;&nbsp;'); }
@@ -77,6 +78,9 @@
 .icon-idio-stethoscope { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84d;&nbsp;'); }
 .icon-srv-email { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84e;&nbsp;'); }
 .icon-idio-up-and-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe850;&nbsp;'); }
+.icon-pdf-doc { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe8c5;&nbsp;'); }
+.icon-movie-popup { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe8c6;&nbsp;'); }
+.icon-playbtn-film { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe8c8;&nbsp;'); }
 .icon-auto-compute { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe900;&nbsp;'); }
 .icon-auto-maintenance { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe901;&nbsp;'); }
 .icon-auto-os-maintenance { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe902;&nbsp;'); }
@@ -222,7 +226,7 @@
 .icon-srv-content-management { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9ab;&nbsp;'); }
 .icon-srv-data-storage { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9ad;&nbsp;'); }
 .icon-srv-database { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9ae;&nbsp;'); }
-.icon-srv-design-build { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9af;&nbsp;'); }
+.icon-srv-design-build-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9af;&nbsp;'); }
 .icon-srv-devops { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9b1;&nbsp;'); }
 .icon-srv-digital { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9b2;&nbsp;'); }
 .icon-srv-disaster-recovery { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9b3;&nbsp;'); }
