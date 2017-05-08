@@ -1,0 +1,93 @@
+// Resource Icon Color
+@mixin resource-iconBorderColor($class, $color, $content) {
+  #{$class} {
+    border-bottom: 7px solid $color;
+    border-top: 2px solid transparent;
+
+    &:hover {
+      background-color: darken($gray-lightest, 2%);
+      border-top: 2px solid $color;
+      transition-duration: .4s;
+    }
+
+    .resource-iconWrapper {
+      border-bottom: 0;
+
+      &::before {
+        color: $color;
+        content: $content;
+      }
+    }
+  }
+}
+
+.resourceWrapper {
+  @include flex-box;
+  background-color: $gray-lightest;
+  margin: 10px 0;
+  padding: 5px 30px;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    width: 100%;
+  }
+}
+
+.resource-titleRow {
+  @include make-row;
+  border-bottom: $gray-lighter 1px solid;
+}
+
+.resource-titleWrapper {
+  @include make-sm-column(10);
+  margin-top: 10px;
+}
+
+.resource-iconWrapper {
+  @include make-sm-column(2);
+  display: block;
+  font-family: rswebfonts;
+  font-size: 4rem;
+}
+
+.resource-descRow {
+  @include make-row;
+}
+
+.resource-descWrapper {
+  @include make-xs-column(12);
+  margin-top: 15px;
+}
+
+.resource-linkWrapper {
+  @include make-xs-column(12);
+}
+
+.resource-link {
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  .resourceWrapper {
+    .row-eq-height {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-md-max) {
+  .resource-iconWrapper {
+    display: none;
+  }
+}
+
+//had to make maintainable
+@include resource-iconBorderColor('.resource-apiIcon', $gray-dark, '\f1c9');
+@include resource-iconBorderColor('.resource-caseStudyIcon', $blue-login, '\f0f2');
+@include resource-iconBorderColor('.resource-githubIcon', $purple, '\f300');
+@include resource-iconBorderColor('.resource-supportIcon', $teal-dark, '\e808');
+@include resource-iconBorderColor('.resource-newsIcon', $mustard, '\f1ea');
+@include resource-iconBorderColor('.resource-rssIcon', $orange, '\f143');
+@include resource-iconBorderColor('.resource-pdfIcon', $brand-primary, '\f1c1');
+@include resource-iconBorderColor('.resource-videoIcon', $blue-gray, '\f16a');
