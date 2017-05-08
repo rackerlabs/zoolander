@@ -1,0 +1,24 @@
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+<% if(!type) { var type = 'pdf'; } %>
+<% if(!title) { var title = 'Resource Title'; } %>
+<% if(!desc) { var desc = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m'; } %>
+<!-- Additional Resources Pattern -->
+
+<div class="resourceWrapper resource-<%- type -%>Icon track-click">
+  <a href="javascript:void(0)">
+    <div class="resource-titleRow">
+      <div class="resource-iconWrapper"></div>
+      <div class="resource-titleWrapper">
+        <h5><%- title -%></h5>
+      </div>
+    </div>
+    <div class="resource-descRow">
+      <div class="resource-descWrapper">
+        <p><%- desc -%></p>
+      </div>
+      <div class="resource-linkWrapper">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right"></i></p>
+      </div>
+    </div>
+  </a>
+</div>
