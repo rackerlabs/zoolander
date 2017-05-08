@@ -1,0 +1,99 @@
+// Resource Type
+@mixin resourcecenter-type($class, $color, $content, $image) {
+  #{$class} {
+
+    @if $class != '.resourcecenter-video' {
+
+      &.resourcecenter-fullWrapper {
+        display: flex;
+        flex-direction: row;
+      }
+
+    }
+
+    .resourcecenter-visualWrapper {
+      background-image: url('http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/resource-center/#{$image}');
+
+      @if $class == '.resourcecenter-video' {
+        height: auto;
+        margin-bottom: 80px;
+        margin-top: 40px;
+        width: auto;
+      }
+    }
+
+    &.resourcecenter-dividerWrapper {
+      background-color: $color;
+
+      .resourcecenter-divider {
+        &::after {
+          color: mix($color, $white, 60%);
+          content: $content;
+        }
+      }
+    }
+  }
+}
+
+.resourcecenter-background {
+  background-color: $gray-lightest;
+}
+
+.resourcecenter-fullWrapper {
+
+  .panel-flex {
+    width: auto;
+  }
+}
+
+.resourcecenter-visualWrapper {
+  align-self: flex-end;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -20px;
+  height: 380px;
+  position: relative;
+  width: 346px;
+}
+
+.resourcecenter-infoWrapper {
+  padding-top: 40px;
+}
+
+.resourcecenter-descFull {
+  font-size: 1.2em;
+}
+
+.resourcecenter-downloadFull {
+  margin-top: 60px;
+}
+
+.resourcecenter-button {
+  @include button;
+  @include button-download;
+}
+
+.resourcecenter-dividerWrapper {
+  margin-bottom: 100px;
+  width: 100%;
+
+  .resourcecenter-divider {
+    display: flex;
+    flex-direction: row;
+    font-size: 3em;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 10px 25px;
+  }
+}
+
+.resourcecenter-allResourceLink {
+  margin-bottom: 80px;
+}
+
+@include resourcecenter-type('.resourcecenter-pdf', $brand-primary, '\e8c5', 'pdf-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-code', $purple, '\e8c4', 'code-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-docs', $teal-dark, '\e808', 'suppoerDocs-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-webinar', $mustard, '\e8c6', 'webinar-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-video', $blue-gray, '\e8c8', '');
