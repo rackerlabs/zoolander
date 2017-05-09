@@ -1,0 +1,20 @@
+{
+  "resource-center": {
+    "css": "css/derek.css"
+  },
+  "pdf": {
+    "css": "css/derek.css"
+  },
+  "code": {
+    "css": "css/derek.css"
+  },
+  "docs": {
+    "css": "css/derek.css"
+  },
+  "webinar": {
+    "css": "css/derek.css"
+  },
+  "video": {
+    "css": "css/derek.css"
+  }
+}

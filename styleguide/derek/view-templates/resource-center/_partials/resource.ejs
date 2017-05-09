@@ -1,0 +1,35 @@
+<div class="half-padding-full">
+  <div class="container">
+    <div class="resourcecenter-fullWrapper resourcecenter-<%- type -%>">
+      <div class="col-sm-4 hidden-xs text-right">
+        <div class="resourcecenter-visualWrapper">
+        <% if(type == 'video') { %>
+          <%- partial('../../../pattern-components/video/video.ejs') %>
+        <% } %>
+        </div>
+      </div>
+      <div class="col-sm-8 col-xs-12">
+        <div class="resourcecenter-infoWrapper">
+          <div class="resourcecenter-titleFull"><h1><%- title %></h1></div>
+          <div class="resourcecenter-descFull"><p><%- desc %></p></div>
+          <div class="resourcecenter-downloadFull">
+          <% if(type != 'video') { %>
+            <a href="javascript:void(0)" class="resourcecenter-button"><%- button %></a>
+          <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="resourcecenter-<%- type -%> resourcecenter-dividerWrapper">
+  <div class="resourcecenter-divider rsweb container"></div>
+</div>
+
+<div class="container">
+  <div class="resourcecenter-relatedWrapper">
+      <h2>Related Resources</h2>
+    </div>
+</div>
+
