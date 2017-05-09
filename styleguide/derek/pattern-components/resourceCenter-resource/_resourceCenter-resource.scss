@@ -83,11 +83,8 @@
 }
 
 //had to make maintainable
-@include resource-iconBorderColor('.resource-apiIcon', $gray-dark, '\f1c9');
-@include resource-iconBorderColor('.resource-caseStudyIcon', $blue-login, '\f0f2');
-@include resource-iconBorderColor('.resource-githubIcon', $purple, '\f300');
+@include resource-iconBorderColor('.resource-codeIcon', $purple, '\e8c4');
 @include resource-iconBorderColor('.resource-supportIcon', $teal-dark, '\e808');
-@include resource-iconBorderColor('.resource-newsIcon', $mustard, '\f1ea');
-@include resource-iconBorderColor('.resource-rssIcon', $orange, '\f143');
-@include resource-iconBorderColor('.resource-pdfIcon', $brand-primary, '\f1c1');
-@include resource-iconBorderColor('.resource-videoIcon', $blue-gray, '\f16a');
+@include resource-iconBorderColor('.resource-pdfIcon', $brand-primary, '\e8c5');
+@include resource-iconBorderColor('.resource-videoIcon', $blue-gray, '\e8c8');
+@include resource-iconBorderColor('.resource-webinarIcon', $mustard, '\e8c6');
