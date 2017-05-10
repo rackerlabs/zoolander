@@ -83,8 +83,8 @@
 }
 
 //had to make maintainable
-@include resource-iconBorderColor('.resource-codeIcon', $purple, '\e8c4');
-@include resource-iconBorderColor('.resource-supportIcon', $teal-dark, '\e808');
+@include resource-iconBorderColor('.resource-codeIcon', $purple, '\e808');
+@include resource-iconBorderColor('.resource-supportIcon', $teal-dark, '\e847');
 @include resource-iconBorderColor('.resource-pdfIcon', $brand-primary, '\e8c5');
 @include resource-iconBorderColor('.resource-videoIcon', $blue-gray, '\e8c8');
 @include resource-iconBorderColor('.resource-webinarIcon', $mustard, '\e8c6');
