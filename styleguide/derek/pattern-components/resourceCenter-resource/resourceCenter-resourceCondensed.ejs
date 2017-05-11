@@ -1,0 +1,23 @@
+<!-- Additional Resources: 33/34/33 -->
+<div class="half-padding-full">
+  <div class="container">
+    <div class="row row-eq-height">
+      <div class="col-sm-4 panel-flex">
+        <%- partial('_partials/resourceCenter-resourceCondensed.ejs', {
+          type: 'video',
+        })%>
+      </div>
+      <div class="col-sm-4 panel-flex">
+        <%- partial('_partials/resourceCenter-resourceCondensed.ejs', {
+          type: 'support'
+        }) %>
+      </div>
+      <div class="col-sm-4 panel-flex">
+        <%- partial('_partials/resourceCenter-resourceCondensed.ejs', {
+          type: 'pdf',
+          title: 'This is a really ridiculously long resource title'
+        }) %>
+      </div>
+    </div>
+  </div>
+</div>
