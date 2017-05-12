@@ -158,6 +158,10 @@ hr {
   color: $white;
 }
 
+.body-region {
+  padding-top: $standard-padding-top;
+}
+
 @media only screen and (min-width: $screen-lg-min) {
   .half-padding,
   .standard-padding {
