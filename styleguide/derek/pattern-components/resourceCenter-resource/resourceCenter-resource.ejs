@@ -1,23 +1,32 @@
-<!-- Additional Resources: 33/34/33 -->
-<div class="half-padding-full">
-  <div class="container">
-    <div class="row row-eq-height">
-      <div class="col-sm-4 panel-flex">
-        <%- partial('_partials/resourceCenter-resource.ejs', {
-          type: 'pdf',
-          title: 'This is a really ridiculously long resource title'
-        })%>
-      </div>
-      <div class="col-sm-4 panel-flex">
-        <%- partial('_partials/resourceCenter-resource.ejs', {
-          type: 'code'
-        }) %>
-      </div>
-      <div class="col-sm-4 panel-flex">
-        <%- partial('_partials/resourceCenter-resource.ejs', {
-          type: 'webinar'
-        }) %>
-      </div>
+<!-- Related Resources -->
+<div class="container standard-padding-full">
+  <div class="resourcecenter-relatedWrapper">
+    <h2>Related Resources</h2>
+  </div>
+
+  <div class="row row-eq-height">
+    <div class="col-sm-4 panel-flex">
+      <%- partial('_partials/resourceCenter-resource.ejs', {
+        type: 'pdf',
+        title: 'This is a really ridiculously long resource title'
+      })%>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <%- partial('_partials/resourceCenter-resource.ejs', {
+        type: 'webinar'
+      }) %>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <%- partial('_partials/resourceCenter-resource.ejs', {
+        type: 'code'
+      }) %>
     </div>
   </div>
+
+  <div class="text-center">
+    <div class="resourcecenter-allResourceLink">
+      <a href="javascript:void(0)" class="resourcecenter-allResourceLink">View All Resources</a>
+    </div>
+  </div>
+
 </div>
