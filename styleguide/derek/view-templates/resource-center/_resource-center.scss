@@ -86,7 +86,6 @@
 }
 
 .resourcecenter-dividerWrapper {
-  margin-bottom: 100px;
   width: 100%;
 
   .resourcecenter-divider {
@@ -100,7 +99,7 @@
 }
 
 .resourcecenter-allResourceLink {
-  margin-bottom: 80px;
+  padding-top: $half-padding-top;
 }
 
 @include resourcecenter-type('.resourcecenter-pdf', $brand-primary, '\e8c5', 'pdf-template-graphic.png');
