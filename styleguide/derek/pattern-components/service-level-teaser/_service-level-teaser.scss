@@ -1,0 +1,76 @@
+.serviceLevelTeaser {
+  background: $white;
+  border-bottom: 4px solid $brand-primary;
+  border-top: 4px solid $brand-primary;
+  box-shadow: 0 1px 3px $black-shadow;
+  display: block;
+  margin-bottom: 10px;
+  padding: 25px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    background-color: $gray-lightest;
+    text-decoration: none;
+  }
+}
+
+.serviceLevelTeaser-body {
+  padding-bottom: 10px;
+}
+
+.serviceLevelTeaser-col-full {
+  @include make-md-column(12);
+}
+
+.serviceLevelTeaser-header {
+  border-bottom: 1px solid $gray-lighter;
+  color: $gray-darkest;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.serviceLevelTeaser-icon {
+  color: $gray-base;
+  display: block;
+  font-family: 'rswebfonts';
+  font-size: 45px;
+  text-align: center;
+}
+
+.serviceLevelTeaser-pricing {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.serviceLevelTeaser-row {
+  @include make-row;
+}
+
+.serviceLevelTeaser-bottom {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.serviceLevelTeaser-bottomLink {
+  color: $brand-primary;
+  font-size: 18px;
+  font-weight: bold;
+
+  &:hover {
+    color: darken($brand-primary, 10%);
+  }
+}
+
+// stand out classes for desktop only
+@media only screen and (min-width: $screen-sm-min) {
+  .serviceLevelTeaser-default {
+    margin-top: 25px;
+  }
+
+  .serviceLevelTeaser-standOut {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}
