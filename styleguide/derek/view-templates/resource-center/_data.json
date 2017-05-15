@@ -5,6 +5,9 @@
   "pdf": {
     "css": "css/derek.css"
   },
+   "pdf-image": {
+    "css": "css/derek.css"
+  },
   "code": {
     "css": "css/derek.css"
   },
