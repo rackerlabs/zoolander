@@ -68,6 +68,20 @@
   font-size: 1.25rem;
 }
 
+.resource-condensedTitleRow {
+  border-bottom: 0;
+}
+
+.resource-condensedAnchor {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-condensedDescRow {
+  display: flex;
+  margin-top: auto;
+}
+
 @media only screen and (max-width: $screen-sm-max) {
   .resourceWrapper {
     .row-eq-height {
