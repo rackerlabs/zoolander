@@ -9,6 +9,7 @@
 @import '../../../derek/global-components/subnav/subnav';
 @import '../../../derek/global-components/back-to-top/back-to-top';
 @import '../../../derek/global-components/region-select/region-select';
+@import '../../../derek/global-components/filter-bar/filtering';
 @import '../../../derek/pattern-components/headers/headers';
 @import '../../../derek/pattern-components/tabs/tabs';
 @import 'components/pager';
@@ -37,7 +38,6 @@
 @import 'snowflakes/homepage';
 @import 'snowflakes/swatches';
 @import 'snowflakes/o365';
-@import 'snowflakes/filtering';
 
 .clear-fixed-top {
   margin-top: $navbar-height;

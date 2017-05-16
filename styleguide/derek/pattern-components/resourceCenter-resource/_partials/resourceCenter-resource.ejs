@@ -2,10 +2,11 @@
 <% if(!type) { var type = 'pdf'; } %>
 <% if(!title) { var title = 'Resource Title'; } %>
 <% if(!desc) { var desc = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m'; } %>
+<% if(!link) { var link = '/derek/view-templates/resource-center/pdf'; } %>
 <!-- Additional Resources Pattern -->
 
 <div class="resourceWrapper resource-<%- type -%>Icon track-click">
-  <a href="javascript:void(0)">
+  <a href="<%- link -%>">
     <div class="resource-titleRow">
       <div class="resource-iconWrapper"></div>
       <div class="resource-titleWrapper">
