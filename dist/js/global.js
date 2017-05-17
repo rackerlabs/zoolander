@@ -31,6 +31,7 @@ jQuery(document).ready(function ($) {
   };
 })(jQuery); // to protect and scope the JQuery alias = $
 
+
 // Filter bar plugin
 (function ($) {
   $.fn.rsFilterBar = function rsFilterBar() {
@@ -39,6 +40,7 @@ jQuery(document).ready(function ($) {
     var $filterForm = $filterBar.find('.rsFilter-form');
     var $mainNavHeight = parseInt($('.navbar-fixed-top').outerHeight(), 10);
     var inBounds = false;
+    var atBottom = false;
     var $stickyItemTop = void 0;
 
     // Callback to get new form width on resizing/scrolling
@@ -49,15 +51,24 @@ jQuery(document).ready(function ($) {
 
     // Callback to check if inbounds of side menu
     function checkInBounds(wt) {
+      // wt = pixels from top of window to top of scrolled area
       var filterFormHeight = parseInt($filterForm.outerHeight(), 10);
       if (!inBounds) {
         $stickyItemTop = parseInt($filterForm.offset().top, 10);
       }
+      // check if sticky form is scrolled passed top nav
       var windowTopInBounds = $stickyItemTop - $mainNavHeight < wt;
+      // get bottom offset of side bar
       var filterBottom = parseInt($filterBar.outerHeight(), 10) + parseInt($filterBar.offset().top, 10);
-      var formBottom = wt + filterFormHeight;
-      var filterGap = filterBottom + $mainNavHeight;
-      var filterInBounds = (filterGap - filterFormHeight) * 3 > formBottom;
+      // top val of scrolled window + height of form (not bar)
+      var formBottom = wt + filterFormHeight + $mainNavHeight + 10;
+      // if bottom of fixed form is not passed bottom of filter side bar
+      var filterInBounds = formBottom < filterBottom;
+      if (filterInBounds) {
+        atBottom = false;
+      } else {
+        atBottom = true;
+      }
       inBounds = windowTopInBounds && filterInBounds;
       return inBounds;
     }
@@ -90,9 +101,18 @@ jQuery(document).ready(function ($) {
               width: getWidth($filterBar, $barPadding) + 'px'
             });
             isFixed = true;
-          } else {
+          } else if (atBottom) {
             $filterForm.css({
+              bottom: '10px',
+              position: 'absolute',
+              top: '',
+              width: getWidth($filterBar, $barPadding) + 'px'
+            });
+          } else if (!inBounds && !atBottom) {
+            $filterForm.css({
+              bottom: '',
               position: '',
+              top: '',
               width: ''
             });
             isFixed = false;
@@ -124,6 +144,13 @@ jQuery(document).ready(function ($) {
                 position: ''
               });
               isFixed = false;
+            } else if (atBottom) {
+              $filterForm.css({
+                bottom: '10px',
+                position: 'absolute',
+                top: '',
+                width: getWidth($filterBar, $barPadding) + 'px'
+              });
             }
           } else {
             // If in mobile
