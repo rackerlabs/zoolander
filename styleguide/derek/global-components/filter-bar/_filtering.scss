@@ -55,12 +55,25 @@
   text-align: center;
 }
 
+.rsFilter-fieldTitle {
+  margin: 1.25rem 0 0;
+}
+
 .rsFilter-formSelect {
   background: $white;
+  border-radius: 0;
   display: block;
-  margin: 1rem auto 0;
+  margin: 0;
   max-width: 200px;
   width: $full-width;
+}
+
+.rsFilter-formCheck {
+  margin: 0 10px;
+}
+
+.rsFilter-formCheckLabel {
+  font-size: 1.3rem;
 }
 
 .rsFilter-button {
@@ -68,7 +81,7 @@
   border: 0;
   color: $white;
   display: block;
-  margin: 1rem auto 0;
+  margin: 1rem 0;
   max-width: 200px;
   padding: 0 15px;
   text-align: center;
@@ -112,5 +125,13 @@
 
   .rsFilter-formTitle {
     display: block;
+  }
+
+  .rsFilter-button {
+    margin: 1rem auto 0;
+  }
+
+  .rsFilter-formSelect {
+    margin: .5rem auto 0;
   }
 }

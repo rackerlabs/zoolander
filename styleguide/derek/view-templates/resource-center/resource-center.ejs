@@ -1,3 +1,64 @@
-<!--
-This page needs to be created.
--->
+<div class="bg-light-gray half-padding">
+  <h1 class="center">Rackspace Resources</h1>
+</div>
+
+<div class="resourcecenter-featuredResourceWrapper">
+  <div class="resourcecenter-featuredResourceContainer">
+    <div class="resourcecenter-featuredGraphicWrapper">
+      <img class="resourcecenter-featuredGraphic" src="http://034d24a88b3e71fd72a6-f083e9a6295a3f0714fa019ffdca65c3.r47.cf1.rackcdn.com/resource-center/pdf-template-graphic.png"/>
+    </div>
+    <div class="resourcecenter-featuredTextWrapper">
+      <h3 class="resourcecenter-featuredTextTitle">Resource Title Here</h3>
+      <p class="resourcecenter-featuredTextDesc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mpsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <a class="resourcecenter-featuredTextLink">View Resource</a>
+    </div>
+  </div>
+</div>
+
+<div class="rsFilter-section">
+  <div class="rsFilter-row row-eq-height">
+    <div class="rsFilter-bar">
+      <button class="rsFilter-hamburger"></button>
+      <div class="rsFilter-mobileTitle">Find a Resource</div>
+      <form class="rsFilter-form">
+        <div class="rsFilter-formTitle">Find a Resource</div>
+          <div class="form-item form-type-select form-item-tid-1">
+            <h6 class="rsFilter-fieldTitle">Solutions</h6>
+            <select class="rsFilter-formSelect form-select">
+              <option value="All" selected="selected">- Any -</option>
+              <option value="92">Public Cloud</option>
+              <option value="82">Private Cloud</option>
+            </select>
+          </div>
+          <h6 class="rsFilter-fieldTitle">Products</h6>
+          <div class="form-item form-type-select form-item-tid-2">
+            <select class="rsFilter-formSelect form-select">
+              <option value="All" selected="selected">- Any -</option>
+              <option value="101">AWS</option>
+              <option value="102">Azure</option>
+            </select>
+          </div>
+          <h6 class="rsFilter-fieldTitle">Resource Type</h6>
+          <div class="form-item form-type-check form-item-tid-3">
+            <%- partial('_partials/checkbox.ejs', {
+              'type': 'webinar',
+            }) -%>
+          </div>
+        <button class="rsFilter-button">Show Results</button>
+      </form>
+    </div>
+    <div class="rsFilter-content">
+      <div class="resourcecenter-resourceRow">
+        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resourcesNoContainer.ejs') %>
+      </div>
+      <div class="resourcecenter-resourceRow">
+        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resourcesNoContainer.ejs') %>
+      </div>
+      <div class="resourcecenter-resourceRow">
+        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resourcesNoContainer.ejs') %>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/global-components/filter-bar/filtering.js" charset="utf-8"></script>
+

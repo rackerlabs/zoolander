@@ -107,3 +107,58 @@
 @include resourcecenter-type('.resourcecenter-docs', $teal-dark, '\e847', 'suppoerDocs-template-graphic.png');
 @include resourcecenter-type('.resourcecenter-webinar', $mustard, '\e8c6', 'webinar-template-graphic.png');
 @include resourcecenter-type('.resourcecenter-video', $blue-gray, '\e8c8', '');
+
+
+//Featured Resource//
+.resourcecenter-featuredResourceWrapper {
+  background-color: $gray-darker;
+  padding: 2rem 0 0;
+}
+
+.resourcecenter-featuredResourceContainer {
+  @include make-container;
+}
+
+.resourcecenter-featuredGraphicWrapper {
+  @include make-md-column(3);
+  margin-top: -90px;
+}
+
+.resourcecenter-featuredTextWrapper {
+  @include make-md-column(9);
+  padding-bottom: 2rem;
+}
+
+.resourcecenter-featuredTextTitle {
+  color: $white;
+}
+
+.resourcecenter-featuredTextDesc {
+  color: $white;
+}
+
+.resourcecenter-featuredTextLink {
+  color: $white;
+  font-weight: $font-weight-black;
+
+  &:hover {
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.resourcecenter-resourceRow {
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .resourcecenter-featuredGraphicWrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  .resourcecenter-featuredGraphicWrapper {
+    margin-top: 0;
+  }
+}
