@@ -1,7 +1,7 @@
 module.exports = {
     "extends": "airbnb-base",
     "plugins": [
-        "import"
+        "import",
     ],
     "globals": {
       "window": true,
@@ -11,5 +11,10 @@ module.exports = {
     "rules": {
       // Errors.
       "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["$"] }],
+    },
+    "env": {
+      "mocha": true,
+      "jquery": true,
+      "jasmine": true,
     }
 };

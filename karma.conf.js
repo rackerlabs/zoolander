@@ -15,6 +15,9 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+      'styleguide/global/global.js',
       'styleguide/**/*.spec.js',
     ],
 
@@ -28,6 +31,12 @@ module.exports = function (config) {
       },
     },
 
+    babelPreprocessor: {
+      options: {
+        presets: ['es2015'],
+      },
+    },
+
     // list of files to exclude
     exclude: [
     ],
@@ -36,6 +45,7 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'styleguide/**/*.spec.js': ['babel'],
     },
 
 
