@@ -1,0 +1,27 @@
+<!-- Default description -->
+<% if(!desc) {
+  var desc = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.";
+} %>
+<% if(!title) {
+  var title = "Title Here";
+} %>
+<% if(!icon) {
+  var icon = "idio-winner";
+} %>
+<% if(!price) {
+  var price = "$Fat Stacks";
+} %>
+<% if(!standoutClass) {
+  var standoutClass = "";
+} %>
+<!-- Service Level Teaser Pattern -->
+<a class="serviceLevelTeaser <%- standoutClass %>" href="javascript:void(0)">
+  <div class="serviceLevelTeaser-row">
+    <div class="serviceLevelTeaser-col-full">
+      <h2 class="serviceLevelTeaser-header"><%- title %></h2>
+      <span class="serviceLevelTeaser-icon <%- icon -%>"></span>
+      <h3 class="serviceLevelTeaser-pricing">Starting at <%- price %></h3>
+      <p class="serviceLevelTeaser-body"><%- desc %></p>
+    </div>
+  </div>
+</a>
