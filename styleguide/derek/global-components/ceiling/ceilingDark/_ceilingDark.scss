@@ -1,0 +1,56 @@
+@include responsive-invisibility('.ceilingDark-pageTitle');
+
+.ceilingDark-menuInline-item {
+  border-left: 1px solid $gray-light;
+  list-style: none;
+  margin-bottom: 0;
+
+  &.open,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($gray-dark, 10%);
+  }
+}
+
+.navbar-phoneiconDark,
+.navbar-chaticonDark,
+.navbar-emailiconDark {
+  color: $white;
+  padding: 15px 0;
+
+  &:hover {
+    color: $white;
+  }
+
+  &::before {
+    color: $white;
+  }
+}
+
+.ceilingDark-brand {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/rs-logo.svg');
+  background-position: left 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 79%;
+  float: left;
+  height: 35px;
+  margin: 5px 10px;
+  position: relative;
+  transition-duration: .3s;
+  width: 150px;
+}
+
+@media only screen and (min-width: $screen-xs-max) {
+  @include responsive-visibility('.ceilingDark-pageTitle');
+
+  .navbar-phoneiconDark,
+  .navbar-chaticonDark,
+  .navbar-emailiconDark {
+    padding: 15px 11px;
+  }
+}
+
+.ceilingDark-container {
+  padding: 0;
+}
