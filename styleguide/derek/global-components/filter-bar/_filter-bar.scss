@@ -68,12 +68,15 @@
   width: $full-width;
 }
 
-.rsFilter-formCheck {
-  margin: 0 10px;
-}
-
-.rsFilter-formCheckLabel {
+.rsFilter-checkbox {
   font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+
+  & + .option {
+    display: inline-block;
+    font-weight: $font-weight-black;
+  }
 }
 
 .rsFilter-button {
