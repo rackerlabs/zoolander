@@ -120,8 +120,7 @@
 }
 
 .resourcecenter-featuredGraphicWrapper {
-  @include make-md-column(3);
-  margin-top: -90px;
+  display: none;
 }
 
 .resourcecenter-featuredTextWrapper {
@@ -151,14 +150,30 @@
   padding: 2rem 0;
 }
 
-@media screen and (max-width: $screen-sm-max) {
+@media screen and (min-width: $screen-md-min) {
   .resourcecenter-featuredGraphicWrapper {
-    display: none;
+    @include make-md-column(3);
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/resource-center/pdf-template-graphic.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 83.5%;
+    display: block;
+    height: 280px;
+    margin-bottom: 1px;
+    margin-top: -90px;
+  }
+
+  .resourcecenter-featuredGraphic {
+    margin-left: 20px;
+    margin-top: 76px;
+    width: 87%;
   }
 }
 
-@media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
-  .resourcecenter-featuredGraphicWrapper {
-    margin-top: 0;
+@media screen and (min-width: $screen-lg-min) {
+  .resourcecenter-featuredGraphic {
+    margin-left: 34px;
+    margin-top: 14px;
+    width: 81.5%;
   }
 }
