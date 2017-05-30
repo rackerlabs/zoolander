@@ -24,16 +24,8 @@
       <div class="rsFilter-mobileTitle">Find a Resource</div>
       <form class="rsFilter-form">
         <div class="rsFilter-formTitle">Find a Resource</div>
-          <div class="form-item form-type-select form-item-tid-1">
-            <h6 class="rsFilter-fieldTitle">Solutions</h6>
-            <select class="rsFilter-formSelect form-select">
-              <option value="All" selected="selected">- Any -</option>
-              <option value="92">Public Cloud</option>
-              <option value="82">Private Cloud</option>
-            </select>
-          </div>
           <h6 class="rsFilter-fieldTitle">Products</h6>
-          <div class="form-item form-type-select form-item-tid-2">
+          <div class="form-item form-type-select">
             <select class="rsFilter-formSelect form-select">
               <option value="All" selected="selected">- Any -</option>
               <option value="101">AWS</option>
@@ -41,7 +33,7 @@
             </select>
           </div>
           <h6 class="rsFilter-fieldTitle">Resource Type</h6>
-          <div class="form-item form-type-check form-item-tid-3">
+          <div class="rsFilter-checkbox">
             <%- partial('_partials/checkbox.ejs', {
               'type': 'webinar',
             }) -%>
