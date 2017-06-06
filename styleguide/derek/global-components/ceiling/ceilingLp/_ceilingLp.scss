@@ -1,3 +1,5 @@
+@include responsive-invisibility('.ceilingLp-pageTitle');
+
 .ceilingLp {
   background: $white;
   box-shadow: 0 6px 12px $black-shadow;
@@ -11,6 +13,7 @@
 .navbar-chaticonLp,
 .navbar-emailiconLp {
   color: $gray-darkest;
+  padding: 15px 0;
 
   &:hover {
     color: $gray-darkest;
@@ -34,13 +37,13 @@
   width: 150px;
 }
 
-@media only screen and (max-width: $screen-xs-max) {
-  @include responsive-invisibility('.ceilingLp-pageTitle');
+@media only screen and (min-width: $screen-xs-max) {
+  @include responsive-visibility('.ceilingLp-pageTitle');
 
   .navbar-phoneiconLp,
   .navbar-chaticonLp,
   .navbar-emailiconLp {
-    padding: 15px 0;
+    padding: 15px 11px;
   }
 }
 
@@ -48,10 +51,6 @@
   .basement-iconListItem {
     font-size: 1rem;
   }
-}
-
-@media only screen and (min-width: $screen-md-min) {
-  margin: 0 (-$grid-gutter-width / 2);
 }
 
 .ceilingLp-container {
