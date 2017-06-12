@@ -15,16 +15,23 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'styleguide/**/*.spec.js',
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+      'styleguide/js/global-components/filter-bar/filter-bar.js',
+      'styleguide/global/filter.spec.js',
+       // 'styleguide/derek/global-components/filter-bar/filter-bar.js',
+      
     ],
 
     client: {
       chai: {
         includeStack: true,
       },
-      mocha: {
-        reporter: 'html',
-        ui: 'bdd',
+    },
+
+    babelPreprocessor: {
+      options: {
+        presets: ['es2015'],
       },
     },
 
@@ -36,6 +43,7 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'styleguide/derek/global-components/**/*.js': ['babel'],
     },
 
 
@@ -70,7 +78,7 @@ module.exports = function (config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    singleRun: false,
 
     // Concurrency level
     // how many browser should be started simultaneous
