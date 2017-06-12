@@ -17,17 +17,15 @@ module.exports = function (config) {
     files: [
       'node_modules/jquery/dist/jquery.js',
       'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-      'styleguide/global/global.js',
-      'styleguide/**/*.spec.js',
+      'styleguide/js/global-components/filter-bar/filter-bar.js',
+      'styleguide/global/filter.spec.js',
+       // 'styleguide/derek/global-components/filter-bar/filter-bar.js',
+      
     ],
 
     client: {
       chai: {
         includeStack: true,
-      },
-      mocha: {
-        reporter: 'html',
-        ui: 'bdd',
       },
     },
 
@@ -45,7 +43,7 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'styleguide/**/*.spec.js': ['babel'],
+      'styleguide/derek/global-components/**/*.js': ['babel'],
     },
 
 

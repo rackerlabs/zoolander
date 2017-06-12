@@ -1,7 +1,7 @@
 {
   "name": "zoolander",
   "description": "Derek Zoolander's Corporate Style Guide to Help Product Teams Build Ridiculously Good Looking Websites",
-  "version": "1.1.13",
+  "version": "1.1.12",
   "authors": [
     "Rackspace Web Team <rswebdev@rackspace.com>"
   ],
@@ -40,6 +40,7 @@
     "chai": "^3.5.0",
     "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.1.2",
+    "eslint-plugin-chai-friendly": "^0.3.6",
     "eslint-plugin-import": "^2.2.0",
     "fs-extra": "^0.30.0",
     "jquery": "^3.2.1",

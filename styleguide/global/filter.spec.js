@@ -1,28 +1,29 @@
 describe('Filter Bar', () => {
   it('should exist on page', () => {
-     //<div id="firstDiv">First <strong>div</strong></div>
-    $('body').append('<div id="firstDiv">First <strong>div</strong></div>');
-    var div1 = document.getElementById('firstDiv');
-    div1.insertAdjacentHTML('afterend', '<div id="secondDiv">Second <strong>div</strong></div>');
-    const blah = '<select class="rsFilter-formSelect form-select form-select" ' +
-                'id="edit-field-event-type-tid" name="field_event_type_tid">' +
-                '<option value="All" selected="selected">- Anyx -</option>' +
-                '<option value="4">Customer Events</option><option value="9">' +
-                'Field Events</option><option value="7">Forum</option>' +
-                '<option value="5">Tradeshow/Conference</option>' +
-                '<option value="6">Training</option><option value="8">Webinar</option></select>';
-    div1.insertAdjacentHTML('afterend', blah);
+    $('body').append('<div id="filter-bar-nav" class="navbar-fixed-top"></div>');
+    const filterHtml = '<div id="filter-bar" class="rsFilter-bar">' +
+      '<button class="rsFilter-hamburger"></button>' +
+      '<div class="rsFilter-mobileTitle">Find an Event</div>' +
+      '<form class="rsFilter-form">' +
+         '<div class="rsFilter-formTitle">Find an Event</div>' +
+          '<div class="form-item form-type-select form-item-tid-1">' +
+            '<select class="rsFilter-formSelect form-select">' +
+              '<option value="All" selected="selected">- Any -</option>' +
+              '<option value="92">Custom Events</option>' +
+              '<option value="82">Field Events</option>' +
+              '<option value="101">Forum</option>' +
+            '</select>' +
+          '</div>' +
+       ' <button class="rsFilter-button">Show Results</button>' +
+      '</form>' +
+    '</div>';
+    const topNav = document.getElementById('filter-bar-nav');
+    topNav.insertAdjacentHTML('afterend', filterHtml);
 
-    $('<div id="filterBar"></div>').rsFilterBar();
-    var $newdiv1 = $( "<div id='object1'></div>" ),
-    newdiv2 = document.createElement( "div" ),
-    existingdiv1 = document.getElementById( "foo" );
-    $("body").append( $newdiv1, [ newdiv2, existingdiv1 ] );
-
-    expect(document.getElementById('object1')).exist;
-    expect(document.getElementById('secondDiv')).to.exist;
-    expect(document.getElementById('edit-field-event-type-tid')).to.exist;
+    $('.rsFilter-bar').rsFilterBar();
+    expect(document.getElementById('filter-bar')).to.exist;
   });
+
   it('should show filter options');
   it('should show result');
 });
