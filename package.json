@@ -30,7 +30,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "concurrently": "^3.4.0",
-    "harp": "^0.20.1"
+    "harp": "^0.24.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
