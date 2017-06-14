@@ -15,16 +15,22 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'styleguide/**/*.spec.js',
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+      'styleguide/global/global.js',
+      'styleguide/derek/global-components/tracking/tracking.js',
+      'styleguide/derek/global-components/**/*.spec.js',
     ],
 
     client: {
       chai: {
         includeStack: true,
       },
-      mocha: {
-        reporter: 'html',
-        ui: 'bdd',
+    },
+
+    babelPreprocessor: {
+      options: {
+        presets: ['es2015'],
       },
     },
 
@@ -36,6 +42,8 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'styleguide/global/global.js': ['babel'],
+      'styleguide/derek/global-components/**/*.js': ['babel'],
     },
 
 
