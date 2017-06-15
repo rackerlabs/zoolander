@@ -21,14 +21,30 @@
   text-align: right;
 }
 
+.basement-statement {
+  font-size: .85em;
+  text-align: center;
+}
+
+.basement-statementLink {
+  color: $gray-base;
+
+  &:hover {
+    color: $gray-light;
+  }
+
+  &:active {
+    color: $gray-light;
+  }
+}
+
 .basement-currency,
 .region-select {
-  @include make-sm-column(6);
+  display: block;
   text-align: center;
 }
 
 .basement-currency {
-  @include make-lg-column-pull(1);
   padding: 0;
 }
 
@@ -146,11 +162,6 @@
   color: $gray-base;
 }
 
-.region-select {
-  @include make-md-column(4);
-}
-
-
 @media screen and (max-width: $screen-sm-max) {
   .basement-copyright,
   .basementLp-copyright {
@@ -161,6 +172,11 @@
 @media screen and (min-width: $screen-sm-min) {
   .basement-currency,
   .region-select {
+    display: inline-block;
     text-align: left;
+  }
+
+  .region-select {
+    margin-right: 15px;
   }
 }
