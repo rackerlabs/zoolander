@@ -83,6 +83,12 @@
 .resourcecenter-button {
   @include button;
   @include button-download;
+
+  &:link,
+  &:visited {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 .resourcecenter-dividerWrapper {
