@@ -1,0 +1,19 @@
+{
+  "index": {
+    "css": "css/derek.css",
+    "theme_name": "derek"
+  },
+  "forms": {
+    "css": "css/derek.css"
+  },
+  "swatches": {
+    "css": "css/derek.css",
+    "layout": "_example"
+  },
+  "font-usage": {
+    "css": "css/derek.css"
+  },
+  "icon-font": {
+    "css": "css/derek.css"
+  }
+}
