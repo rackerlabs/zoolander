@@ -181,6 +181,35 @@ Zoolander.Tracking = (function Tracking($) {
         eventNonInteraction: 0,
       });
     });
+
+    $('.rsFilter-form').on('submit', (e) => {
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Resource Center',
+        eventAction: 'Resource Center Filter - Product',
+        eventLabel: $(e.target).find('option:selected').text(),
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Resource Center',
+        eventAction: 'Resource Center Filter - Type',
+        eventLabel: getCheckboxValuesByElement($(e.target).find('input:checked')),
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+  }
+
+  function getCheckboxValuesByElement(elements) {
+    const values = [];
+    elements.each((i, v) => {
+      values.push(v.value);
+    });
+
+    return values.sort().join(':');
   }
 
   return {

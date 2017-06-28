@@ -219,5 +219,28 @@ describe('Zoolander Tracking Module', function () {
       };
       expect(expected).to.eql(window.dataLayer.pop());
     });
+
+    it('should track resource filtering products', function () {
+      $('body').append('<form class="rsFilter-form"><select name="product"><option value="96" selected="selected">Public Cloud</option><option value="101">-Fanatical Support for AWS</option><input type="checkbox" name="content_type[]" id="edit-content-type-case-study" value="case_study" checked="checked" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-code-repository" value="code_repository" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-ebook" value="ebook" checked="checked" class="rsFilter-checkbox"></form>');
+      Zoolander.Tracking.init();
+
+      $('form.rsFilter-form').trigger('submit');
+      var expected = [{
+        event: 'ga.event',
+        eventCategory: 'Resource Center',
+        eventAction: 'Resource Center Filter - Product',
+        eventLabel: 'Public Cloud',
+        eventValue: '0',
+        eventNonInteraction: 0
+      }, {
+        event: 'ga.event',
+        eventCategory: 'Resource Center',
+        eventAction: 'Resource Center Filter - Type',
+        eventLabel: 'case_study:ebook',
+        eventValue: '0',
+        eventNonInteraction: 0
+      }];
+      expect(expected).to.eql(window.dataLayer);
+    });
   });
 });
