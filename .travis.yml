@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-  - "4.2.4"
   - "6.10.0"
 env:
   - CMD="sass:compile"

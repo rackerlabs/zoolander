@@ -3,10 +3,7 @@
     "css": "css/derek.css",
     "theme_name": "derek"
   },
-  "solutions": {
-    "css": "css/derek.css"
-  },
-  "solutions-usage": {
+  "patterns": {
     "css": "css/derek.css"
   }
 }

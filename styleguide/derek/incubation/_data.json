@@ -28,5 +28,9 @@
   "imac": {
     "css": "css/derek.css",
     "layout": "_index"
+  },
+  "solutions": {
+    "css": "css/derek.css",
+    "layout": "_index"
   }
 }
