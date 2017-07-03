@@ -1,51 +1,92 @@
 'use strict';
 
+/* eslint no-use-before-define: 0 */
+
+var Zoolander = Zoolander || {};
+
+Zoolander.rsFilterBar = {
+  calcAtBottom: function calcAtBottom(dimensions) {
+    var defaults = {
+      filterBarOffsetTop: 0,
+      filterBarOuterHeight: 0,
+      filterFormOuterHeight: 0,
+      mainNavHeight: 0,
+      windowTop: 0
+    };
+    var values = Object.assign(defaults, dimensions);
+    var filterFormHeight = values.filterFormOuterHeight;
+    var filterBottom = values.filterBarOuterHeight + values.filterBarOffsetTop;
+    var formBottom = values.windowTop + filterFormHeight + values.mainNavHeight + 10;
+    return formBottom >= filterBottom;
+  },
+  calcInBounds: function calcInBounds(dimensions) {
+    var defaults = {
+      filterBarOffsetTop: 0,
+      filterBarOuterHeight: 0,
+      filterFormOffsetTop: 0,
+      filterFormOuterHeight: 0,
+      isInBounds: false,
+      mainNavHeight: 0,
+      stickyItemTop: 0,
+      windowTop: 0
+    };
+    var values = Object.assign(defaults, dimensions);
+    // wt = pixels from top of window to top of scrolled area
+    var filterFormHeight = values.filterFormOuterHeight;
+    if (!values.isInBounds) {
+      values.stickyItemTop = values.filterFormOffsetTop;
+    }
+    // check if sticky form is scrolled passed top nav
+    var windowTopInBounds = values.stickyItemTop - values.mainNavHeight < values.windowTop;
+    // get bottom offset of side bar
+    var filterBottom = values.filterBarOuterHeight + values.filterBarOffsetTop;
+    // top val of scrolled window + height of form (not bar)
+    var formBottom = values.windowTop + filterFormHeight + values.mainNavHeight + 10;
+    // if bottom of fixed form is not passed bottom of filter side bar
+    var filterInBounds = formBottom < filterBottom;
+    return windowTopInBounds && filterInBounds;
+  }
+};
+
 // Filter bar plugin
 (function ($) {
   $.fn.rsFilterBar = function rsFilterBar() {
-    // Variable declorations
+    // Variable declarations
     var $filterBar = $(this);
     var $filterForm = $filterBar.find('.rsFilter-form');
-    var $mainNavHeight = parseInt($('.navbar-fixed-top').outerHeight(), 10);
+    var $mainNavHeight = $('.navbar-fixed-top').outerHeight();
+    var $rsWindow = $(window);
     var inBounds = false;
     var atBottom = false;
-    var $stickyItemTop = void 0;
+    var stickyItemTopValue = void 0;
 
     // Callback to get new form width on resizing/scrolling
     function getWidth(bar, padding) {
-      var width = parseInt(bar.outerWidth(true), 10) - padding;
+      var width = bar.outerWidth(true) - padding;
       return width;
     }
 
     // Callback to check if inbounds of side menu
-    function checkInBounds(wt) {
-      // wt = pixels from top of window to top of scrolled area
-      var filterFormHeight = parseInt($filterForm.outerHeight(), 10);
-      if (!inBounds) {
-        $stickyItemTop = parseInt($filterForm.offset().top, 10);
-      }
-      // check if sticky form is scrolled passed top nav
-      var windowTopInBounds = $stickyItemTop - $mainNavHeight < wt;
-      // get bottom offset of side bar
-      var filterBottom = parseInt($filterBar.outerHeight(), 10) + parseInt($filterBar.offset().top, 10);
-      // top val of scrolled window + height of form (not bar)
-      var formBottom = wt + filterFormHeight + $mainNavHeight + 10;
-      // if bottom of fixed form is not passed bottom of filter side bar
-      var filterInBounds = formBottom < filterBottom;
-      if (filterInBounds) {
-        atBottom = false;
-      } else {
-        atBottom = true;
-      }
-      inBounds = windowTopInBounds && filterInBounds;
-      return inBounds;
+    function checkInBounds() {
+      var dimensions = {
+        filterBarOffsetTop: $filterBar.offset().top,
+        filterBarOuterHeight: $filterBar.outerHeight(),
+        filterFormOffsetTop: $filterForm.offset().top,
+        filterFormOuterHeight: $filterForm.outerHeight(),
+        isInBounds: inBounds,
+        mainNavHeight: $mainNavHeight,
+        stickyItemTop: stickyItemTopValue,
+        windowTop: $rsWindow.scrollTop()
+      };
+
+      atBottom = Zoolander.rsFilterBar.calcAtBottom(dimensions);
+      return Zoolander.rsFilterBar.calcInBounds(dimensions);
     }
 
     if ($filterForm.length) {
-      var $barPadding = parseInt($filterBar.css('padding-left'), 10) + parseInt($filterBar.css('padding-right'), 10);
+      var $barPadding = $filterBar.css('padding-left') + $filterBar.css('padding-right');
       var $filterHamburger = $filterBar.find('.rsFilter-hamburger');
-      var $rsWindow = $(window);
-      $stickyItemTop = parseInt($filterForm.offset().top, 10);
+      stickyItemTopValue = $filterForm.offset().top;
       var resizeTimer = void 0;
       var isFixed = false;
 
@@ -59,8 +100,7 @@
       $rsWindow.scroll(function () {
         // If not in mobile
         if ($rsWindow.outerWidth() > 767) {
-          var $rsWindowTop = parseInt($rsWindow.scrollTop(), 10);
-          inBounds = checkInBounds($rsWindowTop);
+          inBounds = checkInBounds();
           // If user scrolls to filter form and is in the bounds of the bar, move form up and down
           if (inBounds) {
             $filterForm.css({
@@ -93,8 +133,6 @@
       $rsWindow.resize(function () {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
-          // reset this incase siblings above become taller on broweser resize
-          $stickyItemTop = parseInt($filterForm.offset().top, 10);
           // If not mobile
           if ($rsWindow.outerWidth() > 768) {
             if (!isFixed && inBounds) {
