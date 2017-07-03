@@ -15,9 +15,11 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'node_modules/babel-polyfill/dist/polyfill.js',
       'node_modules/jquery/dist/jquery.js',
       'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
       'styleguide/global/global.js',
+      'styleguide/derek/global-components/filter-bar/filter-bar.js',
       'styleguide/derek/global-components/tracking/tracking.js',
       'styleguide/derek/global-components/**/*.spec.js',
     ],
