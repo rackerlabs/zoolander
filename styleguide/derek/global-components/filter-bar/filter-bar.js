@@ -84,8 +84,8 @@ Zoolander.rsFilterBar = {
     }
 
     if ($filterForm.length) {
-      const $barPadding = $filterBar.css('padding-left') +
-                        $filterBar.css('padding-right');
+      const $barPadding = parseInt($filterBar.css('padding-left'), 10) +
+                        parseInt($filterBar.css('padding-right'), 10);
       const $filterHamburger = $filterBar.find('.rsFilter-hamburger');
       stickyItemTopValue = $filterForm.offset().top;
       let resizeTimer;
