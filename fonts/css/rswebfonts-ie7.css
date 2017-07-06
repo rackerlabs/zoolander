@@ -2,14 +2,14 @@
   font-family: 'rswebfonts';
   font-style: normal;
   font-weight: normal;
- 
+
   /* fix buttons height */
   line-height: 1em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
 }
- 
+
 .icon-envelope-o { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2709;&nbsp;'); }
 .icon-print { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
 .icon-caret-right { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
@@ -219,6 +219,7 @@
 .icon-mng-guarantee { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe990;&nbsp;'); }
 .icon-mng-infrastructure { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe991;&nbsp;'); }
 .icon-mng-installation { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe992;&nbsp;'); }
+.icon-idio-quote { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe993;&nbsp;'); }
 .icon-mng-monitoring { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe994;&nbsp;'); }
 .icon-mng-os-support { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe995;&nbsp;'); }
 .icon-mng-performance { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe997;&nbsp;'); }
