@@ -2,12 +2,12 @@
 
  @font-face {
   font-family: 'rswebfonts';
-  src: url('../font/rswebfonts.eot?89363804');
-  src: url('../font/rswebfonts.eot?89363804#iefix') format('embedded-opentype'),
-       url('../font/rswebfonts.woff2?89363804') format('woff2'),
-       url('../font/rswebfonts.woff?89363804') format('woff'),
-       url('../font/rswebfonts.ttf?89363804') format('truetype'),
-       url('../font/rswebfonts.svg?89363804#rswebfonts') format('svg');
+  src: url('../font/rswebfonts.eot?42745553');
+  src: url('../font/rswebfonts.eot?42745553#iefix') format('embedded-opentype'),
+       url('../font/rswebfonts.woff2?42745553') format('woff2'),
+       url('../font/rswebfonts.woff?42745553') format('woff'),
+       url('../font/rswebfonts.ttf?42745553') format('truetype'),
+       url('../font/rswebfonts.svg?42745553#rswebfonts') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'rswebfonts';
-    src: url('../font/rswebfonts.svg?89363804#rswebfonts') format('svg');
+    src: url('../font/rswebfonts.svg?42745553#rswebfonts') format('svg');
   }
 }
 */
@@ -266,6 +266,7 @@
 .icon-mng-guarantee:before { content: '\e990'; } /* '' */
 .icon-mng-infrastructure:before { content: '\e991'; } /* '' */
 .icon-mng-installation:before { content: '\e992'; } /* '' */
+.icon-idio-quote:before { content: '\e993'; } /* '' */
 .icon-mng-monitoring:before { content: '\e994'; } /* '' */
 .icon-mng-os-support:before { content: '\e995'; } /* '' */
 .icon-mng-performance:before { content: '\e997'; } /* '' */
