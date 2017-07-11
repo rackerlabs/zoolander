@@ -1,3 +1,110 @@
+// Customer Stories Feature Colors
+$default-bg-img: 'https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/collaboration-2.jpg';
+// Mixin for featured stories bg types
+@mixin featuredBg($class, $gradient) {
+  #{$class} {
+    &::before {
+      background-image: url($default-bg-img);
+    }
+
+    &::after {
+      background-image: $gradient;
+    }
+  }
+}
+
+.story-featured-container {
+  background-color: $gray-lightest;
+  padding: 40px 25px;
+}
+
+.story-featured-text {
+  @include make-container;
+  text-align: center;
+}
+
+.story-featured-cards {
+  @include make-container;
+}
+
+.story-featured-cardRow {
+  @include make-row;
+  margin-top: 10px;
+}
+
+.story-featured-cardLogo {
+  @include make-md-column(3);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.story-featured-logoInner {
+  @include flex-center;
+  box-shadow: 0 1px 3px transparentize($black, .5);
+  display: flex;
+  height: 220px;
+}
+
+.story-featured-cardQuote {
+  display: none;
+}
+
+.story-featured-link {
+  &:hover {
+    &::after {
+      background-color: $gray-light;
+      opacity: 1;
+      transition-duration: .3s;
+    }
+  }
+}
+
+// 3 featured logo / quote hover states
+.story-featured-cardLogoTop {
+  background-color: darken($rackspace-red, 5%);
+}
+
+.story-featured-cardLogoCenter {
+  background-color: $teal-dark;
+}
+
+.story-featured-cardLogoBottom {
+  background-color: $purple;
+}
+
+.story-featured-seeMore {
+  color: transparentize($black, .5);
+  display: block;
+  font-weight: $font-weight-black;
+  margin-top: 50px;
+  text-align: center;
+
+  &::before {
+    content: 'See More Customer Stories';
+    display: block;
+    font-family: $heading;
+    font-size: 20px;
+  }
+
+  &::after {
+    content: '\e806';
+    display: block;
+    font-family: 'rswebfonts';
+    font-size: 20px;
+  }
+
+  &:hover {
+    color: transparentize($black, .3);
+    text-decoration: none;
+    transition-duration: .2s;
+  }
+
+  &:focus {
+    color: transparentize($black, .5);
+    text-decoration: none;
+  }
+}
+
 .story-container {
   @include make-container;
   padding: $standard-padding;
@@ -147,5 +254,98 @@
 
   .storyOverview-logo {
     max-width: 120px;
+  }
+}
+
+// Desktop only rules
+@media (min-width: $screen-md-min) {
+  .story-featured-cardRow {
+    margin-top: 30px;
+  }
+
+  .story-featured-cardLogo {
+    border-right: 10px solid $gray-lightest;
+    float: left;
+  }
+
+  .story-featured-quoteInner {
+    color: $white;
+    max-width: 85%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .story-featured-quote {
+    font-size: 15px;
+    font-weight: 600;
+
+    &::before {
+      content: '" ';
+      font-size: 24px;
+      line-height: 0;
+    }
+
+    &::after {
+      content: ' "';
+      font-size: 24px;
+      line-height: 0;
+    }
+  }
+
+  .story-featured-quoteSource {
+    display: block;
+    font-style: italic;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .story-featured-cardLogoTop {
+    border-left: 10px solid $gray-lightest;
+    border-right: 0;
+    float: right;
+  }
+
+  @include featuredBg('.story-featured-cardQuoteTop', linear-gradient(to bottom right, transparentize(darken($rackspace-red, 5%), .4), darken($rackspace-red, 5%)));
+  @include featuredBg('.story-featured-cardQuoteCenter', linear-gradient(to bottom left, transparentize($teal-dark, .4), $teal-dark));
+  @include featuredBg('.story-featured-cardQuoteBottom', linear-gradient(to bottom right, transparentize($purple, .4), $purple));
+
+  .story-featured-cardLogoBottom {
+    border-left: 10px solid $gray-lightest;
+    border-right: 0;
+    float: right;
+  }
+
+  .story-featured-cardQuote {
+    @include flex-center;
+    @include make-md-column(9);
+    box-shadow: 0 1px 3px transparentize($black, .5);
+    display: flex;
+    height: 220px;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 10px;
+
+    &::before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      content: '';
+      filter: blur(10px);
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      content: '';
+      left: 0;
+      opacity: .9;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 }

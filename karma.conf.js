@@ -21,6 +21,7 @@ module.exports = function (config) {
       'styleguide/global/global.js',
       'styleguide/derek/global-components/filter-bar/filter-bar.js',
       'styleguide/derek/global-components/tracking/tracking.js',
+      'styleguide/derek/global-components/anchor-scroll/anchor-scroll.js',
       'styleguide/derek/global-components/**/*.spec.js',
     ],
 
