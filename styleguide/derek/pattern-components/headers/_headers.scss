@@ -149,3 +149,65 @@
     width: 70%;
   }
 }
+
+
+.refreshBanner {
+  @include make-banner;
+  background-image: url('../imgs/derek/BG.png');
+  background-position: right center;
+  height: 520px;
+  overflow: hidden;
+  padding: 150px 0 80px 0;
+}
+
+
+.refresh-textContainer {
+  background-color: $white;
+  color: $brand-primary;
+  margin: 0 auto;
+  padding: 25px;
+  position: relative;
+}
+
+.refresh-headline {
+  @include heading($brand-primary);
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: .8em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.refresh-sideAngle {
+  @include make-sm-column(1);
+  opacity: .6;
+  position: absolute;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 370px;
+  border: none;
+  background: $brand-primary;
+  padding: 0;
+  -webkit-transform:    skewX(-32deg);
+  transform:    skewX(-32deg);
+  -webkit-transform-origin: 0 0 10px;
+  transform-origin: 0 0 10px;
+}
+
+.refresh-bottomAngle {
+  @include make-sm-column(5.75);
+  opacity: .6;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 400px;
+  border: none;
+  background: #732126;
+  padding: 0;
+  margin-left: -5px;
+  -webkit-transform:    skewX(-32deg);
+  transform:    skewX(-32deg);
+  -webkit-transform-origin: -1% 12% 0;
+  transform-origin: -1% 12% 0;
+}

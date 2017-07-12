@@ -5,8 +5,16 @@
   box-shadow: 0 6px 12px $black-shadow;
 }
 
+.refresh-ceilingLp {
+  background: transparent;
+}
+
 .ceiling-menuInline-item {
   border-left: 1px solid $gray-light;
+}
+
+.ceilingRefresh-menuInline-item {
+  border: none;
 }
 
 .navbar-phoneiconLp,
@@ -21,6 +29,17 @@
 
   &::before {
     color: $gray-darkest;
+  }
+}
+
+.navbarRefresh-phoneicon,
+.navbarRefresh-chaticon,
+.navbarRefresh-emailicon {
+  font-size: 1.25em;
+  padding: 25px 20px;
+
+  &:before {
+    font-size: 1.1em;
   }
 }
 
