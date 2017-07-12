@@ -71,6 +71,21 @@
   }
 }
 
+@mixin button-ghost {
+  background-color: transparent;
+  border: 3px solid $white;
+  color: $white;
+  font-size: 1.25rem;
+  font-weight: $font-weight-black;
+  padding: 8px 47px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}
+
 .button {
   @include button;
 
@@ -85,6 +100,10 @@
 
   &.leaving {
     @include button-leaving;
+  }
+
+  &.ghost {
+    @include button-ghost;
   }
 }
 

@@ -5,14 +5,17 @@
 <% if(!logoImg) { var logoImg = "https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png"; } %>
 <!-- Quote Partial -->
 
-<div class="quote-textWrapper">
-  <blockquote class="quote-blockquote"><%- blockquote %></blockquote>
-  <p class="quote-attrName"><%- name %></p>
-  <p class="quote-attrPosition"><%- position %></p>
-</div>
-<!--Option for logo-->
 <div class="quote-logoWrapper">
   <div class="quote-logo">
     <img src="<%- logoImg %>" alt="">
   </div>
 </div>
+<div class="quote-textWrapper">
+  <blockquote class="quote-blockquote"><%- blockquote %></blockquote>
+  <p class="quote-attrName"><%- name %></p>
+  <p class="quote-attrPosition"><%- position %></p>
+</div>
+<div class="quote-buttonWrapper">
+  <a class="button ghost">View More Stories</a>
+</div>
+
