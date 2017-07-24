@@ -122,6 +122,15 @@
     padding: 0 35px;
   }
 
+  .refreshBanner {
+    height: 250px;
+    padding: 50px 0;
+  }
+
+  .refreshBanner-container {
+    padding: 0 35px;
+  }
+
   .imacBanner-withCta {
     height: 300px;
   }
@@ -138,6 +147,18 @@
     background-image: none;
     height: 270px;
     padding: 50px 15px;
+  }
+
+  .refreshBanner {
+    background-blend-mode: color;
+    background-color: $black;
+    background-image: none;
+    height: 270px;
+    padding: 50px 15px;
+  }
+
+  .refresh-bottomAngle {
+    margin-left: -25px;
   }
 
   .imacBanner-withCta {
@@ -157,7 +178,7 @@
   background-position: right center;
   height: 520px;
   overflow: hidden;
-  padding: 150px 0 80px 0;
+  padding: 150px 0 80px;
 }
 
 
@@ -165,7 +186,7 @@
   background-color: $white;
   color: $brand-primary;
   margin: 0 auto;
-  padding: 25px;
+  padding: 15px;
   position: relative;
 }
 
@@ -180,34 +201,29 @@
 
 .refresh-sideAngle {
   @include make-sm-column(1);
-  opacity: .6;
-  position: absolute;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 370px;
-  border: none;
+  @include make-xs-column(1.6);
+  @include box-sizing(content-box);
+  @include skew(-32deg, 0);
+  @include transform-origin(0 0 10px);
   background: $brand-primary;
+  border: 0;
+  height: 370px;
+  opacity: .6;
   padding: 0;
-  -webkit-transform:    skewX(-32deg);
-  transform:    skewX(-32deg);
-  -webkit-transform-origin: 0 0 10px;
-  transform-origin: 0 0 10px;
+  position: absolute;
 }
 
 .refresh-bottomAngle {
-  @include make-sm-column(5.75);
-  opacity: .6;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  @include make-xs-column(10.8);
+  @include make-sm-column(5.5)
+  @include make-md-column(5.75);
+  @include box-sizing(content-box);
+  @include skew(-32deg, 0);
+  @include transform-origin(-1% 12% 0);
+  background: darken($brand-primary, 10%);
+  border: 0;
   height: 400px;
-  border: none;
-  background: #732126;
-  padding: 0;
   margin-left: -5px;
-  -webkit-transform:    skewX(-32deg);
-  transform:    skewX(-32deg);
-  -webkit-transform-origin: -1% 12% 0;
-  transform-origin: -1% 12% 0;
+  opacity: .6;
+  padding: 0;
 }

@@ -6,7 +6,7 @@
 }
 
 .refresh-ceilingLp {
-  background: transparent;
+  @include gradient(to bottom, $black, transparent);
 }
 
 .ceiling-menuInline-item {
@@ -14,7 +14,7 @@
 }
 
 .ceilingRefresh-menuInline-item {
-  border: none;
+  border: 0;
 }
 
 .navbar-phoneiconLp,
@@ -38,7 +38,7 @@
   font-size: 1.25em;
   padding: 25px 20px;
 
-  &:before {
+  &::before {
     font-size: 1.1em;
   }
 }
@@ -58,6 +58,12 @@
 
 @media only screen and (min-width: $screen-xs-max) {
   @include responsive-visibility('.ceilingLp-pageTitle');
+
+  .navbarRefresh-phoneiconLp,
+  .navbarRefresh-chaticonLp,
+  .navbarRefresh-emailiconLp {
+    padding: 15px 10px;
+  }
 
   .navbar-phoneiconLp,
   .navbar-chaticonLp,

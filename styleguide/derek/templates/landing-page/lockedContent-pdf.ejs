@@ -1,16 +1,77 @@
-<%- partial('../../pattern-components/leads/lead-full-width/lead-full-width.ejs') %>
+<div class="lp-callout hidden-md hidden-lg hidden-xl">
+  <h4>An Example Title for this CTA Area</h4>
+  <ul>
+    <li>A list item</li>
+    <li>A list item</li>
+    <li>A list item</li>
+    <li>A list item</li>
+  </ul>
+  <a class="button-lead button lead full-width" href="#">Some CTA here</a>
+</div>
+
+<div class="customerLogo-wrapper">
+  <div class="customerLogo-container">
+    <div class="customerLogo-withCallout">
+      <h2 class="customerLogo-title">Establish Trust with Customer Logos</h2>
+      <div class="customerLogo-imgRow">
+        <div class="customerLogo-imgWrapper">
+          <img class="customerLogo-img" src="imgs/derek/all-tech.png"/>
+        </div>
+        <div class="customerLogo-imgWrapper">
+          <img class="customerLogo-img" src="imgs/derek/CSID.png"/>
+        </div>
+        <div class="customerLogo-imgWrapper">
+          <img class="customerLogo-img" src="imgs/derek/pipedrive.png"/>
+        </div>
+        <div class="customerLogo-imgWrapper">
+          <img class="customerLogo-img" src="imgs/derek/Under-Armor.png"/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 hidden-xs hidden-sm">
+      <div class="lp-callout">
+        <h4>An Example Title for this CTA Area</h4>
+        <ul>
+          <li>A list item</li>
+          <li>A list item</li>
+          <li>A list item</li>
+          <li>A list item</li>
+        </ul>
+        <a class="button-lead button lead full-width" href="#">Some CTA here</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="standard-padding container">
+  <h1>Title of this section of text</h1>
+  <div class="row">
+    <div class="col-md-8">
+      <%- partial("../../pattern-components/text/text.ejs") %>
+    </div>
+  </div>
+</div>
 
 <!--Features Pattern-->
-<%- partial('../../pattern-components/product-features/product-features.ejs') %>
+<div class="standard-padding bg-light-gray">
+  <h2 class="center">These are some of our features</h2>
+  <%- partial('../../pattern-components/product-features/product-features.ejs') %>
+</div>
 
-<div class="container">
-  <div class="row row-eq-height">
+<%- partial('../../pattern-components/quotes/quote-full-width.ejs') %>
+
+<div class="container standard-padding">
+  <div class="row">
 
 <!--Text Pattern-->
-  <div class="col-sm-12">
-    <h2>Title of this section of text</h2>
-    <%- partial("../../pattern-components/text/text.ejs") %>
-    <a href="#" class="button learning">Download the whitepaper</a>
+<div class="standard-padding container">
+  <h2>Title of this section of text</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <%- partial("../../pattern-components/text/text.ejs") %>
+    </div>
   </div>
+</div>
 
 </div>
