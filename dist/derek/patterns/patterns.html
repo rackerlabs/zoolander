@@ -744,17 +744,20 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
 
 <!-- Quote Partial -->
 
-<div class="quote-textWrapper">
-  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
-  <p class="quote-attrName">Brian McManus</p>
-  <p class="quote-attrPosition">Senior Director of Technology</p>
-</div>
-<!--Option for logo-->
 <div class="quote-logoWrapper">
   <div class="quote-logo">
     <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png" alt="">
   </div>
 </div>
+<div class="quote-textWrapper">
+  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
+  <p class="quote-attrName">Brian McManus</p>
+  <p class="quote-attrPosition">Senior Director of Technology</p>
+</div>
+<div class="quote-buttonWrapper">
+  <a class="button ghost">View More Stories</a>
+</div>
+
 
     </div>
   </div>
@@ -776,17 +779,20 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
 
 <!-- Quote Partial -->
 
-<div class="quote-textWrapper">
-  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
-  <p class="quote-attrName">Brian McManus</p>
-  <p class="quote-attrPosition">Senior Director of Technology</p>
-</div>
-<!--Option for logo-->
 <div class="quote-logoWrapper">
   <div class="quote-logo">
     <img src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/logos/underarmor.png" alt="">
   </div>
 </div>
+<div class="quote-textWrapper">
+  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
+  <p class="quote-attrName">Brian McManus</p>
+  <p class="quote-attrPosition">Senior Director of Technology</p>
+</div>
+<div class="quote-buttonWrapper">
+  <a class="button ghost">View More Stories</a>
+</div>
+
 
         </div>
         <div class="col-md-6">
@@ -817,6 +823,8 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
       <h4>Video</h4>
       <h6>Required Fileds: Video Link</h6>
       <p>The Video pattern should be used to add dynamic and more visually impactful content to the page. This content should be supporting or explaining the product or service for the page the user is on. It should only be used full width on the video landing page. All other uses should be split with text, a lead or a cta.</p>
+      <h6>Event Tracking:</h6>
+      <p>There are events for play, pause, watched to end, 10% complete, 25%, 50%, 75% and 90% complete.</p>
       <h4 class="red">DO</h4>
       <ul class="checks">
         <li>Use videos the support or explain the rest of the content</li>
@@ -853,6 +861,19 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
 <div class="container">
   <h4>CTA</h4>
   <h6>Required Fileds: Headline and/or Subhead, Button Type</h6>
+  <h6>Event Tracking:</h6>
+  <p>There are events for chats and form submits. Those are listed (for chat) as
+  <ul>
+  <li>Category - CTA Click</li>
+  <li>Action - Chat Started</li>
+  <li>Label - Button Label</li>
+  </ul></p>
+  <p>There are events for chats and form submits. Those are listed (for form submissions) as
+  <ul>
+  <li>Category - Site Submission</li>
+  <li>Action - Form Click CTA</li>
+  <li>Label - Button Location (on page)</li>
+  </ul></p>
   <div class="half-padding">
   <!-- CTA -->
   <div class="cta">
@@ -868,7 +889,7 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
     </div>
     <div class="cta-row">
       <div class="cta-buttonWrapper">
-        <a class="cta-button">Talk to a Specialist</a>
+        <a class="cta-button track-cta">Talk to a Specialist</a>
       </div>
     </div>
     <div class="cta-row">
@@ -890,6 +911,13 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
   <h6>Character Limit: <br>
     Headline - 15. <br>
     Content - no limit.</h6>
+  <h6>Event Tracking:</h6>
+  <p>There are events for tab clicks. Those are listed as
+  <ul>
+  <li>Category - Content</li>
+  <li>Content - Tab Toggle</li>
+  <li>Label - The Tab Title</li>
+  </ul></p>
   <p>The Tabs pattern can be used for pages that are content heavy but can be organized into sections. This can save significant scroll space while allowing for content to be as lengthy as possible.</p>
   <p>Vertical tabs are only to be used for product showcases. All other uses of tabs should use horizontal.</p>
   <div class="row">
@@ -1704,6 +1732,13 @@ instead here .lead-wrapper is used to avoid having to override bootstrap base cl
   <h6>Character Limit: <br>
     Headline - 50. <br>
     Description - 100.</h6>
+  <h6>Event Tracking:</h6>
+  <p>There are events for direct downloads. Those are listed as
+  <ul>
+  <li>Category - Downloads</li>
+  <li>Action - Download Click</li>
+  <li>Label - URL of the Resource</li>
+  </ul></p>
   <p>The Additional Resources pattern is used for adding resources to pages. It is best used on a resources page or to add a few additional resources near the bottom of the page as an opportunity for exploration of content and to prove thought leadership. The resource types available are:
   <ul class="twoColumnList">
       <li>Case Study</li>
