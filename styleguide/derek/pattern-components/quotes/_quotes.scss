@@ -38,6 +38,11 @@
   padding: $half-padding-top;
 }
 
+.quote-buttonWrapper {
+  margin: 30px 0 40px;
+  text-align: center;
+}
+
 .quote-logo {
   @include center-block;
   max-width: 83px;
