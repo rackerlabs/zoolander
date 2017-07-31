@@ -1,5 +1,5 @@
 .imacBanner-events {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/backgrounds/solve-bannerv2.jpg');
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/solve-banner.jpg');
 }
 
 // Main Events Page.
@@ -40,7 +40,7 @@
 .eventsOverview-pagination-itemPagePrev,
 .eventsOverview-pagination-itemPageNext {
   @include border-radius(50%);
-  background: $teal-dark;
+  background: $gray-base;
   border: 0;
   color: $white;
   padding: 0 .5rem;
@@ -58,7 +58,7 @@
 .eventsOverview-searchFilter {
   @include make-sm-column(4);
   @include make-md-column(3);
-  background: $teal-dark;
+  background: $gray-base;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
@@ -173,19 +173,19 @@
 }
 
 .event-backToEvents {
-  color: $teal-dark;
+  color: $gray-base;
   display: block;
   margin-bottom: 1rem;
   margin-left: $grid-gutter-width / 2;
 
   &::before {
     @include border-radius(50%);
-    background: $teal-dark;
+    background: $gray-base;
     border: 0;
     color: $white;
     content: '<';
     margin-right: .5rem;
-    padding: 0 .5rem;
+    padding: 0 .75rem;
     text-decoration: none;
   }
 
@@ -207,7 +207,7 @@
 
 .event-dateBox {
   @include subhead($white);
-  background: $teal-dark;
+  background: $gray-base;
   font-size: 2.2rem;
   margin: 1rem auto;
   max-width: 100px;
