@@ -186,21 +186,79 @@
 <!--[/navigation]-->
 <script src="js/global-components/mainnav/mainnav.js" charset="utf-8"></script>
 <div class="contentOffset"></div><!--Header Short-->
-<div class="imacBanner imacBanner-stories">
-  <div class="imacBanner-container">
-    <div class="imacBanner-textRow">
-      <div class="imacBanner-textContainer imacBanner-headlineSmall">
-        <h2 class="imacBanner-headline">Customer Stories</h2>
-        <span class="imacBanner-line left-top"></span>
-        <span class="imacBanner-line left-bottom"></span>
-        <span class="imacBanner-line right-bottom"></span>
-      </div>
-    </div>
+<div class="story-featured-container">
+  <div class="story-featured-text">
+    <h1>Rackspace Customer Stories</h1>
+    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+      tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+      nostrud exerci tation</p>
   </div>
+  <div class="story-featured-cards">
+    
+      <!-- Only make a link if story page exists -->
+      
+      <div class="story-featured-cardRow">
+        <div class="story-featured-cardLogo story-featured-cardLogoTop">
+          <div class="story-featured-logoInner">
+            <img src="https://www.rackspace.com/sites/default/files/story-logos/construct-3.png" alt="Logo name">
+          </div>
+        </div>
+        <div class="story-featured-cardQuote story-featured-cardQuoteTop">
+          <div class="story-featured-quoteInner">
+            <span class="story-featured-quote">This is a customer stories fake quote for the featured section at the top of the customer stories homepage. We will probably need to include a character limit so that this does not span more than 3 lines.</span>
+            <span class="story-featured-quoteSource">-Name Here [position]</span>
+          </div>
+        </div>
+      </div>
+      <!-- Close out conditional link -->
+      
+    
+      <!-- Only make a link if story page exists -->
+      
+        <a href="https://www.rackspace.com/customer-stories/sagittarius">
+      
+      <div class="story-featured-cardRow">
+        <div class="story-featured-cardLogo story-featured-cardLogoCenter">
+          <div class="story-featured-logoInner">
+            <img src="https://www.rackspace.com/sites/default/files/story-logos/sagittarius.png" alt="Logo name">
+          </div>
+        </div>
+        <div class="story-featured-cardQuote story-featured-cardQuoteCenter story-featured-link">
+          <div class="story-featured-quoteInner">
+            <span class="story-featured-quote">This is a customer stories fake quote for the featured section at the top of the customer stories homepage. We will probably need to include a character limit so that this does not span more than 3 lines.</span>
+            <span class="story-featured-quoteSource">-Name Here [position]</span>
+          </div>
+        </div>
+      </div>
+      <!-- Close out conditional link -->
+      
+        </a>
+      
+    
+      <!-- Only make a link if story page exists -->
+      
+      <div class="story-featured-cardRow">
+        <div class="story-featured-cardLogo story-featured-cardLogoBottom">
+          <div class="story-featured-logoInner">
+            <img src="https://www.rackspace.com/sites/default/files/story-logos/docker_0.png" alt="Logo name">
+          </div>
+        </div>
+        <div class="story-featured-cardQuote story-featured-cardQuoteBottom">
+          <div class="story-featured-quoteInner">
+            <span class="story-featured-quote">This is a customer stories fake quote for the featured section at the top of the customer stories homepage. We will probably need to include a character limit so that this does not span more than 3 lines.</span>
+            <span class="story-featured-quoteSource">-Name Here [position]</span>
+          </div>
+        </div>
+      </div>
+      <!-- Close out conditional link -->
+      
+    
+  </div>
+  <a href="#customer-stories-section" class="story-featured-seeMore rsAnchor-scroll"></a>
 </div>
 
 <!-- Story Region -->
-<div class="story-container">
+<div class="story-container" id="customer-stories-section">
   <div class="row">
     <div class="storyOverview-searchFilter">
       <div class="storyOverview-searchFilter-label">Find A Story</div>
@@ -371,7 +429,11 @@
       </div>
     </div>
   </div>
-</div><div class="backtotop-wrapper">
+</div>
+<script src="js/global-components/anchor-scroll/anchor-scroll.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $('.rsAnchor-scroll').anchorScroll();
+</script><div class="backtotop-wrapper">
   <div class="row">
     <div class="backtotop-linkwrapper">
       <a href="#" class="backtotop-link">Back to Top<i class="fa-arrow-circle-up backtotop-icon"></i></a>

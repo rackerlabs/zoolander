@@ -31,7 +31,6 @@ jQuery(document).ready(($) => {
   };
 })(jQuery); // to protect and scope the JQuery alias = $
 
-
 // initialize filter bar
 jQuery(document).ready(($) => {
   $('.rsFilter-bar').rsFilterBar();
