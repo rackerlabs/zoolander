@@ -58,13 +58,11 @@
 .resource-descWrapper {
   @include make-xs-column(12);
   margin-top: 15px;
-  padding-bottom: 25px;
 }
 
 .resource-linkWrapper {
-  bottom: 5px;
-  padding: 0 25px 10px;
-  position: absolute;
+  padding: 0 25px;
+  vertical-align: bottom;
 }
 
 .resource-link {
