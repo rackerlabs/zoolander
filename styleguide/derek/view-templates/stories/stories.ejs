@@ -59,59 +59,66 @@ var featQuotes = [
   <a href="#customer-stories-section" class="story-featured-seeMore rsAnchor-scroll"></a>
 </div>
 
-<!-- Story Region -->
-<div class="story-container" id="customer-stories-section">
-  <div class="row">
-    <div class="storyOverview-searchFilter">
-      <div class="storyOverview-searchFilter-label">Find A Story</div>
-      <div class="storyOverview-searchFilter-eventType">
-        <form method="post" action="javascript:void(0);">
-          <select class="storyOverview-searchFilter-select">
+<div class="rsFilter-section">
+  <div class="rsFilter-row row-eq-height">
+    <div class="rsFilter-bar">
+      <button class="rsFilter-hamburger"></button>
+      <div class="rsFilter-mobileTitle">Find a Story</div>
+      <form method="post" action="javascript:void(0);" class="rsFilter-form">
+        <div class="rsFilter-formTitle">Find a Story</div>
+        <div class="form-item form-type-select form-item-tid-1">
+          <select class="rsFilter-formSelect form-select">
             <option disabled="disabled" selected="selected">Product</option>
             <option value="1">All</option>
             <option value="2">Cloud Backup</option>
             <option value="3">Cloud Block Storage</option>
             <option value="4">...</option>
           </select>
-          <select class="storyOverview-searchFilter-select">
+        </div>
+        <div class="form-item form-type-select form-item-tid-1">
+          <select class="rsFilter-formSelect form-select">
             <option disabled="disabled" selected="selected">Region</option>
             <option value="1">All</option>
             <option value="2">Asia</option>
             <option value="3">Australia</option>
             <option value="4">...</option>
           </select>
-          <input type="submit" class="storyOverview-searchFilter-submit" value="Show Results"/>
-        </form>
-      </div>
+        </div>
+        <button class="rsFilter-button">Show Results</button>
+      </form>
     </div>
-    <div class="storyOverview-searchResults">
-      <% for (var row = 0; row < 4; row++) { %>
-      <div class="row">
-        <% for (var col = 0; col < 3; col++) { %>
-          <div class="storyOverview-item">
-            <div class="storyOverview-itemInner">
-              <a href="/derek/view-templates/stories/stories-interior" class="storyOverview-itemLink">
-                <% if ((col + row) % 4 === 3) { %>
-                <span class="storyOverview-logoText">Company Name That Spans Multiple Lines</span>
-                <% } else { %>
-                <img class="storyOverview-logo" src="<%- images[(col + row) % 3] %>" alt="Under Armour">
-                <% } %>
-              </a>
+    <div class="rsFilter-content">
+      <div class="storyOverview-searchResults">
+        <% for (var row = 0; row < 4; row++) { %>
+        <div class="row">
+          <% for (var col = 0; col < 3; col++) { %>
+            <div class="storyOverview-item">
+              <div class="storyOverview-itemInner">
+                <a href="/derek/view-templates/stories/stories-interior" class="storyOverview-itemLink">
+                  <% if ((col + row) % 4 === 3) { %>
+                  <span class="storyOverview-logoText">Company Name That Spans Multiple Lines</span>
+                  <% } else { %>
+                  <img class="storyOverview-logo" src="<%- images[(col + row) % 3] %>" alt="Under Armour">
+                  <% } %>
+                </a>
+              </div>
             </div>
-          </div>
+          <% } %>
+        </div>
         <% } %>
-      </div>
-      <% } %>
-      <div class="row">
-        <ul class="pager">
-          <li class="pager-previous first"><a href="javascript:void(0);">prev</a></li>
-          <li class="pager-current">2 of 10</li>
-          <li class="pager-next last"><a href="javascript:void(0);">next</a></li>
-        </ul>
+        <div class="row">
+          <ul class="pager">
+            <li class="pager-previous first"><a href="javascript:void(0);">prev</a></li>
+            <li class="pager-current">2 of 10</li>
+            <li class="pager-next last"><a href="javascript:void(0);">next</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<script src="js/global-components/filter-bar/filter-bar.js" charset="utf-8"></script>
 <script src="js/global-components/anchor-scroll/anchor-scroll.js" charset="utf-8"></script>
 <script type="text/javascript">
   $('.rsAnchor-scroll').anchorScroll();
