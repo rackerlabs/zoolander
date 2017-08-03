@@ -5,6 +5,9 @@ const dataLayer = dataLayer || [];
 
 Zoolander.Tracking = (function Tracking($) {
   function tracking() {
+    $('a').on('click', () => {
+      console.log('you clicked me'); // eslint-disable-line
+    });
     // Page load tracking.
     $('.track-ceilingEmail').on('click', () => {
       dataLayer.push({

@@ -91,6 +91,8 @@ html(lang="en")
     .mainContainer#mainContainer
       block content
 
+  script(src="#{base}js/global-components/tracking/tracking.js")
   script(src="#{base}js/global.js")
   script.
     $(".imacBanner-headline").fitText(1.1, { maxFontSize: '45px' });
+    Zoolander.Tracking.init();
