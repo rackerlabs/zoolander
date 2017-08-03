@@ -28,6 +28,17 @@ Zoolander.Tracking = (function Tracking($) {
       });
     });
 
+    $('.track-ceilingCall').on('click', () => {
+      dataLayer.push({
+        event: 'ga.call_click',
+        eventCategory: 'Infinity Tracking Triggers',
+        eventAction: 'Call Click CTA - Eyebrow',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+
     $('.track-rugEmail').on('click', () => {
       dataLayer.push({
         event: 'ga.event',
