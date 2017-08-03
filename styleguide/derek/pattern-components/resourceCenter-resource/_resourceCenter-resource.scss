@@ -29,6 +29,8 @@
   width: 100%;
 
   a {
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     width: 100%;
   }
@@ -53,6 +55,7 @@
 
 .resource-descRow {
   @include make-row;
+  margin-bottom: auto;
 }
 
 .resource-descWrapper {
@@ -61,8 +64,8 @@
 }
 
 .resource-linkWrapper {
+  @include make-row;
   padding: 0 25px;
-  vertical-align: bottom;
 }
 
 .resource-link {
@@ -80,7 +83,13 @@
 
 .resource-condensedDescRow {
   display: flex;
+  margin-bottom: 0;
   margin-top: auto;
+
+  .resource-linkWrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media only screen and (max-width: $screen-sm-max) {
