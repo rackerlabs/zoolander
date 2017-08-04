@@ -30,7 +30,7 @@ Zoolander.Tracking = (function Tracking($) {
 
     $('.track-ceilingCall').on('click', () => {
       dataLayer.push({
-        event: 'ga.call_click',
+        event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Eyebrow',
         eventLabel: window.location.href,
