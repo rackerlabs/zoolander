@@ -83,6 +83,17 @@ Zoolander.Tracking = (function Tracking($) {
       });
     });
 
+    $('.track-pageCall').on('click', () => {
+      dataLayer.push({
+        event: 'rs.call_click',
+        eventCategory: 'Infinity Tracking Triggers',
+        eventAction: 'Call Click CTA - Page',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+
     $('.track-pageEmail').on('click', () => {
       dataLayer.push({
         event: 'rs.form_click',
@@ -97,6 +108,17 @@ Zoolander.Tracking = (function Tracking($) {
     $('.track-rugCall').on('click', () => {
       dataLayer.push({
         event: 'ga.event',
+        eventCategory: 'Infinity Tracking Triggers',
+        eventAction: 'Call Click CTA - Rug',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+
+    $('.track-rugCall').on('click', () => {
+      dataLayer.push({
+        event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Rug',
         eventLabel: window.location.href,
