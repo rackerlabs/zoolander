@@ -25,8 +25,18 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      let callMetricExpect = {
+        event: 'rs.call_click',
+        eventCategory: 'Infinity Tracking Triggers',
+        eventAction: 'Call Click CTA - Eyebrow',
+        eventLabel: 'http://localhost:9876/context.html',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(window.dataLayer, 'to include ceiling ga.event').to.deep.include(expected);
+      expect(window.dataLayer, 'to include ceiling call metric').to.include(callMetricExpect);
 
+      window.dataLayer = [{}];
       $('.track-rugCall').trigger('click');
       expected = {
         event: 'ga.event',
@@ -36,8 +46,18 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      callMetricExpect = {
+        event: 'rs.call_click',
+        eventCategory: 'Infinity Tracking Triggers',
+        eventAction: 'Call Click CTA - Rug',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(window.dataLayer, 'to include rug ga.event').to.include(expected);
+      expect(window.dataLayer, 'to include rug call metric').to.include(callMetricExpect);
 
+      window.dataLayer = [{}];
       $('.track-pageCall').trigger('click');
       expected = {
         event: 'ga.event',
@@ -47,7 +67,16 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      callMetricExpect = {
+        event: 'rs.call_click',
+        eventCategory: 'Infinity Tracking Triggers',
+        eventAction: 'Call Click CTA - Page',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(window.dataLayer, 'to include page ga.event').to.include(expected);
+      expect(window.dataLayer, 'to include page call metric').to.include(expected);
     });
 
     // login clicks
@@ -133,7 +162,9 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      let result = window.dataLayer.pop();
+      console.table(result);
+      expect(expected, '.track-ceilingEmail').to.eql(result);
 
       $('.track-rugEmail').trigger('click');
       expected = {
@@ -144,7 +175,9 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      result = window.dataLayer.pop();
+      console.table(result);
+      expect(expected).to.eql(result);
 
       $('.track-secondCTA').trigger('click');
       expected = {
