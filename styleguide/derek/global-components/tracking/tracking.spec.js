@@ -163,7 +163,6 @@ describe('Zoolander Tracking Module', () => {
         eventNonInteraction: 0,
       };
       let result = window.dataLayer.pop();
-      console.table(result);
       expect(expected, '.track-ceilingEmail').to.eql(result);
 
       $('.track-rugEmail').trigger('click');
@@ -176,7 +175,6 @@ describe('Zoolander Tracking Module', () => {
         eventNonInteraction: 0,
       };
       result = window.dataLayer.pop();
-      console.table(result);
       expect(expected).to.eql(result);
 
       $('.track-secondCTA').trigger('click');
