@@ -18,14 +18,6 @@ describe('Zoolander Tracking Module', () => {
 
       $('.track-ceilingCall').trigger('click');
       let expected = {
-        event: 'ga.event',
-        eventCategory: 'Infinity Tracking Triggers',
-        eventAction: 'Call Click CTA - Eyebrow',
-        eventLabel: window.location.href,
-        eventValue: '0',
-        eventNonInteraction: 0,
-      };
-      let callMetricExpect = {
         event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Eyebrow',
@@ -33,20 +25,10 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(window.dataLayer, 'to include ceiling ga.event').to.deep.include(expected);
-      expect(window.dataLayer, 'to include ceiling call metric').to.include(callMetricExpect);
+      expect(window.dataLayer.pop(), 'to include ceiling call event').to.eql(expected);
 
-      window.dataLayer = [{}];
       $('.track-rugCall').trigger('click');
       expected = {
-        event: 'ga.event',
-        eventCategory: 'Infinity Tracking Triggers',
-        eventAction: 'Call Click CTA - Rug',
-        eventLabel: window.location.href,
-        eventValue: '0',
-        eventNonInteraction: 0,
-      };
-      callMetricExpect = {
         event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Rug',
@@ -54,20 +36,10 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(window.dataLayer, 'to include rug ga.event').to.include(expected);
-      expect(window.dataLayer, 'to include rug call metric').to.include(callMetricExpect);
+      expect(window.dataLayer.pop(), 'to include rug call event').to.eql(expected);
 
-      window.dataLayer = [{}];
       $('.track-pageCall').trigger('click');
       expected = {
-        event: 'ga.event',
-        eventCategory: 'Infinity Tracking Triggers',
-        eventAction: 'Call Click CTA - Page',
-        eventLabel: window.location.href,
-        eventValue: '0',
-        eventNonInteraction: 0,
-      };
-      callMetricExpect = {
         event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Page',
@@ -75,8 +47,7 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(window.dataLayer, 'to include page ga.event').to.include(expected);
-      expect(window.dataLayer, 'to include page call metric').to.include(expected);
+      expect(window.dataLayer.pop(), 'to include page call event').to.eql(expected);
     });
 
     // login clicks

@@ -19,17 +19,6 @@ Zoolander.Tracking = (function Tracking($) {
 
     $('.track-ceilingCall').on('click', () => {
       dataLayer.push({
-        event: 'ga.event',
-        eventCategory: 'Infinity Tracking Triggers',
-        eventAction: 'Call Click CTA - Eyebrow',
-        eventLabel: window.location.href,
-        eventValue: '0',
-        eventNonInteraction: 0,
-      });
-    });
-
-    $('.track-ceilingCall').on('click', () => {
-      dataLayer.push({
         event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Eyebrow',
@@ -74,17 +63,6 @@ Zoolander.Tracking = (function Tracking($) {
 
     $('.track-pageCall').on('click', () => {
       dataLayer.push({
-        event: 'ga.event',
-        eventCategory: 'Infinity Tracking Triggers',
-        eventAction: 'Call Click CTA - Page',
-        eventLabel: window.location.href,
-        eventValue: '0',
-        eventNonInteraction: 0,
-      });
-    });
-
-    $('.track-pageCall').on('click', () => {
-      dataLayer.push({
         event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Page',
@@ -99,17 +77,6 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'rs.form_click',
         eventCategory: 'Site Submission',
         eventAction: 'Form Click CTA - Page',
-        eventLabel: window.location.href,
-        eventValue: '0',
-        eventNonInteraction: 0,
-      });
-    });
-
-    $('.track-rugCall').on('click', () => {
-      dataLayer.push({
-        event: 'ga.event',
-        eventCategory: 'Infinity Tracking Triggers',
-        eventAction: 'Call Click CTA - Rug',
         eventLabel: window.location.href,
         eventValue: '0',
         eventNonInteraction: 0,
