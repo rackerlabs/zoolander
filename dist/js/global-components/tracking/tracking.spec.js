@@ -220,6 +220,64 @@ describe('Zoolander Tracking Module', function () {
       expect(expected).to.eql(window.dataLayer.pop());
     });
 
+    it('should track internal nav clicks', function () {
+      var linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">' + '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> ' + '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>' + '<ul class="mid-nav">' + '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>' + '<li class="item-b"><span id="midlvl">Mid lvl second</span>' + '<ul class="third-nav">' + '<li class="item-1">Base lvl first</li>' + '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>' + '<li class="item-3">Base lvl third</li>' + '</ul>' + '</li>' + '<li class="item-c">Mid lvl third</li>' + '</ul>' + '</li>' + '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>' + '</ul>' + '</div>';
+
+      $('body').append(linkHtml);
+      Zoolander.Tracking.init();
+
+      // click base level
+      $('.item-2 .navbar-tertiary-dropDownLink').trigger('click');
+      var expected = {
+        event: 'ga.event',
+        eventCategory: 'Internal Links',
+        eventAction: 'Link Click - Navigation',
+        eventLabel: 'Top lvl second:Mid lvl second:Base lvl second',
+        eventValue: 0,
+        eventNonInteraction: 0
+      };
+      var result = window.dataLayer.pop();
+      expect(expected, 'base lvl click').to.deep.eql(result);
+
+      // click mid level
+      $('.item-a .navbar-dropDownLink').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Internal Links',
+        eventAction: 'Link Click - Navigation',
+        eventLabel: 'Top lvl second:Mid lvl first',
+        eventValue: 0,
+        eventNonInteraction: 0
+      };
+      result = window.dataLayer.pop();
+      expect(expected, 'Mid lvl click').to.deep.eql(result);
+
+      // click mid level span non link
+      $('.item-b').trigger('click');
+      var expectLength = 0;
+      result = window.dataLayer.length;
+      expect(expectLength, 'datalayer length').to.eql(result);
+
+      // click top level link
+      $('.item-iii .navbar-topLink').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Internal Links',
+        eventAction: 'Link Click - Navigation',
+        eventLabel: 'Top lvl third',
+        eventValue: 0,
+        eventNonInteraction: 0
+      };
+      result = window.dataLayer.pop();
+      expect(expected, 'top lvl click').to.deep.eql(result);
+
+      // click top level menu item
+      $('.item-ii').trigger('click');
+      expectLength = 0;
+      result = window.dataLayer.length;
+      expect(expectLength, 'datalayer length').to.eql(result);
+    });
+
     it('should track resource filtering products', function () {
       $('body').append('<form class="rsFilter-form"><select name="product"><option value="96" selected="selected">Public Cloud</option><option value="101">-Fanatical Support for AWS</option><input type="checkbox" name="content_type[]" id="edit-content-type-case-study" value="case_study" checked="checked" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-code-repository" value="code_repository" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-ebook" value="ebook" checked="checked" class="rsFilter-checkbox"></form>');
       Zoolander.Tracking.init();

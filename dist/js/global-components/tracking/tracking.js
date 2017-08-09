@@ -203,6 +203,17 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
+
+    $('a.navbar-topLink, .navbar-dropDownLink, .navbar-tertiary-dropDownLink').on('click', function (e) {
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Internal Links',
+        eventAction: 'Link Click - Navigation',
+        eventLabel: getLinksValue($(e.target)),
+        eventValue: 0,
+        eventNonInteraction: 0
+      });
+    });
   }
 
   function getCheckboxValuesByElement(elements) {
@@ -212,6 +223,19 @@ Zoolander.Tracking = function Tracking($) {
     });
 
     return values.sort().join(':');
+  }
+
+  function getLinksValue(elements) {
+    var linkAr = elements.parentsUntil('.navbar-menuContainer', 'li').toArray().reverse().map(function (item) {
+      $.trim(item);
+      return item.firstChild.innerText;
+    });
+
+    return getLinkStr(linkAr);
+  }
+
+  function getLinkStr(linkAr) {
+    return linkAr.join(':');
   }
 
   return {
