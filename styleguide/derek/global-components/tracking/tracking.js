@@ -19,7 +19,7 @@ Zoolander.Tracking = (function Tracking($) {
 
     $('.track-ceilingCall').on('click', () => {
       dataLayer.push({
-        event: 'ga.event',
+        event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Eyebrow',
         eventLabel: window.location.href,
@@ -63,7 +63,7 @@ Zoolander.Tracking = (function Tracking($) {
 
     $('.track-pageCall').on('click', () => {
       dataLayer.push({
-        event: 'ga.event',
+        event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Page',
         eventLabel: window.location.href,
@@ -85,7 +85,7 @@ Zoolander.Tracking = (function Tracking($) {
 
     $('.track-rugCall').on('click', () => {
       dataLayer.push({
-        event: 'ga.event',
+        event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Rug',
         eventLabel: window.location.href,

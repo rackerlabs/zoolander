@@ -18,36 +18,36 @@ describe('Zoolander Tracking Module', () => {
 
       $('.track-ceilingCall').trigger('click');
       let expected = {
-        event: 'ga.event',
+        event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Eyebrow',
-        eventLabel: window.location.href,
+        eventLabel: 'http://localhost:9876/context.html',
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      expect(window.dataLayer.pop(), 'to include ceiling call event').to.eql(expected);
 
       $('.track-rugCall').trigger('click');
       expected = {
-        event: 'ga.event',
+        event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Rug',
         eventLabel: window.location.href,
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      expect(window.dataLayer.pop(), 'to include rug call event').to.eql(expected);
 
       $('.track-pageCall').trigger('click');
       expected = {
-        event: 'ga.event',
+        event: 'rs.call_click',
         eventCategory: 'Infinity Tracking Triggers',
         eventAction: 'Call Click CTA - Page',
         eventLabel: window.location.href,
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      expect(window.dataLayer.pop(), 'to include page call event').to.eql(expected);
     });
 
     // login clicks
@@ -133,7 +133,8 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      let result = window.dataLayer.pop();
+      expect(expected, '.track-ceilingEmail').to.eql(result);
 
       $('.track-rugEmail').trigger('click');
       expected = {
@@ -144,7 +145,8 @@ describe('Zoolander Tracking Module', () => {
         eventValue: '0',
         eventNonInteraction: 0,
       };
-      expect(expected).to.eql(window.dataLayer.pop());
+      result = window.dataLayer.pop();
+      expect(expected).to.eql(result);
 
       $('.track-secondCTA').trigger('click');
       expected = {
