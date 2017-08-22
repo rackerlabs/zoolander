@@ -36,3 +36,10 @@ $brand-danger:      $rackspace-red !default;
 
 //alpha colors
 $black-shadow:		rgba($black, .175);
+
+//filter stories colors
+$content-gray:     #4c5056;
+$filterbar-gray:   #404449;
+$stories-link-gray: fade-out($white, .3);
+$stories-img-gray: fade-out($white, .7);
+$stories-paginate-gray: fade-out($white, .9);
