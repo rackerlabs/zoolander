@@ -12,7 +12,7 @@
     }
 
     .resourcecenter-visualWrapper {
-      background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/resource-center/#{$image}');
+      background-image: url('../imgs/derek/resourceCenter/#{$image}');
 
       @if $class == '.resourcecenter-video' {
         height: auto;
@@ -110,7 +110,7 @@
 
 @include resourcecenter-type('.resourcecenter-pdf', $brand-primary, '\e8c5', 'pdf-template-graphic.png');
 @include resourcecenter-type('.resourcecenter-code', $purple, '\e808', 'code-template-graphic.png');
-@include resourcecenter-type('.resourcecenter-docs', $teal-dark, '\e847', 'suppoerDocs-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-docs', $teal-dark, '\e847', 'support-template-graphic.png');
 @include resourcecenter-type('.resourcecenter-webinar', $mustard, '\e8c6', 'webinar-template-graphic.png');
 @include resourcecenter-type('.resourcecenter-stories', $signup-green, '\e993', '');
 @include resourcecenter-type('.resourcecenter-video', $blue-gray, '\e8c8', '');
@@ -160,7 +160,7 @@
 @media screen and (min-width: $screen-md-min) {
   .resourcecenter-featuredGraphicWrapper {
     @include make-md-column(3);
-    background-image: url('imgs/resourceCenter/pdf-template-graphic.png');
+    background-image: url('../imgs/derek/resourceCenter/pdf-template-graphic.png');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 83.5%;
@@ -171,15 +171,15 @@
   }
 
   .resourcecenter-featuredGraphicWrapperCode {
-    background-image: url('imgs/resourceCenter/code-template-graphic.png');
+    background-image: url('../imgs/derek/resourceCenter/code-template-graphic.png');
   }
 
   .resourcecenter-featuredGraphicWrapperDocs {
-    background-image: url('imgs/resourceCenter/suppoerDocs-template-graphic.png');
+    background-image: url('../imgs/derek/resourceCenter/support-template-graphic.png');
   }
 
   .resourcecenter-featuredGraphicWrapperWebinar {
-    background-image: url('imgs/resourceCenter/webinar-template-graphic.png');
+    background-image: url('../imgs/derek/resourceCenter/webinar-template-graphic.png');
   }
 
   .resourcecenter-featuredGraphic {

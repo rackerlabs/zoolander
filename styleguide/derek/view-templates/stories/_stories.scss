@@ -1,5 +1,5 @@
 // Customer Stories Feature Colors
-$default-bg-img: 'imgs/globalBrand/banners/collaboration-2.jpg';
+$default-bg-img: '../imgs/globalBrand/banners/collaboration-2.jpg';
 // Mixin for featured stories bg types
 @mixin featuredBg($class, $gradient) {
   #{$class} {
@@ -112,7 +112,7 @@ $default-bg-img: 'imgs/globalBrand/banners/collaboration-2.jpg';
 
 .imacBanner-stories {
   background-color: $black;
-  background-image: url('imgs/derek/banners/racker-table-1.jpg');
+  background-image: url('../imgs/derek/banners/racker-table-1.jpg');
   min-height: inherit;
 }
 
