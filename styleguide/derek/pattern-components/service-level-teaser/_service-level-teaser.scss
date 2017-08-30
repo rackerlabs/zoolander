@@ -9,6 +9,10 @@
   position: relative;
   text-decoration: none;
   width: 100%;
+}
+
+// only add a hover class if a link
+.serviceLevelTeaser-link {
 
   &:hover {
     background-color: $gray-lightest;
