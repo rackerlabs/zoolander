@@ -120,29 +120,11 @@
   }
 }
 
-//ctp
-
-.ctp {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/city_imagev2.jpg');
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.ctp-button {
-  color: $white;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 
 //quadrant
 
 .quadrant {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/quadrant.jpg');
+  background-image: url('../imgs/derek/quadrant.jpg');
   background-position: 23% bottom;
   background-repeat: no-repeat;
   background-size: 35%;

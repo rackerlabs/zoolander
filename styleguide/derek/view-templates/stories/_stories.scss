@@ -1,5 +1,5 @@
 // Customer Stories Feature Colors
-$default-bg-img: 'https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/collaboration-2.jpg';
+$default-bg-img: '../imgs/globalBrand/banners/collaboration-2.jpg';
 // Mixin for featured stories bg types
 @mixin featuredBg($class, $gradient) {
   #{$class} {
@@ -112,7 +112,7 @@ $default-bg-img: 'https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.
 
 .imacBanner-stories {
   background-color: $black;
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/IMACbanners/racker-table-1.jpg');
+  background-image: url('../imgs/derek/banners/racker-table-1.jpg');
   min-height: inherit;
 }
 
