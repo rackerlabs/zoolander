@@ -88,6 +88,12 @@
   animation: fadein $duration;
 }
 
+@mixin gradient($direction, $firstColor, $secondColor) {
+  background: $firstColor;
+  background: -webkit-linear-gradient($direction, $firstColor, $secondColor);
+  background: linear-gradient($direction, $firstColor, $secondColor);
+}
+
 @mixin font-smoothing {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

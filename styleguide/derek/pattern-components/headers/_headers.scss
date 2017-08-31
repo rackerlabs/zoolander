@@ -6,6 +6,15 @@
   font-family: $heading;
 }
 
+@mixin make-angle {
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table-cell;
+  float: none;
+  min-height: 1px;
+}
+
 .imacBanner {
   @include make-banner;
   background-image: url('../imgs/globalBrand/banners/collaboration-1.jpg');
@@ -149,3 +158,90 @@
     width: 70%;
   }
 }
+
+
+
+.refreshBanner {
+  @include make-banner;
+  background-image: url('/imgs/BG.jpg');
+  background-position: center right;
+  height: 415px;
+  overflow: hidden;
+  padding: 150px 0 0;
+}
+
+.refreshBanner-container {
+  height: 100%;
+  width: 100%;
+}
+
+.refreshBanner-boxContainer {
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.refreshBanner-boxTop {
+  display: table;
+  min-height: 45%;
+  width: 100%;
+}
+
+.refreshBanner-innerTopLeft {
+  @include make-angle;
+  background-image: url('/imgs/slant-topleft.svg');
+  width: 16.6667%;
+}
+
+.refreshBanner-innerTopRight {
+  @include make-angle;
+  background-color: $white;
+  padding: 25px;
+  width: 83.3333%;
+}
+
+.refresh-headline {
+  color: $brand-primary;
+  font-family: $heading;
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: .8em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.refreshBanner-boxBottom {
+  display: table;
+  height: 55%;
+  width: 100%;
+}
+
+.refreshBanner-innerBottomLeft {
+  @include make-angle;
+  background-image: url('/imgs/slant-bottomleft.svg');
+  width: 16.6667%;
+}
+
+.refreshBanner-innerBottomRight {
+  @include make-angle;
+  background-image: url('/imgs/slant-bottomright.svg');
+  width: 83.3333%;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .refreshBanner-boxContainer {
+    float: left;
+    width: 50%;
+  }
+
+  .refreshBanner {
+    height: 515px;
+  }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .refreshBanner-container {
+    width: 80%;
+  }
+}
+
