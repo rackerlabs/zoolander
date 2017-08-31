@@ -80,6 +80,12 @@
   -webkit-text-stroke: $width $color;
 }
 
+@mixin gradient($direction, $firstColor, $secondColor) {
+  background: $firstColor;
+  background: -webkit-linear-gradient($direction, $firstColor, $secondColor);
+  background: linear-gradient($direction, $firstColor, $secondColor);
+}
+
 @mixin fadein($duration) {
   -webkit-animation: fadein $duration;
   -moz-animation: fadein $duration;

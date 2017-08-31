@@ -1,0 +1,52 @@
+.customerLogo-wrapper {
+  background-color: $gray-lighter;
+  padding: $half-padding;
+}
+
+.customerLogo-container {
+  @include make-container;
+}
+
+.customerLogo-withCallout {
+  @include make-md-column(8);
+  padding: 0;
+}
+
+.customerLogo-title {
+  color: $gray-base;
+}
+
+.customerLogo-imgRow {
+  @include make-row;
+  padding: $half-padding;
+}
+
+.customerLogo-imgWrapper {
+  @include make-sm-column(3);
+  @include make-xs-column(6);
+  padding-top: 25px;
+}
+
+.lp-callout {
+  background-color: $white;
+  box-shadow: 0 6px 12px $black-shadow;
+  margin-top: 0;
+  padding: $half-padding;
+  position: relative;
+}
+
+@media only screen and (min-width: $screen-sm-max) {
+
+  .customerLogo-withCallout {
+    padding: 0 25px;
+  }
+
+  .lp-callout {
+    margin-top: -100px;
+    position: absolute;
+  }
+
+  .customerLogo-imgWrapper {
+    padding-top: 0;
+  }
+}

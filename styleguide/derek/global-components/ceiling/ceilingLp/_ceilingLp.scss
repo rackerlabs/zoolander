@@ -5,8 +5,16 @@
   box-shadow: 0 6px 12px $black-shadow;
 }
 
+.refresh-ceilingLp {
+  @include gradient(to bottom, $black, transparent);
+}
+
 .ceiling-menuInline-item {
   border-left: 1px solid $gray-light;
+}
+
+.ceilingRefresh-menuInline-item {
+  border: 0;
 }
 
 .navbar-phoneiconLp,
@@ -21,6 +29,17 @@
 
   &::before {
     color: $gray-darkest;
+  }
+}
+
+.navbarRefresh-phoneicon,
+.navbarRefresh-chaticon,
+.navbarRefresh-emailicon {
+  font-size: 1.25em;
+  padding: 25px 20px;
+
+  &::before {
+    font-size: 1.1em;
   }
 }
 
@@ -39,6 +58,12 @@
 
 @media only screen and (min-width: $screen-xs-max) {
   @include responsive-visibility('.ceilingLp-pageTitle');
+
+  .navbarRefresh-phoneiconLp,
+  .navbarRefresh-chaticonLp,
+  .navbarRefresh-emailiconLp {
+    padding: 15px 10px;
+  }
 
   .navbar-phoneiconLp,
   .navbar-chaticonLp,

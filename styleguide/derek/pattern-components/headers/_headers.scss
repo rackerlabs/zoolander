@@ -122,6 +122,15 @@
     padding: 0 35px;
   }
 
+  .refreshBanner {
+    height: 250px;
+    padding: 50px 0;
+  }
+
+  .refreshBanner-container {
+    padding: 0 35px;
+  }
+
   .imacBanner-withCta {
     height: 300px;
   }
@@ -140,6 +149,18 @@
     padding: 50px 15px;
   }
 
+  .refreshBanner {
+    background-blend-mode: color;
+    background-color: $black;
+    background-image: none;
+    height: 270px;
+    padding: 50px 15px;
+  }
+
+  .refresh-bottomAngle {
+    margin-left: -25px;
+  }
+
   .imacBanner-withCta {
     height: 330px;
   }
@@ -148,4 +169,61 @@
     margin-left: 20px;
     width: 70%;
   }
+}
+
+
+.refreshBanner {
+  @include make-banner;
+  background-image: url('../imgs/derek/BG.png');
+  background-position: right center;
+  height: 520px;
+  overflow: hidden;
+  padding: 150px 0 80px;
+}
+
+
+.refresh-textContainer {
+  background-color: $white;
+  color: $brand-primary;
+  margin: 0 auto;
+  padding: 15px;
+  position: relative;
+}
+
+.refresh-headline {
+  @include heading($brand-primary);
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: .8em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.refresh-sideAngle {
+  @include make-sm-column(1);
+  @include make-xs-column(1.6);
+  @include box-sizing(content-box);
+  @include skew(-32deg, 0);
+  @include transform-origin(0 0 10px);
+  background: $brand-primary;
+  border: 0;
+  height: 370px;
+  opacity: .6;
+  padding: 0;
+  position: absolute;
+}
+
+.refresh-bottomAngle {
+  @include make-xs-column(10.8);
+  @include make-sm-column(5.5)
+  @include make-md-column(5.75);
+  @include box-sizing(content-box);
+  @include skew(-32deg, 0);
+  @include transform-origin(-1% 12% 0);
+  background: darken($brand-primary, 10%);
+  border: 0;
+  height: 400px;
+  margin-left: -5px;
+  opacity: .6;
+  padding: 0;
 }

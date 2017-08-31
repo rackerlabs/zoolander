@@ -4,5 +4,8 @@
   },
   "lockedContent-video": {
     "css": "css/derek.css"
+  },
+  "lockedContent-form": {
+    "css": "css/derek.css"
   }
 }
