@@ -32,5 +32,9 @@
   "solutions": {
     "css": "css/derek.css",
     "layout": "_index"
+  },
+  "refresh": {
+    "css": "css/derek.css",
+    "layout": "_index"
   }
 }

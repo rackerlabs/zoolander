@@ -165,7 +165,7 @@
   @include make-banner;
   background-image: url('/imgs/BG.jpg');
   background-position: center right;
-  height: 415px;
+  height: 515px;
   overflow: hidden;
   padding: 150px 0 0;
 }
@@ -183,7 +183,7 @@
 
 .refreshBanner-boxTop {
   display: table;
-  min-height: 45%;
+  min-height: 70%;
   width: 100%;
 }
 
@@ -197,6 +197,7 @@
   @include make-angle;
   background-color: $white;
   padding: 25px;
+  vertical-align: middle;
   width: 83.3333%;
 }
 
@@ -212,7 +213,7 @@
 
 .refreshBanner-boxBottom {
   display: table;
-  height: 55%;
+  height: 75%;
   width: 100%;
 }
 
@@ -228,14 +229,20 @@
   width: 83.3333%;
 }
 
+.refreshBanner-sizeMedium {
+  height: 400px;
+  padding-top: 100px;
+}
+
+.refreshBanner-sizeSmall {
+  height: 325px;
+  padding-top: 74px;
+}
+
 @media only screen and (min-width: $screen-sm-min) {
   .refreshBanner-boxContainer {
     float: left;
     width: 50%;
-  }
-
-  .refreshBanner {
-    height: 515px;
   }
 }
 
