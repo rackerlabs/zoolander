@@ -183,7 +183,7 @@
 
 .refreshBanner-boxTop {
   display: table;
-  min-height: 35%;
+  min-height: 70%;
   width: 100%;
 }
 
@@ -234,10 +234,24 @@
   padding-top: 100px;
 }
 
+.refreshBanner-sizeMedium {
+  height: 400px;
+  padding-top: 100px;
+}
+
+.refreshBanner-sizeSmall {
+  height: 325px;
+  padding-top: 74px;
+}
+
 @media only screen and (min-width: $screen-sm-min) {
   .refreshBanner-boxContainer {
     float: left;
     width: 50%;
+  }
+
+  .refreshBanner-interior {
+    width: 70%;
   }
 }
 
