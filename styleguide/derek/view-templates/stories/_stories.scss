@@ -1,6 +1,5 @@
 // Customer Stories Feature Colors
 $default-bg-img: '../imgs/globalBrand/banners/collaboration-2.jpg';
-$default-grid-bg: '../imgs/globalBrand/stories-grid-default.png';
 // Mixin for featured stories bg types
 @mixin featuredBg($class, $gradient) {
   #{$class} {
@@ -217,94 +216,33 @@ $default-grid-bg: '../imgs/globalBrand/stories-grid-default.png';
 }
 
 .storyOverview-itemInner {
-  border: 1px solid $stories-img-gray;
+  border: 1px solid $gray-light;
+  padding: 5px;
 }
 
 .storyOverview-itemLink {
   @include flex-box;
   @include flex-center;
+  background: $gray-base;
   height: 125px;
-  overflow: hidden;
-  position: relative;
   text-align: center;
   text-decoration: none;
 
   &:hover {
-    background-color: $stories-paginate-gray;
+    background-color: $gray-dark;
     text-decoration: none;
-    transition-duration: .2s;
-  }
-}
-
-.storyOverview-itemLink-withImg {
-  &::before {
-    background-image: url($default-grid-bg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    content: '';
-    filter: blur(6px);
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  &::after {
-    background-color: $content-gray;
-    bottom: 0;
-    content: '';
-    left: 0;
-    opacity: .8;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  &:hover {
-    &::before {
-      filter: blur(0);
-      transition-duration: .2s;
-    }
   }
 }
 
 .storyOverview-logo {
   max-height: 50%;
   max-width: 50%;
-  z-index: 1;
 }
 
 .storyOverview-logoText {
   color: $white;
   font-size: 1.8rem;
   max-width: 80%;
-  z-index: 1;
-}
-
-.rsFilter-storiesBarTitle {
-  color: fade-out($white, .3);
-}
-
-.rsFilter-storiesContent {
-  background-color: $content-gray;
-}
-
-.rsFilter-storiesBar {
-  background-color: $filterbar-gray;
-}
-
-.rsFilter-storiesPager-prev {
-  color: $stories-link-gray;
-}
-
-.rsFilter-storiesPager-current {
-  color: $stories-link-gray;
-}
-
-.rsFilter-storiesPager-next {
-  color: $stories-link-gray;
 }
 
 @media (max-width: $screen-xs-max) {
