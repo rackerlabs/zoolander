@@ -297,6 +297,16 @@
     }
   }
 
+  .navbarRefresh-phoneicon,
+  .navbarRefresh-chaticon,
+  .navbarRefresh-emailicon,
+  .navbarRefresh-searchicon {
+
+    &::before {
+      padding: 0 5px;
+    }
+  }
+
   .main-nav {
 
     .navbar-hamburger {

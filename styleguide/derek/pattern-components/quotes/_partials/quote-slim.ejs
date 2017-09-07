@@ -1,0 +1,12 @@
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+<% if(!blockquote) { var blockquote = "Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done."; } %>
+<% if(!name) { var name = "Brian McManus"; } %>
+<% if(!position) { var position = "Senior Director of Technology"; } %>
+<!-- Quote Partial -->
+
+<div class="quote-textWrapper">
+  <blockquote class="quote-blockquote"><%- blockquote %></blockquote>
+  <p class="quote-attrName"><%- name %></p>
+  <p class="quote-attrPosition"><%- position %></p>
+</div>
+

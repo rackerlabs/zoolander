@@ -41,6 +41,12 @@
   width: 150px;
 }
 
+.ceilingRefresh-brand {
+  height: 45px;
+  margin: 10px;
+  width: 140px;
+}
+
 @media only screen and (min-width: $screen-xs-max) {
   @include responsive-visibility('.ceilingDark-pageTitle');
 

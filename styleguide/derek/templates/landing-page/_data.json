@@ -4,5 +4,11 @@
   },
   "lockedContent-video": {
     "css": "css/derek.css"
+  },
+  "landingpage-chat": {
+    "css": "css/derek.css"
+  },
+  "landingpage-form": {
+    "css": "css/derek.css"
   }
 }

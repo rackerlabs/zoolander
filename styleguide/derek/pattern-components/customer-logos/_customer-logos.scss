@@ -1,0 +1,59 @@
+.customerLogos-wrapper {
+  background-color: $gray-lighter;
+  display: none;
+  height: 120px;
+  padding: 20px 25px;
+}
+
+.customerLogos-container {
+  @include make-sm-column(6);
+  @include make-md-column(8);
+  @include make-lg-column(12);
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 25px;
+
+  &::after {
+    clear: both;
+  }
+}
+
+.customerLogos-withCallout {
+  @include make-md-column(8);
+  padding: 0 25px;
+}
+
+.customerLogos-title {
+  color: $gray-darker;
+}
+
+.customerLogos-imgRow {
+  margin: 0 -25px;
+  padding: 20px 25px;
+
+  &::after {
+    clear: both;
+  }
+}
+
+.customerLogos-imgWrapper {
+  @include make-md-column(3);
+  padding-top: 25px;
+}
+
+@media only screen and (min-width: $screen-sm-max) {
+  .customerLogos-wrapper {
+    display: block;
+  }
+
+  .customerLogos-imgWrapper {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  .customerLogo-title {
+    text-align: center;
+  }
+}
+

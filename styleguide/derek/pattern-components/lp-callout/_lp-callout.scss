@@ -1,0 +1,39 @@
+.lp-callout {
+  background-color: $white;
+  box-shadow: 0 6px 12px $black-shadow;
+  margin-top: 0;
+  padding: 20px 25px;
+  position: relative;
+  width: $full-width;
+}
+
+.lp-callout-mobile {
+  padding-bottom: 0;
+}
+
+.lp-textArea {
+  margin-right: 25px;
+}
+
+.calloutForm-label {
+  font-size: 1.2rem;
+}
+
+.calloutForm-button {
+  width: $full-width;
+}
+
+@media only screen and (min-width: $screen-sm-max) {
+  .lp-callout {
+    margin-top: -200px;
+    position: absolute;
+  }
+
+  .lp-callout-form {
+    margin-top: -225px;
+  }
+
+  .lp-callout-mobile {
+    padding: $standard-padding;
+  }
+}
