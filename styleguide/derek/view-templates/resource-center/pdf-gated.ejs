@@ -1,0 +1,18 @@
+<%- partial('_partials/resource-gated.ejs', {
+          type: 'pdf',
+          title: 'This is a really ridiculously long resource title',
+          desc: 'Rackspace Managed Security Whitepaper high level teaser single sentence about what the value is. Provide us with some basic information to download this resource. Text supporting the download of the whitepaper. Not a disclaimer but a trust statement? Idk I’m not a content producer.'
+        })%>
+
+<div class="lp-textAreaContainer">
+  <div class="lp-textAreaWrapper">
+    <h2>Want to Learn More?</h2>
+    <div class="lp-textArea">
+      <p>Complete the form to the right then check your inbox for your free download.</p>
+    </div>
+  </div>
+<%- partial("../../pattern-components/lp-callout/gc-callout-form/gc-callout.ejs") %>
+</div>
+
+
+<%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resource.ejs') %>

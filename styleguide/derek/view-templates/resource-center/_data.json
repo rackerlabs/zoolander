@@ -8,6 +8,9 @@
    "pdf-image": {
     "css": "css/derek.css"
   },
+  "pdf-gated": {
+    "css": "css/derek.css"
+  },
   "code": {
     "css": "css/derek.css"
   },

@@ -88,6 +88,29 @@
   animation: fadein $duration;
 }
 
+@mixin text-fade($color) {
+  background: -webkit-linear-gradient(
+      transparent,
+      $color 90%
+    );
+    background-image: -moz-linear-gradient(
+      transparent,
+      $color 90%
+    );
+    background-image: -o-linear-gradient(
+      transparent,
+      $color 90%
+    );
+    background-image: linear-gradient(
+      transparent,
+      $color 90%
+    );
+    background-image: -ms-linear-gradient(
+      transparent,
+      $color 90%
+    );
+}
+
 @mixin gradient($direction, $firstColor, $secondColor) {
   background: $firstColor;
   background: -webkit-linear-gradient($direction, $firstColor, $secondColor);

@@ -1,0 +1,29 @@
+<div class="resourcecenter-background half-padding-full">
+  <div class="container">
+    <div class="resourcecenter-fullWrapper resourcecenter-<%- type -%>">
+      <div class="<%- (type == 'video') ? 'col-sm-8 col-sm-push-2' : 'hidden-xs panel-flex col-md-4 col-sm-6' %> text-right">
+        <div class="resourcecenter-visualWrapper">
+        <% if(typeof image != 'undefined') { %>
+          <div class="resourcecenter-imageWrapper" >
+            <img class="resourcecenter-image" src="<%-image%>"/>
+          </div>
+        <% } %>
+        </div>
+      </div>
+      <div class="<%- (type == 'video') ? 'col-sm-8 col-sm-push-2' : 'col-md-8 col-sm-6 col-xs-12' %>">
+        <div class="resourcecenter-infoWrapper">
+          <div class="resourcecenter-titleFull"><h1><%- title %></h1></div>
+          <div class="resourcecenter-descGated">
+            <div class="resourcecenter-descFull">
+              <p><%- desc %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="resourcecenter-<%- type -%> resourcecenter-dividerWrapper">
+  <div class="resourcecenter-divider resourcecenter-divider-gated rsweb container"></div>
+</div>
