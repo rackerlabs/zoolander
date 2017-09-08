@@ -1,22 +1,48 @@
-.lp-callout {
+@mixin make-callout {
+  @include make-md-column(4.5);
+  @include make-md-column-push(.5);
+  @include make-xs-column(12);
   background-color: $white;
   box-shadow: 0 6px 12px $black-shadow;
-  margin-top: 0;
+  margin: 0 auto 50px;
   padding: 20px 25px;
   position: relative;
   width: $full-width;
 }
 
-.lp-callout-mobile {
+.lp-callout,
+.lp-callout-form,
+.lp-callout-chat {
+  @include make-callout;
+}
+
+.lp-textAreaContainer {
+  @include make-container;
+  padding: $standard-padding;
   padding-bottom: 0;
 }
 
+.lp-textAreaWrapper {
+  @include make-md-column(7);
+  padding: $no-padding;
+}
+
 .lp-textArea {
+  line-height: 1.85em;
   margin-right: 25px;
+}
+
+.lp-callout-title {
+  font-weight: 600;
+  text-align: center;
 }
 
 .calloutForm-label {
   font-size: 1.2rem;
+}
+
+.calloutForm-captcha {
+  margin: 10px 0;
 }
 
 .calloutForm-button {
@@ -24,16 +50,27 @@
 }
 
 @media only screen and (min-width: $screen-sm-max) {
-  .lp-callout {
-    margin-top: -200px;
-    position: absolute;
-  }
-
   .lp-callout-form {
-    margin-top: -225px;
+    margin-top: 0;
   }
 
-  .lp-callout-mobile {
-    padding: $standard-padding;
+  .lp-callout-chat {
+    margin-top: 20px;
+  }
+
+  .lp-textAreaContainer {
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: $screen-md-max) {
+  .lp-callout-form {
+    margin-top: -200px;
+    padding: 15px 25px 35px;
+  }
+
+  .lp-callout-chat {
+    margin-top: -180px;
+    padding: 15px 25px 35px;
   }
 }

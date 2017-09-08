@@ -6,9 +6,8 @@
 }
 
 .customerLogos-container {
-  @include make-sm-column(6);
-  @include make-md-column(8);
-  @include make-lg-column(12);
+  @include make-sm-column(12);
+  @include make-lg-column(10);
   margin: 0 auto;
   max-width: 1280px;
   padding: 0 25px;
@@ -19,7 +18,7 @@
 }
 
 .customerLogos-withCallout {
-  @include make-md-column(8);
+  @include make-lg-column(10);
   padding: 0 25px;
 }
 

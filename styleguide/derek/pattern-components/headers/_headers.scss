@@ -163,7 +163,7 @@
 
 .refreshBanner {
   @include make-banner;
-  background-image: url('/imgs/BG.jpg');
+  background-image: url('../imgs/BG.jpg');
   background-position: center right;
   height: 515px;
   overflow: hidden;
@@ -183,13 +183,13 @@
 
 .refreshBanner-boxTop {
   display: table;
-  min-height: 70%;
+  min-height: 35%;
   width: 100%;
 }
 
 .refreshBanner-innerTopLeft {
   @include make-angle;
-  background-image: url('/imgs/slant-topleft.svg');
+  background-image: url('../imgs/slant-topleft.svg');
   width: 16.6667%;
 }
 
@@ -219,24 +219,19 @@
 
 .refreshBanner-innerBottomLeft {
   @include make-angle;
-  background-image: url('/imgs/slant-bottomleft.svg');
+  background-image: url('../imgs/slant-bottomleft.svg');
   width: 16.6667%;
 }
 
 .refreshBanner-innerBottomRight {
   @include make-angle;
-  background-image: url('/imgs/slant-bottomright.svg');
+  background-image: url('../imgs/slant-bottomright.svg');
   width: 83.3333%;
 }
 
-.refreshBanner-sizeMedium {
-  height: 400px;
+.refreshBanner-internal {
+  height: 415px;
   padding-top: 100px;
-}
-
-.refreshBanner-sizeSmall {
-  height: 325px;
-  padding-top: 74px;
 }
 
 @media only screen and (min-width: $screen-sm-min) {
