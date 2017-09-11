@@ -1,11 +1,12 @@
-<!--Header LP-->
-<div class="refreshBanner">
+<!--Header -->
+<% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
+<div class="refreshBanner <%- (typeof size != 'undefined') ? 'refreshBanner-size'+size : '' %>">
   <div class="refreshBanner-container">
-    <div class="refreshBanner-boxContainer">
+    <div class="refreshBanner-boxContainer <%- (typeof size != 'undefined') ? 'refreshBanner-interior' : '' %>">
       <div class="refreshBanner-boxTop">
         <div class="refreshBanner-innerTopLeft"></div>
           <div class="refreshBanner-innerTopRight">
-              <h2 class="refresh-headline">Meet Your Business Needs With Custom Environments</h2>
+              <h2 class="refresh-headline"><%- (typeof desc != 'undefined') ? desc : default_desc %></h2>
           </div>
         </div>
       <div class="refreshBanner-boxBottom">
