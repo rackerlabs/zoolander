@@ -28,17 +28,6 @@ Zoolander.Tracking = (function Tracking($) {
       });
     });
 
-    $('.track-rugEmail').on('click', () => {
-      dataLayer.push({
-        event: 'ga.event',
-        eventCategory: 'Site Submission',
-        eventAction: 'Form Click CTA - Rug',
-        eventLabel: window.location.href,
-        eventValue: '0',
-        eventNonInteraction: 0,
-      });
-    });
-
     $('.track-secondCTA').on('click', () => {
       dataLayer.push({
         event: 'ga.event',
@@ -77,17 +66,6 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'rs.form_click',
         eventCategory: 'Site Submission',
         eventAction: 'Form Click CTA - Page',
-        eventLabel: window.location.href,
-        eventValue: '0',
-        eventNonInteraction: 0,
-      });
-    });
-
-    $('.track-rugCall').on('click', () => {
-      dataLayer.push({
-        event: 'rs.call_click',
-        eventCategory: 'Infinity Tracking Triggers',
-        eventAction: 'Call Click CTA - Rug',
         eventLabel: window.location.href,
         eventValue: '0',
         eventNonInteraction: 0,
