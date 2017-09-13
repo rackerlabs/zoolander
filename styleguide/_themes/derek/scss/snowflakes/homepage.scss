@@ -1,3 +1,205 @@
+.rsHomepage-announcement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rsHomepage-annRight-iconBar {
+  display: none;
+}
+
+.rsHomepage-leftStripContainer {
+  display: flex;
+  margin-top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.rsHomepage-annLeft {
+  background-color: $gray-lightest;
+  float: left;
+  min-height: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.rsHomepage-annLeftContainer {
+  float: left;
+  min-height: 10px;
+  width: 100%;
+}
+
+.rsHomepage-annLeftBar {
+  background-color: $gray-darkest;
+  padding: 15px 40px;
+  width: 100%;
+}
+
+.rsHomepage-annLeftBar-header {
+  color: $white;
+  font-size: 1.7em;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.rsHomepage-annLeftBar-subHeader {
+  color: $white;
+  font-size: 1em;
+  margin: 0;
+}
+
+.rsHomepage-titleContainer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.rsHomepage-annLeft-content {
+  color: $gray-dark;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 10px;
+  padding: 40px;
+  width: 100%;
+}
+
+.rsHomepage-annLeft-p {
+  font-size: 1.5rem;
+  letter-spacing: .5px;
+  line-height: 2.5rem;
+}
+
+.rsHomepage-annLeft-awardsRow {
+  @include make-row;
+  padding-top: 25px;
+}
+
+.rsHomepage-awards {
+  margin: 20px 0;
+}
+
+.rsHomepage-awards-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.rsHomepage-awards-sub {
+  font-family: $heading;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .075rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+
+.rsHomepage-annRight {
+  display: none;
+}
+
+// Desktop only rules
+@media (min-width: $screen-md-min) {
+
+  .rsHomepage-announcement {
+    flex-direction: unset;
+    margin-top: -70px;
+  }
+
+  .rsHomepage-leftStripContainer {
+    margin-top: 60px;
+    position: absolute;
+    width: 50%;
+  }
+
+  .rsHomepage-annLeft  {
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+    min-height: 450px;
+    width: 50%;
+    z-index: 5;
+  }
+
+  .rsHomepage-annLeftContainer {
+    margin-top: 140px;
+  }
+
+  .rsHomepage-annLeftBar {
+    float: right;
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  .rsHomepage-titleContainer {
+    float: right;
+    padding: 0 40px;
+    width: 635px;
+  }
+
+  .rsHomepage-annLeft-content {
+    float: right;
+    padding: 40px;
+    width: 635px;
+  }
+
+  .rsHomepage-annRight {
+    background-image: url('../imgs/rsHomepage-right.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    display: block;
+    float: left;
+    min-height: 450px;
+    width: 50%;
+    z-index: 2;
+
+    &::before {
+      border-left: 1px solid $gray-lightest;
+      content: '';
+      display: block;
+      float: left;
+      height: 100%;
+      left: -1px;
+      position: relative;
+    }
+  }
+
+  .rsHomepage-annRight-iconBar {
+    align-items: center;
+    background-color: $rackspace-red;
+    bottom: 0;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    left: 100%;
+    position: absolute;
+    right: -120px;
+    text-align: center;
+    top: 0;
+
+    &::before {
+      content: '\e983';
+      font-family: 'rswebfonts';
+      font-size: 61px;
+    }
+  }
+}
+
+@media (max-width: $screen-lg) and (min-width: $screen-md-min) {
+
+  .rsHomepage-titleContainer {
+    width: 500px;
+  }
+
+  .rsHomepage-annLeft-content {
+    width: 500px;
+  }
+}
+
+// End of new home page layout
 .clear-container {
   @include make-sm-column(6);
   clear: both;
