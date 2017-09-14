@@ -172,6 +172,7 @@
 
 .refreshBanner-container {
   height: 100%;
+  position: relative;
   width: 100%;
 }
 
@@ -181,16 +182,25 @@
   position: relative;
 }
 
+.refreshBanner-boxContainer2 {
+  clear: both;
+  top: -65.5%;
+}
+
 .refreshBanner-boxTop {
   display: table;
-  min-height: 35%;
+  min-height: 70%;
   width: 100%;
+}
+
+.refreshBanner-boxTopHomepage {
+  min-height: 10%;
 }
 
 .refreshBanner-innerTopLeft {
   @include make-angle;
-  background-image: url('../imgs/slant-topleft.svg');
-  width: 16.6667%;
+  background-image: url('/imgs/slant-topleft.svg');
+  width: 9.6667%;
 }
 
 .refreshBanner-innerTopRight {
@@ -199,6 +209,10 @@
   padding: 25px;
   vertical-align: middle;
   width: 83.3333%;
+}
+
+.refreshBanner-innerTopRight2 {
+  width: 79.3333%;
 }
 
 .refresh-headline {
@@ -219,8 +233,8 @@
 
 .refreshBanner-innerBottomLeft {
   @include make-angle;
-  background-image: url('../imgs/slant-bottomleft.svg');
-  width: 16.6667%;
+  background-image: url('/imgs/slant-bottomleft.svg');
+  width: 9.6667%;
 }
 
 .refreshBanner-innerBottomRight {
@@ -231,19 +245,119 @@
 
 .refreshBanner-internal {
   height: 415px;
+}
+
+.refreshBanner-innerBottomRight2 {
+  width: 79.3333%;
+}
+
+.refreshBanner-sizeHomepage {
+  height: 60vw;
+  max-height: 700px;
   padding-top: 100px;
+}
+
+.refreshBanner-sizeMedium {
+  height: 400px;
+  padding-top: 100px;
+}
+
+.refreshBanner-sizeSmall {
+  height: 325px;
+  padding-top: 74px;
+}
+
+.refreshBanner-ctaContainer {
+  bottom: -20vw;
+  float: right;
+  height: 40%;
+  margin-right: 7.5%;
+  position: relative;
+}
+
+.refreshBanner-ctaBox {
+  text-align: right;
+  width: 100%;
+}
+
+.refreshBanner-ctaHeadline {
+  color: $white;
+  font-size: 4vw;
+  line-height: .9em;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .refreshBanner-boxContainer {
+    float: left;
+    width: 700px;
+  }
+
+  .refresh-headlineHomepage {
+    font-size: 60px;
+  }
+
+  .refreshBanner-ctaHeadline {
+    font-size: 45px;
+  }
 }
 
 @media only screen and (min-width: $screen-sm-min) {
   .refreshBanner-boxContainer {
     float: left;
-    width: 50%;
+    width: 60%;
+  }
+
+  .refreshBanner-boxContainer2 {
+    width: 68%;
+  }
+
+  .refreshBanner-innerTopLeft2 {
+    width: 14.0667%;
+  }
+
+  .refreshBanner-innerBottomLeft2 {
+    width: 14.0667%;
+  }
+
+  .refresh-headlineHomepage {
+    font-size: 4.5vw;
+  }
+
+  .refreshBanner-interior {
+    width: 70%;
   }
 }
 
 @media only screen and (max-width: $screen-xs-max) {
+  .refreshBanner-sizeHomepage {
+    height: 105vw;
+    max-height: 500px;
+    padding-top: 10%;
+  }
+
   .refreshBanner-container {
     width: 80%;
+  }
+
+  .refresh-headlineHomepage {
+    font-size: 7.25vw;
+  }
+
+  .refreshBanner-ctaContainer {
+    bottom: -15vw;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+  }
+
+  .refreshBanner-ctaBox {
+    text-align: center;
+    width: 100vw;
+  }
+
+  .refreshBanner-ctaHeadline {
+    display: none;
   }
 }
 

@@ -1,8 +1,8 @@
 <!--Header -->
 <% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
-<div class="refreshBanner">
+<div class="refreshBanner <%- (typeof size != 'undefined') ? 'refreshBanner-size'+size : '' %>">
   <div class="refreshBanner-container">
-    <div class="refreshBanner-boxContainer refreshBanner-interior">
+    <div class="refreshBanner-boxContainer refreshBanner-<%- (typeof size != 'undefined') ? 'interior' : '' %>">
       <div class="refreshBanner-boxTop">
         <div class="refreshBanner-innerTopLeft"></div>
           <div class="refreshBanner-innerTopRight">
