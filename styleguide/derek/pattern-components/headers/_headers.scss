@@ -189,8 +189,12 @@
 
 .refreshBanner-boxTop {
   display: table;
-  min-height: 70%;
+  min-height: 40%;
   width: 100%;
+}
+
+.refreshBanner-boxTopInterior {
+  min-height: 40%;
 }
 
 .refreshBanner-boxTopHomepage {
@@ -199,7 +203,7 @@
 
 .refreshBanner-innerTopLeft {
   @include make-angle;
-  background-image: url('/imgs/slant-topleft.svg');
+  background-image: url('../imgs/slant-topleft.svg');
   width: 9.6667%;
 }
 
@@ -233,7 +237,7 @@
 
 .refreshBanner-innerBottomLeft {
   @include make-angle;
-  background-image: url('/imgs/slant-bottomleft.svg');
+  background-image: url('../imgs/slant-bottomleft.svg');
   width: 9.6667%;
 }
 
@@ -325,7 +329,7 @@
   }
 
   .refreshBanner-interior {
-    width: 70%;
+    width: 50%;
   }
 }
 
