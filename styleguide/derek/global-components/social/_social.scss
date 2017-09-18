@@ -1,6 +1,48 @@
-//Hack for Facebook to work.
-.fb-share-button {
-  top: -8px;
+$facebook-blue: #4267b2;
+$facebook-darkblue: #365899;
+
+.fb-share {
+  background: $facebook-blue;
+  border: 1px solid $facebook-blue;
+  border-radius: 3px;
+  color: $white;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-smoothing: antialiased;
+  height: 20px;
+  padding: 0 0 0 2px;
+  position: relative;
+  text-decoration: none;
+  top: -1px;
+  vertical-align: top;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background: $facebook-darkblue;
+    border: 1px solid $facebook-darkblue;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.fb-share-icon {
+  background-image: url('https://static-dft4-3.xx.fbcdn.net/rsrc.php/v3/yP/r/Wq8eKb91kes.png');
+  background-size: contain;
+  display: inline-block;
+  height: 16px;
+  margin-right: 1px;
+  position: relative;
+  top: 1px;
+  width: 16px;
+}
+
+.fb-share-text {
+  font-weight: bold;
+  padding: 0 4px;
+  position: relative;
+  top: -3px;
 }
 
 .social-button {
