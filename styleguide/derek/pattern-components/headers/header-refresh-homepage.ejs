@@ -1,31 +1,23 @@
-<!--Header -->
-<% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
-<div class="refreshBanner refreshBanner-sizeHomepage">
+<div class="refreshBanner refreshBanner-homepage">
   <div class="refreshBanner-container">
-    <div class="refreshBanner-boxContainer">
-      <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
-        <div class="refreshBanner-innerTopLeft"></div>
-          <div class="refreshBanner-innerTopRight">
-              <h2 class="refresh-headline refresh-headlineHomepage">certified to manage the worlds leading clouds.</h2>
-          </div>
-        </div>
-      <div class="refreshBanner-boxBottom">
-        <div class="refreshBanner-innerBottomLeft">&nbsp;</div>
-        <div class="refreshBanner-innerBottomRight">&nbsp;</div>
-      </div>
-      <div class="refreshBanner-boxContainer refreshBanner-boxContainer2">
-        <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
-          <div class="refreshBanner-innerTopLeft refreshBanner-innerTopLeft2"></div>
-            <div class="refreshBanner-innerTopRight refreshBanner-innerTopRight2">
-                <h2 class="refresh-headline refresh-headlineHomepage">because one size doesn‘t fit all.</h2>
-            </div>
-          </div>
-        <div class="refreshBanner-boxBottom">
-          <div class="refreshBanner-innerBottomLeft refreshBanner-innerBottomLeft2">&nbsp;</div>
-          <div class="refreshBanner-innerBottomRight refreshBanner-innerBottomRight2">&nbsp;</div>
+    <div class="refreshBanner-boxContainer refreshBanner-boxContainerHomepage">
+      <div class="refreshBanner-textRow">
+        <div class="refreshBanner-textContainer refreshBanner-textContainerHomepage">
+          <h2 class="refreshBanner-headline refresh-headlineHomepage">certified to manage the worlds leading clouds.</h2>
         </div>
       </div>
+      <span class="refreshBanner-line right-bottom right-bottomHomepage">&nbsp;</span>
     </div>
+    <div class="refreshBanner-boxContainer refreshBanner-boxContainerBottom">
+      <div class="refreshBanner-textRow refreshBanner-textRowBottom">
+        <div class="refreshBanner-textContainer refreshBanner-textContainerHomepageBottom">
+          <h2 class="refreshBanner-headline refresh-headlineHomepageBottom">because one size doesn‘t fit all.</h2>
+        </div>
+      </div>
+      <span class="refreshBanner-line right-bottom right-bottomBottom">&nbsp;</span>
+    </div>
+    <span class="refreshBanner-line left-top left-topHomepage">&nbsp;</span>
+    <span class="refreshBanner-line left-top left-topBottom">&nbsp;</span>
 
     <div class="refreshBanner-ctaContainer">
       <div class="refreshBanner-ctaBox">
@@ -33,6 +25,42 @@
         <a class="refreshBanner-ctaButton button ghost">Learn More</a>
       </div>
     </div>
-
   </div>
 </div>
+
+<script>
+const $textContainer = $('.refreshBanner-textContainer');
+const $textContainerHomepage = $('.refreshBanner-textContainerHomepage');
+const $textContainerBottom = $('.refreshBanner-textContainerHomepageBottom');
+
+const $leftSlant = $('.left-top');
+const $leftSlantHomepage = $('.left-topHomepage');
+const $leftSlantBottom = $('.left-topBottom');
+
+const $mainContainer = $('.refreshBanner-container');
+
+const setDimensions = () => {
+  const $left = $textContainer.offset().left - $leftSlant.outerWidth();
+  const $leftHomepage = $textContainerHomepage.offset().left - $leftSlantHomepage.outerWidth();
+  const $leftBottom = $textContainerBottom.offset().left - $leftSlantBottom.outerWidth();
+
+  const $mainContainerLeft = $mainContainer.offset().left;
+
+  $leftSlant.css({
+    height: $textContainerHomepage.outerHeight(),
+    left: $leftHomepage - $mainContainerLeft,
+    top: $textContainerHomepage.offset().top + 3
+  });
+
+  $leftSlantBottom.css({
+    height: $textContainerBottom.outerHeight(),
+    left: $leftBottom - $mainContainerLeft,
+    top: $textContainerBottom.offset().top + 3
+  });
+ };
+setTimeout(setDimensions, 800);
+//timeout for zoolander only otherwise setDimentions();
+
+$(window).resize(setDimensions);
+
+</script>

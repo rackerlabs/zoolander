@@ -1,16 +1,35 @@
-<!--Header Long-->
-<div class="imacBanner imacBanner-withCta">
-  <div class="imacBanner-container">
-    <div class="imacBanner-textRow">
-      <div class="imacBanner-textContainer imacBanner-headlineLarge">
-        <h2 class="imacBanner-headline">we guarantee a 99.99% openstack API uptime.<br/>And yes, that .01% does keep us up at night</h2>
-        <span class="imacBanner-line left-top"></span>
-        <span class="imacBanner-line left-bottom"></span>
-        <span class="imacBanner-line right-bottom"></span>
+<div class="refreshBanner">
+  <div class="refreshBanner-container">
+    <div class="refreshBanner-textRow">
+      <div class="refreshBanner-textContainer refreshBanner-headlineLarge">
+        <h2 class="refreshBanner-headline refresh-headlineSecond">we guarantee a 99.99% openstack API uptime.</h2>
       </div>
     </div>
-    <div class="imacBanner-buttonRow">
-      <a class="imacBanner-button">Read Our Case Studies  <i class="fa fa-angle-right imacBanner-buttonIcon"></i></a>
-    </div>
+    <span class="refreshBanner-line right-bottom">&nbsp;</span>
   </div>
+  <span class="refreshBanner-line left-top">&nbsp;</span>
 </div>
+
+<script>
+const $textContainer = $('.refreshBanner-textContainer');
+const $leftSlant = $('.refreshBanner-line.left-top');
+const $contentOffset = $('.navbar-fixed-top');
+
+const setDimensions = () => {
+  const $left = $textContainer.offset().left - $leftSlant.outerWidth();
+  const $textContainerPadding = parseInt($textContainer.css('padding'));
+  const $textContainerTop = $textContainer.offset().top;
+  const $contentPush = $contentOffset.outerHeight(true);
+
+  $leftSlant.css({
+    height: $textContainer.outerHeight(),
+    left: $left,
+    top: 250
+  });
+ };
+setTimeout(setDimensions, 800);
+//timeout for zoolander only otherwise setDimentions();
+
+$(window).resize(setDimensions);
+
+</script>

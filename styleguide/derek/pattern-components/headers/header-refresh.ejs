@@ -1,18 +1,37 @@
-<!--Header -->
-<% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
-<div class="refreshBanner <%- (typeof size != 'undefined') ? 'refreshBanner-size'+size : '' %>">
+<div class="refreshBanner">
   <div class="refreshBanner-container">
-    <div class="refreshBanner-boxContainer refreshBanner-<%- (typeof size != 'undefined') ? 'interior' : '' %>">
-      <div class="refreshBanner-boxTop refreshBanner-boxTopInterior">
-        <div class="refreshBanner-innerTopLeft"></div>
-          <div class="refreshBanner-innerTopRight">
-              <h2 class="refresh-headline"><%- (typeof desc != 'undefined') ? desc : default_desc %></h2>
-          </div>
+    <div class="refreshBanner-boxContainer refreshBanner-boxContainerHomepage">
+      <div class="refreshBanner-textRow">
+        <div class="refreshBanner-textContainer refreshBanner-textContainerInterior">
+          <h2 class="refreshBanner-headline refresh-headlineInterior">we guarantee a 99.99% openstack API uptime.</h2>
         </div>
-      <div class="refreshBanner-boxBottom">
-        <div class="refreshBanner-innerBottomLeft"></div>
-        <div class="refreshBanner-innerBottomRight"></div>
       </div>
+      <span class="refreshBanner-line right-bottom">&nbsp;</span>
     </div>
   </div>
+  <span class="refreshBanner-line left-top">&nbsp;</span>
 </div>
+
+<script>
+const $textContainer = $('.refreshBanner-textContainer');
+const $leftSlant = $('.refreshBanner-line.left-top');
+const $contentOffset = $('.navbar-fixed-top');
+
+const setDimensions = () => {
+  const $left = $textContainer.offset().left - $leftSlant.outerWidth();
+  const $textContainerPadding = parseInt($textContainer.css('padding'));
+  const $textContainerTop = $textContainer.offset().top;
+  const $contentPush = $contentOffset.outerHeight(true);
+
+  $leftSlant.css({
+    height: $textContainer.outerHeight(),
+    left: $left,
+    top: 260
+  });
+ };
+setTimeout(setDimensions, 800);
+//timeout for zoolander only otherwise setDimentions();
+
+$(window).resize(setDimensions);
+
+</script>
