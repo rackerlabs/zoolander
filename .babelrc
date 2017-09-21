@@ -1,3 +1,6 @@
 {
-  "presets": ["env"]
+  "presets": ["env"],
+  "ignore":[
+    "./styleguide/derek/global-components/hex/hex.js"
+  ]
 }
