@@ -1,0 +1,117 @@
+.rsHomepage-platformContainer {
+  @include make-container;
+  padding: $standard-padding;
+  padding-top: 60px;
+}
+
+.rsHomepage-platformRow {
+  @include make-row;
+}
+
+.rsHomepage-platformTitleWrapper {
+  @include make-sm-column(12);
+  @include make-md-column(3.5);
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+.rsHomepage-platformH1 {
+  font-size: 4.7rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 4rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.rsHomepage-platformSubhead {
+  font-size: 2.25rem;
+  margin: 5px 20% 10px 0;
+}
+
+.rsHomepage-platformParagraph {
+  font-size: 1.5rem;
+  letter-spacing: .5px;
+  line-height: 2.5rem;
+}
+
+.rsHomepage-platformWrapper {
+  @include make-xs-column(6);
+  @include make-md-column(4);
+  @include make-md-column-push(.5);
+}
+
+.rsHomepage-platformItem {
+  margin-bottom: 30px;
+}
+
+.rsHomepage-platformTitle {
+  font-size: 1.75rem;
+  letter-spacing: .5px;
+  margin: 3px 0 0;
+}
+
+.rsHomepage-platformDesc {
+  font-size: 1.5rem;
+  letter-spacing: .5px;
+  line-height: 2.5rem;
+  margin: 0;
+}
+
+.rsHomepage-platformLink {
+  @include subhead;
+  color: $brand-primary;
+  font-size: 1.3rem;
+  font-weight: $font-weight-black;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    background: darken($rackspace-red, 10%);
+    bottom: 0;
+    content: '';
+    display: inline-block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transition: .2s ease-in;
+    width: 0;
+  }
+
+  &:hover {
+    color: darken($rackspace-red, 10%);
+    cursor: pointer;
+    text-decoration: none;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: '\f105';
+    font-family: 'rswebfonts';
+    padding-left: 5px;
+    padding-top: 6px;
+    position: absolute;
+  }
+}
+
+//desktop only styles
+@media (min-width: $screen-md-min) {
+
+  .rsHomepage-platformTitleWrapper {
+    margin-bottom: 0;
+  }
+}
+
+
+//override to allow to go full width only in really small widths
+@media only screen and (max-width: 500px) {
+
+  .rsHomepage-platformWrapper {
+    width: 100%;
+  }
+
+}
