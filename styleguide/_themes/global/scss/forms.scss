@@ -205,6 +205,18 @@ table {
   }
 }
 
+.calloutForm {
+  max-width: 100%;
+
+  .form-label {
+    font-size: 1.2rem;
+  }
+
+  .form-submit {
+    width: 100%;
+  }
+}
+
 @media (min-width: $screen-sm-min) {
   .formModal-dialog {
     width: 440px;

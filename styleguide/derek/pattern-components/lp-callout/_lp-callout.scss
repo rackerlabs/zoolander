@@ -37,18 +37,6 @@
   text-align: center;
 }
 
-.calloutForm-label {
-  font-size: 1.2rem;
-}
-
-.calloutForm-captcha {
-  margin: 10px 0;
-}
-
-.calloutForm-button {
-  width: $full-width;
-}
-
 @media only screen and (min-width: $screen-sm-max) {
   .lp-callout-form {
     margin-top: 0;
