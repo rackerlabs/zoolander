@@ -6,7 +6,8 @@
     "Rackspace Web Team <rswebdev@rackspace.com>"
   ],
   "scripts": {
-    "babel": "rm -rf styleguide/js && babel styleguide/global styleguide/derek --out-dir styleguide/js",
+    "babel": "rm -rf styleguide/js && babel styleguide/global styleguide/derek --out-dir styleguide/js && npm run copyjs",
+    "copyjs": "cp styleguide/derek/global-components/hex/hex.js styleguide/js/global-components/hex/",
     "gh-pages": "./scripts/build-pages.sh",
     "harp": "harp ",
     "harp:compile": "npm run harp compile styleguide dist",
