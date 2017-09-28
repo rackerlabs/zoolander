@@ -35,6 +35,12 @@
   }
 }
 
+.resourcecenter-divider-gated {
+  &::after {
+    display: block;
+  }
+}
+
 .resourcecenter-background {
   background-color: $gray-lightest;
 }
@@ -76,6 +82,24 @@
 
 .resourcecenter-descFull {
   font-size: 1.2em;
+  line-height: 1.85em;
+}
+
+.resourcecenter-descGated {
+  position: relative;
+
+  &::after {
+    @include text-fade(rgba(239, 239, 239, 1));
+    bottom: 0;
+    content: '';
+    height: 150px;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.gc-arrow {
+  display: none;
 }
 
 .resourcecenter-downloadFull {
@@ -193,6 +217,24 @@
     margin-left: 20px;
     margin-top: 76px;
     width: 87%;
+  }
+
+  .gc-arrow {
+    display: block;
+    left: -60px;
+    position: absolute;
+    top: 0;
+    width: 8rem;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .resourcecenter-divider-gated {
+    height: 68px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

@@ -37,7 +37,9 @@
   text-align: center;
 }
 
+
 @media only screen and (min-width: $screen-sm-max) {
+
   .lp-callout-form {
     margin-top: 0;
   }
@@ -52,6 +54,11 @@
 }
 
 @media only screen and (min-width: $screen-md-max) {
+  .gc-callout {
+    margin-top: -200px;
+    padding: 15px 25px 35px;
+  }
+
   .lp-callout-form {
     margin-top: -200px;
     padding: 15px 25px 35px;
