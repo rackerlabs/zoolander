@@ -1,0 +1,38 @@
+<div class="rsFilter-section">
+  <div class="rsFilter-row row-eq-height">
+    <div class="rsFilter-bar">
+      <button class="rsFilter-hamburger"></button>
+      <div class="rsFilter-mobileTitle">Find a Resource</div>
+      <form class="rsFilter-form">
+        <div class="rsFilter-formTitle">Find a Resource</div>
+          <h6 class="rsFilter-fieldTitle">Products</h6>
+          <div class="form-item form-type-select">
+            <select class="rsFilter-formSelect form-select">
+              <option value="All" selected="selected">- Any -</option>
+              <option value="101">AWS</option>
+              <option value="102">Azure</option>
+            </select>
+          </div>
+          <h6 class="rsFilter-fieldTitle">Resource Type</h6>
+          <div class="rsFilter-checkbox">
+            <%- partial('_partials/checkbox.ejs', {
+              'type': 'webinar',
+            }) -%>
+          </div>
+        <button class="rsFilter-button">Show Results</button>
+      </form>
+    </div>
+    <div class="rsFilter-content">
+      <div class="resourcecenter-row row-eq-height">
+        <%- partial('../../../pattern-components/resourceCenter-resource/refresh/resourceCenter-resource.ejs') %>
+      </div>
+      <div class="resourcecenter-row row-eq-height">
+        <%- partial('../../../pattern-components/resourceCenter-resource/refresh/resourceCenter-resource.ejs') %>
+      </div>
+      <div class="resourcecenter-row row-eq-height">
+        <%- partial('../../../pattern-components/resourceCenter-resource/refresh/resourceCenter-resource.ejs') %>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/global-components/filter-bar/filter-bar.js" charset="utf-8"></script>
