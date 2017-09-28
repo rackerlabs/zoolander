@@ -28,39 +28,10 @@
   </div>
 </div>
 
-<script>
-const $textContainer = $('.refreshBanner-textContainer');
-const $textContainerHomepage = $('.refreshBanner-textContainerHomepage');
-const $textContainerBottom = $('.refreshBanner-textContainerHomepageBottom');
-
-const $leftSlant = $('.left-top');
-const $leftSlantHomepage = $('.left-topHomepage');
-const $leftSlantBottom = $('.left-topBottom');
-
-const $mainContainer = $('.refreshBanner-container');
-
-const setDimensions = () => {
-  const $left = $textContainer.offset().left - $leftSlant.outerWidth();
-  const $leftHomepage = $textContainerHomepage.offset().left - $leftSlantHomepage.outerWidth();
-  const $leftBottom = $textContainerBottom.offset().left - $leftSlantBottom.outerWidth();
-
-  const $mainContainerLeft = $mainContainer.offset().left;
-
-  $leftSlant.css({
-    height: $textContainerHomepage.outerHeight(),
-    left: $leftHomepage - $mainContainerLeft,
-    top: $textContainerHomepage.offset().top + 3
+<script src="../../../js/global-components/tracking/tracking.js" charset="utf-8"></script>
+<script src="../../../js/pattern-components/headers/headers.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    Zoolander.Banners.homepageInit();
   });
-
-  $leftSlantBottom.css({
-    height: $textContainerBottom.outerHeight(),
-    left: $leftBottom - $mainContainerLeft,
-    top: $textContainerBottom.offset().top + 3
-  });
- };
-setTimeout(setDimensions, 800);
-//timeout for zoolander only otherwise setDimentions();
-
-$(window).resize(setDimensions);
-
 </script>
