@@ -82,7 +82,8 @@
 
 // Overrides for the tabCollapse plugin & bootstrap panel classes
 .rsTabs-container {
-  padding: $half-padding-full;
+  @include make-container;
+  padding: $half-padding-top;
 
   .panel {
     @include border-radius(0);
@@ -152,8 +153,6 @@
     margin: 0 auto 10px;
     max-width: $screen-lg-min;
     padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .rsTabsHorizontal-tab {
