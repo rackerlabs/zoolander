@@ -1,0 +1,31 @@
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+<% if(!type) { var type = 'document'; } %>
+<% if(!title) { var title = 'Resource Title'; } %>
+<% if(!image) { var image = ''; } %>
+<% if(!desc) { var desc = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m'; } %>
+<% if(!link) { var link = '/derek/view-templates/resource-center/pdf'; } %>
+<!-- Additional Resources Pattern -->
+
+<div class="resource-wrapper resource-<%- type -%> resource-<%- type -%><%- image -%> track-click">
+  <a href="<%- link -%>" class="resource-innerLink">
+    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop"><%- title -%></h5>
+      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
+    </div>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title"><%- title -%></h5>
+      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc"><%- desc -%></p>
+      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,153 @@
+// Resource Icon Color
+@mixin resource-refresh($class, $background) {
+  #{$class} {
+    @include make-md-column(4);
+    @include make-sm-column(6);
+    background: $white;
+    box-shadow: 0 1px 1px 1px $black-shadow-dark;
+    padding: 0;
+    transition: .3s ease-in-out;
+    width: 100%;
+
+    .resource-top {
+      background: $background;
+    }
+
+    .resource-innerLink {
+      text-decoration: none;
+    }
+
+    &:hover {
+      box-shadow: 0 15px 25px -9px $black-shadow-darkest;
+      transition: .3s ease-in-out;
+    }
+  }
+}
+
+.resource-innerLink {
+  @include flex-box;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+
+.resource-top {
+  @include flex-box;
+  flex: 0 0 175px;
+  flex-flow: column nowrap;
+  height: 100%;
+  overflow: hidden;
+}
+
+.resource-bottom {
+  @include flex-box;
+  box-shadow: 0 -10px 15px -1px $black-shadow-darker;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  padding: 0 20px;
+}
+
+.resource-wrapper {
+  margin: 10px 0;
+}
+
+.resource-logo {
+  background-image: url('../imgs/derek/rs-logo.svg');
+  background-position: left 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 79%;
+  flex: 0 0 auto;
+  height: 30px;
+  margin: 12px;
+  width: 120px;
+}
+
+.resource-titleTopWrap {
+  flex: 1 0 auto;
+  margin: 10px 20px;
+}
+
+.resource-titleTop {
+  color: $white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: .01rem;
+  line-height: 2.85rem;
+  margin: 0;
+}
+
+.resource-pdfDownload {
+  background: url('../imgs/derek/resourceCenter/pdf-download.png');
+  background-position: left 50%;
+  background-repeat: no-repeat;
+  background-size: 55px;
+  display: none;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 110px;
+  width: 60px;
+}
+
+.resource-title {
+  color: $gray-base;
+  font-family: $heading;
+  font-size: 1.45em;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.resource-rule {
+  border-top: solid $red-shadow .5px;
+  height: 1px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.resource-descWrap {
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.resource-desc {
+  color: $gray-base;
+  font-size: .8em;
+  line-height: 1.7em;
+}
+
+.resource-link {
+  @include standard-link;
+  font-family: $heading;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.resource-linkCaret {
+  @include standard-link;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+
+  .resource-wrapper {
+    margin: 10px;
+  }
+}
+
+
+
+@media only screen and (min-width: $screen-md-max) {
+  .resource-pdfDownload {
+    display: block;
+  }
+
+  .resource-wrapper {
+    margin: 20px;
+  }
+}
+
+
+//had to make maintainable
+@include resource-refresh('.resource-document', $rackspace-red);
+@include resource-refresh('.resource-documentImage', url('../imgs/BG.jpg'));
