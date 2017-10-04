@@ -10,7 +10,7 @@
   <a href="<%- link -%>" class="resource-innerLink">
     <div class="resource-top">
 
-    <!-- for code type -->
+    <!-- for document type -->
     <% if(type == 'document') { %>
       <div class="resource-logo"></div>
       <div class="resource-titleTopWrap">
@@ -22,6 +22,13 @@
     <!-- for code type -->
     <% if(type == 'code') { %>
       <div class="resource-codeImg"></div>
+    <% } %>
+
+    <!-- for video type -->
+    <% if(type == 'video') { %>
+      <div class="resource-videoThumb">
+        <i class="fa fa-youtube-play fa-4x resource-playIcon" aria-hidden="true"></i>
+      </div>
     <% } %>
 
     </div>
