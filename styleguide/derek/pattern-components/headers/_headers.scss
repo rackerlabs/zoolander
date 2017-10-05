@@ -357,6 +357,9 @@ $red-variation: #c32126;
     bottom: 10%;
   }
 
+  .refreshBanner-landingPageContainer {
+    top: -20px;
+  }
 }
 
 @media only screen and (min-width: $screen-lg-min) {
@@ -372,6 +375,10 @@ $red-variation: #c32126;
 
   .refreshBanner-ctaContainer {
     bottom: 10%;
+  }
+
+  .refreshBanner-landingPageContainer {
+    top: -100px;
   }
 }
 

@@ -1,4 +1,6 @@
+/* eslint no-use-before-define: 0 */
 
+const Zoolander = Zoolander || {};
 
 Zoolander.Banners = (() => {
   const textContainer = $('.refreshBanner-textContainerInterior');
