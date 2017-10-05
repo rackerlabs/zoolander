@@ -1,16 +1,24 @@
-<!--Header Long-->
-<div class="imacBanner imacBanner-withCta">
-  <div class="imacBanner-container">
-    <div class="imacBanner-textRow">
-      <div class="imacBanner-textContainer imacBanner-headlineLarge">
-        <h2 class="imacBanner-headline">we guarantee a 99.99% openstack API uptime.<br/>And yes, that .01% does keep us up at night</h2>
-        <span class="imacBanner-line left-top"></span>
-        <span class="imacBanner-line left-bottom"></span>
-        <span class="imacBanner-line right-bottom"></span>
+<div class="refreshBanner">
+  <div class="refreshBanner-container">
+    <div class="refreshBanner-boxContainer">
+      <div class="refreshBanner-textRow">
+        <div class="refreshBanner-textContainer refreshBanner-textContainerInterior">
+          <h2 class="refreshBanner-headline refresh-headlineInterior">we guarantee a 99.99% openstack API uptime.</h2>
+        </div>
       </div>
+      <span class="refreshBanner-line right-bottom">&nbsp;</span>
     </div>
-    <div class="imacBanner-buttonRow">
-      <a class="imacBanner-button">Read Our Case Studies  <i class="fa fa-angle-right imacBanner-buttonIcon"></i></a>
-    </div>
+
+    <span class="refreshBanner-line left-top">&nbsp;</span>
   </div>
 </div>
+
+<script src="../../../js/global-components/tracking/tracking.js" charset="utf-8"></script>
+<script src="../../../js/pattern-components/headers/headers.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    // Note: Timeout is simply for offsetting zoolander navigation and shouldn't
+    // be copied into production.
+    setTimeout(Zoolander.Banners.init, 800);
+  });
+</script>

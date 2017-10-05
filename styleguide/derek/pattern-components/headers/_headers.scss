@@ -1,3 +1,5 @@
+$red-variation: #c32126;
+
 //used for events
 @mixin make-banner {
   background-repeat: no-repeat;
@@ -159,67 +161,51 @@
   }
 }
 
-
-
 .refreshBanner {
   @include make-banner;
+  @include fadein(2s);
   background-image: url('../imgs/BG.jpg');
-  background-position: center right;
-  height: 515px;
+  background-position: right center;
+  height: 300px;
   overflow: hidden;
-  padding: 150px 0 0;
+  padding: 60px 0;
+  position: relative;
+}
+
+.refreshBanner-landingPage {
+  height: 60vw;
+  max-height: 515px;
+  padding: 15% 0 0;
+}
+
+.refreshBanner-homepage {
+  height: 60vw;
+  max-height: 620px;
+  padding-top: 90px;
 }
 
 .refreshBanner-container {
-  height: 100%;
+  @include make-container;
+  @include fadein(1s);
+  padding: 0 45px;
   position: relative;
-  width: 100%;
 }
 
 .refreshBanner-boxContainer {
-  height: 100%;
+  // height: 100%;
   padding: 0;
   position: relative;
-}
-
-.refreshBanner-boxContainer2 {
-  clear: both;
-  top: -65.5%;
-}
-
-.refreshBanner-boxTop {
-  display: table;
-  min-height: 40%;
   width: 100%;
 }
 
-.refreshBanner-boxTopInterior {
-  min-height: 40%;
+.refreshBanner-boxContainerBottom {
+  clear: both;
+  position: absolute;
+  top: 200px;
+  width: 70%;
 }
 
-.refreshBanner-boxTopHomepage {
-  min-height: 10%;
-}
-
-.refreshBanner-innerTopLeft {
-  @include make-angle;
-  background-image: url('../imgs/slant-topleft.svg');
-  width: 9.6667%;
-}
-
-.refreshBanner-innerTopRight {
-  @include make-angle;
-  background-color: $white;
-  padding: 25px;
-  vertical-align: middle;
-  width: 83.3333%;
-}
-
-.refreshBanner-innerTopRight2 {
-  width: 79.3333%;
-}
-
-.refresh-headline {
+.refreshBanner-headline {
   color: $brand-primary;
   font-family: $heading;
   font-size: 6rem;
@@ -229,139 +215,217 @@
   text-transform: uppercase;
 }
 
-.refreshBanner-boxBottom {
-  display: table;
-  height: 75%;
-  width: 100%;
+.refreshBanner-textContainer {
+  background: $white;
+  padding: 20px;
+  position: relative;
+  z-index: 9;
 }
 
-.refreshBanner-innerBottomLeft {
-  @include make-angle;
-  background-image: url('../imgs/slant-bottomleft.svg');
-  width: 9.6667%;
+.refreshBanner-textContainerHomepage {
+  @include make-sm-column(8);
+  @include make-md-column(6.5);
 }
 
-.refreshBanner-innerBottomRight {
-  @include make-angle;
-  background-image: url('../imgs/slant-bottomright.svg');
-  width: 83.3333%;
+.refreshBanner-textContainerHomepageBottom {
+  @include make-sm-column(6.5);
+  @include make-md-column(5);
 }
 
-.refreshBanner-internal {
-  height: 415px;
+.refreshBanner-textContainerInterior {
+  @include make-sm-column(7);
 }
 
-.refreshBanner-innerBottomRight2 {
-  width: 79.3333%;
+.refreshBanner-textRow {
+  @include make-row;
+  padding: 0 25px;
 }
 
-.refreshBanner-sizeHomepage {
-  height: 60vw;
-  max-height: 700px;
-  padding-top: 100px;
-}
+.refreshBanner-line {
+  background-color: $white;
+  display: block;
+  z-index: 0;
 
-.refreshBanner-sizeMedium {
-  height: 400px;
-  padding-top: 100px;
-}
+  &.left-top {
+    background-color: $red-variation;
+    opacity: .8;
+    position: absolute;
+    top: 500px;
+    transform: skewY(-45deg);
+    transform-origin: bottom left;
+    width: 500px;
+  }
 
-.refreshBanner-sizeSmall {
-  height: 325px;
-  padding-top: 74px;
+  &.left-topHomepage {
+    top: 500px;
+  }
+
+  &.right-bottom {
+    @include make-sm-column(7);
+    background-color: darken($red-variation, 7%);
+    height: 500px;
+    opacity: .8;
+    transform: skewX(-45deg);
+    transform-origin: 0 0;
+  }
+
+  &.right-bottomHomepage {
+    @include make-sm-column(8);
+    @include make-md-column(6.5);
+    height: 450px;
+  }
+
+  &.right-bottomBottom {
+    @include make-sm-column(6.5);
+    @include make-md-column(5);
+    height: 300px;
+    opacity: .5;
+  }
+
+  &.left-topBottom {
+    opacity: .5;
+
+  }
 }
 
 .refreshBanner-ctaContainer {
-  bottom: -20vw;
-  float: right;
-  height: 40%;
-  margin-right: 7.5%;
-  position: relative;
-}
-
-.refreshBanner-ctaBox {
-  text-align: right;
+  bottom: 10%;
+  margin: 0 auto;
+  position: absolute;
   width: 100%;
 }
 
-.refreshBanner-ctaHeadline {
-  color: $white;
-  font-size: 4vw;
-  line-height: .9em;
-  text-transform: uppercase;
+.refreshBanner-ctaBox {
+  text-align: center;
+  width: 100vw;
 }
 
-@media only screen and (min-width: $screen-md-min) {
-  .refreshBanner-boxContainer {
-    float: left;
-    width: 700px;
-  }
-
-  .refresh-headlineHomepage {
-    font-size: 60px;
-  }
-
-  .refreshBanner-ctaHeadline {
-    font-size: 45px;
-  }
+.refreshBanner-ctaHeadline {
+  display: none;
 }
 
 @media only screen and (min-width: $screen-sm-min) {
-  .refreshBanner-boxContainer {
-    float: left;
-    width: 60%;
-  }
-
-  .refreshBanner-boxContainer2 {
-    width: 68%;
-  }
-
-  .refreshBanner-innerTopLeft2 {
-    width: 14.0667%;
-  }
-
-  .refreshBanner-innerBottomLeft2 {
-    width: 14.0667%;
-  }
-
   .refresh-headlineHomepage {
     font-size: 4.5vw;
   }
 
-  .refreshBanner-interior {
-    width: 50%;
+  .refreshBanner-boxContainerBottom {
+    width: 100%;
+  }
+
+  .refreshBanner-line {
+    &.left-topBottom {
+      top: 700px;
+    }
+  }
+
+  .refreshBanner-ctaContainer {
+    bottom: 18%;
+    height: 50%;
+    margin-right: 7.5%;
+    position: absolute;
+    right: 0;
+  }
+
+  .refreshBanner-ctaBox {
+    text-align: right;
+    width: 100%;
+  }
+
+  .refreshBanner-ctaHeadline {
+    color: $white;
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .refreshBanner-boxContainerBottom {
+    top: 200px;
+  }
+
+  .refreshBanner-line {
+    &.left-topBottom {
+      top: 700px;
+    }
+  }
+
+  .refreshBanner-ctaContainer {
+    bottom: 10%;
+  }
+
+  .refreshBanner-landingPageContainer {
+    top: -20px;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .refreshBanner-boxContainerBottom {
+    top: 175px;
+  }
+
+  .refreshBanner-line {
+    &.left-topBottom {
+      top: 675px;
+    }
+  }
+
+  .refreshBanner-ctaContainer {
+    bottom: 10%;
+  }
+
+  .refreshBanner-landingPageContainer {
+    top: -100px;
   }
 }
 
 @media only screen and (max-width: $screen-xs-max) {
-  .refreshBanner-sizeHomepage {
-    height: 105vw;
+  .refreshBanner-homepage {
+    height: 100vw;
     max-height: 500px;
     padding-top: 10%;
   }
 
   .refreshBanner-container {
-    width: 80%;
+    height: 90vw;
+    max-height: 500px;
   }
 
   .refresh-headlineHomepage {
     font-size: 7.25vw;
   }
 
+  .refreshBanner-boxContainerBottom {
+    top: 175px;
+  }
+
+  .refreshBanner-line {
+    &.left-topBottom {
+      top: 675px;
+    }
+  }
+
   .refreshBanner-ctaContainer {
-    bottom: -15vw;
+    bottom: 18%;
     margin: 0 auto;
     position: absolute;
     width: 100%;
   }
 
   .refreshBanner-ctaBox {
-    text-align: center;
-    width: 100vw;
+    width: 80%;
   }
 
-  .refreshBanner-ctaHeadline {
-    display: none;
+  .ghost {
+    width: 70%;
   }
 }
 
+@media only screen and (max-width: $screen-xs-min) {
+  .refreshBanner-ctaContainer {
+    bottom: 5%;
+  }
+}

@@ -1,18 +1,25 @@
-<!--Header -->
-<% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
-<div class="refreshBanner <%- (typeof size != 'undefined') ? 'refreshBanner-size'+size : '' %>">
-  <div class="refreshBanner-container">
-    <div class="refreshBanner-boxContainer refreshBanner-<%- (typeof size != 'undefined') ? 'interior' : '' %>">
-      <div class="refreshBanner-boxTop refreshBanner-boxTopInterior">
-        <div class="refreshBanner-innerTopLeft"></div>
-          <div class="refreshBanner-innerTopRight">
-              <h2 class="refresh-headline"><%- (typeof desc != 'undefined') ? desc : default_desc %></h2>
-          </div>
+<% if(!desc) { var desc = "we guarantee a 99.99% openstack API uptime."; } %>
+<div class="refreshBanner <%- (typeof type != 'undefined') ? 'refreshBanner-'+type : '' %>">
+  <div class="refreshBanner-container <%- (typeof type != 'undefined') ? 'refreshBanner-'+type+'Container' : '' %>">
+    <div class="refreshBanner-boxContainer">
+      <div class="refreshBanner-textRow">
+        <div class="refreshBanner-textContainer refreshBanner-textContainerInterior">
+          <h2 class="refreshBanner-headline refresh-headlineInterior"><%- desc %></h2>
         </div>
-      <div class="refreshBanner-boxBottom">
-        <div class="refreshBanner-innerBottomLeft"></div>
-        <div class="refreshBanner-innerBottomRight"></div>
       </div>
+      <span class="refreshBanner-line right-bottom">&nbsp;</span>
     </div>
+
+    <span class="refreshBanner-line left-top">&nbsp;</span>
   </div>
 </div>
+
+<script src="../../../js/global-components/tracking/tracking.js" charset="utf-8"></script>
+<script src="../../../js/pattern-components/headers/headers.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    // Note: Timeout is simply for offsetting zoolander navigation and shouldn't
+    // be copied into production.
+    setTimeout(Zoolander.Banners.init, 800);
+  });
+</script>

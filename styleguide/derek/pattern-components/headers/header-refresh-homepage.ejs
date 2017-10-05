@@ -1,31 +1,23 @@
-<!--Header -->
-<% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
-<div class="refreshBanner refreshBanner-sizeHomepage">
+<div class="refreshBanner refreshBanner-homepage">
   <div class="refreshBanner-container">
-    <div class="refreshBanner-boxContainer">
-      <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
-        <div class="refreshBanner-innerTopLeft"></div>
-          <div class="refreshBanner-innerTopRight">
-              <h2 class="refresh-headline refresh-headlineHomepage">certified to manage the worlds leading clouds.</h2>
-          </div>
-        </div>
-      <div class="refreshBanner-boxBottom">
-        <div class="refreshBanner-innerBottomLeft">&nbsp;</div>
-        <div class="refreshBanner-innerBottomRight">&nbsp;</div>
-      </div>
-      <div class="refreshBanner-boxContainer refreshBanner-boxContainer2">
-        <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
-          <div class="refreshBanner-innerTopLeft refreshBanner-innerTopLeft2"></div>
-            <div class="refreshBanner-innerTopRight refreshBanner-innerTopRight2">
-                <h2 class="refresh-headline refresh-headlineHomepage">because one size doesn‘t fit all.</h2>
-            </div>
-          </div>
-        <div class="refreshBanner-boxBottom">
-          <div class="refreshBanner-innerBottomLeft refreshBanner-innerBottomLeft2">&nbsp;</div>
-          <div class="refreshBanner-innerBottomRight refreshBanner-innerBottomRight2">&nbsp;</div>
+    <div class="refreshBanner-boxContainer refreshBanner-boxContainerHomepage">
+      <div class="refreshBanner-textRow">
+        <div class="refreshBanner-textContainer refreshBanner-textContainerHomepage">
+          <h2 class="refreshBanner-headline refresh-headlineHomepage">certified to manage the worlds leading clouds.</h2>
         </div>
       </div>
+      <span class="refreshBanner-line right-bottom right-bottomHomepage">&nbsp;</span>
     </div>
+    <div class="refreshBanner-boxContainer refreshBanner-boxContainerBottom">
+      <div class="refreshBanner-textRow refreshBanner-textRowBottom">
+        <div class="refreshBanner-textContainer refreshBanner-textContainerHomepageBottom">
+          <h2 class="refreshBanner-headline refresh-headlineHomepageBottom">because one size doesn‘t fit all.</h2>
+        </div>
+      </div>
+      <span class="refreshBanner-line right-bottom right-bottomBottom">&nbsp;</span>
+    </div>
+    <span class="refreshBanner-line left-top left-topHomepage">&nbsp;</span>
+    <span class="refreshBanner-line left-top left-topBottom">&nbsp;</span>
 
     <div class="refreshBanner-ctaContainer">
       <div class="refreshBanner-ctaBox">
@@ -33,6 +25,15 @@
         <a class="refreshBanner-ctaButton button ghost">Learn More</a>
       </div>
     </div>
-
   </div>
 </div>
+
+<script src="../../../js/global-components/tracking/tracking.js" charset="utf-8"></script>
+<script src="../../../js/pattern-components/headers/headers.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    // Note: Timeout is simply for offsetting zoolander navigation and shouldn't
+    // be copied into production.
+    setTimeout(Zoolander.Banners.homepageInit, 800);
+  });
+</script>
