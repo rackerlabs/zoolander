@@ -18,7 +18,8 @@
 <script src="../../../js/pattern-components/headers/headers.js" charset="utf-8"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    Zoolander.Banners.init();
+    // Note: Timeout is simply for offsetting zoolander navigation and shouldn't
+    // be copied into production.
+    setTimeout(Zoolander.Banners.init, 800);
   });
 </script>
-

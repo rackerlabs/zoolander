@@ -9,6 +9,7 @@ module.exports = {
       "document": true,
       "jQuery": true,
       "Zoolander": true,
+      "FontFaceObserver": true,
     },
     "rules": {
       // Errors.
