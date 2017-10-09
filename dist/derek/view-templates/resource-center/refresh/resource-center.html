@@ -185,214 +185,293 @@
 </div>
 <!--[/navigation]-->
 <script src="js/global-components/mainnav/mainnav.js" charset="utf-8"></script>
-<div class="contentOffset"><div class="resourcecenter-background half-padding-full">
-  <div class="container">
-    <div class="resourcecenter-fullWrapper resourcecenter-webinar">      <div class="hidden-xs panel-flex col-md-4 col-sm-6 text-right">
-        <div class="resourcecenter-visualWrapper">
-        
-        
-        </div>
-      </div>
-      <div class="col-md-8 col-sm-6 col-xs-12">
-        <div class="resourcecenter-infoWrapper">
-          <div class="resourcecenter-titleFull"><h1>Resource Title</h1></div>
-          <div class="resourcecenter-descFull"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p></div>
-          <div class="resourcecenter-downloadFull">
-          
-            <a href="javascript:void(0)" class="resourcecenter-button track-click">View Resource</a>
-          
+<div class="contentOffset"><div class="rsFilter-section">
+  <div class="rsFilter-row row-eq-height">
+    <div class="rsFilter-bar">
+      <button class="rsFilter-hamburger"></button>
+      <div class="rsFilter-mobileTitle">Find a Resource</div>
+      <form class="rsFilter-form">
+        <div class="rsFilter-formTitle">Find a Resource</div>
+          <h6 class="rsFilter-fieldTitle">Products</h6>
+          <div class="form-item form-type-select">
+            <select class="rsFilter-formSelect form-select">
+              <option value="All" selected="selected">- Any -</option>
+              <option value="101">AWS</option>
+              <option value="102">Azure</option>
+            </select>
           </div>
-          <div class="resourcecenter-social">
-            <!-- LinkedIn JS -->
-<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-
-<!-- Facebook JS -->
-<script>
-window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '2330309597194845',
-      xfbml      : true,
-      version    : 'v2.10'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<!-- Twiiter JS -->
-<script>
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));
-</script>
-
-<!-- Google+ JS -->
-<script src="https://apis.google.com/js/platform.js" async defer="defer"></script>
-
-<!-- Button Codes -->
-<div class="social-button social-linkedinWrapper">
-  <script type="IN/Share" data-url="rackspace.com"></script>
-</div>
-<div class="social-button social-facebookWrapper">
-  <a class="fb-share" href="javascript:void(0);">
-    <span class="fb-share-icon"></span><span class="fb-share-text">Share</span>
-  </a>
-</div>
-<div class="social-button social-twitterWrapper">
-  <a href="https://twitter.com/intent/tweet?text=Checkout this resource from @Rackspace" class="twitter-share-button" data-show-count="false">Tweet</a>
-</div>
-<div class="social-button social-googleplusWrapper">
-  <div class="g-plus" data-action="share"></div>
-</div>
-<div class="social-button social-emailWrapper">
-  <a class="social-shareEmail" href="mailto:?subject=Checkout this great resource from Rackspace&body=I found this great resource from Rackspace. http://www.rackspace.com">Email</a>
-</div>
-
-<!--[/social-tracking]-->
-<script src="../../../js/global-components/tracking/tracking.js" charset="utf-8"></script>
-<script src="../../../js/global-components/social/social-tracking.js" charset="utf-8"></script>
-<script>
-// Twitter Share Tracking
-if (typeof twttr !== 'undefined') {
-  twttr.ready((twttr) => {
-    twttr.events.bind('click', (e) => {
-      Zoolander.SocialTracking.twitter(e);
-    });
-  });
-}
-
-// LinkedIn Share Tracking
-IN.Event.onOnce(IN, 'systemReady', () => {
-  Zoolander.SocialTracking.linkedin();
-});
-
-// Facebook Share Tracking
-Zoolander.SocialTracking.facebook();
-
-// Email Share Tracking
-Zoolander.SocialTracking.email();
-</script>
+          <h6 class="rsFilter-fieldTitle">Resource Type</h6>
+          <div class="rsFilter-checkbox">
+                      </div>
+        <button class="rsFilter-button">Show Results</button>
+      </form>
+    </div>
+    <div class="rsFilter-content">
+      <div class="resourcecenter-row row-eq-height">
+        <!-- Related Resources -->
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
 
 
-          </div>
-        </div>
+
+
+
+<!-- Additional Resources Pattern -->
+
+<div class="resource-wrapper resource-document resource-document track-click">  <a href="/derek/view-templates/resource-center/pdf" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Rackspace Managed Backup and Encryption</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
+    </div>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Rackspace Managed Backup and Encryption</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">This is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource title</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="resourcecenter-webinar resourcecenter-dividerWrapper">  <div class="resourcecenter-divider rsweb container"></div>
+  </a>
 </div>
 
 
-<!-- Related Resources -->
-<div class="container standard-padding-full">
-  <div class="resourcecenter-relatedWrapper">
-    <h2>Related Resources</h2>
-  </div>
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
 
-  <div class="row row-eq-height">
-    <div class="col-sm-4 panel-flex">
-      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
 
 
 
 
 <!-- Additional Resources Pattern -->
 
-<div class="resourceWrapper resource-pdfIcon track-click">  <a href="/derek/view-templates/resource-center/pdf">    <div class="resource-titleRow">
-      <div class="resource-iconWrapper"></div>
-      <div class="resource-titleWrapper">
-        <h5>This is a really ridiculously long resource title</h5>      </div>
+<div class="resource-wrapper resource-document resource-documentImage track-click">  <a href="/derek/view-templates/resource-center/webinar" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Resource Title</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
     </div>
-    <div class="resource-descRow">
-      <div class="resource-descWrapper">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
-    </div>
-    <div class="resource-linkWrapper">
-      <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Resource Title</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
     </div>
   </a>
 </div>
 
-    </div>
-    <div class="col-sm-4 panel-flex">
-      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
 
 
 
 
 <!-- Additional Resources Pattern -->
 
-<div class="resourceWrapper resource-webinarIcon track-click">  <a href="/derek/view-templates/resource-center/webinar">    <div class="resource-titleRow">
-      <div class="resource-iconWrapper"></div>
-      <div class="resource-titleWrapper">
-        <h5>Resource Title</h5>      </div>
+<div class="resource-wrapper resource-document resource-document track-click">  <a href="/derek/view-templates/resource-center/code" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Resource Title</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
     </div>
-    <div class="resource-descRow">
-      <div class="resource-descWrapper">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
-    </div>
-    <div class="resource-linkWrapper">
-      <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Resource Title</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
     </div>
   </a>
 </div>
 
-    </div>
-    <div class="col-sm-4 panel-flex">
-      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+      </div>
+      <div class="resourcecenter-row row-eq-height">
+        <!-- Related Resources -->
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
 
 
 
 
 <!-- Additional Resources Pattern -->
 
-<div class="resourceWrapper resource-storiesIcon track-click">  <a href="/derek/view-templates/resource-center/code">    <div class="resource-titleRow">
-      <div class="resource-iconWrapper"></div>
-      <div class="resource-titleWrapper">
-        <h5>Resource Title</h5>      </div>
+<div class="resource-wrapper resource-document resource-document track-click">  <a href="/derek/view-templates/resource-center/pdf" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Rackspace Managed Backup and Encryption</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
     </div>
-    <div class="resource-descRow">
-      <div class="resource-descWrapper">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
-    </div>
-    <div class="resource-linkWrapper">
-      <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Rackspace Managed Backup and Encryption</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">This is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource title</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
     </div>
   </a>
 </div>
 
+
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+
+<!-- Additional Resources Pattern -->
+
+<div class="resource-wrapper resource-document resource-documentImage track-click">  <a href="/derek/view-templates/resource-center/webinar" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Resource Title</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
+    </div>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Resource Title</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+
+<!-- Additional Resources Pattern -->
+
+<div class="resource-wrapper resource-document resource-document track-click">  <a href="/derek/view-templates/resource-center/code" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Resource Title</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
+    </div>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Resource Title</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+      </div>
+      <div class="resourcecenter-row row-eq-height">
+        <!-- Related Resources -->
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+
+<!-- Additional Resources Pattern -->
+
+<div class="resource-wrapper resource-document resource-document track-click">  <a href="/derek/view-templates/resource-center/pdf" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Rackspace Managed Backup and Encryption</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
+    </div>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Rackspace Managed Backup and Encryption</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">This is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource titleThis is a really ridiculously long resource title This is a really ridiculously long resource title</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+
+<!-- Additional Resources Pattern -->
+
+<div class="resource-wrapper resource-document resource-documentImage track-click">  <a href="/derek/view-templates/resource-center/webinar" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Resource Title</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
+    </div>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Resource Title</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+
+<!-- Additional Resources Pattern -->
+
+<div class="resource-wrapper resource-document resource-document track-click">  <a href="/derek/view-templates/resource-center/code" class="resource-innerLink">    <div class="resource-top">
+      <div class="resource-logo"></div>
+      <div class="resource-titleTopWrap">
+        <h5 class="resource-titleTop">Resource Title</h5>      </div>
+      <div class="resource-pdfDownload">&nbsp;</div>
+    </div>
+    <div class="resource-bottom">
+      <div class="resource-titleWrap">
+        <h5 class="resource-title">Resource Title</h5>      </div>
+      <div class="resource-rule">&nbsp;</div>
+      <div class="resource-descWrap">
+        <p class="resource-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
+      <div class="resource-linkWrap">
+        <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+      </div>
     </div>
   </div>
-
-  <div class="text-center">
-    <div class="resourcecenter-allResourceLink">
-      <a href="javascript:void(0)" class="resourcecenter-allResourceLink">View All Resources</a>
-    </div>
-  </div>
-
-</div></div><div class="backtotop-wrapper">
+</div>
+<script src="js/global-components/filter-bar/filter-bar.js" charset="utf-8"></script></div><div class="backtotop-wrapper">
   <div class="row">
     <div class="backtotop-linkwrapper">
       <a href="#" class="backtotop-link">Back to Top<i class="fa-arrow-circle-up backtotop-icon"></i></a>

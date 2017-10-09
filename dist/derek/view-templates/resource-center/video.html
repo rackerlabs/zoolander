@@ -214,20 +214,47 @@
           </div>
           <div class="resourcecenter-social">
             <!-- LinkedIn JS -->
-<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 
 <!-- Facebook JS -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2330309597194845',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <!-- Twiiter JS -->
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
 
 <!-- Google+ JS -->
 <script src="https://apis.google.com/js/platform.js" async defer="defer"></script>
@@ -237,7 +264,9 @@
   <script type="IN/Share" data-url="rackspace.com"></script>
 </div>
 <div class="social-button social-facebookWrapper">
-  <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+  <a class="fb-share" href="javascript:void(0);">
+    <span class="fb-share-icon"></span><span class="fb-share-text">Share</span>
+  </a>
 </div>
 <div class="social-button social-twitterWrapper">
   <a href="https://twitter.com/intent/tweet?text=Checkout this resource from @Rackspace" class="twitter-share-button" data-show-count="false">Tweet</a>
@@ -248,6 +277,32 @@
 <div class="social-button social-emailWrapper">
   <a class="social-shareEmail" href="mailto:?subject=Checkout this great resource from Rackspace&body=I found this great resource from Rackspace. http://www.rackspace.com">Email</a>
 </div>
+
+<!--[/social-tracking]-->
+<script src="../../../js/global-components/tracking/tracking.js" charset="utf-8"></script>
+<script src="../../../js/global-components/social/social-tracking.js" charset="utf-8"></script>
+<script>
+// Twitter Share Tracking
+if (typeof twttr !== 'undefined') {
+  twttr.ready((twttr) => {
+    twttr.events.bind('click', (e) => {
+      Zoolander.SocialTracking.twitter(e);
+    });
+  });
+}
+
+// LinkedIn Share Tracking
+IN.Event.onOnce(IN, 'systemReady', () => {
+  Zoolander.SocialTracking.linkedin();
+});
+
+// Facebook Share Tracking
+Zoolander.SocialTracking.facebook();
+
+// Email Share Tracking
+Zoolander.SocialTracking.email();
+</script>
+
 
           </div>
         </div>
@@ -285,7 +340,7 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
     </div>
     <div class="resource-linkWrapper">
-      <p class="resource-link">View Resource <i class="fa fa-caret-right"></i></p>
+      <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
     </div>
   </a>
 </div>
@@ -309,7 +364,7 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
     </div>
     <div class="resource-linkWrapper">
-      <p class="resource-link">View Resource <i class="fa fa-caret-right"></i></p>
+      <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
     </div>
   </a>
 </div>
@@ -333,7 +388,7 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>      </div>
     </div>
     <div class="resource-linkWrapper">
-      <p class="resource-link">View Resource <i class="fa fa-caret-right"></i></p>
+      <p class="resource-link">View Resource <i class="fa fa-caret-right resource-linkCaret"></i></p>
     </div>
   </a>
 </div>
