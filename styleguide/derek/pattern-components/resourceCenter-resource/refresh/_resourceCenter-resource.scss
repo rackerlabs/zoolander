@@ -88,6 +88,17 @@
   width: 60px;
 }
 
+.resource-codeImg {
+  background: url('../imgs/derek/resourceCenter/codeRepo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  margin: 10px auto;
+  min-height: 150px;
+  width: 80%;
+}
+
 .resource-title {
   color: $gray-base;
   font-family: $heading;
@@ -151,3 +162,4 @@
 //had to make maintainable
 @include resource-refresh('.resource-document', $rackspace-red);
 @include resource-refresh('.resource-documentImage', url('../imgs/BG.jpg'));
+@include resource-refresh('.resource-code', $gray-lightest);

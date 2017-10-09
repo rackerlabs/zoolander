@@ -9,11 +9,21 @@
 <div class="resource-wrapper resource-<%- type -%> resource-<%- type -%><%- image -%> track-click">
   <a href="<%- link -%>" class="resource-innerLink">
     <div class="resource-top">
+
+    <!-- for code type -->
+    <% if(type == 'document') { %>
       <div class="resource-logo"></div>
       <div class="resource-titleTopWrap">
         <h5 class="resource-titleTop"><%- title -%></h5>
       </div>
       <div class="resource-pdfDownload">&nbsp;</div>
+    <% } %>
+
+    <!-- for code type -->
+    <% if(type == 'code') { %>
+      <div class="resource-codeImg"></div>
+    <% } %>
+
     </div>
     <div class="resource-bottom">
       <div class="resource-titleWrap">
