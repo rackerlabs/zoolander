@@ -99,6 +99,27 @@
   width: 80%;
 }
 
+.resource-videoThumb {
+  background: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  height: 100%;
+  margin: 10px auto;
+  min-height: 150px;
+  opacity: .75;
+  width: 80%;
+}
+
+.resource-playIcon {
+  color: $gray-lightest;
+  margin: 0 auto;
+  opacity: .9;
+  position: relative;
+  top: 50px;
+  width: 90%;
+}
+
 .resource-title {
   color: $gray-base;
   font-family: $heading;
@@ -144,6 +165,12 @@
   .resource-wrapper {
     margin: 10px;
   }
+
+  .resource-videoThumb {
+    background-size: 100%;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 
@@ -156,6 +183,8 @@
   .resource-wrapper {
     margin: 20px;
   }
+
+
 }
 
 
@@ -163,3 +192,4 @@
 @include resource-refresh('.resource-document', $rackspace-red);
 @include resource-refresh('.resource-documentImage', url('../imgs/BG.jpg'));
 @include resource-refresh('.resource-code', $gray-lightest);
+@include resource-refresh('.resource-video', $black);
