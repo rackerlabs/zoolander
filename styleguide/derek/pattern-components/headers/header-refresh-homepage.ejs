@@ -1,38 +1,45 @@
+<%
+if(!lang) { var lang = 'En'; }
+if(!banner_top) { var banner_top = "Certified to Manage the World’s Leading Clouds."; }
+if(!banner_bottom) { var banner_bottom = "Because One Size Doesn’t Fit All."; }
+%>
+
 <!--Header -->
-<% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
-<div class="refreshBanner refreshBanner-sizeHomepage">
-  <div class="refreshBanner-container">
+<div class="refreshBanner refreshBanner-sizeHomepage refreshBanner-lang<%- lang %>">
+  <div class="refreshBanner-container refreshBanner-containerHomepage">
     <div class="refreshBanner-boxContainer">
       <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
         <div class="refreshBanner-innerTopLeft"></div>
-          <div class="refreshBanner-innerTopRight">
-              <h2 class="refresh-headline refresh-headlineHomepage">certified to manage the worlds leading clouds.</h2>
-          </div>
+        <div class="refreshBanner-innerTopRight">
+          <h2 class="refresh-headline refresh-headlineHomepage"><%- banner_top %></h2>
         </div>
+      </div>
       <div class="refreshBanner-boxBottom">
         <div class="refreshBanner-innerBottomLeft">&nbsp;</div>
         <div class="refreshBanner-innerBottomRight">&nbsp;</div>
       </div>
-      <div class="refreshBanner-boxContainer refreshBanner-boxContainer2">
-        <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
-          <div class="refreshBanner-innerTopLeft refreshBanner-innerTopLeft2"></div>
-            <div class="refreshBanner-innerTopRight refreshBanner-innerTopRight2">
-                <h2 class="refresh-headline refresh-headlineHomepage">because one size doesn‘t fit all.</h2>
-            </div>
-          </div>
-        <div class="refreshBanner-boxBottom">
-          <div class="refreshBanner-innerBottomLeft refreshBanner-innerBottomLeft2">&nbsp;</div>
-          <div class="refreshBanner-innerBottomRight refreshBanner-innerBottomRight2">&nbsp;</div>
+    </div>
+    <div class="refreshBanner-boxContainer refreshBanner-boxContainer2">
+      <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
+        <div class="refreshBanner-innerTopLeft refreshBanner-innerTopLeft2"></div>
+        <div class="refreshBanner-innerTopRight refreshBanner-innerTopRight2">
+          <h2 class="refresh-headline refresh-headlineHomepage refresh-headlineHomepageBottom"><%- banner_bottom %></h2>
         </div>
+        <div class="refreshBanner-innerTopFarRight2"></div>
+      </div>
+      <div class="refreshBanner-boxBottom">
+        <div class="refreshBanner-innerBottomLeft refreshBanner-innerBottomLeft2">&nbsp;</div>
+        <div class="refreshBanner-innerBottomRight refreshBanner-innerBottomRight2">&nbsp;</div>
+        <div class="refreshBanner-innerBottomFarRight2"></div>
       </div>
     </div>
-
+    <div class="refreshBanner-farLeft"></div>
+    <div class="refreshBanner-farLeft refreshBanner-farLeftBottom"></div>
     <div class="refreshBanner-ctaContainer">
       <div class="refreshBanner-ctaBox">
         <h3 class="refreshBanner-ctaHeadline">find your<br/>best-fit<br/>solution</h3>
         <a class="refreshBanner-ctaButton button ghost">Learn More</a>
       </div>
     </div>
-
   </div>
 </div>

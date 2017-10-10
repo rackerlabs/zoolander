@@ -1,0 +1,102 @@
+<%- partial("../pattern-components/headers/header-refresh-homepage.ejs", {
+  lang: 'De',
+  banner_top: 'Zertifiziert für die Verwaltung der führenden Clouds.',
+  banner_bottom: 'Weil der Standard nicht für alle passt.'
+}) %>
+
+<div class="rsHomepage-announcement">
+	<div class="rsHomepage-leftStripContainer">
+		<div class="rsHomepage-annLeftBar">
+			<div class="rsHomepage-titleContainer">
+				<h2 class="rsHomepage-annLeftBar-header">TRANSFORM THE WAY YOU DO BUSINESS</h2>
+				<h3 class="rsHomepage-annLeftBar-subHeader">Offering expertise and support for your IT transformation</h3>
+			</div>
+		</div>
+		<div class="rsHomepage-annRight-iconBar"></div>
+	</div>
+	<div class="rsHomepage-annLeft">
+		<div class="rsHomepage-annLeftContainer">
+			<div class="rsHomepage-annLeft-content">
+				<p class="rsHomepage-annLeft-p">
+					Rackspace was here when the cloud began, we grew alongside it, and we became experts along the way.
+					Now we host and manage all the leading cloud technologies. And back it all with our signature Fanatical
+					Support® — the best-in-class service that’s behind everything we do.
+				</p>
+				<div class="rsHomepage-annLeft-awardsRow">
+					<div class="col-xs-4">
+						<div class="awards rsHomepage-awards">
+						  <h2 class="awards-title rsHomepage-awards-title">3000+</h2>
+						  <p class="awards-subhead rsHomepage-awards-sub">Dedicated Hosting Engineers</p>
+						</div>
+		    	</div>
+		    	<div class="col-xs-4">
+						<div class="awards rsHomepage-awards">
+							<h2 class="awards-title rsHomepage-awards-title">1000+</h2>
+						  <p class="awards-subhead rsHomepage-awards-sub">Microsoft Technical Certifications</p>
+						</div>
+				  </div>
+				  <div class="col-xs-4">
+						<div class="awards rsHomepage-awards">
+							<h2 class="awards-title rsHomepage-awards-title">300+</h2>
+						  <p class="awards-subhead rsHomepage-awards-sub">AWS Technical Certifications</p>
+						</div>
+				  </div>
+				 </div>
+			</div>
+		</div>
+	</div>
+	<div class="rsHomepage-annRight"></div>
+</div>
+
+<div class="rsHomepage-platformContainer">
+  <div class="rsHomepage-platformRow">
+    <div class="rsHomepage-platformTitleWrapper">
+      <h1 class="rsHomepage-platformH1">We Are The #1 Managed Cloud Provider</h1>
+      <h3 class="rsHomepage-platformSubhead">Your dedicated cloud hosting service experts</h3>
+      <p class="rsHomepage-platformParagraph">You need to evolve and innovate to be successful. But the cloud is as complex as it is powerful. Our experts are certified in all the leading cloud technologies - so you don’t have to be.</p>
+    </div>
+    <%- partial("../pattern-components/platforms/platforms.ejs") %>
+  </div>
+</div>
+
+
+<%- partial("../pattern-components/tabs/tabs-horizontal.ejs") %>
+
+
+  <!-- Quadrant -->
+  <div class="container-fluid quadrant" id="quadrant">
+    <div class="container">
+      <div class="quadrant-row">
+        <div class="quadrant-textContainer">
+          <h2 class="quadrant-title">Fanatical Support wherever you are, day or night, we have you covered 24x7x365</h2>
+          <p class="quadrant-text">We're more than just a hosting provider - we're your trusted service partner, and we're ready to help solve the toughest problems. Gartner has recognized us as a leader in their <a href="[rsweb:about:cloud-enabled]">Magic Quadrant for Cloud Enabled Managed Hosting.</a></p>
+            <div class="quadrant-buttonContainer">
+              <a class="button learning" href="[rsweb:why-rackspace]">Learn More</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%- partial("../pattern-components/blog-feed/blog-feed.ejs") %>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog formModal-dialog" role="document">
+    <div class="modal-content formModal-content">
+      <div class="formModal-header modal-no-header">
+        <h5>Do you need Sales or Support?</h5>
+        <button type="button" class="close formModal-closeIcon" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="formModal-body">
+        <h6>Sales</h6>
+        <h6>Support</h6>
+      </div>
+    </div>
+  </div>
+</div>
