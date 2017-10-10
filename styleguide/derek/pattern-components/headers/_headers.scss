@@ -365,3 +365,113 @@
   }
 }
 
+
+.refreshBannerCombined {
+  background: url('../imgs/BG.jpg');
+  background-position: center right;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+}
+
+.refreshBannerCombined-homepage {
+  height: 500px;
+}
+
+.refreshBannerCombined-internal {
+  height: 465px;
+  padding-top: 50px;
+}
+
+.refreshBannerCombined-container {
+  position: relative;
+  width: 100%;
+}
+
+.refreshBannerCombined-svg {
+  position: absolute;
+  right: 10%;
+  width: 180%;
+}
+
+.refreshBannerCombined-ctaContainer {
+  float: right;
+  height: 40%;
+  margin-right: 7.5%;
+  position: relative;
+}
+
+.refreshBannerCombined-ctaBox {
+  text-align: right;
+  width: 100%;
+}
+
+.refreshBannerCombined-ctaHeadline {
+  color: $white;
+  font-size: 4vw;
+  line-height: .9em;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .refreshBannerCombined-ctaContainer {
+    bottom: -400px;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+  }
+
+  .refreshBannerCombined-ctaBox {
+    text-align: center;
+    width: 100vw;
+  }
+
+  .refreshBannerCombined-ctaHeadline {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .refreshBannerCombined-homepage {
+    height: 550px;
+  }
+
+  .refreshBannerCombined-svg {
+    right: 39%;
+    top: 50px;
+    width: 120%;
+  }
+
+  .refreshBannerCombined-ctaContainer {
+    bottom: -300px;
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .refreshBannerCombined-homepage {
+    height: 600px;
+  }
+
+  .refreshBannerCombined-svg {
+    top: 60px;
+  }
+
+  .refreshBannerCombined-ctaHeadline {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .refreshBannerCombined-homepage {
+    height: 650px;
+  }
+
+  .refreshBannerCombined-container {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+
+  .refreshBannerCombined-ctaContainer {
+    bottom: -350px;
+  }
+}

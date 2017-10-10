@@ -1,38 +1,52 @@
-<!--Header -->
-<% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
-<div class="refreshBanner refreshBanner-sizeHomepage">
-  <div class="refreshBanner-container">
-    <div class="refreshBanner-boxContainer">
-      <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
-        <div class="refreshBanner-innerTopLeft"></div>
-          <div class="refreshBanner-innerTopRight">
-              <h2 class="refresh-headline refresh-headlineHomepage">certified to manage the worlds leading clouds.</h2>
-          </div>
-        </div>
-      <div class="refreshBanner-boxBottom">
-        <div class="refreshBanner-innerBottomLeft">&nbsp;</div>
-        <div class="refreshBanner-innerBottomRight">&nbsp;</div>
-      </div>
-      <div class="refreshBanner-boxContainer refreshBanner-boxContainer2">
-        <div class="refreshBanner-boxTop refreshBanner-boxTopHomepage">
-          <div class="refreshBanner-innerTopLeft refreshBanner-innerTopLeft2"></div>
-            <div class="refreshBanner-innerTopRight refreshBanner-innerTopRight2">
-                <h2 class="refresh-headline refresh-headlineHomepage">because one size doesn‘t fit all.</h2>
-            </div>
-          </div>
-        <div class="refreshBanner-boxBottom">
-          <div class="refreshBanner-innerBottomLeft refreshBanner-innerBottomLeft2">&nbsp;</div>
-          <div class="refreshBanner-innerBottomRight refreshBanner-innerBottomRight2">&nbsp;</div>
-        </div>
+<%
+if(!banner_top) { var banner_top = "Certified to Manage the World's Leading Clouds."; }
+if(!banner_bottom) { var banner_bottom = "Because One Size Doesn’t Fit All."; }
+%>
+
+<div class="refreshBannerCombined refreshBannerCombined-homepage">
+  <div class="refreshBannerCombined-container">
+    <div class="refreshBannerCombined-svgContainer">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      	 width="1442px" height="600px" viewBox="0 0 1442 600" style="enable-background:new 0 0 1442 777;"
+      	 class="refreshBannerCombined-svg" xml:space="preserve">
+        <style type="text/css">
+          .leftSide{opacity:0.8;fill:#AB2D34;}
+          .bottomSide{opacity:0.8;fill:#732126;}
+          .textBox{fill:#FFFFFF;}
+          .sourceText{display:none;}
+          .displayText{fill:#c40002;font-family:'Khand';font-weight:700;font-size:55px;line-height:55px;text-transform:uppercase;}
+          .leftSide2{opacity:0.5;fill:#AB2D34;}
+          .bottomSide2{opacity:0.5;fill:#732126;}
+        </style>
+        <g id="primaryBox">
+          <polygon class="leftSide poly-leftSide" points="777,95 140,777 0,777 777,0"/>
+          <polygon class="bottomSide poly-bottomSide" points="1442,95 805,777 140,777 777,95"/>
+          <rect x="777" y="0" class="textBox" width="665" height="95"/>
+          <text class="text" x="800" y="63">
+            <tspan class="sourceText"><%- banner_top %></tspan>
+          </text>
+        </g>
+        <g id="secondaryBox" transform="translate(0, 200)">
+          <polygon class="leftSide2 poly-leftSide" points="777,95 140,777 0,777 777,0"/>
+          <polygon class="bottomSide2 poly-bottomSide" points="1327,95 690,777 140,777 777,95"/>
+          <rect x="777" y="0" class="textBox" width="550" height="95"/>
+          <text class="text" x="800" y="63">
+            <tspan class="sourceText"><%- banner_bottom %></tspan>
+          </text>
+        </g>
+        <script type="application/ecmascript">
+        <% include headers.js %>
+        svgBannerSetContent();
+        </script>
+      </svg>
+
+    </div>
+    <div class="refreshBannerCombined-ctaContainer">
+      <div class="refreshBannerCombined-ctaBox">
+        <h3 class="refreshBannerCombined-ctaHeadline">find your<br>best-fit<br>solution</h3>
+        <a class="refreshBannerCombined-ctaButton button ghost">Learn More</a>
       </div>
     </div>
-
-    <div class="refreshBanner-ctaContainer">
-      <div class="refreshBanner-ctaBox">
-        <h3 class="refreshBanner-ctaHeadline">find your<br/>best-fit<br/>solution</h3>
-        <a class="refreshBanner-ctaButton button ghost">Learn More</a>
-      </div>
-    </div>
-
   </div>
+
 </div>

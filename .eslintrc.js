@@ -9,6 +9,8 @@ module.exports = {
       "document": true,
       "jQuery": true,
       "Zoolander": true,
+      "svgBannerGetAttributes": true,
+      "svgBannerStringSplitter": true,
     },
     "rules": {
       // Errors.

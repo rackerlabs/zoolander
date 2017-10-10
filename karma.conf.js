@@ -24,6 +24,8 @@ module.exports = function (config) {
       'styleguide/derek/global-components/social/social-tracking.js',
       'styleguide/derek/global-components/anchor-scroll/anchor-scroll.js',
       'styleguide/derek/global-components/**/*.spec.js',
+      'styleguide/derek/pattern-components/headers/headers.js',
+      'styleguide/derek/pattern-components/**/*.spec.js',
     ],
 
     client: {
@@ -48,6 +50,7 @@ module.exports = function (config) {
     preprocessors: {
       'styleguide/global/global.js': ['babel'],
       'styleguide/derek/global-components/**/*.js': ['babel'],
+      'styleguide/derek/pattern-components/**/*.js': ['babel'],
     },
 
 
