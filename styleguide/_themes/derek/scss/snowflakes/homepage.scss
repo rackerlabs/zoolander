@@ -33,13 +33,17 @@
 
 .rsHomepage-annLeftBar {
   background-color: $gray-darkest;
-  padding: 15px 40px;
+  padding: 15px 0;
   width: 100%;
+}
+
+.rsHomepage-titleContainer {
+  @include make-container;
 }
 
 .rsHomepage-annLeftBar-header {
   color: $white;
-  font-size: 1.7em;
+  font-size: 1.2em;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -51,21 +55,11 @@
   margin: 0;
 }
 
-.rsHomepage-titleContainer {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-}
-
 .rsHomepage-annLeft-content {
+  @include make-container;
   color: $gray-dark;
-  margin-left: auto;
-  margin-right: auto;
   min-height: 10px;
-  padding: 40px;
-  width: 100%;
+  padding: 40px 25px 60px;
 }
 
 .rsHomepage-annLeft-p {
@@ -109,6 +103,10 @@
     margin-top: -70px;
   }
 
+  .rsHomepage-annLeftBar-header {
+    font-size: 1.7em;
+  }
+
   .rsHomepage-leftStripContainer {
     margin-top: 60px;
     position: absolute;
@@ -134,13 +132,11 @@
 
   .rsHomepage-titleContainer {
     float: right;
-    padding: 0 40px;
     width: 635px;
   }
 
   .rsHomepage-annLeft-content {
     float: right;
-    padding: 40px;
     width: 635px;
   }
 
@@ -199,11 +195,103 @@
   }
 }
 
+
 // End of new home page layout
 .clear-container {
   @include make-sm-column(6);
   clear: both;
 }
+
+
+
+//quadrant
+
+.quadrant {
+  background-image: url('../imgs/derek/quadrant.jpg');
+  background-position: 23% bottom;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  padding: 20px 0;
+  padding-bottom: 0;
+}
+
+.quadrant-row {
+  @include make-row;
+}
+
+.quadrant-textContainer {
+  @include make-sm-column(6);
+  @include make-sm-column-push(6);
+}
+
+.quadrant-title,
+.quadrant-text {
+  text-align: right;
+}
+
+.quadrant-buttonContainer {
+  @include make-sm-column(6);
+  @include make-sm-column-push(6);
+  @include make-xs-column(6);
+  @include make-xs-column-push(3);
+  padding: $half-padding-full;
+  text-align: right;
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+
+  .quadrant {
+    background-position: 0% bottom;
+    background-repeat: no-repeat;
+    background-size: 54%;
+  }
+
+}
+
+@media only screen and (min-width: 1850px) {
+  .quadrant {
+    background-position: 30% bottom;
+    background-size: 30%;
+  }
+}
+
+
+@media only screen and (max-width: $screen-xs-max) {
+
+  .quadrant-title,
+  .quadrant-text,
+  .quadrant-buttonContainer {
+    text-align: center;
+  }
+
+  .quadrant {
+    background-image: none;
+  }
+
+  //equal height columns remove in small
+  .hostingOptions-productRow {
+    display: block;
+  }
+
+  .hostingOptions-product {
+    width: 100%;
+  }
+}
+
+//deprecating hosting-options
+
+@media only screen and (max-width: 600px) {
+  .hostingOptions-logoWide {
+    left: 5%;
+    width: 90%;
+  }
+
+  .hostingOptions-logo {
+    left: 25%;
+    width: 50%;
+  }
+}
+
 
 .hostingOptions-hoverArea {
   text-decoration: none;
@@ -300,138 +388,5 @@
 
   &:hover {
     color: $brand-primary;
-  }
-}
-
-
-//solutions
-
-.solutions-hoverArea {
-  text-decoration: none;
-
-  &:hover {
-
-    .border-white {
-      border-color: $mustard;
-    }
-
-    h6,
-    .rsweb {
-      color: $mustard;
-    }
-  }
-}
-
-
-//quadrant
-
-.quadrant {
-  background-image: url('../imgs/derek/quadrant.jpg');
-  background-position: 23% bottom;
-  background-repeat: no-repeat;
-  background-size: 35%;
-  padding: 20px 0;
-  padding-bottom: 0;
-}
-
-.quadrant-row {
-  @include make-row;
-}
-
-.quadrant-textContainer {
-  @include make-sm-column(6);
-  @include make-sm-column-push(6);
-}
-
-.quadrant-title,
-.quadrant-text {
-  text-align: right;
-}
-
-.quadrant-buttonContainer {
-  @include make-sm-column(6);
-  @include make-sm-column-push(6);
-  @include make-xs-column(6);
-  @include make-xs-column-push(3);
-  padding: $half-padding-full;
-  text-align: right;
-}
-
-.logoShowcase-image {
-  max-height: 40px;
-  max-width: 75%;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.logoShowcase-row {
-  @include make-row;
-  text-align: center;
-}
-
-.logoShowcase-logoItem {
-  display: inline-block;
-  padding: 1rem .75rem 0;
-  text-align: center;
-}
-
-
-@media only screen and (max-width: $screen-sm-max) {
-
-  .logoShowcase {
-    display: none;
-  }
-
-  .quadrant {
-    background-position: 0% bottom;
-    background-repeat: no-repeat;
-    background-size: 54%;
-  }
-
-}
-
-@media only screen and (min-width: 1850px) {
-  .quadrant {
-    background-position: 30% bottom;
-    background-size: 30%;
-  }
-}
-
-
-@media only screen and (max-width: $screen-xs-max) {
-
-  .quadrant-title,
-  .quadrant-text,
-  .quadrant-buttonContainer {
-    text-align: center;
-  }
-
-  .quadrant {
-    background-image: none;
-  }
-
-  .logoShowcase {
-    display: none;
-  }
-
-  //equal height columns remove in small
-  .hostingOptions-productRow {
-    display: block;
-  }
-
-  .hostingOptions-product {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .hostingOptions-logoWide {
-    left: 5%;
-    width: 90%;
-  }
-
-  .hostingOptions-logo {
-    left: 25%;
-    width: 50%;
   }
 }
