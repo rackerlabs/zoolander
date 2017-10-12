@@ -4,6 +4,7 @@
 
 .leadership-image {
   @include center-block;
+  max-height: 158px;
 }
 
 .leadership-imageWrapper {
@@ -18,6 +19,7 @@
 
 .leadership-name {
   margin-bottom: 0;
+  padding: 0 5px;
 }
 
 .leadership-nameCenter {
@@ -25,6 +27,7 @@
 }
 
 .leadership-title {
+  height: 55px;
   margin: 0;
 }
 
