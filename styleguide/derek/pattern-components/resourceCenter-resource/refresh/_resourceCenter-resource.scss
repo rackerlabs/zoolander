@@ -88,6 +88,21 @@
   width: 60px;
 }
 
+.resource-webinarDownload {
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 110px;
+  width: 60px;
+
+  &::after {
+    color: $white;
+    content: '\e8c6';
+    font-family: 'rswebfonts';
+    font-size: 4rem;
+  }
+}
+
 .resource-codeImg {
   background: url('../imgs/derek/resourceCenter/codeRepo.png');
   background-position: center;
@@ -191,5 +206,6 @@
 //had to make maintainable
 @include resource-refresh('.resource-document', $rackspace-red);
 @include resource-refresh('.resource-documentImage', url('../imgs/BG.jpg'));
+@include resource-refresh('.resource-webinar', $rackspace-red);
 @include resource-refresh('.resource-code', $gray-lightest);
 @include resource-refresh('.resource-video', $black);
