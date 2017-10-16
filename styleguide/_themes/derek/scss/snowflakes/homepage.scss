@@ -132,12 +132,12 @@
 
   .rsHomepage-titleContainer {
     float: right;
-    width: 635px;
+    width: 622px;
   }
 
   .rsHomepage-annLeft-content {
     float: right;
-    width: 635px;
+    width: 622px;
   }
 
   .rsHomepage-annRight {
@@ -184,7 +184,7 @@
   }
 }
 
-@media (max-width: $screen-lg) and (min-width: $screen-md-min) {
+@media (max-width: $screen-md-max) and (min-width: $screen-md-min) {
 
   .rsHomepage-titleContainer {
     width: 500px;

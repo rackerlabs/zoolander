@@ -367,7 +367,7 @@
 
 
 .refreshBannerCombined {
-  background: url('../imgs/BG.jpg');
+  background-image: url('../imgs/BG.jpg');
   background-position: center right;
   background-size: cover;
   overflow: hidden;
@@ -397,7 +397,7 @@
 .refreshBannerCombined-ctaContainer {
   float: right;
   height: 40%;
-  margin-right: 7.5%;
+  margin-right: 60px;
   position: relative;
 }
 
@@ -408,12 +408,19 @@
 
 .refreshBannerCombined-ctaHeadline {
   color: $white;
-  font-size: 4vw;
+  font-size: 3.75rem;
   line-height: .9em;
   text-transform: uppercase;
 }
 
 @media only screen and (max-width: $screen-xs-max) {
+
+  .refreshBannerCombined-internal {
+    background-blend-mode: color;
+    background-color: $black;
+    background-image: none;
+  }
+
   .refreshBannerCombined-ctaContainer {
     bottom: -400px;
     margin: 0 auto;
@@ -455,10 +462,6 @@
   .refreshBannerCombined-svg {
     top: 60px;
   }
-
-  .refreshBannerCombined-ctaHeadline {
-    font-size: 4rem;
-  }
 }
 
 @media only screen and (min-width: $screen-lg-min) {
@@ -468,7 +471,7 @@
 
   .refreshBannerCombined-container {
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 1330px;
   }
 
   .refreshBannerCombined-ctaContainer {

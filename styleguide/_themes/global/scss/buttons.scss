@@ -75,15 +75,26 @@
   background-color: transparent;
   border: 3px solid $white;
   color: $white;
-  font-size: 1.25rem;
+  font-family: $heading;
+  font-size: 1.5rem;
   font-weight: $font-weight-black;
-  padding: 8px 47px;
+  padding: 6px 47px;
+  position: relative;
   text-transform: uppercase;
 
   &:hover {
     background-color: $white;
     color: $black;
   }
+
+  &::after {
+    content: '\e801';
+    font-family: 'rswebfonts';
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+
 }
 
 .button {
