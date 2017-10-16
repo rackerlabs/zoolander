@@ -63,7 +63,7 @@
 
 .resource-titleTopWrap {
   flex: 1 0 auto;
-  margin: 10px 20px;
+  margin: 5px 40px 10px 20px;
 }
 
 .resource-titleTop {
@@ -112,6 +112,19 @@
   margin: 10px auto;
   min-height: 150px;
   width: 80%;
+}
+
+.resource-supportImage {
+  background: url('../imgs/derek/resourceCenter/supportIcon.png');
+  background-position: left 50%;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  display: none;
+  height: 55px;
+  position: absolute;
+  right: 0;
+  top: 110px;
+  width: 55px;
 }
 
 .resource-videoThumb {
@@ -195,6 +208,10 @@
     display: block;
   }
 
+  .resource-supportImage {
+    display: block;
+  }
+
   .resource-wrapper {
     margin: 20px;
   }
@@ -208,4 +225,5 @@
 @include resource-refresh('.resource-documentImage', url('../imgs/BG.jpg'));
 @include resource-refresh('.resource-webinar', $rackspace-red);
 @include resource-refresh('.resource-code', $gray-lightest);
+@include resource-refresh('.resource-support', $blue-login);
 @include resource-refresh('.resource-video', $black);
