@@ -1,18 +1,27 @@
 <!--Header -->
+
 <% default_desc = 'the cloud is a mystery wrapped in a riddle.<br/>We can unwrap it for you' %>
 <div class="refreshBanner <%- (typeof size != 'undefined') ? 'refreshBanner-size'+size : '' %>">
+
   <div class="refreshBanner-container">
     <div class="refreshBanner-boxContainer refreshBanner-<%- (typeof size != 'undefined') ? 'interior' : '' %>">
       <div class="refreshBanner-boxTop refreshBanner-boxTopInterior">
         <div class="refreshBanner-innerTopLeft"></div>
-          <div class="refreshBanner-innerTopRight">
-              <h2 class="refresh-headline"><%- (typeof desc != 'undefined') ? desc : default_desc %></h2>
-          </div>
+        <div class="refreshBanner-innerTopRight">
+          <h2 class="refresh-headline"><%- (typeof desc != 'undefined') ? desc : default_desc %></h2>
         </div>
+      </div>
       <div class="refreshBanner-boxBottom">
         <div class="refreshBanner-innerBottomLeft"></div>
         <div class="refreshBanner-innerBottomRight"></div>
       </div>
     </div>
   </div>
+
 </div>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $(".refresh-headline").fitText(0.75, { maxFontSize: '55px' });
+});
+</script>
