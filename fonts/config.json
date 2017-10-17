@@ -3527,6 +3527,18 @@
       ]
     },
     {
+      "uid": "5de9370846a26947e03f63142a3f1c07",
+      "css": "angle-up",
+      "code": 61702,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e4dde1992f787163e2e2b534b8c8067d",
+      "css": "angle-down",
+      "code": 61703,
+      "src": "fontawesome"
+    },
+    {
       "uid": "ddf2f008a407294136a5aae9c27bbf1b",
       "css": "srv-web-hosting-2",
       "code": 59841,
