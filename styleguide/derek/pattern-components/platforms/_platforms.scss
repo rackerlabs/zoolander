@@ -5,7 +5,8 @@
 }
 
 .rsHomepage-platformRow {
-  @include make-row;
+  margin-left: -7px;
+  margin-right: -7px;
 }
 
 .rsHomepage-platformTitleWrapper {

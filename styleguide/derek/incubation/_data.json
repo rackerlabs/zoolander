@@ -10,6 +10,15 @@
   "homepage": {
     "css": "css/derek.css"
   },
+  "homepage-es": {
+    "css": "css/derek.css"
+  },
+  "homepage-pt": {
+    "css": "css/derek.css"
+  },
+  "homepage-de": {
+    "css": "css/derek.css"
+  },
   "events": {
     "css": "css/derek.css"
   },
