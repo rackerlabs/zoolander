@@ -2,12 +2,12 @@
 
  @font-face {
   font-family: 'rswebfonts';
-  src: url('../font/rswebfonts.eot?42745553');
-  src: url('../font/rswebfonts.eot?42745553#iefix') format('embedded-opentype'),
-       url('../font/rswebfonts.woff2?42745553') format('woff2'),
-       url('../font/rswebfonts.woff?42745553') format('woff'),
-       url('../font/rswebfonts.ttf?42745553') format('truetype'),
-       url('../font/rswebfonts.svg?42745553#rswebfonts') format('svg');
+  src: url('../font/rswebfonts.eot?94128994');
+  src: url('../font/rswebfonts.eot?94128994#iefix') format('embedded-opentype'),
+       url('../font/rswebfonts.woff2?94128994') format('woff2'),
+       url('../font/rswebfonts.woff?94128994') format('woff'),
+       url('../font/rswebfonts.ttf?94128994') format('truetype'),
+       url('../font/rswebfonts.svg?94128994#rswebfonts') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'rswebfonts';
-    src: url('../font/rswebfonts.svg?42745553#rswebfonts') format('svg');
+    src: url('../font/rswebfonts.svg?94128994#rswebfonts') format('svg');
   }
 }
 */
@@ -81,6 +81,8 @@
 .icon-cont-checklist:before { content: '\e814'; } /* '' */
 .icon-cont-code-review:before { content: '\e815'; } /* '' */
 .icon-cont-health-checks:before { content: '\e816'; } /* '' */
+.icon-cc-zero:before { content: '\e817'; } /* '' */
+.icon-cc-share:before { content: '\e818'; } /* '' */
 .icon-ded-tools:before { content: '\e819'; } /* '' */
 .icon-gen-backups:before { content: '\e81a'; } /* '' */
 .icon-gen-news:before { content: '\e81b'; } /* '' */
@@ -316,6 +318,8 @@
 .icon-suitcase:before { content: '\f0f2'; } /* '' */
 .icon-angle-left:before { content: '\f104'; } /* '' */
 .icon-angle-right:before { content: '\f105'; } /* '' */
+.icon-angle-up:before { content: '\f106'; } /* '' */
+.icon-angle-down:before { content: '\f107'; } /* '' */
 .icon-mobile:before { content: '\f10b'; } /* '' */
 .icon-quote-left:before { content: '\f10d'; } /* '' */
 .icon-quote-right:before { content: '\f10e'; } /* '' */
@@ -336,4 +340,5 @@
 .icon-github-square:before { content: '\f300'; } /* '' */
 .icon-twitter-square:before { content: '\f304'; } /* '' */
 .icon-linkedin-square:before { content: '\f30c'; } /* '' */
+.icon-linkedin-1:before { content: '\f318'; } /* '' */
 .icon-search:before { content: '🔍'; } /* '\1f50d' */
