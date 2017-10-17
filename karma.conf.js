@@ -23,9 +23,11 @@ module.exports = function (config) {
       'styleguide/derek/global-components/tracking/tracking.js',
       'styleguide/derek/global-components/social/social-tracking.js',
       'styleguide/derek/global-components/anchor-scroll/anchor-scroll.js',
+      'styleguide/derek/view-templates/interactive-map/interactive-map.js',
       'styleguide/derek/global-components/**/*.spec.js',
       'styleguide/derek/pattern-components/headers/headers.js',
       'styleguide/derek/pattern-components/**/*.spec.js',
+      'styleguide/derek/view-templates/**/*.spec.js',
     ],
 
     client: {
@@ -51,6 +53,7 @@ module.exports = function (config) {
       'styleguide/global/global.js': ['babel'],
       'styleguide/derek/global-components/**/*.js': ['babel'],
       'styleguide/derek/pattern-components/**/*.js': ['babel'],
+      'styleguide/derek/view-templates/**/*.js': ['babel'],
     },
 
 

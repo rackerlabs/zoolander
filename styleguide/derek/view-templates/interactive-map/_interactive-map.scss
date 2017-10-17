@@ -1,0 +1,224 @@
+$circle-radius: 28px;
+
+@mixin make-map-circle($class, $bg-color, $border-color) {
+  #{$class} {
+    background-color: $bg-color;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+    color: $white;
+    height: $circle-radius;
+    text-align: center;
+    width: $circle-radius;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition-duration: .1s;
+    }
+  }
+}
+
+@mixin make-legend-circle($class, $bg-color, $border-color) {
+  #{$class} {
+    background-color: $bg-color;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.rsMap-legend {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.rsMap-legend-label {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@include make-legend-circle('.rsMap-legend-dc', #b16b72, #9d0000);
+@include make-legend-circle('.rsMap-legend-office', #8a8b8e, #424344);
+@include make-legend-circle('.rsMap-legend-hub', #74bec1, #00b4c3);
+
+.rsMap-container {
+  display: none;
+}
+
+.rsMap-mobile {
+  display: block;
+  text-align: center;
+
+  &::before {
+    border-top: 1px solid fade-out($black, .8);
+    content: '';
+    left: 5%;
+    position: absolute;
+    right: 0;
+    width: 90%;
+  }
+}
+
+// Break legend labels into their own lines only in xs
+@media (max-width: $screen-xs) {
+
+  .rsMap-legend {
+    text-align: left;
+  }
+
+  .rsMap-legend-label {
+    display: block;
+  }
+}
+
+// Desktop only rules
+@media (min-width: $screen-md-min) {
+
+  .rsMap-container {
+    background-image: url('../imgs/derek/rs-svg-map.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 500px;
+    margin: 0 auto;
+    min-height: 20px;
+    position: relative;
+    top: 35px;
+    width: 900px;
+
+    &::before {
+      border-top: 1px solid fade-out($black, .8);
+      content: '';
+      left: -5%;
+      position: absolute;
+      right: 0;
+      width: 110%;
+    }
+  }
+
+  .rsMap-dataCenter {
+    position: absolute;
+    z-index: 3;
+  }
+
+  .rsMap-hub {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .rsMap-office {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .rsMap-inner {
+    position: relative;
+  }
+
+  @include make-map-circle('.rsMap-dataCenter-circle', #b16b72, #9d0000);
+  @include make-map-circle('.rsMap-office-circle', #8a8b8e, #424344);
+  @include make-map-circle('.rsMap-hub-circle', #74bec1, #00b4c3);
+
+  .rsMap-toolTip {
+    background-color: $white;
+    box-shadow: 0 1px 3px fade-out($black, .8);
+    display: none;
+    min-height: 10px;
+    padding: 10px 15px;
+    position: absolute;
+    text-align: left;
+    width: 350px;
+  }
+
+  .rsMap-toolTip-header {
+    color: $rackspace-red;
+    font-size: 16px;
+  }
+
+  .rsMap-toolTip-body {
+    font-size: 14px;
+  }
+
+  .rsMap-toolTip-footer {
+    font-size: 13px;
+  }
+
+  .rsMap-toolTip-arrow {
+    height: 0;
+    position: absolute;
+    width: 0;
+  }
+
+  .rsMap-arrow-bottom {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $white;
+    bottom: -10px;
+    left: 0;
+    margin: auto;
+    right: 0;
+  }
+
+  .rsMap-arrow-left {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid $white;
+    border-top: 10px solid transparent;
+    left: -10px;
+    top: 46%;
+  }
+
+  .rsMap-active-circle {
+    z-index: 5;
+  }
+
+  .rsMap-bulletList {
+    font-size: 14px;
+    padding: 0 20px;
+
+    li {
+      margin-bottom: 3px;
+    }
+  }
+
+  .rsMap-toolTip-footerLink {
+    color: $rackspace-red;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &::before {
+      color: $gray-darker;
+      font-family: 'rswebfonts';
+      font-size: 21px;
+      margin-right: 8px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .rsMap-speedTest-icon {
+    font-size: 2em;
+    margin-right: 8px;
+    position: relative;
+    top: 1px;
+  }
+
+  .drzMap-imgIcon {
+    margin-right: 8px;
+    position: relative;
+    width: 9%;
+  }
+
+  .rsMap-mobile {
+    display: none;
+  }
+}

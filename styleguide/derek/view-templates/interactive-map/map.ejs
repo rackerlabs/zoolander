@@ -1,0 +1,420 @@
+<div class="standard-padding bg-light-gray">
+  <div class="rsMap-legend">
+    <label class="rsMap-legend-label">
+      <span class="rsMap-legend-dc"></span>
+      Data Center
+    </label>
+    <label class="rsMap-legend-label">
+      <span class="rsMap-legend-office"></span>
+      Office
+    </label>
+    <label class="rsMap-legend-label">
+      <span class="rsMap-legend-hub"></span>
+      Rackconnect Locations
+    </label>
+  </div>
+  <div class="rsMap-container"></div>
+</div>
+
+<script src="js/view-templates/interactive-map/interactive-map.js" charset="utf-8"></script>
+<script type="text/javascript">
+  // config of map circles that we pass to the plugin
+  const config = {
+    mobileImage: '/imgs/derek/mobile-map.png',
+    circles: [
+      {
+        type: 'hub',
+        items: 2,
+        tipTitle: 'RackConnect Global Locations',
+        tipBody: `
+          Megaport Connections Available in: <br/>
+          <ul class="rsMap-bulletList">
+            <li>Seattle, WA</li>
+            <li>Portland, OR</li>
+          </ul>
+        `,
+        tipFooter: '<a href="https://www.rackspace.com/hybrid/rackconnect/global" class="rsMap-toolTip-footerLink" target="_blank">Learn More</a>',
+        top: '100px',
+        left: '100px',
+      },
+      {
+        type: 'hub',
+        items: 3,
+        tipTitle: 'RackConnect Global Locations',
+        tipBody: `
+          Megaport Connections Available in: <br/>
+          <ul class="rsMap-bulletList">
+            <li>Silicon Valley, CA</li>
+            <li>Los Angeles, CA</li>
+            <li>Las Vegas, NV</li>
+          </ul>
+        `,
+        tipFooter: '<a href="https://www.rackspace.com/hybrid/rackconnect/global" class="rsMap-toolTip-footerLink" target="_blank">Learn More</a>',
+        top: '125px',
+        left: '105px',
+      },
+      {
+        type: 'office',
+        items: 1,
+        tipTitle: 'Mexico City, Mexico',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>Plaza Carso Lago Zurich 219, torre II, Piso 11 Colonia Ampliación Granada Ciudad de México 11590</li>
+            <li>Contact Sales: +01-800-099-0352</li>
+            <li>Contact Support: +01-800-099-0216</li>
+          </ul>
+        `,
+        tipFooter: '',
+        top: '165px',
+        left: '145px',
+      },
+      {
+        type: 'dataCenter',
+        items: 1,
+        tipTitle: 'Dallas/Fort Worth Area Data Centers (DFW1, 2, 3)',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>8 backbone providers</li>
+            <li>SOX, HITRUST, PCI-DSS, ISO 2700-1 Compliance Certifications </li>
+            <li>Critical Infrastructure Rating N+2</li>
+          </ul>
+        `,
+        tipFooter: '<a href="http://rackspace.speedtestcustom.com/?serverId=14218" class="rsMap-toolTip-footerLink gauge" target="_blank">Speed Test Link</a>',
+        top: '135px',
+        left: '150px',
+      },
+      {
+        type: 'office',
+        items: 2,
+        tipTitle: 'TX Region Offices',
+        tipBody: `
+          San Antonio, TX (Global Headquarters <br/>
+          <ul class="rsMap-bulletList">
+            <li>1 Fanatical Place City of Windcrest San Antonio, TX 78218</li>
+            <li>Contact Sales: 1-844-768-1101</li>
+            <li>Contact Support: 1-800-961-4454</li>
+          </ul>
+          Austin, TX<br/>
+          <ul class="rsMap-bulletList">
+            <li>9001 N. I 35 #150 Austin, TX 78753 1-800-961-2888</li>
+          </ul>
+        `,
+        tipFooter: '',
+        top: '115px',
+        left: '155px',
+      },
+      {
+        type: 'hub',
+        items: 2,
+        tipTitle: 'RackConnect Global Locations',
+        tipBody: `
+          Megaport Connections Available in: <br/>
+          <ul class="rsMap-bulletList">
+            <li>Dallas, TX</li>
+            <li>Houston, TX</li>
+          </ul>
+          Equinix Connections Available in:
+          <ul class="rsMap-bulletList">
+            <li>DA1-DA4, DA6</li>
+          </ul>
+        `,
+        tipFooter: '<a href="https://www.rackspace.com/hybrid/rackconnect/global" class="rsMap-toolTip-footerLink" target="_blank">Learn More</a>',
+        top: '130px',
+        left: '170px',
+      },
+      {
+        type: 'hub',
+        items: 2,
+        tipTitle: 'RackConnect Global Locations',
+        tipBody: `
+          Megaport Connections Available in: <br/>
+          <ul class="rsMap-bulletList">
+            <li>Chicago, IL</li>
+          </ul>
+          Equinix Connections Available in:
+          <ul class="rsMap-bulletList">
+            <li>CH1-CH4</li>
+          </ul>
+        `,
+        tipFooter: '<a href="https://www.rackspace.com/hybrid/rackconnect/global" class="rsMap-toolTip-footerLink" target="_blank">Learn More</a>',
+        top: '85px',
+        left: '165px',
+      },
+      {
+        type: 'dataCenter',
+        items: 1,
+        tipTitle: 'Greater Chicago Area Data Center (ORD)',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>7 backbone providers</li>
+            <li>SOX, HITRUST, PCI-DSS, ISO 2700-1 Compliance Certifications</li>
+            <li>Critical Infrastructure Rating N+2</li>
+          </ul>
+        `,
+        tipFooter: '<a href="#" class="rsMap-toolTip-footerLink gauge" target="_blank">Speed Test Link</a>',
+        top: '95px',
+        left: '185px',
+      },
+      {
+        type: 'hub',
+        items: 4,
+        tipTitle: 'RackConnect Global Locations',
+        tipBody: `
+          Megaport Connections Available in: <br/>
+          <ul class="rsMap-bulletList">
+            <li>Ashburn, VA</li>
+            <li>New York, NY</li>
+            <li>Newark, NJ</li>
+          </ul>
+          Equinix Connections Available in:
+          <ul class="rsMap-bulletList">
+            <li>Ashburn DC1-DC8, DC10, DC11</li>
+          </ul>
+        `,
+        tipFooter: '<a href="https://www.rackspace.com/hybrid/rackconnect/global" class="rsMap-toolTip-footerLink" target="_blank">Learn More</a>',
+        top: '110px',
+        left: '215px',
+      },
+      {
+        type: 'dataCenter',
+        items: 1,
+        tipTitle: 'Greater Washington, DC. Area Data Centers (IAD2, 3)',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>9 backbone providers</li>
+            <li>SOX, HITRUST, PCI-DSS, ISO 2700-1 Compliance Certifications</li>
+            <li>Critical Infrastructure Rating N+2</li>
+          </ul>
+        `,
+        tipFooter: '<a href="#" class="rsMap-toolTip-footerLink gauge" target="_blank">Speed Test Link</a>',
+        top: '130px',
+        left: '220px',
+      },
+      {
+        type: 'office',
+        items: 1,
+        tipTitle: 'East Coast Offices',
+        tipBody: `
+          New York, NY <br/>
+          <ul class="rsMap-bulletList">
+            <li>Herald Square 6th Avenue and 34th Street New York, NY 10001</li>
+          </ul>
+          Blacksburg, VA<br/>
+          <ul class="rsMap-bulletList">
+            <li>1691 Innovation Drive Blacksburg, VA 24060</li>
+            <li>1-866-201-7852</li>
+          </ul>
+        `,
+        tipFooter: '',
+        top: '110px',
+        left: '235px',
+      },
+      {
+        type: 'hub',
+        items: 3,
+        tipTitle: 'RackConnect Global Locations',
+        tipBody: `
+          Megaport Connections Available in: <br/>
+          <ul class="rsMap-bulletList">
+            <li>Montreal, QC</li>
+            <li>Toronto, ON</li>
+            <li>Quebec City, QC</li>
+          </ul>
+        `,
+        tipFooter: '<a href="https://www.rackspace.com/hybrid/rackconnect/global" class="rsMap-toolTip-footerLink" target="_blank">Learn More</a>',
+        top: '75px',
+        left: '225px',
+      },
+      {
+        type: 'dataCenter',
+        items: 1,
+        tipTitle: 'London Data Centers (LON3, 5)',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>8 backbone providers</li>
+            <li>SOX, HITRUST, PCI-DSS, ISO 2700-1 Compliance Certifications</li>
+            <li>Critical Infrastructure Rating N+2</li>
+          </ul>
+        `,
+        tipFooter: '<a href="#" class="rsMap-toolTip-footerLink gauge" target="_blank">Speed Test Link</a>',
+        top: '45px',
+        left: '395px',
+      },
+      {
+        type: 'office',
+        items: 1,
+        tipTitle: 'UK Office',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>5 Millington Road Hyde Park Hayes, Middlesex, UB3 4AZ</li>
+            <li>Contact Sales: 02087348107</li>
+            <li>Contact Support: 0800-988-0300</li>
+          </ul>
+        `,
+        tipFooter: '',
+        top: '65px',
+        left: '385px',
+      },
+      {
+        type: 'hub',
+        items: 2,
+        tipTitle: 'RackConnect Global Locations',
+        tipBody: `
+          Megaport Connections Available in: <br/>
+          <ul class="rsMap-bulletList">
+            <li>London, England</li>
+            <li>Dublin, Ireland</li>
+          </ul>
+          Equinix Connections Available in:
+          <ul class="rsMap-bulletList">
+            <li>London Slough LD5</li>
+          </ul>
+        `,
+        tipFooter: '<a href="https://www.rackspace.com/hybrid/rackconnect/global" class="rsMap-toolTip-footerLink" target="_blank">Learn More</a>',
+        top: '63px',
+        left: '405px',
+      },
+      {
+        type: 'dataCenter',
+        items: 1,
+        tipTitle: 'Frankfurt Data Center (FRA1)',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>3 backbone providers</li>
+            <li>SOX, HITRUST, PCI-DSS, ISO 2700-1 Compliance Certifications </li>
+            <li>Critical Infrastructure Rating N+1</li>
+          </ul>
+        `,
+        tipFooter: '<a href="#" class="rsMap-toolTip-footerLink gauge" target="_blank">Speed Test Link</a>',
+        top: '90px',
+        left: '415px',
+      },
+      {
+        type: 'office',
+        items: 3,
+        tipTitle: 'Continental Europe Offices',
+        tipBody: `
+          Germany Office <br/>
+          <ul class="rsMap-bulletList">
+            <li>Luise-Ullrich-Strasse 20 80636 Munich</li>
+            <li>Contact Sales: 0800 7238749</li>
+            <li>Contact Support: 0800 7238750</li>
+          </ul>
+          Switzerland Office<br/>
+          <ul class="rsMap-bulletList">
+            <li>Pfingstweidstrasse 60 8005 Zurich</li>
+            <li>Contact Sales: 0800 312627</li>
+            <li>Contact Support: 0800 312628</li>
+          </ul>
+          Netherlands Office<br/>
+          <ul class="rsMap-bulletList">
+            <li>Radarpoort gebouw Radarweg 535 1043 NZ Amsterdamn</li>
+            <li>Contact Sales: (+31) 020-753 32 01</li>
+            <li>Contact Support: (+31) 020-753 32 02</li>
+          </ul>
+        `,
+        tipFooter: '',
+        top: '105px',
+        left: '400px',
+      },
+      {
+        type: 'hub',
+        items: 9,
+        tipTitle: 'RackConnect Global Locations',
+        tipBody: `
+          Megaport Connections Available in: <br/>
+          <ul class="rsMap-bulletList">
+            <li>Amsterdam, Netherlands</li>
+            <li>Berlin, Germany</li>
+            <li>Dusseldorf, Germany</li>
+            <li>Frankfurt, Germany</li>
+            <li>Hamburg, Germany</li>
+            <li>Munich, Germany</li>
+            <li>Nuremberg, Germany</li>
+            <li>Sofia, Bulgaria</li>
+            <li>Stockholm, Sweden</li>
+          </ul>
+        `,
+        tipFooter: '<a href="https://www.rackspace.com/hybrid/rackconnect/global" class="rsMap-toolTip-footerLink" target="_blank">Learn More</a>',
+        top: '110px',
+        left: '425px',
+      },
+      {
+        type: 'office',
+        items: 1,
+        tipTitle: 'Singapore Office',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>Chevron House 30 Raffles Place, 23/F Singapore 048622</li>
+            <li>Contact Sales: 0800 120 6726</li>
+            <li>Contact Support: (+65) 6494-8849</li>
+          </ul>
+        `,
+        tipFooter: '',
+        top: '215px',
+        left: '665px',
+      },
+      {
+        type: 'office',
+        items: 1,
+        tipTitle: 'Hong Kong Office',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>9/F., Cambridge House Taikoo Place, 979 King’s Road Quarry Bay, Hong Kong</li>
+            <li>Contact Sales: (852) 3752-6488</li>
+            <li>Contact Support: (852) 3752-6488</li>
+          </ul>
+        `,
+        tipFooter: '',
+        top: '160px',
+        left: '690px',
+      },
+      {
+        type: 'dataCenter',
+        items: 1,
+        tipTitle: 'Hong Kong Data Center (HKG1)',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>8 backbone providers</li>
+            <li>SOX, HITRUST, PCI-DSS, ISO 2700-1 Compliance Certifications</li>
+            <li>Critical Infrastructure Rating N+2</li>
+          </ul>
+        `,
+        tipFooter: '<a href="#" class="rsMap-toolTip-footerLink gauge" target="_blank">Speed Test Link</a>',
+        top: '145px',
+        left: '705px',
+      },
+      {
+        type: 'office',
+        items: 1,
+        tipTitle: 'Australia Office',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>Level 1, 37 Pitt Street Sydney, NSW 2000, Australia</li>
+            <li>Contact Sales: 800-722-577</li>
+            <li>Contact Support: 800-421-267</li>
+          </ul>
+        `,
+        tipFooter: '',
+        top: '310px',
+        left: '770px',
+      },
+      {
+        type: 'dataCenter',
+        items: 1,
+        tipTitle: 'Sydney Data Centers (SYD2, 4)',
+        tipBody: `
+          <ul class="rsMap-bulletList">
+            <li>7 backbone providers</li>
+            <li>SOX, HITRUST, PCI-DSS, ISO 2700-1 Compliance Certifications</li>
+            <li>Critical Infrastructure Rating N+2</li>
+          </ul>
+        `,
+        tipFooter: '<a href="#" class="rsMap-toolTip-footerLink gauge" target="_blank">Speed Test Link</a>',
+        top: '290px',
+        left: '785px',
+      },
+    ],
+  }
+  $('.rsMap-container').rsInteractiveMap(config);
+</script>
