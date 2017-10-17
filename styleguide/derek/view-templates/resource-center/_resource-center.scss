@@ -65,7 +65,7 @@
 
 .resourcecenter-imageWrapper {
   height: 100%;
-  padding: 22px 19px 0 45px;
+  padding: 42px 18px 0 43px;
   width: 100%;
 }
 
@@ -189,6 +189,14 @@
 }
 
 @media screen and (min-width: $screen-md-min) {
+  .resourcecenter-divider-gated {
+    height: 68px;
+
+    &::after {
+      display: none;
+    }
+  }
+
   .resourcecenter-featuredGraphicWrapper {
     @include make-md-column(3);
     background-image: url('../imgs/derek/resourceCenter/pdf-template-graphic.png');
@@ -197,7 +205,6 @@
     background-size: 83.5%;
     display: block;
     height: 280px;
-    margin-bottom: 1px;
     margin-top: -90px;
   }
 
@@ -219,6 +226,10 @@
     width: 87%;
   }
 
+  .resourcecenter-imageWrapper {
+    padding: 55px 17px 0 41px;
+  }
+
   .gc-arrow {
     display: block;
     left: -60px;
@@ -228,20 +239,14 @@
   }
 }
 
-@media screen and (min-width: $screen-md-min) {
-  .resourcecenter-divider-gated {
-    height: 68px;
-
-    &::after {
-      display: none;
-    }
-  }
-}
-
 @media screen and (min-width: $screen-lg-min) {
   .resourcecenter-featuredGraphic {
     margin-left: 34px;
     margin-top: 14px;
     width: 81.5%;
+  }
+
+  .resourcecenter-imageWrapper {
+    padding: 22px 19px 0 45px;
   }
 }
