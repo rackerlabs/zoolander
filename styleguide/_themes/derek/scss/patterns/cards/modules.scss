@@ -84,6 +84,14 @@
   margin: 10px;
 }
 
+.node-card {
+  li {
+    a {
+      @include standard-link;
+    }
+  }
+}
+
 .node-text {
   a {
     @include standard-link;
