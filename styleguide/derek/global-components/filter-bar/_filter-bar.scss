@@ -246,11 +246,16 @@
 
 .rsFilter-sideBar-checkbox {
   font-size: 1.3rem;
-  font-weight: 600;
+  line-height: 1.9rem;
   margin: 0;
+
+  .form-item {
+    margin: 0;
+  }
 
   label {
     display: inline;
+    font-weight: 600;
     margin-left: 10px;
 
     &:hover {
