@@ -33,7 +33,7 @@
   @include make-sm-column(6);
 
   margin: 10px 0;
-  padding: 0 0 30px;
+  padding: 0 0 50px;
   position: relative;
   transition: .3s ease-in-out;
   width: 100%;
@@ -195,7 +195,7 @@
 }
 
 .resource-linkWrap {
-  bottom: 0;
+  bottom: 5px;
   position: absolute;
 }
 
@@ -271,8 +271,12 @@
   margin-top: 20px;
 }
 
-.resource-titleStory {
+.resource-storyName {
   margin: 0;
+}
+
+.resource-storyTitle {
+  margin: 0 0 10px;
 }
 
 @media only screen and (min-width: $screen-sm-min) {
