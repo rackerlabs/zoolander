@@ -1,25 +1,8 @@
 // Resource Icon Color
 @mixin resource-refresh($class, $background) {
   #{$class} {
-    @include make-md-column(4);
-    @include make-sm-column(6);
-    background: $white;
-    box-shadow: 0 1px 1px 1px $black-shadow-dark;
-    padding: 0;
-    transition: .3s ease-in-out;
-    width: 100%;
-
     .resource-top {
       background: $background;
-    }
-
-    .resource-innerLink {
-      text-decoration: none;
-    }
-
-    &:hover {
-      box-shadow: 0 15px 25px -9px $black-shadow-darkest;
-      transition: .3s ease-in-out;
     }
   }
 }
@@ -46,7 +29,27 @@
 }
 
 .resource-wrapper {
+  @include make-md-column(4);
+  @include make-sm-column(6);
+
   margin: 10px 0;
+  padding: 0;
+  transition: .3s ease-in-out;
+  width: 100%;
+
+  .resource-innerLink {
+    text-decoration: none;
+  }
+}
+
+.resource-wrapperBox {
+  background: $white;
+  box-shadow: 0 1px 1px 1px $black-shadow-dark;
+
+  &:hover {
+    box-shadow: 0 15px 25px -9px $black-shadow-darkest;
+    transition: .3s ease-in-out;
+  }
 }
 
 .resource-logo {
@@ -128,7 +131,6 @@
 
 .resource-videoThumb {
   align-items: flex-end;
-  background: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
@@ -250,7 +252,6 @@
 }
 
 .resource-quoteLogo {
-  background: url('../imgs/derek/logos/underarmor.png');
   background-position: right top;
   background-repeat: no-repeat;
   background-size: contain;
