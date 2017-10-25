@@ -159,6 +159,10 @@
   z-index: 2;
 }
 
+.rsFilter-refreshSideBar {
+  padding-top: 20px;
+}
+
 .rsFilter-sideBar-titleContainer {
   padding: 0 20px 10px;
 }
@@ -331,7 +335,8 @@
     display: flex;
   }
 
-  .rsFilter-sideBar {
+  .rsFilter-sideBar,
+  .rsFilter-refreshSideBar {
     padding: 50px 0 0;
   }
 
