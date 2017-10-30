@@ -378,11 +378,6 @@
   height: 500px;
 }
 
-.refreshBannerCombined-internal {
-  height: 465px;
-  padding-top: 50px;
-}
-
 .refreshBannerCombined-container {
   position: relative;
   width: 100%;
@@ -411,6 +406,17 @@
   font-size: 3.75rem;
   line-height: .9em;
   text-transform: uppercase;
+}
+
+.refreshBannerCombined-internal {
+  height: 300px;
+  margin-top: -110px;
+}
+
+@media only screen and (min-width: $screen-xs-min) {
+  .refreshBannerCombined-internal {
+    margin-top: 0;
+  }
 }
 
 @media only screen and (max-width: $screen-xs-max) {
@@ -451,6 +457,11 @@
 
   .refreshBannerCombined-ctaContainer {
     bottom: -300px;
+  }
+
+  .refreshBannerCombined-internal {
+    height: 465px;
+    padding-top: 50px;
   }
 }
 
