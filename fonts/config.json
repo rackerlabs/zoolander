@@ -3527,6 +3527,36 @@
       ]
     },
     {
+      "uid": "5de9370846a26947e03f63142a3f1c07",
+      "css": "angle-up",
+      "code": 61702,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e4dde1992f787163e2e2b534b8c8067d",
+      "css": "angle-down",
+      "code": 61703,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "94914cbbfba692ebbc13c179d62355f7",
+      "css": "cc-zero",
+      "code": 59415,
+      "src": "entypo"
+    },
+    {
+      "uid": "915c11e4e2e713cc7d65d32d66f004bf",
+      "css": "cc-share",
+      "code": 59416,
+      "src": "entypo"
+    },
+    {
+      "uid": "7132e1233bc16cd1b6efe7e29d3613a5",
+      "css": "linkedin-1",
+      "code": 62232,
+      "src": "entypo"
+    },
+    {
       "uid": "ddf2f008a407294136a5aae9c27bbf1b",
       "css": "srv-web-hosting-2",
       "code": 59841,

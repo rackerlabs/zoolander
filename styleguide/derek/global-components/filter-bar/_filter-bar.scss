@@ -138,3 +138,218 @@
     margin: .5rem auto 0;
   }
 }
+
+// Start of accordion style side bar
+.rsFilter-sideBar-row {
+  display: block;
+}
+
+.rsFilter-results-content {
+  @include make-md-column(10);
+  float: left;
+  padding: 25px;
+}
+
+.rsFilter-sideBar {
+  @include make-md-column(2);
+  background-color: $gray-lighter;
+  float: left;
+  padding: 10px 0 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.rsFilter-refreshSideBar {
+  padding-top: 20px;
+}
+
+.rsFilter-sideBar-titleContainer {
+  padding: 0 20px 10px;
+}
+
+.rsFilter-sideBar-formTitle {
+  @include subhead($gray-darker);
+  display: inline-block;
+}
+
+.rsFilter-sideBar-content {
+  display: none;
+  float: left;
+  width: 100%;
+}
+
+.rsFilter-sideBar-acc {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  width: 100%;
+}
+
+.rsFilter-sideBar-accItem {
+  border-bottom: 1px solid $gray-light;
+
+  &:first-child {
+    border-top: 1px solid $gray-light;
+  }
+}
+
+.rsFilter-sideBar-accLabel {
+  font-size: 14px;
+  margin-bottom: 0;
+  padding: 12px 20px;
+  width: 100%;
+
+  &:hover {
+    background-color: $gray-light;
+    cursor: pointer;
+    transition-duration: .3s;
+  }
+
+  &::after {
+    color: $gray-darker;
+    content: '\f107';
+    float: right;
+    font-family: 'rswebfonts';
+  }
+}
+
+.rsFilter-sideBar-active {
+  background-color: $gray-light;
+
+  &::after {
+    content: '\f106';
+  }
+}
+
+.rsFilter-sideBar-accItemContent {
+  background-color: $gray-lightest;
+  display: none;
+  padding: 10px 20px;
+}
+
+.rsFilter-sideBar-reset {
+  background-color: transparent;
+  border: 0;
+  float: right;
+  font-size: 13px;
+  line-height: 2;
+  padding: 0;
+  text-decoration: underline;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.rsFilter-sideBar-form {
+  float: left;
+  width: 100%;
+}
+
+.rsFilter-sideBar-checkbox {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  margin: 0;
+
+  .form-item {
+    margin: 0;
+  }
+
+  label {
+    display: inline;
+    font-weight: 600;
+    margin-left: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & + .option {
+    display: inline-block;
+    font-weight: $font-weight-black;
+  }
+}
+
+.rsFilter-sideBar-btnWrap {
+  float: left;
+  padding: 30px 20px;
+  width: 100%;
+}
+
+.rsFilter-sideBar-submit {
+  background-color: $gray-darker;
+  border: 0;
+  color: $white;
+  padding: 5px;
+  width: 100%;
+
+  &:hover {
+    background-color: $gray;
+    transition-duration: .3s;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.rsFilter-sideBar-hamburger {
+  background-color: transparent;
+  border: 0;
+  display: inline-block;
+
+  &::before {
+    content: '\f0c9';
+    font-family: 'rswebfonts';
+  }
+
+  &:hover {
+    background-color: $gray-light;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  .rsFilter-sideBar-reset {
+    float: left;
+    text-align: left;
+  }
+
+  .rsFilter-sideBar-formTitle {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+}
+
+// Desktop Rules
+@media (min-width: $screen-md-min) {
+
+  .rsFilter-sideBar-row {
+    display: flex;
+  }
+
+  .rsFilter-sideBar,
+  .rsFilter-refreshSideBar {
+    padding: 50px 0 0;
+  }
+
+  .rsFilter-sideBar-titleContainer {
+    float: left;
+    width: 100%;
+  }
+
+  .rsFilter-sideBar-content {
+    display: block;
+  }
+
+  .rsFilter-sideBar-hamburger {
+    display: none;
+  }
+}

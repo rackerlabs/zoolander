@@ -1,25 +1,8 @@
 // Resource Icon Color
 @mixin resource-refresh($class, $background) {
   #{$class} {
-    @include make-md-column(4);
-    @include make-sm-column(6);
-    background: $white;
-    box-shadow: 0 1px 1px 1px $black-shadow-dark;
-    padding: 0;
-    transition: .3s ease-in-out;
-    width: 100%;
-
     .resource-top {
       background: $background;
-    }
-
-    .resource-innerLink {
-      text-decoration: none;
-    }
-
-    &:hover {
-      box-shadow: 0 15px 25px -9px $black-shadow-darkest;
-      transition: .3s ease-in-out;
     }
   }
 }
@@ -31,10 +14,9 @@
 }
 
 .resource-top {
-  @include flex-box;
-  flex: 0 0 175px;
-  flex-flow: column nowrap;
-  height: 100%;
+  display: grid;
+  grid-template-rows: .25fr auto .25fr;
+  height: 175px;
   overflow: hidden;
 }
 
@@ -47,7 +29,28 @@
 }
 
 .resource-wrapper {
+  @include make-md-column(4);
+  @include make-sm-column(6);
+
   margin: 10px 0;
+  padding: 0 0 50px;
+  position: relative;
+  transition: .3s ease-in-out;
+  width: 100%;
+
+  .resource-innerLink {
+    text-decoration: none;
+  }
+}
+
+.resource-wrapperBox {
+  background: $white;
+  box-shadow: 0 1px 1px 1px $black-shadow-dark;
+
+  &:hover {
+    box-shadow: 0 15px 25px -9px $black-shadow-darkest;
+    transition: .3s ease-in-out;
+  }
 }
 
 .resource-logo {
@@ -57,35 +60,35 @@
   background-size: 100% 79%;
   flex: 0 0 auto;
   height: 30px;
-  margin: 12px;
+  margin: 12px 0 0 12px;
   width: 120px;
 }
 
 .resource-titleTopWrap {
   flex: 1 0 auto;
-  margin: 5px 40px 10px 20px;
+  margin: 10px 20px;
+  max-height: 150px;
+  overflow: hidden;
 }
 
 .resource-titleTop {
   color: $white;
-  font-size: 2.5rem;
+  font-size: 3.5vw;
   font-weight: 600;
-  letter-spacing: .01rem;
-  line-height: 2.85rem;
+  letter-spacing: .01vw;
+  line-height: 3.85vw;
   margin: 0;
 }
 
 .resource-pdfDownload {
   background: url('../imgs/derek/resourceCenter/pdf-download.png');
-  background-position: left 50%;
-  background-repeat: no-repeat;
-  background-size: 55px;
+  background-size: 45px;
   display: none;
-  height: 60px;
+  height: 45px;
   position: absolute;
-  right: 0;
-  top: 110px;
-  width: 60px;
+  right: 15px;
+  top: 117px;
+  width: 40px;
 }
 
 .resource-webinarDownload {
@@ -128,33 +131,48 @@
 }
 
 .resource-videoThumb {
-  background: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg');
+  align-items: flex-end;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
+  display: grid;
   height: 100%;
   margin: 10px auto;
-  min-height: 150px;
+  min-height: 170px;
   opacity: .75;
   width: 80%;
 }
 
+.resource-playIconWrap {
+  display: none;
+  grid-row-start: 3;
+  grid-template-columns: auto auto;
+  margin: 0 15px 15px 0;
+}
+
 .resource-playIcon {
-  color: $gray-lightest;
-  margin: 0 auto;
-  opacity: .9;
-  position: relative;
-  top: 50px;
-  width: 90%;
+  grid-column-start: 2;
+  height: 40px;
+  justify-self: flex-end;
+  width: 40px;
+
+  &::before {
+    color: $gray-lightest;
+    content: '\e8c8';
+    font-family: 'rswebfonts';
+    font-size: 30px;
+    justify-self: flex-end;
+  }
 }
 
 .resource-title {
   color: $gray-base;
   font-family: $heading;
-  font-size: 1.45em;
+  font-size: 1.25em;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1em;
+  margin: 20px 0 10px;
   text-transform: uppercase;
 }
 
@@ -172,8 +190,13 @@
 
 .resource-desc {
   color: $gray-base;
-  font-size: .8em;
-  line-height: 1.7em;
+  font-size: .75em;
+  line-height: 1.6em;
+}
+
+.resource-linkWrap {
+  bottom: 5px;
+  position: absolute;
 }
 
 .resource-link {
@@ -188,6 +211,74 @@
   text-decoration: none;
 }
 
+.resource-top-story {
+  box-shadow: 0 5px 10px 0 $black-shadow-darkest;
+  display: grid;
+  grid-template-rows: auto auto .25fr;
+}
+
+.resource-bottom-story {
+  box-shadow: none;
+
+  &::before {
+    border-color: $gray-dark transparent transparent;
+    border-style: solid;
+    border-width: 25px 30px 0;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: 30px;
+    width: 0;
+  }
+}
+
+.resource-quoteWrap {
+  background: url('../imgs/derek/resourceCenter/quote-bg.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  grid-row-start: 2;
+  margin: 10px 10px 0 20px;
+  max-height: 170px;
+  text-overflow: ellipsis;
+}
+
+.resource-quote {
+  color: $white;
+  font-size: 2.5vw;
+  font-weight: 600;
+  margin: 0 20px;
+}
+
+.resource-quoteLogoWrap {
+  display: grid;
+  grid-row-start: 3;
+  grid-template-columns: auto auto;
+  margin: 0 15px 15px 0;
+}
+
+.resource-quoteLogo {
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column-start: 2;
+  justify-self: flex-end;
+  max-width: 100px;
+  width: 100%;
+}
+
+.resource-personWrap {
+  margin-top: 20px;
+}
+
+.resource-storyName {
+  margin: 0;
+}
+
+.resource-storyTitle {
+  margin: 0 0 10px;
+}
+
 @media only screen and (min-width: $screen-sm-min) {
 
   .resource-wrapper {
@@ -198,6 +289,15 @@
     background-size: 100%;
     margin: 0 auto;
     width: 100%;
+  }
+
+  .resource-titleTop {
+    font-size: 1.6vw;
+    line-height: 1.65vw;
+  }
+
+  .resource-quote {
+    font-size: 1.3vw;
   }
 }
 
@@ -212,8 +312,21 @@
     display: block;
   }
 
+  .resource-playIconWrap {
+    display: grid;
+  }
+
   .resource-wrapper {
     margin: 20px;
+  }
+
+  .resource-titleTop {
+    font-size: 1.8vw;
+    line-height: 1.85vw;
+  }
+
+  .resource-quote {
+    font-size: 1.1vw;
   }
 
 
@@ -227,3 +340,4 @@
 @include resource-refresh('.resource-code', $gray-lightest);
 @include resource-refresh('.resource-support', $blue-login);
 @include resource-refresh('.resource-video', $black);
+@include resource-refresh('.resource-story', $gray-dark);
