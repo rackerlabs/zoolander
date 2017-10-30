@@ -2,7 +2,8 @@
 @mixin resource-refresh($class, $background) {
   #{$class} {
     .resource-top {
-      background: $background;
+      background: $background no-repeat center center;
+      background-size: cover;
     }
   }
 }
