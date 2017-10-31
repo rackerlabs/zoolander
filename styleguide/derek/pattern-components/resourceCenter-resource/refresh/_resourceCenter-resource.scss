@@ -23,9 +23,9 @@
 
 .resource-bottom {
   @include flex-box;
-  box-shadow: 0 -10px 15px -1px $black-shadow-darker;
   flex: 1 0 auto;
   flex-flow: column nowrap;
+  margin-bottom: 50px;
   padding: 0 20px;
 }
 
@@ -34,7 +34,7 @@
   @include make-sm-column(6);
 
   margin: 10px 0;
-  padding: 0 0 50px;
+  padding: 0;
   position: relative;
   transition: .3s ease-in-out;
   width: 100%;
@@ -52,6 +52,11 @@
     box-shadow: 0 15px 25px -9px $black-shadow-darkest;
     transition: .3s ease-in-out;
   }
+}
+
+.resource-document,
+.resource-video {
+  height: 100%;
 }
 
 .resource-logo {
@@ -213,7 +218,6 @@
 }
 
 .resource-top-story {
-  box-shadow: 0 5px 10px 0 $black-shadow-darkest;
   display: grid;
   grid-template-rows: auto auto .25fr;
 }
