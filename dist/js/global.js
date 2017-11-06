@@ -33,7 +33,9 @@ jQuery(document).ready(function ($) {
 
 // initialize filter bar
 jQuery(document).ready(function ($) {
-  $('.rsFilter-bar').rsFilterBar();
+  if ($.fn.rsFilterBar) {
+    $('.rsFilter-bar').rsFilterBar();
+  }
 });
 
 // swatches copy button
