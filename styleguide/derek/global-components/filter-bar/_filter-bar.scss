@@ -353,3 +353,9 @@
     display: none;
   }
 }
+
+@media (min-width: $screen-sm-min) {
+  .rsFilter-results-content {
+    padding-right: 50px;
+  }
+}
