@@ -7,10 +7,12 @@ var $navBurger = $('.navbar-hamburger');
 
 $navBurger.click(function (e) {
   $navBurger.toggleClass('collapsed');
-
   // reset dopdown carrets if collapsing the menu
   if ($(e.currentTarget).hasClass('collapsed')) {
+    $navBurger.removeClass('navbar-hamburger-close');
     $topLevelDropDown.removeClass('navbar-dropDown-triggerActive');
+  } else {
+    $navBurger.addClass('navbar-hamburger-close');
   }
 });
 
