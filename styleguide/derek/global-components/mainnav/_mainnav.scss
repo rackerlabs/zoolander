@@ -128,7 +128,6 @@
 
 .navbar-hamburger {
   &::after {
-    content: '\e803';
     display: none;
     font-family: 'rswebfonts';
     font-size: 2rem;
@@ -315,6 +314,12 @@
         content: '\f0c9';
         display: inline-block;
         margin: 17px 10px;
+      }
+    }
+
+    .navbar-hamburger-close {
+      &::after {
+        content: '\e803';
       }
     }
 
