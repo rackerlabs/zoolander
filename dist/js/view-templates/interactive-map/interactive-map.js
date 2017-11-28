@@ -1,6 +1,7 @@
 'use strict';
 
 /* eslint spaced-comment: ["error", "always"] */
+/* global hoverintent */
 /**
  The Rackspace Interactive Map plugin can be built with an array of map circles.
  See below for parameter options passed through the config.
@@ -89,11 +90,13 @@
           $tipContainer.attr('style', '');
           $tipArrow.removeClass('rsMap-arrow-left').addClass('rsMap-arrow-bottom');
         };
-        // attach hover / offhover events
-        $el.hover(function (e) {
-          if (!$(e.target).hasClass('rsMap-toolTip')) {
-            resetTip();
-          }
+        // we need to kill the timeout asap when hovered over the tool tip
+        $tipContainer.hover(function () {
+          clearTimeout(_this.hoverTimeout);
+        });
+        // bubbles need the hover intent plugin so users don't accidentally hover
+        // over a bubble on the way to hover the tip
+        hoverintent($el.get(0), function () {
           clearTimeout(_this.hoverTimeout);
           // hide any open bubbles on the page except active one, then show hovered tip
           // this will check to make sure the active is not hiding &  avoid a flicker on hover
@@ -112,6 +115,7 @@
             $el.css('z-index', 5);
           });
           _this.positionTip($el, type);
+          $tipArrow.removeClass('rsMap-arrow-left').addClass('rsMap-arrow-bottom');
           // if tip is off screen & covered by nav, reposition to the side.
           if (_this.isOffScreen($tipContainer, $nav.outerHeight())) {
             _this.positionTip($el, type, true);
