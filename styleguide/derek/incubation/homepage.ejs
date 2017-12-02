@@ -76,23 +76,6 @@
 
 <%- partial("../pattern-components/blog-feed/blog-feed.ejs") %>
 
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog formModal-dialog" role="document">
-    <div class="modal-content formModal-content">
-      <div class="formModal-header modal-no-header">
-        <h5>Do you need Sales or Support?</h5>
-        <button type="button" class="close formModal-closeIcon" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="formModal-body">
-        <h6>Sales</h6>
-        <h6>Support</h6>
-      </div>
-    </div>
-  </div>
-</div>
+<% include ../global-components/modal/region-select.ejs %>
+<% include ../global-components/modal/call-us.ejs %>
+<% include ../global-components/modal/email-us.ejs %>
