@@ -1,0 +1,72 @@
+
+.rackspaceModal {
+  border-radius: 6px;
+  height: 40px;
+  overflow: hidden;
+  z-index: 10000;
+
+  // Unfortunately necessary nesting:
+  a {
+    &:focus {
+      outline: 0;
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .rackspaceModal-titleBar {
+    padding: 0;
+  }
+}
+
+.rackspaceModalLarge {
+  max-width: 1000px;
+  padding: 5px 0;
+}
+
+.rackspaceModalMedium {
+  max-width: 600px;
+  padding: 15px;
+}
+
+.rackspaceModalSmall {
+  max-width: 300px;
+  padding: 5px 0;
+}
+
+.rackspaceModal-titleBar {
+  background: none;
+  border: 0;
+  padding: .4em 1em 1.4em;
+}
+
+.rackspaceModal-titleBarClose {
+  background: none;
+  border: 0;
+  z-index: 300;
+
+  &::before {
+    content: 'x';
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: .5em;
+    opacity: .2;
+    position: relative;
+  }
+}
+
+.rackspaceModal-title {
+  visibility: hidden;
+}
+
+.ui-widget-overlay {
+  background: $black-modal-overlay;
+  opacity: 1;
+}
+
+.ajax-progress {
+  display: none;
+}

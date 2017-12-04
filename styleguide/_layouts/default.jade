@@ -14,13 +14,15 @@ html(lang="en")
 
     title Zoolander Style Guide
 
+    link(href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet")
     link(href="#{ css }", rel="stylesheet")
     link(href="#{ fonts }", rel="stylesheet")
     link(href="css/main.css", rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600", rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Khand:300,400,500,600,700" rel="stylesheet")
-    script(src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
     script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/modernizr.min.js")
     script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/jquery.fittext.js")
     script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js")
@@ -92,5 +94,6 @@ html(lang="en")
       block content
 
   script(src="#{base}js/global.js")
+  script(src="#{base}global/modal.js")
   script.
     $(".imacBanner-headline").fitText(1.1, { maxFontSize: '45px' });
