@@ -1,4 +1,4 @@
-$circle-radius: 28px;
+$circle-radius: 20px;
 
 @mixin make-map-circle($class, $bg-color, $border-color) {
   #{$class} {
@@ -6,7 +6,9 @@ $circle-radius: 28px;
     border: 2px solid $border-color;
     border-radius: 50%;
     color: $white;
+    font-size: 11px;
     height: $circle-radius;
+    line-height: 1.4;
     text-align: center;
     width: $circle-radius;
 
@@ -25,6 +27,8 @@ $circle-radius: 28px;
     border-radius: 50%;
     display: inline-block;
     height: 15px;
+    position: relative;
+    top: 3px;
     width: 15px;
   }
 }
@@ -36,6 +40,8 @@ $circle-radius: 28px;
 }
 
 .rsMap-legend-label {
+  font-size: 14px;
+  font-weight: 400;
   margin-right: 35px;
 
   &:last-child {
@@ -54,15 +60,6 @@ $circle-radius: 28px;
 .rsMap-mobile {
   display: block;
   text-align: center;
-
-  &::before {
-    border-top: 1px solid fade-out($black, .8);
-    content: '';
-    left: 5%;
-    position: absolute;
-    right: 0;
-    width: 90%;
-  }
 }
 
 // Break legend labels into their own lines only in xs
@@ -89,17 +86,7 @@ $circle-radius: 28px;
     margin: 0 auto;
     min-height: 20px;
     position: relative;
-    top: 35px;
     width: 900px;
-
-    &::before {
-      border-top: 1px solid fade-out($black, .8);
-      content: '';
-      left: -5%;
-      position: absolute;
-      right: 0;
-      width: 110%;
-    }
   }
 
   .rsMap-dataCenter {
