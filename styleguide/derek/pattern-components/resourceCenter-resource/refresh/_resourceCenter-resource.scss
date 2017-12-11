@@ -12,6 +12,10 @@
   @include flex-box;
   flex-flow: column nowrap;
   height: 100%;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .resource-top {
