@@ -40,14 +40,7 @@
             </div>
           <% } %>
         <% } %>
-        <ul class="eventsOverview-pagination">
-          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPagePrev" href="javascript:void(0)">&lt;</a></li>
-          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">1</a></li>
-          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPageActive" href="javascript:void(0)">2</a></li>
-          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">3</a></li>
-          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage" href="javascript:void(0)">4</a></li>
-          <li class="eventsOverview-pagination-item"><a class="eventsOverview-pagination-itemPage eventsOverview-pagination-itemPageNext" href="javascript:void(0)">&gt;</a></li>
-        </ul>
+        <%- partial('../pagination.ejs') %>
       </div>
     </div>
   </div>
