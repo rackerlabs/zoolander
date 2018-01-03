@@ -4,6 +4,7 @@ files:
     - 'styleguide/_themes/global/scss/rsweb-font-style.scss'
     - 'styleguide/_sass/syntax-highlighting.scss'
     - 'styleguide/_themes/derek/scss/components/rsweb-font-style.scss'
+    - 'styleguide/_themes/derek/scss/components/pager.scss'
     - 'styleguide/_themes/global/scss/bootstrap_variables.scss'
     - 'styleguide/_themes/global/scss/bootstrap_overrides.scss'
     - 'styleguide/_themes/global/scss/vendor_prefixes.scss'
