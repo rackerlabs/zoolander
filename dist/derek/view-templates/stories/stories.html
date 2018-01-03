@@ -460,15 +460,56 @@
           
         </div>
         
-        <div class="row">
-          <div class="rsFilter-storiesPager">
-            <ul class="pager">
-              <li class="pager-previous first"><a href="javascript:void(0);">prev</a></li>
-              <li class="pager-current">2 of 10</li>
-              <li class="pager-next last"><a href="javascript:void(0);">next</a></li>
-            </ul>
-          </div>
-        </div>
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+  <h4 id="pagination-heading" class="hidden"></h4>
+  <ul class="pager__items js-pager__items">
+      <li class="pager__item pager__item--first">
+        <a href="javascript:void(0)" title="Go to first page">
+          <span class="hidden"></span>
+          <span aria-hidden="true">« 
+            <span class="hidden-sm hidden-xs">First</span>
+          </span>
+        </a>
+      </li>
+      <li class="pager__item pager__item--previous">
+        <a href="javascript:void(0)" title="Go to previous page" rel="prev">
+          <span class="hidden"></span>
+          <span aria-hidden="true">‹‹ 
+            <span class="hidden-sm hidden-xs">Back</span>
+          </span>
+        </a>
+      </li>
+      <li class="pager__item pager__item--ellipsis" role="presentation">…</li>
+      <li class="pager__item is-active"><a href="javascript:void(0)" title="Current page"><span class="hidden"></span>1</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 2"><span class="hidden">Page </span>2</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 3"><span class="hidden"></span>3</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 4"><span class="hidden"></span>4</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 5"><span class="hidden"></span>5</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 6"><span class="hidden"></span>6</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 7"><span class="hidden"></span>7</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 8"><span class="hidden"></span>8</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 9"><span class="hidden"></span>9</a></li>
+      <li class="pager__item pager__item--ellipsis" role="presentation">…</li>
+      <li class="pager__item pager__item--next">
+        <a href="javascript:void(0)" title="Go to next page" rel="next">
+          <span class="hidden"></span>
+          <span aria-hidden="true">
+            <span class="hidden-sm hidden-xs">Next</span> 
+            ››
+          </span>
+        </a>
+      </li>
+      <li class="pager__item pager__item--last">
+        <a href="javascript:void(0)" title="Go to last page">
+          <span class="hidden"></span>
+          <span aria-hidden="true">
+            <span class="hidden-sm hidden-xs">Last</span> 
+            »
+          </span>
+        </a>
+      </li>
+  </ul>
+</nav>
       </div>
     </div>
   </div>
