@@ -123,7 +123,7 @@
   margin: 5px;
   position: relative;
   transition-duration: .3s;
-  width: 150px;
+  width: 131px;
 }
 
 .navbar-hamburger {
@@ -278,7 +278,7 @@
 
   .navbar-brand {
     @include make-sm-column(4);
-    background-size: 95px 38px;
+    background-size: 95px 22px;
     padding: 0;
     width: 95px;
   }
