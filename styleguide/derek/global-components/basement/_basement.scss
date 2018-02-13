@@ -1,5 +1,6 @@
 // Basement Flag Mixin
 @mixin basement-flag($country, $x, $y) {
+  #{'.redirect-flag-' + $country},
   #{'.basement-flag-' + $country} {
     background-position: $x $y;
   }
@@ -68,6 +69,7 @@
   text-align: right;
 }
 
+.redirect-flag-icon,
 .basement-flag-icon {
   background-position: 0 0;
   background-repeat: no-repeat;
