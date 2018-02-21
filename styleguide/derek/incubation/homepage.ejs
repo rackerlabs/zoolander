@@ -44,6 +44,17 @@
 	<div class="rsHomepage-annRight"></div>
 </div>
 
+<div class="container">
+	<%- partial("../pattern-components/o365-table/o365-tables.ejs") %>
+	<script type="text/javascript">
+	$('.rsPricingTable').o365Table({
+	  labelFirstCol: true,
+	  inTabs: true,
+		fixedElements: ['.navbar-fixed-top']
+	});
+	</script>
+</div>
+
 <div class="rsHomepage-platformContainer">
   <div class="rsHomepage-platformRow">
     <div class="rsHomepage-platformTitleWrapper">

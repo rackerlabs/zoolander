@@ -25,6 +25,7 @@ module.exports = function (config) {
       'styleguide/derek/global-components/social/social-tracking.js',
       'styleguide/derek/global-components/anchor-scroll/anchor-scroll.js',
       'styleguide/derek/view-templates/interactive-map/interactive-map.js',
+      'styleguide/derek/pattern-components/o365-table/o365-table.js',
       'styleguide/derek/global-components/**/*.spec.js',
       'styleguide/derek/pattern-components/headers/headers.js',
       'styleguide/derek/pattern-components/**/*.spec.js',

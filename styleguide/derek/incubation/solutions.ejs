@@ -16,6 +16,18 @@
   </div>
 </div>
 
+<!-- o365 tables -->
+<div class="container">
+  <h4>o365 Tables</h4>
+  <%- partial('../pattern-components/o365-table/o365-tables.ejs') %>
+  <script type="text/javascript">
+  $('.rsPricingTable').o365Table({
+    labelFirstCol: true,
+    inTabs: true,
+  });
+  </script>
+</div>
+
 <%- partial('../pattern-components/leads/lead-corner-pocket/lead-corner-pocket.ejs') %>
 
 
