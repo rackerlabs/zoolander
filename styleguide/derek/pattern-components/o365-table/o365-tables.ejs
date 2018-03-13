@@ -1,0 +1,32 @@
+<div class="rsTabs-container rsTabsHorizontal-container">
+  <ul class="nav nav-tabs rsTabs rsTabsHorizontal">
+    <li class="rsTab-tab active">
+      <a class="rsTab-link rsTabHorizontal-link" href="#tab-1" data-toggle="tab">
+        Exchange & Productivity Tools
+      </a>
+      </li>
+    <li class="rsTab-tab">
+      <a class="rsTab-link rsTabHorizontal-link" href="#tab-2" data-toggle="tab">
+        Exchange Email
+      </a>
+    </li>
+    <li class="rsTab-tab">
+      <a class="rsTab-link rsTabHorizontal-link" href="#tab-3" data-toggle="tab">
+        Security Compliance Plans
+      </a>
+    </li>
+  </ul>
+  <div id="myTabContent" class="tab-content rsTabs-content rsTabsHorizontal-content">
+    <div class="tab-pane active" id="tab-1">
+      <%- partial('./_partials/exchange-productivity-tools.ejs') %>
+    </div>
+    <div class="tab-pane" id="tab-2">
+      <%- partial('./_partials/exchange-email.ejs') %>
+    </div>
+    <div class="tab-pane" id="tab-3">
+      <%- partial('./_partials/security-compliance.ejs') %>
+    </div>
+  </div>
+</div>
+
+<script src="js/pattern-components/o365-table/o365-table.js" charset="utf-8"></script>

@@ -1,0 +1,203 @@
+$table-border: 1px solid $gray-lighter;
+
+.rsPricingTable {
+  border: $table-border;
+  border-collapse: collapse;
+  height: 1px;
+  position: relative;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.rsPricingTable-head {
+  font-weight: 100;
+  line-height: 1.8;
+  padding: 0;
+}
+
+.rsPricingTable-head-tr {
+  height: 100%;
+}
+
+.rsPricingTable-head-th {
+  background-color: $table-header-bg;
+  border: $table-border;
+  color: $white;
+  height: 100%;
+  padding: 20px;
+  vertical-align: top;
+  width: 20%;
+}
+
+.rsPricingTable-head-flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.rsPricingTable-head-title {
+  color: $white;
+}
+
+.rsPricingTable-head-p {
+  color: transparentize($white, .35);
+  font-size: 13px;
+}
+
+.rsPricingTable-head-logo {
+  margin-bottom: 10px;
+  width: 65%;
+}
+
+.rsPricingTable-feature {
+  background-color: $table-featured-bg;
+}
+
+.rsPricingTable-body-td {
+  background-color: $white;
+  border: $table-border;
+  border-spacing: 0;
+  font-family: $subhead;
+  font-weight: 500;
+  padding: 35px 20px;
+  text-align: center;
+  width: 20%;
+
+  &.text-left {
+    text-align: left;
+  }
+
+  .fa-times {
+    color: $gray-light;
+  }
+
+  p {
+    font-family: $copy;
+    font-size: 13px;
+  }
+}
+
+.rsPricingTable-cta {
+  background-color: $signup-green;
+  color: $white;
+  display: block;
+  margin-top: auto;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: darken($signup-green, 5%);
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $white;
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+.rsPricingTable-scroll-show {
+  display: none;
+}
+
+.rsPricingTable-sticky {
+  box-shadow: 0 4px 4px -1px $black-shadow-darkest;
+  height: 1px;
+  position: fixed;
+}
+
+// fix to allow the box shadow to show up in ie
+.rsPricingTable-borderSep {
+  border-collapse: separate;
+}
+
+.rsPricingTable-isStuck {
+  .rsPricingTable-head-th {
+    padding: 20px;
+    transition: padding ease .3s;
+  }
+
+  // any additional body rows used for being stuck in header
+  .rsPricingTable-headerBody-row {
+    .rsPricingTable-body-td {
+      padding: 10px 20px;
+    }
+  }
+
+  .rsPricingTable-head-logo {
+    margin-top: 20px;
+  }
+
+  .rsPricingTable-scroll-show {
+    display: inline-block;
+  }
+
+  .rsPricingTable-scroll-hide {
+    display: none;
+  }
+}
+
+.rsPricingTable-mobile {
+  display: none;
+}
+
+.rsPricingTable-price {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.rsPricingTable-appLogo {
+  height: 25px;
+  width: 25px;
+}
+
+@media only screen and (max-width: $screen-md) {
+
+  .rsPricingTable {
+    display: none;
+  }
+
+  .rsPricingTable-mobile {
+    display: block;
+  }
+
+  .rsPricingTable-mobile-row {
+    display: block;
+    width: 100%;
+  }
+
+  .rsPricingTable-head {
+    display: none;
+  }
+
+  .rsPricingTable-head-th {
+    display: block;
+    height: unset;
+    width: 100%;
+  }
+
+  .rsPricingTable-head-logo {
+    width: 35%;
+  }
+
+  .rsPricingTable-body-td {
+    display: block;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .rsPricingTable-hide-mobile {
+    display: none;
+  }
+
+  .rsPricingTable-mobile-label {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
