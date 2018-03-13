@@ -70,3 +70,9 @@
 .ajax-progress {
   display: none;
 }
+
+// Temp fix to resolve this issue https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-aaf66c7ba3f8
+.modal-open {
+  position: absolute;
+  width: 100%;
+}
