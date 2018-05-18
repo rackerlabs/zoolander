@@ -48,9 +48,11 @@ function svgBannerStringSplitter(str, l) {
  * Set's the svg content.
  */
 function svgBannerSetContent() {
+  var primaryBox = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 25;
+
   // Add content lines.
   var boxTextLimits = {
-    primaryBox: 25,
+    primaryBox: primaryBox,
     secondaryBox: 20
   };
   for (var id in boxTextLimits) {
