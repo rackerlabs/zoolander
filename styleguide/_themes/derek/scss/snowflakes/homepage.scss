@@ -95,6 +95,40 @@
   display: none;
 }
 
+.refreshBanner-homepage-062018 {
+  background-image: url('../imgs/rs-homepage-background-06_2018.jpg');
+  height: 680px;
+}
+
+.refreshBannerCombined-newheader-062018 {
+  margin-left: 50px;
+  margin-top: 180px;
+  width: 425px;
+}
+
+.refreshBannerCombined-ctaHeadline-062018 {
+  display: block;
+  font-size: 6.25rem;
+}
+
+.rsHomepage-subHeader-062018 {
+  color: $white;
+  font-size: 3.25rem;
+  line-height: 3.25rem;
+}
+
+.rsHomepage-button-062018 {
+  &.ghost {
+    border-radius: 3px;
+    text-transform: capitalize;
+    width: 250px;
+
+    &::after {
+      content: '';
+    }
+  }
+}
+
 // Desktop only rules
 @media (min-width: $screen-md-min) {
 
@@ -182,6 +216,24 @@
       font-size: 61px;
     }
   }
+
+  .rsHomepage-annLeft-062018 {
+    min-height: 380px;
+  }
+
+  .rsHomepage-annRight-062018 {
+    background-position-x: right;
+    background-position-y: bottom;
+    min-height: 380px;
+
+    &::before {
+      border: 0;
+    }
+  }
+
+  .rsHomepage-annLeft-p-062018 {
+    font-size: 1.75rem;
+  }
 }
 
 @media (max-width: $screen-md-max) and (min-width: $screen-md-min) {
@@ -238,6 +290,12 @@
   text-align: right;
 }
 
+@media only screen and (max-width: $screen-md-max) {
+  .refreshBanner-homepage-062018 {
+    background-position: center left;
+  }
+}
+
 @media only screen and (max-width: $screen-sm-max) {
 
   .quadrant {
@@ -257,6 +315,24 @@
 
 
 @media only screen and (max-width: $screen-xs-max) {
+  .refreshBanner-homepage-062018 {
+    height: auto;
+    padding: 20px;
+  }
+
+  .refreshBannerCombined-newheader-062018 {
+    margin: auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  .refreshBannerCombined-ctaHeadline-062018 {
+    font-size: 5rem;
+  }
+
+  .rsHomepage-subHeader-062018 {
+    text-align: center;
+  }
 
   .quadrant-title,
   .quadrant-text,
@@ -281,6 +357,11 @@
 //deprecating hosting-options
 
 @media only screen and (max-width: 600px) {
+  .refreshBanner-homepage-062018 {
+    background-color: $black;
+    background-image: none;
+  }
+
   .hostingOptions-logoWide {
     left: 5%;
     width: 90%;
