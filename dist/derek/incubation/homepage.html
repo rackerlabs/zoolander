@@ -185,127 +185,12 @@
 </div>
 <!--[/navigation]-->
 <script src="js/global-components/mainnav/mainnav.js" charset="utf-8"></script>
-<div class="contentOffset"><div class="refreshBannerCombined refreshBannerCombined-homepage">
+<div class="contentOffset"><div class="refreshBannerCombined refreshBanner-homepage-062018">
   <div class="refreshBannerCombined-container">
-    <div class="refreshBannerCombined-svgContainer">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1442px" height="600px" viewBox="0 0 1442 600" style="enable-background:new 0 0 1442 777" class="refreshBannerCombined-svg" xml:space="preserve">
-        <style type="text/css">
-          .leftSide{opacity:0.8;fill:#AB2D34;}
-          .bottomSide{opacity:0.8;fill:#732126;}
-          .textBox{fill:#FFFFFF;}
-          .sourceText{display:none;}
-          .displayText{fill:#c40002;font-family:'Khand';font-weight:700;font-size:55px;line-height:55px;text-transform:uppercase;}
-          .leftSide2{opacity:0.5;fill:#AB2D34;}
-          .bottomSide2{opacity:0.5;fill:#732126;}
-        </style>
-        <g id="primaryBox">
-          <polygon class="leftSide poly-leftSide" points="777,95 140,777 0,777 777,0"/>
-          <polygon class="bottomSide poly-bottomSide" points="1442,95 805,777 140,777 777,95"/>
-          <rect x="777" y="0" class="textBox" width="665" height="95"/>
-          <text class="text" x="800" y="63">
-            <tspan class="sourceText">Certified to Manage the World's Leading Clouds.</tspan>
-          </text>
-        </g>
-        <g id="secondaryBox" transform="translate(0, 200)">
-          <polygon class="leftSide2 poly-leftSide" points="777,95 140,777 0,777 777,0"/>
-          <polygon class="bottomSide2 poly-bottomSide" points="1327,95 690,777 140,777 777,95"/>
-          <rect x="777" y="0" class="textBox" width="550" height="95"/>
-          <text class="text" x="800" y="63">
-            <tspan class="sourceText">Because One Size Doesn’t Fit All.</tspan>
-          </text>
-        </g>
-        <script type="application/ecmascript">
-        /* eslint-disable */
-
-/**
- * @file
- * This file should never be included directly. Rather, the code should be
- * injected inside of a SVG. This is only in a separate file for the purposes
- * of unit testing the code.
- */
-
-/**
- * Retrieves svg attribute values based on lineCt and ID.
- */
-function svgBannerGetAttributes(lineCt, id) {
-  var height = lineCt * 45 + 50;
-  var bottomSides = {
-    primaryBox: "1442," + height + " 805,777 140,777 777," + height,
-    secondaryBox: "1327," + height + " 690,777 140,777 777," + height
-  }
-  return {
-    boxHeight: height,
-    leftSide: "777," + height + " 140,777 0,777 777,0",
-    bottomSide: bottomSides[id]
-  };
-}
-
-/**
- * Splits a string based on characters.
- *
- * @see http://bit.ly/2zn664C
- */
-function svgBannerStringSplitter(str, l){
-  var strs = [];
-  while(str.length > l){
-    var pos = str.substring(0, l).lastIndexOf(' ');
-    pos = pos <= 0 ? l : pos;
-    strs.push(str.substring(0, pos));
-    var i = str.indexOf(' ', pos)+1;
-    if(i < pos || i > pos+l)
-      i = pos;
-    str = str.substring(i);
-  }
-  strs.push(str);
-  return strs;
-}
-
-/**
- * Set's the svg content.
- */
-function svgBannerSetContent(primaryBox = 25) {
-  // Add content lines.
-  var boxTextLimits = {
-    primaryBox: primaryBox,
-    secondaryBox: 20
-  };
-  for (var id in boxTextLimits) {
-    var parent = document.getElementById(id);
-    if (!parent) { continue; }
-    var el = parent.querySelector('.text');
-    var sourceText = el.childNodes[1].textContent ? el.childNodes[1].textContent : el.childNodes[1].innerText;
-    var lines = svgBannerStringSplitter(sourceText, boxTextLimits[id]);
-    var xmlns = 'http://www.w3.org/2000/svg';
-
-    for (var lineIdx in lines) {
-      var tspan = document.createElementNS(xmlns, 'tspan');
-      tspan.setAttributeNS(null, 'class', 'displayText');
-      tspan.setAttributeNS(null, 'x', 800);
-      tspan.setAttributeNS(null, 'dy', lineIdx > 0 ? 50 : 0);
-      tspan.setAttributeNS(null, 'width', 665);
-      var text = document.createTextNode(lines[lineIdx]);
-      tspan.appendChild(text);
-      el.appendChild(tspan);
-    }
-
-    // Set height and position attributes.
-    var attributes = svgBannerGetAttributes(lines.length, id);
-    parent.querySelector('.poly-leftSide').setAttributeNS(null, 'points', attributes['leftSide']);
-    parent.querySelector('.poly-bottomSide').setAttributeNS(null, 'points', attributes['bottomSide']);
-    parent.querySelector('.textBox').setAttributeNS(null, 'height', attributes['boxHeight']);
-  }
-}
-
-        svgBannerSetContent();
-        </script>
-      </svg>
-
-    </div>
-    <div class="refreshBannerCombined-ctaContainer">
-      <div class="refreshBannerCombined-ctaBox">
-        <h3 class="refreshBannerCombined-ctaHeadline">find your<br>best-fit<br>solution</h3>
-        <a class="refreshBannerCombined-ctaButton button ghost">Learn More</a>
-      </div>
+    <div class="refreshBannerCombined-newheader-062018">
+      <h1 class="refreshBannerCombined-ctaHeadline refreshBannerCombined-ctaHeadline-062018">Technology is always changing</h1>
+      <h4 class="rsHomepage-subHeader-062018">Future-Proof Your Digital Transformation</h4>
+      <a class="refreshBannerCombined-ctaButton rsHomepage-button-062018 button ghost">Get Started</a>
     </div>
   </div>
 
@@ -313,47 +198,29 @@ function svgBannerSetContent(primaryBox = 25) {
 
 
 <div class="rsHomepage-announcement">
-	<div class="rsHomepage-leftStripContainer">
-		<div class="rsHomepage-annLeftBar">
-			<div class="rsHomepage-titleContainer">
-				<h2 class="rsHomepage-annLeftBar-header">TRANSFORM THE WAY YOU DO BUSINESS</h2>
-				<h3 class="rsHomepage-annLeftBar-subHeader">Offering expertise and support for your IT transformation</h3>
-			</div>
-		</div>
-		<div class="rsHomepage-annRight-iconBar"></div>
-	</div>
-	<div class="rsHomepage-annLeft">
-		<div class="rsHomepage-annLeftContainer">
-			<div class="rsHomepage-annLeft-content">
-				<p class="rsHomepage-annLeft-p">
-					Rackspace was here when the cloud began, we grew alongside it, and we became experts along the way.
-					Now we host and manage all the leading cloud technologies. And back it all with our signature Fanatical
-					Support® — the best-in-class service that’s behind everything we do.
-				</p>
-				<div class="rsHomepage-annLeft-awardsRow">
-					<div class="col-xs-4">
-						<div class="awards rsHomepage-awards">
-						  <h2 class="awards-title rsHomepage-awards-title">3000+</h2>
-						  <p class="awards-subhead rsHomepage-awards-sub">Dedicated Hosting Engineers</p>
-						</div>
-		    	</div>
-		    	<div class="col-xs-4">
-						<div class="awards rsHomepage-awards">
-							<h2 class="awards-title rsHomepage-awards-title">1000+</h2>
-						  <p class="awards-subhead rsHomepage-awards-sub">Microsoft Technical Certifications</p>
-						</div>
-				  </div>
-				  <div class="col-xs-4">
-						<div class="awards rsHomepage-awards">
-							<h2 class="awards-title rsHomepage-awards-title">300+</h2>
-						  <p class="awards-subhead rsHomepage-awards-sub">AWS Technical Certifications</p>
-						</div>
-				  </div>
-				 </div>
-			</div>
-		</div>
-	</div>
-	<div class="rsHomepage-annRight"></div>
+  <div class="rsHomepage-leftStripContainer">
+    <div class="rsHomepage-annLeftBar">
+      <a href="#" target="_blank">
+      <div class="rsHomepage-titleContainer">
+        <h2 class="rsHomepage-annLeftBar-header">Unbiased Expertise</h2>
+        <h3 class="rsHomepage-annLeftBar-subHeader">
+          Lean on our experts for a point of view based on experience across leading technologies
+        </h3>
+      </div>
+      </a>
+    </div>
+    <div class="rsHomepage-annRight-iconBar"></div>
+  </div>
+  <div class="rsHomepage-annLeft rsHomepage-annLeft-062018">
+    <div class="rsHomepage-annLeftContainer">
+      <div class="rsHomepage-annLeft-content">
+        <p class="rsHomepage-annLeft-p rsHomepage-annLeft-p-062018">
+          Taking on a digital transformation can be tough &mdash; and many businesses give up before they reach their goals. No matter where you are on your journey, we can help you achieve a successful, future-proof digital transformation, across the world's leading technologies.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="rsHomepage-annRight rsHomepage-annRight-062018"></div>
 </div>
 
 <div class="container">
