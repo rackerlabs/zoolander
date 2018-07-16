@@ -209,7 +209,6 @@
 
 .refreshBanner-innerTopRight {
   @include make-angle;
-  background-color: $white;
   padding: 25px;
   vertical-align: middle;
   width: 83.3333%;
@@ -220,7 +219,7 @@
 }
 
 .refresh-headline {
-  color: $brand-primary;
+  color: $white;
   font-family: $heading;
   font-size: 6rem;
   font-weight: 700;
@@ -460,8 +459,8 @@
   }
 
   .refreshBannerCombined-internal {
-    height: 465px;
-    padding-top: 50px;
+    height: 365px;
+    padding-top: 0;
   }
 }
 
