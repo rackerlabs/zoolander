@@ -1,7 +1,5 @@
 'use strict';
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 // This plugin can be used to anchor scroll to anything. Usage:
 // 1) Give your link the "rsAnchor-scroll" class
 // 2) Give the href of your link a hashed id (ie href="#someID")
@@ -18,7 +16,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         nav: $('.navbar-fixed-top').outerHeight(),
         top: $top
       };
-      if (_typeof($this.offset()) !== (typeof undefined === 'undefined' ? 'undefined' : _typeof(undefined)) && $this.offset() !== false) {
+      if (typeof $this.offset() !== 'undefined' && $this.offset() !== false) {
         $('html, body').animate({
           scrollTop: plugin.anchorScroll.calcTopScroll(dimensions)
         }, 500);

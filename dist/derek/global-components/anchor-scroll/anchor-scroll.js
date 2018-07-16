@@ -14,7 +14,7 @@
         nav: $('.navbar-fixed-top').outerHeight(),
         top: $top,
       };
-      if (typeof $this.offset() !== typeof undefined && $this.offset() !== false) {
+      if (typeof $this.offset() !== 'undefined' && $this.offset() !== false) {
         $('html, body').animate({
           scrollTop: plugin.anchorScroll.calcTopScroll(dimensions),
         }, 500);

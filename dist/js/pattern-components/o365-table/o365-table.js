@@ -73,7 +73,7 @@
             if ($row.index() !== 0) {
               $row.find('td').each(function label() {
                 var $td = $(this);
-                $td.prepend('\n                  <strong class="rsPricingTable-mobile-label">\n                    ' + $labels.eq($td.index() - 1).html() + '\n                  </strong>');
+                $td.prepend('<strong class="rsPricingTable-mobile-label">\n                    ' + $labels.eq($td.index() - 1).html() + '\n                  </strong>');
               });
             }
           });
