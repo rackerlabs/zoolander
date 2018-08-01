@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+var Zoolander = Zoolander || {};
+
 /**
  * @file
  * This file should never be included directly. Rather, the code should be
@@ -47,6 +49,12 @@ function svgBannerStringSplitter(str, l){
  * Set's the svg content.
  */
 function svgBannerSetContent(primaryBox = 25) {
+  // Prevent redraw.
+  if (typeof Zoolander.svgIsDrawn === "undefined") {
+    Zoolander.svgIsDrawn = false;
+  } else if (Zoolander.svgIsDrawn) {
+    return;
+  }
   // Add content lines.
   var boxTextLimits = {
     primaryBox: primaryBox,
@@ -70,11 +78,6 @@ function svgBannerSetContent(primaryBox = 25) {
       tspan.appendChild(text);
       el.appendChild(tspan);
     }
-
-    // Set height and position attributes.
-    var attributes = svgBannerGetAttributes(lines.length, id);
-    parent.querySelector('.poly-leftSide').setAttributeNS(null, 'points', attributes['leftSide']);
-    parent.querySelector('.poly-bottomSide').setAttributeNS(null, 'points', attributes['bottomSide']);
-    parent.querySelector('.textBox').setAttributeNS(null, 'height', attributes['boxHeight']);
   }
+  Zoolander.svgIsDrawn = true;
 }
