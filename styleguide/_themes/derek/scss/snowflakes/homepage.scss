@@ -290,6 +290,59 @@
   text-align: right;
 }
 
+//Case Study
+  
+.caseStudy-wrapper {
+  background-image: url('../imgs/derek/banners/caseStudy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  font-family: $heading;
+  padding: 40px 0;
+}
+
+.caseStudy-container {
+  @include make-container;
+}
+
+.caseStudy-row {
+  @include make-row;
+  padding: $half-padding-full;
+}
+
+.caseStudy-content {
+  @include make-sm-column(5);
+}
+    
+.caseStudy-image {
+  margin: 20px 0;
+  max-width: 175px;
+}
+
+.caseStudy-title {
+  color: $white;
+  font-size: 3.25rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 2.75rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.caseStudy-text {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: .5px;
+  line-height: 2.5rem;
+}
+
+.caseStudy-button {
+  border-radius: 3px;
+  text-transform: capitalize;
+  width: 250px;
+}
+  
+
 @media only screen and (max-width: $screen-md-max) {
   .refreshBanner-homepage-062018 {
     background-position: center left;
@@ -358,6 +411,11 @@
 
 @media only screen and (max-width: 600px) {
   .refreshBanner-homepage-062018 {
+    background-color: $black;
+    background-image: none;
+  }
+  
+  .caseStudy-wrapper {
     background-color: $black;
     background-image: none;
   }

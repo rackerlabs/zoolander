@@ -26,16 +26,6 @@
   <div class="rsHomepage-annRight rsHomepage-annRight-062018"></div>
 </div>
 
-<div class="container">
-	<%- partial("../pattern-components/o365-table/o365-tables.ejs") %>
-	<script type="text/javascript">
-	$('.rsPricingTable').o365Table({
-	  labelFirstCol: true,
-	  inTabs: true,
-		fixedElements: ['.navbar-fixed-top']
-	});
-	</script>
-</div>
 
 <div class="rsHomepage-platformContainer">
   <div class="rsHomepage-platformRow">
@@ -52,20 +42,21 @@
 <%- partial("../pattern-components/tabs/tabs-horizontal.ejs") %>
 
 
-  <!-- Quadrant -->
-  <div class="container-fluid quadrant" id="quadrant">
-    <div class="container">
-      <div class="quadrant-row">
-        <div class="quadrant-textContainer">
-          <h2 class="quadrant-title">Fanatical Support wherever you are, day or night, we have you covered 24x7x365</h2>
-          <p class="quadrant-text">We're more than just a hosting provider - we're your trusted service partner, and we're ready to help solve the toughest problems. Gartner has recognized us as a leader in their <a href="[rsweb:about:cloud-enabled]">Magic Quadrant for Cloud Enabled Managed Hosting.</a></p>
-            <div class="quadrant-buttonContainer">
-              <a class="button learning" href="[rsweb:why-rackspace]">Learn More</a>
-            </div>
+<!-- Case Study -->
+
+<div class="caseStudy-wrapper">
+  <div class="caseStudy-container">
+    <div class="caseStudy-row">
+      <div class="caseStudy-content">
+        <img class="caseStudy-image" src="/imgs/derek/logos/McKesson_logo_white.svg"/>
+        <h3 class="caseStudy-title">Reducing the Overhead of Dedicated Data Centers</h3>
+        <p class="caseStudy-text">See how McKesson moved their apps to public cloud while maintaining stringent security and healthcare compliance.</p>
+        <a class="caseStudy-button button ghost">Read More</a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 <%- partial("../pattern-components/blog-feed/blog-feed.ejs") %>
 
