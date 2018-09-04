@@ -1,0 +1,55 @@
+<div class="container">
+<script src="//app-ab24.marketo.com/js/forms2/js/forms2.min.js"></script>
+<!-- <form id="mktoForm_1004"></form> -->
+<a href="javascript:void(0)" id="form" class="button lead" onclick="//MktoForms2.loadForm('//app-ab24.marketo.com', '444-IKH-022', 1004, function (form){MktoForms2.lightbox(form).show();});">Marketo Form Lightbox</a>
+</div>
+<script type="text/javascript">
+var lightbox;
+
+MktoForms2.loadForm("//app-ab24.marketo.com", "444-IKH-022", 1004);
+
+document.querySelector("#form").addEventListener("click", function(e) {
+  MktoForms2.whenReady(function(form) {
+    var formElement = form.getFormElem()[0];
+    console.log(form);
+
+
+    lightbox = MktoForms2.lightbox(form, {
+      onSuccess: function(vals, url) {
+        var parent = formElement.parentNode,
+            ty = document.createElement('div');
+        parent.removeChild(formElement);
+
+        ty.innerHTML = '<div class="webform-confirmation"><div class="center"><i class="fa fa-check fa-5x"></i></div><div class="center">Thank you for submitting the form.</div></div><p class="small half-padding-top">Information collected in this form is subject to the <a href="/information/legal/privacycenter">Rackspace Privacy Statement</a>.</p></div>';
+        parent.appendChild(ty);
+
+        return false;
+      }
+    });
+
+    lightbox.show();
+  });
+});
+</script>
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('444-IKH-022', {"wsInfo":"j1RQ"});
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>

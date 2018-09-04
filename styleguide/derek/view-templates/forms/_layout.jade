@@ -1,0 +1,11 @@
+extends ../../../_layouts/page
+
+block content
+  !=partial("../../global-components/ceiling/ceiling")
+  !=partial("../../global-components/mainnav/mainnav")
+  .contentOffset
+  !=partial("../../pattern-components/headers/header-refresh", {desc:"Marketo Forms Test",size:"Medium"})
+    != yield
+  !=partial("../../global-components/back-to-top/back-to-top")
+  !=partial("../../global-components/footer/footer")
+  !=partial("../../global-components/basement/basement")
