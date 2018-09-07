@@ -1,36 +1,100 @@
 <div class="container">
 <script src="//app-ab24.marketo.com/js/forms2/js/forms2.min.js"></script>
-<!-- <form id="mktoForm_1004"></form> -->
-<a href="javascript:void(0)" id="form" class="button lead" onclick="//MktoForms2.loadForm('//app-ab24.marketo.com', '444-IKH-022', 1004, function (form){MktoForms2.lightbox(form).show();});">Marketo Form Lightbox</a>
+<a href="javascript:void(0)" id="form" class="button lead">Marketo Form Lightbox</a>
+<br/><br/><br/><br/>
+<form id="mktoForm_1021"></form>
 </div>
 <script type="text/javascript">
-var lightbox;
+MktoForms2.loadForm("//app-ab24.marketo.com", "444-IKH-022", 1021);
+MktoForms2.loadForm("//app-ab24.marketo.com", "444-IKH-022", 1004, function(form){
+  console.log(form);
+});
 
-MktoForms2.loadForm("//app-ab24.marketo.com", "444-IKH-022", 1004);
+var translations = {
+  'fr' : {
+    'FirstName' : 'Prénom',
+    'LastName' : 'Nom de famille',
+    'Email' : 'E-mail'
+  },
+
+  'de' : {
+    'FirstName' : 'Vorname',
+    'LastName' : 'Nachname',
+    'Email' : 'E-mail-adresse'
+
+  },
+
+  'en' : {
+    'FirstName' : 'First name',
+    'LastName' : 'Last Name',
+    'Email' : 'Email Address'
+  }
+};
+
+MktoForms2.whenRendered(function(form){
+    var formEl = form.getFormElem()[0];
+
+    console.log(formEl);
+
+
+    /*********************** STYLES ***************************/
+
+    // remove element styles from root and children (may want to disable this while debugging)
+    for (var elsWithStyles = document.querySelectorAll('#' + formEl.id + ', #' + formEl.id + ' [style]'), i = 0, imax = elsWithStyles.length; i < imax; i++) {
+        elsWithStyles[i].removeAttribute('style');
+    }
+
+    // disable all Marketo-sourced stylesheets
+    // for (var styleSheets = document.styleSheets, i = 0, imax = styleSheets.length; i < imax; i++) {
+    //     var ssLoc = document.createElement('A');
+    //     ssLoc.href = styleSheets[i].href;
+
+    //     if ((ssLoc.hostname.search(/\.marketo\.com$/) !== -1) //  external STYLEs
+    //     ||
+    //     ((styleSheets[i].ownerNode || styleSheets[i].owningElement).parentNode == formEl)) { //  inline STYLEs within FORM tag
+    //         // styleSheets[i].disabled = true;
+    //     }
+    // }
+
+    /************************ TRANSLATION *************************/
+
+    //Form language. This should change automatically by language version. Change between fr, de and en to see difference
+  // var language = "de";
+
+  // //Go through all the form label translations in the defined language
+  // for(var labelTranslation in translations[language]){
+  //   //Identify each element and change placeholder, but only try to replace a placeholder, if the field exists
+  //   if($("label[for='" + labelTranslation + "']").length){
+  //     $("label[for='" + labelTranslation + "']").text(translations[language][labelTranslation]);
+  //   }
+  // }
+
+});
 
 document.querySelector("#form").addEventListener("click", function(e) {
   MktoForms2.whenReady(function(form) {
     var formElement = form.getFormElem()[0];
-    console.log(form);
+    if (form.getId() === 1004) {
+      lightbox = MktoForms2.lightbox(form, {
+        onSuccess: function(vals, url) {
+          console.log(vals);
+          var parent = formElement.parentNode,
+              ty = document.createElement('div');
+          parent.removeChild(formElement);
 
+          ty.innerHTML = '<div class="webform-confirmation"><div class="center"><i class="fa fa-check fa-5x"></i></div><div class="center">Thank you for submitting the form.</div></div><p class="small half-padding-top">Information collected in this form is subject to the <a href="/information/legal/privacycenter">Rackspace Privacy Statement</a>.</p></div>';
+          parent.appendChild(ty);
 
-    lightbox = MktoForms2.lightbox(form, {
-      onSuccess: function(vals, url) {
-        var parent = formElement.parentNode,
-            ty = document.createElement('div');
-        parent.removeChild(formElement);
+          return false;
+        }
+      });
 
-        ty.innerHTML = '<div class="webform-confirmation"><div class="center"><i class="fa fa-check fa-5x"></i></div><div class="center">Thank you for submitting the form.</div></div><p class="small half-padding-top">Information collected in this form is subject to the <a href="/information/legal/privacycenter">Rackspace Privacy Statement</a>.</p></div>';
-        parent.appendChild(ty);
-
-        return false;
-      }
-    });
-
-    lightbox.show();
+      lightbox.show();
+    }
   });
 });
 </script>
+
 <script type="text/javascript">
 (function() {
   var didInit = false;
