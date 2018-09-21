@@ -129,6 +129,17 @@ Zoolander.Tracking = function Tracking($) {
       });
     });
 
+    $('.track-loginGcp').on('click', function () {
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://manage.rackspace.com/gcp',
+        eventValue: '0',
+        eventNonInteraction: 0
+      });
+    });
+
     $('.track-backToTop').on('click', function () {
       dataLayer.push({
         event: 'ga.event',

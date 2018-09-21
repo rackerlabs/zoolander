@@ -57,6 +57,16 @@ function fixScrollBug() {
 fixScrollBug();
 window.addEventListener('resize', fixScrollBug);
 
+function checkSubMenuView($subMenu) {
+  var menuBottom = $subMenu.get(0).getBoundingClientRect().top + $subMenu.outerHeight();
+  var screenHeight = $(window).outerHeight();
+  var offScreen = menuBottom > screenHeight;
+  if (offScreen) {
+    var diff = menuBottom - screenHeight;
+    $subMenu.css('top', '-' + diff + 'px');
+  }
+}
+
 // set the trigger to show drop downs on hover or clicks depending on viewport
 var $viewPort = void 0;
 $('.navbar-tertiary-dropDownTrigger').click(function (e) {
@@ -69,5 +79,9 @@ $('.navbar-tertiary-dropDownTrigger').click(function (e) {
   $viewPort = parseInt($(window).outerWidth(), 10);
   if ($viewPort > 768) {
     dropDownTrigger($(e.currentTarget));
+    checkSubMenuView($(e.currentTarget).find('> .navbar-dropDownMenu'));
   }
+}, function (e) {
+  // reset the custom top value
+  $(e.currentTarget).find('> .navbar-dropDownMenu').css('top', '');
 });
