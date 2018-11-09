@@ -1,0 +1,109 @@
+<!-- Dedicated Configurator -->
+<div class="rsDedicatedConfig">
+    <div class="rsDedicatedConfig-row">
+      <div class="rsDedicatedConfig-col-full">
+          <% if (typeof solution !== 'undefined') { %>
+            <h2 class="rsDedicatedConfig-header"><%- solution %></h2>
+          <% } %>
+        <p class="rsDedicatedConfig-body">
+            <% if (typeof bestfor !== 'undefined') { %>
+              <span class="rsDedicatedConfig-body-text">
+                  <%- bestfor %>
+              </span>
+            <% } %>
+        </p>
+        <div class="rsDedicatedConfig-cta">
+          <a class="cta-button track-cta">
+              <% if (typeof custom !== 'undefined') { %>
+                Learn More
+              <% } else { %>
+                Buy Now
+              <% } %>
+            </a>
+        </div>
+        <div class="rsDedicatedConfig-content-hidden">
+            <% if (typeof price !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block center">
+                Starting at
+                <span class="rsDedicatedConfig-price"><%- price %></span>
+                per month
+              </div>
+            <% } %>
+            <% if (typeof workloads !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <% if (typeof custom !== 'undefined') { %>
+                  Our architects will design a custom solution based on:
+                <% } else { %>
+                  <h3>Sample Workloads</h3>
+                <% } %>
+                <ul>
+                  <% for(var i=0; i < workloads.length; i++) { %>
+                    <li><%= workloads[i] %></li>
+                  <% } %>
+                </ul>
+              </div>
+            <% } %>
+            <% if (typeof compute !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>Compute</h3>
+                <%- compute %>
+              </div>
+            <% } %>
+            <% if (typeof ram !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>RAM</h3>
+                <%- ram %>
+              </div>
+            <% } %>
+            <% if (typeof localstorage !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>Local Storage</h3>
+                <%- localstorage %>
+              </div>
+            <% } %>
+            <% if (typeof firewall !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>Firewall</h3>
+                <%- firewall %>
+              </div>
+            <% } %>
+            <% if (typeof dblicense !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>Database License</h3>
+                <%- dblicense %>
+              </div>
+            <% } %>
+            <% if (typeof gpu !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>GPU</h3>
+                <%- gpu %>
+              </div>
+            <% } %>
+            <% if (typeof satisfaction !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>30-day Satisfaction Gaurantee</h3>
+                <i class="fa fa-check"></i>
+              </div>
+            <% } %>
+            <% if (typeof backup !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>Free Managed Backup</h3>
+                <i class="fa fa-check"></i>
+              </div>
+            <% } %>
+            <% if (typeof bandwidth !== 'undefined') { %>
+              <div class="rsDedicatedConfig-content-block">
+                <h3>2TB Outgoing Bandwidth</h3>
+                <i class="fa fa-check"></i>
+              </div>
+            <% } %>
+          </div>
+      </div>
+    </div>
+    <div class="rsDedicatedConfig-footer">
+      <a href="#" class="rsDedicatedConfig-specs-title">
+        <span class="rsDedicatedConfig-specs-msg">Show me the Specs</span>
+        <span class="rsDedicatedConfig-specs-icon"></span>
+      </a>
+    </div>
+  </div>
