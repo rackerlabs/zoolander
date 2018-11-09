@@ -1,0 +1,183 @@
+// @media (min-width: 768px)
+.rsDedicatedConfig {
+  background: $white;
+  border-top: 5px solid $brand-primary;
+  box-shadow: 0 1px 3px $black-shadow;
+  display: block;
+  height: 100%;
+  margin-bottom: 10px;
+  padding: 25px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+}
+
+.rsDedicatedConfig-body {
+  height: 100%;
+  margin-bottom: -25px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.rsDedicatedConfig-body-text {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.rsDedicatedConfig-col-full {
+  @include make-md-column(12);
+}
+
+.rsDedicatedConfig-header {
+  align-self: flex-start;
+  border-bottom: 1px solid $gray-lighter;
+  color: $gray-darkest;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.rsDedicatedConfig-row {
+  @include make-row;
+}
+
+.rsDedicatedConfig-col {
+  float: left;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.rsDedicatedConfig-specs-title {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.rsDedicatedConfig-specs-msg {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.rsDedicatedConfig-specs-icon {
+  background-color: $gray-base;
+  border-radius: 50%;
+  color: $white;
+  display: block;
+  height: 20px;
+  margin: 0 auto;
+  text-align: center;
+  transition-duration: .2s;
+  width: 20px;
+
+  &::before {
+    content: '\e806';
+    font-family: 'rswebfonts';
+    font-size: 14px;
+    position: relative;
+    top: -4px;
+  }
+}
+
+.rsDedicatedConfig-specs-iconOpen {
+  transform: rotate(180deg);
+}
+
+.rsDedicatedConfig-content-hidden {
+  display: none;
+}
+
+.rsDedicatedConfig-content-block {
+  border-bottom: 1px solid $gray-lighter;
+  padding: 20px 0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.rsDedicatedConfig-price {
+  display: block;
+  font-family: $heading;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.rsDedicatedConfig-cta {
+  border-bottom: 1px solid $gray-lighter;
+  padding-bottom: 20px;
+}
+
+// stand out classes for desktop only
+@media only screen and (min-width: $screen-sm-min) {
+  .rsDedicatedConfig {
+    padding-bottom: 100px;
+  }
+
+  .rsDedicatedConfig-col {
+    width: 25%;
+  }
+
+  .rsDedicatedConfig-row {
+    height: 100%;
+  }
+
+  .rsDedicatedConfig-col-full {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .rsDedicatedConfig-body {
+    height: 50%;
+  }
+
+  // when cards are expanded
+  .rsDedicatedConfig-container-open {
+
+    .rsDedicatedConfig-body {
+      height: unset;
+      min-height: 200px;
+    }
+
+    .rsDedicatedConfig-col-full {
+      height: unset;
+    }
+  }
+
+  .rsDedicatedConfig-specs-title {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+
+  }
+}
+
+@media screen and (max-width: $screen-md-min) and (min-width: $screen-sm-min) {
+  .rsDedicatedConfig-container-open {
+    .rsDedicatedConfig-body-text {
+      min-height: 325px;
+    }
+  }
+
+  .rsDedicatedConfig {
+    padding-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: $screen-lg-min) and (min-width: $screen-sm-min) {
+  .rsDedicatedConfig-header {
+    min-height: 100px;
+  }
+}
