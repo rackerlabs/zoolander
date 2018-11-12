@@ -138,6 +138,17 @@ Zoolander.Tracking = (function Tracking($) {
       });
     });
 
+    $('.track-loginOnePortal').on('click', () => {
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://login.rackspace.com/',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+
     $('.track-backToTop').on('click', () => {
       dataLayer.push({
         event: 'ga.event',
