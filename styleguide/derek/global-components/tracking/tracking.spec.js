@@ -44,6 +44,7 @@ describe('Zoolander Tracking Module', () => {
         .append('<a class="track-loginFaws">FAWS</a>')
         .append('<a class="track-loginApps">Apps</a>')
         .append('<a class="track-loginCloudOffice">Cloud Office</a>')
+        .append('<a class="track-loginOnePortal">Login One</a>')
         .append('<a class="track-loginCloudCp">Cloud Control Panel</a>')
         .append('<a class="track-loginGcp">GCP Login</a>');
       Zoolander.Tracking.init();
@@ -109,6 +110,17 @@ describe('Zoolander Tracking Module', () => {
         eventCategory: 'Login',
         eventAction: 'Click',
         eventLabel: 'https://manage.rackspace.com/gcp',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+
+      $('.track-loginOnePortal').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://login.rackspace.com/',
         eventValue: '0',
         eventNonInteraction: 0,
       };
