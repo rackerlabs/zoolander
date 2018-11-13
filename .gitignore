@@ -7,5 +7,6 @@ dist
 Gemfile.lock
 styleguide/css/*.css
 styleguide/js
+styleguide/font/Fira
 backstop_data/bitmaps_test
 npm-debug.log

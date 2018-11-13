@@ -291,7 +291,7 @@
 }
 
 //Case Study
-  
+
 .caseStudy-wrapper {
   background-image: url('../imgs/derek/banners/caseStudy.jpg');
   background-repeat: no-repeat;
@@ -313,7 +313,7 @@
 .caseStudy-content {
   @include make-sm-column(5);
 }
-    
+
 .caseStudy-image {
   margin: 20px 0;
   max-width: 175px;
@@ -330,7 +330,7 @@
 }
 
 .caseStudy-text {
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: $copy;
   font-size: 1.75rem;
   letter-spacing: .5px;
   line-height: 2.5rem;
@@ -341,7 +341,7 @@
   text-transform: capitalize;
   width: 250px;
 }
-  
+
 
 @media only screen and (max-width: $screen-md-max) {
   .refreshBanner-homepage-062018 {
@@ -414,7 +414,7 @@
     background-color: $black;
     background-image: none;
   }
-  
+
   .caseStudy-wrapper {
     background-color: $black;
     background-image: none;

@@ -1,0 +1,17 @@
+@mixin loadFiraWeight($basename, $weight) {
+  $basepath: '../font/Fira';
+
+  @font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: $weight;
+    src: url($basepath + '/eot/' + $basename + '.eot') format('embedded-opentype'),
+    url($basepath + '/woff2/' + $basename + '.woff2') format('woff2'),
+    url($basepath + '/woff/' + $basename + '.woff') format('woff'),
+    url($basepath + '/ttf/' + $basename + '.ttf') format('truetype');
+  }
+}
+
+@include loadFiraWeight('FiraSans-ExtraLight', 200);
+@include loadFiraWeight('FiraSans-Light', 300);
+@include loadFiraWeight('FiraSans-Regular', 400);
