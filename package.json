@@ -8,6 +8,7 @@
   "scripts": {
     "babel": "rm -rf styleguide/js && babel styleguide/global styleguide/derek --out-dir styleguide/js && npm run copyjs",
     "copyjs": "cp styleguide/derek/global-components/hex/hex.js styleguide/js/global-components/hex/",
+    "font:install": "cp -rf node_modules/mozilla-fira-pack/Fira styleguide/font/",
     "gh-pages": "./scripts/build-pages.sh",
     "harp": "harp ",
     "harp:compile": "npm run harp compile styleguide dist",
@@ -15,7 +16,7 @@
     "lint:js": "eslint styleguide/derek styleguide/global",
     "lint:sass": "sass-lint -v",
     "preversion": "npm run babel && npm run harp compile styleguide dist && git add -f dist",
-    "postinstall": "npm run hooks && npm run babel",
+    "postinstall": "npm run hooks && npm run babel && npm run font:install",
     "postversion": "git push && git push --tags",
     "sass:compile": "node-sass --output-style=compressed --quiet -o /tmp styleguide/css",
     "start": "concurrently 'npm run watch:babel' 'npm run start:harp' 'npm run start:bs'",
@@ -31,7 +32,9 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "concurrently": "^3.4.0",
-    "harp": "^0.24.0"
+    "mozilla-fira-pack": "0.0.1",
+    "node-sass": "^4.10.0",
+    "pify": "^4.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -52,7 +55,6 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-sinon-chai": "^1.2.4",
     "mocha": "^3.2.0",
-    "node-sass": "^3.8.0",
     "request": "^2.72.0",
     "sass-lint": "^1.0.1",
     "semver": "^5.3.0",
@@ -60,6 +62,9 @@
     "sinon": "^2.1.0",
     "sinon-chai": "^2.9.0",
     "walk": "^2.3.9"
+  },
+  "optionalDependencies": {
+    "harp": "^0.24.0"
   },
   "files": [
     "dist",
