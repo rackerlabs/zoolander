@@ -6,6 +6,11 @@ $code: Tahoma, Arial, Geneva, Helvetica;
 $font-weight-normal: normal;
 $font-weight-regular: 400;
 $font-weight-black: 600;
+$navigation-font-size: 1.375rem;
+$navigation-font-size-medium: 1.05rem;
+$navigation-font-size-xsmall: .9rem;
+$nav-line-height: 19.2px;
+
 
 @mixin heading($color: $gray-darkest) {
   color: $color;

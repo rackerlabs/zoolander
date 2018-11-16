@@ -7,6 +7,10 @@
 }
 
 // Basement Classes
+.rsBasement {
+  background-color: $black;
+}
+
 .basement {
   padding: 20px ($grid-gutter-width / 2) 10px;
 }
