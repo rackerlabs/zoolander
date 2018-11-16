@@ -29,6 +29,9 @@
   },
   "repository": "https://github.com/rackerlabs/zoolander",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "concurrently": "^3.4.0",
