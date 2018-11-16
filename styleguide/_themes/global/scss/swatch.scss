@@ -1,14 +1,36 @@
 //Path to CDN
 $images: 'imgs';
 
-//primary colors
-$rackspace-red:     #c40022;
+// primary colors
+$rackspace-red:     #eb0000;
+$blue:              #3300fc;
+$purple:            #9500ba;
+$teal:              #00c8bc;
+
+// neutrals
+$white:             #fff    !default;
+$black:             #000    !default;
+
+// secondary
+$dark-red:          #c40023;
+$dark-purple:       #52194f;
+$dark-blue:         #14064e;
+$dark-teal:         #056e8d;
+$light-red:         #ffdedf;
+$light-purple:      #f6d7f4;
+$light-blue:        #e8f2fd;
+$light-teal:        #d1fffb;
+
+// standard gradients
+@mixin background-gradient {
+  background: linear-gradient(to right, $rackspace-red 0%, $purple 51%, $blue 100%);
+}
+
 $signup-green:      #5aaa28;
 $mustard:           #f6b100;
 
 //accent colors
 $orange:            #f63;
-$purple:            #639;
 $teal-medium:       #0dcfd9;
 $teal-dark:         #00b4c3;
 $blue-login:        #0c808c;
@@ -17,8 +39,6 @@ $blue-steel:        #0d1b2a;
 $blue-gray:         #2e3238;
 
 //Grays already defined in bootstrap variables - here as reference
-$white:             #fff    !default;
-$black:             #000    !default;
 $gray-base:         #666    !default;
 $gray-darker:       #4c4c4c !default;
 $gray-dark:         #333    !default;
