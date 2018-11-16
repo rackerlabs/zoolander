@@ -1,8 +1,8 @@
 .main-nav {
   background: $white;
   border: 0;
+  border-bottom: 2px solid $gray-lighter;
   border-radius: 0;
-  box-shadow: 0 6px 12px $black-shadow;
   font-family: $copy;
   margin: 0;
 }
@@ -17,37 +17,38 @@
     border-bottom: 3px solid transparent;
     color: $gray-darker;
     display: block;
-    font-weight: $font-weight-black;
-    line-height: 2.1rem;
-    padding: 20px 20px 17px;
+    font-size: $navigation-font-size;
+    font-weight: $font-weight-light;
+    line-height: $nav-line-height;
+    padding: 20px;
     text-decoration: none;
 
     &:hover,
     &:focus,
     &:visited {
-      background-color: transparent;
-      border-bottom: 3px solid $brand-primary;
+      background-color: darken($white, 5%);
+      border-bottom: 3px solid $rackspace-red;
     }
   }
 
   .navbar-topItem {
-    font-size: $navigation-font-size;
-    font-weight: $font-weight-black;
+    font-size: $font-size-h4;
+    font-weight: $font-weight-light;
 
     &.open {
       > .navbar-topLink {
-        background: $brand-primary;
-        border-bottom: 3px transparent solid;
-        color: $white;
+        border-bottom: 3px solid $rackspace-red;
+        color: $black;
       }
     }
 
     .navbar-dropDownLink,
     .navbar-tertiary-dropDownLink {
-      color: $white;
+      color: $black;
       cursor: pointer;
       font-size: $navigation-font-size;
-      line-height: 2rem;
+      font-weight: $font-weight-light;
+      line-height: $nav-line-height;
       padding: 6px 25px;
       text-decoration: none;
       text-transform: none;
@@ -65,7 +66,7 @@
   display: block;
 
   &::after {
-    content: '\e801';
+    content: '\f105';
     font-family: 'rswebfonts';
     position: absolute;
     right: 10px;
@@ -80,7 +81,7 @@
 }
 
 .navbar-dropDownMenu {
-  background: $brand-primary;
+  background: $white;
   border: 0;
   border-radius: 0;
   min-width: 230px;
@@ -91,15 +92,13 @@
   position: relative;
 
   &:hover {
-    background-color: darken($brand-primary, 10%);
+    background-color: $light-red;
     cursor: pointer;
   }
 }
 
 .navbar-tertiary-dropDownMenu {
-  background-color: darken($brand-primary, 10%);
   border: 0;
-  box-shadow: none;
   left: 100%;
   margin: 0;
   padding: 0;
@@ -109,7 +108,7 @@
 
 .navbar-tertiary-dropDownItem {
   &:hover {
-    background-color: darken($brand-primary, 15%);
+    background-color: $light-red;
     cursor: pointer;
   }
 }
@@ -153,7 +152,7 @@
   .navbar-topLink-dropDown {
 
     &::after {
-      content: '\e806';
+      content: '\f107';
       font-family: 'rswebfonts';
       line-height: 1rem;
       margin-left: 10px;
@@ -165,12 +164,12 @@
   .navbar-nav {
 
     .navbar-topItem {
-      font-size: $navigation-font-size-medium;
+      font-size: $navigation-font-size;
 
       .navbar-dropDownLink,
       .navbar-dropDownLabel,
       .navbar-tertiary-dropDownLink {
-        font-size: $navigation-font-size-medium;
+        font-size: $navigation-font-size;
         padding: 7px 15px 7px 12px;
       }
 
@@ -214,7 +213,7 @@
   .navbar-dropDown-trigger {
 
     &::after {
-      content: '\e801';
+      content: '\f105';
       font-family: 'rswebfonts';
       margin-left: 10px;
     }
@@ -223,7 +222,7 @@
   .navbar-topLink-dropDown {
 
     &::after {
-      content: '\e801';
+      content: '\f105';
       font-family: 'rswebfonts';
       margin-left: 10px;
     }
@@ -233,7 +232,7 @@
     display: block;
 
     &::after {
-      content: '\e806';
+      content: '\f107';
       top: 6px;
     }
   }
@@ -246,21 +245,19 @@
 
       .navbar-dropDownLink,
       .navbar-dropDownLabel {
-        border-bottom: 1px solid darken($brand-primary, 5%);
         font-size: $navigation-font-size;
       }
 
       .navbar-tertiary-dropDownLink {
-        border-bottom: 1px solid darken($brand-primary, 10%);
         font-size: $navigation-font-size;
       }
 
       .navbar-dropDownMenu {
-        background: $gray-dark;
+        background: $white;
       }
 
       .navbar-tertiary-dropDownMenu {
-        background-color: darken($brand-primary, 5%);
+        background-color: $white;
       }
     }
 

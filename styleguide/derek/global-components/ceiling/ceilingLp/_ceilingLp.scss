@@ -7,10 +7,7 @@
 
 .refresh-ceilingLp {
   @include gradient(to bottom, $black, transparent);
-}
-
-.ceiling-menuInline-item {
-  border-left: 1px solid $gray-light;
+  border-bottom: 0;
 }
 
 .ceilingRefresh-menuInline-item {
@@ -24,12 +21,7 @@
 .navbar-phoneiconLp,
 .navbar-chaticonLp,
 .navbar-emailiconLp {
-  color: $gray-darkest;
   padding: 15px 0;
-
-  &:hover {
-    color: $gray-darkest;
-  }
 
   &::before {
     color: $gray-darkest;
@@ -39,16 +31,22 @@
 .navbarRefresh-phoneicon,
 .navbarRefresh-chaticon,
 .navbarRefresh-emailicon {
+  color: $white;
   font-size: 1.05em;
   padding: 25px 20px;
 
   &::before {
+    color: $white;
     font-size: 1.1em;
+  }
+
+  &:hover {
+    color: $white;
   }
 }
 
 .ceilingLp-brand {
-  background-image: url('../imgs/derek/rs-logo-black.svg');
+  background-image: url('../imgs/derek/rs-logo-white.svg');
   background-position: left 50%;
   background-repeat: no-repeat;
   background-size: 100% 79%;
