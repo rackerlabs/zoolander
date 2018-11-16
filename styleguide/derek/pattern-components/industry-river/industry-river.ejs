@@ -1,0 +1,68 @@
+<!-- Industry River -->
+<%
+  var industries = [
+    {
+      title: 'Healthcare',
+      copy: 'We host more than 2,500 healthcare organizations with a Business Associate Agreement (BAA) available with all services.'
+    },
+    {
+      title: 'Government',
+      copy: 'Compliance-ready services uniquely tailored for federal, state, local, education organizations, contractors, SIs and ISVs.'
+    },
+    {
+      title: 'Financial Services',
+      copy: 'From banking and investment firms to insurance and FinTech, we cover planning, migration, security and operational support.'
+    },
+    {
+      title: 'Energy solutions',
+      copy: 'We’ll address your compliance and supply chain challenges, provide world-class security, and interpret data to identify your next innovation.'
+    },
+    {
+      title: 'Retail and ecommerce',
+      copy: 'We can build and deploy your ecommerce solution, manage its compliance and security requirements, and help you scale quickly.'
+    },
+    {
+      title: 'Digital agencies',
+      copy: 'Easily deploy web apps and services by letting us manage your preferred platform.'
+    },
+    {
+      title: 'Media and entertainment',
+      copy: 'Support for multi-cloud environments, high-performance computing and legacy apps, high-quality media content. '
+    }
+  ];
+%>
+
+<div class="industries-wrapper">
+  <div class="container">
+    <div class="row row-eq-height no-gutter-xs">
+      <div class="col-sm-4 col-md-3">
+        <h1 class="industries-title">
+          No matter what the industry, we speak our language.
+        </h1>
+      </div>
+      <div class="col-sm-8 col-md-9">
+
+        <!-- Industries -->
+        <% for(var i=0; i<industries.length; i++) {%>
+              <%- partial("_partials/industry", industries[i]) %>
+        <% } %>
+
+        <a href="javascript:void(0)" class="col-sm-6 col-md-4 industry-wrapper">
+            <h3 class="industries-more">Learn more about Rackspace industries</h3>
+            <?xml version="1.0" encoding="utf-8"?>
+            <svg class="industries-more-arrow" viewBox="0 0 22 13" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0.683" y1="6.337" x2="20.321" y2="6.337"/>
+              <path d="M 20.384 6.418 L 14.874 11.928 M 20.366 6.389 L 14.891 0.931" style="stroke-linejoin: bevel; stroke-linecap: square;"/>
+            </svg>
+        </a>
+
+        <!-- Blank grids -->
+        <% if (industries.length < 8) {%>
+          <% for(var i=0; i<(8 - industries.length); i++) {%>
+            <div class="col-sm-6 col-md-4 industry-wrapper no-hover hidden-sm hidden-xs">&nbsp;</div>
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
