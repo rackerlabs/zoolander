@@ -15,20 +15,16 @@ Should bring in featured image and no other. A filter has been applied in css.
 -->
 
 
-<div class="standard-padding bg-light-gray">
+<div class="standard-padding">
   <div class="container">
-    <h2>Feed Title</h2>
+    <h1 class="blogFeed-header">Feed Title</h1>
     <div class="row row-eq-height">
-      <div class="col-sm-3 panel-flex">
+      <div class="col-sm-6 blogFeed-col1">
+        <%- partial("_partials/blog-feed-item") %>
         <%- partial("_partials/blog-feed-item") %>
       </div>
-      <div class="col-sm-3 panel-flex">
+      <div class="col-sm-6 blogFeed-col2">
         <%- partial("_partials/blog-feed-item") %>
-      </div>
-      <div class="col-sm-3 panel-flex">
-        <%- partial("_partials/blog-feed-item") %>
-      </div>
-      <div class="col-sm-3 panel-flex">
         <%- partial("_partials/blog-feed-item") %>
       </div>
     </div>
