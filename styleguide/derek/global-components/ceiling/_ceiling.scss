@@ -1,20 +1,23 @@
 // see styleguide/_themes/global/scss/_bootstrap_overrides.scss for sass lint overrides.
 
 $ceiling-margin: floor($navbar-margin-bottom / 4);
-$navigation-font-size: 1.2rem;
-$navigation-font-size-medium: 1.05rem;
-$navigation-font-size-xsmall: .9rem;
 $ceiling-font-size: $navigation-font-size-medium;
 
 .ceiling {
-  background: $gray-dark;
+  background: $white;
   border: 0;
+  border-bottom: 2px solid $gray-lighter;
   border-radius: 0;
   font-family: $copy;
-  font-size: $ceiling-font-size;
+  font-size: $navigation-font-size-medium;
   font-weight: $font-weight-black;
   margin: 0;
   min-height: $line-height-computed;
+}
+
+.ceiling-strip {
+  @include background-gradient;
+  height: 5px;
 }
 
 .ceiling-container {
@@ -22,7 +25,7 @@ $ceiling-font-size: $navigation-font-size-medium;
 }
 
 .navbar-phoneicon {
-  color: $white;
+  color: $black;
   text-decoration: none;
 
   &::before {
@@ -31,7 +34,7 @@ $ceiling-font-size: $navigation-font-size-medium;
 }
 
 .navbar-emailicon {
-  color: $white;
+  color: $black;
   text-decoration: none;
 
   &::before {
@@ -40,7 +43,7 @@ $ceiling-font-size: $navigation-font-size-medium;
 }
 
 .navbar-chaticon {
-  color: $white;
+  color: $black;
   text-decoration: none;
 
   &::before {
@@ -57,16 +60,16 @@ $ceiling-font-size: $navigation-font-size-medium;
   text-align: center;
 
   &::before {
-    color: $white;
+    color: $black;
     font-family: 'rswebfonts';
-    font-size: $navigation-font-size;
+    font-size: $navigation-font-size-medium;
     margin-right: 5px;
   }
 
   &:hover,
   &:focus,
   &:active {
-    color: $white;
+    color: $black;
     cursor: pointer;
     text-decoration: none;
   }
@@ -80,25 +83,25 @@ $ceiling-font-size: $navigation-font-size-medium;
 }
 
 .ceiling-menuInline-item {
-  border-left: 1px solid $gray-base;
   display: inline-block;
   float: left;
-  font-size: 1.15rem;
+  font-size: $navigation-font-size-medium;
   font-weight: $font-weight-black;
+  padding: 0 5px;
 
   &.open,
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($blue-gray, 10%);
+    background-color: darken($white, 5%);
     cursor: pointer;
   }
 }
 
 .ceiling-menuInline-link {
-  color: $white;
+  color: $black;
   display: block;
-  font-size: 1.15rem;
+  font-size: $navigation-font-size-medium;
   padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
   vertical-align: middle;
@@ -106,7 +109,7 @@ $ceiling-font-size: $navigation-font-size-medium;
   &:hover,
   &:active,
   &:focus {
-    color: $white;
+    color: $black;
     text-decoration: none;
   }
 }
@@ -133,9 +136,10 @@ $ceiling-font-size: $navigation-font-size-medium;
 }
 
 .ceiling-dropdownMenu {
-  background-color: darken($blue-gray, 5%);
+  background-color: $white;
   border-radius: 0;
-  color: $white;
+  box-shadow: 0 6px 12px $black-shadow;
+  color: $black;
   display: none;
   left: auto;
   list-style: none;
@@ -144,30 +148,38 @@ $ceiling-font-size: $navigation-font-size-medium;
   right: 0;
   white-space: nowrap;
   z-index: 1000;
+
+  // bootstrap overrides
+  .ceiling-dropdownMenu-link {
+    color: $black;
+    display: block;
+    padding: 6px 13px;
+    text-decoration: none;
+  }
 }
 
 .ceiling-dropdownMenu-item {
-  color: $white;
-  font-size: $ceiling-font-size;
+  color: $black;
+  font-size: $navigation-font-size-medium;
   margin: 0;
   padding: 0;
 
   &:hover {
-    background-color: $brand-success;
+    background-color: $light-red;
   }
 }
 
 .ceiling-dropdownToggle {
-  color: $white;
+  color: $black;
   display: block;
-  font-size: 1.15rem;
+  font-size: $navigation-font-size-medium;
   padding: 15px floor($ceiling-margin + 5);
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
-    color: $white;
+    color: $black;
     text-decoration: none;
   }
 
@@ -178,6 +190,27 @@ $ceiling-font-size: $navigation-font-size-medium;
   }
 }
 
+.ceiling-dropdownMenu-gray {
+
+  .ceiling-dropdownMenu-link {
+    &:hover {
+      background-color: lighten($gray-base, 5%);
+      color: $white;
+    }
+  }
+}
+
+.ceiling-dropdownMenu-green {
+
+  .ceiling-dropdownMenu-link {
+    &:hover {
+      background-color: lighten($gray-base, 5%);
+      color: $white;
+    }
+  }
+}
+
+
 @media screen and (min-width: $screen-xs-min) {
   .ceiling {
     display: block;
@@ -185,20 +218,12 @@ $ceiling-font-size: $navigation-font-size-medium;
 }
 
 @media screen and (max-width: $screen-xs-max) {
-  .ceiling-menuInline-item {
-    font-size: 1rem;
-  }
-
   .ceiling-container {
     padding: 0;
   }
 }
 
 @media screen and (max-width: 380px) {
-  .ceiling-menuInline-item {
-    font-size: .9rem;
-  }
-
   .navbar-phoneicon,
   .navbar-chaticon,
   .navbar-emailicon,

@@ -1,23 +1,6 @@
 // Purpose of this file is to add bootstrap overrides that require nesting not permitted by sass linter.
 
 // Ceiling
-.ceiling-dropdownMenu a.ceiling-dropdownMenu-link {
-  color: $white;
-  display: block;
-  padding: 6px 13px;
-  text-decoration: none;
-}
-
-.ceiling-dropdownMenu-gray a.ceiling-dropdownMenu-link:hover {
-  background-color: lighten($gray-base, 5%);
-  color: $white;
-}
-
-.ceiling-dropdownMenu-green a.ceiling-dropdownMenu-link:hover {
-  background-color: lighten($brand-success, 5%);
-  color: $white;
-}
-
 .subnav-item-active a.subnav-link-active {
   color: $white;
 }
@@ -58,7 +41,7 @@
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
   .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
-    background: darken($brand-primary, 5%);
+    background: $light-red;
   }
 }
 
@@ -68,16 +51,22 @@
 
     &:focus,
     &:hover {
-      background-color: darken($brand-primary, 5%);
+      background-color: $white;
     }
   }
 
   .navbar-dropDownMenu > li.navbar-dropDownItem {
-    background-color: $brand-primary;
+    background-color: $white;
   }
 
   .navbar-dropDownMenu > li.navbar-dropDownItem > .navbar-dropDown-triggerActive {
-    background: darken($brand-primary, 5%);
+    background: $white;
   }
 
+}
+
+@media (max-width: $screen-sm-min - 1) {
+  .navbar-nav .open .dropdown-menu {
+    padding-left: 15px;
+  }
 }
