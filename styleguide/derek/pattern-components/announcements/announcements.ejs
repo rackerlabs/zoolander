@@ -1,48 +1,10 @@
 <!-- Announcements -->
 <div class="container">
-  <h3>Link Announcement</h3>
-  <div class="row row-eq-height">
-    <div class="col-sm-12">
-      <%- partial('_partials/announcement-link.ejs', {
-        'type': 'newProduct',
-        'desc': 'This is a New Product. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.'
-      }) %>
-    </div>
-  </div>
-
   <h3>Standard Announcement</h3>
-  <div class="row row-eq-height">
-    <div class="col-sm-12">
-      <%- partial('_partials/announcement.ejs', {
-        'type': 'newProduct',
-        'desc': 'This is a New Product. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.'
-      }) %>
-    </div>
-  </div>
-
-  <div class="row row-eq-height">
-    <div class="col-sm-12 panel-flex">
-      <%- partial('_partials/announcement.ejs', {
-        'type': 'alert',
-        'desc': 'This is an Alert. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.'
-      }) %>
-    </div>
-  </div>
-  <div class="row row-eq-height">
-    <div class="col-sm-12 panel-flex">
-      <%- partial('_partials/announcement.ejs', {
-        'type': 'general',
-        'desc': 'This is a General Announcement. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.'
-      }) %>
-    </div>
-  </div>
-
-  <div class="row row-eq-height">
-    <div class="col-xs-12">
-      <%- partial('_partials/announcement.ejs', {
-        'type': 'promotion',
-        'desc': 'This is a Promotion. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.'
-      }) %>
-    </div>
+  <div class="row">
+    <%- partial('_partials/announcement.ejs', {
+      'header': 'Announcement Header',
+      'body': 'This the announcement body. You can add additional words here.'
+    }) %>
   </div>
 </div>
