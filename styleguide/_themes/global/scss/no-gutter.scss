@@ -1,0 +1,32 @@
+.no-gutter > [class*='col-'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (min-width: $screen-lg) {
+  .no-gutter-lg > [class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .no-gutter-md > [class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .no-gutter-sm > [class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .no-gutter-xs > [class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

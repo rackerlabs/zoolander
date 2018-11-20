@@ -1,0 +1,116 @@
+// For industry river
+
+.industries-wrapper {
+  background: $dark-blue;
+}
+
+.industries-title {
+  color: $white;
+}
+
+.industries-more {
+  color: $white;
+}
+
+.industry-wrapper {
+  border-left: 1px solid $white;
+  color: $white;
+  min-height: 250px;
+  padding: 10px;
+
+  :nth-child(-n+6) {
+    border-bottom: 1px solid $white;
+  }
+
+  :nth-child(3n+3) {
+    border-right: 1px solid $white;
+  }
+
+  :focus {
+    color: $white;
+    text-decoration: none;
+  }
+
+  :hover {
+    background-color: $white;
+    color: $gray-darkest;
+    cursor: pointer;
+    text-decoration: none;
+
+    .industry-title {
+      color: $gray-darkest;
+    }
+
+    .industry-link {
+      color: $rackspace-red;
+    }
+
+    &.no-hover {
+      background: none;
+      cursor: default;
+    }
+
+    .industries-more {
+      color: $gray-darkest;
+    }
+
+    .industries-more-arrow {
+      stroke: $rackspace-red;
+    }
+  }
+}
+
+.industry-title {
+  color: $white;
+  margin-top: 0;
+}
+
+.industry-link {
+  color: $white;
+
+  ::after {
+    content: '\f105';
+    font-family: 'rswebfonts';
+    padding-left: 5px;
+    padding-top: 1px;
+    position: absolute;
+  }
+}
+
+.industries-more-arrow {
+  margin-top: 40px;
+  stroke: $white;
+  width: 40px;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .industry-wrapper {
+    :nth-child(3n+3) {
+      border-right: 0;
+    }
+
+    :nth-child(even) {
+      border-right: 1px solid $white;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .industries-title {
+    margin-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .industry-wrapper {
+    border-bottom: 1px solid $white;
+    border-left: 0;
+    display: inline-block;
+    min-height: auto;
+    padding: 25px;
+    width: 100%;
+
+    :nth-child(even) {
+      border-right: 0;
+    }
+  }
+}
