@@ -1,18 +1,14 @@
-<!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-<%
-if(!desc) { var desc = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."; }
-if(!type) { var type = 'general'; }
-var icons = {
-  'alert' : 'fa-exclamation-circle',
-  'general' : 'fa-bullhorn',
-  'newProduct' : 'fa-server',
-  'promotion' : 'fa-money'
-};
-%>
-<div class="announcement-wrapper announcement-<%- type %> row-eq-height">
-  <div class="announcement-icon flex-center-all"><i class="fa <%- icons[type] %>" aria-hidden="true"></i></div>
-  <div class="announcement-message">
-    <h3 class="announcement-head">Header Here</h3>
-    <%- desc %>
+<!-- Announcement River -->
+<div class="rsHomepage-announcementRiver">
+  <div class="rsHomepage-announcementRiverContainer">
+    <div class="rsHomepage-announcementRiverRow">
+      <div class="rsHomepage-announcementRiverTitle">
+        <h3 class="rsHomepage-announcementRiverTitleHeader"><%- header %></h3>
+      </div>
+      <div class="rsHomepage-announcementRiverDetails">
+        <p><%- body %></p>
+        <p><a class="rsHomepage-announcementRiverReadMore" href="#">Read more</a></p>
+      </div>
+    </div>
   </div>
 </div>

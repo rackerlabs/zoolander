@@ -1,30 +1,9 @@
 <%- partial("../pattern-components/headers/header-refresh-homepage-06_2018.ejs") %>
 
-<div class="rsHomepage-announcement">
-  <div class="rsHomepage-leftStripContainer">
-    <div class="rsHomepage-annLeftBar">
-      <a href="#" target="_blank">
-      <div class="rsHomepage-titleContainer">
-        <h2 class="rsHomepage-annLeftBar-header">Unbiased Expertise</h2>
-        <h3 class="rsHomepage-annLeftBar-subHeader">
-          Lean on our experts for a point of view based on experience across leading technologies
-        </h3>
-      </div>
-      </a>
-    </div>
-    <div class="rsHomepage-annRight-iconBar"></div>
-  </div>
-  <div class="rsHomepage-annLeft rsHomepage-annLeft-062018">
-    <div class="rsHomepage-annLeftContainer">
-      <div class="rsHomepage-annLeft-content">
-        <p class="rsHomepage-annLeft-p rsHomepage-annLeft-p-062018">
-          Taking on a digital transformation can be tough &mdash; and many businesses give up before they reach their goals. No matter where you are on your journey, we can help you achieve a successful, future-proof digital transformation, across the world's leading technologies.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="rsHomepage-annRight rsHomepage-annRight-062018"></div>
-</div>
+<%- partial('../pattern-components/announcements/_partials/announcement.ejs', {
+  'header': 'Rackspace named Partner of the Year',
+  'body': 'Redhat names Rackspace North America Managed Service Partner of the Year'
+}) %>
 
 <%- partial("../pattern-components/about-river/about-river.ejs") %>
 
@@ -58,6 +37,11 @@
     </div>
   </div>
 </div>
+
+<%- partial('../pattern-components/announcements/_partials/announcement.ejs', {
+  'header': 'It\'s national cybersecurity month',
+  'body': 'Build your cybersecurity knowledge with a month of interactive content. No matter where you are on your journey, we can help you achieve a successful, future-proof digital transformation.'
+}) %>
 
 <%- partial("../pattern-components/blog-feed/blog-feed.ejs") %>
 
