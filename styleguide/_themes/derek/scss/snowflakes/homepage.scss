@@ -292,22 +292,36 @@
 
 //Case Study
 
+.caseStudy-banner-image {
+  display: none;
+}
+
+.caseStudy-box {
+  background: $white;
+  display: block;
+  margin-bottom: 1px;
+  padding: 20px 50px 150px 20px;
+  text-decoration: none;
+}
+
 .caseStudy-wrapper {
-  background-image: url('../imgs/derek/banners/caseStudy.jpg');
+  background-image: url('../imgs/derek/banners/customer-story-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: $white;
+  color: $black;
   font-family: $heading;
-  padding: 40px 0;
+  // padding: 40px 0;
 }
 
 .caseStudy-container {
   @include make-container;
+  //padding: 0px;
 }
 
 .caseStudy-row {
   @include make-row;
-  padding: $half-padding-full;
+  //margin-left: -50px;
+  //margin-right: -50px;
 }
 
 .caseStudy-content {
@@ -315,12 +329,19 @@
 }
 
 .caseStudy-image {
-  margin: 20px 0;
-  max-width: 175px;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.caseStudy-header {
+  font-size: 4rem;
+  font-weight: lighter;
+  letter-spacing: 1.75px;
+  line-height: 1.25;
 }
 
 .caseStudy-title {
-  color: $white;
+  color: $black;
   font-size: 3.25rem;
   font-weight: 700;
   letter-spacing: .5px;
@@ -331,17 +352,32 @@
 
 .caseStudy-text {
   font-family: $copy;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   letter-spacing: .5px;
-  line-height: 2.5rem;
+  line-height: 1.5rem;
+  word-spacing: .5px;
 }
 
 .caseStudy-button {
   border-radius: 3px;
-  text-transform: capitalize;
+  color: $rackspace-red;
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration: none;
   width: 250px;
 }
 
+@media only screen and (max-width: $screen-md-max) {
+  .caseStudy-banner-image {
+    display: block;
+  }
+
+  .caseStudy-wrapper {
+    background-image: none;
+    background-repeat: none;
+    background-size: none;
+  }
+}
 
 @media only screen and (max-width: $screen-md-max) {
   .refreshBanner-homepage-062018 {
