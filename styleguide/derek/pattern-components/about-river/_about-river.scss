@@ -1,0 +1,48 @@
+.aboutus-wrapper {
+  @include flex-box;
+  background-color: $dark-blue;
+
+  .overlap-circ-fill {
+    margin: 75px auto;
+    width: 75%;
+  }
+}
+
+.about-postit-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.about-postit {
+  background-color: $white;
+}
+
+@media screen and (max-width: $screen-md-max) {
+  .aboutus-wrapper {
+    .container {
+      padding: 25px 0;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .aboutus-wrapper {
+    .container {
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  .about-postit-wrapper {
+    background-color: $white;
+    display: block;
+  }
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .about-postit {
+    padding-top: 25px;
+  }
+}
