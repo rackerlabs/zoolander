@@ -1,0 +1,59 @@
+$grad-start: #3D00FA;
+$grad-end: #E70600;
+
+.pageBanner-wrapper {
+    background-image: url('../../../imgs/derek/banners/homepage-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $black;
+    font-family: $heading;
+    height: 680px;
+    //padding: 40px 0;
+}
+
+.pageBanner-content {
+    background-color: $white;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-bottom: 75px;
+}
+
+.pageBanner-title {
+    font-size: 4rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding-right: 30px;
+}
+
+.pageBanner-text {
+    font-family: $copy;
+    font-size: 1.25rem;
+    letter-spacing: .5px;
+    line-height: 1.5rem;
+    word-spacing: .5px;
+    padding-right: 100px;
+    padding-bottom: 25px;
+}
+
+.pageBanner-button {
+    background-color: $red;
+    background-image: linear-gradient(to right, $grad-start, $grad-end);
+    color: $white;
+    font-weight: bold;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+// .pageBanner-button-box {
+//     position: absolute;
+//     bottom: 75px;
+//     right: 0;
+// }
+// .pageBannerWhite-button {
+//     background-color: $white;
+//     color: $black;
+//     font-weight: lighter;
+//     padding-right: 40px;
+//     padding-left: 30px;
+// }
