@@ -1,14 +1,6 @@
 // New cust story code
-
-$screen-xl: 1440px;
-$screen-xs-plus: 481px;
-
-.rsHomepage-customerStories-banner-image {
-  display: none;
-}
-
 .rsHomepage-customerStories-main-image {
-  background-image: url('../imgs/derek/banners/customer-story-background.jpg');
+  background-image: url('../imgs/derek/banners/customer-story-background-480.jpg');
   background-position: center;
   background-size: cover;
   display: none;
@@ -23,29 +15,36 @@ $screen-xs-plus: 481px;
   text-decoration: none;
 }
 
+.cs-story-box0 {
+  @include make-sm-column(6);
+  @include make-md-column(3);
+}
+
+.cs-story-box1 {
+  @include make-sm-column(6);
+  @include make-md-column(3);
+  @include make-md-column-offset(6);
+}
+
+.cs-story-box2 {
+  @include make-md-column(3);
+  @include make-md-column-offset(3);
+  @include make-sm-column(6);
+}
+
+.cs-story-box3 {
+  @include make-md-column(3);
+  @include make-md-column-offset(3);
+  @include make-sm-column(6);
+}
+
 .rsHomepage-customerStories-wrapper {
+  background-image: url('../imgs/derek/banners/customer-story-background-480.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: $black;
   font-family: $heading;
-
-  .container {
-    padding: 0;
-    width: auto;
-  }
-}
-
-.rsHomepage-customerStories-container {
-  @include make-container;
-}
-
-.rsHomepage-customerStories-row {
-  @include make-row;
-}
-
-.rsHomepage-customerStories-content {
-  @include make-sm-column(5);
 }
 
 .rsHomepage-customerStories-image {
@@ -56,26 +55,14 @@ $screen-xs-plus: 481px;
 .rsHomepage-customerStories-header {
   font-size: 4rem;
   font-weight: lighter;
-  letter-spacing: 1.75px;
+  letter-spacing: .1em;
   line-height: 1.25;
-}
-
-.rsHomepage-customerStories-title {
-  color: $black;
-  font-size: 3.25rem;
-  font-weight: 700;
-  letter-spacing: .5px;
-  line-height: 2.75rem;
-  margin: 0;
-  text-transform: uppercase;
 }
 
 .rsHomepage-customerStories-text {
   font-family: $copy;
   font-size: 1.25rem;
-  letter-spacing: .5px;
   line-height: 1.5rem;
-  word-spacing: .5px;
 }
 
 .rsHomepage-customerStories-button {
@@ -87,12 +74,7 @@ $screen-xs-plus: 481px;
   width: 250px;
 }
 // < 480px
-@media only screen and (max-width: $screen-xs) {
-  .rsHomepage-customerStories-wrapper,
-  .rsHomepage-customerStories-main-image {
-    background-image: url('../imgs/derek/banners/customer-story-background-480.jpg');
-  }
-
+@media screen and (max-width: $screen-xs) {
   .rsHomepage-customerStories-main-image {
     display: block;
     height: 240px;
@@ -103,28 +85,14 @@ $screen-xs-plus: 481px;
     padding-top: 10px;
   }
 
-  .container {
-    div {
-      :last-child {
-        .rsHomepage-customerStories-box {
-          border-top: 0;
-        }
-      }
-    }
-  }
-
   .rsHomepage-customerStories-box {
     margin-bottom: 0;
     padding: 30px;
-
-    :first-of-type {
-      border-right: 0;
-    }
   }
 }
 
-// 481 - 767px
-@media only screen and (min-width: $screen-xs-plus) and (max-width: $screen-xs-max) {
+// 480px - 768
+@media screen and (max-width: $screen-sm) and (min-width: $screen-xs) {
   .rsHomepage-customerStories-main-image {
     display: block;
     height: 380px;
@@ -135,23 +103,9 @@ $screen-xs-plus: 481px;
     padding-top: 10px;
   }
 
-  .container {
-    div {
-      :last-child {
-        .rsHomepage-customerStories-box {
-          border-top: 0;
-        }
-      }
-    }
-  }
-
   .rsHomepage-customerStories-box {
     margin-bottom: 0;
     padding: 30px;
-
-    :first-of-type {
-      border-right: 0;
-    }
   }
 
   .rsHomepage-customerStories-wrapper,
@@ -159,9 +113,8 @@ $screen-xs-plus: 481px;
     background-image: url('../imgs/derek/banners/customer-story-background-768.jpg');
   }
 }
-
 // 768px - 991px
-@media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+@media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
   .rsHomepage-customerStories-main-image {
     display: block;
   }
@@ -172,53 +125,39 @@ $screen-xs-plus: 481px;
     background-size: 0;
   }
 
-  .container {
-    div {
-      :last-child {
-        .rsHomepage-customerStories-box {
-          border-top: 1px solid $gray-light;
-          padding-bottom: 60px;
-        }
-      }
-    }
-  }
-
   .rsHomepage-customerStories-box {
     margin: 0;
     padding: 30px;
+  }
 
-    :first-of-type {
-      border-right: 1px solid $gray-light;
-    }
+  .cs-story-box2,
+  .cs-story-box3 {
+    border-top: 1px solid $gray-light;
+    padding-bottom: 60px;
   }
-}
-// 768px+
-@media screen and (min-width: $screen-sm) {
-  .rsHomepage-customerStories-wrapper,
-  .rsHomepage-customerStories-main-image {
-    background-image: url('../imgs/derek/banners/customer-story-background-768.jpg');
+
+  .cs-story-box0,
+  .cs-story-box2 {
+    border-right: 1px solid $gray-light;
   }
-}
-// 992px+
-@media screen and (min-width: $screen-md) {
+
   .rsHomepage-customerStories-wrapper,
   .rsHomepage-customerStories-main-image {
     background-image: url('../imgs/derek/banners/customer-story-background-992.jpg');
   }
 }
-// 1200px+
-@media screen and (min-width: $screen-lg) {
+// 1279 -  992px
+@media screen and (max-width: $screen-md-max) and (min-width: $screen-md) {
   .rsHomepage-customerStories-wrapper,
   .rsHomepage-customerStories-main-image {
     background-image: url('../imgs/derek/banners/customer-story-background-1280.jpg');
   }
 }
-// 1440px+
-@media screen and (min-width: $screen-xl) {
+// 1280px+
+@media screen and (min-width: $screen-lg) {
   .rsHomepage-customerStories-wrapper,
   .rsHomepage-customerStories-main-image {
     background-image: url('../imgs/derek/banners/customer-story-background-1440.jpg');
   }
 }
-
 // end rsHomepage-customerStories
