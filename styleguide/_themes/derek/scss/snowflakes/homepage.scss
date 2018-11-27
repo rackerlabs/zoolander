@@ -291,41 +291,14 @@
 }
 
 //Case Study
-$screen-xl: 1440px;
-$screen-xs-plus: 481px;
-
-.caseStudy-banner-image {
-  display: none;
-}
-
-.caseStudy-main-image {
-  background-image: url('../imgs/derek/banners/customer-story-background.jpg');
-  background-position: center;
-  background-size: cover;
-  display: none;
-  height: 450px;
-}
-
-.caseStudy-box {
-  background: $white;
-  display: block;
-  margin-bottom: 1px;
-  padding: 20px 50px 150px 20px;
-  text-decoration: none;
-}
-
+  
 .caseStudy-wrapper {
-  background-image: url('../imgs/derek/banners/customer-story-background.jpg');
-  background-position: center;
+  background-image: url('../imgs/derek/banners/caseStudy.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: $black;
+  color: $white;
   font-family: $heading;
-
-  .container {
-    padding: 0;
-    width: auto;
-  }
+  padding: 40px 0;
 }
 
 .caseStudy-container {
@@ -334,26 +307,20 @@ $screen-xs-plus: 481px;
 
 .caseStudy-row {
   @include make-row;
+  padding: $half-padding-full;
 }
 
 .caseStudy-content {
   @include make-sm-column(5);
 }
-
+    
 .caseStudy-image {
-  margin-bottom: 20px;
-  width: 30%;
-}
-
-.caseStudy-header {
-  font-size: 4rem;
-  font-weight: lighter;
-  letter-spacing: 1.75px;
-  line-height: 1.25;
+  margin: 20px 0;
+  max-width: 175px;
 }
 
 .caseStudy-title {
-  color: $black;
+  color: $white;
   font-size: 3.25rem;
   font-weight: 700;
   letter-spacing: .5px;
@@ -363,157 +330,17 @@ $screen-xs-plus: 481px;
 }
 
 .caseStudy-text {
-  font-family: $copy;
-  font-size: 1.25rem;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.75rem;
   letter-spacing: .5px;
-  line-height: 1.5rem;
-  word-spacing: .5px;
+  line-height: 2.5rem;
 }
 
 .caseStudy-button {
   border-radius: 3px;
-  color: $rackspace-red;
-  cursor: pointer;
-  font-weight: 400;
-  text-decoration: none;
+  text-transform: capitalize;
   width: 250px;
 }
-// < 480px
-@media only screen and (max-width: $screen-xs) {
-  .caseStudy-wrapper,
-  .caseStudy-main-image {
-    background-image: url('../imgs/derek/banners/customer-story-background-480.jpg');
-  }
-
-  .caseStudy-main-image {
-    display: block;
-    height: 240px;
-  }
-
-  .caseStudy-bar {
-    border-top: 1px solid $gray-light;
-    padding-top: 10px;
-  }
-
-  .container {
-    div {
-      :last-child {
-        .caseStudy-box {
-          border-top: 0;
-        }
-      }
-    }
-  }
-
-  .caseStudy-box {
-    margin-bottom: 0;
-    padding: 30px;
-
-    :first-of-type {
-      border-right: 0;
-    }
-  }
-}
-
-// 481 - 767px
-@media only screen and (min-width: $screen-xs-plus) and (max-width: $screen-xs-max) {
-  .caseStudy-main-image {
-    display: block;
-    height: 380px;
-  }
-
-  .caseStudy-bar {
-    border-top: 1px solid $gray-light;
-    padding-top: 10px;
-  }
-
-  .container {
-    div {
-      :last-child {
-        .caseStudy-box {
-          border-top: 0;
-        }
-      }
-    }
-  }
-
-  .caseStudy-box {
-    margin-bottom: 0;
-    padding: 30px;
-
-    :first-of-type {
-      border-right: 0;
-    }
-  }
-
-  .caseStudy-wrapper,
-  .caseStudy-main-image {
-    background-image: url('../imgs/derek/banners/customer-story-background-768.jpg');
-  }
-}
-
-// 768px - 991px
-@media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-  .caseStudy-main-image {
-    display: block;
-  }
-
-  .caseStudy-wrapper {
-    background-image: none;
-    background-repeat: unset;
-    background-size: 0;
-  }
-
-  .container {
-    div {
-      :last-child {
-        .caseStudy-box {
-          border-top: 1px solid $gray-light;
-          padding-bottom: 60px;
-        }
-      }
-    }
-  }
-
-  .caseStudy-box {
-    margin: 0;
-    padding: 30px;
-
-    :first-of-type {
-      border-right: 1px solid $gray-light;
-    }
-  }
-}
-// 768px+
-@media screen and (min-width: $screen-sm) {
-  .caseStudy-wrapper,
-  .caseStudy-main-image {
-    background-image: url('../imgs/derek/banners/customer-story-background-768.jpg');
-  }
-}
-// 992px+
-@media screen and (min-width: $screen-md) {
-  .caseStudy-wrapper,
-  .caseStudy-main-image {
-    background-image: url('../imgs/derek/banners/customer-story-background-992.jpg');
-  }
-}
-// 1200px+
-@media screen and (min-width: $screen-lg) {
-  .caseStudy-wrapper,
-  .caseStudy-main-image {
-    background-image: url('../imgs/derek/banners/customer-story-background-1280.jpg');
-  }
-}
-// 1440px+
-@media screen and (min-width: $screen-xl) {
-  .caseStudy-wrapper,
-  .caseStudy-main-image {
-    background-image: url('../imgs/derek/banners/customer-story-background-1440.jpg');
-  }
-}
-
-// end caseStudy
 
 @media only screen and (max-width: $screen-md-max) {
   .refreshBanner-homepage-062018 {
