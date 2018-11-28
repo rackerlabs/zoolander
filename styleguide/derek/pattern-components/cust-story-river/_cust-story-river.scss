@@ -91,8 +91,8 @@
   }
 }
 
-// 480px - 768
-@media screen and (max-width: $screen-sm) and (min-width: $screen-xs) {
+// 767 - 480px
+@media screen and (max-width: $screen-xs-max) and (min-width: $screen-xs) {
   .rsHomepage-customerStories-main-image {
     background-image: url('../imgs/derek/banners/customer-story-background-768.jpg');
     display: block;
@@ -114,12 +114,6 @@
   .rsHomepage-customerStories-main-image {
     background-image: url('../imgs/derek/banners/customer-story-background-992.jpg');
     display: block;
-  }
-
-  .rsHomepage-customerStories-wrapper {
-    background-image: none;
-    background-repeat: unset;
-    background-size: 0;
   }
 
   .rsHomepage-customerStories-box {
