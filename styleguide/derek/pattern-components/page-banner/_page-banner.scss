@@ -8,9 +8,14 @@ $grad-end: #E70600;
     color: $black;
     font-family: $heading;
     height: 680px;
-    //padding: 40px 0;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
+.pageBanner-container {
+    margin-left: 100px;
+}
 .pageBanner-content {
     background-color: $white;
     padding-top: 20px;
@@ -21,7 +26,7 @@ $grad-end: #E70600;
 .pageBanner-title {
     font-size: 4rem;
     font-weight: lighter;
-    letter-spacing: 1px;
+    //letter-spacing: 1px;
     line-height: 1;
     padding-right: 30px;
 }
@@ -29,31 +34,46 @@ $grad-end: #E70600;
 .pageBanner-text {
     font-family: $copy;
     font-size: 1.25rem;
-    letter-spacing: .5px;
+    //letter-spacing: .5px;
     line-height: 1.5rem;
-    word-spacing: .5px;
+    //word-spacing: .5px;
     padding-right: 100px;
     padding-bottom: 25px;
 }
 
+
 .pageBanner-button {
-    background-color: $red;
+    background-color: $rackspace-red;
     background-image: linear-gradient(to right, $grad-start, $grad-end);
     color: $white;
     font-weight: bold;
-    padding-right: 30px;
+   padding-right: 30px;
     padding-left: 30px;
 }
 
-// .pageBanner-button-box {
-//     position: absolute;
-//     bottom: 75px;
-//     right: 0;
-// }
-// .pageBannerWhite-button {
-//     background-color: $white;
-//     color: $black;
-//     font-weight: lighter;
-//     padding-right: 40px;
-//     padding-left: 30px;
-// }
+
+.pageBanner-button-box {
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+}
+.pageBannerWhite-button {
+    background-color: $white;
+    color: $black;
+    font-weight: lighter;
+    padding-right: 40px;
+    padding-left: 30px;
+}
+
+// < 480px
+@media screen and (max-width: $screen-xs) {
+  
+}
+// 767 - 480px
+@media screen and (max-width: $screen-xs-max) and (min-width: $screen-xs) {
+    
+}
+// 768px - 991px
+@media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+    
+}
