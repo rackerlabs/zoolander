@@ -2,20 +2,34 @@ $grad-start: #3D00FA;
 $grad-end: #E70600;
 
 .pageBanner-wrapper {
-    background-image: url('../../../imgs/derek/banners/homepage-banner.jpg');
+    background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: $black;
     font-family: $heading;
     height: 680px;
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
-.pageBanner-container {
-    margin-left: 100px;
+.pageBanner-center {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
 }
+
+.pageBanner-main-image {
+    background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
+  background-position: center;
+  background-size: cover;
+  display: none;
+  height: 450px;
+}
+
 .pageBanner-content {
     background-color: $white;
     padding-top: 20px;
@@ -46,7 +60,7 @@ $grad-end: #E70600;
     background-color: $rackspace-red;
     background-image: linear-gradient(to right, $grad-start, $grad-end);
     color: $white;
-    font-weight: bold;
+    font-weight: bolder;
    padding-right: 30px;
     padding-left: 30px;
 }
@@ -67,13 +81,91 @@ $grad-end: #E70600;
 
 // < 480px
 @media screen and (max-width: $screen-xs) {
-  
+    .pageBanner-main-image {
+        display: block;
+        height: 300px;
+    }
+
+    .pageBanner-wrapper {
+        background-image: unset;
+        height: unset;
+    }
+
+    .pageBanner-button-box {
+
+        background-color: $white;
+        bottom: 60%;
+    }
+
+    .pageBanner-center {
+        height: unset;
+        align-items: inherit;
+        display: block;
+        justify-content: unset;
+        background-color: $white;
+    }
+
+    .pageBanner-button {
+        width: 75%;
+    }
 }
 // 767 - 480px
 @media screen and (max-width: $screen-xs-max) and (min-width: $screen-xs) {
-    
+    .pageBanner-main-image {
+        display: block;
+        background-image: url('../../../imgs/derek/banners/homepage-banner-768.jpg');
+    }
+
+    .pageBanner-wrapper {
+        background-image: unset;
+        height: unset;
+    }
+
+    .pageBanner-button-box {
+        bottom: 50%;
+    }
+
+    .pageBanner-center {
+        height: unset;
+        align-items: inherit;
+        display: block;
+        justify-content: unset;
+        background-color: $white;
+    }
 }
 // 768px - 991px
 @media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
-    
+    .pageBanner-main-image {
+        display: block;
+        background-image: url('../../../imgs/derek/banners/homepage-banner-992.jpg');
+    }
+
+    .pageBanner-wrapper {
+        background-image: unset;
+    }
+
+    .pageBanner-button-box {
+        bottom: 325px;
+    }
+
+    .pageBanner-center {
+        height: unset;
+        align-items: inherit;
+        display: block;
+        justify-content: unset;
+        background-color: $white;
+    }
 }
+
+// 1279 -  992px
+@media screen and (max-width: $screen-md-max) and (min-width: $screen-md) {
+    .pageBanner-wrapper {
+      background-image: url('../../../imgs/derek/banners/homepage-banner-1280.jpg');
+    }
+  }
+  // 1280px+
+  @media screen and (min-width: $screen-lg) {
+    .pageBanner-wrapper {
+      background-image: url('../../../imgs/derek/banners/homepage-banner-1440.jpg');
+    }
+  }
