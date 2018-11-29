@@ -11,7 +11,8 @@
 }
 
 .challenges-itemWrapper {
-  @include make-xs-column(6);
+  @include make-xs-column(12);
+  @include make-md-column(6);
 
   padding: 0;
 
@@ -59,34 +60,42 @@
 }
 
 @media screen and (max-width: $screen-xs-max) {
+  .challenges-itemWrapper {
+    :nth-child(odd) {
+      .challenges-item {
+        float: left;
+      }
+    }
+  }
+
   .challenges-description {
     padding-right: 0;
   }
 }
 
-@media only screen and (max-width: 500px) {
+// @media only screen and (max-width: 500px) {
 
-  .challenges-descriptionRow {
-    .challenges-item {
-      margin-bottom: 10px;
-    }
-  }
+//   .challenges-descriptionRow {
+//     .challenges-item {
+//       margin-bottom: 10px;
+//     }
+//   }
 
-  .challenges-itemWrapper {
-    width: 100%;
-  }
+//   .challenges-itemWrapper {
+//     width: 100%;
+//   }
 
-  .challenges-item {
-    width: 100%;
-  }
+//   .challenges-item {
+//     width: 100%;
+//   }
 
-  .challenges-header,
-  .challenges-subhead {
-    padding-left: 25px;
-  }
+//   .challenges-header,
+//   .challenges-subhead {
+//     padding-left: 25px;
+//   }
 
-  .challenges-header {
-    margin-bottom: 0;
-  }
+//   .challenges-header {
+//     margin-bottom: 0;
+//   }
 
-}
+// }
