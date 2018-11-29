@@ -1,0 +1,69 @@
+<!-- Industry River -->
+<%
+  var challenges = [
+    {
+      shape: '<svg class="challenges-itemRackShape" version="1.1" id="Layer_1" x="0px" y="0px" width="201px" height="201px" viewBox="0 0 132 132" style="enable-background:new 0 0 201 201;" xmlns="http://www.w3.org/2000/svg"><style type="text/css">.st0{fill:none;stroke:#EB0000;stroke-miterlimit:10;}</style><g transform="matrix(1, 0, 0, 1, -34.5, -34.5)"><circle class="st0" cx="76.5" cy="124.5" r="40"/><circle class="st0" cx="88.5" cy="112.5" r="40"/><circle class="st0" cx="100.5" cy="100.5" r="40"/><circle class="st0" cx="112.5" cy="88.5" r="40"/><circle class="st0" cx="124.5" cy="76.5" r="40"/></g></svg>',
+      title: 'Migrate to the cloud',
+      copy: 'Migrate to the cloud of your choice, across all leading public and private clouds.'
+    },
+    {
+      shape: '<svg class="challenges-itemRackShape" version="1.1" id="Layer_1" x="0px" y="0px" width="201px" height="201px" viewBox="0 0 133 132" style="enable-background:new 0 0 201 201;" xmlns="http://www.w3.org/2000/svg"><style type="text/css">.st0{fill:none;stroke:#EB0000;stroke-miterlimit:10;}</style><g transform="matrix(1, 0, 0, 1, -34.5, -34.5)"><circle class="st0" cx="100.5" cy="100.5" r="64"/><circle class="st0" cx="100.5" cy="100.5" r="50"/><circle class="st0" cx="100.5" cy="100.5" r="36"/><circle class="st0" cx="100.5" cy="100.5" r="22"/><circle class="st0" cx="100.5" cy="100.5" r="8"/></g></svg>',
+      title: 'Protect business data',
+      copy: 'Protect sensitive data with an environment built for PCI-DSS, HIPAA, SOX and FISMA.'
+    },
+    {
+      shape: '<svg class="challenges-itemRackShape" version="1.1" id="Layer_1" x="0px" y="0px" width="201px" height="201px" viewBox="0 0 132 132" style="enable-background:new 0 0 201 201;" xmlns="http://www.w3.org/2000/svg"><style type="text/css">.st0{fill:none;stroke:#EB0000;stroke-miterlimit:10;}</style><g transform="matrix(1, 0, 0, 1, -34.5, -34.5)"><circle class="st0" cx="148.5" cy="52.5" r="16"/><circle class="st0" cx="52.5" cy="52.5" r="16"/><circle class="st0" cx="100.5" cy="52.5" r="16"/><circle class="st0" cx="148.5" cy="100.5" r="16"/><circle class="st0" cx="52.5" cy="100.5" r="16"/><circle class="st0" cx="100.5" cy="100.5" r="16"/><circle class="st0" cx="148.5" cy="148.5" r="16"/><circle class="st0" cx="52.5" cy="148.5" r="16"/><circle class="st0" cx="100.5" cy="148.5" r="16"/></g></svg>',
+      title: 'Regulate and comply',
+      copy: 'Address your industry’s regulations in a compliant, custom environment.'
+    },
+    {
+      shape: '<svg class="challenges-itemRackShape" version="1.1" id="Layer_1" x="0px" y="0px" width="201px" height="201px" viewBox="0 0 68 132" style="enable-background:new 0 0 201 201;" xmlns="http://www.w3.org/2000/svg"><style type="text/css">.st0{fill:none;stroke:#EB0000;stroke-miterlimit:10;}</style><g transform="matrix(1, 0, 0, 1, -66.5, -34.5)"><circle class="st0" cx="100.5" cy="132.5" r="32"/><circle class="st0" cx="100.5" cy="68.5" r="32"/><circle class="st0" cx="100.5" cy="100.5" r="32"/></g></svg>',
+      title: 'Uptime and performance',
+      copy: 'Avoid downtime with a customized infrastructure built for speed and stability.'
+    },
+    {
+      shape: '<svg class="challenges-itemRackShape" version="1.1" id="Layer_1" x="0px" y="0px" width="201px" height="201px" viewBox="0 0 132 124" style="enable-background:new 0 0 201 201;" xmlns="http://www.w3.org/2000/svg"><style type="text/css">.st0{fill:none;stroke:#EB0000;stroke-miterlimit:10;}</style><g transform="matrix(1, 0, 0, 1, -34.5, -38.5)"><circle class="st0" cx="128.5" cy="124.5" r="36"/><circle class="st0" cx="72.5" cy="124.5" r="36"/><circle class="st0" cx="100.5" cy="76.5" r="36"/></g></svg>',
+      title: 'Consolidate data centers',
+      copy: 'Replace your aging hardware infrastructure with powerful modern architecture.'
+    },
+    {
+      shape: '<svg class="challenges-itemRackShape" version="1.1" id="Layer_1" x="0px" y="0px" width="201px" height="201px" viewBox="0 0 132 132" style="enable-background:new 0 0 201 201;" xmlns="http://www.w3.org/2000/svg"><style type="text/css">.st0{fill:none;stroke:#EB0000;stroke-miterlimit:10;}</style><g transform="matrix(1, 0, 0, 1, -34.5, -34.5)"><circle class="st0" cx="100.5" cy="68.5" r="32"/><circle class="st0" cx="100.5" cy="132.5" r="32"/><circle class="st0" cx="132.5" cy="100.5" r="32"/><circle class="st0" cx="68.5" cy="100.5" r="32"/></g></svg>',
+      title: 'Disaster recovery',
+      copy: 'Prepare your business for the worst-case scenario, with a holistic security approach.'
+    }
+  ];
+%>
+
+<div class="challenges-wrapper">
+  <div class="container">
+
+    <div class="row row-eq-height challenges-descriptionRow">
+      <div class="challenges-itemWrapper">
+        <div class="challenges-item">
+          <h1 class="challenges-header">Solve your toughest challenges</h1>
+        </div>
+      </div>
+      <div class="challenges-itemWrapper">
+        <div class="challenges-item">
+          <p class="challenges-subhead">We apply our expertise to help you take on your toughest obstacles. Here are some of the most common challenges we help our customers overcome.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <% for(var i=0; i<challenges.length; i++) {%>
+
+      <% if(i % 2 == 0) {%>
+        <div class="row row-eq-height">
+      <% } %>
+
+      <%- partial("_partials/challenges", challenges[i]) %>
+
+      <% if(i % 2 == 1) {%>
+        </div>
+      <% } %>
+
+    <% } %>
+
+  </div>
+</div>
