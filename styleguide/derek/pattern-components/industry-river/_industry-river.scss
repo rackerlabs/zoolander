@@ -17,6 +17,7 @@
   color: $white;
   min-height: 250px;
   padding: 10px;
+  position: relative;
 
   :nth-child(-n+6) {
     border-bottom: 1px solid $white;
@@ -65,8 +66,14 @@
   margin-top: 0;
 }
 
+.industry-description {
+  margin-bottom: 25px;
+}
+
 .industry-link {
+  bottom: 25px;
   color: $white;
+  position: absolute;
 
   ::after {
     content: '\f105';
@@ -113,5 +120,10 @@
     :nth-child(even) {
       border-right: 0;
     }
+  }
+
+  .industry-link {
+    bottom: auto;
+    position: relative;
   }
 }
