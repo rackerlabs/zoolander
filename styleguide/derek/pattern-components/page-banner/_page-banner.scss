@@ -1,29 +1,28 @@
-$grad-start: #3D00FA;
-$grad-end: #E70600;
+$grad-start: #3d00fa;
+$grad-end: #e70600;
 
 .pageBanner-wrapper {
-    background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: $black;
-    font-family: $heading;
-    height: 680px;
-    position: relative;
+  background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $black;
+  font-family: $heading;
+  height: 680px;
+  position: relative;
 }
 
-.pageBanner-center {
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
+.pageBanner-col {
+  align-items: center;
+  display: flex;
+  float: left;
+  height: 100%;
+  justify-content: center;
+  margin-left: 75px;
 }
 
 .pageBanner-main-image {
-    background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
+  background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
   background-position: center;
   background-size: cover;
   display: none;
@@ -31,141 +30,153 @@ $grad-end: #E70600;
 }
 
 .pageBanner-content {
-    background-color: $white;
-    padding-top: 20px;
-    padding-left: 15px;
-    padding-bottom: 75px;
+  background-color: $white;
+  padding-bottom: 75px;
+  padding-left: 15px;
+  padding-top: 20px;
+  width: 350px;
 }
 
 .pageBanner-title {
-    font-size: 4rem;
-    font-weight: lighter;
-    //letter-spacing: 1px;
-    line-height: 1;
-    padding-right: 30px;
+  font-size: 4rem;
+  font-weight: lighter;
+  line-height: 1;
+  padding-right: 30px;
 }
 
 .pageBanner-text {
-    font-family: $copy;
-    font-size: 1.25rem;
-    //letter-spacing: .5px;
-    line-height: 1.5rem;
-    //word-spacing: .5px;
-    padding-right: 100px;
-    padding-bottom: 25px;
+  font-family: $copy;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-bottom: 25px;
+  padding-right: 100px;
+  padding-top: 5px;
 }
-
 
 .pageBanner-button {
-    background-color: $rackspace-red;
-    background-image: linear-gradient(to right, $grad-start, $grad-end);
-    color: $white;
-    font-weight: bolder;
-   padding-right: 30px;
-    padding-left: 30px;
+  background-color: $rackspace-red;
+  background-image: linear-gradient(to right, $grad-start, $grad-end);
+  color: $white;
+  font-weight: bolder;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-
 
 .pageBanner-button-box {
-    position: absolute;
-    bottom: 200px;
-    right: 0;
+  bottom: 200px;
+  position: absolute;
+  right: 0;
 }
+
 .pageBannerWhite-button {
-    background-color: $white;
-    color: $black;
-    font-weight: lighter;
-    padding-right: 40px;
-    padding-left: 30px;
+  background-color: $white;
+  color: $black;
+  font-weight: 300;
+  padding-left: 30px;
+  padding-right: 40px;
 }
 
 // < 480px
 @media screen and (max-width: $screen-xs) {
-    .pageBanner-main-image {
-        display: block;
-        height: 300px;
-    }
+  .pageBanner-main-image {
+    display: block;
+    height: 300px;
+  }
 
-    .pageBanner-wrapper {
-        background-image: unset;
-        height: unset;
-    }
+  .pageBanner-wrapper {
+    background-image: unset;
+    height: unset;
+  }
 
-    .pageBanner-button-box {
+  .pageBanner-button-box {
+    background-color: $white;
+    bottom: 60%;
+  }
 
-        background-color: $white;
-        bottom: 60%;
-    }
+  .pageBanner-col {
+    align-items: inherit;
+    background-color: $white;
+    display: block;
+    float: none;
+    height: unset;
+    justify-content: unset;
+    margin-left: 0;
+  }
 
-    .pageBanner-center {
-        height: unset;
-        align-items: inherit;
-        display: block;
-        justify-content: unset;
-        background-color: $white;
-    }
-
-    .pageBanner-button {
-        width: 75%;
-    }
+  .pageBanner-button {
+    width: 90%;
+  }
 }
 // 767 - 480px
 @media screen and (max-width: $screen-xs-max) and (min-width: $screen-xs) {
-    .pageBanner-main-image {
-        display: block;
-        background-image: url('../../../imgs/derek/banners/homepage-banner-768.jpg');
-    }
+  .pageBanner-main-image {
+    background-image: url('../../../imgs/derek/banners/homepage-banner-768.jpg');
+    display: block;
+  }
 
-    .pageBanner-wrapper {
-        background-image: unset;
-        height: unset;
-    }
+  .pageBanner-content {
+    width: 90%;
+  }
 
-    .pageBanner-button-box {
-        bottom: 50%;
-    }
+  .pageBanner-wrapper {
+    background-image: unset;
+    height: unset;
+  }
 
-    .pageBanner-center {
-        height: unset;
-        align-items: inherit;
-        display: block;
-        justify-content: unset;
-        background-color: $white;
-    }
+  .pageBanner-button-box {
+    bottom: 50%;
+  }
+
+  .pageBanner-col {
+    align-items: inherit;
+    background-color: $white;
+    display: block;
+    float: none;
+    height: unset;
+    justify-content: unset;
+    margin-left: 0;
+  }
 }
 // 768px - 991px
 @media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
-    .pageBanner-main-image {
-        display: block;
-        background-image: url('../../../imgs/derek/banners/homepage-banner-992.jpg');
-    }
+  .pageBanner-main-image {
+    background-image: url('../../../imgs/derek/banners/homepage-banner-992.jpg');
+    display: block;
+  }
 
-    .pageBanner-wrapper {
-        background-image: unset;
-    }
+  .pageBanner-content {
+    width: 65%;
+  }
 
-    .pageBanner-button-box {
-        bottom: 325px;
-    }
+  .pageBanner-wrapper {
+    background-image: unset;
+    height: unset;
+  }
 
-    .pageBanner-center {
-        height: unset;
-        align-items: inherit;
-        display: block;
-        justify-content: unset;
-        background-color: $white;
-    }
+  .pageBanner-button-box {
+    top: 325px;
+  }
+
+  .pageBanner-col {
+    align-items: inherit;
+    background-color: $white;
+    display: block;
+    float: none;
+    height: unset;
+    justify-content: unset;
+    margin-left: 0;
+  }
 }
 
 // 1279 -  992px
 @media screen and (max-width: $screen-md-max) and (min-width: $screen-md) {
-    .pageBanner-wrapper {
-      background-image: url('../../../imgs/derek/banners/homepage-banner-1280.jpg');
-    }
+  .pageBanner-wrapper {
+    background-image: url('../../../imgs/derek/banners/homepage-banner-1280.jpg');
   }
-  // 1280px+
-  @media screen and (min-width: $screen-lg) {
-    .pageBanner-wrapper {
-      background-image: url('../../../imgs/derek/banners/homepage-banner-1440.jpg');
-    }
+}
+// 1280px+
+@media screen and (min-width: $screen-lg) {
+  .pageBanner-wrapper {
+    background-image: url('../../../imgs/derek/banners/homepage-banner-1440.jpg');
   }
+}
