@@ -1,0 +1,92 @@
+.challenges-wrapper {
+  margin-top: 50px;
+}
+
+.challenges-header,
+.challenges-subhead {
+  margin: 0;
+  margin-bottom: 25px;
+  margin-left: 20.83333%;
+  padding-left: 25px;
+}
+
+.challenges-itemWrapper {
+  @include make-xs-column(6);
+
+  padding: 0;
+
+  :nth-child(odd) {
+    .challenges-item {
+      float: right;
+    }
+  }
+}
+
+.challenges-item {
+  @include make-xs-column(10);
+  @include make-md-column(8);
+
+  margin-bottom: 50px;
+}
+
+.challenges-icon {
+  @include make-xs-column(3);
+  @include make-lg-column(2.5);
+
+  padding: 0;
+}
+
+.challenges-itemRackShape {
+  height: auto;
+  width: 100%;
+}
+
+.challenges-description {
+  @include make-xs-column(9);
+  @include make-lg-column(8);
+
+}
+
+.challenges-descriptionTitle {
+  margin-top: 0;
+}
+
+@media screen and (max-width: $screen-md-max) {
+  .challenges-header,
+  .challenges-subhead {
+    margin-left: 25%;
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .challenges-description {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .challenges-descriptionRow {
+    .challenges-item {
+      margin-bottom: 10px;
+    }
+  }
+
+  .challenges-itemWrapper {
+    width: 100%;
+  }
+
+  .challenges-item {
+    width: 100%;
+  }
+
+  .challenges-header,
+  .challenges-subhead {
+    padding-left: 25px;
+  }
+
+  .challenges-header {
+    margin-bottom: 0;
+  }
+
+}
