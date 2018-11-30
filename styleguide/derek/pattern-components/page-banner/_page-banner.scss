@@ -7,6 +7,7 @@ $grad-end: #e70600;
   background-repeat: no-repeat;
   background-size: cover;
   color: $black;
+  display: flex;
   font-family: $heading;
   height: 680px;
   position: relative;
@@ -55,7 +56,7 @@ $grad-end: #e70600;
 
 .pageBanner-button {
   background-color: $rackspace-red;
-  background-image: linear-gradient(to right, $grad-start, $grad-end);
+  //background-image: linear-gradient(to right, $grad-start, $grad-end);
   color: $white;
   font-weight: bolder;
   padding-left: 30px;
@@ -86,6 +87,12 @@ $grad-end: #e70600;
   .pageBanner-wrapper {
     background-image: unset;
     height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
   }
 
   .pageBanner-button-box {
@@ -121,6 +128,12 @@ $grad-end: #e70600;
   .pageBanner-wrapper {
     background-image: unset;
     height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
   }
 
   .pageBanner-button-box {
@@ -151,6 +164,12 @@ $grad-end: #e70600;
   .pageBanner-wrapper {
     background-image: unset;
     height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
   }
 
   .pageBanner-button-box {
