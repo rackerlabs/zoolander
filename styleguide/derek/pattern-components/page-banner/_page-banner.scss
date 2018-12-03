@@ -1,6 +1,3 @@
-$grad-start: #3d00fa;
-$grad-end: #e70600;
-$darker-red-btn: #c40022;
 
 .pageBanner-wrapper {
   background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
@@ -20,7 +17,6 @@ $darker-red-btn: #c40022;
   float: left;
   height: 100%;
   justify-content: center;
-  //margin-left: 75px;
 }
 
 .pageBanner-main-image {
@@ -57,14 +53,13 @@ $darker-red-btn: #c40022;
 
 .pageBanner-button {
   background-color: $rackspace-red;
-  //background-image: linear-gradient(to right, $grad-start, $grad-end);
   color: $white;
   font-weight: bolder;
   padding-left: 30px;
   padding-right: 30px;
 
   &:hover {
-    background-color: $darker-red-btn;
+    background-color: $dark-red;
     color: $white;
   }
 }
