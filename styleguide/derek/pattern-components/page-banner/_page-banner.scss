@@ -1,0 +1,202 @@
+
+.pageBanner-wrapper {
+  background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $black;
+  display: flex;
+  font-family: $heading;
+  height: 680px;
+  position: relative;
+}
+
+.pageBanner-col {
+  align-items: center;
+  display: flex;
+  float: left;
+  height: 100%;
+  justify-content: center;
+}
+
+.pageBanner-main-image {
+  background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
+  background-position: center;
+  background-size: cover;
+  display: none;
+  height: 450px;
+}
+
+.pageBanner-content {
+  background-color: $white;
+  padding-bottom: 75px;
+  padding-left: 15px;
+  padding-top: 20px;
+  width: 400px;
+}
+
+.pageBanner-title {
+  font-size: 4rem;
+  font-weight: lighter;
+  line-height: 1;
+  padding-right: 30px;
+}
+
+.pageBanner-text {
+  font-family: $copy;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-bottom: 25px;
+  padding-right: 100px;
+  padding-top: 5px;
+}
+
+.pageBanner-button {
+  background-color: $rackspace-red;
+  color: $white;
+  font-weight: bolder;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &:hover {
+    background-color: $dark-red;
+    color: $white;
+  }
+}
+
+.pageBanner-button-box {
+  bottom: 200px;
+  position: absolute;
+  right: 0;
+}
+
+.pageBannerWhite-button {
+  background-color: $white;
+  color: $black;
+  font-weight: 300;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+// < 480px
+@media screen and (max-width: $screen-xs) {
+  .pageBanner-main-image {
+    display: block;
+    height: 300px;
+  }
+
+  .pageBanner-wrapper {
+    background-image: unset;
+    height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .pageBanner-button-box {
+    background-color: $white;
+    bottom: 60%;
+  }
+
+  .pageBanner-col {
+    align-items: inherit;
+    background-color: $white;
+    display: block;
+    float: none;
+    height: unset;
+    justify-content: unset;
+    margin-left: 0;
+  }
+
+  .pageBanner-button {
+    width: 90%;
+  }
+}
+// 767 - 480px
+@media screen and (max-width: $screen-xs-max) and (min-width: $screen-xs) {
+  .pageBanner-main-image {
+    background-image: url('../../../imgs/derek/banners/homepage-banner-768.jpg');
+    display: block;
+  }
+
+  .pageBanner-content {
+    width: 90%;
+  }
+
+  .pageBanner-wrapper {
+    background-image: unset;
+    height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .pageBanner-button-box {
+    bottom: 50%;
+  }
+
+  .pageBanner-col {
+    align-items: inherit;
+    background-color: $white;
+    display: block;
+    float: none;
+    height: unset;
+    justify-content: unset;
+    margin-left: 0;
+  }
+}
+// 768px - 991px
+@media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+  .pageBanner-main-image {
+    background-image: url('../../../imgs/derek/banners/homepage-banner-992.jpg');
+    display: block;
+  }
+
+  .pageBanner-content {
+    width: 65%;
+  }
+
+  .pageBanner-wrapper {
+    background-image: unset;
+    height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .pageBanner-button-box {
+    top: 325px;
+  }
+
+  .pageBanner-col {
+    align-items: inherit;
+    background-color: $white;
+    display: block;
+    float: none;
+    height: unset;
+    justify-content: unset;
+    margin-left: 0;
+  }
+}
+
+// 1279 -  992px
+@media screen and (max-width: $screen-md-max) and (min-width: $screen-md) {
+  .pageBanner-wrapper {
+    background-image: url('../../../imgs/derek/banners/homepage-banner-1280.jpg');
+  }
+}
+// 1280px+
+@media screen and (min-width: $screen-lg) {
+  .pageBanner-wrapper {
+    background-image: url('../../../imgs/derek/banners/homepage-banner-1440.jpg');
+  }
+}
