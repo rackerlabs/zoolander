@@ -32,13 +32,14 @@ body {
   @include font-smoothing;
   color: $gray-darkest;
   font-family: $copy;
-  font-weight: $font-weight-regular;
+  font-weight: 300;
   text-align: left;
 }
 
 p {
   font-size: 1em;
-  line-height: $standard-line-height;
+  font-weight: 300;
+  line-height: 20.8px;
   margin: 0 0 1em;
 }
 
@@ -62,43 +63,30 @@ a {
 }
 
 h1 {
-  @include heading;
-  font-size: 2.25em;
-  line-height: 63.6px;
+  font-size: 3.125em;
+  font-weight: 200;
+  line-height: 55px;
 }
 
 h2 {
-  @include heading;
-  font-size: 1.75em;
-  line-height: 42.24px;
+  font-size: 2.25em;
+  font-weight: 200;
+  line-height: 39.6px;
 }
 
 h3 {
-  @include heading;
-  font-size: 1.25em;
-  line-height: 26.88px;
-  margin: 10px 0;
+  font-size: 1.75em;
+  font-weight: 300;
+  line-height: 30.8px;
 }
 
 h4,
 h5,
 h6 {
   @include subhead;
-}
-
-h4 {
-  font-size: 1.25em;
-  line-height: 19.2px;
-}
-
-h5 {
-  font-size: 1.25em;
-  line-height: 19.2px;
-}
-
-h6 {
-  font-size: 1.25em;
-  line-height: 19.2px;
+  font-size: 1.375em;
+  font-weight: 300;
+  line-height: 22px;
 }
 
 ul {
