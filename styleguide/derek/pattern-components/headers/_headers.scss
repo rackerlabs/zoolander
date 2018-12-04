@@ -1,6 +1,5 @@
 .refreshBanner2019 {
   background: $black;
-  height: 250px;
   overflow: hidden;
   position: relative;
 }
@@ -10,14 +9,11 @@
 }
 
 .refreshBanner2019-text {
-  background-color: $white;
-  color: $black;
-  font-size: 3rem;
-  font-weight: 350;
+  color: $white;
+  font-size: 5vw;
+  font-weight: 300;
+  line-height: 1.3em;
   padding: 25px 30px 30px;
-  position: absolute;
-  top: 50px;
-  width: 90%;
   z-index: 10;
 }
 
@@ -49,8 +45,12 @@
   }
 
   .refreshBanner2019-text {
-    font-size: 3.75rem;
-    width: 525px;
+    background-color: $white;
+    color: $black;
+    font-size: 2.3vw;
+    position: absolute;
+    top: 20px;
+    width: 35%;
   }
 }
 
@@ -63,6 +63,12 @@
     height: 332px;
     margin-top: -166px;
   }
+
+  .refreshBanner2019-text {
+    font-size: 2.3vw;
+    top: 40px;
+    width: 37%;
+  }
 }
 
 @media only screen and (min-width: $screen-lg-min) {
@@ -73,6 +79,12 @@
   .refreshBanner2019-pic {
     height: 415px;
     margin-top: -207.5px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .refreshBanner2019-text {
+    width: 33%;
   }
 }
 
