@@ -1,3 +1,32 @@
+.refreshBanner2019 {
+  height: 415px;
+  max-height: 415px;
+  position: relative;
+}
+
+.refreshBanner2019-pic {
+  height: 100%;
+  left: 50%;
+  margin-left: -50%;
+  margin-top: -207.5px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 9;
+
+  source {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.refreshBanner2019-text {
+  position: absolute;
+  z-index: 10;
+}
+
+// Legacy bananers
+
 //used for events
 @mixin make-banner {
   background-repeat: no-repeat;
