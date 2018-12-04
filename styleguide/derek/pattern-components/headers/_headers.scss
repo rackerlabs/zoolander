@@ -10,14 +10,30 @@
 }
 
 .refreshBanner2019-text {
-  color: $white;
+  background-color: $white;
+  color: $black;
+  font-size: 3.75rem;
+  font-weight: 350;
+  padding: 25px 30px 30px;
   position: absolute;
+  top: 50px;
+  width: 535px;
   z-index: 10;
 }
 
 @media only screen and (min-width: $screen-sm-min) {
   .refreshBanner2019 {
     height: 256px;
+  }
+
+  .refreshBanner2019-pic-content {
+    height: auto;
+    left: -15%;
+    max-width: none;
+    min-height: 100%;
+    min-width: 100%;
+    position: relative;
+    width: 130%;
   }
 
   .refreshBanner2019-pic {
@@ -30,19 +46,9 @@
     top: 50%;
     width: 100%;
     z-index: 9;
-
-    source,
-    img {
-      height: auto;
-      left: -15%;
-      max-width: none;
-      min-height: 100%;
-      min-width: 100%;
-      position: relative;
-      width: 130%;
-    }
   }
 }
+
 @media only screen and (min-width: $screen-md-min) {
   .refreshBanner2019 {
     height: 332px;
