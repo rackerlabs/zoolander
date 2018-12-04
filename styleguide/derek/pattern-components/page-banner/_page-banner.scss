@@ -118,7 +118,7 @@
 // 767 - 480px
 @media screen and (max-width: $screen-xs-max) and (min-width: $screen-xs) {
   .pageBanner-main-image {
-    background-image: url('../../../imgs/derek/banners/homepage-banner-768.jpg');
+    background-image: url('../imgs/derek/banners/homepage-banner-768.jpg');
     display: block;
   }
 
@@ -154,7 +154,7 @@
 // 768px - 991px
 @media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
   .pageBanner-main-image {
-    background-image: url('../../../imgs/derek/banners/homepage-banner-992.jpg');
+    background-image: url('../imgs/derek/banners/homepage-banner-992.jpg');
     display: block;
   }
 
@@ -191,12 +191,12 @@
 // 1279 -  992px
 @media screen and (max-width: $screen-md-max) and (min-width: $screen-md) {
   .pageBanner-wrapper {
-    background-image: url('../../../imgs/derek/banners/homepage-banner-1280.jpg');
+    background-image: url('../imgs/derek/banners/homepage-banner-1280.jpg');
   }
 }
 // 1280px+
 @media screen and (min-width: $screen-lg) {
   .pageBanner-wrapper {
-    background-image: url('../../../imgs/derek/banners/homepage-banner-1440.jpg');
+    background-image: url('../imgs/derek/banners/homepage-banner-1440.jpg');
   }
 }
