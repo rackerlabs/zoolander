@@ -1,28 +1,75 @@
 .refreshBanner2019 {
-  height: 415px;
-  max-height: 415px;
+  background: $black;
+  height: 250px;
+  overflow: hidden;
   position: relative;
 }
 
 .refreshBanner2019-pic {
-  height: 100%;
-  left: 50%;
-  margin-left: -50%;
-  margin-top: -207.5px;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  z-index: 9;
-
-  source {
-    width: 100%;
-    height: 100%;
-  }
+  display: none;
 }
 
 .refreshBanner2019-text {
+  color: $white;
   position: absolute;
   z-index: 10;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .refreshBanner2019 {
+    height: 256px;
+  }
+
+  .refreshBanner2019-pic {
+    display: inline;
+    height: 256px;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: -128px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 9;
+
+    source,
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+@media only screen and (min-width: $screen-md-min) {
+  .refreshBanner2019 {
+    height: 332px;
+  }
+
+  .refreshBanner2019-pic {
+    height: 332px;
+    margin-top: -166px;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .refreshBanner2019 {
+    height: 415px;
+  }
+
+  .refreshBanner2019-pic {
+    height: 415px;
+    margin-top: -207.5px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .refreshBanner2019-pic {
+    source,
+    img {
+      height: auto;
+      max-height: none;
+      max-width: none;
+      width: 100%;
+    }
+  }
 }
 
 // Legacy bananers
