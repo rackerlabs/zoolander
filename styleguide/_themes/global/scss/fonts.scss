@@ -10,6 +10,7 @@ $navigation-font-size: 1.375rem;
 $navigation-font-size-medium: 1.05rem;
 $navigation-font-size-xsmall: .9rem;
 $nav-line-height: 19.2px;
+$standard-line-height: 20px;
 
 
 @mixin heading($color: $gray-darkest) {
@@ -31,11 +32,14 @@ body {
   @include font-smoothing;
   color: $gray-darkest;
   font-family: $copy;
-  font-weight: $font-weight-regular;
+  font-weight: 300;
   text-align: left;
 }
 
 p {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 20.8px;
   margin: 0 0 1em;
 }
 
@@ -54,40 +58,35 @@ p > a {
   @include standard-link;
 }
 
+a {
+  font-size: 1em;
+}
+
 h1 {
-  @include heading;
-  font-size: 2.25em;
+  font-size: 3.125em;
+  font-weight: 200;
+  line-height: 55px;
 }
 
 h2 {
-  @include heading;
-  font-size: 1.75em;
-  line-height: 1.25em;
+  font-size: 2.25em;
+  font-weight: 200;
+  line-height: 39.6px;
 }
 
 h3 {
-  @include heading;
-  font-size: 1.25em;
-  line-height: 1.25em;
-  margin: 10px 0;
+  font-size: 1.75em;
+  font-weight: 300;
+  line-height: 30.8px;
 }
 
 h4,
 h5,
 h6 {
   @include subhead;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-h5 {
-  font-size: 1.75rem;
-}
-
-h6 {
-  font-size: 1.5rem;
+  font-size: 1.375em;
+  font-weight: 300;
+  line-height: 22px;
 }
 
 ul {
