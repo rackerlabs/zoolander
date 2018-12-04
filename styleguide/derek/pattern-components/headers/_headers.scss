@@ -1,3 +1,95 @@
+.refreshBanner2019 {
+  background: $black;
+  overflow: hidden;
+  position: relative;
+}
+
+.refreshBanner2019-pic {
+  display: none;
+}
+
+.refreshBanner2019-text {
+  color: $white;
+  font-size: 5vw;
+  font-weight: 300;
+  line-height: 1.3em;
+  padding: 25px 30px;
+  z-index: 10;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .refreshBanner2019 {
+    height: 256px;
+  }
+
+  .refreshBanner2019-pic-content {
+    height: auto;
+    left: -15%;
+    max-width: none;
+    min-height: 100%;
+    min-width: 100%;
+    position: relative;
+    width: 130%;
+  }
+
+  .refreshBanner2019-pic {
+    display: inline;
+    height: 256px;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: -128px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .refreshBanner2019-text {
+    background-color: $white;
+    color: $black;
+    font-size: 2.3vw;
+    position: absolute;
+    top: 20px;
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .refreshBanner2019 {
+    height: 332px;
+  }
+
+  .refreshBanner2019-pic {
+    height: 332px;
+    margin-top: -166px;
+  }
+
+  .refreshBanner2019-text {
+    font-size: 2.3vw;
+    top: 40px;
+    width: 37%;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .refreshBanner2019 {
+    height: 415px;
+  }
+
+  .refreshBanner2019-pic {
+    height: 415px;
+    margin-top: -207.5px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .refreshBanner2019-text {
+    width: 33%;
+  }
+}
+
+// Legacy bananers
+
 //used for events
 @mixin make-banner {
   background-repeat: no-repeat;
