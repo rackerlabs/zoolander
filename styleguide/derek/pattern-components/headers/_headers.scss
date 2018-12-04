@@ -12,12 +12,12 @@
 .refreshBanner2019-text {
   background-color: $white;
   color: $black;
-  font-size: 3.75rem;
+  font-size: 3rem;
   font-weight: 350;
   padding: 25px 30px 30px;
   position: absolute;
   top: 50px;
-  width: 535px;
+  width: 90%;
   z-index: 10;
 }
 
@@ -46,6 +46,11 @@
     top: 50%;
     width: 100%;
     z-index: 9;
+  }
+
+  .refreshBanner2019-text {
+    font-size: 3.75rem;
+    width: 525px;
   }
 }
 
