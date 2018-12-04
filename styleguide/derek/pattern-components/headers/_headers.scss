@@ -33,8 +33,13 @@
 
     source,
     img {
-      height: 100%;
-      width: 100%;
+      height: auto;
+      left: -15%;
+      max-width: none;
+      min-height: 100%;
+      min-width: 100%;
+      position: relative;
+      width: 130%;
     }
   }
 }
@@ -57,18 +62,6 @@
   .refreshBanner2019-pic {
     height: 415px;
     margin-top: -207.5px;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .refreshBanner2019-pic {
-    source,
-    img {
-      height: auto;
-      max-height: none;
-      max-width: none;
-      width: 100%;
-    }
   }
 }
 
