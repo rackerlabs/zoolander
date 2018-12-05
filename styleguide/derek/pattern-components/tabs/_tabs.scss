@@ -48,8 +48,8 @@
   }
 
   &.active {
-    background-color: $rackspace-red;
-    border: 1px solid $rackspace-red;
+    background-color: $purple;
+    border: 1px solid $purple;
     border-bottom: 0;
     color: $white;
     margin-bottom: 0;
@@ -62,13 +62,13 @@
       color: $white;
 
       &:hover {
-        background-color: $rackspace-red;
+        background-color: $purple;
         border: 0;
         color: $white;
       }
 
       &:focus {
-        background-color: $rackspace-red;
+        background-color: $purple;
         border: 0;
         color: $white;
       }
@@ -99,7 +99,7 @@
   .collapse {
 
     &.in {
-      border-bottom: 2px solid $rackspace-red;
+      border-bottom: 2px solid $purple;
     }
   }
 
@@ -111,7 +111,7 @@
     }
 
     .rsTab-link {
-      background-color: $rackspace-red;
+      background-color: $purple;
       color: $white;
       display: block;
       padding: 10px 15px;
@@ -144,8 +144,8 @@
   }
 
   .rsTabsHorizontal-content {
-    border-bottom: 2px solid $rackspace-red;
-    border-top: 2px solid $rackspace-red;
+    border-bottom: 2px solid $purple;
+    border-top: 2px solid $purple;
     margin: 0 auto 10px;
     max-width: $screen-lg-min;
     padding-bottom: 0;
@@ -154,7 +154,7 @@
   .rsTabsHorizontal-tab {
     &.active {
       &::before {
-        background: $rackspace-red;
+        background: $purple;
         content: '';
         height: 4px;
         left: -1px;
@@ -179,7 +179,7 @@
   }
 
   .rsTabsVertical-content {
-    border-left: 2px solid $rackspace-red;
+    border-left: 2px solid $purple;
     margin-bottom: -10px;
     padding-bottom: 0;
     padding-left: 25px;
