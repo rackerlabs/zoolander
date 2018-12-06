@@ -23,7 +23,7 @@
 
 .resourceWrapper {
   @include flex-box;
-  background-color: $gray-lightest;
+  background-color: $gray-white;
   margin: 10px 0;
   padding: 5px 30px;
   width: 100%;
@@ -108,8 +108,8 @@
 
 //had to make maintainable
 @include resource-iconBorderColor('.resource-codeIcon', $purple, '\e808');
-@include resource-iconBorderColor('.resource-supportIcon', $teal-dark, '\e847');
-@include resource-iconBorderColor('.resource-pdfIcon', $brand-primary, '\e8c5');
+@include resource-iconBorderColor('.resource-supportIcon', $teal, '\e847');
+@include resource-iconBorderColor('.resource-pdfIcon', $rackspace-red, '\e8c5');
 @include resource-iconBorderColor('.resource-videoIcon', $blue-gray, '\e8c8');
-@include resource-iconBorderColor('.resource-webinarIcon', $mustard, '\e8c6');
-@include resource-iconBorderColor('.resource-storiesIcon', $signup-green, '\e993');
+@include resource-iconBorderColor('.resource-webinarIcon', $dark-purple, '\e8c6');
+@include resource-iconBorderColor('.resource-storiesIcon', $blue, '\e993');
