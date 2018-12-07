@@ -76,6 +76,17 @@
   font-weight: 300;
   padding-left: 30px;
   padding-right: 40px;
+
+  ::before {
+    background-image: url('../imgs/derek/play-btn.svg');
+    background-size: 28px 28px;
+    content: ' ';
+    display: inline-block;
+    height: 28px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 28px;
+  }
 }
 
 // < 480px
