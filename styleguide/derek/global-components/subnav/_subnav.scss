@@ -1,5 +1,5 @@
 .subnav {
-  background-color: $gray-dark;
+  background-color: $black;
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
@@ -30,7 +30,7 @@
   &:visited,
   &:active {
     background-color: transparent;
-    border-bottom: 3px solid $brand-primary;
+    border-bottom: 3px solid $rackspace-red;
     color: $white;
     text-decoration: none;
   }
