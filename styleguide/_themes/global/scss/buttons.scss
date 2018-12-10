@@ -20,31 +20,34 @@
 }
 
 @mixin button-lead {
-  background-color: $brand-success;
+  background-color: $rackspace-red;
   color: $white;
+  font-weight: bolder;
   margin-bottom: 0;
+  padding-left: 30px;
+  padding-right: 30px;
   text-align: center;
   text-decoration: none;
 
   &:hover {
-    background-color: lighten($brand-success, 5%);
+    background-color: $dark-red;
     color: $white;
   }
 }
 
 @mixin button-learning {
-  background-color: $gray-base;
+  background-color: $purple;
   color: $white;
   text-decoration: none;
 
   &:hover {
-    background-color: $gray-dark;
+    background-color: $dark-purple;
     color: $white;
   }
 }
 
 @mixin button-leaving {
-  background-color: $blue-login;
+  background-color: $dark-teal;
   color: $white;
   text-decoration: none;
 
@@ -55,7 +58,7 @@
   }
 
   &:hover {
-    background-color: lighten($blue-login, 5%);
+    background-color: darken($dark-teal, 5%);
     color: $white;
   }
 }
@@ -77,7 +80,7 @@
   color: $white;
   font-family: $heading;
   font-size: 1.5rem;
-  font-weight: $font-weight-black;
+  font-weight: bolder;
   padding: 6px 47px;
   position: relative;
   text-transform: uppercase;
