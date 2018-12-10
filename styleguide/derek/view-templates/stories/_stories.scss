@@ -66,7 +66,7 @@ $default-grid-bg: '../imgs/globalBrand/stories-grid-default.png';
 }
 
 .story-featured-cardLogoCenter {
-  background-color: $teal-dark;
+  background-color: $teal;
 }
 
 .story-featured-cardLogoBottom {
@@ -76,7 +76,7 @@ $default-grid-bg: '../imgs/globalBrand/stories-grid-default.png';
 .story-featured-seeMore {
   color: transparentize($black, .5);
   display: block;
-  font-weight: $font-weight-black;
+  font-weight: 300;
   margin-top: 50px;
   text-align: center;
 
@@ -164,7 +164,7 @@ $default-grid-bg: '../imgs/globalBrand/stories-grid-default.png';
 .storyOverview-searchFilter {
   @include make-sm-column(4);
   @include make-md-column(3);
-  background: $teal-dark;
+  background: $teal;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
@@ -374,7 +374,7 @@ $default-grid-bg: '../imgs/globalBrand/stories-grid-default.png';
   }
 
   @include featuredBg('.story-featured-cardQuoteTop', linear-gradient(to bottom right, transparentize(darken($rackspace-red, 5%), .4), darken($rackspace-red, 5%)));
-  @include featuredBg('.story-featured-cardQuoteCenter', linear-gradient(to bottom left, transparentize($teal-dark, .4), $teal-dark));
+  @include featuredBg('.story-featured-cardQuoteCenter', linear-gradient(to bottom left, transparentize($teal, .4), $teal));
   @include featuredBg('.story-featured-cardQuoteBottom', linear-gradient(to bottom right, transparentize($purple, .4), $purple));
 
   .story-featured-cardLogoBottom {
