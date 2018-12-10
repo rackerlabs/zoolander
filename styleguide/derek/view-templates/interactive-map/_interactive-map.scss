@@ -1,14 +1,13 @@
 $circle-radius: 20px;
 
-@mixin make-map-circle($class, $bg-color, $border-color) {
+@mixin make-map-circle($class, $bg-color) {
   #{$class} {
     background-color: $bg-color;
-    border: 2px solid $border-color;
     border-radius: 50%;
     color: $white;
     font-size: 11px;
     height: $circle-radius;
-    line-height: 1.4;
+    line-height: 1.9;
     text-align: center;
     width: $circle-radius;
 
@@ -20,10 +19,9 @@ $circle-radius: 20px;
   }
 }
 
-@mixin make-legend-circle($class, $bg-color, $border-color) {
+@mixin make-legend-circle($class, $bg-color) {
   #{$class} {
     background-color: $bg-color;
-    border: 2px solid $border-color;
     border-radius: 50%;
     display: inline-block;
     height: 15px;
@@ -49,9 +47,9 @@ $circle-radius: 20px;
   }
 }
 
-@include make-legend-circle('.rsMap-legend-dc', #b16b72, #9d0000);
-@include make-legend-circle('.rsMap-legend-office', #8a8b8e, #424344);
-@include make-legend-circle('.rsMap-legend-hub', #74bec1, #00b4c3);
+@include make-legend-circle('.rsMap-legend-dc', $rackspace-red);
+@include make-legend-circle('.rsMap-legend-office', $blue);
+@include make-legend-circle('.rsMap-legend-hub', $teal);
 
 .rsMap-container {
   display: none;
@@ -108,9 +106,9 @@ $circle-radius: 20px;
     position: relative;
   }
 
-  @include make-map-circle('.rsMap-dataCenter-circle', #b16b72, #9d0000);
-  @include make-map-circle('.rsMap-office-circle', #8a8b8e, #424344);
-  @include make-map-circle('.rsMap-hub-circle', #74bec1, #00b4c3);
+  @include make-map-circle('.rsMap-dataCenter-circle', $rackspace-red);
+  @include make-map-circle('.rsMap-office-circle', $blue);
+  @include make-map-circle('.rsMap-hub-circle', $teal);
 
   .rsMap-toolTip {
     background-color: $white;
