@@ -78,9 +78,10 @@ $table-border: 1px solid $gray-lighter;
 }
 
 .rsPricingTable-cta {
-  background-color: $signup-green;
+  background-color: $rackspace-red;
   color: $white;
   display: block;
+  font-weight: 400;
   margin-top: auto;
   padding: 8px;
   text-align: center;
@@ -88,7 +89,7 @@ $table-border: 1px solid $gray-lighter;
   white-space: nowrap;
 
   &:hover {
-    background-color: darken($signup-green, 5%);
+    background-color: $dark-red;
     color: $white;
     text-decoration: none;
   }

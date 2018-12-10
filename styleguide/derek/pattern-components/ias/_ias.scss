@@ -37,7 +37,8 @@
 }
 
 .iasWidget {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 20px 10px 0;
   text-align: center;
   text-decoration: none;
@@ -53,24 +54,25 @@
 }
 
 .iasWidget-bottom {
-  bottom: 0;
-  height: 10%;
-  position: absolute;
-  right: 0;
+  float: left;
   width: 100%;
 }
 
 .iasWidget-col-full {
   @include make-md-column(12);
+  height: 100%;
 }
 
 .iasWidget-cta {
-  color: $brand-primary;
+  color: $rackspace-red;
   font-weight: $font-weight-black;
+  position: relative;
   text-align: center;
+  top: -30px;
 }
 
 .iasWidget-header {
+  font-size: 1.375em;
   text-align: center;
 }
 
@@ -90,6 +92,7 @@
 
 .iasWidget-row {
   @include make-row;
+  height: 100%;
 }
 
 @media only screen and (min-width: $screen-sm-min) {
