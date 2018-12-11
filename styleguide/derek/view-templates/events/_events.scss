@@ -142,7 +142,6 @@
   font-size: 2rem;
   line-height: 4rem;
   padding: 0 1.5rem;
-  text-transform: uppercase;
 }
 
 .eventsOverview-weekEvent-learnMore {
@@ -155,11 +154,13 @@
 
 .eventsOverview-weekTitle {
   @include heading($white);
-  background: $gray-base;
-  font-size: 2.2rem;
+  border-bottom: 2px solid $purple;
+  color: $black;
+  font-size: 2.25rem;
+  font-weight: 400;
   margin-bottom: .75rem;
   margin-top: 2.25rem;
-  padding: 1.5rem;
+  padding: 10px;
   text-align: center;
 
   &:first-child {
@@ -207,7 +208,7 @@
 
 .event-dateBox {
   @include subhead($white);
-  background: $gray-base;
+  background: $purple;
   font-size: 2.2rem;
   margin: 1rem auto;
   max-width: 100px;
@@ -246,7 +247,6 @@
   @include make-row;
   margin-bottom: .5rem;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .event-info-headerTitle {
@@ -270,7 +270,7 @@
 
 .event-info-whereWhen {
   @include make-row;
-  border-top: 2px solid $gray-light;
+  border-top: 2px solid $purple;
   padding-top: 1rem;
 }
 

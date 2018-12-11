@@ -183,7 +183,7 @@
 .resource-title {
   color: $gray-base;
   font-family: $heading;
-  font-size: 1.25em;
+  font-size: 1.175em;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1em;
@@ -335,7 +335,7 @@
   }
 
   .resource-titleTop {
-    font-size: 1.8vw;
+    font-size: 1.3vw;
     line-height: 1.85vw;
   }
 
@@ -351,7 +351,7 @@
 @include resource-refresh('.resource-document', $rackspace-red);
 @include resource-refresh('.resource-documentImage', url('../imgs/BG.jpg'));
 @include resource-refresh('.resource-webinar', $rackspace-red);
-@include resource-refresh('.resource-code', $gray-lightest);
-@include resource-refresh('.resource-support', $blue-login);
+@include resource-refresh('.resource-code', $purple);
+@include resource-refresh('.resource-support', $teal);
 @include resource-refresh('.resource-video', $black);
 @include resource-refresh('.resource-story', $gray-dark);

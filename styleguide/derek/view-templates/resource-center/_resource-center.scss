@@ -28,11 +28,8 @@
     }
 
     &.resourcecenter-dividerWrapper {
-      background-color: $color;
-
       .resourcecenter-divider {
         &::after {
-          color: mix($color, $white, 60%);
           content: $content;
         }
       }
@@ -123,6 +120,7 @@
 }
 
 .resourcecenter-dividerWrapper {
+  background-color: $havas-blue-gray;
   width: 100%;
 
   .resourcecenter-divider {
@@ -132,6 +130,10 @@
     justify-content: flex-end;
     margin: 0 auto;
     padding: 10px 25px;
+
+    &::after {
+      color: fade-out($white, .7);
+    }
   }
 }
 
@@ -139,17 +141,19 @@
   padding-top: $half-padding-top;
 }
 
-@include resourcecenter-type('.resourcecenter-pdf', $brand-primary, '\e8c5', 'pdf-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-pdf', $rackspace-red, '\e8c5', 'pdf-template-graphic.png');
 @include resourcecenter-type('.resourcecenter-code', $purple, '\e808', 'code-template-graphic.png');
-@include resourcecenter-type('.resourcecenter-docs', $teal-dark, '\e847', 'support-template-graphic.png');
-@include resourcecenter-type('.resourcecenter-webinar', $mustard, '\e8c6', 'webinar-template-graphic.png');
-@include resourcecenter-type('.resourcecenter-stories', $signup-green, '\e993', '');
+@include resourcecenter-type('.resourcecenter-docs', $teal, '\e847', 'support-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-webinar', $dark-purple, '\e8c6', 'webinar-template-graphic.png');
+@include resourcecenter-type('.resourcecenter-stories', $blue, '\e993', '');
 @include resourcecenter-type('.resourcecenter-video', $blue-gray, '\e8c8', '');
 
 
 //Featured Resource//
 .resourcecenter-featuredResourceWrapper {
-  background-color: $gray-darker;
+  @include background-gradient;
+  border-bottom: 2px solid $gray-lighter;
+  border-top: 2px solid $gray-lighter;
   padding: 2rem 0 0;
 }
 
@@ -176,7 +180,7 @@
 
 .resourcecenter-featuredTextLink {
   color: $white;
-  font-weight: $font-weight-black;
+  font-weight: 500;
 
   &:hover {
     color: $white;
