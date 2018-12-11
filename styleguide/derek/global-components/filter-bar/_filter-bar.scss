@@ -4,7 +4,8 @@
 
 .rsFilter-bar {
   @include make-sm-column(2);
-  background-color: $gray-lighter;
+  background-color: $white;
+  border-bottom: 2px solid $gray-lighter;
   padding: 0 20px;
 }
 
@@ -75,7 +76,7 @@
 
   & + .option {
     display: inline-block;
-    font-weight: $font-weight-black;
+    font-weight: 300;
   }
 }
 
@@ -108,6 +109,8 @@
 
 @media (min-width: $screen-sm-min) {
   .rsFilter-bar {
+    border-bottom: 0;
+    border-right: 2px solid $gray-lighter;
     padding: 20px;
   }
 
@@ -152,7 +155,7 @@
 
 .rsFilter-sideBar {
   @include make-md-column(2);
-  background-color: $gray-lighter;
+  background-color: $white;
   float: left;
   padding: 10px 0 0;
   width: 100%;
@@ -160,6 +163,7 @@
 }
 
 .rsFilter-refreshSideBar {
+  border-bottom: 2px solid $gray-lighter;
   padding-top: 20px;
 }
 
@@ -188,21 +192,22 @@
 }
 
 .rsFilter-sideBar-accItem {
-  border-bottom: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-lightest;
 
   &:first-child {
-    border-top: 1px solid $gray-light;
+    border-top: 1px solid $gray-lighter;
   }
 }
 
 .rsFilter-sideBar-accLabel {
   font-size: 14px;
+  font-weight: 400;
   margin-bottom: 0;
   padding: 12px 20px;
   width: 100%;
 
   &:hover {
-    background-color: $gray-light;
+    background-color: $gray-lightest;
     cursor: pointer;
     transition-duration: .3s;
   }
@@ -216,7 +221,7 @@
 }
 
 .rsFilter-sideBar-active {
-  background-color: $gray-light;
+  background-color: $gray-lightest;
 
   &::after {
     content: '\f106';
@@ -224,7 +229,7 @@
 }
 
 .rsFilter-sideBar-accItemContent {
-  background-color: $gray-lightest;
+  background-color: $white;
   display: none;
   padding: 10px 20px;
 }
@@ -259,7 +264,7 @@
 
   label {
     display: inline;
-    font-weight: 600;
+    font-weight: 300;
     margin-left: 10px;
 
     &:hover {
@@ -269,7 +274,7 @@
 
   & + .option {
     display: inline-block;
-    font-weight: $font-weight-black;
+    font-weight: 300;
   }
 }
 
@@ -307,7 +312,7 @@
   }
 
   &:hover {
-    background-color: $gray-light;
+    background-color: $gray-lightest;
   }
 
   &:focus {
@@ -337,6 +342,8 @@
 
   .rsFilter-sideBar,
   .rsFilter-refreshSideBar {
+    border-bottom: 0;
+    border-right: 2px solid $gray-lighter;
     padding: 50px 0 0;
   }
 

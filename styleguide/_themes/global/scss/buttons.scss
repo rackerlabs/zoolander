@@ -64,12 +64,12 @@
 }
 
 @mixin button-download {
-  background-color: $brand-primary;
+  background-color: $purple;
   color: $white;
   text-transform: uppercase;
 
   &:hover {
-    background-color: lighten($brand-primary, 5%);
+    background-color: $dark-purple;
     color: $white;
   }
 }
