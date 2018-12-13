@@ -29,13 +29,15 @@
 
 .pageBanner-content {
   background-color: $white;
-  padding-bottom: 75px;
+  padding-bottom: 30px;
   padding-left: 15px;
   padding-top: 20px;
+  visibility: hidden;
   width: 400px;
 }
 
 .pageBanner-title {
+  display: inline-block;
   font-size: 4rem;
   font-weight: lighter;
   line-height: 1;
@@ -43,6 +45,7 @@
 }
 
 .pageBanner-text {
+  display: inline-block;
   font-family: $copy;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -68,6 +71,7 @@
   bottom: 200px;
   position: absolute;
   right: 0;
+  visibility: hidden;
 }
 
 .pageBannerWhite-button {
