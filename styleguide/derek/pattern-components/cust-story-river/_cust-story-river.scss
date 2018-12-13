@@ -13,6 +13,7 @@
   margin-bottom: 1px;
   padding: 20px 50px 150px 20px;
   text-decoration: none;
+  visibility: hidden;
 }
 
 .cs-story-box0 {
@@ -39,7 +40,6 @@
 }
 
 .rsHomepage-customerStories-wrapper {
-  background-image: url('../imgs/derek/banners/customer-story-background-480.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
