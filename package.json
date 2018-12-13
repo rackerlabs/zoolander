@@ -8,7 +8,7 @@
   "scripts": {
     "babel": "rm -rf styleguide/js && babel styleguide/global styleguide/derek --out-dir styleguide/js && npm run copyjs",
     "copyjs": "cp styleguide/derek/global-components/hex/hex.js styleguide/js/global-components/hex/",
-    "font:install": "cp -rf node_modules/mozilla-fira-pack/Fira styleguide/font/",
+    "install:nodemodules": "./scripts/install-modules.sh",
     "gh-pages": "./scripts/build-pages.sh",
     "harp": "harp ",
     "harp:compile": "npm run harp compile styleguide dist",
@@ -16,7 +16,7 @@
     "lint:js": "eslint styleguide/derek styleguide/global",
     "lint:sass": "sass-lint -v",
     "preversion": "npm run babel && npm run harp compile styleguide dist && git add -f dist",
-    "postinstall": "npm run hooks && npm run babel && npm run font:install",
+    "postinstall": "npm run hooks && npm run babel && npm run install:nodemodules",
     "postversion": "git push && git push --tags",
     "sass:compile": "node-sass --output-style=compressed --quiet -o /tmp styleguide/css",
     "start": "concurrently 'npm run watch:babel' 'npm run start:harp' 'npm run start:bs'",
@@ -34,7 +34,8 @@
     "concurrently": "^3.4.0",
     "mozilla-fira-pack": "0.0.1",
     "node-sass": "^4.10.0",
-    "pify": "^4.0.1"
+    "pify": "^4.0.1",
+    "scrollreveal": "^4.0.5"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",

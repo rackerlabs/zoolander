@@ -26,8 +26,8 @@ html(lang="en")
     script(src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js")
   body
     .row.row-eq-height
-      button.navZoolander-slideBtn.navZoolander-leftArrow
-      .navZoolander-container
+      button.navZoolander-slideBtn.navZoolander-leftArrow.navZoolander-slideBtn-collapsed
+      .navZoolander-container.navZoolander-container-collapsed
         .siteHeader-logo
           .siteHeader-logoImg
         ul.navZoolander-list
@@ -87,7 +87,7 @@ html(lang="en")
               li.navZoolander-item
                 a(href="derek/incubation").navZoolander-dropdownLink Dev Sandbox
 
-    .mainContainer#mainContainer
+    .mainContainer.mainContainer-collapsed#mainContainer
       block content
 
   script(src="#{base}js/global.js")

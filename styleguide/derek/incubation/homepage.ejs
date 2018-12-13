@@ -26,3 +26,121 @@
 <% include ../global-components/modal/region-select.ejs %>
 <% include ../global-components/modal/call-us.ejs %>
 <% include ../global-components/modal/email-us.ejs %>
+
+<script type="text/javascript" src="global/plugins/scrollreveal.min.js"></script>
+<script type="text/javascript">
+  window.sr = ScrollReveal();
+  (function () {
+  var timeout = null;
+   /**
+   * Helper function to retrieve a background image for a css class.
+   */
+  var getClassBackgroundImage = function(className) {
+    var style = getComputedStyle(document.getElementsByClassName(className)[0]);
+    var matches = style.backgroundImage.match(/\(['"]?(.*?)['"]?\)/);
+    return matches && matches[1] ? matches[1] : false;
+  };
+   /**
+   * Helper function to remove the loading class.
+   */
+  var loadAnimation = function() {
+    // Prevent the double fire:
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    // header box
+    sr.reveal('.pageBanner-content', {
+      duration: 850,
+      opacity: 0,
+      distance: '100px',
+    });
+    sr.reveal('.pageBanner-title', {
+      duration: 850,
+      delay: 200,
+      opacity: 0,
+      distance: '50px',
+    });
+    sr.reveal('.pageBanner-text', {
+      duration: 850,
+      delay: 250,
+      opacity: 0,
+      distance: '50px',
+    });
+    sr.reveal('.pageBanner-button', {
+      duration: 850,
+      delay: 275,
+      opacity: 0,
+      distance: '50px',
+    });
+    // customer stories boxes
+    sr.reveal('.cs-story-box0', {
+      duration: 1000,
+      opacity: 0,
+    });
+    sr.reveal('.cs-story-box1', {
+      duration: 1000,
+      delay: 250,
+      opacity: 0,
+    });
+    sr.reveal('.cs-story-box2', {
+      duration: 1000,
+      delay: 400,
+      opacity: 0,
+    });
+    sr.reveal('.cs-story-box3', {
+      duration: 1000,
+      delay: 550,
+      opacity: 0,
+    });
+    // about us homepage section
+    sr.reveal('.about-postit', {
+      duration: 850,
+      opacity: 0,
+      distance: '100px',
+    });
+    sr.reveal('.about-postit h1', {
+      duration: 850,
+      delay: 200,
+      opacity: 0,
+      distance: '50px',
+    });
+    sr.reveal('.about-postit p', {
+      duration: 850,
+      delay: 350,
+      opacity: 0,
+      distance: '50px',
+    });
+    // play btn
+    sr.reveal('.pageBanner-button-box', {
+      origin: 'right',
+      duration: 850,
+      opacity: 0,
+      distance: '120px',
+    });
+    // svg circles
+    sr.reveal('.aboutus-svg', {
+      origin: 'left',
+      duration: 850,
+      opacity: 0,
+      delay: 250,
+      distance: '100px',
+    });
+  };
+   /**
+   * Helper function to ensure an image was loaded.
+   */
+  var ensureImageLoaded = function(url) {
+    var img = new Image();
+    img.onload = loadAnimation;
+    img.src = url;
+    if (img.complete) {
+      img.onload();
+    }
+  };
+   // If image fails to load within 3 seconds, load everything else anyway.
+  timeout = setTimeout(loadAnimation, 3000);
+   // Attempt to preload image.
+  var url = getClassBackgroundImage('pageBanner-wrapper') || getClassBackgroundImage('pageBanner-main-image');
+  ensureImageLoaded(url);
+})();
+</script>
