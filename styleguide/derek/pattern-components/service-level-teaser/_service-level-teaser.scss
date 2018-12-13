@@ -1,7 +1,7 @@
 .serviceLevelTeaser {
   background: $white;
-  border-bottom: 4px solid $brand-primary;
-  border-top: 4px solid $brand-primary;
+  border-bottom: 4px solid $rackspace-red;
+  border-top: 4px solid $rackspace-red;
   box-shadow: 0 1px 3px $black-shadow;
   display: block;
   margin-bottom: 10px;
@@ -31,6 +31,7 @@
 .serviceLevelTeaser-header {
   border-bottom: 1px solid $gray-lighter;
   color: $gray-darkest;
+  font-size: 2em;
   padding-bottom: 15px;
   text-align: center;
 }
@@ -44,6 +45,7 @@
 }
 
 .serviceLevelTeaser-pricing {
+  font-size: 1.5em;
   margin: 15px 0;
   text-align: center;
 }
@@ -58,7 +60,7 @@
 }
 
 .serviceLevelTeaser-bottomLink {
-  color: $brand-primary;
+  color: $rackspace-red;
   font-size: 18px;
   font-weight: bold;
 

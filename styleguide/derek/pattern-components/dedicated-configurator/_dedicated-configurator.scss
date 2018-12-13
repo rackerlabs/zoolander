@@ -1,7 +1,7 @@
 // @media (min-width: 768px)
 .rsDedicatedConfig {
   background: $white;
-  border-top: 5px solid $brand-primary;
+  border-top: 5px solid $rackspace-red;
   box-shadow: 0 1px 3px $black-shadow;
   display: block;
   height: 100%;
@@ -32,6 +32,7 @@
   align-self: flex-start;
   border-bottom: 1px solid $gray-lighter;
   color: $gray-darkest;
+  font-size: 1.5em;
   padding-bottom: 15px;
   text-align: center;
   width: 100%;
@@ -85,7 +86,6 @@
     font-family: 'rswebfonts';
     font-size: 14px;
     position: relative;
-    top: -4px;
   }
 }
 
