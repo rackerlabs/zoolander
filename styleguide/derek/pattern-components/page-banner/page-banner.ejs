@@ -1,4 +1,4 @@
-<div class="pageBanner-wrapper">
+<div class="pageBanner-wrapper js-loading">
   <div class="container">
     <div class="pageBanner-main-image"></div>
 
@@ -15,3 +15,50 @@
     </div>
   </div>
 </div>
+<script>
+/**
+ * Start CSS animations after background image is loaded.
+ */
+(function () {
+  var timeout = null;
+
+  /**
+   * Helper function to retrieve a background image for a css class.
+   */
+  var getClassBackgroundImage = function(className) {
+    var style = getComputedStyle(document.getElementsByClassName(className)[0]);
+    var matches = style.backgroundImage.match(/\(['"]?(.*?)['"]?\)/);
+    return matches && matches[1] ? matches[1] : false;
+  };
+
+  /**
+   * Helper function to remove the loading class.
+   */
+  var removeLoadingClass = function() {
+    // Prevent the double fire:
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    document.getElementsByClassName('pageBanner-wrapper')[0].classList.remove('js-loading');
+  };
+
+  /**
+   * Helper function to ensure an image was loaded.
+   */
+  var ensureImageLoaded = function(url) {
+    var img = new Image();
+    img.onload = removeLoadingClass;
+    img.src = url;
+    if (img.complete) {
+      img.onload();
+    }
+  };
+
+  // If image fails to load within 3 seconds, load everything else anyway.
+  timeout = setTimeout(removeLoadingClass, 3000);
+
+  // Attempt to preload image.
+  var url = getClassBackgroundImage('pageBanner-wrapper') || getClassBackgroundImage('pageBanner-main-image');
+  ensureImageLoaded(url);
+})();
+</script>

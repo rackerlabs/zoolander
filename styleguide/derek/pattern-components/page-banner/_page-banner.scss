@@ -1,5 +1,45 @@
+@keyframes pageBannerWrapperEffect {
+  from {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+
+  75% {
+    transform: scale(1.1, 1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes pageBannerButtonEffect {
+  from {
+    transform: translateX(15000px);
+  }
+
+  75% {
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes pageBannerButtonHoverEffect {
+  to {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+.js-loading {
+  &.pageBanner-wrapper,
+  .pageBanner-button-box {
+    animation-play-state: paused;
+  }
+}
 
 .pageBanner-wrapper {
+  animation: pageBannerWrapperEffect .25s normal forwards cubic-bezier(.2, 0, .9, 1);
+  animation-play-state: running;
   background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -65,6 +105,8 @@
 }
 
 .pageBanner-button-box {
+  animation: pageBannerButtonEffect .75s normal forwards ease-in-out;
+  animation-play-state: running;
   bottom: 200px;
   position: absolute;
   right: 0;
@@ -199,10 +241,15 @@
   }
 }
 
-// 1279 -  992px
-@media screen and (max-width: $screen-md-max) and (min-width: $screen-md) {
+// 992px+
+@media screen and (min-width: $screen-md) {
   .pageBanner-wrapper {
+    animation-duration: 1s;
     background-image: url('../imgs/derek/banners/homepage-banner-1280.jpg');
+  }
+
+  .pageBanner-button-box {
+    animation-duration: 1.75s;
   }
 }
 // 1280px+
