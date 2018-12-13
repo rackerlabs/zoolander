@@ -10,13 +10,15 @@ $table-padding: 20px 5px;
 .productTable-name {
   border: 1px solid $gray-lighter;
   font-size: 1.35rem;
+  font-weight: 400;
   line-height: 2rem;
 }
 
 .productTable-name {
-  background-color: $gray-base;
-  color: $white;
+  background-color: $gray-lightest;
+  color: $black;
   font-size: 1.5rem;
+  font-weight: 300;
   padding: $table-padding;
   text-align: center;
 }
