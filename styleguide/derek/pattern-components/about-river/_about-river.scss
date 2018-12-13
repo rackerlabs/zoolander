@@ -17,6 +17,11 @@
 
 .about-postit {
   background-color: $white;
+  visibility: hidden;
+}
+
+.aboutus-svg {
+  visibility: hidden;
 }
 
 @media screen and (max-width: $screen-md-max) {
