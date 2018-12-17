@@ -34,7 +34,6 @@
   padding-left: 15px;
   padding-top: 20px;
   visibility: hidden;
-  width: 400px;
 }
 
 .pageBanner-title {
@@ -204,12 +203,17 @@
   }
 }
 
-// 1279 -  992px
-@media screen and (max-width: $screen-md-max) and (min-width: $screen-md) {
+// 992px+
+@media screen and (min-width: $screen-md) {
   .pageBanner-wrapper {
     background-image: url('../imgs/derek/banners/homepage-banner-1280.jpg');
   }
+
+  .pageBanner-content {
+    width: 400px;
+  }
 }
+
 // 1280px+
 @media screen and (min-width: $screen-lg) {
   .pageBanner-wrapper {
