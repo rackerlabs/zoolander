@@ -1,5 +1,5 @@
 .challenges-wrapper {
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 .challenges-header,
@@ -13,6 +13,7 @@
 .challenges-itemWrapper {
   @include make-xs-column(6);
 
+  margin-bottom: 30px;
   padding: 0;
 
   :nth-child(odd) {
@@ -22,11 +23,38 @@
   }
 }
 
+.challenges-learnMore {
+  color: $rackspace-red;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+}
+
 .challenges-item {
   @include make-xs-column(10);
   @include make-md-column(8);
+  height: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  transition-duration: .2s;
 
-  margin-bottom: 50px;
+  &:hover {
+    box-shadow: 0 10px 50px -9px $black-shadow-darkest;
+
+    .challenges-itemRackShape {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.challenges-descriptionRow {
+
+  .challenges-item {
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
 }
 
 .challenges-icon {
@@ -38,13 +66,21 @@
 
 .challenges-itemRackShape {
   height: auto;
+  transition-duration: .2s;
   width: 100%;
 }
 
 .challenges-description {
   @include make-xs-column(9);
   @include make-lg-column(8);
+  height: 100%;
+}
 
+.challenges-description-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .challenges-descriptionTitle {
