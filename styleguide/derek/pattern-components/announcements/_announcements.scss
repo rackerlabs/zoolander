@@ -20,6 +20,7 @@
   color: $white;
   font-size: 2.25rem;
   font-weight: $font-weight-light;
+  line-height: 1.2em;
   margin: 1.3rem 0;
 }
 
@@ -27,6 +28,10 @@
   @include make-sm-column(9);
   line-height: 1.3em;
   margin: 1.4rem 0;
+}
+
+.rsHomepage-announcementRiverDetails-p {
+  line-height: 1.2em;
 }
 
 .rsHomepage-announcementRiverReadMore {
