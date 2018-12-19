@@ -16,7 +16,7 @@
   border-left: 1px solid $white;
   color: $white;
   min-height: 250px;
-  padding: 10px;
+  padding: 25px;
   position: relative;
 
   :nth-child(-n+6) {
@@ -63,6 +63,8 @@
 
 .industry-title {
   color: $white;
+  letter-spacing: 0;
+  line-height: 1.2em;
   margin-top: 0;
 }
 
