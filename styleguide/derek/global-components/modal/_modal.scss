@@ -1,8 +1,9 @@
 
 .ui-dialog.rackspaceModal { // sass-lint:disable-line force-element-nesting
-  border-radius: 6px;
+  border-radius: 0;
   height: 40px;
   overflow: hidden;
+  padding-bottom: 10px;
   z-index: 10000;
 
   // Unfortunately necessary nesting:
@@ -34,7 +35,7 @@
 
 .rackspaceModalSmall {
   max-width: 300px;
-  padding: 5px 0;
+  padding: 0;
 }
 
 .rackspaceModal-titleBar {
@@ -75,9 +76,44 @@
   display: none;
 }
 
+.rackspaceModalSource {
+  hr {
+    margin-bottom: 15px;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-body {
+  padding-top: 25px;
+}
+
 // Temp fix to resolve this issue https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-aaf66c7ba3f8
 .modal-open {
   position: absolute;
   width: 100%;
 }
 
+.rsCallUs-modalHeader {
+  font-size: 1em;
+}
+
+// jquery ui overrides for modals
+.ui-widget {
+  font-family: $copy;
+}
+
+.ui-widget-content {
+  a {
+    color: $rackspace-red;
+  }
+}
+
+.ui-dialog {
+
+  .ui-dialog-content {
+    padding: 0 1em;
+  }
+}
