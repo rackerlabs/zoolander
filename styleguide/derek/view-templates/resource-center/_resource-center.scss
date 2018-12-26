@@ -12,9 +12,11 @@
     }
 
     .resourcecenter-visualWrapper {
-
       @if $image != '' {
         background-image: url('../imgs/derek/resourceCenter/#{$image}');
+      }
+      @else {
+        background-image: none;
       }
 
       @if $class == '.resourcecenter-video' {
