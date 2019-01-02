@@ -21,10 +21,4 @@
     $me.next('.navZoolander-container').toggleClass('navZoolander-container-collapsed');
     $('.mainContainer').toggleClass('mainContainer-collapsed');
   });
-
-  // Zoolander only solution for auto collapsing menu on example pages
-  var url = window.location.pathname;
-  if (url.match(/\/derek\/incubation\//gi) && url !== '/derek/incubation/' || url.match(/\/derek\/view-templates\//gi) && url !== '/derek/view-templates/' || url.match(/\/derek\/solutions\//gi) && url !== '/derek/solutions/' || url.match(/\/derek\/templates\//gi) && url !== '/derek/templates/') {
-    zoolanderSlideBtn.trigger('click');
-  }
 })(jQuery);
