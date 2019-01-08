@@ -2,6 +2,183 @@
   background-image: url('../imgs/derek/banners/solve-banner.jpg');
 }
 
+.event-detail-section {
+  padding: 20px 0;
+}
+
+.event-detail-container {
+  @include make-container;
+  padding: 50px 0;
+}
+
+.event-detail-date {
+  @include make-md-column(2);
+}
+
+.event-detail-info {
+  @include make-md-column(10);
+  border-left: 2px solid $gray-lighter;
+  padding: 0 20px;
+}
+
+.event-detailInfo-container {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.event-detail-title {
+  @include make-md-column(6);
+}
+
+.event-detail-type {
+  @include make-md-column(6);
+  text-align: right;
+}
+
+.event-detailHeader-sm {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.event-speaker-section {
+  padding: 20px 0;
+}
+
+.event-speaker-container {
+  @include make-container;
+  padding: 50px 0;
+}
+
+.event-speaker-header {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.event-speaker-item {
+  @include make-md-column(3);
+}
+
+.event-speaker-img {
+  margin-bottom: 20px;
+  max-width: 50%;
+}
+
+.event-register-btn {
+  background-color: $dark-teal;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.event-flag-secion {
+  font-size: .85em;
+  margin-top: 50px;
+}
+
+.event-agenda-section {
+  padding: 20px 0;
+}
+
+.event-agenda-container {
+  @include make-container;
+}
+
+.event-agenda-header {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.event-agenda-icon {
+  display: inline-block;
+  float: right;
+  font-size: 1.175em;
+  margin-bottom: 10px;
+
+  &::before {
+    content: '\e851';
+    font-family: 'rswebfonts';
+  }
+}
+
+.event-agenda-timestamp {
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+}
+
+.event-agenda-info {
+  border-top: 2px solid $gray-lighter;
+  float: left;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.event-sponsor-section {
+  padding: 20px 0;
+}
+
+.event-sponsor-container {
+  @include make-container;
+}
+
+.event-sponsor-header {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.event-sponsor-level {
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event-sponsor-info {
+  border-top: 2px solid $gray-lighter;
+  float: left;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.event-sponsor-item {
+  @include make-md-column(3);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.event-sponsor-img {
+  margin-bottom: 20px;
+  max-width: 50%;
+}
+
+@media screen and (min-width: $screen-xs-min) and (max-width: $screen-md-min - 1) {
+  .event-detailInfo-container {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-min - 1) {
+  .event-detail-info {
+    border-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+  }
+}
+
 // Main Events Page.
 .eventsOverview {
   @include make-container;
