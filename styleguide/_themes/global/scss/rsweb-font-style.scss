@@ -1,5 +1,5 @@
 // Version control for rswebfonts
-$font-version: "1.0.2";
+$font-version: "1.0.3";
 
 @font-face {
     font-family: 'rswebfonts';
@@ -377,3 +377,4 @@ i.rsweb {
 .gen-choice:before { content: '\e9c3'; } /* '' */
 .srv-web-hosting:before { content: '\e9e9'; } /* '' */
 .gauge:before { content: '\e854'; } /* '' */
+.calendar:before { content: '\e851'; } /* '' */
