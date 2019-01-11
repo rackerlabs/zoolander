@@ -81,3 +81,13 @@ function svgBannerSetContent(primaryBox = 25) {
   }
   Zoolander.svgIsDrawn = true;
 }
+
+var runAnimations = function (el) {
+  window.sr = ScrollReveal();
+  // header box
+  sr.reveal(el, {
+    duration: 850,
+    opacity: 0,
+    distance: '50px',
+  });
+};
