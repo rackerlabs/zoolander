@@ -17,4 +17,11 @@ if(!desc) { var desc = "Is Google Your Destination? We’ll Be Your Guide."; }
   <div class="container">
     <h2 class="refreshBanner2019-text"><%- desc %></h2>
   </div>
+  <script type="text/javascript" src="global/plugins/scrollreveal.min.js"></script>
+  <script type="application/ecmascript">
+  <% include headers.js %>
+  svgBannerSetContent();
+  runAnimations('.refreshBanner2019-text');
+  </script>
 </div>
+
