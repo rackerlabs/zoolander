@@ -221,6 +221,14 @@
 
 .event-details {
   @include make-sm-column(6);
+  padding-left: 0;
+  padding-top: 50px;
+}
+
+.event-form {
+  @include make-sm-column(6);
+  padding-left: 20px;
+  padding-top: 50px;
 }
 
 .event-detailsTitle,
@@ -291,7 +299,122 @@
 }
 
 
+.event-speaker-section {
+  padding: 20px 0;
+}
+
+.event-speaker-container {
+  @include make-container;
+  padding: 50px 0;
+}
+
+.event-speaker-header {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.event-speaker-item {
+  @include make-md-column(3);
+}
+
+.event-speaker-img {
+  margin-bottom: 20px;
+  max-width: 50%;
+}
+
+.event-agenda-section {
+  padding: 20px 0;
+}
+
+.event-agenda-container {
+  @include make-container;
+}
+
+.event-agenda-header {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.event-agenda-icon {
+  display: inline-block;
+  float: right;
+  font-size: 1.175em;
+  margin-bottom: 10px;
+
+  &::before {
+    content: '\e851';
+    font-family: 'rswebfonts';
+  }
+}
+
+.event-agenda-timestamp {
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+}
+
+.event-agenda-info {
+  border-top: 2px solid $gray-lighter;
+  float: left;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.event-sponsor-section {
+  padding: 20px 0;
+}
+
+.event-sponsor-container {
+  @include make-container;
+}
+
+.event-sponsor-header {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.event-sponsor-level {
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event-sponsor-info {
+  border-top: 2px solid $gray-lighter;
+  float: left;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.event-sponsor-item {
+  @include make-md-column(3);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.event-sponsor-img {
+  margin-bottom: 20px;
+  max-width: 50%;
+}
+
 // Responsive behavior.
+@media screen and (min-width: $screen-xs-min) and (max-width: $screen-sm-min - 1) {
+  .event-details {
+    padding-left: 25px;
+  }
+}
+
 @media (min-width: $screen-sm-min) {
   .event,
   .eventsOverview {
