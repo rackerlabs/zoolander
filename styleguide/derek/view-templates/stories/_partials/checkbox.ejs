@@ -1,0 +1,22 @@
+<%
+if (!checkboxes) {
+  var checkboxes = [
+    { name: 'Webinar' },
+    { name: 'PDF' },
+    { name: 'Code' },
+    { name: 'Video' },
+    { name: 'Datasheet' },
+    { name: 'Support' },
+    { name: 'eBook' },
+    { name: 'Whitepaper' }
+  ]
+}
+%>
+<% checkboxes.forEach(function(checkboxes) { %>
+  <div class="rsFilter-formCheckItem row-eq-height">
+    <span>
+      <input class="option" type="checkbox" id="<%- checkboxes.name %>" name="<%- checkboxes.name %>" value="<%- checkboxes.name %>">
+    </span>
+    <label for="<%- checkboxes.name %>" title="<%- checkboxes.name %>"><%- checkboxes.name %></label>
+  </div>
+<% }); %>
