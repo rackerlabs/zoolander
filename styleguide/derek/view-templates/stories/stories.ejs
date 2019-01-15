@@ -215,6 +215,29 @@ var featQuotes = [
                 </div>
               </div>
             </li>
+            <li class="rsFilter-sideBar-accItem">
+              <label class="rsFilter-sideBar-accLabel">Region</label>
+              <div class="rsFilter-sideBar-accItemContent">
+                <div class="rsFilter-sideBar-checkbox">
+                  <%- partial('_partials/checkbox.ejs', {
+                    checkboxes: [
+                    { name: 'North America' },
+                    { name: 'Europe' },
+                    { name: 'UK' },
+                    { name: 'DACH' },
+                    { name: 'Benelux' },
+                    { name: 'Nordics' },
+                    { name: 'Latin America' },
+                    { name: 'Australia' },
+                    { name: 'New Zealand' },
+                    { name: 'Asia' },
+                    { name: 'Middle East' },
+                    { name: 'Global' }
+                    ],
+                  }) -%>
+                </div>
+              </div>
+            </li>
           </ul>
           <div class="rsFilter-sideBar-btnWrap">
             <input class="rsFilter-sideBar-submit form-submit" type="submit" id="edit-submit-resource-library" name="" value="Show Results">
