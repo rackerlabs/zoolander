@@ -60,33 +60,192 @@ var featQuotes = [
 </div>
 
 <div class="rsFilter-section">
-  <div class="rsFilter-row row-eq-height">
-    <div class="rsFilter-bar rsFilter-storiesBar">
-      <button class="rsFilter-hamburger rsFilter-storiesBarTitle"></button>
-      <div class="rsFilter-mobileTitle rsFilter-storiesBarTitle">Find a Story</div>
-      <form method="post" action="javascript:void(0);" class="rsFilter-form">
-        <div class="rsFilter-formTitle rsFilter-storiesBarTitle">Find a Story</div>
-        <div class="form-item form-type-select form-item-tid-1">
-          <select class="rsFilter-formSelect form-select">
-            <option disabled="disabled" selected="selected">Product</option>
-            <option value="1">All</option>
-            <option value="2">Cloud Backup</option>
-            <option value="3">Cloud Block Storage</option>
-            <option value="4">...</option>
-          </select>
+  <div class="rsFilter-sideBar-row row-eq-height">
+    <div class="rsFilter-sideBar">
+      <!-- TITLE BOX -->
+      <div class="rsFilter-sideBar-titleContainer">
+        <button class="rsFilter-sideBar-hamburger"></button>
+        <div class="rsFilter-sideBar-formTitle">Find a Resource</div>
+      </div>
+      <!-- THE SELECTION FORM -->
+      <form class="rsFilter-sideBar-form">
+        <!-- Accordion Side -->
+        <div class="rsFilter-sideBar-content">
+          <ul class="rsFilter-sideBar-acc">
+            <li class="rsFilter-sideBar-accItem">
+              <label class="rsFilter-sideBar-accLabel">Resource Types</label>
+              <div class="rsFilter-sideBar-accItemContent">
+                <div class="rsFilter-sideBar-checkbox">
+                  <%- partial('_partials/checkbox.ejs', {
+                    checkboxes: [
+                    { name: 'Code Repository' },
+                    { name: 'Customer Stories' },
+                    { name: 'Data Sheet' },
+                    { name: 'Infographic' },
+                    { name: 'Reference Architecture' },
+                    { name: 'Support Article' },
+                    { name: 'Video' },
+                    { name: 'Webinar' },
+                    { name: 'White Paper' },
+                    { name: 'eBook' }
+                    ],
+                  }) -%>
+                </div>
+              </div>
+            </li>
+            <li class="rsFilter-sideBar-accItem">
+              <label class="rsFilter-sideBar-accLabel">Solutions</label>
+              <div class="rsFilter-sideBar-accItemContent">
+                <div class="rsFilter-sideBar-checkbox">
+                  <%- partial('_partials/checkbox.ejs', {
+                    checkboxes: [
+                    { name: 'Application Services / DevOps' },
+                    { name: 'Compliance' },
+                    { name: 'Data Services' },
+                    { name: 'DDoS Mitigation' },
+                    { name: 'eCommerce Hosting' },
+                    { name: 'Email Hosting' },
+                    { name: 'Infrastructure' },
+                    { name: 'Managed Hosting' },
+                    { name: 'Public Cloud' },
+                    { name: 'Private Cloud' },
+                    { name: 'Hybrid Cloud' },
+                    { name: 'Multi-Cloud' },
+                    { name: 'Migration' },
+                    { name: 'Networking' },
+                    { name: 'Performance' },
+                    { name: 'Privacy and Data Protection' },
+                    { name: 'Productivity and Collaboration' },
+                    { name: 'Scalability' },
+                    { name: 'Security' },
+                    { name: 'Uptime' },
+                    { name: 'Virtualization' },
+                    { name: 'Web Content Management' },
+                    { name: 'Website Hosting' }
+                    ],
+                  }) -%>
+                </div>
+              </div>
+            </li>
+            <li class="rsFilter-sideBar-accItem">
+              <label class="rsFilter-sideBar-accLabel">Products</label>
+              <div class="rsFilter-sideBar-accItemContent">
+                <div class="rsFilter-sideBar-checkbox">
+                  <%- partial('_partials/checkbox.ejs', {
+                    checkboxes: [
+                    { name: 'Dedicated Servers' },
+                    { name: 'Custom Networking' },
+                    { name: 'Storage' },
+                    { name: 'Hybrid Cloud' },
+                    { name: 'Server Virtualization' },
+                    { name: 'Rackspace Private Cloud powered by VMware' },
+                    { name: 'Microsoft Private Cloud' },
+                    { name: 'Microsoft Hyper-V' },
+                    { name: 'OpenStack Private Cloud' },
+                    { name: 'OpenStack Pricate Cloud powered by OpenStack' },
+                    { name: 'OpenStack Private Cloud powered by Red Hat' },
+                    { name: 'Fanatical Support for AWS' },
+                    { name: 'Fanatical Support for Microsoft Azure' },
+                    { name: 'Google Cloud' },
+                    { name: 'OpenStack Public Cloud' },
+                    { name: 'Multi-Cloud' },
+                    { name: 'Rackspace Managed Security' },
+                    { name: 'Compliance Assistance' },
+                    { name: 'Magento' },
+                    { name: 'Adobe Experience Manager' },
+                    { name: 'SAP Hybris' },
+                    { name: 'Oracle Retail' },
+                    { name: 'Sitecore Experience Platform' },
+                    { name: 'Fanatical Support for Office 365' },
+                    { name: 'Rackspace Email' },
+                    { name: 'Microsoft Exchange' },
+                    { name: 'SharePoint' },
+                    { name: 'Partner' },
+                    { name: 'Data Services' },
+                    { name: 'Cloud Services' },
+                    { name: 'Application Services / DevOps' },
+                    { name: 'Data Services' },
+                    { name: 'Security & Governance Services' }
+                    ],
+                  }) -%>
+                </div>
+              </div>
+            </li>
+            <li class="rsFilter-sideBar-accItem">
+              <label class="rsFilter-sideBar-accLabel">Industry</label>
+              <div class="rsFilter-sideBar-accItemContent">
+                <div class="rsFilter-sideBar-checkbox">
+                  <%- partial('_partials/checkbox.ejs', {
+                    checkboxes: [
+                    { name: 'Aerospace & Defense' },
+                    { name: 'Agriculture' },
+                    { name: 'Apparel' },
+                    { name: 'Asspciations' },
+                    { name: 'Automotive' },
+                    { name: 'Biotech' },
+                    { name: 'Business Services' },
+                    { name: 'Construction' },
+                    { name: 'Consumer Goods & Services' },
+                    { name: 'Education' },
+                    { name: 'Energy & Utilites' },
+                    { name: 'Financial Services' },
+                    { name: 'Food & Beverage' },
+                    { name: 'Furniture' },
+                    { name: 'Government' },
+                    { name: 'Hardware' },
+                    { name: 'Healthcare & Medical' },
+                    { name: 'Home & Garden' },
+                    { name: 'Hospitality & Travel' },
+                    { name: 'Legal' },
+                    { name: 'Manufacturing' },
+                    { name: 'Media & Entertainment' },
+                    { name: 'Mining' },
+                    { name: 'Non-Profit' },
+                    { name: 'Pharmaceuticals' },
+                    { name: 'Printing & Publishing' },
+                    { name: 'Real Estate' },
+                    { name: 'Recreation' },
+                    { name: 'Retail & Distribution' },
+                    { name: 'Software & Technology' },
+                    { name: 'Telecommunications' },
+                    { name: 'Textiles' },
+                    { name: 'Transportation & Logistics' }
+                    ],
+                  }) -%>
+                </div>
+              </div>
+            </li>
+            <li class="rsFilter-sideBar-accItem">
+              <label class="rsFilter-sideBar-accLabel">Region</label>
+              <div class="rsFilter-sideBar-accItemContent">
+                <div class="rsFilter-sideBar-checkbox">
+                  <%- partial('_partials/checkbox.ejs', {
+                    checkboxes: [
+                    { name: 'North America' },
+                    { name: 'Europe' },
+                    { name: 'UK' },
+                    { name: 'DACH' },
+                    { name: 'Benelux' },
+                    { name: 'Nordics' },
+                    { name: 'Latin America' },
+                    { name: 'Australia' },
+                    { name: 'New Zealand' },
+                    { name: 'Asia' },
+                    { name: 'Middle East' },
+                    { name: 'Global' }
+                    ],
+                  }) -%>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="rsFilter-sideBar-btnWrap">
+            <input class="rsFilter-sideBar-submit form-submit" type="submit" id="edit-submit-resource-library" name="" value="Show Results">
+          </div>
         </div>
-        <div class="form-item form-type-select form-item-tid-1">
-          <select class="rsFilter-formSelect form-select">
-            <option disabled="disabled" selected="selected">Region</option>
-            <option value="1">All</option>
-            <option value="2">Asia</option>
-            <option value="3">Australia</option>
-            <option value="4">...</option>
-          </select>
-        </div>
-        <button class="rsFilter-button">Show Results</button>
       </form>
     </div>
+    <!-- SEPARATE -->
     <div class="rsFilter-content rsFilter-storiesContent">
       <div class="storyOverview-searchResults">
         <% for (var row = 0; row < 4; row++) { %>
@@ -115,8 +274,7 @@ var featQuotes = [
   </div>
 </div>
 
-<script src="js/global-components/filter-bar/filter-bar.js" charset="utf-8"></script>
-<script src="js/global-components/anchor-scroll/anchor-scroll.js" charset="utf-8"></script>
+<script src="js/global-components/filter-bar/filter-accordion.js" charset="utf-8"></script>
 <script type="text/javascript">
-  $('.rsAnchor-scroll').anchorScroll();
+  $('.rsFilter-sideBar').rsFilterBarAccordion();
 </script>

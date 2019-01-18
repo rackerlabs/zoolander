@@ -3563,6 +3563,12 @@
       "src": "entypo"
     },
     {
+      "uid": "531bc468eecbb8867d822f1c11f1e039",
+      "css": "calendar",
+      "code": 59473,
+      "src": "fontawesome"
+    },
+    {
       "uid": "ddf2f008a407294136a5aae9c27bbf1b",
       "css": "srv-web-hosting-2",
       "code": 59841,
