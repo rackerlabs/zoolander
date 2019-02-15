@@ -1,9 +1,28 @@
+@mixin ext-link {
+  content: '\f08e';
+  display: inline-block;
+  font-family: 'rswebfonts';
+  margin-left: 5px;
+}
+
 .extLink {
+
   &::after {
-    content: '\f08e';
-    display: inline-block;
-    font-family: 'rswebfonts';
-    margin-left: 5px;
+    @include ext-link;
+  }
+
+  &.keyoffersWidget {
+
+    &::after {
+      content: '';
+    }
+  }
+
+  .keyoffersWidget-bottomText {
+
+    &::after {
+      @include ext-link;
+    }
   }
 }
 
