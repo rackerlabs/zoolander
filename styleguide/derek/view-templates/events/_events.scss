@@ -234,7 +234,8 @@
 
 .event-detailsTitle,
 .event-info-whereTitle,
-.event-info-whenTitle {
+.event-info-whenTitle,
+.event-info-spokenTitle {
   @include subhead;
 }
 
@@ -275,13 +276,21 @@
 }
 
 .event-info-where {
-  @include make-sm-column(5);
+  @include make-sm-column(4);
   margin-bottom: 1rem;
 }
 
 .event-info-when {
-  @include make-sm-column(5);
+  @include make-sm-column(4);
   margin-bottom: 1rem;
+}
+
+.event-info-spoken {
+  @include make-sm-column(4);
+  margin-bottom: 1rem;
+  p {
+    margin: 0;
+  }
 }
 
 .event-map {
@@ -450,6 +459,10 @@
 
   .event-info-when {
     padding-left: .6rem;
+  }
+
+  .event-info-spoken {
+    padding: $no-padding;
   }
 
   .event-map {
