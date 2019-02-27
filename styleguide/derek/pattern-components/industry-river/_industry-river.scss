@@ -1,5 +1,19 @@
 // For industry river
 
+@mixin industry-count($count) {
+  $actual: $count - 3;
+
+  :first-child {
+    :nth-last-of-type(-n+#{$count}),
+    :nth-last-of-type(-n+#{$count}) ~ * {
+
+      :nth-child(-n+#{$actual}) {
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+}
+
 .industries-wrapper {
   background: $dark-blue;
 }
@@ -19,13 +33,19 @@
   padding: 25px;
   position: relative;
 
-  :nth-child(-n+6) {
-    border-bottom: 1px solid $white;
-  }
-
-  :nth-child(3n+3) {
+  :nth-child(3n+3),
+  :last-child {
     border-right: 1px solid $white;
   }
+
+  //Apply styles only if there are 6 items
+  @include industry-count(6);
+
+  //Apply styles only if there are 9 items
+  @include industry-count(9);
+
+  //Apply styles only if there are 12 items
+  @include industry-count(12);
 
   :focus {
     color: $white;
@@ -83,19 +103,42 @@
 }
 
 .industries-more-arrow {
-  margin-top: 40px;
+  margin-top: 20px;
   stroke: $white;
   width: 40px;
 }
 
 @media screen and (max-width: $screen-sm-max) {
   .industry-wrapper {
-    :nth-child(3n+3) {
-      border-right: 0;
-    }
+    border-bottom: 1px solid $white;
 
     :nth-child(even) {
+      border-left: 0;
       border-right: 1px solid $white;
+    }
+
+    :nth-child(odd) {
+      border-right: 1px solid $white;
+    }
+
+    :not(.hidden-sm) {
+      :last-of-type {
+        border-bottom: 0;
+      }
+
+      :nth-last-of-type(2) {
+        :nth-child(odd) {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    :first-child {
+      :nth-last-child(-n+12) ~ * {
+        :last-of-type {
+          border-bottom: 0;
+        }
+      }
     }
   }
 }
@@ -118,6 +161,21 @@
     :nth-child(even) {
       border-right: 0;
     }
+
+    :not(.hidden-sm) {
+      :nth-last-of-type(2) {
+        :nth-child(odd) {
+          border-bottom: 1px solid $white;
+        }
+      }
+    }
+
+    :nth-child(3n+3),
+    :nth-child(odd),
+    :last-child {
+      border-right: 0;
+    }
+
   }
 
   .industry-link {
