@@ -55,3 +55,10 @@
     padding-top: 25px;
   }
 }
+
+// IE 10 + hack here
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .overlap-circ-fill {
+    height: 310px;
+  }
+}
