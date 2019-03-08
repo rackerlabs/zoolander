@@ -25,21 +25,6 @@
   .lead-wrapper {
     text-align: left;
   }
-
-  // Announcements in subpanels should mimic mobile mode.
-  .announcement-icon,
-  .announcement-message {
-    width: $full-width;
-  }
-
-  .announcement-head,
-  .announcement-linkText {
-    text-align: center;
-  }
-
-  .announcement-wrapper {
-    display: block;
-  }
 }
 
 .subpanelWell {
