@@ -12,6 +12,18 @@
   visibility: hidden;
 }
 
+.pageBanner-wrapper-es {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
+}
+
+.pageBanner-wrapper-pt {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
+}
+
+.pageBanner-wrapper-apac {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480_APAC.jpg');
+}
+
 .pageBanner-col {
   align-items: center;
   display: flex;
@@ -26,6 +38,18 @@
   background-size: cover;
   display: none;
   height: 450px;
+}
+
+.pageBanner-main-image-es {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
+}
+
+.pageBanner-main-image-pt {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
+}
+
+.pageBanner-main-image-apac {
+  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480_APAC.jpg');
 }
 
 .pageBanner-content {
@@ -137,6 +161,21 @@
     display: block;
   }
 
+  .pageBanner-main-image-es {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-768-LATAM.jpg');
+    display: block;
+  }
+
+  .pageBanner-main-image-pt {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-768-LATAM.jpg');
+    display: block;
+  }
+
+  .pageBanner-main-image-apac {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-768_APAC.jpg');
+    display: block;
+  }
+
   .pageBanner-content {
     width: 90%;
   }
@@ -170,6 +209,21 @@
 @media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
   .pageBanner-main-image {
     background-image: url('../imgs/derek/banners/homepage-banner-992.jpg');
+    display: block;
+  }
+
+  .pageBanner-main-image-es {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992-LATAM.jpg');
+    display: block;
+  }
+
+  .pageBanner-main-image-pt {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992-LATAM.jpg');
+    display: block;
+  }
+
+  .pageBanner-main-image-apac {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992_APAC.jpg');
     display: block;
   }
 
@@ -209,6 +263,18 @@
     background-image: url('../imgs/derek/banners/homepage-banner-1280.jpg');
   }
 
+  .pageBanner-wrapper-es {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1280-LATAM.jpg');
+  }
+
+  .pageBanner-wrapper-pt {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1280-LATAM.jpg');
+  }
+
+  .pageBanner-wrapper-apac {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1280_APAC.jpg');
+  }
+
   .pageBanner-content {
     width: 400px;
   }
@@ -218,5 +284,17 @@
 @media screen and (min-width: $screen-lg) {
   .pageBanner-wrapper {
     background-image: url('../imgs/derek/banners/homepage-banner-1440.jpg');
+  }
+
+  .pageBanner-wrapper-es {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1440-LATAM.jpg');
+  }
+
+  .pageBanner-wrapper-pt {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1440-LATAM.jpg');
+  }
+
+  .pageBanner-wrapper-apac {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1440_APAC.jpg');
   }
 }
