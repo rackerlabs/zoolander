@@ -180,6 +180,13 @@
   }
 }
 
+@media only screen and (max-width: $screen-md-max) {
+  .navbar-nav {
+    .navbar-topLink {
+        font-size: $navigation-font-size-medium;
+    }
+  }
+}
 
 @media only screen and (max-width: $screen-sm-max) {
   .navbar-nav {
