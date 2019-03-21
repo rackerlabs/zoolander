@@ -176,6 +176,7 @@
 .event-backToEvents {
   color: $gray-base;
   display: block;
+  float: left;
   margin-bottom: 1rem;
   margin-left: $grid-gutter-width / 2;
 
@@ -229,7 +230,6 @@
 .event-form {
   @include make-sm-column(6);
   padding-left: 20px;
-  padding-top: 50px;
 }
 
 .event-detailsTitle,
