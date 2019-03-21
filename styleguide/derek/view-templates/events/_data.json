@@ -4,5 +4,8 @@
   },
   "events-interior": {
     "css": "css/derek.css"
+  },
+  "events-interior-marketo": {
+    "css": "css/derek.css"
   }
 }
