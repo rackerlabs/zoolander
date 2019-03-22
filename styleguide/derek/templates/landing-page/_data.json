@@ -10,5 +10,8 @@
   },
   "landingpage-form": {
     "css": "css/derek.css"
+  },
+  "landingpage-us-event": {
+    "css": "css/derek.css"
   }
 }
