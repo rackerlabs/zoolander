@@ -42,3 +42,75 @@
     color: $white;
   }
 }
+
+// lp event announcements
+.rsLpEvent-announcementRiver {
+  background: $dark-teal;
+  color: $white;
+}
+
+.rsLpEvent-announcementRiverContainer {
+  @include make-container;
+}
+
+.rsLpEvent-announcementRiverRow {
+  @include make-row;
+}
+
+.rsLpEvent-announcementRiverTitle {
+  @include make-sm-column(5);
+}
+
+.rsLpEvent-announcementRiverTitleHeader {
+  color: $white;
+  font-size: 2.25rem;
+  font-weight: $font-weight-regular;
+  line-height: 1.2em;
+  margin: 1.3rem 0;
+}
+
+.rsLpEvent-announcementRiverDetails {
+  @include make-sm-column(7);
+  line-height: 1.3em;
+  margin: 1.4rem 0;
+}
+
+.rsLpEvent-announcementRiverDetails-p {
+  line-height: 1.2em;
+}
+
+.rsLpEvent-announcementRiverReadMore {
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+.rsLpEvent-announcement-col {
+  float: left;
+  width: 50%;
+}
+
+
+.rsLpEvent-announcementRiver-secondary {
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.rsLpEvent-announcementRiver-date {
+  display: inline-block;
+  float: right;
+}
+
+@media screen and (min-width: $screen-xs-min) and (max-width: $screen-sm-min - 1) {
+  .rsLpEvent-announcement-col {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .rsLpEvent-announcementRiver-date {
+    float: none;
+  }
+}
