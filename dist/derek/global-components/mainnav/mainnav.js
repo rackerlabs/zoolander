@@ -82,6 +82,10 @@ $('.navbar-tertiary-dropDownTrigger')
       checkSubMenuView($(e.currentTarget).find('> .navbar-dropDownMenu'));
     }
   }, (e) => {
+    if ($viewPort > 768) {
+      // toggle open dropdowns
+      dropDownTrigger($(e.currentTarget));
+    }
     // reset the custom top value
     $(e.currentTarget).find('> .navbar-dropDownMenu').css('top', '');
   });
