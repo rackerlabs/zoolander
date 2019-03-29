@@ -228,3 +228,135 @@ table {
     }
   }
 }
+
+// Marketo Form Overrides: As the styling and markup for these forms are injecting
+// with a script we need to be much more specific to override them.
+
+// sass-lint:disable no-important no-qualifying-elements force-attribute-nesting force-element-nesting
+@mixin marketo-input {
+  background-color: $white;
+  border: 1px solid;
+  border-color: $gray-light;
+  box-shadow: none;
+  height: 34px;
+  padding: 6px 12px;
+  width: 98% !important;
+}
+
+@mixin marketo-button {
+  background-color: $rackspace-red;
+  background-image: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: $copy;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 11px 50px;
+  text-shadow: none;
+  width: 100%;
+
+  &:hover {
+    background-color: $brand-primary;
+  }
+}
+
+.mktoForm {
+  width: auto !important;
+
+  .mktoFormRow {
+    .mktoFormCol {
+      width: 100%;
+    }
+
+    .mktoFieldWrap {
+      width: 100%;
+    }
+
+    .mktoError {
+      bottom: -40px !important;
+      left: 10px !important;
+      right: auto !important;
+
+      .mktoErrorMsg {
+        background-image: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: 3px 3px 10px 2px transparentize($black, .9);
+        font-weight: 600;
+        text-shadow: none;
+      }
+    }
+
+    .mktoHtmlText.mktoHasWidth {
+      width: 100% !important;
+    }
+
+    .mktoLabel.mktoHasWidth {
+      position: relative;
+      width: 100% !important;
+    }
+
+    .mktoGutter.mktoHasWidth {
+      width: 0 !important;
+    }
+
+    .mktoAsterix {
+      float: left;
+      left: -10px;
+      padding-left: 0;
+      padding-right: 5px;
+      position: absolute;
+      top: 28px;
+    }
+  }
+
+  input[type='text'].mktoField {
+    @include marketo-input;
+  }
+
+  input[type='tel'].mktoField {
+    @include marketo-input;
+  }
+
+  input[type='email'].mktoField {
+    @include marketo-input;
+  }
+
+  textarea.mktoField {
+    @include marketo-input;
+    min-height: 100px;
+  }
+
+  textarea.mktoField.mktoHasWidth {
+    @include marketo-input;
+    min-height: 100px;
+  }
+
+  .mktoFieldWrap {
+    select.mktoField {
+      @include marketo-input;
+    }
+  }
+
+  .mktoButtonRow {
+    width: 100%;
+
+    .mktoButtonWrap {
+      margin-left: 0 !important;
+      width: 100%;
+    }
+
+    .mktoButtonWrap.mktoThoughtbot {
+      button.mktoButton {
+        @include marketo-button;
+      }
+    }
+
+    .mktoButtonWrap.mktoSimple {
+      button.mktoButton {
+        @include marketo-button;
+      }
+    }
+  }
+}
