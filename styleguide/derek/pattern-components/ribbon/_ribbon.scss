@@ -1,0 +1,34 @@
+.rsRibbon-river {
+  background-color: $wf-ribbon;
+  color: $white;
+}
+
+.rsRibbon-container {
+  @include make-container;
+}
+
+.rsRibbon-row {
+  @include make-row;
+}
+
+.rsRibbon-what {
+  @include make-sm-column(9);
+}
+
+.rsRibbon-when {
+  @include make-sm-column(3);
+}
+
+.rsRibbon-what-info {
+  font-size: 2.25rem;
+  font-weight: $font-weight-regular;
+  line-height: 1.3em;
+  margin: 2rem 0;
+}
+
+.rsRibbon-when-info {
+  font-size: 2.25rem;
+  font-weight: $font-weight-regular;
+  line-height: 1.3em;
+  margin: 2rem 0;
+}
