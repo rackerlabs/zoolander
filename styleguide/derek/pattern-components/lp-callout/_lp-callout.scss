@@ -70,3 +70,78 @@
     padding: 15px 25px 35px;
   }
 }
+
+.lp-legal-header {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.lp-legal-p {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.lp-relatedResource-card-3 {
+  @include make-md-column(4);
+
+  .lp-relatedResource-img {
+    height: 165px;
+  }
+}
+
+.lp-relatedResource-card-2 {
+  @include make-md-column(6);
+
+  .lp-relatedResource-img {
+    height: 235px;
+  }
+}
+
+.lp-relatedResource-card-1 {
+  @include make-sm-column(12);
+
+  .lp-relatedResource-img-container {
+    @include make-md-column(6);
+    padding-left: 0;
+  }
+
+  .lp-relatedResource-img {
+    min-height: 400px;
+  }
+
+  .lp-relatedResource-content {
+    @include make-md-column(6);
+  }
+}
+
+.lp-relatedResource-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.lp-relatedResource-content {
+  background-color: $white;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  .lp-relatedResource-card-1 {
+
+    .lp-relatedResource-img-container {
+      padding-right: 0;
+    }
+
+    .lp-relatedResource-img {
+      min-height: 300px;
+    }
+
+    .lp-relatedResource-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
