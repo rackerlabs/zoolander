@@ -11,6 +11,9 @@
   "landingpage-form": {
     "css": "css/derek.css"
   },
+    "landingpage-form-video": {
+    "css": "css/derek.css"
+  },
   "landingpage-us-event": {
     "css": "css/derek.css"
   },
