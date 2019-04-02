@@ -116,6 +116,11 @@
   @include make-md-column(6);
 }
 
+.lp-event-img {
+  min-height: 400px;
+}
+
+.lp-event-img,
 .lp-relatedResource-img {
   background-position: center center;
   background-repeat: no-repeat;
