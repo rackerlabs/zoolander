@@ -85,35 +85,35 @@
 
 .lp-relatedResource-card-3 {
   @include make-md-column(4);
+}
 
-  .lp-relatedResource-img {
-    height: 165px;
-  }
+.lp-relatedResource-img-3 {
+  height: 165px;
 }
 
 .lp-relatedResource-card-2 {
   @include make-md-column(6);
+}
 
-  .lp-relatedResource-img {
-    height: 235px;
-  }
+.lp-relatedResource-img-2 {
+  height: 235px;
 }
 
 .lp-relatedResource-card-1 {
   @include make-sm-column(12);
+}
 
-  .lp-relatedResource-img-container {
-    @include make-md-column(6);
-    padding-left: 0;
-  }
+.lp-relatedResource-imgContainer-1 {
+  @include make-md-column(6);
+  padding-left: 0;
+}
 
-  .lp-relatedResource-img {
-    min-height: 400px;
-  }
+.lp-relatedResource-img-1 {
+  min-height: 400px;
+}
 
-  .lp-relatedResource-content {
-    @include make-md-column(6);
-  }
+.lp-relatedResource-content-1 {
+  @include make-md-column(6);
 }
 
 .lp-relatedResource-img {
@@ -129,19 +129,16 @@
 }
 
 @media only screen and (max-width: $screen-sm-max) {
-  .lp-relatedResource-card-1 {
+  .lp-relatedResource-imgContainer-1 {
+    padding-right: 0;
+  }
 
-    .lp-relatedResource-img-container {
-      padding-right: 0;
-    }
+  .lp-relatedResource-img-1 {
+    min-height: 300px;
+  }
 
-    .lp-relatedResource-img {
-      min-height: 300px;
-    }
-
-    .lp-relatedResource-content {
-      padding-left: 0;
-      padding-right: 0;
-    }
+  .lp-relatedResource-content-1 {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
