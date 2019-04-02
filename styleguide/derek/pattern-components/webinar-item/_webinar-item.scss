@@ -1,0 +1,55 @@
+.rsWebinarText-container {
+  @include make-container;
+}
+
+.rsWebinarTopic-container {
+  @include make-container;
+}
+
+.rsWebinarTopic-row {
+  @include make-row;
+}
+
+.rsWebinarTopic-item-info-col {
+  @include make-sm-column(6);
+  margin-bottom: 25px;
+}
+
+.rsWebinarTopic-item-desc-col {
+  @include make-sm-column(6);
+  margin-bottom: 25px;
+}
+
+.rsWebinarTopic-headline {
+  margin-bottom: 25px;
+}
+
+.rsWebinarTopic-item-img {
+  float: left;
+  height: 110px;
+  margin-right: 15px;
+  width: 110px;
+}
+
+.rsWebinarTopic-item-headline {
+  font-weight: $font-weight-regular;
+}
+
+.rsWebinarTopic-item-date {
+  font-style: italic;
+  font-weight: $font-weight-regular;
+}
+
+.rsWebinarTopic-item-desc {
+  font-weight: $font-weight-regular;
+}
+
+.rsWebinarTopic-item-link a {
+  color: $rackspace-red;
+  font-weight: $font-weight-regular;
+  text-decoration: underline;
+}
+
+.rsWebinarText-content p {
+  font-weight: $font-weight-regular;
+}
