@@ -1,0 +1,49 @@
+<%
+  var items = [
+    {
+      headline: 'Weighing Public, Private and Hybrid Cloud Options for Application Modernization',
+      dateinfo: 'March 21, 2019',
+      description: 'Join our lineup of experts as they throw their best punches, comparing and contrasting the value of public cloud, private cloud and hybrid cloud infrastructure.',
+      linktext: 'Register Now'
+    },
+    {
+      headline: 'Weighing Public, Private and Hybrid Cloud Options for Application Modernization',
+      dateinfo: 'March 21, 2019',
+      description: 'Join our lineup of experts as they throw their best punches, comparing and contrasting the value of public cloud, private cloud and hybrid cloud infrastructure.',
+      linktext: 'Register Now'
+    },
+    {
+      headline: 'Weighing Public, Private and Hybrid Cloud Options for Application Modernization',
+      dateinfo: 'March 21, 2019',
+      description: 'Join our lineup of experts as they throw their best punches, comparing and contrasting the value of public cloud, private cloud and hybrid cloud infrastructure.',
+      linktext: 'Register Now'
+    },
+    {
+      headline: 'Weighing Public, Private and Hybrid Cloud Options for Application Modernization',
+      dateinfo: 'March 21, 2019',
+      description: 'Join our lineup of experts as they throw their best punches, comparing and contrasting the value of public cloud, private cloud and hybrid cloud infrastructure.',
+      linktext: 'Register Now'
+    },
+    {
+      headline: 'Weighing Public, Private and Hybrid Cloud Options for Application Modernization',
+      dateinfo: 'March 21, 2019',
+      description: 'Join our lineup of experts as they throw their best punches, comparing and contrasting the value of public cloud, private cloud and hybrid cloud infrastructure.',
+      linktext: 'Register Now'
+    },
+    {
+      headline: 'Weighing Public, Private and Hybrid Cloud Options for Application Modernization',
+      dateinfo: 'March 21, 2019',
+      description: 'Join our lineup of experts as they throw their best punches, comparing and contrasting the value of public cloud, private cloud and hybrid cloud infrastructure.',
+      linktext: 'Register Now'
+    }
+  ];
+%>
+
+<div class="rsWebinarTopic-river">
+  <div class="rsWebinarTopic-container">
+    <h3 class="rsWebinarTopic-headline">Webinar Topics</h3>
+    <% for(var i=0; i<items.length; i++) {%>
+        <%- partial("_partials/webinar-item", items[i]) %>
+    <% } %>
+  </div>
+</div>
