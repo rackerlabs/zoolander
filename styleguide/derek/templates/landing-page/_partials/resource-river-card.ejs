@@ -2,18 +2,18 @@
 
 <% for(var i = 0; i < count; i++) { %>
   <div class="lp-relatedResource-card-<%- count -%>">
-    <div class="lp-relatedResource-img-container">
-      <div class="lp-relatedResource-img" style="background-image:url('../imgs/derek/cx-teamwork.jpg');"></div>
+    <div class="lp-relatedResource-imgContainer lp-relatedResource-imgContainer-<%- count -%>">
+      <div class="lp-relatedResource-img-<%- count -%> lp-relatedResource-img" style="background-image:url('../imgs/derek/cx-teamwork.jpg');"></div>
     </div>
-    <div class="lp-relatedResource-content">
+    <div class="lp-relatedResource-content lp-relatedResource-content-<%- count -%>">
       <% if (count === 1) { %>
         <h2>Title of One Resource</h2>
         <p>
-          Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do. 
-          T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork 
-          belly aliquip ipsum shoulder swine est. Flank picanha eiusmod lorem 
-          jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong. 
-          Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est. 
+          Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do.
+          T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork
+          belly aliquip ipsum shoulder swine est. Flank picanha eiusmod lorem
+          jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong.
+          Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est.
           Nisi in magna.
         </p>
       <% } else { %>
@@ -21,8 +21,8 @@
           Card Headline
         </strong>
         <p>
-          Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do. 
-          T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork 
+          Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do.
+          T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork
           belly aliquip ipsum shoulder swine est.
         </p>
       <% } %>
