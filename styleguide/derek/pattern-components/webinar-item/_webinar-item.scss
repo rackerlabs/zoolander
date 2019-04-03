@@ -44,12 +44,22 @@
   font-weight: $font-weight-regular;
 }
 
-.rsWebinarTopic-item-link a {
-  color: $rackspace-red;
-  font-weight: $font-weight-regular;
-  text-decoration: underline;
+a {
+  .rsWebinarTopic-item-link {
+    color: $rackspace-red;
+    font-weight: $font-weight-regular;
+    text-decoration: underline;
+  }
 }
 
-.rsWebinarText-content p {
-  font-weight: $font-weight-regular;
+p {
+  .rsWebinarText-content {
+    font-weight: $font-weight-regular;
+  }
+}
+
+.rsTy-button {
+  background-color: $rackspace-red;
+  color: $white;
+  text-decoration: none;
 }

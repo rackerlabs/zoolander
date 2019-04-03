@@ -1,0 +1,29 @@
+<!-- section: ty dialogue -->
+<div class="container">
+    <%- partial("./_partials/ty-text-section.ejs") %>
+</div>
+<!-- section: resources -->
+<div class="container">
+  <div class="row row-eq-height">
+      <%- partial("./_partials/resource-river-card.ejs", { count: 3 }) %>
+  </div>
+</div>
+<!-- section: sponsors -->
+<div class="event-sponsor-section">
+    <div class="event-sponsor-container">
+      <h3 class="event-sponsor-header">Sponsored By</h3>
+      <div class="event-lpSponsor-logoContainer">
+        <% for(var i = 0; i < 3; i++) { %>
+          <div class="event-lpSponsor-logo">
+            <img src="../imgs/derek/logos/vmware.png" alt="">
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+<!-- section: legal -->
+<div class="half-padding">
+  <div class="container">
+    <%- partial("./_partials/landingpage-legal.ejs") %>
+  </div>
+</div>
