@@ -17,6 +17,9 @@
   "landingpage-us-event": {
     "css": "css/derek.css"
   },
+  "landingpage-tradeshow-event": {
+    "css": "css/derek.css"
+  },
   "landingpage-webinar": {
     "css": "css/derek.css"
   }
