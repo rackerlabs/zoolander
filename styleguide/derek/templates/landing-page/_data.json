@@ -23,13 +23,7 @@
   "landingpage-webinar": {
     "css": "css/derek.css"
   },
-  "landingpage-thankyou1": {
-    "css": "css/derek.css"
-  },
-  "landingpage-thankyou2": {
-    "css": "css/derek.css"
-  },
-  "landingpage-thankyou3": {
+  "landingpage-thankyou": {
     "css": "css/derek.css"
   }
 }
