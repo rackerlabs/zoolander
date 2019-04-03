@@ -14,8 +14,7 @@
     .resourcecenter-visualWrapper {
       @if $image != '' {
         background-image: url('../imgs/derek/resourceCenter/#{$image}');
-      }
-      @else {
+      } @else {
         background-image: none;
       }
 
