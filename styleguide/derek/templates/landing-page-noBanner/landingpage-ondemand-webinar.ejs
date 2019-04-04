@@ -1,0 +1,43 @@
+
+<div class="half-padding">
+  <div class="container">
+    <div class="videoEmbed-wrapper">
+      <%- partial('../../pattern-components/video/video.ejs') %>
+    </div>
+    <h2>Landing Page Headline</h2>
+    <p>
+      Street art dreamcatcher cronut typewriter tumblr selfies. Kogi single-origin coffee raw denim,
+      retro crucifix 90s tacos polaroid marfa wolf. Whatever disrupt normcore actually af. Roof party
+      organic vape raclette biodiesel try-hard art party keffiyeh.
+    </p>
+  </div>
+</div>
+
+<div class="half-padding">
+  <div class="container">
+    <h2>Related Resources</h2>
+    <div class="row row-eq-height">
+      <%- partial("../landing-page/_partials/resource-river-card.ejs", { count: 3 }) %>
+    </div>
+  </div>
+</div>
+<!-- Sponsor section -->
+<div class="event-sponsor-section">
+  <div class="event-sponsor-container">
+    <h3 class="event-sponsor-header">Sponsored By</h3>
+    <div class="event-lpSponsor-logoContainer">
+      <% for(var i = 0; i < 3; i++) { %>
+        <div class="event-lpSponsor-logo">
+          <img src="../imgs/derek/logos/vmware.png" alt="">
+        </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<!-- Legal section -->
+<div class="half-padding">
+  <div class="container">
+    <%- partial("../landing-page/_partials/landingpage-legal.ejs") %>
+  </div>
+</div>
