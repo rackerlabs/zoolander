@@ -57,7 +57,7 @@
 }
 
 // IE 10 + hack here
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
   .overlap-circ-fill {
     height: 310px;
   }

@@ -14,15 +14,28 @@
   <%- partial("../../pattern-components/lp-callout/lp-callout-form/lp-callout.ejs") %>
 </div>
 
-<div class="bg-light-gray">
-  <div class="container half-padding">
-    <h2 class="centered">These are Product Features</h2>
+<div class="container">
+  <h2 class="text-center">Related Resources</h2>
+  <div class="row row-eq-height">
+    <%- partial("./_partials/resource-river-card.ejs", { count: 1 }) %>
   </div>
 </div>
-<%- partial("../../pattern-components/product-features/product-features.ejs") %>
 
+<div class="event-sponsor-section">
+  <div class="event-sponsor-container">
+    <h3 class="event-sponsor-header">Sponsored By</h3>
+    <div class="event-lpSponsor-logoContainer">
+      <% for(var i = 0; i < 3; i++) { %>
+        <div class="event-lpSponsor-logo">
+          <img src="../imgs/derek/logos/vmware.png" alt="">
+        </div>
+      <% } %>
+    </div>
+  </div>
+</div>
 
-<%- partial("../../pattern-components/quotes/quote-full-width-slim.ejs") %>
-
-<%- partial("../../pattern-components/ctas/cta-bottom.ejs") %>
-
+<div class="half-padding">
+  <div class="container">
+    <%- partial("./_partials/landingpage-legal.ejs") %>
+  </div>
+</div>

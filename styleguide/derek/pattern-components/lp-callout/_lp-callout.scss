@@ -70,3 +70,80 @@
     padding: 15px 25px 35px;
   }
 }
+
+.lp-legal-header {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.lp-legal-p {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.lp-relatedResource-card-3 {
+  @include make-md-column(4);
+}
+
+.lp-relatedResource-img-3 {
+  height: 165px;
+}
+
+.lp-relatedResource-card-2 {
+  @include make-md-column(6);
+}
+
+.lp-relatedResource-img-2 {
+  height: 235px;
+}
+
+.lp-relatedResource-card-1 {
+  @include make-sm-column(12);
+}
+
+.lp-relatedResource-imgContainer-1 {
+  @include make-md-column(6);
+  padding-left: 0;
+}
+
+.lp-relatedResource-img-1 {
+  min-height: 400px;
+}
+
+.lp-relatedResource-content-1 {
+  @include make-md-column(6);
+}
+
+.lp-event-img {
+  min-height: 400px;
+}
+
+.lp-event-img,
+.lp-relatedResource-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.lp-relatedResource-content {
+  background-color: $white;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+  .lp-relatedResource-imgContainer-1 {
+    padding-right: 0;
+  }
+
+  .lp-relatedResource-img-1 {
+    min-height: 300px;
+  }
+
+  .lp-relatedResource-content-1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

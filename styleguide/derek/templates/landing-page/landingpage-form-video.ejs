@@ -1,0 +1,31 @@
+<div class="lp-textAreaContainer">
+  <div class="lp-textAreaWrapper">
+    <h1>Deliver More Value with Managed Hosting</h1>
+    <div class="videoEmbed-wrapper">
+      <%- partial('../../pattern-components/video/video.ejs') %>
+    </div>
+    <div class="lp-textArea">
+      <p class="lp-video-description">No matter what your business needs, we can work with you to design a best-fit solution that drives more value while minimizing the risk of vendor lock-in.</p>
+    </div>
+  </div>
+  <%- partial("../../pattern-components/lp-callout/lp-callout-form/lp-callout.ejs") %>
+</div>
+
+<div class="event-sponsor-section">
+  <div class="event-sponsor-container">
+    <h3 class="event-sponsor-header">Sponsored By</h3>
+    <div class="event-lpSponsor-logoContainer">
+      <% for(var i = 0; i < 3; i++) { %>
+        <div class="event-lpSponsor-logo">
+          <img src="../imgs/derek/logos/vmware.png" alt="">
+        </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<div class="half-padding">
+  <div class="container">
+    <%- partial("./_partials/landingpage-legal.ejs") %>
+  </div>
+</div>

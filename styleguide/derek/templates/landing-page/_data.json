@@ -11,7 +11,22 @@
   "landingpage-form": {
     "css": "css/derek.css"
   },
+    "landingpage-form-video": {
+    "css": "css/derek.css"
+  },
   "landingpage-us-event": {
+    "css": "css/derek.css"
+  },
+  "landingpage-tradeshow-event": {
+    "css": "css/derek.css"
+  },
+  "landingpage-webinar": {
+    "css": "css/derek.css"
+  },
+  "landingpage-thankyou": {
+    "css": "css/derek.css"
+  },
+  "landingpage-single-webinar": {
     "css": "css/derek.css"
   }
 }
