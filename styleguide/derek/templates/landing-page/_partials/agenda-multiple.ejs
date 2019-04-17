@@ -1,0 +1,38 @@
+<div class="event-agenda-section">
+  <div class="event-agenda-container">
+    <h3 class="event-agenda-header">Agenda</h3>
+    <div class="rsEvent-multiAgenda-container">
+      <% for(var i = 0; i < 3; i++) { %>
+        <button class="rsEvent-multiAgenda-tab <% if(i === 0) { %>rsEvent-multiAgenda-activeTab<% } %>">
+          Thursday, April 26 2019
+        </button>
+        <div class="rsEvent-multiAgenda-tabContent" style="<% if(i === 0) { %>display: block<% } %>">
+          <% for(var x = 0; x < 3; x++) { %>
+            <div class="rsEvent-multiAgenda-data">
+              <div class="rsEvent-multiAgenda-time">
+                9:00am - 9:30am
+              </div>
+              <div class="rsEvent-multiAgenda-info">
+                <p>
+                  Street art dreamcatcher cronut typewriter tumblr selfies. Kogi single-origin 
+                  coffee raw denim, retro crucifix 90s tacos polaroid marfa wolf. Whatever 
+                  disrupt normcore actually af. Roof party organic vape raclette biodiesel 
+                  try-hard art party keffiyeh.
+                </p>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('.rsEvent-multiAgenda-container .rsEvent-multiAgenda-tab').click(function toggleAgendas() {
+    const $btn = $(this);
+    const $content = $btn.next('.rsEvent-multiAgenda-tabContent')
+    $btn.toggleClass('rsEvent-multiAgenda-activeTab');
+    $content.slideToggle('fast');
+  });
+</script>
