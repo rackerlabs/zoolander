@@ -83,6 +83,11 @@
   font-style: italic;
 }
 
+.lp-relatedResource-content {
+  background-color: $white;
+  padding: 20px 0;
+}
+
 .lp-relatedResource-card-3 {
   @include make-md-column(4);
 }
@@ -114,6 +119,7 @@
 
 .lp-relatedResource-content-1 {
   @include make-md-column(6);
+  padding-left: 35px;
 }
 
 .lp-event-img {
@@ -126,11 +132,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-}
-
-.lp-relatedResource-content {
-  background-color: $white;
-  padding: 20px 0;
 }
 
 @media only screen and (max-width: $screen-sm-max) {
