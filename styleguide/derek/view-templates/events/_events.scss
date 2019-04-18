@@ -222,13 +222,13 @@
 }
 
 .event-details {
-  @include make-sm-column(6);
+  @include make-sm-column(8);
   padding-left: 0;
   padding-top: 50px;
 }
 
 .event-form {
-  @include make-sm-column(6);
+  @include make-sm-column(4);
   padding-left: 20px;
 }
 
