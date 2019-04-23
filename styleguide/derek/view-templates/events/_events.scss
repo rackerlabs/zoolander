@@ -230,6 +230,7 @@
 .event-form {
   @include make-sm-column(4);
   padding-left: 20px;
+  padding-top: 50px;
 }
 
 .event-detailsTitle,
