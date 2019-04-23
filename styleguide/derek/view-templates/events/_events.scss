@@ -543,12 +543,31 @@
   }
 }
 
-// Mobile Behavior.
-@media screen and (min-width: $screen-xs-min) and (max-width: $screen-sm-min - 1) {
+@media screen and (max-width: $screen-xs-max) {
   .event-moderators-item {
     display: block;
   }
 
+  .rsEvent-multiAgenda-data {
+    display: block;
+  }
+
+  .rsEvent-multiAgenda-time {
+    border-bottom: 2px solid $rackspace-red;
+    border-right: 0;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .rsEvent-multiAgenda-info {
+    padding-left: 0;
+    padding-top: 15px;
+    width: 100%;
+  }
+}
+
+// Mobile Behavior.
+@media screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
   .event-image-item {
     margin-bottom: 10px;
   }
