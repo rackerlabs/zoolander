@@ -85,9 +85,26 @@
   padding-left: 30px;
   padding-right: 30px;
 
+  &:focus,
   &:hover {
     background-color: $dark-red;
     color: $white;
+    text-decoration: none;
+  }
+}
+
+.pageBanner-buyNowButton {
+  margin-bottom: 15px;
+  margin-left: 15px;
+  padding-right: 60px;
+
+  &::after {
+    content: '\e94a';
+    font-family: 'rswebfonts';
+    font-size: 2.5rem;
+    position: absolute;
+    right: 20px;
+    top: 32%;
   }
 }
 
@@ -254,6 +271,32 @@
     height: unset;
     justify-content: unset;
     margin-left: 0;
+  }
+}
+
+// 0-767px.
+@media screen and (max-width: $screen-sm-max) {
+  .pageBanner-button-box {
+    bottom: 0;
+    position: relative;
+    top: 0;
+  }
+}
+
+// 768px+
+@media screen and (min-width: $screen-md-min) {
+  .pageBanner-buyNowButton {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    max-width: 250px;
+    padding-right: 40px;
+    position: relative;
+    text-align: left;
+
+    &::after {
+      font-size: 4rem;
+    }
   }
 }
 
