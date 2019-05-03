@@ -81,7 +81,7 @@
     // Buy now button.
     $('.pageBanner-buyNowButton').click((e) => {
       e.preventDefault();
-      classes['ui-dialog'] = 'rackspaceModal rackspaceModalLarge';
+      classes['ui-dialog'] = 'rackspaceModal rackspaceModalExtraLarge';
       openModal('#buyNow');
     });
 
