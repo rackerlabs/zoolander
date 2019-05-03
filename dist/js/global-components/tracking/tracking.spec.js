@@ -221,6 +221,54 @@ describe('Zoolander Tracking Module', function () {
       expect(expected).to.eql(window.dataLayer.pop());
     });
 
+    it('should set undefined label if text is missing', function () {
+      $('body').append('<a class="track-cta" href="https://rackspace.com"></a>');
+      Zoolander.Tracking.init();
+
+      $('.track-cta').trigger('click');
+      var expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'undefined',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
+
+    it('should track image links', function () {
+      $('body').append('<a class="track-cta" href="https://rackspace.com"><img src="#" alt="My Alt Text"></a>');
+      Zoolander.Tracking.init();
+
+      $('.track-cta').trigger('click');
+      var expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'My Alt Text',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
+
+    it('should set undefined label when alt tag is missing', function () {
+      $('body').append('<a class="track-cta" href="https://rackspace.com"><img src="#"></a>');
+      Zoolander.Tracking.init();
+
+      $('.track-cta').trigger('click');
+      var expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'undefined',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
+
     it('should track internal nav clicks', function () {
       var linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">' + '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> ' + '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>' + '<ul class="mid-nav">' + '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>' + '<li class="item-b"><span id="midlvl">Mid lvl second</span>' + '<ul class="third-nav">' + '<li class="item-1">Base lvl first</li>' + '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>' + '<li class="item-3">Base lvl third</li>' + '</ul>' + '</li>' + '<li class="item-c">Mid lvl third</li>' + '</ul>' + '</li>' + '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>' + '</ul>' + '</div>';
 
