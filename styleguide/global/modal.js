@@ -78,6 +78,13 @@
       openModal('#callUs');
     });
 
+    // Buy now button.
+    $('.pageBanner-buyNowButton').click((e) => {
+      e.preventDefault();
+      classes['ui-dialog'] = 'rackspaceModal rackspaceModalLarge';
+      openModal('#buyNow');
+    });
+
     // Ceiling email us modal.
     $('.navbar-emailicon').click((e) => {
       e.preventDefault();
