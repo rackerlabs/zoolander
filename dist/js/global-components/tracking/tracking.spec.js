@@ -7,6 +7,7 @@ describe('Zoolander Tracking Module', function () {
 
   describe('tracking', function () {
     beforeEach(function () {
+      $(document).unbind('click');
       $('body').html('');
       window.dataLayer = [];
     });
@@ -194,6 +195,7 @@ describe('Zoolander Tracking Module', function () {
       $('body').append('<a class="track-signupCTA link2" href="https://cart.rackspace.com/aws">AWS</a>');
       $('body').append('<a class="track-signupCTA link3" href="https://cart.rackspace.com/gcp">GCP</a>');
       Zoolander.Tracking.init();
+      $('body').append('<div id="rackspaceModal"><a class="track-signupCTA link4" href="https://cart.rackspace.com/office365">Office365</a></div>');
 
       $('.link3').trigger('click');
       var expected = {
@@ -205,6 +207,7 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
 
       $('.link1').trigger('click');
       expected = {
@@ -216,6 +219,7 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
 
       $('.link2').trigger('click');
       expected = {
@@ -227,6 +231,19 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+
+      $('.link4').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click CTA',
+        eventLabel: 'https://cart.rackspace.com/office365',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
     });
 
     it('should track resource clicks', function () {
@@ -234,6 +251,7 @@ describe('Zoolander Tracking Module', function () {
       $('body').append('<a class="track-cta link2" href="https://cart.rackspace.com">View Cart</a>');
       $('body').append('<a class="track-cta link3" href="https://blog.rackspace.com">View Blog</a>');
       Zoolander.Tracking.init();
+      $('body').append('<div id="rackspaceModal"><a class="track-cta link4" href="https://support.rackspace.com">View Support</a></div>');
 
       $('.link2').trigger('click');
       var expected = {
@@ -245,6 +263,7 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
 
       $('.link1').trigger('click');
       expected = {
@@ -256,6 +275,7 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
 
       $('.link3').trigger('click');
       expected = {
@@ -267,6 +287,19 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+
+      $('.link4').trigger('click');
+      expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'View Support',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
     });
 
     it('should set undefined label if text is missing', function () {

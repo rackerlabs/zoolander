@@ -162,7 +162,7 @@ Zoolander.Tracking = function Tracking($) {
       });
     });
 
-    $('.track-signupCTA').on('click', function (e) {
+    $(document).on('click', '.track-signupCTA', function (e) {
       dataLayer.push({
         event: 'ga.event',
         eventCategory: 'Signup',
@@ -173,7 +173,7 @@ Zoolander.Tracking = function Tracking($) {
       });
     });
 
-    $('.track-cta').on('click', function (e) {
+    $(document).on('click', '.track-cta', function (e) {
       dataLayer.push({
         event: 'cta.click',
         eventCategory: 'CTA',
