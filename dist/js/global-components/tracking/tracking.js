@@ -162,23 +162,23 @@ Zoolander.Tracking = function Tracking($) {
       });
     });
 
-    $('.track-signupCTA').on('click', function () {
+    $('.track-signupCTA').on('click', function (e) {
       dataLayer.push({
         event: 'ga.event',
         eventCategory: 'Signup',
         eventAction: 'Signup Click CTA',
-        eventLabel: $('.track-signupCTA').attr('href'),
+        eventLabel: $(e.target).attr('href'),
         eventValue: '0',
         eventNonInteraction: 0
       });
     });
 
-    $('.track-cta').on('click', function () {
+    $('.track-cta').on('click', function (e) {
       dataLayer.push({
         event: 'cta.click',
         eventCategory: 'CTA',
         eventAction: 'CTA Click',
-        eventLabel: $('.track-cta').text() || $('.track-cta').find('img').attr('alt') || 'undefined',
+        eventLabel: $(e.target).text() || $(e.target).find('img').attr('alt') || 'undefined',
         eventValue: '0',
         eventNonInteraction: 0
       });

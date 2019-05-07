@@ -190,15 +190,39 @@ describe('Zoolander Tracking Module', function () {
     });
 
     it('should track signup CTA clicks', function () {
-      $('body').append('<a class="track-signupCTA" href="https://cart.rackspace.com">Sign Up</a>');
+      $('body').append('<a class="track-signupCTA link1" href="https://cart.rackspace.com/cloud">Cloud</a>');
+      $('body').append('<a class="track-signupCTA link2" href="https://cart.rackspace.com/aws">AWS</a>');
+      $('body').append('<a class="track-signupCTA link3" href="https://cart.rackspace.com/gcp">GCP</a>');
       Zoolander.Tracking.init();
 
-      $('.track-signupCTA').trigger('click');
+      $('.link3').trigger('click');
       var expected = {
         event: 'ga.event',
         eventCategory: 'Signup',
         eventAction: 'Signup Click CTA',
-        eventLabel: 'https://cart.rackspace.com',
+        eventLabel: 'https://cart.rackspace.com/gcp',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+
+      $('.link1').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click CTA',
+        eventLabel: 'https://cart.rackspace.com/cloud',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+
+      $('.link2').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click CTA',
+        eventLabel: 'https://cart.rackspace.com/aws',
         eventValue: '0',
         eventNonInteraction: 0
       };
@@ -206,15 +230,39 @@ describe('Zoolander Tracking Module', function () {
     });
 
     it('should track resource clicks', function () {
-      $('body').append('<a class="track-cta" href="https://rackspace.com">View Resource</a>');
+      $('body').append('<a class="track-cta link1" href="https://rackspace.com">View Resource</a>');
+      $('body').append('<a class="track-cta link2" href="https://cart.rackspace.com">View Cart</a>');
+      $('body').append('<a class="track-cta link3" href="https://blog.rackspace.com">View Blog</a>');
       Zoolander.Tracking.init();
 
-      $('.track-cta').trigger('click');
+      $('.link2').trigger('click');
       var expected = {
         event: 'cta.click',
         eventCategory: 'CTA',
         eventAction: 'CTA Click',
+        eventLabel: 'View Cart',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+
+      $('.link1').trigger('click');
+      expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
         eventLabel: 'View Resource',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+
+      $('.link3').trigger('click');
+      expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'View Blog',
         eventValue: '0',
         eventNonInteraction: 0
       };
