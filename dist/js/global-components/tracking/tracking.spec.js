@@ -319,11 +319,22 @@ describe('Zoolander Tracking Module', function () {
     });
 
     it('should track image links', function () {
-      $('body').append('<a class="track-cta" href="https://rackspace.com"><img src="#" alt="My Alt Text"></a>');
+      $('body').append('<a class="track-cta" href="#"><img class="my-img" src="#" alt="My Alt Text"></a>');
       Zoolander.Tracking.init();
 
       $('.track-cta').trigger('click');
       var expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'My Alt Text',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+
+      $('.my-img').trigger('click');
+      expected = {
         event: 'cta.click',
         eventCategory: 'CTA',
         eventAction: 'CTA Click',
