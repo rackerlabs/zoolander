@@ -467,5 +467,57 @@ describe('Zoolander Tracking Module', () => {
       }];
       expect(expected).to.eql(window.dataLayer);
     });
+
+    it('should trigger google optimize when .trigger-optimize is clicked', () => {
+      $('body').append('<a class="link1 trigger-optimize" href="#">Trigger Google Optimize by Text</a>');
+      $('body').append('<a class="link2 trigger-optimize" href="#"><img src="#" alt="Trigger Google Optimize by Alt Text"></a>');
+      $('body').append('<a class="link3 trigger-optimize" href="#"></a>');
+      Zoolander.Tracking.init();
+
+      // datalayer should be empty initially
+      expect(0).to.eql(window.dataLayer.length);
+
+      // Ensure link1 triggers optimize show event with anchor text.
+      $('.link1').trigger('click');
+      let expected = {
+        event: 'optimize.show',
+        eventCategory: 'Optimize',
+        eventAction: 'Click',
+        eventLabel: 'Trigger Google Optimize by Text',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect({ optimize_show: true }).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+
+      // Ensure link2 triggers optimize show event with image alt text.
+      $('.link2').trigger('click');
+      expected = {
+        event: 'optimize.show',
+        eventCategory: 'Optimize',
+        eventAction: 'Click',
+        eventLabel: 'Trigger Google Optimize by Alt Text',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect({ optimize_show: true }).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+
+      // Ensure link3 triggers optimize show event with undefined label.
+      $('.link3').trigger('click');
+      expected = {
+        event: 'optimize.show',
+        eventCategory: 'Optimize',
+        eventAction: 'Click',
+        eventLabel: 'undefined',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect({ optimize_show: true }).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+    });
   });
 });

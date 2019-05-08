@@ -215,6 +215,18 @@ Zoolander.Tracking = (function Tracking($) {
         eventNonInteraction: 0,
       });
     });
+
+    $(document).on('click', '.trigger-optimize', (e) => {
+      dataLayer.push({ optimize_show: true });
+      dataLayer.push({
+        event: 'optimize.show',
+        eventCategory: 'Optimize',
+        eventAction: 'Click',
+        eventLabel: $(e.target).text() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
   }
 
   function getCheckboxValuesByElement(elements) {
