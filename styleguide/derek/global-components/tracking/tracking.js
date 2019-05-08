@@ -161,11 +161,14 @@ Zoolander.Tracking = (function Tracking($) {
     });
 
     $(document).on('click', '.track-signupCTA', (e) => {
+      const protocol = $(e.target).prop('protocol');
+      const hostname = $(e.target).prop('hostname');
+      const pathname = $(e.target).prop('pathname');
       dataLayer.push({
         event: 'ga.event',
         eventCategory: 'Signup',
         eventAction: 'Signup Click CTA',
-        eventLabel: $(e.target).attr('href'),
+        eventLabel: `${protocol}//${hostname}${pathname}`,
         eventValue: '0',
         eventNonInteraction: 0,
       });
