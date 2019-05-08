@@ -200,7 +200,7 @@ describe('Zoolander Tracking Module', () => {
 
     it('should track signup CTA clicks', () => {
       $('body').append('<a class="track-signupCTA link1" href="https://cart.rackspace.com/cloud">Cloud</a>');
-      $('body').append('<a class="track-signupCTA link2" href="https://cart.rackspace.com/aws">AWS</a>');
+      $('body').append('<a class="track-signupCTA link2" href="https://cart.rackspace.com/aws?_ga=abc123">AWS</a>');
       $('body').append('<a class="track-signupCTA link3" href="https://cart.rackspace.com/gcp">GCP</a>');
       Zoolander.Tracking.init();
       $('body').append('<div id="rackspaceModal"><a class="track-signupCTA link4" href="https://cart.rackspace.com/office365">Office365</a></div>');
