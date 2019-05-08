@@ -1,3 +1,5 @@
+// sass-lint:disable no-vendor-prefixes
+
 .buyNow-card {
   border: 3px solid $gray-lightest;
   margin-bottom: $grid-gutter-width / 4;
@@ -24,6 +26,7 @@
 
 .buyNow-cardButton {
   bottom: $grid-gutter-width / 4;
+  left: 50%;
   margin-left: -90px;
   position: absolute;
   width: 180px;
@@ -46,7 +49,10 @@
 
 @media only screen and (min-width: $screen-md-min) {
   .buyNow-container {
-    display: grid;
+    -ms-grid-columns: 30% 5% 30% 5% 30%;
+    -ms-grid-rows: auto;
+    display: -ms-grid;
+    display: grid; // sass-lint:disable-line no-duplicate-properties
     grid-template-areas:
     'header header header . chat'
     'aws . gcp . openstack'
@@ -57,6 +63,9 @@
   }
 
   .buyNow-header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    -ms-grid-row: 1;
     grid-area: header;
   }
 
@@ -65,6 +74,8 @@
   }
 
   .buyNow-chat {
+    -ms-grid-column: 5;
+    -ms-grid-row: 1;
     background-position: right 10px;
     grid-area: chat;
     margin: inherit;
@@ -75,26 +86,38 @@
   }
 
   .buyNow-cardOpenStack {
+    -ms-grid-column: 5;
+    -ms-grid-row: 2;
     grid-area: openstack;
   }
 
   .buyNow-cardAws {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
     grid-area: aws;
   }
 
   .buyNow-cardGcp {
+    -ms-grid-column: 3;
+    -ms-grid-row: 2;
     grid-area: gcp;
   }
 
   .buyNow-cardOffice365 {
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
     grid-area: office365;
   }
 
   .buyNow-cardEmail {
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
     grid-area: email;
   }
 
   .buyNow-cardOther {
+    -ms-grid-column: 5;
+    -ms-grid-row: 3;
     grid-area: other;
   }
 }
