@@ -43,10 +43,7 @@
 
 .rsHomepage-annLeftBar-header {
   color: $white;
-  font-size: 1.2em;
-  font-weight: 700;
   margin: 0;
-  text-transform: uppercase;
 }
 
 .rsHomepage-annLeftBar-subHeader {
@@ -321,12 +318,8 @@
 
 .caseStudy-title {
   color: $white;
-  font-size: 3.25rem;
-  font-weight: 700;
   letter-spacing: .5px;
-  line-height: 2.75rem;
   margin: 0;
-  text-transform: uppercase;
 }
 
 .caseStudy-text {
@@ -520,10 +513,8 @@
 
 .hostingOptions-learnMore {
   color: $brand-primary;
-  font-size: 1.1rem;
   font-weight: $font-weight-black;
   text-decoration: none;
-  text-transform: uppercase;
 
   &:hover {
     color: $brand-primary;

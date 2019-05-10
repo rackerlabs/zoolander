@@ -36,18 +36,18 @@
 }
 
 @mixin button-learning {
-  background-color: $purple;
+  background-color: $dark-teal;
   color: $white;
   text-decoration: none;
 
   &:hover {
-    background-color: $dark-purple;
+    background-color: darken($dark-teal, 5%);
     color: $white;
   }
 }
 
 @mixin button-leaving {
-  background-color: $dark-teal;
+  background-color: $purple;
   color: $white;
   text-decoration: none;
 
@@ -58,7 +58,7 @@
   }
 
   &:hover {
-    background-color: darken($dark-teal, 5%);
+    background-color: $dark-purple;
     color: $white;
   }
 }
