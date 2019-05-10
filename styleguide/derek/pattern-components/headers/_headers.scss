@@ -168,11 +168,7 @@
 .refresh-headline {
   color: $white;
   font-family: $heading;
-  font-size: 6rem;
-  font-weight: 700;
-  line-height: .8em;
   margin: 0;
-  text-transform: uppercase;
 }
 
 .refreshBanner-boxBottom {
@@ -232,9 +228,6 @@
 
 .refreshBanner-ctaHeadline {
   color: $white;
-  font-size: 4vw;
-  line-height: .9em;
-  text-transform: uppercase;
 }
 
 @media only screen and (min-width: $screen-md-min) {
@@ -349,9 +342,6 @@
 
 .refreshBannerCombined-ctaHeadline {
   color: $white;
-  font-size: 3.75rem;
-  line-height: .9em;
-  text-transform: uppercase;
 }
 
 .refreshBannerCombined-internal {
