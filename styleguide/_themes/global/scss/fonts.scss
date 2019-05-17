@@ -63,21 +63,21 @@ a {
 }
 
 h1 {
-  font-size: 3.125em;
+  font-size: 2.5em;
   font-weight: 200;
-  line-height: 55px;
+  line-height: 40px;
 }
 
 h2 {
-  font-size: 2.25em;
+  font-size: 2em;
   font-weight: 200;
-  line-height: 39.6px;
+  line-height: 30px;
 }
 
 h3 {
   font-size: 1.75em;
   font-weight: 300;
-  line-height: 30.8px;
+  line-height: 30px;
 }
 
 h4,
@@ -86,7 +86,7 @@ h6 {
   @include subhead;
   font-size: 1.375em;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 15px;
 }
 
 ul {
