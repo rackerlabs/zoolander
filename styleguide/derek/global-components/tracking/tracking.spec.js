@@ -445,7 +445,7 @@ describe('Zoolander Tracking Module', () => {
     });
 
     it('should track resource filtering products', () => {
-      $('body').append('<form class="rsFilter-form"><select name="product"><option value="96" selected="selected">Public Cloud</option><option value="101">-Fanatical Support for AWS</option><input type="checkbox" name="content_type[]" id="edit-content-type-case-study" value="case_study" checked="checked" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-code-repository" value="code_repository" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-ebook" value="ebook" checked="checked" class="rsFilter-checkbox"></form>');
+      $('body').append('<form class="rsFilter-form" onsubmit="return false;"><select name="product"><option value="96" selected="selected">Public Cloud</option><option value="101">-Fanatical Support for AWS</option><input type="checkbox" name="content_type[]" id="edit-content-type-case-study" value="case_study" checked="checked" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-code-repository" value="code_repository" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-ebook" value="ebook" checked="checked" class="rsFilter-checkbox"></form>');
       Zoolander.Tracking.init();
 
       $('form.rsFilter-form').trigger('submit');
