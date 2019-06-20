@@ -51,6 +51,12 @@
   }
 }
 
+.event-languages-spoken {
+  color: $gray-base;
+  font-style: italic;
+  font-weight: 200;
+}
+
 .eventsOverview-row {
   @include make-row;
 }
