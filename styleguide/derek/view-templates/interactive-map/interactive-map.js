@@ -20,7 +20,7 @@
     const actions = {
       mapSelector: null,
       buildMap(config) {
-        const circles = config.circles;
+        const { circles } = config;
         for (let i = 0; i < circles.length; i += 1) {
           const circle = circles[i];
           const $template = $(`
@@ -95,7 +95,7 @@
           $('.rsMap-inner').parent().css('z-index', '');
           $tipContainer.attr('style', '');
           $tipArrow.removeClass('rsMap-arrow-left')
-                   .addClass('rsMap-arrow-bottom');
+            .addClass('rsMap-arrow-bottom');
         };
         // we need to kill the timeout asap when hovered over the tool tip
         $tipContainer.hover(() => {
@@ -123,12 +123,12 @@
           });
           this.positionTip($el, type);
           $tipArrow.removeClass('rsMap-arrow-left')
-                   .addClass('rsMap-arrow-bottom');
+            .addClass('rsMap-arrow-bottom');
           // if tip is off screen & covered by nav, reposition to the side.
           if (this.isOffScreen($tipContainer, $nav.outerHeight())) {
             this.positionTip($el, type, true);
             $tipArrow.removeClass('rsMap-arrow-bottom')
-                     .addClass('rsMap-arrow-left');
+              .addClass('rsMap-arrow-left');
           }
         }, () => {
           this.hoverTimeout = setTimeout(resetTip, 500);

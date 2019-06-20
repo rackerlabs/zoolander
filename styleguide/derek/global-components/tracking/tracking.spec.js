@@ -370,24 +370,24 @@ describe('Zoolander Tracking Module', () => {
     });
 
     it('should track internal nav clicks', () => {
-      const linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">' +
-          '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> ' +
-          '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>' +
-            '<ul class="mid-nav">' +
-              '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>' +
-              '<li class="item-b"><span id="midlvl">Mid lvl second</span>' +
-                '<ul class="third-nav">' +
-                  '<li class="item-1">Base lvl first</li>' +
-                  '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>' +
-                  '<li class="item-3">Base lvl third</li>' +
-                '</ul>' +
-              '</li>' +
-              '<li class="item-c">Mid lvl third</li>' +
-            '</ul>' +
-          '</li>' +
-          '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>' +
-        '</ul>' +
-      '</div>';
+      const linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">'
+          + '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> '
+          + '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>'
+            + '<ul class="mid-nav">'
+              + '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>'
+              + '<li class="item-b"><span id="midlvl">Mid lvl second</span>'
+                + '<ul class="third-nav">'
+                  + '<li class="item-1">Base lvl first</li>'
+                  + '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>'
+                  + '<li class="item-3">Base lvl third</li>'
+                + '</ul>'
+              + '</li>'
+              + '<li class="item-c">Mid lvl third</li>'
+            + '</ul>'
+          + '</li>'
+          + '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>'
+        + '</ul>'
+      + '</div>';
 
       $('body').append(linkHtml);
       Zoolander.Tracking.init();
