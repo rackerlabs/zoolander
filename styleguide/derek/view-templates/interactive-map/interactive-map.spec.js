@@ -17,7 +17,7 @@ describe('Zoolander Interactive Map Plugin', () => {
         c: 28,
       };
       expect($.fn.rsInteractiveMap.test.setLeftCoords(data))
-            .to.eql(-(161));
+        .to.eql(-(161));
     });
     // off screen left value
     it('should add 15 to the circle width', () => {
@@ -26,7 +26,7 @@ describe('Zoolander Interactive Map Plugin', () => {
         c: 28,
       };
       expect($.fn.rsInteractiveMap.test.setLeftCoords(data))
-            .to.eql(43);
+        .to.eql(43);
     });
   });
 

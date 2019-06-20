@@ -13,8 +13,8 @@ Zoolander.rsFilterBar = {
     };
     const values = Object.assign(defaults, dimensions);
     const filterFormHeight = values.filterFormOuterHeight;
-    const filterBottom = values.filterBarOuterHeight +
-                         values.filterBarOffsetTop;
+    const filterBottom = values.filterBarOuterHeight
+                         + values.filterBarOffsetTop;
     const formBottom = values.windowTop + filterFormHeight + values.mainNavHeight + 10;
     return formBottom >= filterBottom;
   },
@@ -38,8 +38,8 @@ Zoolander.rsFilterBar = {
     // check if sticky form is scrolled passed top nav
     const windowTopInBounds = values.stickyItemTop - values.mainNavHeight < values.windowTop;
     // get bottom offset of side bar
-    const filterBottom = values.filterBarOuterHeight +
-                         values.filterBarOffsetTop;
+    const filterBottom = values.filterBarOuterHeight
+                         + values.filterBarOffsetTop;
     // top val of scrolled window + height of form (not bar)
     const formBottom = values.windowTop + filterFormHeight + values.mainNavHeight + 10;
     // if bottom of fixed form is not passed bottom of filter side bar
@@ -84,8 +84,8 @@ Zoolander.rsFilterBar = {
     }
 
     if ($filterForm.length) {
-      const $barPadding = parseInt($filterBar.css('padding-left'), 10) +
-                        parseInt($filterBar.css('padding-right'), 10);
+      const $barPadding = parseInt($filterBar.css('padding-left'), 10)
+                        + parseInt($filterBar.css('padding-right'), 10);
       const $filterHamburger = $filterBar.find('.rsFilter-hamburger');
       stickyItemTopValue = $filterForm.offset().top;
       let resizeTimer;
