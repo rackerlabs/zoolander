@@ -170,7 +170,16 @@ var runAnimations = function (el) {
       <input type="phone" class="form-control" id="phone">
     </div>
 
-    <img src="/imgs/derek/captcha.jpg" style="max-width: none; width: 304px; height: 78px; margin: 10px 0">
+    <div class="row-eq-height form-item">
+      <span>
+        <input type="checkbox" id="check-id" value="1" checked="checked" class="form-checkbox">
+      </span>
+      <label class="form-label" for="check-id">
+        Yes, I would like to receive information about products, services, thought leadership and invitations to flagship events.
+      </label>
+    </div>
+    
+    <img src="/imgs/derek/captcha.jpg" class="captcha" style="max-width: none; width: 304px; height: 78px">
 
     <div class="form-actions">
       <button type="submit" class="button lead form-submit">Send</button>

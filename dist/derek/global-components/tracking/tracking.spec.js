@@ -370,24 +370,24 @@ describe('Zoolander Tracking Module', () => {
     });
 
     it('should track internal nav clicks', () => {
-      const linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">' +
-          '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> ' +
-          '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>' +
-            '<ul class="mid-nav">' +
-              '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>' +
-              '<li class="item-b"><span id="midlvl">Mid lvl second</span>' +
-                '<ul class="third-nav">' +
-                  '<li class="item-1">Base lvl first</li>' +
-                  '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>' +
-                  '<li class="item-3">Base lvl third</li>' +
-                '</ul>' +
-              '</li>' +
-              '<li class="item-c">Mid lvl third</li>' +
-            '</ul>' +
-          '</li>' +
-          '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>' +
-        '</ul>' +
-      '</div>';
+      const linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">'
+          + '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> '
+          + '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>'
+            + '<ul class="mid-nav">'
+              + '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>'
+              + '<li class="item-b"><span id="midlvl">Mid lvl second</span>'
+                + '<ul class="third-nav">'
+                  + '<li class="item-1">Base lvl first</li>'
+                  + '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>'
+                  + '<li class="item-3">Base lvl third</li>'
+                + '</ul>'
+              + '</li>'
+              + '<li class="item-c">Mid lvl third</li>'
+            + '</ul>'
+          + '</li>'
+          + '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>'
+        + '</ul>'
+      + '</div>';
 
       $('body').append(linkHtml);
       Zoolander.Tracking.init();
@@ -445,7 +445,7 @@ describe('Zoolander Tracking Module', () => {
     });
 
     it('should track resource filtering products', () => {
-      $('body').append('<form class="rsFilter-form"><select name="product"><option value="96" selected="selected">Public Cloud</option><option value="101">-Fanatical Support for AWS</option><input type="checkbox" name="content_type[]" id="edit-content-type-case-study" value="case_study" checked="checked" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-code-repository" value="code_repository" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-ebook" value="ebook" checked="checked" class="rsFilter-checkbox"></form>');
+      $('body').append('<form class="rsFilter-form" onsubmit="return false;"><select name="product"><option value="96" selected="selected">Public Cloud</option><option value="101">-Fanatical Support for AWS</option><input type="checkbox" name="content_type[]" id="edit-content-type-case-study" value="case_study" checked="checked" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-code-repository" value="code_repository" class="rsFilter-checkbox"><input type="checkbox" name="content_type[]" id="edit-content-type-ebook" value="ebook" checked="checked" class="rsFilter-checkbox"></form>');
       Zoolander.Tracking.init();
 
       $('form.rsFilter-form').trigger('submit');

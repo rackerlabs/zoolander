@@ -23,6 +23,7 @@
       mapSelector: null,
       buildMap: function buildMap(config) {
         var circles = config.circles;
+
         for (var i = 0; i < circles.length; i += 1) {
           var circle = circles[i];
           var $template = $('\n          <div class="rsMap-' + circle.type + '" style="top:' + circle.top + ';left:' + circle.left + ';">\n            <div class="rsMap-inner">\n              <div class="rsMap-toolTip">\n                <span class="rsMap-toolTip-header">' + circle.tipTitle + '</span>\n                <p class="rsMap-toolTip-body">' + circle.tipBody + '</p>\n                <span class="rsMap-toolTip-footer">' + circle.tipFooter + '</span>\n                <div class="rsMap-toolTip-arrow rsMap-arrow-bottom"></div>\n              </div>\n              <div class="rsMap-' + circle.type + '-circle">' + circle.items + '</div>\n            </div>\n          </div>');
