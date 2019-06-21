@@ -38,6 +38,19 @@
   text-align: center;
 }
 
+.lp-callout-form {
+  .form-item {
+    margin-bottom: 15px;
+  }
+
+  .form-checkbox {
+    margin-right: 5px;
+  }
+
+  .captcha {
+    margin-bottom: 15px;
+  }
+}
 
 @media only screen and (min-width: $screen-sm-max) {
 
