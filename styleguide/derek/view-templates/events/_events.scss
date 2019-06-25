@@ -696,3 +696,15 @@
   }
 
 }
+
+.lp-lead-event {
+  @include make-md-column(8);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.calloutForm {
+  .lp-lead-submit {
+    width: initial;
+  }
+}
