@@ -1,0 +1,39 @@
+<!-- Industry River -->
+<%
+  var rows = [
+    {
+      title: 'Custom Migration Plans',
+      text: 'Our experts will get to know your business context and user requirements, and then build out your aligned migration plan.'
+    },
+    {
+      title: 'Stakeholder Alignment',
+      text: 'We\'ll work with your stakeholders to define your optimal target state - so you own where you\'re going.'
+    },
+    {
+      title: 'Program Confidence',
+      text: 'We\'ll help identify the best candidate applications for your first transition, so you can experience some quick wins early on.'
+    },
+    {
+      title: 'Proven Framework',
+      text: 'With our service factory methodology, your approach to migration can be repeatable, robust and rapid.'
+    },
+    {
+      title: 'Shared Responsibility',
+      text: 'We\'re with you through your entire migration, all the way to production stability and continuity in your new environment.'
+    }
+  ];
+%>
+
+
+<div class="rsPsTable">
+  <% for(var i=0; i < rows.length; i++) { %>
+    <div class="rsPsTable-row">
+      <div class="rsPsTable-title">
+        <%= rows[i].title %>
+      </div>
+      <div class="rsPsTable-text">
+        <%= rows[i].text %>
+      </div>
+    </div>
+  <% } %>
+</div>

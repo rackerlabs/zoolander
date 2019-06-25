@@ -1,0 +1,47 @@
+// For professional services table
+.rsPsTable {
+  border-bottom: 2px solid $blue;
+  border-top: 2px solid $blue;
+}
+
+.rsPsTable-row {
+  @include clearfix;
+  border-bottom: 2px solid $gray-lighter;
+  display: flex;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.rsPsTable-title {
+  border-right: 2px solid $gray-lighter;
+  float: left;
+  font-size: 1.35em;
+  font-weight: 300;
+  padding: 30px 20px;
+  width: 30%;
+}
+
+.rsPsTable-text {
+  float: left;
+  padding: 30px 20px;
+  width: 70%;
+}
+
+@media screen and (min-width: 50px) and (max-width: $screen-md-min - 1) {
+  .rsPsTable-row {
+    display: block;
+  }
+
+  .rsPsTable-title {
+    border-right: 0;
+    padding: 20px 0 0;
+    width: 100%;
+  }
+
+  .rsPsTable-text {
+    padding: 20px 0;
+    width: 100%;
+  }
+}
