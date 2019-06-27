@@ -128,3 +128,9 @@
     column-gap: 15px;
   }
 }
+
+@media only screen and (max-width: $screen-xs-max) {
+  .basement-container {
+    padding-bottom: 75px;
+  }
+}
