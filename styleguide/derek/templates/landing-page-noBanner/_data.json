@@ -4,5 +4,8 @@
   },
   "landingpage-ondemand-webinar": {
     "css": "css/derek.css"
+  },
+  "landingpage-lead-template": {
+    "css": "css/derek.css"
   }
 }
