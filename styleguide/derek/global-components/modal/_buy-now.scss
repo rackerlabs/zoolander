@@ -55,8 +55,8 @@
     display: grid; // sass-lint:disable-line no-duplicate-properties
     grid-template-areas:
     'header header header . chat'
-    'aws . gcp . openstack'
-    'office365 . email . other';
+    'office365 . email . openstack'
+    'footer footer footer footer footer';
     grid-template-columns: 30% 5% 30% 5% 30%;
     grid-template-rows: auto;
     padding: 0 20px;
@@ -94,30 +94,40 @@
   .buyNow-cardAws {
     -ms-grid-column: 1;
     -ms-grid-row: 2;
+    display: none;
     grid-area: aws;
   }
 
   .buyNow-cardGcp {
     -ms-grid-column: 3;
     -ms-grid-row: 2;
+    display: none;
     grid-area: gcp;
   }
 
   .buyNow-cardOffice365 {
     -ms-grid-column: 1;
-    -ms-grid-row: 3;
+    -ms-grid-row: 2;
     grid-area: office365;
   }
 
   .buyNow-cardEmail {
     -ms-grid-column: 3;
-    -ms-grid-row: 3;
+    -ms-grid-row: 2;
     grid-area: email;
   }
 
   .buyNow-cardOther {
     -ms-grid-column: 5;
     -ms-grid-row: 3;
+    display: none;
     grid-area: other;
+  }
+
+  .buyNow-footer {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    -ms-grid-row: 3;
+    grid-area: footer;
   }
 }
