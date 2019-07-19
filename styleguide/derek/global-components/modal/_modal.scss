@@ -81,6 +81,31 @@
   display: none;
 }
 
+.ajax-progress-fullscreen {
+  background: $black-modal-overlay;
+  bottom: 0;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  &::before {
+    animation: fa-spin 1.5s infinite linear;
+    color: $white;
+    content: '\f1ce';
+    font-family: 'rswebfonts';
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 100;
+    left: 49%;
+    position: absolute;
+    top: 49%;
+  }
+}
+
 .rackspaceModalSource {
   hr {
     margin-bottom: 15px;

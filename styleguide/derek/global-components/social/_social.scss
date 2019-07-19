@@ -1,5 +1,9 @@
 $facebook-blue: #4267b2;
 $facebook-darkblue: #365899;
+$twitter-blue: #00aced;
+$twitter-darkblue: #0084b4;
+$linkedin-blue: #0077b5;
+$linkedin-darkblue: #006ba3;
 
 .fb-share {
   background: $facebook-blue;
@@ -78,5 +82,45 @@ $facebook-darkblue: #365899;
     background-color: darken($gray-base, 5%);
     color: $white;
     text-decoration: none;
+  }
+}
+
+.rsSocial-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.rsSocial-link-fb {
+  color: $facebook-blue;
+
+  &:hover {
+    color: $facebook-darkblue;
+  }
+}
+
+.rsSocial-link-tw {
+  color: $twitter-blue;
+
+  &:hover {
+    color: $twitter-darkblue;
+  }
+}
+
+.rsSocial-link-ld {
+  color: $linkedin-blue;
+
+  &:hover {
+    color: $linkedin-darkblue;
   }
 }
