@@ -1,0 +1,89 @@
+<!-- Industry River -->
+<%
+  var rows = [
+    {
+      articles: [
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        },
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        },
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        }
+      ]
+    },
+    {
+      articles: [
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        },
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        },
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        }
+      ]
+    },
+    {
+      articles: [
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        },
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        },
+        {
+          link: '/derek/view-templates/newsroom-overview/article'
+        }
+      ]
+    }
+  ];
+%>
+
+<div class="container half-padding-top">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Newsroom Title</h1>
+      <p>
+        Selfies street art health goth, raw denim affogato squid mixtape schlitz succulents pinterest try-hard pok pok. 
+        Bespoke sustainable cliche, messenger bag biodiesel taxidermy austin vegan gastropub flannel pug snackwave artisan cray. 
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <% for(var i=0; i < rows.length; i++) { %>
+        <div class="rsNewsroom-overview-row row-eq-height">
+          <% for(var x=0; x < rows[i].articles.length; x++) { %>
+            <div class="rsNewsroom-article-wrapper rsNewsroom-article-wrapperBox">
+              <div class="rsNewsroom-article">
+                <a href="<%= rows[i].articles[x].link %>" class="rsNewsroom-article-innerLink">
+                  <div class="rsNewsroom-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg');">
+                    <div class="rsNewsroom-article-logo"></div>
+                    <div class="rsNewsroom-article-titleTopWrap">
+                      <h5 class="rsNewsroom-article-titleTop">Some long title here</h5>
+                    </div>
+                    <div class="rsNewsroom-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsNewsroom-article-bottom">
+                    <div class="rsNewsroom-article-linkWrap">
+                      <p class="rsNewsroom-article-link">Read Press Release <i class="fa fa-caret-right rsNewsroom-article-linkCaret"></i></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+  </div>
+  <div class="row">
+    <%- partial('../pagination.ejs') %>
+  </div>
+</div>
