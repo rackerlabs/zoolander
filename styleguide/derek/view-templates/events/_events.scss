@@ -208,25 +208,6 @@
   }
 }
 
-.event-date {
-  @include make-sm-column(2);
-  margin-bottom: 1rem;
-}
-
-.event-dateBox {
-  @include subhead($white);
-  background: $purple;
-  font-size: 2.2rem;
-  margin: 1rem auto;
-  max-width: 100px;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.event-dateBox-day {
-  font-size: 2em;
-}
-
 .event-details {
   @include make-sm-column(8);
   padding-left: 0;
@@ -237,101 +218,6 @@
   @include make-sm-column(4);
   padding-left: 20px;
   padding-top: 50px;
-}
-
-.event-detailsTitle,
-.event-info-whereTitle,
-.event-info-whenTitle,
-.event-info-spokenTitle {
-  @include subhead;
-}
-
-.event-info {
-  @include make-sm-column(10);
-  margin-bottom: 1rem;
-}
-
-.event-info-header {
-  @include make-row;
-  margin-bottom: .5rem;
-  text-align: center;
-}
-
-.event-info-headerTitle {
-  @include make-xs-column(12);
-  @include make-md-column(9);
-  font-size: 2.5rem;
-  line-height: 1.5em;
-  margin-bottom: .5rem;
-  margin-top: 0;
-  padding: $no-padding;
-}
-
-.event-info-headerType {
-  @include make-xs-column(12);
-  @include make-md-column(3);
-  @include subhead;
-  margin-bottom: .5rem;
-  padding: $no-padding;
-  text-align: center;
-}
-
-.event-info-whereWhen {
-  @include make-row;
-  border-top: 2px solid $purple;
-  padding-top: 1rem;
-}
-
-.event-info-where {
-  @include make-sm-column(4);
-  margin-bottom: 1rem;
-}
-
-.event-info-when {
-  @include make-sm-column(4);
-  margin-bottom: 1rem;
-}
-
-.event-info-spoken {
-  @include make-sm-column(4);
-  margin-bottom: 1rem;
-
-  p {
-    margin: 0;
-  }
-}
-
-.event-map {
-  @include make-sm-column(6);
-  margin-bottom: 2rem;
-}
-
-.event-mapCanvas {
-  height: 250px;
-  width: 100%;
-}
-
-.event-speaker-section {
-  padding: 20px 0;
-}
-
-.event-speaker-container {
-  @include make-container;
-  padding: 50px 0;
-}
-
-.event-speaker-header {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.event-speaker-item {
-  @include make-md-column(3);
-}
-
-.event-speaker-img {
-  margin-bottom: 20px;
-  max-width: 50%;
 }
 
 .event-agenda-section {
@@ -621,38 +507,6 @@
     margin-bottom: 0;
     margin-left: 0;
   }
-
-  .event-dateBox {
-    margin: 0 0 0 (-$grid-gutter-width / 2);
-  }
-
-  .event-info-headerTitle {
-    text-align: left;
-  }
-
-  .event-info-headerType {
-    text-align: left;
-  }
-
-  .event-info-where {
-    padding: $no-padding;
-  }
-
-  .event-info-when {
-    padding-left: .6rem;
-  }
-
-  .event-info-spoken {
-    padding: $no-padding;
-  }
-
-  .event-map {
-    padding-left: 0;
-  }
-
-  .event-mapCanvas {
-    height: 400px;
-  }
 }
 
 @media (min-width: $screen-md-min) {
@@ -673,17 +527,9 @@
     text-align: left;
   }
 
-  .event-info-headerTitle {
-    line-height: 1em;
-  }
-
-  .event-info-headerType,
-  .eventsOverview-weekEvent-headerLocation {
-    text-align: right;
-  }
-
   .eventsOverview-weekEvent-headerLocation {
     padding-right: 4rem;
+    text-align: right;
   }
 
   .eventsOverview-weekEvent {

@@ -1,8 +1,5 @@
 {
   "events": {
     "css": "css/derek.css"
-  },
-  "events-interior": {
-    "css": "css/derek.css"
   }
 }
