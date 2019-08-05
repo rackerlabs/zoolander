@@ -15,4 +15,4 @@ git add .gitignore
 git add .
 git commit -n -m 'Github Pages'
 git push upstream gh-pages -f
-git checkout master
+git checkout 2.0.x 
