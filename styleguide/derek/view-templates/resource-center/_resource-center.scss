@@ -196,7 +196,17 @@
   padding-top: $half-padding-top;
 }
 
+.resourcecenter-sponsor {
+  padding-top: $half-padding-top;
+  text-align: left;
+  width: 100%;
+}
+
 @media screen and (min-width: $screen-md-min) {
+  .resourcecenter-sponsor {
+    text-align: right;
+  }
+
   .resourcecenter-divider-gated {
     height: 68px;
 
