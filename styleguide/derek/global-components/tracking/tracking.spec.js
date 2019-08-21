@@ -369,6 +369,38 @@ describe('Zoolander Tracking Module', () => {
       expect(expected).to.eql(window.dataLayer.pop());
     });
 
+    it('should set button label', () => {
+      $('body').append('<button class="track-cta">Click this button please</button>');
+      Zoolander.Tracking.init();
+
+      $('.track-cta').trigger('click');
+      const expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'Click this button please',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
+
+    it('should set input submit label', () => {
+      $('body').append('<input type="submit" class="track-cta" value="Click this button already!">');
+      Zoolander.Tracking.init();
+
+      $('.track-cta').trigger('click');
+      const expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'Click this button already!',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
+
     it('should track internal nav clicks', () => {
       const linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">'
           + '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> '
