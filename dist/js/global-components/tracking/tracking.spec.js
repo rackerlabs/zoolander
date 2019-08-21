@@ -361,6 +361,38 @@ describe('Zoolander Tracking Module', function () {
       expect(expected).to.eql(window.dataLayer.pop());
     });
 
+    it('should set button label', function () {
+      $('body').append('<button class="track-cta">Click this button please</button>');
+      Zoolander.Tracking.init();
+
+      $('.track-cta').trigger('click');
+      var expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'Click this button please',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
+
+    it('should set input submit label', function () {
+      $('body').append('<input type="submit" class="track-cta" value="Click this button already!">');
+      Zoolander.Tracking.init();
+
+      $('.track-cta').trigger('click');
+      var expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'Click this button already!',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
+
     it('should track internal nav clicks', function () {
       var linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">' + '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> ' + '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>' + '<ul class="mid-nav">' + '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>' + '<li class="item-b"><span id="midlvl">Mid lvl second</span>' + '<ul class="third-nav">' + '<li class="item-1">Base lvl first</li>' + '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>' + '<li class="item-3">Base lvl third</li>' + '</ul>' + '</li>' + '<li class="item-c">Mid lvl third</li>' + '</ul>' + '</li>' + '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>' + '</ul>' + '</div>';
 

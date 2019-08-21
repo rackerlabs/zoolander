@@ -181,7 +181,7 @@ Zoolander.Tracking = function Tracking($) {
         event: 'cta.click',
         eventCategory: 'CTA',
         eventAction: 'CTA Click',
-        eventLabel: $(e.target).text() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
+        eventLabel: $(e.target).text() || $(e.target).val() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
         eventValue: '0',
         eventNonInteraction: 0
       });
