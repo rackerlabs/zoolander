@@ -33,23 +33,10 @@
 }
 
 .pageBanner-main-image {
-  background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
   background-position: center;
   background-size: cover;
   display: none;
   height: 450px;
-}
-
-.pageBanner-main-image-es {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
-}
-
-.pageBanner-main-image-pt {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
-}
-
-.pageBanner-main-image-apac {
-  background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480_APAC.jpg');
 }
 
 .pageBanner-content {
@@ -137,8 +124,21 @@
 // < 480px
 @media screen and (max-width: $screen-xs) {
   .pageBanner-main-image {
+    background-image: url('../imgs/derek/banners/homepage-banner-480.jpg');
     display: block;
     height: 300px;
+  }
+
+  .pageBanner-main-image-es {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
+  }
+
+  .pageBanner-main-image-pt {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
+  }
+
+  .pageBanner-main-image-apac {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480_APAC.jpg');
   }
 
   .pageBanner-wrapper {
