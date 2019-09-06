@@ -22,8 +22,12 @@ jQuery(document).ready(function ($) {
       var $cellTitle = $el.find('.productTable-name');
       // place table head titles into each cell as labels
       $el.find('tbody tr td').each(function responsiveTableTdEach() {
-        var $index = $(this).index();
-        $(this).prepend('<strong class="productTable-mobileTitle">' + $cellTitle.eq($index).html() + '</strong>');
+        var $td = $(this);
+        var $mobileTitle = $td.find('.productTable-mobileTitle');
+        if ($mobileTitle.length < 1) {
+          var $index = $td.index();
+          $(this).prepend('<strong class="productTable-mobileTitle">' + $cellTitle.eq($index).html() + '</strong>');
+        }
       });
     });
     // allow this plugin to be chainable via jQuery
