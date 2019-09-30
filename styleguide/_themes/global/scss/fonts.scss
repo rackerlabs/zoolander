@@ -22,7 +22,7 @@ $standard-line-height: 20px;
 @mixin subhead($color: $gray-darkest) {
   color: $color;
   font-family: $subhead;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: .05em;
   line-height: 1.45em;
   text-align: left;
