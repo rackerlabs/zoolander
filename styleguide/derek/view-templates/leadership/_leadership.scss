@@ -46,6 +46,47 @@
   @include standard-link;
 }
 
+.leadership-socialWrapper {
+  margin-bottom: 5px;
+}
+
+@mixin leadership-social-btn($social, $color) {
+  color: $color;
+  font-family: 'rswebfonts';
+  font-size: 28px;
+  margin-right: 10px;
+
+  &:hover {
+    color: darken($color, 3);
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: darken($color, 3);
+    text-decoration: none;
+  }
+
+  &::before {
+    content: $social;
+  }
+}
+
+.leadership-social-twitter {
+  @include leadership-social-btn('\f304', $twitter-blue);
+}
+
+.leadership-social-linkedin {
+  @include leadership-social-btn('\f30c', $linkedin-blue);
+}
+
+.leadership-social-github {
+  @include leadership-social-btn('\f300', $github-gray);
+}
+
+.leadership-social-xing {
+  @include leadership-social-btn('\e84f', $xing-green);
+}
+
 @media only screen and (min-width: $screen-md-min) {
   .leadership-imageWrapper {
     display: block;
