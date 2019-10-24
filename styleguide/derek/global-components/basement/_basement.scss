@@ -20,6 +20,10 @@
   padding: 10px 25px;
 }
 
+.basement-container-xl {
+  @include xl-container;
+}
+
 .basement-copyright,
 .basementLp-copyright {
   color: $gray-base;

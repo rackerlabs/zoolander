@@ -16,3 +16,24 @@
     width: $container-lg;
   }
 }
+
+@mixin xl-container($max-width: 1600px) {
+  max-width: $max-width;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+  @media (min-width: $screen-xl-min) {
+    width: $max-width;
+  }
+}
+
+.container-xl {
+  @include xl-container;
+}
