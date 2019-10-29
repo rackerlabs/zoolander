@@ -54,9 +54,18 @@ $nav-link-black: #00001e;
   padding: 25px;
 }
 
+.rsTl-nav-solveLogoContainer {
+  width: 100%;
+}
+
+.rsTl-nav-logoContainer {
+  width: 100%;
+}
+
 .rsTl-nav-sponsorContainer {
   position: relative;
   top: 2px;
+  width: 68%;
 }
 
 .rsTl-nav-sponsorText {
@@ -239,4 +248,3 @@ $nav-link-black: #00001e;
   }
 
 }
-
