@@ -1,0 +1,250 @@
+$nav-link-black: #00001e;
+
+@mixin center-items {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.rsTl-nav-container {
+  @include clearfix;
+  border-bottom: 2px solid $nav-link-black;
+}
+
+.rsTl-nav {
+  // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
+  @include xl-container;
+  -ms-grid-columns: 260px 1fr 181px 220px;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 260px 1fr 181px 220px;
+  margin: 0 auto;
+}
+
+.rsTl-nav-logo {
+  // sass-lint:disable-block no-vendor-prefixes
+  -ms-grid-column: 1;
+  align-items: center;
+  display: flex;
+  float: left;
+  justify-content: flex-start;
+  padding: 25px;
+}
+
+.rsTl-nav-img {
+  min-width: 90px;
+  width: 100%;
+}
+
+.rsTl-nav-rsLogo {
+  // sass-lint:disable-block no-vendor-prefixes
+  @include center-items;
+  -ms-grid-column: 3;
+  border-left: 2px solid $nav-link-black;
+  float: left;
+  padding: 25px;
+}
+
+.rsTl-nav-sponsor {
+  // sass-lint:disable-block no-vendor-prefixes
+  @include center-items;
+  -ms-grid-column: 4;
+  border-left: 2px solid $nav-link-black;
+  float: left;
+  padding: 25px;
+}
+
+.rsTl-nav-solveLogoContainer {
+  width: 100%;
+}
+
+.rsTl-nav-logoContainer {
+  width: 100%;
+}
+
+.rsTl-nav-sponsorContainer {
+  position: relative;
+  top: 2px;
+  width: 68%;
+}
+
+.rsTl-nav-sponsorText {
+  display: inline-block;
+  font-size: 13px;
+  position: absolute;
+  top: -25px;
+}
+
+.rsTl-nav-rackspaceSvg {
+  width: 100%;
+}
+
+.rsTl-nav-sponsorSvg {
+  width: 85%;
+}
+
+.rsTl-nav-rackspace {
+  fill: $black;
+  width: 100%;
+}
+
+.rsTl-nav-sponsorLogo {
+  fill: $black;
+}
+
+.rsTl-nav-solveSvg {
+  width: 100%;
+}
+
+.rsTl-nav-links {
+  // sass-lint:disable-block no-vendor-prefixes
+  -ms-grid-column: 2;
+  align-items: center;
+  display: flex;
+  float: left;
+  overflow: hidden;
+  padding: 25px;
+}
+
+.rsTl-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.rsTl-nav-item {
+  display: inline-block;
+  text-align: left;
+
+  &::before {
+    content: '\e809';
+    display: inline-block;
+    font-family: 'rswebfonts';
+    margin-right: 5px;
+  }
+}
+
+.rsTl-nav-link {
+  color: $nav-link-black;
+  display: inline-block;
+  font-family: $copy;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 100%;
+  margin-right: 15px;
+}
+
+.rsTl-nav-hamburger {
+  align-items: center;
+  display: none;
+  float: left;
+  justify-content: flex-end;
+  padding: 25px;
+}
+
+.rsTl-nav-hamburgerBtn {
+  background-color: transparent;
+  border: 0;
+  font-size: 18px;
+
+  &::before {
+    content: '\f0c9';
+    font-family: 'rswebfonts';
+  }
+}
+
+@media screen and (max-width: $screen-sm-min - 1) {
+
+  .rsTl-nav-container {
+    border-bottom: 0;
+  }
+
+  .rsTl-nav {
+    // sass-lint:disable-block no-vendor-prefixes
+    -ms-grid-columns: (1fr)[4];
+    border-bottom: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .rsTl-nav-logo {
+    // sass-lint:disable-block no-vendor-prefixes
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .rsTl-nav-links {
+    // sass-lint:disable-block no-vendor-prefixes
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-area: 1 / 2 / 2 / 4;
+  }
+
+  .rsTl-nav-hamburger {
+    // sass-lint:disable-block no-vendor-prefixes
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    display: flex;
+    grid-area: 1 / 4 / 2 / 5;
+  }
+
+  .rsTl-nav-list {
+    display: none;
+  }
+
+  .rsTl-nav-rsLogo {
+    // sass-lint:disable-block no-vendor-prefixes
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    background-color: $black;
+    border-left: 0;
+    grid-area: 2 / 1 / 3 / 3;
+    height: 80px;
+  }
+
+  .rsTl-nav-sponsor {
+    // sass-lint:disable-block no-vendor-prefixes
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    background-color: $black;
+    border-color: $white;
+    color: $white;
+    grid-area: 2 / 3 / 3 / 5;
+    height: 80px;
+  }
+
+  .rsTl-nav-sponsorContainer {
+    text-align: center;
+  }
+
+  .rsTl-nav-sponsorText {
+    margin-bottom: 3px;
+    position: relative;
+    top: 0;
+  }
+
+  .rsTl-nav-rackspace {
+    fill: $white;
+  }
+
+  .rsTl-nav-sponsorLogo {
+    fill: $white;
+  }
+
+  .rsTl-nav-solveSvg {
+    min-width: 70px;
+  }
+
+}
