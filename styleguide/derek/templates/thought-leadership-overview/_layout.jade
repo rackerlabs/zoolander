@@ -2,6 +2,5 @@ extends ../../../_layouts/page
 
 block content
   !=partial("./_partials/nav")
-  .container.container-xl
-    != yield
+  != yield
   !=partial("../../global-components/footer/footerLp", { container_class: "basement-container-xl" })
