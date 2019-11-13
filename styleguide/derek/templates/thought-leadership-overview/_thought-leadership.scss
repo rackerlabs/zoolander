@@ -24,6 +24,7 @@ $row-space: 35px;
 .rsTl-feature-header {
   background-color: $gray;
   margin-bottom: $row-space;
+  margin-top: 110px;
   padding: 25px 0;
 }
 
@@ -341,6 +342,10 @@ $row-space: 35px;
 
 // mobile rules
 @media screen and (max-width: $screen-sm-min - 1) {
+
+  .rsTl-feature-header {
+    margin-top: 189px;
+  }
 
   .rsTl-feature-text {
     // sass-lint:disable-block no-vendor-prefixes
