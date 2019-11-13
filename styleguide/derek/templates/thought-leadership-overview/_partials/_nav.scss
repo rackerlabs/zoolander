@@ -8,7 +8,11 @@ $nav-link-black: #00001e;
 
 .rsTl-nav-container {
   @include clearfix;
+  background-color: $white;
   border-bottom: 2px solid $nav-link-black;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .rsTl-nav {
