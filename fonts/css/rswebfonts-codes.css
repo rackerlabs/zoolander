@@ -84,6 +84,7 @@
 .icon-xing-square:before { content: '\e84f'; } /* '' */
 .icon-idio-up-and-down:before { content: '\e850'; } /* '' */
 .icon-calendar:before { content: '\e851'; } /* '' */
+.icon-xing-solid:before { content: '\e852'; } /* '' */
 .icon-gauge:before { content: '\e854'; } /* '' */
 .icon-pdf-doc:before { content: '\e8c5'; } /* '' */
 .icon-movie-popup:before { content: '\e8c6'; } /* '' */
@@ -254,6 +255,7 @@
 .icon-external-link:before { content: '\f08e'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-arrow-circle-up:before { content: '\f0aa'; } /* '' */
 .icon-square:before { content: '\f0c8'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */

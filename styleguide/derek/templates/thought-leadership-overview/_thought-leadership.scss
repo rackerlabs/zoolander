@@ -184,6 +184,14 @@ $row-space: 35px;
   @include rstl-social-btn('\f09a');
 }
 
+.rsTl-social-github {
+  @include rstl-social-btn('\f09b');
+}
+
+.rsTl-social-xing {
+  @include rstl-social-btn('\e852');
+}
+
 .rsTl-author-section {
   background-color: $purple;
   padding: 25px;
