@@ -130,7 +130,10 @@
 
   <div class="rsTl-article-row">
     <div class="rsTl-column">
-      <%- partial('_partials/related-topics') %>
+      <h2 class="rsTl-relatedTopics-header">Related Topics</h2>
+      <%- partial('_partials/related-topics', { cls: "", cards: 1 }) %>
+      <%- partial('_partials/related-topics', { cls: "rsTl-relatedTopics-2colRow", cards: 2 }) %>
+      <%- partial('_partials/related-topics', { cls: "rsTl-relatedTopics-3colRow", cards: 3 }) %>
     </div>
   </div>
 
