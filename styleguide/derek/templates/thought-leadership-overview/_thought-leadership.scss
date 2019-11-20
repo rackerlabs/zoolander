@@ -10,25 +10,49 @@ $row-space: 35px;
 }
 
 @mixin solve-h1 {
-  font-size: 60px;
+  font-size: 1.75em;
+
+  @media only screen and (min-width: $screen-md-min) {
+    font-size: 2.5em;
+  }
+
+  @media only screen and (min-width: $screen-lg-min) {
+    font-size: 3.75em;
+  }
 }
 
 @mixin solve-h2 {
-  font-size: 43.2px;
+  font-size: 2.7em;
 }
 
 @mixin solve-h3 {
-  font-size: 28px;
+  font-size: 1.75em;
 }
 
 .rsTl-feature-header {
   background-color: $gray;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
   margin-bottom: $row-space;
   margin-top: 110px;
-  padding: 25px 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.rsTl-feature-headerBackground {
+  position: relative;
+}
+
+.rsTl-feature-headerContainer {
+  padding: 25px;
+  position: relative;
+  z-index: 999;
+}
+
+.rsTl-feature-headerBackgroundContent {
+  height: 100%;
+  width: 100%;
 }
 
 .rsTl-feature-headerInner {
@@ -48,10 +72,10 @@ $row-space: 35px;
 .rsTl-feature-text {
   // sass-lint:disable-block no-vendor-prefixes
   -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
+  -ms-grid-column-span: 10;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
-  grid-area: 1 / 1 / 2 / 6;
+  grid-area: 1 / 1 / 2 / 11;
 }
 
 .rsTl-feature-author {
@@ -435,21 +459,11 @@ $row-space: 35px;
   }
 }
 
-
 // mobile rules
 @media screen and (max-width: $screen-sm-min - 1) {
 
   .rsTl-feature-header {
     margin-top: 189px;
-  }
-
-  .rsTl-feature-text {
-    // sass-lint:disable-block no-vendor-prefixes
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 10;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-area: 1 / 1 / 2 / 11;
   }
 
   .rsTl-author-sectionInner {
@@ -508,5 +522,44 @@ $row-space: 35px;
       padding-left: 0;
       padding-right: 0;
     }
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .rsTl-feature-header {
+    height: 42vw;
+  }
+
+  .rsTl-feature-headerBackground {
+    display: inline;
+    height: 42vw;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: -21vw;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .rsTl-feature-text {
+    // sass-lint:disable-block no-vendor-prefixes
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-area: 1 / 1 / 2 / 6;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .rsTl-feature-header {
+    height: 42vw;
+    max-height: 500px;
+  }
+
+  .rsTl-feature-headerBackground {
+    height: 42vw;
+    margin-top: -21vw;
   }
 }
