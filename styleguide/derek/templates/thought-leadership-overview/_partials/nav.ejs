@@ -6,7 +6,37 @@
       </div>
     </div>
     <div class="rsTl-nav-links">
-      <ul class="rsTl-nav-list"></ul>
+      <ul class="rsTl-nav-list">
+        <li class="rsTl-nav-item">
+          <a href="/solve/transformation-and-trends" class="rsTl-nav-link">Transformation & Trends</a>
+        </li>
+        <li class="rsTl-nav-item">
+          <a href="/solve/innovation" class="rsTl-nav-link">Innovation</a>
+        </li>
+        <li class="rsTl-nav-item">
+          <a href="/solve/roundtable" class="rsTl-nav-link">Roundtable</a>
+        </li>
+        <li class="rsTl-nav-item">
+          <a href="#" class="rsTl-nav-link rsTl-nav-ddLink">Series</a>
+          <!-- dropdown -->
+          <ul class="rsTl-nav-subList">
+            <li class="rsTl-nav-subItem">
+              <a href="/solve/inside-the-innovators-mind" class="rsTl-nav-subLink">Inside the Innovator's Mind</a>
+            </li>
+            <li class="rsTl-nav-subItem">
+              <a href="/solve/what-are-you-solving-for" class="rsTl-nav-subLink">What Are You Solving For?</a>
+            </li>
+          </ul>
+        </li>
+        <li class="rsTl-nav-item">
+          <a href="#" class="rsTl-nav-link rsTl-nav-ddLink">About</a>
+          <ul class="rsTl-nav-subList">
+            <li class="rsTl-nav-subItem">
+              <a href="/solve/about" class="rsTl-nav-subLink">Panel - About Thought Leadership Page</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <div class="rsTl-nav-rsLogo">
       <div class="rsTl-nav-logoContainer">
@@ -24,3 +54,12 @@
     </div>
   </nav>
 </div>
+
+<script src="js/templates/thought-leadership-overview//solve-nav.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+  // need to run on document ready
+  $(document).ready(() => {
+    $('.rsTl-nav-container').solveNav();
+  });
+</script>

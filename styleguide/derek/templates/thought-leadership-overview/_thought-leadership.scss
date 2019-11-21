@@ -462,10 +462,6 @@ $row-space: 35px;
 // mobile rules
 @media screen and (max-width: $screen-sm-min - 1) {
 
-  .rsTl-feature-header {
-    margin-top: 189px;
-  }
-
   .rsTl-author-sectionInner {
     // sass-lint:disable-block no-vendor-prefixes
     -ms-grid-columns: (1fr)[2];
