@@ -107,7 +107,6 @@ $nav-link-black: #00001e;
   align-items: center;
   display: flex;
   float: left;
-  overflow: hidden;
   padding: 25px;
 }
 
@@ -115,19 +114,51 @@ $nav-link-black: #00001e;
   list-style: none;
   margin: 0;
   padding: 0;
-  white-space: nowrap;
+}
+
+.rsTl-nav-subList {
+  background-color: $white;
+  border: 1px solid $nav-link-black;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 200px;
+  z-index: 10;
+}
+
+.rsTl-nav-subList-show {
+  display: block;
+}
+
+.rsTl-nav-subItem {
+  border-bottom: 1px solid transparentize($black, .9);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.rsTl-nav-subLink {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 15px;
+  width: 100%;
+
+  &:hover {
+    background-color: transparentize($black, .95);
+    text-decoration: none;
+  }
 }
 
 .rsTl-nav-item {
   display: inline-block;
+  position: relative;
   text-align: left;
-
-  &::before {
-    content: '\e809';
-    display: inline-block;
-    font-family: 'rswebfonts';
-    margin-right: 5px;
-  }
 }
 
 .rsTl-nav-link {
@@ -139,6 +170,17 @@ $nav-link-black: #00001e;
   letter-spacing: 0;
   line-height: 100%;
   margin-right: 15px;
+}
+
+.rsTl-nav-ddLink {
+
+  &::after {
+    content: '\f107';
+    display: inline-block;
+    font-family: 'rswebfonts';
+    margin-left: 10px;
+    transition-duration: .2s;
+  }
 }
 
 .rsTl-nav-hamburger {
@@ -156,13 +198,21 @@ $nav-link-black: #00001e;
 
   &::before {
     content: '\f0c9';
+    display: inline-block;
     font-family: 'rswebfonts';
   }
 }
 
-@media screen and (max-width: $screen-sm-min - 1) {
+.rsTl-nav-hamburgerOpen {
+  &::before {
+    content: '\e803';
+  }
+}
 
-  .rsTl-nav-container {
+// when nav is contained
+.rsTl-nav-contained {
+
+  &.rsTl-nav-container {
     border-bottom: 0;
   }
 
@@ -171,6 +221,8 @@ $nav-link-black: #00001e;
     -ms-grid-columns: (1fr)[4];
     border-bottom: 0;
     grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    width: 100%;
   }
 
   .rsTl-nav-logo {
@@ -189,6 +241,13 @@ $nav-link-black: #00001e;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-area: 1 / 2 / 2 / 4;
+  }
+
+  .rsTl-nav-ddLink {
+
+    &::after {
+      float: right;
+    }
   }
 
   .rsTl-nav-hamburger {
@@ -252,4 +311,52 @@ $nav-link-black: #00001e;
     min-width: 70px;
   }
 
+}
+
+// this is for the cloned nav list for mobile view
+.rsTl-nav-list-contained {
+  border-bottom: 1px solid $nav-link-black;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .rsTl-nav-item {
+    border-bottom: 1px solid transparentize($black, .9);
+    width: 100%;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .rsTl-nav-link {
+    padding: 15px 20px;
+    width: 100%;
+
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .rsTl-nav-mobileOpen {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .rsTl-nav-subLink {
+    background-color: transparentize($black, .95);
+    padding: 15px 40px;
+  }
+
+  .rsTl-nav-subList {
+    border: 0;
+    border-bottom: 1px solid $nav-link-black;
+    border-top: 1px solid $nav-link-black;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
 }
