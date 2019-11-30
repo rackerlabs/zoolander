@@ -1,8 +1,8 @@
 $solve-black: #00001e;
 $row-space: 35px;
 
-@mixin bullshit ($repeat) {
-  // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
+// sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
+@mixin the-ms-special ($repeat) {
   -ms-grid-columns: unquote('(') + '1fr' + unquote(')') + '[#{$repeat}]';
 }
 
@@ -62,8 +62,7 @@ $row-space: 35px;
 
 .rsTl-feature-headerInner {
   // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
-  //-ms-grid-columns: (1fr)[10];
-  @include bullshit(10);
+  @include the-ms-special(10);
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -101,8 +100,7 @@ $row-space: 35px;
 
 .rsTl-article-row {
   // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
-  //-ms-grid-columns: (1fr)[10];
-  @include bullshit(10);
+  @include the-ms-special(10);
   display: -ms-grid;
   display: grid;
   grid-gap: 10px;
@@ -305,8 +303,7 @@ $row-space: 35px;
 
 .rsTl-relatedTopics-2colRow {
   // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
-  //-ms-grid-columns: (1fr) [2];
-  @include bullshit(3);
+  @include the-ms-special(3);
   grid-template-columns: repeat(2, 1fr);
 
   // edge and ie hacks
@@ -320,8 +317,7 @@ $row-space: 35px;
 
 .rsTl-relatedTopics-3colRow {
   // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
-  //-ms-grid-columns: (1fr)[3];
-  @include bullshit(3);
+  @include the-ms-special(3);
   grid-template-columns: repeat(3, 1fr);
 
   // edge and ie hacks
@@ -473,9 +469,8 @@ $row-space: 35px;
 @media screen and (max-width: $screen-sm-min - 1) {
 
   .rsTl-author-sectionInner {
-    // sass-lint:disable-block no-vendor-prefixes
-    //-ms-grid-columns: (1fr)[2];
-    @include bullshit(2);
+    // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
+    @include the-ms-special(2);
     grid-template-columns: repeat(2, 1fr);
   }
 
