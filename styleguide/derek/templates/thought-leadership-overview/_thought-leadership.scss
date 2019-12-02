@@ -121,11 +121,14 @@ $row-space: 35px;
     padding-top: 60px;
     text-align: left;
 
+    p {
+      line-height: inherit;
+    }
+
     &::before {
       content: '“';
       display: block;
       font-size: 2em;
-
     }
 
     &::after {
