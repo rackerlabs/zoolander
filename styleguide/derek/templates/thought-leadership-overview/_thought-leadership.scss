@@ -303,7 +303,7 @@ $row-space: 35px;
 
 .rsTl-relatedTopics-2colRow {
   // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
-  @include the-ms-special(3);
+  @include the-ms-special(2);
   grid-template-columns: repeat(2, 1fr);
 
   // edge and ie hacks
@@ -339,6 +339,7 @@ $row-space: 35px;
 
   .rsTl-relatedTopics-img {
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     -ms-grid-row: 1;
     height: 200px;
   }
@@ -353,6 +354,7 @@ $row-space: 35px;
 
 .rsTl-relatedTopics-col {
   // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
+  -ms-grid-columns: 1fr;
   display: -ms-grid;
   display: grid;
 }
@@ -418,14 +420,9 @@ $row-space: 35px;
         -ms-grid-row: 1;
       }
 
-      &:nth-child(2) {
-        -ms-grid-column: 2;
-        -ms-grid-row: 2;
-      }
-
       &:last-child {
-        -ms-grid-column: 3;
-        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
       }
     }
   }
@@ -443,9 +440,14 @@ $row-space: 35px;
         -ms-grid-row: 1;
       }
 
-      &:last-child {
-        -ms-grid-column: 2;
+      &:nth-child(2) {
+        -ms-grid-column: 1;
         -ms-grid-row: 2;
+      }
+
+      &:last-child {
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
       }
     }
 
@@ -459,6 +461,7 @@ $row-space: 35px;
     }
 
     .rsTl-relatedTopics-text {
+      -ms-grid-column: 1;
       padding-left: 30px;
       padding-right: 30px;
     }
@@ -551,6 +554,15 @@ $row-space: 35px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-area: 1 / 1 / 2 / 6;
+  }
+
+  // edge and ie hacks
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
+    .rsTl-relatedTopics-3colRow {
+      .rsTl-relatedTopics-col {
+        padding: 10px;
+      }
+    }
   }
 }
 
