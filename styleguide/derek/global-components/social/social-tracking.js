@@ -34,15 +34,30 @@ Zoolander.SocialTracking = (() => {
   }
 
   function LinkedInTracking() {
-    const button = document.getElementsByClassName('IN-widget')[0];
-    button.addEventListener('click', (e) => {
-      dataLayer.push({
-        event: 'social.click',
-        socialNetwork: 'LinkedIn',
-        socialAction: 'share',
-        socialTarget: e.view.location.href,
-      });
-    });
+    const intervalTime = 100;
+    const maxAttempts = 3;
+    let runCt = 0;
+
+    // Hacky method to wait until IN-widget has been declared since no proper events exist.
+    const myInterval = setInterval(() => {
+      const button = document.getElementsByClassName('IN-widget')[0];
+      if (typeof button !== 'undefined') {
+        clearInterval(myInterval);
+        button.addEventListener('click', (e) => {
+          dataLayer.push({
+            event: 'social.click',
+            socialNetwork: 'LinkedIn',
+            socialAction: 'share',
+            socialTarget: e.view.location.href,
+          });
+        });
+      } else {
+        runCt += 1;
+        if (runCt > maxAttempts) {
+          clearInterval(myInterval);
+        }
+      }
+    }, intervalTime);
   }
 
   function EmailTracking() {
