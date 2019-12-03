@@ -1,27 +1,7 @@
 <!-- LinkedIn JS -->
 <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 
-<!-- Facebook JS -->
-<script>
-window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '2330309597194845',
-      xfbml      : true,
-      version    : 'v2.10'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<!-- Twiiter JS -->
+<!-- Twitter JS -->
 <script>
 window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
@@ -56,35 +36,7 @@ window.twttr = (function(d, s, id) {
 <div class="social-button social-twitterWrapper">
   <a href="https://twitter.com/intent/tweet?text=Checkout this resource from @Rackspace" class="twitter-share-button" data-show-count="false">Tweet</a>
 </div>
-<div class="social-button social-googleplusWrapper">
-  <div class="g-plus" data-action="share"></div>
-</div>
-<div class="social-button social-emailWrapper">
-  <a class="social-shareEmail" href="mailto:?subject=Checkout this great resource from Rackspace&body=I found this great resource from Rackspace. http://www.rackspace.com" >Email</a>
-</div>
 
 <!--[/social-tracking]-->
 <script src="../../../js/global-components/tracking/tracking.js" charset="utf-8"></script>
 <script src="../../../js/global-components/social/social-tracking.js" charset="utf-8"></script>
-<script>
-// Twitter Share Tracking
-if (typeof twttr !== 'undefined') {
-  twttr.ready((twttr) => {
-    twttr.events.bind('click', (e) => {
-      Zoolander.SocialTracking.twitter(e);
-    });
-  });
-}
-
-// LinkedIn Share Tracking
-IN.Event.onOnce(IN, 'systemReady', () => {
-  Zoolander.SocialTracking.linkedin();
-});
-
-// Facebook Share Tracking
-Zoolander.SocialTracking.facebook();
-
-// Email Share Tracking
-Zoolander.SocialTracking.email();
-</script>
-
