@@ -152,7 +152,7 @@
     $('.rsTl-nav-container').solveNav();
   });
 </script><!-- article header section -->
-<div class="rsTl-feature-header">
+<a class="rsTl-feature-header" href="#">
   <picture class="rsTl-feature-headerBackground">
      <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source class="rsTl-feature-headerBackgroundContent" srcset="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/solve/primary_hero_1600x680_b_12.jpg 1x" media="all and (min-width: 1600px)" type="image/jpeg">
@@ -179,7 +179,7 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 <div class="container container-xl">
   <div class="rsTl-article-row">
@@ -268,10 +268,49 @@
 
   <div class="rsTl-article-row">
     <div class="rsTl-column">
-      <a class="rsTl-social-twitter" href="https://twitter.com" target="_blank" rel="noopener noreferrer"></a>
-<a class="rsTl-social-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer"></a>
-<a class="rsTl-social-facebook" href="https://facebook.com" target="_blank" rel="noopener noreferrer"></a>
-<a class="rsTl-social-youtube" href="https://youtube.com" target="_blank" rel="noopener noreferrer"></a> 
+      <!-- LinkedIn JS -->
+<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+
+<!-- Twitter JS -->
+<script>
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+<!-- Google+ JS -->
+<script src="https://apis.google.com/js/platform.js" async defer="defer"></script>
+
+<!-- Button Codes -->
+<div class="social-button social-linkedinWrapper">
+  <script type="IN/Share" data-url="rackspace.com"></script>
+</div>
+<div class="social-button social-facebookWrapper">
+  <a class="fb-share" href="javascript:void(0);">
+    <span class="fb-share-icon"></span><span class="fb-share-text">Share</span>
+  </a>
+</div>
+<div class="social-button social-twitterWrapper">
+  <a href="https://twitter.com/intent/tweet?text=Checkout this resource from @Rackspace" class="twitter-share-button" data-show-count="false">Tweet</a>
+</div>
+
+<!--[/social-tracking]-->
+<script src="../../../js/global-components/tracking/tracking.js" charset="utf-8"></script>
+<script src="../../../js/global-components/social/social-tracking.js" charset="utf-8"></script>
+
     </div>
   </div>
 
@@ -318,14 +357,14 @@
 <div class="rsTl-relatedTopics-row">
   
     <div class="rsTl-relatedTopics-col">
-      <div class="rsTl-relatedTopics-feature">
+      <a class="rsTl-relatedTopics-feature" href="#">
         <div class="rsTl-relatedTopics-img" style="background-image:url('imgs/derek/doge-small.png')"></div>
         <div class="rsTl-relatedTopics-text">
           <span class="rsTl-relatedTopics-type"><strong>Video</strong> (1 minute view)</span>
           <h3 class="rsTl-relatedTopics-smallHeader">Real IT Modernization in Action</h3>
-          <a class="button lead rsTl-relatedTopics-btn">Watch the Video</a>
+          <button class="button lead rsTl-relatedTopics-btn">Watch the Video</button>
         </div>
-      </div>
+      </a>
     </div>
   
 </div>
@@ -334,25 +373,25 @@
 <div class="rsTl-relatedTopics-row rsTl-relatedTopics-2colRow">
   
     <div class="rsTl-relatedTopics-col">
-      <div class="rsTl-relatedTopics-feature">
+      <a class="rsTl-relatedTopics-feature" href="#">
         <div class="rsTl-relatedTopics-img" style="background-image:url('imgs/derek/doge-small.png')"></div>
         <div class="rsTl-relatedTopics-text">
           <span class="rsTl-relatedTopics-type"><strong>Video</strong> (1 minute view)</span>
           <h3 class="rsTl-relatedTopics-smallHeader">Real IT Modernization in Action</h3>
-          <a class="button lead rsTl-relatedTopics-btn">Watch the Video</a>
+          <button class="button lead rsTl-relatedTopics-btn">Watch the Video</button>
         </div>
-      </div>
+      </a>
     </div>
   
     <div class="rsTl-relatedTopics-col">
-      <div class="rsTl-relatedTopics-feature">
+      <a class="rsTl-relatedTopics-feature" href="#">
         <div class="rsTl-relatedTopics-img" style="background-image:url('imgs/derek/doge-small.png')"></div>
         <div class="rsTl-relatedTopics-text">
           <span class="rsTl-relatedTopics-type"><strong>Video</strong> (1 minute view)</span>
           <h3 class="rsTl-relatedTopics-smallHeader">Real IT Modernization in Action</h3>
-          <a class="button lead rsTl-relatedTopics-btn">Watch the Video</a>
+          <button class="button lead rsTl-relatedTopics-btn">Watch the Video</button>
         </div>
-      </div>
+      </a>
     </div>
   
 </div>
@@ -361,36 +400,36 @@
 <div class="rsTl-relatedTopics-row rsTl-relatedTopics-3colRow">
   
     <div class="rsTl-relatedTopics-col">
-      <div class="rsTl-relatedTopics-feature">
+      <a class="rsTl-relatedTopics-feature" href="#">
         <div class="rsTl-relatedTopics-img" style="background-image:url('imgs/derek/doge-small.png')"></div>
         <div class="rsTl-relatedTopics-text">
           <span class="rsTl-relatedTopics-type"><strong>Video</strong> (1 minute view)</span>
           <h3 class="rsTl-relatedTopics-smallHeader">Real IT Modernization in Action</h3>
-          <a class="button lead rsTl-relatedTopics-btn">Watch the Video</a>
+          <button class="button lead rsTl-relatedTopics-btn">Watch the Video</button>
         </div>
-      </div>
+      </a>
     </div>
   
     <div class="rsTl-relatedTopics-col">
-      <div class="rsTl-relatedTopics-feature">
+      <a class="rsTl-relatedTopics-feature" href="#">
         <div class="rsTl-relatedTopics-img" style="background-image:url('imgs/derek/doge-small.png')"></div>
         <div class="rsTl-relatedTopics-text">
           <span class="rsTl-relatedTopics-type"><strong>Video</strong> (1 minute view)</span>
           <h3 class="rsTl-relatedTopics-smallHeader">Real IT Modernization in Action</h3>
-          <a class="button lead rsTl-relatedTopics-btn">Watch the Video</a>
+          <button class="button lead rsTl-relatedTopics-btn">Watch the Video</button>
         </div>
-      </div>
+      </a>
     </div>
   
     <div class="rsTl-relatedTopics-col">
-      <div class="rsTl-relatedTopics-feature">
+      <a class="rsTl-relatedTopics-feature" href="#">
         <div class="rsTl-relatedTopics-img" style="background-image:url('imgs/derek/doge-small.png')"></div>
         <div class="rsTl-relatedTopics-text">
           <span class="rsTl-relatedTopics-type"><strong>Video</strong> (1 minute view)</span>
           <h3 class="rsTl-relatedTopics-smallHeader">Real IT Modernization in Action</h3>
-          <a class="button lead rsTl-relatedTopics-btn">Watch the Video</a>
+          <button class="button lead rsTl-relatedTopics-btn">Watch the Video</button>
         </div>
-      </div>
+      </a>
     </div>
   
 </div>

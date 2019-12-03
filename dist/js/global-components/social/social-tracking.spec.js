@@ -46,19 +46,37 @@ describe('Zoolander Social Tracking Module', function () {
     });
 
     it('should track linkedin share clicks', function () {
-      $('body').append('<div class="IN-widget">Email</div>');
+      $('body').append('<div class="IN-widget">LinkedIn</div>');
       Zoolander.SocialTracking.linkedin();
 
-      var e = document.createEvent('MouseEvents');
-      e.initMouseEvent('click', true, true, window);
-      $('.IN-widget')[0].dispatchEvent(e);
-      var expected = {
-        event: 'social.click',
-        socialNetwork: 'LinkedIn',
-        socialAction: 'share',
-        socialTarget: 'http://localhost:9876/context.html'
-      };
-      expect(window.dataLayer.pop(), 'to push email share event').to.eql(expected);
+      // Initially the datalayer should be empty.
+      expect(window.dataLayer.pop(), 'to not have pushed linkedin share event yet').to.not.exist;
+
+      // After 110ms, the datalayer should contain the event data.
+      setTimeout(function () {
+        var e = document.createEvent('MouseEvents');
+        e.initMouseEvent('click', true, true, window);
+        $('.IN-widget')[0].dispatchEvent(e);
+
+        var expected = {
+          event: 'social.click',
+          socialNetwork: 'LinkedIn',
+          socialAction: 'share',
+          socialTarget: 'http://localhost:9876/context.html'
+        };
+        expect(window.dataLayer.pop(), 'to push linkedin share event').to.eql(expected);
+      }, 110);
+    });
+
+    it('should skip tracking linkedin share clicks if too much time lapses', function () {
+      Zoolander.SocialTracking.linkedin();
+      // Initially the datalayer should be empty.
+      expect(window.dataLayer.pop(), 'to not have pushed linkedin share event yet').to.not.exist;
+
+      // After 310ms, datalayer should still be empty, due to missing IN-widget.
+      setTimeout(function () {
+        expect(window.dataLayer.pop(), 'to not have pushed linkedin share event yet').to.not.exist;
+      }, 310);
     });
 
     it('should track email share clicks', function () {

@@ -14,14 +14,8 @@ Zoolander.SocialTracking = function () {
           socialAction: 'share',
           socialTarget: e.view.location.href
         });
-        if (typeof FB !== 'undefined') {
-          FB.ui({
-            method: 'share',
-            href: e.view.location.href,
-            hashtag: '#rackspace',
-            quote: 'Checkout this resource from Rackspace'
-          });
-        }
+        var url = encodeURIComponent(e.view.location.href);
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'fbshare', 'height=500,width=670,left=50%,top=50%');
       });
     }
   }
@@ -36,15 +30,30 @@ Zoolander.SocialTracking = function () {
   }
 
   function LinkedInTracking() {
-    var button = document.getElementsByClassName('IN-widget')[0];
-    button.addEventListener('click', function (e) {
-      dataLayer.push({
-        event: 'social.click',
-        socialNetwork: 'LinkedIn',
-        socialAction: 'share',
-        socialTarget: e.view.location.href
-      });
-    });
+    var intervalTime = 100;
+    var maxAttempts = 3;
+    var runCt = 0;
+
+    // Hacky method to wait until IN-widget has been declared since no proper events exist.
+    var myInterval = setInterval(function () {
+      var button = document.getElementsByClassName('IN-widget')[0];
+      if (typeof button !== 'undefined') {
+        clearInterval(myInterval);
+        button.addEventListener('click', function (e) {
+          dataLayer.push({
+            event: 'social.click',
+            socialNetwork: 'LinkedIn',
+            socialAction: 'share',
+            socialTarget: e.view.location.href
+          });
+        });
+      } else {
+        runCt += 1;
+        if (runCt > maxAttempts) {
+          clearInterval(myInterval);
+        }
+      }
+    }, intervalTime);
   }
 
   function EmailTracking() {
@@ -78,15 +87,7 @@ Zoolander.SocialTracking = function () {
   };
 }();
 
-// Facebook Share Tracking
-window.fbAsyncInit = function () {
-  FB.init({
-    appId: '2330309597194845',
-    xfbml: true,
-    version: 'v2.10'
-  });
-  FB.AppEvents.logPageView();
-};
+// Facebook share tracking.
 Zoolander.SocialTracking.facebook();
 
 // Twitter Share Tracking
@@ -104,6 +105,3 @@ if (typeof IN !== 'undefined') {
     Zoolander.SocialTracking.linkedin();
   });
 }
-
-// Email Share Tracking
-Zoolander.SocialTracking.email();
