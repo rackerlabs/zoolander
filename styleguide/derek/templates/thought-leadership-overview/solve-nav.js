@@ -2,7 +2,7 @@
   $.fn.solveNav = function solveNav() {
     const $nav = $(this);
     const $window = $(window);
-    const $content = $nav.nextAll('div').eq(0);
+    const $content = $nav.nextAll('a').eq(0);
     const $dropDowns = $nav.find('.rsTl-nav-ddLink');
     const $linkList = $nav.find('.rsTl-nav-list');
     const $hamburger = $nav.find('.rsTl-nav-hamburgerBtn');

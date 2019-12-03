@@ -38,11 +38,16 @@ $row-space: 35px;
   background-color: $gray;
   background-position: center center;
   background-repeat: no-repeat;
+  display: block;
   margin-bottom: $row-space;
   margin-top: 110px;
   overflow: hidden;
   padding: 0;
   position: relative;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .rsTl-feature-headerBackground {
@@ -353,16 +358,23 @@ $row-space: 35px;
   .rsTl-relatedTopics-text {
     -ms-grid-column: 2;
     -ms-grid-row: 2;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
 .rsTl-relatedTopics-col {
-  // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
+  // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties force-element-nesting
   -ms-grid-columns: 1fr;
   display: -ms-grid;
   display: grid;
+
+  .button.lead {
+
+    :hover {
+      background-color: $rackspace-red;
+    }
+  }
 }
 
 .rsTl-relatedTopics-header {
@@ -381,6 +393,12 @@ $row-space: 35px;
   display: -ms-grid;
   display: grid;
   grid-template-columns: 200px 1fr;
+  transition-duration: .2s;
+
+  &:hover {
+    box-shadow: 0 0 16px -1px transparentize($black, .8);
+    text-decoration: none;
+  }
 }
 
 .rsTl-relatedTopics-img {
