@@ -284,13 +284,52 @@ $row-space: 35px;
 
 .rsTl-cta-section {
   background-color: $gray;
-  padding: 25px;
+  display: block;
+  margin: 0 auto;
+  max-width: 970px;
+  position: relative;
+  transition-duration: .2s;
+
+  &:hover {
+    box-shadow: 0 0 16px -1px transparentize($black, .8);
+    text-decoration: none;
+  }
+}
+
+.rsTl-cta-sectionBackground {
+  position: relative;
+  z-index: 9;
+}
+
+.rsTl-cta-sectionContent {
+  bottom: 0;
+  display: block;
+  left: 0;
+  padding: 2.5vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 
 .rsTl-cta-title {
-  @include tl-header;
-  @include solve-h2;
   color: $white;
+  display: block;
+  font-size: 4.7vw;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.1em;
+  margin: 1vw 0 3vw;
+}
+
+.rsTl-cta-button {
+  background: $rackspace-red;
+  bottom: 4vw;
+  color: $white;
+  font-size: 2.6vw;
+  font-weight: 600;
+  padding: 1.4vw 3.5vw;
+  position: absolute;
 }
 
 .rsTl-relatedTopics-row {
@@ -554,6 +593,24 @@ $row-space: 35px;
   }
 }
 
+
+@media only screen and (min-width: $screen-sm-min) {
+  .rsTl-cta-sectionContent {
+    padding: 20px;
+  }
+
+  .rsTl-cta-title {
+    font-size: 2.2em;
+    margin: 10px 0 25px;
+  }
+
+  .rsTl-cta-button {
+    bottom: 2.2em;
+    font-size: 1.25em;
+    padding: 11px 30px;
+  }
+}
+
 @media only screen and (min-width: $screen-md-min) {
   .rsTl-feature-header {
     height: 42vw;
@@ -580,6 +637,10 @@ $row-space: 35px;
     grid-area: 1 / 1 / 2 / 6;
   }
 
+  .rsTl-cta-title {
+    font-size: 2.6em;
+  }
+
   // edge and ie hacks
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // sass-lint:disable-line no-vendor-prefixes
     .rsTl-relatedTopics-3colRow {
@@ -599,5 +660,9 @@ $row-space: 35px;
   .rsTl-feature-headerBackground {
     height: 42vw;
     margin-top: -21vw;
+  }
+
+  .rsTl-cta-title {
+    font-size: 2.7em;
   }
 }
