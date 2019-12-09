@@ -45,6 +45,7 @@ $row-space: 35px;
   padding: 0;
   position: relative;
 
+  &:focus,
   &:hover {
     text-decoration: none;
   }
@@ -433,6 +434,10 @@ $row-space: 35px;
   display: grid;
   grid-template-columns: 200px 1fr;
   transition-duration: .2s;
+
+  &:focus {
+    text-decoration: none;
+  }
 
   &:hover {
     box-shadow: 0 0 16px -1px transparentize($black, .8);
