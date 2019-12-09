@@ -35,11 +35,10 @@ $row-space: 35px;
 }
 
 .rsTl-feature-header {
-  background-color: $gray;
   background-position: center center;
   background-repeat: no-repeat;
   display: block;
-  margin-bottom: $row-space;
+  margin-bottom: $row-space / 2;
   margin-top: 110px;
   overflow: hidden;
   padding: 0;
@@ -53,17 +52,17 @@ $row-space: 35px;
 
 .rsTl-feature-headerBackground {
   position: relative;
+  text-align: center;
 }
 
 .rsTl-feature-headerContainer {
-  padding: 25px;
+  padding: 25px $grid-gutter-width / 2 0;
   position: relative;
   z-index: 999;
 }
 
-.rsTl-feature-headerBackgroundContent {
-  height: 100%;
-  width: 100%;
+.rsTl-article-contentContainer {
+  padding: 0 $grid-gutter-width / 2;
 }
 
 .rsTl-feature-headerInner {
@@ -77,7 +76,6 @@ $row-space: 35px;
 .rsTl-feature-title {
   @include tl-header;
   @include solve-h1;
-  color: $white;
 }
 
 .rsTl-feature-text {
@@ -98,10 +96,6 @@ $row-space: 35px;
   color: $white;
   font-size: 14px;
   font-weight: 600;
-}
-
-.rsTl-feature-p {
-  color: $white;
 }
 
 .rsTl-article-row {
@@ -598,7 +592,6 @@ $row-space: 35px;
   }
 }
 
-
 @media only screen and (min-width: $screen-sm-min) {
   .rsTl-cta-sectionContent {
     padding: 20px;
@@ -617,8 +610,14 @@ $row-space: 35px;
 }
 
 @media only screen and (min-width: $screen-md-min) {
+  .rsTl-feature-title,
+  .rsTl-feature-p {
+    color: $white;
+  }
+
   .rsTl-feature-header {
     height: 42vw;
+    margin-bottom: $row-space;
   }
 
   .rsTl-feature-headerBackground {
@@ -626,9 +625,7 @@ $row-space: 35px;
     height: 42vw;
     left: 50%;
     margin-left: -50%;
-    margin-top: -21vw;
     position: absolute;
-    top: 50%;
     width: 100%;
     z-index: 9;
   }
@@ -662,12 +659,19 @@ $row-space: 35px;
     max-height: 500px;
   }
 
-  .rsTl-feature-headerBackground {
-    height: 42vw;
-    margin-top: -21vw;
-  }
-
   .rsTl-cta-title {
     font-size: 2.7em;
+  }
+}
+
+@media only screen and (min-width: $screen-xl) {
+  .rsTl-article-contentContainer,
+  .rsTl-feature-headerContainer {
+    padding: 45px;
+  }
+
+  .rsTl-contentContainer {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
