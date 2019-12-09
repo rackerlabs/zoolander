@@ -2,7 +2,6 @@
   $.fn.solveNav = function solveNav() {
     const $nav = $(this);
     const $window = $(window);
-    const $content = $('.rsTl-feature-header');
     const $dropDowns = $nav.find('.rsTl-nav-ddLink');
     const $linkList = $nav.find('.rsTl-nav-list');
     const $hamburger = $nav.find('.rsTl-nav-hamburgerBtn');
@@ -40,7 +39,7 @@
       onResize() {
         $linkList.css('opacity', 0);
         clearTimeout(methods.resizeTimer);
-        methods.resizeTimer = setTimeout(methods.adjustNavSize, 250);
+        methods.resizeTimer = setTimeout(methods.adjustNavSize, 100);
       },
       adjustNavSize() {
         $linkList.css('opacity', 1);
@@ -52,13 +51,13 @@
             methods.$mobileNav.hide();
             $hamburger.removeClass('rsTl-nav-hamburgerOpen');
           }
-          $content.css('margin-top', '');
+          $('.rsTl-feature-header').css('margin-top', '');
         } else {
           methods.navIsContained = true;
           $nav.addClass('rsTl-nav-contained');
           // we need to adjust the header under the nav
           const $navHeight = $nav.outerHeight();
-          $content.css('margin-top', `${$navHeight}px`);
+          $('.rsTl-feature-header').css('margin-top', `${$navHeight}px`);
         }
       },
       createMobileMenu() {
@@ -117,6 +116,7 @@
         this.setDropDowns();
         this.createMobileMenu();
         this.setHamburger();
+        this.onResize();
       },
     };
     $window.on('resize', methods.onResize);
