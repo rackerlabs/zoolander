@@ -402,13 +402,6 @@ $row-space: 35px;
   -ms-grid-columns: 1fr;
   display: -ms-grid;
   display: grid;
-
-  .button.lead {
-
-    :hover {
-      background-color: $rackspace-red;
-    }
-  }
 }
 
 .rsTl-relatedTopics-header {
@@ -427,16 +420,6 @@ $row-space: 35px;
   display: -ms-grid;
   display: grid;
   grid-template-columns: 200px 1fr;
-  transition-duration: .2s;
-
-  &:focus {
-    text-decoration: none;
-  }
-
-  &:hover {
-    box-shadow: 0 0 16px -1px transparentize($black, .8);
-    text-decoration: none;
-  }
 }
 
 .rsTl-relatedTopics-img {
@@ -446,6 +429,10 @@ $row-space: 35px;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 200px;
+
+  &:hover {
+    box-shadow: 0 0 16px -1px transparentize($black, .8);
+  }
 }
 
 .rsTl-relatedTopics-text {
@@ -464,6 +451,10 @@ $row-space: 35px;
 
 .rsTl-relatedTopics-btn {
   margin: 0;
+
+  &:hover {
+    background-color: darken($rackspace-red, 15%);
+  }
 }
 
 // tablet rules
