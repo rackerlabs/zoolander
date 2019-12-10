@@ -122,6 +122,11 @@
   -webkit-font-smoothing: antialiased;
 }
 
+// sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
+@mixin the-ms-special ($repeat) {
+  -ms-grid-columns: unquote('(') + '1fr' + unquote(')') + '[#{$repeat}]';
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }

@@ -1,11 +1,6 @@
 $solve-black: #00001e;
 $row-space: 35px;
 
-// sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
-@mixin the-ms-special ($repeat) {
-  -ms-grid-columns: unquote('(') + '1fr' + unquote(')') + '[#{$repeat}]';
-}
-
 @mixin tl-header {
   font-weight: 600;
   letter-spacing: 0;
@@ -27,11 +22,11 @@ $row-space: 35px;
 }
 
 @mixin solve-h2 {
-  font-size: 2.7em;
+  font-size: 1.75em;
 }
 
 @mixin solve-h3 {
-  font-size: 1.75em;
+  font-size: 1.45em;
 }
 
 .rsTl-feature-header {
@@ -39,7 +34,6 @@ $row-space: 35px;
   background-repeat: no-repeat;
   display: block;
   margin-bottom: $row-space / 2;
-  margin-top: 110px;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -117,7 +111,7 @@ $row-space: 35px;
     border-top: 8px solid $rackspace-red;
     color: $solve-black;
     font-family: $copy;
-    font-size: 43.2px;
+    font-size: 1.75em;
     font-weight: 100;
     grid-area: 1 / 2 / 2 / 10;
     letter-spacing: 0;
@@ -241,6 +235,11 @@ $row-space: 35px;
   display: -ms-grid;
   display: grid;
   grid-template-columns: 250px 1fr;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .rsTl-author-title {
@@ -428,6 +427,7 @@ $row-space: 35px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: block;
   min-height: 200px;
 
   &:hover {

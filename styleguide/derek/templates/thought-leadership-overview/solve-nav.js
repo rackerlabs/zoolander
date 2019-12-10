@@ -5,6 +5,7 @@
     const $dropDowns = $nav.find('.rsTl-nav-ddLink');
     const $linkList = $nav.find('.rsTl-nav-list');
     const $hamburger = $nav.find('.rsTl-nav-hamburgerBtn');
+    const $content = $('.rsTl-content');
     const subListCls = 'rsTl-nav-subList-show';
     const methods = {
       $mobileNav: null,
@@ -37,13 +38,16 @@
       },
       resizeTimer: null,
       onResize() {
-        $linkList.css('opacity', 0);
         clearTimeout(methods.resizeTimer);
-        methods.resizeTimer = setTimeout(methods.adjustNavSize, 100);
+        methods.resizeTimer = setTimeout(() => {
+          methods.adjustNavSize();
+          methods.setSticky();
+        },
+        20);
       },
       adjustNavSize() {
-        $linkList.css('opacity', 1);
         $nav.removeClass('rsTl-nav-contained');
+        methods.$containedLogos.removeClass('rsTl-nav-contained');
         const lines = methods.getLinkLines($linkList.get(0));
         if (lines < 3) {
           methods.navIsContained = false;
@@ -51,13 +55,10 @@
             methods.$mobileNav.hide();
             $hamburger.removeClass('rsTl-nav-hamburgerOpen');
           }
-          $('.rsTl-feature-header').css('margin-top', '');
         } else {
           methods.navIsContained = true;
           $nav.addClass('rsTl-nav-contained');
-          // we need to adjust the header under the nav
-          const $navHeight = $nav.outerHeight();
-          $('.rsTl-feature-header').css('margin-top', `${$navHeight}px`);
+          methods.$containedLogos.addClass('rsTl-nav-contained');
         }
       },
       createMobileMenu() {
@@ -111,15 +112,66 @@
           });
         });
       },
+      $containedLogos: null,
+      copyLogos() {
+        const $logoWrapper = $('<div class="rsTl-nav-logoWrapper"></div>');
+        const $sponser = $nav.find('.rsTl-nav-sponsor').clone();
+        const $rsLogo = $nav.find('.rsTl-nav-rsLogo').clone();
+        $logoWrapper.append($rsLogo);
+        $logoWrapper.append($sponser);
+        $logoWrapper.insertBefore($nav);
+        methods.$containedLogos = $logoWrapper;
+      },
+      startingLocation: null,
+      setSticky(e) {
+        if ($nav.hasClass('rsTl-nav-fixed')) {
+          $nav.removeClass('rsTl-nav-fixed');
+        }
+        if (methods.startingLocation === null || !e) {
+          methods.startingLocation = ~~($nav.offset().top); // eslint-disable-line          
+        }
+        if (window.pageYOffset >= methods.startingLocation) {
+          // only add class if it's not there
+          if (!$nav.hasClass('rsTl-nav-fixed')) {
+            $nav.addClass('rsTl-nav-fixed');
+          }
+        }
+      },
+      adjustContent() {
+        if (!$nav.hasClass('rsTl-nav-contained') && $nav.hasClass('rsTl-nav-fixed')) {
+          $content.css('margin-top', `${$nav.outerHeight()}px`);
+        } else {
+          $content.css('margin-top', '');
+        }
+      },
+      observeStyle() {
+        // here we setup an observer to bump down the solve page
+        // content whenever it's fixed and not contained
+        methods.adjustContent();
+        const listener = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'class') {
+              methods.adjustContent();
+            }
+          });
+        });
+        return listener.observe($nav.get(0), {
+          attributes: true,
+          attributeFilter: ['class'],
+        });
+      },
       init() {
+        this.copyLogos();
         this.adjustNavSize();
         this.setDropDowns();
         this.createMobileMenu();
         this.setHamburger();
-        this.onResize();
+        this.setSticky();
+        this.observeStyle();
       },
     };
     $window.on('resize', methods.onResize);
+    $window.on('scroll', methods.setSticky);
     methods.init();
     return this;
   };
