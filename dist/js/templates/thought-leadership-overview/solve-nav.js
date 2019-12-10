@@ -4,7 +4,6 @@
   $.fn.solveNav = function solveNav() {
     var $nav = $(this);
     var $window = $(window);
-    var $content = $('.rsTl-feature-header');
     var $dropDowns = $nav.find('.rsTl-nav-ddLink');
     var $linkList = $nav.find('.rsTl-nav-list');
     var $hamburger = $nav.find('.rsTl-nav-hamburgerBtn');
@@ -43,7 +42,7 @@
       onResize: function onResize() {
         $linkList.css('opacity', 0);
         clearTimeout(methods.resizeTimer);
-        methods.resizeTimer = setTimeout(methods.adjustNavSize, 250);
+        methods.resizeTimer = setTimeout(methods.adjustNavSize, 100);
       },
       adjustNavSize: function adjustNavSize() {
         $linkList.css('opacity', 1);
@@ -55,13 +54,13 @@
             methods.$mobileNav.hide();
             $hamburger.removeClass('rsTl-nav-hamburgerOpen');
           }
-          $content.css('margin-top', '');
+          $('.rsTl-feature-header').css('margin-top', '');
         } else {
           methods.navIsContained = true;
           $nav.addClass('rsTl-nav-contained');
           // we need to adjust the header under the nav
           var $navHeight = $nav.outerHeight();
-          $content.css('margin-top', $navHeight + 'px');
+          $('.rsTl-feature-header').css('margin-top', $navHeight + 'px');
         }
       },
       createMobileMenu: function createMobileMenu() {
@@ -120,6 +119,7 @@
         this.setDropDowns();
         this.createMobileMenu();
         this.setHamburger();
+        this.onResize();
       }
     };
     $window.on('resize', methods.onResize);
