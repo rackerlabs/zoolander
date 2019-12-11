@@ -87,7 +87,6 @@ $row-space: 35px;
 }
 
 .rsTl-article-read {
-  color: $white;
   font-size: 14px;
   font-weight: 600;
 }
@@ -601,6 +600,7 @@ $row-space: 35px;
 }
 
 @media only screen and (min-width: $screen-md-min) {
+  .rsTl-article-read,
   .rsTl-feature-title,
   .rsTl-feature-p {
     color: $white;
