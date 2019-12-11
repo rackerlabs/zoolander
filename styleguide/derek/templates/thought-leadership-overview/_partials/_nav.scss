@@ -1,4 +1,5 @@
 $nav-link-black: #00001e;
+$link-hover: #f9f9f9;
 
 @mixin center-items {
   align-items: center;
@@ -6,11 +7,14 @@ $nav-link-black: #00001e;
   justify-content: center;
 }
 
+.rsTl-nav-fixed {
+  position: fixed;
+}
+
 .rsTl-nav-container {
   @include clearfix;
   background-color: $white;
   border-bottom: 2px solid $nav-link-black;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 275;
@@ -19,10 +23,10 @@ $nav-link-black: #00001e;
 .rsTl-nav {
   // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
   @include xl-container;
-  -ms-grid-columns: 260px 1fr 181px 220px;
+  -ms-grid-columns: 180px 1fr 181px 220px;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: 260px 1fr 181px 220px;
+  grid-template-columns: 180px 1fr 181px 220px;
   margin: 0 auto;
 }
 
@@ -33,7 +37,7 @@ $nav-link-black: #00001e;
   display: flex;
   float: left;
   justify-content: flex-start;
-  padding: 25px;
+  padding: 8px 25px;
 }
 
 .rsTl-nav-img {
@@ -47,7 +51,7 @@ $nav-link-black: #00001e;
   -ms-grid-column: 3;
   border-left: 2px solid $nav-link-black;
   float: left;
-  padding: 25px;
+  padding: 8px 25px;
 }
 
 .rsTl-nav-sponsor {
@@ -56,7 +60,7 @@ $nav-link-black: #00001e;
   -ms-grid-column: 4;
   border-left: 2px solid $nav-link-black;
   float: left;
-  padding: 25px;
+  padding: 8px 25px;
 }
 
 .rsTl-nav-solveLogoContainer {
@@ -64,10 +68,16 @@ $nav-link-black: #00001e;
 }
 
 .rsTl-nav-logoContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
 .rsTl-nav-sponsorContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   position: relative;
   top: 2px;
   width: 68%;
@@ -75,17 +85,17 @@ $nav-link-black: #00001e;
 
 .rsTl-nav-sponsorText {
   display: inline-block;
-  font-size: 13px;
+  font-size: 11px;
   position: absolute;
-  top: -25px;
+  top: -15px;
 }
 
 .rsTl-nav-rackspaceSvg {
-  width: 100%;
+  width: 100px;
 }
 
 .rsTl-nav-sponsorSvg {
-  width: 85%;
+  width: 100px;
 }
 
 .rsTl-nav-rackspace {
@@ -98,7 +108,15 @@ $nav-link-black: #00001e;
 }
 
 .rsTl-nav-solveSvg {
-  width: 100%;
+  width: 125px;
+}
+
+
+@media screen and (max-width: $screen-sm-min - 1) {
+
+  .rsTl-nav-solveSvg {
+    width: 85px;
+  }
 }
 
 .rsTl-nav-links {
@@ -107,7 +125,7 @@ $nav-link-black: #00001e;
   align-items: center;
   display: flex;
   float: left;
-  padding: 25px;
+  padding: 8px 25px;
 }
 
 .rsTl-nav-list {
@@ -125,7 +143,7 @@ $nav-link-black: #00001e;
   padding: 0;
   position: absolute;
   right: 0;
-  top: 30px;
+  top: 33px;
   width: 200px;
   z-index: 10;
 }
@@ -159,9 +177,17 @@ $nav-link-black: #00001e;
   display: inline-block;
   position: relative;
   text-align: left;
+
+  &:hover {
+    .rsTl-nav-link {
+      background-color: $link-hover;
+      border-top: 1px solid $nav-link-black;
+    }
+  }
 }
 
 .rsTl-nav-link {
+  border-top: 1px solid transparent;
   color: $nav-link-black;
   display: inline-block;
   font-family: $copy;
@@ -169,7 +195,13 @@ $nav-link-black: #00001e;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 100%;
-  margin-right: 15px;
+  padding: 10px;
+  transition-duration: .2s;
+  z-index: 3;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .rsTl-nav-ddLink {
@@ -188,7 +220,7 @@ $nav-link-black: #00001e;
   display: none;
   float: left;
   justify-content: flex-end;
-  padding: 25px;
+  padding: 8px 25px;
 }
 
 .rsTl-nav-hamburgerBtn {
@@ -209,6 +241,10 @@ $nav-link-black: #00001e;
   }
 }
 
+.rsTl-nav-logoWrapper {
+  display: none;
+}
+
 // when nav is contained
 .rsTl-nav-contained {
 
@@ -218,8 +254,8 @@ $nav-link-black: #00001e;
 
   .rsTl-nav {
     // sass-lint:disable-block no-vendor-prefixes
-    -ms-grid-columns: (1fr)[4];
-    border-bottom: 0;
+    @include the-ms-special(4);
+    border-bottom: 2px solid $nav-link-black;
     grid-template-columns: repeat(4, 1fr);
     max-width: 100%;
     width: 100%;
@@ -232,6 +268,7 @@ $nav-link-black: #00001e;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-area: 1 / 1 / 2 / 2;
+    padding: 0 25px;
   }
 
   .rsTl-nav-links {
@@ -272,8 +309,9 @@ $nav-link-black: #00001e;
     -ms-grid-row-span: 1;
     background-color: $black;
     border-left: 0;
+    display: none;
     grid-area: 2 / 1 / 3 / 3;
-    height: 80px;
+    height: 60px;
   }
 
   .rsTl-nav-sponsor {
@@ -285,15 +323,33 @@ $nav-link-black: #00001e;
     background-color: $black;
     border-color: $white;
     color: $white;
+    display: none;
     grid-area: 2 / 3 / 3 / 5;
-    height: 80px;
+    height: 60px;
+  }
+
+  &.rsTl-nav-logoWrapper {
+    // sass-lint:disable-block no-vendor-prefixes
+    @include the-ms-special(4);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .rsTl-nav-rsLogo {
+      display: flex;
+    }
+
+    .rsTl-nav-sponsor {
+      display: flex;
+    }
   }
 
   .rsTl-nav-sponsorContainer {
+    display: block;
     text-align: center;
   }
 
   .rsTl-nav-sponsorText {
+    display: block;
     margin-bottom: 3px;
     position: relative;
     top: 0;
@@ -327,6 +383,12 @@ $nav-link-black: #00001e;
 
     &:last-child {
       border-bottom: 0;
+    }
+
+    &:hover {
+      .rsTl-nav-link {
+        border-top: 1px solid transparent;
+      }
     }
   }
 

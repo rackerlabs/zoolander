@@ -11,6 +11,7 @@ module.exports = {
       "Zoolander": true,
       "svgBannerGetAttributes": true,
       "svgBannerStringSplitter": true,
+      "MutationObserver": true
     },
     "rules": {
       // Errors.
