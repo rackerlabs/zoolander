@@ -23,6 +23,12 @@
   padding-top: $half-padding-top;
 }
 
+.youtube-container,
+.youtube-field-player {
+  max-width: 100%;
+}
+
+
 @media only screen and (min-width: $screen-sm-min) {
   .rsOnDemand-video-column {
     float: none;
