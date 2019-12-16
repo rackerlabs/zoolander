@@ -30,6 +30,13 @@ $link-hover: #f9f9f9;
   margin: 0 auto;
 }
 
+.rsTl-navSansLogo,
+.rsTl-navSansSponsor {
+  // sass-lint:disable-block no-vendor-prefixes
+  -ms-grid-columns: 180px 1fr 220px;
+  grid-template-columns: 180px 1fr 220px;
+}
+
 .rsTl-nav-logo {
   // sass-lint:disable-block no-vendor-prefixes
   -ms-grid-column: 1;
@@ -341,6 +348,12 @@ $link-hover: #f9f9f9;
     .rsTl-nav-sponsor {
       display: flex;
     }
+  }
+
+  &.rsTl-nav-logoWrapperSingleLogo {
+    // sass-lint:disable-block no-vendor-prefixes
+    @include the-ms-special(2);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .rsTl-nav-sponsorContainer {
