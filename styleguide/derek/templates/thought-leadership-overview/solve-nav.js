@@ -47,7 +47,9 @@
       },
       adjustNavSize() {
         $nav.removeClass('rsTl-nav-contained');
-        methods.$containedLogos.removeClass('rsTl-nav-contained');
+        if (methods.$containedLogos) {
+          methods.$containedLogos.removeClass('rsTl-nav-contained');
+        }
         const lines = methods.getLinkLines($linkList.get(0));
         if (lines < 3) {
           methods.navIsContained = false;
@@ -58,7 +60,9 @@
         } else {
           methods.navIsContained = true;
           $nav.addClass('rsTl-nav-contained');
-          methods.$containedLogos.addClass('rsTl-nav-contained');
+          if (methods.$containedLogos) {
+            methods.$containedLogos.addClass('rsTl-nav-contained');
+          }
         }
       },
       createMobileMenu() {
@@ -117,10 +121,26 @@
         const $logoWrapper = $('<div class="rsTl-nav-logoWrapper"></div>');
         const $sponser = $nav.find('.rsTl-nav-sponsor').clone();
         const $rsLogo = $nav.find('.rsTl-nav-rsLogo').clone();
-        $logoWrapper.append($rsLogo);
-        $logoWrapper.append($sponser);
-        $logoWrapper.insertBefore($nav);
-        methods.$containedLogos = $logoWrapper;
+
+        let logoCt = 0;
+
+        if ($rsLogo.length > 0) {
+          $logoWrapper.append($rsLogo);
+          logoCt += 1;
+        }
+        if ($sponser.length > 0) {
+          $logoWrapper.append($sponser);
+          logoCt += 1;
+        }
+
+        if (logoCt === 1) {
+          $logoWrapper.addClass('rsTl-nav-logoWrapperSingleLogo');
+        }
+
+        if (logoCt > 0) {
+          $logoWrapper.insertBefore($nav);
+          methods.$containedLogos = $logoWrapper;
+        }
       },
       startingLocation: null,
       setSticky(e) {
@@ -128,7 +148,7 @@
           $nav.removeClass('rsTl-nav-fixed');
         }
         if (methods.startingLocation === null || !e) {
-          methods.startingLocation = ~~($nav.offset().top); // eslint-disable-line          
+          methods.startingLocation = ~~($nav.offset().top); // eslint-disable-line
         }
         if (window.pageYOffset >= methods.startingLocation) {
           // only add class if it's not there
