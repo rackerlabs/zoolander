@@ -1,12 +1,9 @@
 // For portfolio tabs
 .portfolio-wrapper {
-  .keyoffersWidget {
-    background: $gray-lightest;
-  }
 
   .keyoffersWidget-hover {
     &:hover {
-      background: $gray-lighter;
+      background: $gray-lightest;
     }
   }
 }
