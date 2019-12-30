@@ -1,6 +1,8 @@
 language: node_js
 node_js:
-  - "6.10.0"
+  - "8.11.3"
+  - "10.18.0"
+  - "13.5.0"
 env:
   - CMD="sass:compile"
   - CMD="lint:sass"

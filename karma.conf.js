@@ -15,7 +15,6 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/babel-polyfill/dist/polyfill.js',
       'styleguide/global/plugins/hoverintent.js',
       'node_modules/jquery/dist/jquery.js',
       'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
@@ -40,7 +39,7 @@ module.exports = function (config) {
 
     babelPreprocessor: {
       options: {
-        presets: ['es2015'],
+        presets: ['@babel/preset-env'],
       },
     },
 

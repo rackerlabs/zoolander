@@ -17,7 +17,7 @@ changes in multiple browsers.)
 
 ## Requirements
 
-Node & NPM
+Node.js 8-13
 
 ## Getting Started (Step by Step)
 
@@ -38,18 +38,19 @@ For more information on versioning, see http://semver.org/
 
 ## Deploy
 
-Run the following command to deploy to github pages!
+Run the following command to deploy to [github pages!](https://rackerlabs.github.io/zoolander):
 
 ```
 npm run gh-pages
 ```
 
-## JS Linting
+## Linting
 
-Use the following command to manually lint zoolander JS
+Use the following command to manually lint zoolander Javascript and Sass.
 
 ```
-npm run js-lint
+npm run lint:js
+npm run lint:sass
 ```
 
 ## ES6 JS
@@ -94,7 +95,7 @@ Your new icon/icons should now be ready for use using the new classes like this:
 Or you can access them using css/scss like so:
 ```scss
 .some-class {
-  
+
   &:before {
     content: '\e851';
     font-family: 'rswebfonts';
