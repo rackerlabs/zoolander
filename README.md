@@ -38,7 +38,7 @@ For more information on versioning, see http://semver.org/
 
 ## Deploy
 
-Run the following command to deploy to github pages!
+Run the following command to deploy to [github pages!](https://rackerlabs.github.io/zoolander):
 
 ```
 npm run gh-pages
