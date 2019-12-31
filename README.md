@@ -89,7 +89,7 @@ Copy the line/lines and append them to the ```styleguide/_themes/global/scss/rsw
 
 Your new icon/icons should now be ready for use using the new classes like this:
 ```html
-<i class="rsweb yournewicon"></i>
+<span class="rsweb yournewicon"></span>
 ```
 
 Or you can access them using css/scss like so:
