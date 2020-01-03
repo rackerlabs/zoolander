@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // tab collapse
 jQuery('.rsTabs').tabCollapse();

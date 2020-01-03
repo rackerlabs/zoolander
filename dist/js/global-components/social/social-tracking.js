@@ -1,7 +1,6 @@
-'use strict';
+"use strict";
 
 /* eslint no-use-before-define: 0, no-undef: 0 */
-
 Zoolander.SocialTracking = function () {
   function FacebookTracking() {
     var button = document.getElementsByClassName('fb-share')[0];
@@ -15,7 +14,7 @@ Zoolander.SocialTracking = function () {
           socialTarget: e.view.location.href
         });
         var url = encodeURIComponent(e.view.location.href);
-        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'fbshare', 'height=500,width=670,left=50%,top=50%');
+        window.open("https://www.facebook.com/sharer/sharer.php?u=".concat(url), 'fbshare', 'height=500,width=670,left=50%,top=50%');
       });
     }
   }
@@ -32,11 +31,11 @@ Zoolander.SocialTracking = function () {
   function LinkedInTracking() {
     var intervalTime = 100;
     var maxAttempts = 3;
-    var runCt = 0;
+    var runCt = 0; // Hacky method to wait until IN-widget has been declared since no proper events exist.
 
-    // Hacky method to wait until IN-widget has been declared since no proper events exist.
     var myInterval = setInterval(function () {
       var button = document.getElementsByClassName('IN-widget')[0];
+
       if (typeof button !== 'undefined') {
         clearInterval(myInterval);
         button.addEventListener('click', function (e) {
@@ -49,6 +48,7 @@ Zoolander.SocialTracking = function () {
         });
       } else {
         runCt += 1;
+
         if (runCt > maxAttempts) {
           clearInterval(myInterval);
         }
@@ -85,21 +85,20 @@ Zoolander.SocialTracking = function () {
       EmailTracking();
     }
   };
-}();
+}(); // Facebook share tracking.
 
-// Facebook share tracking.
-Zoolander.SocialTracking.facebook();
 
-// Twitter Share Tracking
+Zoolander.SocialTracking.facebook(); // Twitter Share Tracking
+
 if (typeof twttr !== 'undefined') {
   twttr.ready(function (twttr) {
     twttr.events.bind('click', function (e) {
       Zoolander.SocialTracking.twitter(e);
     });
   });
-}
+} // LinkedIn Share Tracking
 
-// LinkedIn Share Tracking
+
 if (typeof IN !== 'undefined') {
   IN.Event.onOnce(IN, 'systemReady', function () {
     Zoolander.SocialTracking.linkedin();

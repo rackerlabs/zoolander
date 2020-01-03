@@ -1,9 +1,7 @@
 "use strict";
 
 /* eslint-disable */
-
 var Zoolander = Zoolander || {};
-
 /**
  * @file
  * This file should never be included directly. Rather, the code should be
@@ -14,6 +12,7 @@ var Zoolander = Zoolander || {};
 /**
  * Retrieves svg attribute values based on lineCt and ID.
  */
+
 function svgBannerGetAttributes(lineCt, id) {
   var height = lineCt * 45 + 50;
   var bottomSides = {
@@ -26,14 +25,16 @@ function svgBannerGetAttributes(lineCt, id) {
     bottomSide: bottomSides[id]
   };
 }
-
 /**
  * Splits a string based on characters.
  *
  * @see http://bit.ly/2zn664C
  */
+
+
 function svgBannerStringSplitter(str, l) {
   var strs = [];
+
   while (str.length > l) {
     var pos = str.substring(0, l).lastIndexOf(' ');
     pos = pos <= 0 ? l : pos;
@@ -42,13 +43,15 @@ function svgBannerStringSplitter(str, l) {
     if (i < pos || i > pos + l) i = pos;
     str = str.substring(i);
   }
+
   strs.push(str);
   return strs;
 }
-
 /**
  * Set's the svg content.
  */
+
+
 function svgBannerSetContent() {
   var primaryBox = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 25;
 
@@ -57,17 +60,21 @@ function svgBannerSetContent() {
     Zoolander.svgIsDrawn = false;
   } else if (Zoolander.svgIsDrawn) {
     return;
-  }
-  // Add content lines.
+  } // Add content lines.
+
+
   var boxTextLimits = {
     primaryBox: primaryBox,
     secondaryBox: 20
   };
+
   for (var id in boxTextLimits) {
     var parent = document.getElementById(id);
+
     if (!parent) {
       continue;
     }
+
     var el = parent.querySelector('.text');
     var sourceText = el.childNodes[1].textContent ? el.childNodes[1].textContent : el.childNodes[1].innerText;
     var lines = svgBannerStringSplitter(sourceText, boxTextLimits[id]);
@@ -84,12 +91,13 @@ function svgBannerSetContent() {
       el.appendChild(tspan);
     }
   }
+
   Zoolander.svgIsDrawn = true;
 }
 
 var runAnimations = function runAnimations(el) {
-  window.sr = ScrollReveal();
-  // header box
+  window.sr = ScrollReveal(); // header box
+
   sr.reveal(el, {
     duration: 850,
     opacity: 0,

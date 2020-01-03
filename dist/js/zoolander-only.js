@@ -1,18 +1,16 @@
-'use strict';
+"use strict";
 
 (function ($) {
   // tooltip
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip(); // dropdowns
 
-  // dropdowns
   $('.navZoolander-hasDropdown').unbind().click(function (e) {
     e.preventDefault();
     var $el = jQuery(e.currentTarget);
     $el.next('.navZoolander-dropdown').slideToggle(200);
     $el.toggleClass('hasDropDown-active');
-  });
+  }); // Slide toggle the zoolander nav
 
-  // Slide toggle the zoolander nav
   var zoolanderSlideBtn = $('.navZoolander-slideBtn');
   zoolanderSlideBtn.unbind().click(function (e) {
     e.preventDefault();

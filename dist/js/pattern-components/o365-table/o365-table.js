@@ -1,6 +1,7 @@
-'use strict';
+"use strict";
 
 /* global navigator */
+
 /**
  The Rackspace o365 table plugin takes an optional object parameter to define any fixed
  elements already in the DOM so that the plugin can calculate those heights. You can also
@@ -32,21 +33,20 @@
       setWidth: function setWidth(data) {
         var $wd = data.$header.outerWidth() + data.border;
         return data.$stickyTable.css({
-          width: $wd + 'px'
+          width: "".concat($wd, "px")
         });
       },
       buildMobile: function buildMobile(data, o) {
-        data.$mobileTable.insertAfter(data.$table);
-        // take each table header and build the mobile containers
+        data.$mobileTable.insertAfter(data.$table); // take each table header and build the mobile containers
+
         data.$header.find('.rsPricingTable-head-th').each(function buildMobile() {
           var $this = $(this);
           var $mhead = $this.clone(true);
           var $mobileRow = $('<tr class="rsPricingTable-mobile-row"></tr>');
           $mobileRow = $mobileRow.append($mhead);
           data.$mobileTable.append($mobileRow);
-        });
+        }); // find each row of data to append to each mobile header
 
-        // find each row of data to append to each mobile header
         data.$table.find('.rsPricingTable-body-tr').each(function buildMobile() {
           var $row = $(this);
           $row.find('td').each(function makeData() {
@@ -54,26 +54,26 @@
             var $newTd = $td.clone(true);
             var tdIndex = $td.index();
             var $tdRow = data.$mobileTable.find('.rsPricingTable-mobile-row').eq(tdIndex);
-            $tdRow.append($newTd);
-            // if using first column data for mobile labels, we hide
+            $tdRow.append($newTd); // if using first column data for mobile labels, we hide
             // the first column in mobile so there is no redundency.
+
             if (o.labelFirstCol && tdIndex === 0) {
               $tdRow.find('.rsPricingTable-body-td').hide();
             }
           });
-        });
+        }); // build mobile table lables if using first col as mobile label
 
-        // build mobile table lables if using first col as mobile label
         if (o.labelFirstCol) {
           var $mobileRow = data.$mobileTable.find('.rsPricingTable-mobile-row');
           var $mobileHeaderRow = $mobileRow.eq(0);
           $mobileRow.each(function buildLabels() {
             var $row = $(this);
             var $labels = $mobileHeaderRow.find('.rsPricingTable-body-td');
+
             if ($row.index() !== 0) {
               $row.find('td').each(function label() {
                 var $td = $(this);
-                $td.prepend('<strong class="rsPricingTable-mobile-label">\n                    ' + $labels.eq($td.index() - 1).html() + '\n                  </strong>');
+                $td.prepend("<strong class=\"rsPricingTable-mobile-label\">\n                    ".concat($labels.eq($td.index() - 1).html(), "\n                  </strong>"));
               });
             }
           });
@@ -119,17 +119,18 @@
         if (data.$win.outerWidth() > o.minScreen) {
           var winTop = Math.round(data.$win.scrollTop());
           var tableTop = data.$header.offset().top - methods.buffer;
-          var tableBottom = tableTop + data.$tableBody.outerHeight();
-          // once user scrolls to the top of the table, yet within the bottom of table
+          var tableBottom = tableTop + data.$tableBody.outerHeight(); // once user scrolls to the top of the table, yet within the bottom of table
+
           methods.setWidth(data);
+
           if (winTop > tableTop && winTop < tableBottom) {
             // make sure this won't run if in a hidden tab
             if (o.inTabs && data.$tab.is(':visible')) {
               methods.stickTable(data, 'from bottom');
             } else if (!o.inTabs) {
               methods.stickTable(data, 'from bottom');
-            }
-            // methods.stickTable(data, 'at top');
+            } // methods.stickTable(data, 'at top');
+
           } else if (winTop < tableBottom) {
             // above table yet not to the top yet
             methods.unStickTable(data);
@@ -138,17 +139,18 @@
             // we want the header to appear like it is stuck to the bottom of table
             // as you scroll further down the page.
             var tBorder = data.border;
-            var transform = 'translateY(' + methods.getYcoords({
+            var transform = "translateY(".concat(methods.getYcoords({
               winTop: winTop,
               tableBottom: tableBottom,
               tBorder: tBorder
-            }) + 'px)';
-            // make sure this won't run if in a hidden tab
+            }), "px)"); // make sure this won't run if in a hidden tab
+
             if (o.inTabs && data.$tab.is(':visible')) {
               methods.stickTable(data);
             } else if (!o.inTabs) {
               methods.stickTable(data);
             }
+
             data.$stickyTable.css({
               transform: transform
             });
@@ -161,20 +163,20 @@
           methods.unStickTable(data);
         }
       }
-    };
-    // loop each table and run
+    }; // loop each table and run
+
     $(this).each(function init() {
       var override = methods.isIE() ? ' rsPricingTable-borderSep' : '';
       var $table = $(this);
       var $header = $table.find('.rsPricingTable-head');
-      var $stickyTable = $('<table class="rsPricingTable-sticky' + override + '">' + $header.html() + '</table>');
+      var $stickyTable = $("<table class=\"rsPricingTable-sticky".concat(override, "\">").concat($header.html(), "</table>"));
       var $mobileTable = $('<table class="rsPricingTable-mobile"></table>');
       var $tableBody = $table.find('.rsPricingTable-body');
       var $win = $(window);
       var resize = null;
       var border = parseInt($table.css('borderWidth'), 10);
-      border = $.isNumeric(border) ? border * 2 : 2;
-      // data of elements we need to use as payloads
+      border = $.isNumeric(border) ? border * 2 : 2; // data of elements we need to use as payloads
+
       var data = {
         $table: $table,
         $header: $header,
@@ -183,20 +185,21 @@
         $win: $win,
         $tableBody: $tableBody,
         border: border
-      };
-      // set defaults in case no options are passed
+      }; // set defaults in case no options are passed
+
       var defaults = {
         minScreen: 991,
         fixedElements: [],
         labelFirstCol: false,
         inTabs: false
       };
-      var opts = $.extend(true, {}, defaults, options);
-      // find the corresponding tab if in one
+      var opts = $.extend(true, {}, defaults, options); // find the corresponding tab if in one
+
       if (opts.inTabs) {
         data.$tab = $table.closest('.tab-pane');
-      }
-      // init all the needed methods
+      } // init all the needed methods
+
+
       methods.makeBuffer(opts.fixedElements);
       methods.addHiddenTable(data);
       methods.buildMobile(data, opts);

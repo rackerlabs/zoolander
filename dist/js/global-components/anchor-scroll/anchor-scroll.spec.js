@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 describe('Anchor click scroll', function () {
   it('should subtract nav from top offset', function () {

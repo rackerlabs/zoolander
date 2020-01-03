@@ -1,9 +1,7 @@
-'use strict';
+"use strict";
 
 /* eslint no-use-before-define: 0 */
-
 var Zoolander = Zoolander || {};
-
 Zoolander.rsFilterBar = {
   calcAtBottom: function calcAtBottom(dimensions) {
     var defaults = {
@@ -30,25 +28,26 @@ Zoolander.rsFilterBar = {
       stickyItemTop: 0,
       windowTop: 0
     };
-    var values = Object.assign(defaults, dimensions);
-    // wt = pixels from top of window to top of scrolled area
+    var values = Object.assign(defaults, dimensions); // wt = pixels from top of window to top of scrolled area
+
     var filterFormHeight = values.filterFormOuterHeight;
+
     if (!values.isInBounds) {
       values.stickyItemTop = values.filterFormOffsetTop;
-    }
-    // check if sticky form is scrolled passed top nav
-    var windowTopInBounds = values.stickyItemTop - values.mainNavHeight < values.windowTop;
-    // get bottom offset of side bar
-    var filterBottom = values.filterBarOuterHeight + values.filterBarOffsetTop;
-    // top val of scrolled window + height of form (not bar)
-    var formBottom = values.windowTop + filterFormHeight + values.mainNavHeight + 10;
-    // if bottom of fixed form is not passed bottom of filter side bar
+    } // check if sticky form is scrolled passed top nav
+
+
+    var windowTopInBounds = values.stickyItemTop - values.mainNavHeight < values.windowTop; // get bottom offset of side bar
+
+    var filterBottom = values.filterBarOuterHeight + values.filterBarOffsetTop; // top val of scrolled window + height of form (not bar)
+
+    var formBottom = values.windowTop + filterFormHeight + values.mainNavHeight + 10; // if bottom of fixed form is not passed bottom of filter side bar
+
     var filterInBounds = formBottom < filterBottom;
     return windowTopInBounds && filterInBounds;
   }
-};
+}; // Filter bar plugin
 
-// Filter bar plugin
 (function ($) {
   $.fn.rsFilterBar = function rsFilterBar() {
     // Variable declarations
@@ -58,15 +57,14 @@ Zoolander.rsFilterBar = {
     var $rsWindow = $(window);
     var inBounds = false;
     var atBottom = false;
-    var stickyItemTopValue = void 0;
+    var stickyItemTopValue; // Callback to get new form width on resizing/scrolling
 
-    // Callback to get new form width on resizing/scrolling
     function getWidth(bar, padding) {
       var width = bar.outerWidth(true) - padding;
       return width;
-    }
+    } // Callback to check if inbounds of side menu
 
-    // Callback to check if inbounds of side menu
+
     function checkInBounds() {
       var dimensions = {
         filterBarOffsetTop: $filterBar.offset().top,
@@ -78,7 +76,6 @@ Zoolander.rsFilterBar = {
         stickyItemTop: stickyItemTopValue,
         windowTop: $rsWindow.scrollTop()
       };
-
       atBottom = Zoolander.rsFilterBar.calcAtBottom(dimensions);
       return Zoolander.rsFilterBar.calcInBounds(dimensions);
     }
@@ -87,26 +84,24 @@ Zoolander.rsFilterBar = {
       var $barPadding = parseInt($filterBar.css('padding-left'), 10) + parseInt($filterBar.css('padding-right'), 10);
       var $filterHamburger = $filterBar.find('.rsFilter-hamburger');
       stickyItemTopValue = $filterForm.offset().top;
-      var resizeTimer = void 0;
+      var resizeTimer;
       var isFixed = false;
-
       $filterHamburger.click(function () {
         $filterForm.toggleClass('rsFilter-mobileForm');
         setTimeout(function () {
           $filterForm.toggleClass('rsFilter-mobileForm-effect');
         }, 100);
       });
-
       $rsWindow.scroll(function () {
         // If not in mobile
         if ($rsWindow.outerWidth() > 767) {
-          inBounds = checkInBounds();
-          // If user scrolls to filter form and is in the bounds of the bar, move form up and down
+          inBounds = checkInBounds(); // If user scrolls to filter form and is in the bounds of the bar, move form up and down
+
           if (inBounds) {
             $filterForm.css({
               position: 'fixed',
               top: $mainNavHeight + 10,
-              width: getWidth($filterBar, $barPadding) + 'px'
+              width: "".concat(getWidth($filterBar, $barPadding), "px")
             });
             isFixed = true;
           } else if (atBottom) {
@@ -114,7 +109,7 @@ Zoolander.rsFilterBar = {
               bottom: '10px',
               position: 'absolute',
               top: '',
-              width: getWidth($filterBar, $barPadding) + 'px'
+              width: "".concat(getWidth($filterBar, $barPadding), "px")
             });
           } else if (!inBounds && !atBottom) {
             $filterForm.css({
@@ -126,10 +121,9 @@ Zoolander.rsFilterBar = {
             isFixed = false;
           }
         }
-      });
-
-      // Set a slight delay to the resize functionality so that it doesn't
+      }); // Set a slight delay to the resize functionality so that it doesn't
       // run on every pixel of a browser resize
+
       $rsWindow.resize(function () {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
@@ -138,12 +132,12 @@ Zoolander.rsFilterBar = {
             if (!isFixed && inBounds) {
               $filterForm.css({
                 position: 'fixed',
-                width: getWidth($filterBar, $barPadding) + 'px'
+                width: "".concat(getWidth($filterBar, $barPadding), "px")
               });
               isFixed = true;
             } else if (isFixed && inBounds) {
               $filterForm.css({
-                width: getWidth($filterBar, $barPadding) + 'px'
+                width: "".concat(getWidth($filterBar, $barPadding), "px")
               });
             } else if (isFixed && !inBounds) {
               $filterForm.css({
@@ -155,7 +149,7 @@ Zoolander.rsFilterBar = {
                 bottom: '10px',
                 position: 'absolute',
                 top: '',
-                width: getWidth($filterBar, $barPadding) + 'px'
+                width: "".concat(getWidth($filterBar, $barPadding), "px")
               });
             }
           } else {
@@ -163,6 +157,7 @@ Zoolander.rsFilterBar = {
             $filterForm.css({
               width: ''
             });
+
             if (isFixed) {
               $filterForm.css({
                 position: '',

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Filter bar plugin
 (function ($) {
@@ -12,7 +12,6 @@
     var $hamburger = $filterBar.find('.rsFilter-sideBar-hamburger');
     var $formContent = $filterBar.find('.rsFilter-sideBar-content');
     var frameRate = 150;
-
     var actions = {
       openActive: function openActive($el) {
         // close all siblings
@@ -37,7 +36,6 @@
       toggleForm: function toggleForm() {
         $formContent.slideToggle(frameRate);
       },
-
       resizeTimer: null,
       resetForm: function resetForm() {
         clearTimeout(this.resizeTimer);
@@ -47,26 +45,23 @@
           }
         }, 100);
       }
-    };
+    }; // bind click events to each section
 
-    // bind click events to each section
     $item.click(function (e) {
       e.stopPropagation();
       actions.openActive($(e.currentTarget));
-    });
-    // bind click for hamburger in mobile
+    }); // bind click for hamburger in mobile
+
     $hamburger.click(function (e) {
       e.preventDefault();
       actions.toggleForm();
-    });
-    // show form again if coming from mobile -> desktop and form has been collapsed
-    $window.resize(actions.resetForm);
+    }); // show form again if coming from mobile -> desktop and form has been collapsed
 
-    // set first accordion item active
+    $window.resize(actions.resetForm); // set first accordion item active
+
     var $first = $filterBar.find('.rsFilter-sideBar-accItem').first();
     $first.find('.rsFilter-sideBar-accLabel').addClass('rsFilter-sideBar-active');
     $first.find('.rsFilter-sideBar-accItemContent').show();
-
     return this;
   };
 })(jQuery);

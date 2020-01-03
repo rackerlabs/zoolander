@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 (function ($) {
   $.fn.solveNav = function solveNav() {
@@ -25,9 +25,11 @@
         var fontSize = parseInt(style.getPropertyValue('font-size'), 10);
         var lineHeight = parseInt(style.getPropertyValue('line-height'), 10);
         var boxSizing = style.getPropertyValue('box-sizing');
+
         if ($.isNumeric(lineHeight)) {
           lineHeight = fontSize * 1.2;
         }
+
         if (boxSizing === 'border-box') {
           var paddingTop = parseInt(style.getPropertyValue('padding-top'), 10);
           var paddingBottom = parseInt(style.getPropertyValue('padding-bottom'), 10);
@@ -35,10 +37,10 @@
           var borderBottom = parseInt(style.getPropertyValue('border-bottom-width'), 10);
           height = height - paddingTop - paddingBottom - borderTop - borderBottom;
         }
+
         var lines = Math.ceil(height / lineHeight);
         return lines;
       },
-
       resizeTimer: null,
       onResize: function onResize() {
         clearTimeout(methods.resizeTimer);
@@ -49,12 +51,16 @@
       },
       adjustNavSize: function adjustNavSize() {
         $nav.removeClass('rsTl-nav-contained');
+
         if (methods.$containedLogos) {
           methods.$containedLogos.removeClass('rsTl-nav-contained');
         }
+
         var lines = methods.getLinkLines($linkList.get(0));
+
         if (lines < 3) {
           methods.navIsContained = false;
+
           if (methods.$mobileNav && methods.$mobileNav.is(':visible')) {
             methods.$mobileNav.hide();
             $hamburger.removeClass('rsTl-nav-hamburgerOpen');
@@ -62,6 +68,7 @@
         } else {
           methods.navIsContained = true;
           $nav.addClass('rsTl-nav-contained');
+
           if (methods.$containedLogos) {
             methods.$containedLogos.addClass('rsTl-nav-contained');
           }
@@ -88,7 +95,7 @@
           var $ddLink = $(this);
           var $nextMenu = $ddLink.next('.rsTl-nav-subList');
           var delay = 400;
-          var offTimer = void 0;
+          var offTimer;
           $ddLink.mouseover(function () {
             if (!methods.navIsContained) {
               clearTimeout(offTimer);
@@ -102,8 +109,8 @@
             }
           }).click(function (e) {
             e.preventDefault();
-          });
-          // make when hovering over the sublinks it won't collapse
+          }); // make when hovering over the sublinks it won't collapse
+
           $nextMenu.mouseover(function () {
             if (!methods.navIsContained) {
               clearTimeout(offTimer);
@@ -118,19 +125,18 @@
           });
         });
       },
-
       $containedLogos: null,
       copyLogos: function copyLogos() {
         var $logoWrapper = $('<div class="rsTl-nav-logoWrapper"></div>');
         var $sponser = $nav.find('.rsTl-nav-sponsor').clone();
         var $rsLogo = $nav.find('.rsTl-nav-rsLogo').clone();
-
         var logoCt = 0;
 
         if ($rsLogo.length > 0) {
           $logoWrapper.append($rsLogo);
           logoCt += 1;
         }
+
         if ($sponser.length > 0) {
           $logoWrapper.append($sponser);
           logoCt += 1;
@@ -145,15 +151,16 @@
           methods.$containedLogos = $logoWrapper;
         }
       },
-
       startingLocation: null,
       setSticky: function setSticky(e) {
         if ($nav.hasClass('rsTl-nav-fixed')) {
           $nav.removeClass('rsTl-nav-fixed');
         }
+
         if (methods.startingLocation === null || !e) {
           methods.startingLocation = ~~$nav.offset().top; // eslint-disable-line
         }
+
         if (window.pageYOffset >= methods.startingLocation) {
           // only add class if it's not there
           if (!$nav.hasClass('rsTl-nav-fixed')) {
@@ -163,7 +170,7 @@
       },
       adjustContent: function adjustContent() {
         if (!$nav.hasClass('rsTl-nav-contained') && $nav.hasClass('rsTl-nav-fixed')) {
-          $content.css('margin-top', $nav.outerHeight() + 'px');
+          $content.css('margin-top', "".concat($nav.outerHeight(), "px"));
         } else {
           $content.css('margin-top', '');
         }

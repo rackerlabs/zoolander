@@ -1,7 +1,6 @@
-'use strict';
+"use strict";
 
 /* eslint no-use-before-define: 0 */
-
 var Zoolander = Zoolander || {};
 var dataLayer = dataLayer || [];
 
@@ -18,7 +17,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-ceilingCall').on('click', function () {
       dataLayer.push({
         event: 'rs.call_click',
@@ -29,7 +27,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-secondCTA').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -40,7 +37,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-subnavEmail').on('click', function () {
       dataLayer.push({
         event: 'rs.form_click',
@@ -51,7 +47,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-pageCall').on('click', function () {
       dataLayer.push({
         event: 'rs.call_click',
@@ -62,7 +57,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-pageEmail').on('click', function () {
       dataLayer.push({
         event: 'rs.form_click',
@@ -73,7 +67,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-loginMyRack').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -84,7 +77,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-loginApps').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -95,7 +87,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-loginFaws').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -106,7 +97,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-loginCloudOffice').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -117,7 +107,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-loginCloudCp').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -128,7 +117,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-loginGcp').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -139,7 +127,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-loginOnePortal').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -150,7 +137,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.track-backToTop').on('click', function () {
       dataLayer.push({
         event: 'ga.event',
@@ -161,7 +147,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $(document).on('click', '.track-signupCTA', function (e) {
       var protocol = $(e.target).prop('protocol');
       var hostname = $(e.target).prop('hostname');
@@ -170,12 +155,11 @@ Zoolander.Tracking = function Tracking($) {
         event: 'ga.event',
         eventCategory: 'Signup',
         eventAction: 'Signup Click CTA',
-        eventLabel: protocol + '//' + hostname + pathname,
+        eventLabel: "".concat(protocol, "//").concat(hostname).concat(pathname),
         eventValue: '0',
         eventNonInteraction: 0
       });
     });
-
     $(document).on('click', '.track-cta', function (e) {
       dataLayer.push({
         event: 'cta.click',
@@ -186,7 +170,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('.rsFilter-form').on('submit', function (e) {
       dataLayer.push({
         event: 'ga.event',
@@ -196,7 +179,6 @@ Zoolander.Tracking = function Tracking($) {
         eventValue: '0',
         eventNonInteraction: 0
       });
-
       dataLayer.push({
         event: 'ga.event',
         eventCategory: 'Resource Center',
@@ -206,7 +188,6 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
-
     $('a.navbar-topLink, .navbar-dropDownLink, .navbar-tertiary-dropDownLink').on('click', function (e) {
       dataLayer.push({
         event: 'ga.event',
@@ -224,7 +205,6 @@ Zoolander.Tracking = function Tracking($) {
     elements.each(function (i, v) {
       values.push(v.value);
     });
-
     return values.sort().join(':');
   }
 
@@ -233,7 +213,6 @@ Zoolander.Tracking = function Tracking($) {
       $.trim(item);
       return item.firstChild.innerText;
     });
-
     return getLinkStr(linkAr);
   }
 
