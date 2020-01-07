@@ -1,1509 +1,2857 @@
-<!DOCTYPE html><html lang="en"><head><base href="/"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><meta name="description" content=""><meta name="author" content=""><meta name="format-detection" content="telephone=no"><link rel="icon" href="favicon.ico"><title>Zoolander Style Guide</title><link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"><link href="css/derek.css" rel="stylesheet"><link href="undefined" rel="stylesheet"><link href="css/main.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/modernizr.min.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/jquery.fittext.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js"></script></head><body><div class="row row-eq-height"><button class="navZoolander-slideBtn navZoolander-leftArrow navZoolander-slideBtn-collapsed"></button><div class="navZoolander-container navZoolander-container-collapsed"><div class="siteHeader-logo"><div class="siteHeader-logoImg"></div></div><ul class="navZoolander-list"><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Home</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="./" class="navZoolander-dropdownLink">Welcome</a></li><li class="navZoolander-item"><a href="global/styleguide" class="navZoolander-dropdownLink">Living Styleguide</a></li><li class="navZoolander-item"><a href="global/contributing" class="navZoolander-dropdownLink">Contributing</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Brand Guidelines</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="global/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="global/brand-elements" class="navZoolander-dropdownLink">Brand Elements</a></li><li class="navZoolander-item"><a href="global/voice" class="navZoolander-dropdownLink">Voice and Tone</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Global Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-dropdownItem"><a href="derek/global-theme/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/typography" class="navZoolander-dropdownLink">Typography</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/photography" class="navZoolander-dropdownLink">Photography/Banners</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/swatches" class="navZoolander-dropdownLink">Colors/Swatches</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/icon-font" class="navZoolander-dropdownLink">Icon Font</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/buttons" class="navZoolander-dropdownLink">Buttons/CTAs</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/tables/tables" class="navZoolander-dropdownLink">Tables</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/forms" class="navZoolander-dropdownLink">Forms</a></li></ul></li><!--Add in themes dropdown when there are multiple--><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Ecommerce Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="derek/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="derek/templates" class="navZoolander-dropdownLink">Templates</a></li><li class="navZoolander-item"><a href="derek/patterns/patterns" class="navZoolander-dropdownLink">Patterns</a></li><li class="navZoolander-item"><a href="derek/assets" class="navZoolander-dropdownLink">Asset Library</a></li><li class="navZoolander-item"><a href="derek/incubation" class="navZoolander-dropdownLink">Dev Sandbox</a></li></ul></li></ul></div></div><div id="mainContainer" class="mainContainer mainContainer-collapsed"><div class="standard-padding"><div class="container">
-  <div class="rsTabs-container rsTabsHorizontal-container">
-    <ul class="nav nav-tabs rsTabs rsTabsHorizontal">
-      <li class="rsTab-tab active"><a class="rsTab-link rsTabHorizontal-link" href="#tab" data-toggle="tab">Font-Awesome</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-2" data-toggle="tab">Auto/Cont</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-3" data-toggle="tab">Dedicated</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-4" data-toggle="tab">Cloud</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-5" data-toggle="tab">Managed</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-6" data-toggle="tab">Services</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-7" data-toggle="tab">General</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-8" data-toggle="tab">Idiograms</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-9" data-toggle="tab">Other</a></li>
+<!DOCTYPE html><html lang="en"><head><base href="/"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><meta name="description" content=""><meta name="author" content=""><meta name="format-detection" content="telephone=no"><link rel="icon" href="favicon.ico"><title>Zoolander Style Guide</title><link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"><link href="css/derek.css" rel="stylesheet"><link href="undefined" rel="stylesheet"><link href="css/main.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/modernizr.min.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/jquery.fittext.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js"></script></head><body><div class="row row-eq-height"><button class="navZoolander-slideBtn navZoolander-leftArrow navZoolander-slideBtn-collapsed"></button><div class="navZoolander-container navZoolander-container-collapsed"><div class="siteHeader-logo"><div class="siteHeader-logoImg"></div></div><ul class="navZoolander-list"><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Home</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="./" class="navZoolander-dropdownLink">Welcome</a></li><li class="navZoolander-item"><a href="global/styleguide" class="navZoolander-dropdownLink">Living Styleguide</a></li><li class="navZoolander-item"><a href="global/contributing" class="navZoolander-dropdownLink">Contributing</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Brand Guidelines</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="global/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="global/brand-elements" class="navZoolander-dropdownLink">Brand Elements</a></li><li class="navZoolander-item"><a href="global/voice" class="navZoolander-dropdownLink">Voice and Tone</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Global Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-dropdownItem"><a href="derek/global-theme/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/typography" class="navZoolander-dropdownLink">Typography</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/photography" class="navZoolander-dropdownLink">Photography/Banners</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/swatches" class="navZoolander-dropdownLink">Colors/Swatches</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/icon-font" class="navZoolander-dropdownLink">Icon Font</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/buttons" class="navZoolander-dropdownLink">Buttons/CTAs</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/tables/tables" class="navZoolander-dropdownLink">Tables</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/forms" class="navZoolander-dropdownLink">Forms</a></li></ul></li><!--Add in themes dropdown when there are multiple--><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Ecommerce Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="derek/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="derek/templates" class="navZoolander-dropdownLink">Templates</a></li><li class="navZoolander-item"><a href="derek/patterns/patterns" class="navZoolander-dropdownLink">Patterns</a></li><li class="navZoolander-item"><a href="derek/assets" class="navZoolander-dropdownLink">Asset Library</a></li><li class="navZoolander-item"><a href="derek/incubation" class="navZoolander-dropdownLink">Dev Sandbox</a></li></ul></li></ul></div></div><div id="mainContainer" class="mainContainer mainContainer-collapsed"><div class="standard-padding"><div class="row">
+  <div class="col-md-12">
+    <h4 class="red no-margin">Rackspace</h4>
+    <h2 class="no-margin">Iconography</h2>
+  </div>
+</div>
+
+<div class="row standard-padding-top">
+  <div class="col-md-8">
+    <p>
+      Our icons help us to express the attributes of our brand, products, services, workloads, technology and  ideas  in ways that are immediately recognizable.
+    </p>
+    <p>
+      We use icons as a graphical representation of a product, service, workload, technology or  idea. They should not stand alone. instead, they should be accompanied by a headline or body copy, and the corporate logo should appear somewhere on the same page or asset.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="row standard-padding-top">
+  <div class="col-md-8">
+    <h5 class="red">Rules</h5>
+    <ul>
+      <li>icons are one color and used  in dark, medium and light gray.</li>
+      <li>An icon should be used  in the context of an  idea, service offering, solution area or workload where possible (paired with solution area/workload names, part of an  ideogram, diagram or  illustration).</li>
+      <li>Make sure that all icons used together have the same line weight.</li>
     </ul>
-    <div id="myTabContent" class="tab-content rsTabs-content rsTabsHorizontal-content">
-      <div class="tab-pane active" id="tab">
-        <div title="Code: 0x2709" class="iconDoc-wrapper">
-          <span class="fa fa-envelope-o"></span>
-          <p class="iconDoc-name">envelope-o</p>
-          <p class="iconDoc-code">0x2709</p>
-        </div>
-        <div title="Code: 0xe800" class="iconDoc-wrapper">
-          <span class="fa fa-print"></span>
-          <p class="iconDoc-name">print</p>
-          <p class="iconDoc-code">0xe800</p>
-        </div>
-        <div title="Code: 0xe801" class="iconDoc-wrapper">
-          <span class="fa fa-caret-right"></span>
-          <p class="iconDoc-name">caret-right</p>
-          <p class="iconDoc-code">0xe801</p>
-        </div>
-        <div title="Code: 0xe802" class="iconDoc-wrapper">
-          <span class="fa fa-comments"></span>
-          <p class="iconDoc-name">comments</p>
-          <p class="iconDoc-code">0xe802</p>
-        </div>
-        <div title="Code: 0xe803" class="iconDoc-wrapper">
-          <span class="fa fa-times"></span>
-          <p class="iconDoc-name">times</p>
-          <p class="iconDoc-code">0xe803</p>
-        </div>
-        <div title="Code: 0xe804" class="iconDoc-wrapper">
-          <span class="fa fa-exclamation-circle"></span>
-          <p class="iconDoc-name">exclamation-circle</p>
-          <p class="iconDoc-code">0xe804</p>
-        </div>
-        <div title="Code: 0xe805" class="iconDoc-wrapper">
-          <span class="fa fa-bullhorn"></span>
-          <p class="iconDoc-name">bullhorn</p>
-          <p class="iconDoc-code">0xe805</p>
-        </div>
-        <div title="Code: 0xe806" class="iconDoc-wrapper">
-          <span class="fa fa-caret-down"></span>
-          <p class="iconDoc-name">caret-down</p>
-          <p class="iconDoc-code">0xe806</p>
-        </div>
-        <div title="Code: 0xe807" class="iconDoc-wrapper">
-          <span class="fa fa-check"></span>
-          <p class="iconDoc-name">check</p>
-          <p class="iconDoc-code">0xe807</p>
-        </div>
-        <div title="Code: 0xe808" class="iconDoc-wrapper">
-          <span class="fa fa-wrench"></span>
-          <p class="iconDoc-name">wrench</p>
-          <p class="iconDoc-code">0xe808</p>
-        </div>
-        <div title="Code: 0xe809" class="iconDoc-wrapper">
-          <span class="fa fa-plus"></span>
-          <p class="iconDoc-name">plus</p>
-          <p class="iconDoc-code">0xe809</p>
-        </div>
-        <div title="Code: 0xe80a" class="iconDoc-wrapper">
-          <span class="fa fa-globe"></span>
-          <p class="iconDoc-name">globe</p>
-          <p class="iconDoc-code">0xe80a</p>
-        </div>
-        <div title="Code: 0xe80b" class="iconDoc-wrapper">
-          <span class="fa fa-gear"></span>
-          <p class="iconDoc-name">gear</p>
-          <p class="iconDoc-code">0xe80b</p>
-        </div>
-        <div title="Code: 0xe80c" class="iconDoc-wrapper">
-          <span class="fa fa-phone"></span>
-          <p class="iconDoc-name">phone</p>
-          <p class="iconDoc-code">0xe80c</p>
-        </div>
-        <div title="Code: 0xe80d" class="iconDoc-wrapper">
-          <span class="fa fa-sign-in"></span>
-          <p class="iconDoc-name">sign-in</p>
-          <p class="iconDoc-code">0xe80d</p>
-        </div>
-        <div title="Code: 0xf08e" class="iconDoc-wrapper">
-          <span class="fa fa-external-link"></span>
-          <p class="iconDoc-name">external-link</p>
-          <p class="iconDoc-code">0xf08e</p>
-        </div>
-        <div title="Code: 0xf099" class="iconDoc-wrapper">
-          <span class="fa fa-twitter"></span>
-          <p class="iconDoc-name">twitter</p>
-          <p class="iconDoc-code">0xf099</p>
-        </div>
-        <div title="Code: 0xf09a" class="iconDoc-wrapper">
-          <span class="fa fa-facebook"></span>
-          <p class="iconDoc-name">facebook</p>
-          <p class="iconDoc-code">0xf09a</p>
-        </div>
-        <div title="Code: 0xf0aa" class="iconDoc-wrapper">
-          <span class="fa fa-arrow-circle-up"></span>
-          <p class="iconDoc-name">arrow-circle-up</p>
-          <p class="iconDoc-code">0xf0aa</p>
-        </div>
-        <div title="Code: 0xf0c8" class="iconDoc-wrapper">
-          <span class="fa fa-square"></span>
-          <p class="iconDoc-name">square</p>
-          <p class="iconDoc-code">0xf0c8</p>
-        </div>
-        <div title="Code: 0xf0c9" class="iconDoc-wrapper">
-          <span class="fa fa-menu"></span>
-          <p class="iconDoc-name">fa-menu</p>
-          <p class="iconDoc-code">0xf0c9</p>
-        </div>
-        <div title="Code: 0xf0d4" class="iconDoc-wrapper">
-          <span class="fa fa-google-plus-square"></span>
-          <p class="iconDoc-name">google-plus-square</p>
-          <p class="iconDoc-code">0xf0d4</p>
-        </div>
-        <div title="Code: 0xf0d5" class="iconDoc-wrapper">
-          <span class="fa fa-google-plus"></span>
-          <p class="iconDoc-name">google-plus</p>
-          <p class="iconDoc-code">0xf0d5</p>
-        </div>
-        <div title="Code: 0xf0d6" class="iconDoc-wrapper">
-          <span class="fa fa-money"></span>
-          <p class="iconDoc-name">money</p>
-          <p class="iconDoc-code">0xf0d6</p>
-        </div>
-        <div title="Code: 0xf0e0" class="iconDoc-wrapper">
-          <span class="fa fa-mail-alt"></span>
-          <p class="iconDoc-name">fa-mail-alt</p>
-          <p class="iconDoc-code">0xf0e0</p>
-        </div>
-        <div title="Code: 0xf0e1" class="iconDoc-wrapper">
-          <span class="fa fa-linkedin"></span>
-          <p class="iconDoc-name">linkedin</p>
-          <p class="iconDoc-code">0xf0e1</p>
-        </div>
-        <div title="Code: 0xf0f2" class="iconDoc-wrapper">
-          <span class="fa fa-suitcase"></span>
-          <p class="iconDoc-name">suitcase</p>
-          <p class="iconDoc-code">0xf0f2</p>
-        </div>
-        <div title="Code: 0xf104" class="iconDoc-wrapper">
-          <span class="fa fa-angle-left"></span>
-          <p class="iconDoc-name">angle-left</p>
-          <p class="iconDoc-code">0xf104</p>
-        </div>
-        <div title="Code: 0xf105" class="iconDoc-wrapper">
-          <span class="fa fa-angle-right"></span>
-          <p class="iconDoc-name">angle-right</p>
-          <p class="iconDoc-code">0xf105</p>
-        </div>
-        <div title="Code: 0xf10b" class="iconDoc-wrapper">
-          <span class="fa fa-mobile"></span>
-          <p class="iconDoc-name">mobile</p>
-          <p class="iconDoc-code">0xf10b</p>
-        </div>
-        <div title="Code: 0xf10d" class="iconDoc-wrapper">
-          <span class="fa fa-quote-left"></span>
-          <p class="iconDoc-name">quote-left</p>
-          <p class="iconDoc-code">0xf10d</p>
-        </div>
-        <div title="Code: 0xf10e" class="iconDoc-wrapper">
-          <span class="fa fa-quote-right"></span>
-          <p class="iconDoc-name">quote-right</p>
-          <p class="iconDoc-code">0xf10e</p>
-        </div>
-        <div title="Code: 0xf110" class="iconDoc-wrapper">
-          <span class="fa fa-spinner"></span>
-          <p class="iconDoc-name">spinner</p>
-          <p class="iconDoc-code">0xf110</p>
-        </div>
-        <div title="Code: 0xf143" class="iconDoc-wrapper">
-          <span class="fa fa-rss-square"></span>
-          <p class="iconDoc-name">rss-square</p>
-          <p class="iconDoc-code">0xf143</p>
-        </div>
-        <div title="Code: 0xf15c" class="iconDoc-wrapper">
-          <span class="fa fa-file-text"></span>
-          <p class="iconDoc-name">file-text</p>
-          <p class="iconDoc-code">0xf15c</p>
-        </div>
-        <div title="Code: 0xf166" class="iconDoc-wrapper">
-          <span class="fa fa-youtube-square"></span>
-          <p class="iconDoc-name">youtube-square</p>
-          <p class="iconDoc-code">0xf166</p>
-        </div>
-        <div title="Code: 0xf167" class="iconDoc-wrapper">
-          <span class="fa fa-youtube"></span>
-          <p class="iconDoc-name">youtube</p>
-          <p class="iconDoc-code">0xf167</p>
-        </div>
-        <div title="Code: 0xf16a" class="iconDoc-wrapper">
-          <span class="fa fa-youtube-play"></span>
-          <p class="iconDoc-name">youtube-play</p>
-          <p class="iconDoc-code">0xf16a</p>
-        </div>
-        <div title="Code: 0xf190" class="iconDoc-wrapper">
-          <span class="fa fa-arrow-circle-o-left"></span>
-          <p class="iconDoc-name">arrow-circle-o-left</p>
-          <p class="iconDoc-code">0xf190</p>
-        </div>
-        <div title="Code: 0xf1c1" class="iconDoc-wrapper">
-          <span class="fa fa-file-pdf-o"></span>
-          <p class="iconDoc-name">file-pdf-o</p>
-          <p class="iconDoc-code">0xf1c1</p>
-        </div>
-        <div title="Code: 0xf1c9" class="iconDoc-wrapper">
-          <span class="fa fa-file-code-o"></span>
-          <p class="iconDoc-name">file-code-o</p>
-          <p class="iconDoc-code">0xf1c9</p>
-        </div>
-        <div title="Code: 0xf1ce" class="iconDoc-wrapper">
-          <span class="fa fa-circle-o-notch"></span>
-          <p class="iconDoc-name">circle-o-notch</p>
-          <p class="iconDoc-code">0xf1ce</p>
-        </div>
-        <div title="Code: 0xf1ea" class="iconDoc-wrapper">
-          <span class="fa fa-newspaper-o"></span>
-          <p class="iconDoc-name">newspaper-o</p>
-          <p class="iconDoc-code">0xf1ea</p>
-        </div>
-        <div title="Code: 0xf230" class="iconDoc-wrapper">
-          <span class="fa fa-facebook-official"></span>
-          <p class="iconDoc-name">facebook-official</p>
-          <p class="iconDoc-code">0xf230</p>
-        </div>
-        <div title="Code: 0xf233" class="iconDoc-wrapper">
-          <span class="fa fa-server"></span>
-          <p class="iconDoc-name">server</p>
-          <p class="iconDoc-code">0xf233</p>
-        </div>
-        <div title="Code: 0xf234" class="iconDoc-wrapper">
-          <span class="fa fa-user-plus"></span>
-          <p class="iconDoc-name">user-plus</p>
-          <p class="iconDoc-code">0xf234</p>
-        </div>
-        <div title="Code: 0xf300" class="iconDoc-wrapper">
-          <span class="fa fa-github-square"></span>
-          <p class="iconDoc-name">github-square</p>
-          <p class="iconDoc-code">0xf300</p>
-        </div>
-        <div title="Code: 0xf304" class="iconDoc-wrapper">
-          <span class="fa fa-twitter-square"></span>
-          <p class="iconDoc-name">twitter-square</p>
-          <p class="iconDoc-code">0xf304</p>
-        </div>
-        <div title="Code: 0xf30c" class="iconDoc-wrapper">
-          <span class="fa fa-linkedin-square"></span>
-          <p class="iconDoc-name">linkedin-square</p>
-          <p class="iconDoc-code">0xf30c</p>
-        </div>
-        <div title="Code: 0x1f50d" class="iconDoc-wrapper">
-          <span class="fa fa-search"></span>
-          <p class="iconDoc-name">search</p>
-          <p class="iconDoc-code">0x1f50d</p>
-        </div>
-        <div title="Code: 0x1f107" class="iconDoc-wrapper">
-          <span class="fa fa-angle-down"></span>
-          <p class="iconDoc-name">angle-down</p>
-          <p class="iconDoc-code">0x1f107</p>
-        </div>
-        <div title="Code: 0x1f106" class="iconDoc-wrapper">
-          <span class="fa fa-angle-up"></span>
-          <p class="iconDoc-name">angle-up</p>
-          <p class="iconDoc-code">0x1f106</p>
-        </div>
-      </div>
-      <div class="tab-pane" id="tab-2">
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-md-12">
+    <h5 class="red">Usage:</h5>
+    <p>
+      in order to use the Rackspace web font  in your markup you will need to put in <code>&#60;span class="rsweb name-of-icon">&#60;/span&#62;</code> replacing "name-of-icon" with the name that appears underneath the  icon you've chosen.
+    </p>
+    <p>
+      To change the font color to white add the class "white" to your  icon class.
+    </p>
+    <h6>Example</h6>
+    <code>&#60;span class="rsweb name-of-icon white"&#62;</code>
+  </div>
+</div>
+
+<div class="row half-padding">
+  <div class="col-md-6">
+    <h4>Downloads</h4>
+    <ul>
+      <li>
+        <a href="../assets/brand-icon.zip">Global Icon Font</a>
+      </li>
+      <li>
+        <a href="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/font/icon/rsweb.ttf">Font Files</a>
+      </li>
+      <li>
+        <a href="icons/icons.zip">Svg's</a>
+      </li>
+      <li>
+        <a href="icons/iconpack.json">JSON file</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h5 class="red">Available icons: </h5>
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
         <div title="Code: 0xe82f" class="iconDoc-wrapper">
-          <span class="rsweb cont-security-monitoring"></span>
-          <p class="iconDoc-name">cont-security-monitoring</p>
-          <p class="iconDoc-code">0xe82f</p>
-        </div>
-        <div title="Code: 0xe830" class="iconDoc-wrapper">
-          <span class="rsweb cont-preformance-tuning"></span>
-          <p class="iconDoc-name">cont-preformance-tuning</p>
-          <p class="iconDoc-code">0xe830</p>
-        </div>
-        <div title="Code: 0xe831" class="iconDoc-wrapper">
-          <span class="rsweb cont-code-review"></span>
-          <p class="iconDoc-name">cont-code-review</p>
-          <p class="iconDoc-code">0xe831</p>
-        </div>
-        <div title="Code: 0xe832" class="iconDoc-wrapper">
-          <span class="rsweb cont-checklist"></span>
-          <p class="iconDoc-name">cont-checklist</p>
-          <p class="iconDoc-code">0xe832</p>
-        </div>
-        <div title="Code: 0xe833" class="iconDoc-wrapper">
-          <span class="rsweb cont-certification"></span>
-          <p class="iconDoc-name">cont-certification</p>
-          <p class="iconDoc-code">0xe833</p>
-        </div>
-        <div title="Code: 0xe834" class="iconDoc-wrapper">
-          <span class="rsweb cont-around-the-clock"></span>
-          <p class="iconDoc-name">cont-around-the-clock</p>
-          <p class="iconDoc-code">0xe834</p>
-        </div>
-        <div title="Code: 0xe835" class="iconDoc-wrapper">
-          <span class="rsweb auto-process"></span>
-          <p class="iconDoc-name">auto-process</p>
-          <p class="iconDoc-code">0xe835</p>
-        </div>
-        <div title="Code: 0xe836" class="iconDoc-wrapper">
-          <span class="rsweb auto-cdn-propagation"></span>
-          <p class="iconDoc-name">auto-cdn-propagation</p>
-          <p class="iconDoc-code">0xe836</p>
-        </div>
-        <div title="Code: 0xe900" class="iconDoc-wrapper">
-          <span class="rsweb auto-compute"></span>
-          <p class="iconDoc-name">auto-compute</p>
-          <p class="iconDoc-code">0xe900</p>
-        </div>
-        <div title="Code: 0xe901" class="iconDoc-wrapper">
-          <span class="rsweb auto-maintenance"></span>
-          <p class="iconDoc-name">auto-maintenance</p>
-          <p class="iconDoc-code">0xe901</p>
-        </div>
-        <div title="Code: 0xe902" class="iconDoc-wrapper">
-          <span class="rsweb auto-os-maintenance"></span>
-          <p class="iconDoc-name">auto-os-maintenance</p>
-          <p class="iconDoc-code">0xe902</p>
-        </div>
-        <div title="Code: 0xe993" class="iconDoc-wrapper">
-          <span class="rsweb cont-health-checks"></span>
-          <p class="iconDoc-name">cont-health-checks</p>
-          <p class="iconDoc-code">0xe993</p>
-        </div>
-        <div title="Code: 0xe9eb" class="iconDoc-wrapper">
-          <span class="rsweb cont-certification"></span>
-          <p class="iconDoc-name">cont-certification</p>
-          <p class="iconDoc-code">0xe9eb</p>
-        </div>
-        <div title="Code: 0xe988" class="iconDoc-wrapper">
-          <span class="rsweb auto-around-the-world"></span>
-          <p class="iconDoc-name">auto-around-the-world</p>
-          <p class="iconDoc-code">0xe988</p>
-        </div>
-        <div title="Code: 0xe98e" class="iconDoc-wrapper">
-          <span class="rsweb cont-calculations"></span>
-          <p class="iconDoc-name">cont-calculations</p>
-          <p class="iconDoc-code">0xe98e</p>
-        </div>
-         <div title="Code: 0xe996" class="iconDoc-wrapper">
-          <span class="rsweb cont-security"></span>
-          <p class="iconDoc-name">cont-security</p>
-          <p class="iconDoc-code">0xe996</p>
-        </div>
-        <div title="Code: 0xe925" class="iconDoc-wrapper">
-          <span class="rsweb cont-monitoring"></span>
-          <p class="iconDoc-name">cont-monitoring</p>
-          <p class="iconDoc-code">0xe925</p>
-        </div>
-      </div>
-      <div class="tab-pane" id="tab-3">
-        <div title="Code: 0xe82c" class="iconDoc-wrapper">
-          <span class="rsweb ded-networking"></span>
-          <p class="iconDoc-name">ded-networking</p>
-          <p class="iconDoc-code">0xe82c</p>
-        </div>
-        <div title="Code: 0xe82d" class="iconDoc-wrapper">
-          <span class="rsweb ded-email"></span>
-          <p class="iconDoc-name">ded-email</p>
-          <p class="iconDoc-code">0xe82d</p>
-        </div>
-        <div title="Code: 0xe82e" class="iconDoc-wrapper">
-          <span class="rsweb ded-api-services"></span>
-          <p class="iconDoc-name">ded-api-services</p>
-          <p class="iconDoc-code">0xe82e</p>
-        </div>
-        <div title="Code: 0xe929" class="iconDoc-wrapper">
-          <span class="rsweb ded-big-data"></span>
-          <p class="iconDoc-name">ded-big-data</p>
-          <p class="iconDoc-code">0xe929</p>
-        </div>
-        <div title="Code: 0xe92a" class="iconDoc-wrapper">
-          <span class="rsweb ded-control-panel"></span>
-          <p class="iconDoc-name">ded-control-panel</p>
-          <p class="iconDoc-code">0xe92a</p>
-        </div>
-        <div title="Code: 0xe92c" class="iconDoc-wrapper">
-          <span class="rsweb ded-databases"></span>
-          <p class="iconDoc-name">ded-databases</p>
-          <p class="iconDoc-code">0xe92c</p>
-        </div>
-        <div title="Code: 0xe92d" class="iconDoc-wrapper">
-          <span class="rsweb ded-email"></span>
-          <p class="iconDoc-name">ded-email</p>
-          <p class="iconDoc-code">0xe92d</p>
-        </div>
-        <div title="Code: 0xe92e" class="iconDoc-wrapper">
-          <span class="rsweb ded-hosting"></span>
-          <p class="iconDoc-name">ded-hosting</p>
-          <p class="iconDoc-code">0xe92e</p>
-        </div>
-        <div title="Code: 0xe92f" class="iconDoc-wrapper">
-          <span class="rsweb ded-load-balancers"></span>
-          <p class="iconDoc-name">ded-load-balancers</p>
-          <p class="iconDoc-code">0xe92f</p>
-        </div>
-        <div title="Code: 0xe930" class="iconDoc-wrapper">
-          <span class="rsweb ded-log-management"></span>
-          <p class="iconDoc-name">ded-log-management</p>
-          <p class="iconDoc-code">0xe930</p>
-        </div>
-        <div title="Code: 0xe931" class="iconDoc-wrapper">
-          <span class="rsweb ded-managed-virualization"></span>
-          <p class="iconDoc-name">ded-managed-virualization</p>
-          <p class="iconDoc-code">0xe931</p>
-        </div>
-        <div title="Code: 0xe932" class="iconDoc-wrapper">
-          <span class="rsweb ded-monitoring"></span>
-          <p class="iconDoc-name">ded-monitoring</p>
-          <p class="iconDoc-code">0xe932</p>
-        </div>
-        <div title="Code: 0xe933" class="iconDoc-wrapper">
-          <span class="rsweb ded-security"></span>
-          <p class="iconDoc-name">ded-security</p>
-          <p class="iconDoc-code">0xe933</p>
-        </div>
-        <div title="Code: 0xe934" class="iconDoc-wrapper">
-          <span class="rsweb ded-server-lg"></span>
-          <p class="iconDoc-name">ded-server-lg</p>
-          <p class="iconDoc-code">0xe934</p>
-        </div>
-        <div title="Code: 0xe938" class="iconDoc-wrapper">
-          <span class="rsweb ded-storage"></span>
-          <p class="iconDoc-name">ded-storage</p>
-          <p class="iconDoc-code">0xe938</p>
-        </div>
-        <div title="Code: 0xe927" class="iconDoc-wrapper">
-          <span class="rsweb ded-api-services"></span>
-          <p class="iconDoc-name">ded-api-services</p>
-          <p class="iconDoc-code">0xe927</p>
-        </div>
-        <div title="Code: 0xe928" class="iconDoc-wrapper">
-          <span class="rsweb ded-backup"></span>
-          <p class="iconDoc-name">ded-backup</p>
-          <p class="iconDoc-code">0xe928</p>
-        </div>
-        <div title="Code: 0xe939" class="iconDoc-wrapper">
-          <span class="rsweb ded-support"></span>
-          <p class="iconDoc-name">ded-support</p>
-          <p class="iconDoc-code">0xe939</p>
-        </div>
-        <div title="Code: 0xe999" class="iconDoc-wrapper">
-          <span class="rsweb ded-dns"></span>
-          <p class="iconDoc-name">ded-dns</p>
-          <p class="iconDoc-code">0xe999</p>
-        </div>
-        <div title="Code: 0xe99c" class="iconDoc-wrapper">
-          <span class="rsweb ded-tools"></span>
-          <p class="iconDoc-name">ded-tools</p>
-          <p class="iconDoc-code">0xe99c</p>
-        </div>
-      </div>
-      <div class="tab-pane" id="tab-4">
-        <div class="row">
-          <div title="Code: 0xe909" class="iconDoc-wrapper">
-            <span class="rsweb cl-big-data"></span>
-            <p class="iconDoc-name">cl-big-data</p>
-            <p class="iconDoc-code">0xe909</p>
-          </div>
-          <div title="Code: 0xe90a" class="iconDoc-wrapper">
-            <span class="rsweb cl-block-storage"></span>
-            <p class="iconDoc-name">cl-block-storage</p>
-            <p class="iconDoc-code">0xe90a</p>
-          </div>
-          <div title="Code: 0xe90b" class="iconDoc-wrapper">
-            <span class="rsweb cl-cdn"></span>
-            <p class="iconDoc-name">cl-cdn</p>
-            <p class="iconDoc-code">0xe90b</p>
-          </div>
-          <div title="Code: 0xe90c" class="iconDoc-wrapper">
-            <span class="rsweb cl-control-panel"></span>
-            <p class="iconDoc-name">cl-control-panel</p>
-            <p class="iconDoc-code">0xe90c</p>
-          </div>
-          <div title="Code: 0xe90d" class="iconDoc-wrapper">
-            <span class="rsweb cl-databases"></span>
-            <p class="iconDoc-name">cl-databases</p>
-            <p class="iconDoc-code">0xe90d</p>
-          </div>
-          <div title="Code: 0xe90f" class="iconDoc-wrapper">
-            <span class="rsweb cl-email"></span>
-            <p class="iconDoc-name">cl-email</p>
-            <p class="iconDoc-code">0xe90f</p>
-          </div>
-          <div title="Code: 0xe910" class="iconDoc-wrapper">
-            <span class="rsweb cl-email-archive"></span>
-            <p class="iconDoc-name">cl-email-archive</p>
-            <p class="iconDoc-code">0xe910</p>
-          </div>
-          <div title="Code: 0xe911" class="iconDoc-wrapper">
-            <span class="rsweb cl-files"></span>
-            <p class="iconDoc-name">cl-files</p>
-            <p class="iconDoc-code">0xe911</p>
-          </div>
-          <div title="Code: 0xe912" class="iconDoc-wrapper">
-            <span class="rsweb cl-hybrid"></span>
-            <p class="iconDoc-name">cl-hybrid</p>
-            <p class="iconDoc-code">0xe912</p>
-          </div>
-          <div title="Code: 0xe914" class="iconDoc-wrapper">
-            <span class="rsweb cl-load-balancers"></span>
-            <p class="iconDoc-name">cl-load-balancers</p>
-            <p class="iconDoc-code">0xe914</p>
-          </div>
-          <div title="Code: 0xe915" class="iconDoc-wrapper">
-            <span class="rsweb cl-monitoring"></span>
-            <p class="iconDoc-name">cl-monitoring</p>
-            <p class="iconDoc-code">0xe915</p>
-          </div>
-          <div title="Code: 0xe916" class="iconDoc-wrapper">
-            <span class="rsweb cl-networks"></span>
-            <p class="iconDoc-name">cl-networks</p>
-            <p class="iconDoc-code">0xe916</p>
-          </div>
-          <div title="Code: 0xe917" class="iconDoc-wrapper">
-            <span class="rsweb cl-office"></span>
-            <p class="iconDoc-name">cl-office</p>
-            <p class="iconDoc-code">0xe917</p>
-          </div>
-          <div title="Code: 0xe918" class="iconDoc-wrapper">
-            <span class="rsweb cl-orchestration"></span>
-            <p class="iconDoc-name">cl-orchestration</p>
-            <p class="iconDoc-code">0xe918</p>
-          </div>
-          <div title="Code: 0xe919" class="iconDoc-wrapper">
-            <span class="rsweb cl-private-cloud"></span>
-            <p class="iconDoc-name">cl-private-cloud</p>
-            <p class="iconDoc-code">0xe919</p>
-          </div>
-          <div title="Code: 0xe91b" class="iconDoc-wrapper">
-            <span class="rsweb cl-registry"></span>
-            <p class="iconDoc-name">cl-registry</p>
-            <p class="iconDoc-code">0xe91b</p>
-          </div>
-          <div title="Code: 0xe91c" class="iconDoc-wrapper">
-            <span class="rsweb cl-scale-apps"></span>
-            <p class="iconDoc-name">cl-scale-apps</p>
-            <p class="iconDoc-code">0xe91c</p>
-          </div>
-          <div title="Code: 0xe91d" class="iconDoc-wrapper">
-            <span class="rsweb cl-security"></span>
-            <p class="iconDoc-name">cl-security</p>
-            <p class="iconDoc-code">0xe91d</p>
-          </div>
-          <div title="Code: 0xe921" class="iconDoc-wrapper">
-            <span class="rsweb cl-servers"></span>
-            <p class="iconDoc-name">cl-servers</p>
-            <p class="iconDoc-code">0xe921</p>
-          </div>
-          <div title="Code: 0xe922" class="iconDoc-wrapper">
-            <span class="rsweb cl-sites"></span>
-            <p class="iconDoc-name">cl-sites</p>
-            <p class="iconDoc-code">0xe922</p>
-          </div>
-          <div title="Code: 0xe923" class="iconDoc-wrapper">
-            <span class="rsweb cl-tools"></span>
-            <p class="iconDoc-name">cl-tools</p>
-            <p class="iconDoc-code">0xe923</p>
-          </div>
-          <div title="Code: 0xe98c" class="iconDoc-wrapper">
-            <span class="rsweb cl-remote-storage"></span>
-            <p class="iconDoc-name">cl-remote-storage</p>
-            <p class="iconDoc-code">0xe98c</p>
-          </div>
-          <div title="Code: 0xe907" class="iconDoc-wrapper">
-            <span class="rsweb cl-autoscale"></span>
-            <p class="iconDoc-name">cl-autoscale</p>
-            <p class="iconDoc-code">0xe907</p>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane" id="tab-5">
-          <div title="Code: 0xe985" class="iconDoc-wrapper">
-            <span class="rsweb mng-24x7"></span>
-            <p class="iconDoc-name">mng-24x7</p>
-            <p class="iconDoc-code">0xe985</p>
-          </div>
-          <div title="Code: 0xe986" class="iconDoc-wrapper">
-            <span class="rsweb mng-access"></span>
-            <p class="iconDoc-name">mng-access</p>
-            <p class="iconDoc-code">0xe986</p>
-          </div>
-          <div title="Code: 0xe987" class="iconDoc-wrapper">
-            <span class="rsweb mng-advisors"></span>
-            <p class="iconDoc-name">mng-advisors</p>
-            <p class="iconDoc-code">0xe987</p>
-          </div>
-          <div title="Code: 0xe989" class="iconDoc-wrapper">
-            <span class="rsweb mng-apps"></span>
-            <p class="iconDoc-name">mng-apps</p>
-            <p class="iconDoc-code">0xe989</p>
-          </div>
-          <div title="Code: 0xe98b" class="iconDoc-wrapper">
-            <span class="rsweb mng-cloud"></span>
-            <p class="iconDoc-name">mng-cloud</p>
-            <p class="iconDoc-code">0xe98b</p>
-          </div>
-          <div title="Code: 0xe98d" class="iconDoc-wrapper">
-            <span class="rsweb mng-databases"></span>
-            <p class="iconDoc-name">mng-databases</p>
-            <p class="iconDoc-code">0xe98d</p>
-          </div>
-          <div title="Code: 0xe98f" class="iconDoc-wrapper">
-            <span class="rsweb mng-generic"></span>
-            <p class="iconDoc-name">mng-generic</p>
-            <p class="iconDoc-code">0xe98f</p>
-          </div>
-          <div title="Code: 0xe990" class="iconDoc-wrapper">
-            <span class="rsweb mng-guarantee"></span>
-            <p class="iconDoc-name">mng-guarantee</p>
-            <p class="iconDoc-code">0xe990</p>
-          </div>
-          <div title="Code: 0xe991" class="iconDoc-wrapper">
-            <span class="rsweb mng-infrastructure"></span>
-            <p class="iconDoc-name">mng-infrastructure</p>
-            <p class="iconDoc-code">0xe991</p>
-          </div>
-          <div title="Code: 0xe992" class="iconDoc-wrapper">
-            <span class="rsweb mng-installation"></span>
-            <p class="iconDoc-name">mng-installation</p>
-            <p class="iconDoc-code">0xe992</p>
-          </div>
-          <div title="Code: 0xe994" class="iconDoc-wrapper">
-            <span class="rsweb mng-monitoring"></span>
-            <p class="iconDoc-name">mng-monitoring</p>
-            <p class="iconDoc-code">0xe994</p>
-          </div>
-          <div title="Code: 0xe995" class="iconDoc-wrapper">
-            <span class="rsweb mng-os-support"></span>
-            <p class="iconDoc-name">mng-os-support</p>
-            <p class="iconDoc-code">0xe995</p>
-          </div>
-          <div title="Code: 0xe9ca" class="iconDoc-wrapper">
-            <span class="rsweb mng-recovery"></span>
-            <p class="iconDoc-name">mng-recovery</p>
-            <p class="iconDoc-code">0xe9ca</p>
-          </div>
-          <div title="Code: 0xe997" class="iconDoc-wrapper">
-            <span class="rsweb mng-performance"></span>
-            <p class="iconDoc-name">mng-performance</p>
-            <p class="iconDoc-code">0xe997</p>
-          </div>
-          <div title="Code: 0xe998" class="iconDoc-wrapper">
-            <span class="rsweb mng-power"></span>
-            <p class="iconDoc-name">mng-power</p>
-            <p class="iconDoc-code">0xe998</p>
-          </div>
-          <div title="Code: 0xe9c9" class="iconDoc-wrapper">
-            <span class="rsweb mng-control-panel"></span>
-            <p class="iconDoc-name">mng-control-panel</p>
-            <p class="iconDoc-code">0xe9c9</p>
-          </div>
-            <div title="Code: 0xe9a0" class="iconDoc-wrapper">
-            <span class="rsweb mng-support"></span>
-            <p class="iconDoc-name">mng-support</p>
-            <p class="iconDoc-code">0xe9a0</p>
-          </div>
-          <div title="Code: 0xe9cb" class="iconDoc-wrapper">
-            <span class="rsweb mng-threat"></span>
-            <p class="iconDoc-name">mng-threat</p>
-            <p class="iconDoc-code">0xe9cb</p>
-          </div>
-          <div title="Code: 0xe9cc" class="iconDoc-wrapper">
-            <span class="rsweb mng-virtualization"></span>
-            <p class="iconDoc-name">mng-virtualization</p>
-            <p class="iconDoc-code">0xe9cc</p>
-          </div>
-          <div title="Code: 0xe9cd" class="iconDoc-wrapper">
-            <span class="rsweb mng-world-wide-support"></span>
-            <p class="iconDoc-name">mng-world-wide-support</p>
-            <p class="iconDoc-code">0xe9cd</p>
-          </div>
-          <div title="Code: 0xe99a" class="iconDoc-wrapper">
-            <span class="rsweb mng-response"></span>
-            <p class="iconDoc-name">mng-response</p>
-            <p class="iconDoc-code">0xe99a</p>
-          </div>
-          <div title="Code: 0xe99b" class="iconDoc-wrapper">
-            <span class="rsweb mng-security"></span>
-            <p class="iconDoc-name">mng-security</p>
-            <p class="iconDoc-code">0xe99b</p>
-          </div>
-          <div title="Code: 0xe99d" class="iconDoc-wrapper">
-            <span class="rsweb mng-service"></span>
-            <p class="iconDoc-name">mng-service</p>
-            <p class="iconDoc-code">0xe99d</p>
-          </div>
-      </div>
-      <div class="tab-pane" id="tab-6">
-          <div title="Code: 0xe9aa" class="iconDoc-wrapper">
-            <span class="rsweb srv-code-deployment"></span>
-            <p class="iconDoc-name">srv-code-deployment</p>
-            <p class="iconDoc-code">0xe9aa</p>
-          </div>
-          <div title="Code: 0xe9ab" class="iconDoc-wrapper">
-            <span class="rsweb srv-content-management"></span>
-            <p class="iconDoc-name">srv-content-management</p>
-            <p class="iconDoc-code">0xe9ab</p>
-          </div>
-          <div title="Code: 0xe9ac" class="iconDoc-wrapper">
-            <span class="rsweb srv-custom-apps"></span>
-            <p class="iconDoc-name">srv-custom-apps</p>
-            <p class="iconDoc-code">0xe9ac</p>
-          </div>
-          <div title="Code: 0xe9ad" class="iconDoc-wrapper">
-            <span class="rsweb srv-data-storage"></span>
-            <p class="iconDoc-name">srv-data-storage</p>
-            <p class="iconDoc-code">0xe9ad</p>
-          </div>
-          <div title="Code: 0xe9a3" class="iconDoc-wrapper">
-            <span class="rsweb srv-advisory"></span>
-            <p class="iconDoc-name">srv-advisory</p>
-            <p class="iconDoc-code">0xe9a3</p>
-          </div>
-          <div title="Code: 0xe9a4" class="iconDoc-wrapper">
-            <span class="rsweb srv-anti-virus"></span>
-            <p class="iconDoc-name">srv-anti-virus</p>
-            <p class="iconDoc-code">0xe9a4</p>
-          </div>
-          <div title="Code: 0xe9a5" class="iconDoc-wrapper">
-            <span class="rsweb srv-architecture"></span>
-            <p class="iconDoc-name">srv-architecture</p>
-            <p class="iconDoc-code">0xe9a5</p>
-          </div>
-          <div title="Code: 0xe9a6" class="iconDoc-wrapper">
-            <span class="rsweb srv-archiving"></span>
-            <p class="iconDoc-name">srv-archiving</p>
-            <p class="iconDoc-code">0xe9a6</p>
-          </div>
-          <div title="Code: 0xe9a7" class="iconDoc-wrapper">
-            <span class="rsweb srv-backup"></span>
-            <p class="iconDoc-name">srv-backup</p>
-            <p class="iconDoc-code">0xe9a7</p>
-          </div>
-          <div title="Code: 0xe9a8" class="iconDoc-wrapper">
-            <span class="rsweb srv-backups"></span>
-            <p class="iconDoc-name">srv-backups</p>
-            <p class="iconDoc-code">0xe9a8</p>
-          </div>
-          <div title="Code: 0xe9ae" class="iconDoc-wrapper">
-            <span class="rsweb srv-database"></span>
-            <p class="iconDoc-name">srv-database</p>
-            <p class="iconDoc-code">0xe9ae</p>
-          </div>
-          <div title="Code: 0xe9af" class="iconDoc-wrapper">
-            <span class="rsweb srv-design-build-2"></span>
-            <p class="iconDoc-name">srv-design-build-2</p>
-            <p class="iconDoc-code">0xe9af</p>
-          </div>
-          <div title="Code: 0xe9b1" class="iconDoc-wrapper">
-            <span class="rsweb srv-devops"></span>
-            <p class="iconDoc-name">srv-devops</p>
-            <p class="iconDoc-code">0xe9b1</p>
-          </div>
-          <div title="Code: 0xe9b2" class="iconDoc-wrapper">
-            <span class="rsweb srv-digital"></span>
-            <p class="iconDoc-name">srv-digital</p>
-            <p class="iconDoc-code">0xe9b2</p>
-          </div>
-          <div title="Code: 0xe9b3" class="iconDoc-wrapper">
-            <span class="rsweb srv-disaster-recovery"></span>
-            <p class="iconDoc-name">srv-disaster-recovery</p>
-            <p class="iconDoc-code">0xe9b3</p>
-          </div>
-          <div title="Code: 0xe9b4" class="iconDoc-wrapper">
-            <span class="rsweb srv-ecommerce"></span>
-            <p class="iconDoc-name">srv-ecommerce</p>
-            <p class="iconDoc-code">0xe9b4</p>
-          </div>
-          <div title="Code: 0xe9b5" class="iconDoc-wrapper">
-            <span class="rsweb srv-email"></span>
-            <p class="iconDoc-name">srv-email</p>
-            <p class="iconDoc-code">0xe9b5</p>
-          </div>
-            <div title="Code: 0xe9b7" class="iconDoc-wrapper">
-            <span class="rsweb srv-guidance"></span>
-            <p class="iconDoc-name">srv-guidance</p>
-            <p class="iconDoc-code">0xe9b7</p>
-          </div>
-          <div title="Code: 0xe9b9" class="iconDoc-wrapper">
-            <span class="rsweb srv-migration"></span>
-            <p class="iconDoc-name">srv-migration</p>
-            <p class="iconDoc-code">0xe9b9</p>
-          </div>
-            <div title="Code: 0xe9ba" class="iconDoc-wrapper">
-            <span class="rsweb srv-monitoring"></span>
-            <p class="iconDoc-name">srv-monitoring</p>
-            <p class="iconDoc-code">0xe9ba</p>
-          </div>
-          <div title="Code: 0xe9bb" class="iconDoc-wrapper">
-            <span class="rsweb srv-rich-media"></span>
-            <p class="iconDoc-name">srv-rich-media</p>
-            <p class="iconDoc-code">0xe9bb</p>
-          </div>
-          <div title="Code: 0xe9bc" class="iconDoc-wrapper">
-            <span class="rsweb srv-saas"></span>
-            <p class="iconDoc-name">srv-saas</p>
-            <p class="iconDoc-code">0xe9bc</p>
-          </div>
-          <div title="Code: 0xe9be" class="iconDoc-wrapper">
-            <span class="rsweb srv-test-dev"></span>
-            <p class="iconDoc-name">srv-test-dev</p>
-            <p class="iconDoc-code">0xe9be</p>
-          </div>
-          <div title="Code: 0xe9bf" class="iconDoc-wrapper">
-            <span class="rsweb srv-virtualization"></span>
-            <p class="iconDoc-name">srv-virtualization</p>
-            <p class="iconDoc-code">0xe9bf</p>
-          </div>
-          <div title="Code: 0xe9c0" class="iconDoc-wrapper">
-            <span class="rsweb srv-vpn"></span>
-            <p class="iconDoc-name">srv-vpn</p>
-            <p class="iconDoc-code">0xe9c0</p>
-          </div>
-          <div title="Code: 0xe9c1" class="iconDoc-wrapper">
-            <span class="rsweb srv-web-hosting"></span>
-            <p class="iconDoc-name">srv-web-hosting</p>
-            <p class="iconDoc-code">0xe9c1</p>
-          </div>
-           <div title="Code: 0xe9c2" class="iconDoc-wrapper">
-            <span class="rsweb srv-website"></span>
-            <p class="iconDoc-name">srv-website</p>
-            <p class="iconDoc-code">0xe9c2</p>
-          </div>
-          <div title="Code: 0xe9ce" class="iconDoc-wrapper">
-            <span class="rsweb srv-aviator"></span>
-            <p class="iconDoc-name">srv-aviator</p>
-            <p class="iconDoc-code">0xe9ce</p>
-          </div>
-          <div title="Code: 0xe9cf" class="iconDoc-wrapper">
-            <span class="rsweb srv-collaboration"></span>
-            <p class="iconDoc-name">srv-collaboration</p>
-            <p class="iconDoc-code">0xe9cf</p>
-          </div>
-          <div title="Code: 0xe9d0" class="iconDoc-wrapper">
-            <span class="rsweb srv-compliance"></span>
-            <p class="iconDoc-name">srv-compliance</p>
-            <p class="iconDoc-code">0xe9d0</p>
-          </div>
-          <div title="Code: 0xe9d1" class="iconDoc-wrapper">
-            <span class="rsweb srv-compute-opt-server"></span>
-            <p class="iconDoc-name">srv-compute-opt-server</p>
-            <p class="iconDoc-code">0xe9d1</p>
-          </div>
-          <div title="Code: 0xe9d2" class="iconDoc-wrapper">
-            <span class="rsweb srv-configuration-server"></span>
-            <p class="iconDoc-name">srv-configuration-server</p>
-            <p class="iconDoc-code">0xe9d2</p>
-          </div>
-          <div title="Code: 0xe9d3" class="iconDoc-wrapper">
-            <span class="rsweb srv-container-server"></span>
-            <p class="iconDoc-name">srv-container-server</p>
-            <p class="iconDoc-code">0xe9d3</p>
-          </div>
-          <div title="Code: 0xe9d4" class="iconDoc-wrapper">
-            <span class="rsweb srv-content-management"></span>
-            <p class="iconDoc-name">srv-content-management</p>
-            <p class="iconDoc-code">0xe9d4</p>
-          </div>
-          <div title="Code: 0xe9d5" class="iconDoc-wrapper">
-            <span class="rsweb idio-conversation"></span>
-            <p class="iconDoc-name">idio-conversation</p>
-            <p class="iconDoc-code">0xe9d5</p>
-          </div>
-          <div title="Code: 0xe9d6" class="iconDoc-wrapper">
-            <span class="rsweb srv-custom-apps"></span>
-            <p class="iconDoc-name">srv-custom-apps</p>
-            <p class="iconDoc-code">0xe9d6</p>
-          </div>
-          <div title="Code: 0xe9d7" class="iconDoc-wrapper">
-            <span class="rsweb srv-data"></span>
-            <p class="iconDoc-name">srv-data</p>
-            <p class="iconDoc-code">0xe9d7</p>
-          </div>
-          <div title="Code: 0xe9d8" class="iconDoc-wrapper">
-            <span class="rsweb srv-database-server"></span>
-            <p class="iconDoc-name">srv-database-server</p>
-            <p class="iconDoc-code">0xe9d8</p>
-          </div>
-          <div title="Code: 0xe9d9" class="iconDoc-wrapper">
-            <span class="rsweb srv-directory-server"></span>
-            <p class="iconDoc-name">srv-directory-server</p>
-            <p class="iconDoc-code">0xe9d9</p>
-          </div>
-          <div title="Code: 0xe9da" class="iconDoc-wrapper">
-            <span class="rsweb srv-email-server"></span>
-            <p class="iconDoc-name">srv-email-server</p>
-            <p class="iconDoc-code">0xe9da</p>
-          </div>
-          <div title="Code: 0xe9db" class="iconDoc-wrapper">
-            <span class="rsweb srv-email"></span>
-            <p class="iconDoc-name">srv-email</p>
-            <p class="iconDoc-code">0xe9db</p>
-          </div>
-          <div title="Code: 0xe9dc" class="iconDoc-wrapper">
-            <span class="rsweb srv-extra-capacity"></span>
-            <p class="iconDoc-name">srv-extra-capacity</p>
-            <p class="iconDoc-code">0xe9dc</p>
-          </div>
-          <div title="Code: 0xe9dd" class="iconDoc-wrapper">
-            <span class="rsweb srv-file-server"></span>
-            <p class="iconDoc-name">srv-file-server</p>
-            <p class="iconDoc-code">0xe9dd</p>
-          </div>
-          <div title="Code: 0xe9de" class="iconDoc-wrapper">
-            <span class="rsweb srv-gen-memory-opt-server"></span>
-            <p class="iconDoc-name">srv-gen-memory-opt-server</p>
-            <p class="iconDoc-code">0xe9de</p>
-          </div>
-          <div title="Code: 0xe9df" class="iconDoc-wrapper">
-            <span class="rsweb srv-general-workload-server"></span>
-            <p class="iconDoc-name">srv-general-workload-server</p>
-            <p class="iconDoc-code">0xe9df</p>
-          </div>
-          <div title="Code: 0xe9e0" class="iconDoc-wrapper">
-            <span class="rsweb srv-mobile-apps"></span>
-            <p class="iconDoc-name">srv-mobile-apps</p>
-            <p class="iconDoc-code">0xe9e0</p>
-          </div>
-          <div title="Code: 0xe9e1" class="iconDoc-wrapper">
-            <span class="rsweb srv-navigator"></span>
-            <p class="iconDoc-name">srv-navigator</p>
-            <p class="iconDoc-code">0xe9e1</p>
-          </div>
-          <div title="Code: 0xe9e2" class="iconDoc-wrapper">
-            <span class="rsweb srv-networking-server"></span>
-            <p class="iconDoc-name">srv-networking-server</p>
-            <p class="iconDoc-code">0xe9e2</p>
-          </div>
-          <div title="Code: 0xe9e3" class="iconDoc-wrapper">
-            <span class="rsweb srv-performance"></span>
-            <p class="iconDoc-name">srv-performance</p>
-            <p class="iconDoc-code">0xe9e3</p>
-          </div>
-          <div title="Code: 0xe9e4" class="iconDoc-wrapper">
-            <span class="rsweb srv-plugin-server"></span>
-            <p class="iconDoc-name">srv-plugin-server</p>
-            <p class="iconDoc-code">0xe9e4</p>
-          </div>
-          <div title="Code: 0xe9e5" class="iconDoc-wrapper">
-            <span class="rsweb srv-search-server"></span>
-            <p class="iconDoc-name">srv-search-server</p>
-            <p class="iconDoc-code">0xe9e5</p>
-          </div>
-          <div title="Code: 0xe9e6" class="iconDoc-wrapper">
-            <span class="rsweb srv-security"></span>
-            <p class="iconDoc-name">srv-security</p>
-            <p class="iconDoc-code">0xe9e6</p>
-          </div>
-          <div title="Code: 0xe9e7" class="iconDoc-wrapper">
-            <span class="rsweb srv-storage-server"></span>
-            <p class="iconDoc-name">srv-storage-server</p>
-            <p class="iconDoc-code">0xe9e7</p>
-          </div>
-          <div title="Code: 0xe9e8" class="iconDoc-wrapper">
-            <span class="rsweb srv-virtualization-server"></span>
-            <p class="iconDoc-name">srv-virtualization-server</p>
-            <p class="iconDoc-code">0xe9e8</p>
-          </div>
-          <div title="Code: 0xe9e9" class="iconDoc-wrapper">
-            <span class="rsweb srv-web-hosting"></span>
-            <p class="iconDoc-name">srv-web-hosting</p>
-            <p class="iconDoc-code">0xe9e9</p>
-          </div>
-      </div>
-      <div class="tab-pane" id="tab-7">
-        <div title="Code: 0xe93b" class="iconDoc-wrapper">
-          <span class="rsweb gen-assistance"></span>
-          <p class="iconDoc-name">gen-assistance</p>
-          <p class="iconDoc-code">0xe93b</p>
-        </div>
-        <div title="Code: 0xe93d" class="iconDoc-wrapper">
-          <span class="rsweb gen-bolt-gear"></span>
-          <p class="iconDoc-name">gen-bolt-gear</p>
-          <p class="iconDoc-code">0xe93d</p>
-        </div>
-        <div title="Code: 0xe93f" class="iconDoc-wrapper">
-          <span class="rsweb gen-building-lg"></span>
-          <p class="iconDoc-name">gen-building-lg</p>
-          <p class="iconDoc-code">0xe93f</p>
-        </div>
-        <div title="Code: 0xe940" class="iconDoc-wrapper">
-          <span class="rsweb gen-building-md"></span>
-          <p class="iconDoc-name">gen-building-md</p>
-          <p class="iconDoc-code">0xe940</p>
-        </div>
-        <div title="Code: 0xe941" class="iconDoc-wrapper">
-          <span class="rsweb gen-building-sm"></span>
-          <p class="iconDoc-name">gen-building-sm</p>
-          <p class="iconDoc-code">0xe941</p>
-        </div>
-        <div title="Code: 0xe944" class="iconDoc-wrapper">
-          <span class="rsweb gen-chart"></span>
-          <p class="iconDoc-name">gen-chart</p>
-          <p class="iconDoc-code">0xe944</p>
-        </div>
-        <div title="Code: 0xe945" class="iconDoc-wrapper">
-          <span class="rsweb gen-clock"></span>
-          <p class="iconDoc-name">gen-clock</p>
-          <p class="iconDoc-code">0xe945</p>
-        </div>
-        <div title="Code: 0xe946" class="iconDoc-wrapper">
-          <span class="rsweb gen-cloud"></span>
-          <p class="iconDoc-name">gen-cloud</p>
-          <p class="iconDoc-code">0xe946</p>
-        </div>
-        <div title="Code: 0xe947" class="iconDoc-wrapper">
-          <span class="rsweb gen-code"></span>
-          <p class="iconDoc-name">gen-code</p>
-          <p class="iconDoc-code">0xe947</p>
-        </div>
-        <div title="Code: 0xe948" class="iconDoc-wrapper">
-          <span class="rsweb gen-data-replication"></span>
-          <p class="iconDoc-name">gen-data-replication</p>
-          <p class="iconDoc-code">0xe948</p>
-        </div>
-        <div title="Code: 0xe949" class="iconDoc-wrapper">
-          <span class="rsweb gen-desktop"></span>
-          <p class="iconDoc-name">gen-desktop</p>
-          <p class="iconDoc-code">0xe949</p>
-        </div>
-        <div title="Code: 0xe94c" class="iconDoc-wrapper">
-          <span class="rsweb gen-flame-shield"></span>
-          <p class="iconDoc-name">gen-flame-shield</p>
-          <p class="iconDoc-code">0xe94c</p>
-        </div>
-        <div title="Code: 0xe94d" class="iconDoc-wrapper">
-          <span class="rsweb gen-global"></span>
-          <p class="iconDoc-name">gen-global</p>
-          <p class="iconDoc-code">0xe94d</p>
-        </div>
-        <div title="Code: 0xe94e" class="iconDoc-wrapper">
-          <span class="rsweb gen-global-traffic"></span>
-          <p class="iconDoc-name">gen-global-traffic</p>
-          <p class="iconDoc-code">0xe94e</p>
-        </div>
-        <div title="Code: 0xe94f" class="iconDoc-wrapper">
-          <span class="rsweb gen-growth"></span>
-          <p class="iconDoc-name">gen-growth</p>
-          <p class="iconDoc-code">0xe94f</p>
-        </div>
-        <div title="Code: 0xe952" class="iconDoc-wrapper">
-          <span class="rsweb gen-install"></span>
-          <p class="iconDoc-name">gen-install</p>
-          <p class="iconDoc-code">0xe952</p>
-        </div>
-        <div title="Code: 0xe953" class="iconDoc-wrapper">
-          <span class="rsweb gen-key"></span>
-          <p class="iconDoc-name">gen-key</p>
-          <p class="iconDoc-code">0xe953</p>
-        </div>
-        <div title="Code: 0xe954" class="iconDoc-wrapper">
-          <span class="rsweb gen-laptop-code"></span>
-          <p class="iconDoc-name">gen-laptop-code</p>
-          <p class="iconDoc-code">0xe954</p>
-        </div>
-        <div title="Code: 0xe955" class="iconDoc-wrapper">
-          <span class="rsweb gen-license"></span>
-          <p class="iconDoc-name">gen-license</p>
-          <p class="iconDoc-code">0xe955</p>
-        </div>
-        <div title="Code: 0xe956" class="iconDoc-wrapper">
-          <span class="rsweb gen-lock-shield"></span>
-          <p class="iconDoc-name">gen-lock-shield</p>
-          <p class="iconDoc-code">0xe956</p>
-        </div>
-        <div title="Code: 0xe957" class="iconDoc-wrapper">
-          <span class="rsweb gen-locked-checked-shield"></span>
-          <p class="iconDoc-name">gen-locked-checked-shield</p>
-          <p class="iconDoc-code">0xe957</p>
-        </div>
-        <div title="Code: 0xe959" class="iconDoc-wrapper">
-          <span class="rsweb gen-network-connection"></span>
-          <p class="iconDoc-name">gen-network-connection</p>
-          <p class="iconDoc-code">0xe959</p>
-        </div>
-        <div title="Code: 0xe95a" class="iconDoc-wrapper">
-          <span class="rsweb gen-os"></span>
-          <p class="iconDoc-name">gen-os</p>
-          <p class="iconDoc-code">0xe95a</p>
-        </div>
-        <div title="Code: 0xe95e" class="iconDoc-wrapper">
-          <span class="rsweb gen-performance"></span>
-          <p class="iconDoc-name">gen-performance</p>
-          <p class="iconDoc-code">0xe95e</p>
-        </div>
-        <div title="Code: 0xe962" class="iconDoc-wrapper">
-          <span class="rsweb gen-server-instance"></span>
-          <p class="iconDoc-name">gen-server-instance</p>
-          <p class="iconDoc-code">0xe962</p>
-        </div>
-        <div title="Code: 0xe963" class="iconDoc-wrapper">
-          <span class="rsweb gen-server-instances"></span>
-          <p class="iconDoc-name">gen-server-instances</p>
-          <p class="iconDoc-code">0xe963</p>
-        </div>
-        <div title="Code: 0xe966" class="iconDoc-wrapper">
-          <span class="rsweb gen-servers"></span>
-          <p class="iconDoc-name">gen-servers</p>
-          <p class="iconDoc-code">0xe966</p>
-        </div>
-        <div title="Code: 0xe968" class="iconDoc-wrapper">
-          <span class="rsweb gen-shield"></span>
-          <p class="iconDoc-name">gen-shield</p>
-          <p class="iconDoc-code">0xe968</p>
-        </div>
-        <div title="Code: 0xe96a" class="iconDoc-wrapper">
-          <span class="rsweb gen-stacks"></span>
-          <p class="iconDoc-name">gen-stacks</p>
-          <p class="iconDoc-code">0xe96a</p>
-        </div>
-        <div title="Code: 0xe96c" class="iconDoc-wrapper">
-          <span class="rsweb gen-stopwatch"></span>
-          <p class="iconDoc-name">gen-stopwatch</p>
-          <p class="iconDoc-code">0xe96c</p>
-        </div>
-        <div title="Code: 0xe96d" class="iconDoc-wrapper">
-          <span class="rsweb gen-support"></span>
-          <p class="iconDoc-name">gen-support</p>
-          <p class="iconDoc-code">0xe96d</p>
-        </div>
-        <div title="Code: 0xe96e" class="iconDoc-wrapper">
-          <span class="rsweb gen-uptime"></span>
-          <p class="iconDoc-name">gen-uptime</p>
-          <p class="iconDoc-code">0xe96e</p>
-        </div>
-        <div title="Code: 0xe96f" class="iconDoc-wrapper">
-          <span class="rsweb gen-user"></span>
-          <p class="iconDoc-name">gen-user</p>
-          <p class="iconDoc-code">0xe96f</p>
-        </div>
-        <div title="Code: 0xe970" class="iconDoc-wrapper">
-          <span class="rsweb gen-web"></span>
-          <p class="iconDoc-name">gen-web</p>
-          <p class="iconDoc-code">0xe970</p>
-        </div>
-        <div title="Code: 0xe971" class="iconDoc-wrapper">
-          <span class="rsweb gen-webpage"></span>
-          <p class="iconDoc-name">gen-webpage</p>
-          <p class="iconDoc-code">0xe971</p>
-        </div>
-        <div title="Code: 0xe972" class="iconDoc-wrapper">
-          <span class="rsweb gen-workers"></span>
-          <p class="iconDoc-name">gen-workers</p>
-          <p class="iconDoc-code">0xe972</p>
-        </div>
-        <div title="Code: 0xe81b" class="iconDoc-wrapper">
-          <span class="rsweb gen-upload"></span>
-          <p class="iconDoc-name">gen-upload</p>
-          <p class="iconDoc-code">0xe81b</p>
-        </div>
-        <div title="Code: 0xe81c" class="iconDoc-wrapper">
-          <span class="rsweb gen-community"></span>
-          <p class="iconDoc-name">gen-community</p>
-          <p class="iconDoc-code">0xe81c</p>
-        </div>
-        <div title="Code: 0xe81d" class="iconDoc-wrapper">
-          <span class="rsweb gen-deep-monitoring"></span>
-          <p class="iconDoc-name">gen-deep-monitoring</p>
-          <p class="iconDoc-code">0xe81d</p>
-        </div>
-        <div title="Code: 0xe81e" class="iconDoc-wrapper">
-          <span class="rsweb gen-design"></span>
-          <p class="iconDoc-name">gen-design</p>
-          <p class="iconDoc-code">0xe81e</p>
-        </div>
-        <div title="Code: 0xe81f" class="iconDoc-wrapper">
-          <span class="rsweb gen-desktop"></span>
-          <p class="iconDoc-name">gen-desktop</p>
-          <p class="iconDoc-code">0xe81f</p>
-        </div>
-        <div title="Code: 0xe820" class="iconDoc-wrapper">
-          <span class="rsweb gen-document-folder"></span>
-          <p class="iconDoc-name">gen-document-folder</p>
-          <p class="iconDoc-code">0xe820</p>
-        </div>
-        <div title="Code: 0xe821" class="iconDoc-wrapper">
-          <span class="rsweb gen-documents"></span>
-          <p class="iconDoc-name">gen-documents</p>
-          <p class="iconDoc-code">0xe821</p>
-        </div>
-        <div title="Code: 0xe822" class="iconDoc-wrapper">
-          <span class="rsweb gen-flame-shield"></span>
-          <p class="iconDoc-name">gen-flame-shield</p>
-          <p class="iconDoc-code">0xe822</p>
-        </div>
-        <div title="Code: 0xe823" class="iconDoc-wrapper">
-          <span class="rsweb gen-help"></span>
-          <p class="iconDoc-name">gen-help</p>
-          <p class="iconDoc-code">0xe823</p>
-        </div>
-        <div title="Code: 0xe824" class="iconDoc-wrapper">
-          <span class="rsweb gen-iot"></span>
-          <p class="iconDoc-name">gen-iot</p>
-          <p class="iconDoc-code">0xe824</p>
-        </div>
-        <div title="Code: 0xe826" class="iconDoc-wrapper">
-          <span class="rsweb gen-license"></span>
-          <p class="iconDoc-name">gen-license</p>
-          <p class="iconDoc-code">0xe826</p>
-        </div>
-        <div title="Code: 0xe827" class="iconDoc-wrapper">
-          <span class="rsweb gen-lock-shield"></span>
-          <p class="iconDoc-name">gen-lock-shield</p>
-          <p class="iconDoc-code">0xe827</p>
-        </div>
-        <div title="Code: 0xe828" class="iconDoc-wrapper">
-          <span class="rsweb gen-mail"></span>
-          <p class="iconDoc-name">gen-mail</p>
-          <p class="iconDoc-code">0xe828</p>
-        </div>
-        <div title="Code: 0xe829" class="iconDoc-wrapper">
-          <span class="rsweb gen-moving"></span>
-          <p class="iconDoc-name">gen-moving</p>
-          <p class="iconDoc-code">0xe829</p>
-        </div>
-        <div title="Code: 0xe82a" class="iconDoc-wrapper">
-          <span class="rsweb gen-open-mail"></span>
-          <p class="iconDoc-name">gen-open-mail</p>
-          <p class="iconDoc-code">0xe82a</p>
-        </div>
-        <div title="Code: 0xe82b" class="iconDoc-wrapper">
-          <span class="rsweb gen-ai"></span>
-          <p class="iconDoc-name">gen-ai</p>
-          <p class="iconDoc-code">0xe82b</p>
-        </div>
-          <div title="Code: 0xe99e" class="iconDoc-wrapper">
-          <span class="rsweb gen-backups"></span>
-          <p class="iconDoc-name">gen-backups</p>
-          <p class="iconDoc-code">0xe99e</p>
-        </div>
-        <div title="Code: 0xe99f" class="iconDoc-wrapper">
-          <span class="rsweb gen-calculator"></span>
-          <p class="iconDoc-name">gen-calculator</p>
-          <p class="iconDoc-code">0xe99f</p>
-        </div>
-        <div title="Code: 0xe9a1" class="iconDoc-wrapper">
-          <span class="rsweb gen-checklist"></span>
-          <p class="iconDoc-name">gen-checklist</p>
-          <p class="iconDoc-code">0xe9a1</p>
-        </div>
-        <div title="Code: 0xe9a2" class="iconDoc-wrapper">
-          <span class="rsweb gen-clipboard"></span>
-          <p class="iconDoc-name">gen-clipboard</p>
-          <p class="iconDoc-code">0xe9a2</p>
-        </div>
-          <div title="Code: 0xe9a9" class="iconDoc-wrapper">
-          <span class="rsweb gen-ecommerce-cart"></span>
-          <p class="iconDoc-name">gen-ecommerce-cart</p>
-          <p class="iconDoc-code">0xe9a9</p>
-        </div>
-        <div title="Code: 0xe9c3" class="iconDoc-wrapper">
-          <span class="rsweb gen-choice"></span>
-          <p class="iconDoc-name">gen-choice</p>
-          <p class="iconDoc-code">0xe9c3</p>
-        </div>
-        <div title="Code: 0xe80f" class="iconDoc-wrapper">
-          <span class="rsweb gen-cdn"></span>
-          <p class="iconDoc-name">gen-cdn</p>
-          <p class="iconDoc-code">0xe80f</p>
-        </div>
-        <div title="Code: 0xe80e" class="iconDoc-wrapper">
-          <span class="rsweb gen-recovery"></span>
-          <p class="iconDoc-name">gen-recovery</p>
-          <p class="iconDoc-code">0xe80e</p>
-        </div>
-      </div>
-      <div class="tab-pane" id="tab-8">
-        <div title="Code: 0xe810" class="iconDoc-wrapper">
-          <span class="rsweb idio-sales-growth"></span>
-          <p class="iconDoc-name">idio-sales-growth</p>
-          <p class="iconDoc-code">0xe810</p>
-        </div>
-        <div title="Code: 0xe811" class="iconDoc-wrapper">
-          <span class="rsweb idio-sales-funnel"></span>
-          <p class="iconDoc-name">idio-sales-funnel</p>
-          <p class="iconDoc-code">0xe811</p>
-        </div>
-        <div title="Code: 0xe812" class="iconDoc-wrapper">
-          <span class="rsweb idio-safe"></span>
-          <p class="iconDoc-name">idio-safe</p>
-          <p class="iconDoc-code">0xe812</p>
-        </div>
-        <div title="Code: 0xe813" class="iconDoc-wrapper">
-          <span class="rsweb idio-puzzle-piece"></span>
-          <p class="iconDoc-name">idio-puzzle-piece</p>
-          <p class="iconDoc-code">0xe813</p>
-        </div>
-        <div title="Code: 0xe814" class="iconDoc-wrapper">
-          <span class="rsweb idio-prize-ribbon"></span>
-          <p class="iconDoc-name">idio-prize-ribbon</p>
-          <p class="iconDoc-code">0xe814</p>
-        </div>
-        <div title="Code: 0xe815" class="iconDoc-wrapper">
-          <span class="rsweb gen-news"></span>
-          <p class="iconDoc-name">gen-news</p>
-          <p class="iconDoc-code">0xe815</p>
-        </div>
-        <div title="Code: 0xe816" class="iconDoc-wrapper">
-          <span class="rsweb idio-key"></span>
-          <p class="iconDoc-name">idio-key</p>
-          <p class="iconDoc-code">0xe816</p>
-        </div>
-        <div title="Code: 0xe817" class="iconDoc-wrapper">
-          <span class="rsweb idio-file-cabinet"></span>
-          <p class="iconDoc-name">idio-file-cabinet</p>
-          <p class="iconDoc-code">0xe817</p>
-        </div>
-        <div title="Code: 0xe818" class="iconDoc-wrapper">
-          <span class="rsweb srv-chat"></span>
-          <p class="iconDoc-name">srv-chat</p>
-          <p class="iconDoc-code">0xe818</p>
-        </div>
-        <div title="Code: 0xe819" class="iconDoc-wrapper">
-          <span class="rsweb idio-compass"></span>
-          <p class="iconDoc-name">idio-compass</p>
-          <p class="iconDoc-code">0xe819</p>
-        </div>
-        <div title="Code: 0xe81a" class="iconDoc-wrapper">
-          <span class="rsweb idio-book"></span>
-          <p class="iconDoc-name">idio-book</p>
-          <p class="iconDoc-code">0xe81a</p>
-        </div>
-        <div title="Code: 0xe973" class="iconDoc-wrapper">
-          <span class="rsweb idio-binoculars"></span>
-          <p class="iconDoc-name">idio-binoculars</p>
-          <p class="iconDoc-code">0xe973</p>
-        </div>
-        <div title="Code: 0xe974" class="iconDoc-wrapper">
-          <span class="rsweb idio-brain"></span>
-          <p class="iconDoc-name">idio-brain</p>
-          <p class="iconDoc-code">0xe974</p>
-        </div>
-        <div title="Code: 0xe975" class="iconDoc-wrapper">
-          <span class="rsweb idio-cloud-education"></span>
-          <p class="iconDoc-name">idio-cloud-education</p>
-          <p class="iconDoc-code">0xe975</p>
-        </div>
-        <div title="Code: 0xe976" class="iconDoc-wrapper">
-          <span class="rsweb idio-cycle"></span>
-          <p class="iconDoc-name">idio-cycle</p>
-          <p class="iconDoc-code">0xe976</p>
-        </div>
-        <div title="Code: 0xe978" class="iconDoc-wrapper">
-          <span class="rsweb idio-fist"></span>
-          <p class="iconDoc-name">idio-fist</p>
-          <p class="iconDoc-code">0xe978</p>
-        </div>
-        <div title="Code: 0xe979" class="iconDoc-wrapper">
-          <span class="rsweb idio-focus"></span>
-          <p class="iconDoc-name">idio-focus</p>
-          <p class="iconDoc-code">0xe979</p>
-        </div>
-        <div title="Code: 0xe97b" class="iconDoc-wrapper">
-          <span class="rsweb idio-high-five"></span>
-          <p class="iconDoc-name">idio-high-five</p>
-          <p class="iconDoc-code">0xe97b</p>
-        </div>
-        <div title="Code: 0xe97c" class="iconDoc-wrapper">
-          <span class="rsweb idio-people"></span>
-          <p class="iconDoc-name">idio-people</p>
-          <p class="iconDoc-code">0xe97c</p>
-        </div>
-        <div title="Code: 0xe97d" class="iconDoc-wrapper">
-          <span class="rsweb idio-piggy"></span>
-          <p class="iconDoc-name">idio-piggy</p>
-          <p class="iconDoc-code">0xe97d</p>
-        </div>
-        <div title="Code: 0xe97f" class="iconDoc-wrapper">
-          <span class="rsweb idio-spaceship"></span>
-          <p class="iconDoc-name">idio-spaceship</p>
-          <p class="iconDoc-code">0xe97f</p>
-        </div>
-        <div title="Code: 0xe980" class="iconDoc-wrapper">
-          <span class="rsweb idio-straightjacket"></span>
-          <p class="iconDoc-name">idio-straightjacket</p>
-          <p class="iconDoc-code">0xe980</p>
-        </div>
-        <div title="Code: 0xe981" class="iconDoc-wrapper">
-          <span class="rsweb idio-target"></span>
-          <p class="iconDoc-name">idio-target</p>
-          <p class="iconDoc-code">0xe981</p>
-        </div>
-        <div title="Code: 0xe982" class="iconDoc-wrapper">
-          <span class="rsweb idio-torch"></span>
-          <p class="iconDoc-name">idio-torch</p>
-          <p class="iconDoc-code">0xe982</p>
-        </div>
-        <div title="Code: 0xe983" class="iconDoc-wrapper">
-          <span class="rsweb idio-trophy"></span>
-          <p class="iconDoc-name">idio-trophy</p>
-          <p class="iconDoc-code">0xe983</p>
-        </div>
-       <div title="Code: 0xe984" class="iconDoc-wrapper">
-          <span class="rsweb idio-winner"></span>
-          <p class="iconDoc-name">idio-winner</p>
-          <p class="iconDoc-code">0xe984</p>
-        </div>
-        <div title="Code: 0xe9b6" class="iconDoc-wrapper">
-          <span class="rsweb idio-alert"></span>
-          <p class="iconDoc-name">idio-alert</p>
-          <p class="iconDoc-code">0xe9b6</p>
-        </div>
-        <div title="Code: 0xe9b8" class="iconDoc-wrapper">
-          <span class="rsweb idio-bug"></span>
-          <p class="iconDoc-name">idio-bug</p>
-          <p class="iconDoc-code">0xe9b8</p>
-        </div>
-        <div title="Code: 0xe9bd" class="iconDoc-wrapper">
-          <span class="rsweb idio-lightbulb"></span>
-          <p class="iconDoc-name">idio-lightbulb</p>
-          <p class="iconDoc-code">0xe9bd</p>
-        </div>
-        <div title="Code: 0xe9c4" class="iconDoc-wrapper">
-          <span class="rsweb idio-search"></span>
-          <p class="iconDoc-name">idio-search</p>
-          <p class="iconDoc-code">0xe9c4</p>
-        </div>
-        <div title="Code: 0xe9c5" class="iconDoc-wrapper">
-          <span class="rsweb idio-seedlings"></span>
-          <p class="iconDoc-name">idio-seedlings</p>
-          <p class="iconDoc-code">0xe9c5</p>
-        </div>
-        <div title="Code: 0xe9c6" class="iconDoc-wrapper">
-          <span class="rsweb idio-stethoscope"></span>
-          <p class="iconDoc-name">idio-stethoscope</p>
-          <p class="iconDoc-code">0xe9c6</p>
-        </div>
-        <div title="Code: 0xe9c8" class="iconDoc-wrapper">
-          <span class="rsweb idio-world"></span>
-          <p class="iconDoc-name">idio-world</p>
-          <p class="iconDoc-code">0xe9c8</p>
-        </div>
-        <div title="Code: 0xe9ea" class="iconDoc-wrapper">
-          <span class="rsweb idio-up-and-down"></span>
-          <p class="iconDoc-name">idio-up-and-down</p>
-          <p class="iconDoc-code">0xe9ea</p>
-        </div>
-      </div>
-      <div class="tab-pane" id="tab-9">
-        <div title="Code: 0xe854" class="iconDoc-wrapper">
-          <span class="rsweb gauge"></span>
-          <p class="iconDoc-name">gauge</p>
-          <p class="iconDoc-code">0xe854</p>
-        </div>
-      </div>
-    </div>
+          <span class="rsweb xing-solid" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>xing-solid</strong></p>
+          <p class="iconDoc-code">Code: <strong>e852</strong></p>
+        </div>
+      
+    
+      
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb xing-square" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>xing-square</strong></p>
+          <p class="iconDoc-code">Code: <strong>e84f</strong></p>
+        </div>
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-quote" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-quote</strong></p>
+          <p class="iconDoc-code">Code: <strong>e993</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb code-script" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>code-script</strong></p>
+          <p class="iconDoc-code">Code: <strong>e808</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb pdf-doc" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>pdf-doc</strong></p>
+          <p class="iconDoc-code">Code: <strong>e8c5</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb playbtn-film" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>playbtn-film</strong></p>
+          <p class="iconDoc-code">Code: <strong>e8c8</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb movie-popup" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>movie-popup</strong></p>
+          <p class="iconDoc-code">Code: <strong>e8c6</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-laptop-code" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-laptop-code</strong></p>
+          <p class="iconDoc-code">Code: <strong>e81e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-up-and-down" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-up-and-down</strong></p>
+          <p class="iconDoc-code">Code: <strong>e850</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-email" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-email</strong></p>
+          <p class="iconDoc-code">Code: <strong>e84e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-email-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-email-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e97a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-stethoscope" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-stethoscope</strong></p>
+          <p class="iconDoc-code">Code: <strong>e84d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-directory-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-directory-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e84c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-seedlings" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-seedlings</strong></p>
+          <p class="iconDoc-code">Code: <strong>e965</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-database-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-database-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e84b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-search" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-search</strong></p>
+          <p class="iconDoc-code">Code: <strong>e964</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-data" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-data</strong></p>
+          <p class="iconDoc-code">Code: <strong>e977</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-sales-growth" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-sales-growth</strong></p>
+          <p class="iconDoc-code">Code: <strong>e84a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-custom-apps" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-custom-apps</strong></p>
+          <p class="iconDoc-code">Code: <strong>e849</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-sales-funnel" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-sales-funnel</strong></p>
+          <p class="iconDoc-code">Code: <strong>e848</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-content-management-1" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-content-management-1</strong></p>
+          <p class="iconDoc-code">Code: <strong>e846</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-safe" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-safe</strong></p>
+          <p class="iconDoc-code">Code: <strong>e961</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-virtualization-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-virtualization-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e988</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-container-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-container-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e845</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-puzzle-piece" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-puzzle-piece</strong></p>
+          <p class="iconDoc-code">Code: <strong>e960</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-storage-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-storage-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e844</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-configuration-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-configuration-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e843</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-prize-ribbon" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-prize-ribbon</strong></p>
+          <p class="iconDoc-code">Code: <strong>e95f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-security" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-security</strong></p>
+          <p class="iconDoc-code">Code: <strong>e842</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-compute-opt-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-compute-opt-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e841</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-lightbulb" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-lightbulb</strong></p>
+          <p class="iconDoc-code">Code: <strong>e840</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-search-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-search-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e83f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-compliance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-compliance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e83e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-key" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-key</strong></p>
+          <p class="iconDoc-code">Code: <strong>e95d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-plugin-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-plugin-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e83d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-collaboration" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-collaboration</strong></p>
+          <p class="iconDoc-code">Code: <strong>e83c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-file-cabinet" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-file-cabinet</strong></p>
+          <p class="iconDoc-code">Code: <strong>e95c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-performance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-performance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e83b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-chat" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-chat</strong></p>
+          <p class="iconDoc-code">Code: <strong>e83a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-conversation" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-conversation</strong></p>
+          <p class="iconDoc-code">Code: <strong>e95b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-networking-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-networking-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e839</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-aviator" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-aviator</strong></p>
+          <p class="iconDoc-code">Code: <strong>e838</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-compass" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-compass</strong></p>
+          <p class="iconDoc-code">Code: <strong>e837</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-navigator" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-navigator</strong></p>
+          <p class="iconDoc-code">Code: <strong>e836</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-world-wide-support" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-world-wide-support</strong></p>
+          <p class="iconDoc-code">Code: <strong>e835</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-bug" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-bug</strong></p>
+          <p class="iconDoc-code">Code: <strong>e834</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-mobile-apps" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-mobile-apps</strong></p>
+          <p class="iconDoc-code">Code: <strong>e833</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-virtualization" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-virtualization</strong></p>
+          <p class="iconDoc-code">Code: <strong>e832</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-book" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-book</strong></p>
+          <p class="iconDoc-code">Code: <strong>e958</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-general-workload-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-general-workload-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e831</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-threat" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-threat</strong></p>
+          <p class="iconDoc-code">Code: <strong>e96b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-alert" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-alert</strong></p>
+          <p class="iconDoc-code">Code: <strong>e830</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-gen-memory-opt-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-gen-memory-opt-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e97e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-recovery" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-recovery</strong></p>
+          <p class="iconDoc-code">Code: <strong>e82f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-upload" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-upload</strong></p>
+          <p class="iconDoc-code">Code: <strong>e82e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-file-server" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-file-server</strong></p>
+          <p class="iconDoc-code">Code: <strong>e82d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-control-panel" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-control-panel</strong></p>
+          <p class="iconDoc-code">Code: <strong>e969</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-recovery" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-recovery</strong></p>
+          <p class="iconDoc-code">Code: <strong>e82c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-extra-capacity" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-extra-capacity</strong></p>
+          <p class="iconDoc-code">Code: <strong>e82b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-world" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-world</strong></p>
+          <p class="iconDoc-code">Code: <strong>e82a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-open-mail" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-open-mail</strong></p>
+          <p class="iconDoc-code">Code: <strong>e829</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-calculator" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-calculator</strong></p>
+          <p class="iconDoc-code">Code: <strong>e828</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-cdn" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-cdn</strong></p>
+          <p class="iconDoc-code">Code: <strong>e827</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-checklist" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-checklist</strong></p>
+          <p class="iconDoc-code">Code: <strong>e942</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-clipboard" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-clipboard</strong></p>
+          <p class="iconDoc-code">Code: <strong>e943</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-community" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-community</strong></p>
+          <p class="iconDoc-code">Code: <strong>e826</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-deep-monitoring" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-deep-monitoring</strong></p>
+          <p class="iconDoc-code">Code: <strong>e825</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-design" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-design</strong></p>
+          <p class="iconDoc-code">Code: <strong>e824</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-desktop-code" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-desktop-code</strong></p>
+          <p class="iconDoc-code">Code: <strong>e823</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-document-folder" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-document-folder</strong></p>
+          <p class="iconDoc-code">Code: <strong>e822</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-documents" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-documents</strong></p>
+          <p class="iconDoc-code">Code: <strong>e821</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-ecommerce-cart" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-ecommerce-cart</strong></p>
+          <p class="iconDoc-code">Code: <strong>e94a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-flame-shield" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-flame-shield</strong></p>
+          <p class="iconDoc-code">Code: <strong>e94b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-help" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-help</strong></p>
+          <p class="iconDoc-code">Code: <strong>e820</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-iot" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-iot</strong></p>
+          <p class="iconDoc-code">Code: <strong>e81f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-license-1" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-license-1</strong></p>
+          <p class="iconDoc-code">Code: <strong>e81d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-lock-shield" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-lock-shield</strong></p>
+          <p class="iconDoc-code">Code: <strong>e950</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-mail" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-mail</strong></p>
+          <p class="iconDoc-code">Code: <strong>e951</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-moving" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-moving</strong></p>
+          <p class="iconDoc-code">Code: <strong>e81c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-news" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-news</strong></p>
+          <p class="iconDoc-code">Code: <strong>e81b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-backups" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-backups</strong></p>
+          <p class="iconDoc-code">Code: <strong>e81a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-ai" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-ai</strong></p>
+          <p class="iconDoc-code">Code: <strong>e93e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-tools" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-tools</strong></p>
+          <p class="iconDoc-code">Code: <strong>e819</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-networking" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-networking</strong></p>
+          <p class="iconDoc-code">Code: <strong>e93c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-dns" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-dns</strong></p>
+          <p class="iconDoc-code">Code: <strong>e93a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-security" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-security</strong></p>
+          <p class="iconDoc-code">Code: <strong>e937</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-security-monitoring" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-security-monitoring</strong></p>
+          <p class="iconDoc-code">Code: <strong>e936</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-preformance-tuning" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-preformance-tuning</strong></p>
+          <p class="iconDoc-code">Code: <strong>e935</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-health-checks" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-health-checks</strong></p>
+          <p class="iconDoc-code">Code: <strong>e816</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-code-review" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-code-review</strong></p>
+          <p class="iconDoc-code">Code: <strong>e815</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-checklist" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-checklist</strong></p>
+          <p class="iconDoc-code">Code: <strong>e814</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-certification" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-certification</strong></p>
+          <p class="iconDoc-code">Code: <strong>e813</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-calculations" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-calculations</strong></p>
+          <p class="iconDoc-code">Code: <strong>e812</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-around-the-clock" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-around-the-clock</strong></p>
+          <p class="iconDoc-code">Code: <strong>e811</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-remote-storage" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-remote-storage</strong></p>
+          <p class="iconDoc-code">Code: <strong>e810</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb auto-process" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>auto-process</strong></p>
+          <p class="iconDoc-code">Code: <strong>e92b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb auto-cdn-propagation" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>auto-cdn-propagation</strong></p>
+          <p class="iconDoc-code">Code: <strong>e80f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb auto-around-the-world" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>auto-around-the-world</strong></p>
+          <p class="iconDoc-code">Code: <strong>e80e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-web-hosting" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-web-hosting</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9e9</strong></p>
+        </div>
+      
+    
+      
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb auto-os-maintenance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>auto-os-maintenance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e902</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb auto-maintenance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>auto-maintenance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e901</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb auto-compute" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>auto-compute</strong></p>
+          <p class="iconDoc-code">Code: <strong>e900</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-load-balancers" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-load-balancers</strong></p>
+          <p class="iconDoc-code">Code: <strong>e914</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-monitoring" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-monitoring</strong></p>
+          <p class="iconDoc-code">Code: <strong>e915</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-networks" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-networks</strong></p>
+          <p class="iconDoc-code">Code: <strong>e916</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-control-panel" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-control-panel</strong></p>
+          <p class="iconDoc-code">Code: <strong>e92a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-big-data" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-big-data</strong></p>
+          <p class="iconDoc-code">Code: <strong>e929</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-backup" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-backup</strong></p>
+          <p class="iconDoc-code">Code: <strong>e928</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-bolt-gear" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-bolt-gear</strong></p>
+          <p class="iconDoc-code">Code: <strong>e93d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-building-lg" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-building-lg</strong></p>
+          <p class="iconDoc-code">Code: <strong>e93f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-office" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-office</strong></p>
+          <p class="iconDoc-code">Code: <strong>e917</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-orchestration" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-orchestration</strong></p>
+          <p class="iconDoc-code">Code: <strong>e918</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-databases" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-databases</strong></p>
+          <p class="iconDoc-code">Code: <strong>e92c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-building-md" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-building-md</strong></p>
+          <p class="iconDoc-code">Code: <strong>e940</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-building-sm" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-building-sm</strong></p>
+          <p class="iconDoc-code">Code: <strong>e941</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-email" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-email</strong></p>
+          <p class="iconDoc-code">Code: <strong>e92d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-private-cloud" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-private-cloud</strong></p>
+          <p class="iconDoc-code">Code: <strong>e919</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-hosting" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-hosting</strong></p>
+          <p class="iconDoc-code">Code: <strong>e92e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-load-balancers" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-load-balancers</strong></p>
+          <p class="iconDoc-code">Code: <strong>e92f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-registry" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-registry</strong></p>
+          <p class="iconDoc-code">Code: <strong>e91b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-autoscale" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-autoscale</strong></p>
+          <p class="iconDoc-code">Code: <strong>e907</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-scale-apps" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-scale-apps</strong></p>
+          <p class="iconDoc-code">Code: <strong>e91c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-log-management" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-log-management</strong></p>
+          <p class="iconDoc-code">Code: <strong>e930</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-chart" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-chart</strong></p>
+          <p class="iconDoc-code">Code: <strong>e944</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-clock" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-clock</strong></p>
+          <p class="iconDoc-code">Code: <strong>e945</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-managed-virualization" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-managed-virualization</strong></p>
+          <p class="iconDoc-code">Code: <strong>e931</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-security" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-security</strong></p>
+          <p class="iconDoc-code">Code: <strong>e91d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-big-data" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-big-data</strong></p>
+          <p class="iconDoc-code">Code: <strong>e909</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-block-storage" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-block-storage</strong></p>
+          <p class="iconDoc-code">Code: <strong>e90a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-monitoring" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-monitoring</strong></p>
+          <p class="iconDoc-code">Code: <strong>e932</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-cloud" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-cloud</strong></p>
+          <p class="iconDoc-code">Code: <strong>e946</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-os" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-os</strong></p>
+          <p class="iconDoc-code">Code: <strong>e95a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-network-connection" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-network-connection</strong></p>
+          <p class="iconDoc-code">Code: <strong>e959</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-locked-checked-shield" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-locked-checked-shield</strong></p>
+          <p class="iconDoc-code">Code: <strong>e957</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-license" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-license</strong></p>
+          <p class="iconDoc-code">Code: <strong>e955</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-key" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-key</strong></p>
+          <p class="iconDoc-code">Code: <strong>e953</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-install" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-install</strong></p>
+          <p class="iconDoc-code">Code: <strong>e952</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-servers" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-servers</strong></p>
+          <p class="iconDoc-code">Code: <strong>e966</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-shield" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-shield</strong></p>
+          <p class="iconDoc-code">Code: <strong>e968</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-stacks" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-stacks</strong></p>
+          <p class="iconDoc-code">Code: <strong>e96a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-stopwatch" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-stopwatch</strong></p>
+          <p class="iconDoc-code">Code: <strong>e96c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-support" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-support</strong></p>
+          <p class="iconDoc-code">Code: <strong>e96d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-uptime" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-uptime</strong></p>
+          <p class="iconDoc-code">Code: <strong>e96e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-torch" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-torch</strong></p>
+          <p class="iconDoc-code">Code: <strong>e982</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-target" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-target</strong></p>
+          <p class="iconDoc-code">Code: <strong>e981</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-straightjacket" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-straightjacket</strong></p>
+          <p class="iconDoc-code">Code: <strong>e980</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-spaceship" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-spaceship</strong></p>
+          <p class="iconDoc-code">Code: <strong>e97f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-piggy" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-piggy</strong></p>
+          <p class="iconDoc-code">Code: <strong>e97d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-people" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-people</strong></p>
+          <p class="iconDoc-code">Code: <strong>e97c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-high-five" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-high-five</strong></p>
+          <p class="iconDoc-code">Code: <strong>e97b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-focus" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-focus</strong></p>
+          <p class="iconDoc-code">Code: <strong>e979</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-fist" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-fist</strong></p>
+          <p class="iconDoc-code">Code: <strong>e978</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-databases" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-databases</strong></p>
+          <p class="iconDoc-code">Code: <strong>e98d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-generic" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-generic</strong></p>
+          <p class="iconDoc-code">Code: <strong>e98f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-guarantee" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-guarantee</strong></p>
+          <p class="iconDoc-code">Code: <strong>e990</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-infrastructure" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-infrastructure</strong></p>
+          <p class="iconDoc-code">Code: <strong>e991</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-installation" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-installation</strong></p>
+          <p class="iconDoc-code">Code: <strong>e992</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-monitoring" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-monitoring</strong></p>
+          <p class="iconDoc-code">Code: <strong>e994</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-os-support" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-os-support</strong></p>
+          <p class="iconDoc-code">Code: <strong>e995</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-performance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-performance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e997</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-trophy" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-trophy</strong></p>
+          <p class="iconDoc-code">Code: <strong>e983</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-user" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-user</strong></p>
+          <p class="iconDoc-code">Code: <strong>e96f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-code" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-code</strong></p>
+          <p class="iconDoc-code">Code: <strong>e947</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-security" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-security</strong></p>
+          <p class="iconDoc-code">Code: <strong>e933</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-cdn" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-cdn</strong></p>
+          <p class="iconDoc-code">Code: <strong>e90b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-control-panel" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-control-panel</strong></p>
+          <p class="iconDoc-code">Code: <strong>e90c</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-data-replication" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-data-replication</strong></p>
+          <p class="iconDoc-code">Code: <strong>e948</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-server-lg" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-server-lg</strong></p>
+          <p class="iconDoc-code">Code: <strong>e934</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-web" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-web</strong></p>
+          <p class="iconDoc-code">Code: <strong>e970</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-winner" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-winner</strong></p>
+          <p class="iconDoc-code">Code: <strong>e984</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-power" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-power</strong></p>
+          <p class="iconDoc-code">Code: <strong>e998</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-24x7" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-24x7</strong></p>
+          <p class="iconDoc-code">Code: <strong>e985</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-webpage" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-webpage</strong></p>
+          <p class="iconDoc-code">Code: <strong>e971</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-desktop" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-desktop</strong></p>
+          <p class="iconDoc-code">Code: <strong>e949</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-servers" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-servers</strong></p>
+          <p class="iconDoc-code">Code: <strong>e921</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-databases" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-databases</strong></p>
+          <p class="iconDoc-code">Code: <strong>e90d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-sites" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-sites</strong></p>
+          <p class="iconDoc-code">Code: <strong>e922</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-performance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-performance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e95e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-workers" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-workers</strong></p>
+          <p class="iconDoc-code">Code: <strong>e972</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-access" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-access</strong></p>
+          <p class="iconDoc-code">Code: <strong>e986</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-response" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-response</strong></p>
+          <p class="iconDoc-code">Code: <strong>e99a</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-security" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-security</strong></p>
+          <p class="iconDoc-code">Code: <strong>e99b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-advisors" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-advisors</strong></p>
+          <p class="iconDoc-code">Code: <strong>e987</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-binoculars" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-binoculars</strong></p>
+          <p class="iconDoc-code">Code: <strong>e973</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-tools" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-tools</strong></p>
+          <p class="iconDoc-code">Code: <strong>e923</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-email" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-email</strong></p>
+          <p class="iconDoc-code">Code: <strong>e90f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-brain" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-brain</strong></p>
+          <p class="iconDoc-code">Code: <strong>e974</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-storage" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-storage</strong></p>
+          <p class="iconDoc-code">Code: <strong>e938</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-email-archive" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-email-archive</strong></p>
+          <p class="iconDoc-code">Code: <strong>e910</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-service" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-service</strong></p>
+          <p class="iconDoc-code">Code: <strong>e99d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-apps" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-apps</strong></p>
+          <p class="iconDoc-code">Code: <strong>e989</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-cloud-education" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-cloud-education</strong></p>
+          <p class="iconDoc-code">Code: <strong>e975</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-global" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-global</strong></p>
+          <p class="iconDoc-code">Code: <strong>e94d</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-support" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-support</strong></p>
+          <p class="iconDoc-code">Code: <strong>e939</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cont-monitoring" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cont-monitoring</strong></p>
+          <p class="iconDoc-code">Code: <strong>e925</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-files" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-files</strong></p>
+          <p class="iconDoc-code">Code: <strong>e911</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb cl-hybrid" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>cl-hybrid</strong></p>
+          <p class="iconDoc-code">Code: <strong>e912</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-global-traffic" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-global-traffic</strong></p>
+          <p class="iconDoc-code">Code: <strong>e94e</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-server-instance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-server-instance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e962</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb idio-cycle" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>idio-cycle</strong></p>
+          <p class="iconDoc-code">Code: <strong>e976</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-cloud" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-cloud</strong></p>
+          <p class="iconDoc-code">Code: <strong>e98b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-server-instances" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-server-instances</strong></p>
+          <p class="iconDoc-code">Code: <strong>e963</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-growth" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-growth</strong></p>
+          <p class="iconDoc-code">Code: <strong>e94f</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-assistance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-assistance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e93b</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb ded-api-services" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>ded-api-services</strong></p>
+          <p class="iconDoc-code">Code: <strong>e927</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-disaster-recovery" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-disaster-recovery</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9b3</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-digital" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-digital</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9b2</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-devops" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-devops</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9b1</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-design-build-2" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-design-build-2</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9af</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-database" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-database</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9ae</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-data-storage" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-data-storage</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9ad</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-content-management" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-content-management</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9ab</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-code-deployment" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-code-deployment</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9aa</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-backups" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-backups</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9a8</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-backup" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-backup</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9a7</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-archiving" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-archiving</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9a6</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-architecture" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-architecture</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9a5</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-anti-virus" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-anti-virus</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9a4</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-advisory" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-advisory</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9a3</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb mng-support" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>mng-support</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9a0</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-ecommerce" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-ecommerce</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9b4</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-email-out" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-email-out</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9b5</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-guidance" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-guidance</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9b7</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-migration" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-migration</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9b9</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-monitoring" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-monitoring</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9ba</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-rich-media" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-rich-media</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9bb</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-saas" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-saas</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9bc</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-test-dev" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-test-dev</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9be</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-virtualization" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-virtualization</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9bf</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-vpn" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-vpn</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9c0</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb srv-website" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>srv-website</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9c2</strong></p>
+        </div>
+      
+    
+      
+      
+        <div title="Code: 0xe82f" class="iconDoc-wrapper">
+          <span class="rsweb gen-choice" style="font-size:32px"></span>
+          <p class="iconDoc-name">Class: <strong>gen-choice</strong></p>
+          <p class="iconDoc-code">Code: <strong>e9c3</strong></p>
+        </div>
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
   </div>
-</div>
-<script src="../js/pattern-components/tabs/tabs.js" charset="utf-8"></script></div></div></body><script src="/js/global.js"></script><script src="/js/zoolander-only.js"></script><script src="/global/modal.js"></script></html>          <span class="rsweb idio-bug"></span>
-          <p class="iconDoc-name">idio-bug</p>
-          <p class="iconDoc-code">0xe9b8</p>
-        </div>
-        <div title="Code: 0xe9bd" class="iconDoc-wrapper">
-          <span class="rsweb idio-lightbulb"></span>
-          <p class="iconDoc-name">idio-lightbulb</p>
-          <p class="iconDoc-code">0xe9bd</p>
-        </div>
-        <div title="Code: 0xe9c4" class="iconDoc-wrapper">
-          <span class="rsweb idio-search"></span>
-          <p class="iconDoc-name">idio-search</p>
-          <p class="iconDoc-code">0xe9c4</p>
-        </div>
-        <div title="Code: 0xe9c5" class="iconDoc-wrapper">
-          <span class="rsweb idio-seedlings"></span>
-          <p class="iconDoc-name">idio-seedlings</p>
-          <p class="iconDoc-code">0xe9c5</p>
-        </div>
-        <div title="Code: 0xe9c6" class="iconDoc-wrapper">
-          <span class="rsweb idio-stethoscope"></span>
-          <p class="iconDoc-name">idio-stethoscope</p>
-          <p class="iconDoc-code">0xe9c6</p>
-        </div>
-        <div title="Code: 0xe9c8" class="iconDoc-wrapper">
-          <span class="rsweb idio-world"></span>
-          <p class="iconDoc-name">idio-world</p>
-          <p class="iconDoc-code">0xe9c8</p>
-        </div>
-        <div title="Code: 0xe9ea" class="iconDoc-wrapper">
-          <span class="rsweb idio-up-and-down"></span>
-          <p class="iconDoc-name">idio-up-and-down</p>
-          <p class="iconDoc-code">0xe9ea</p>
-        </div>
-      </div>
-      <div class="tab-pane" id="tab-9">
-        <div title="Code: 0xe854" class="iconDoc-wrapper">
-          <span class="rsweb gauge"></span>
-          <p class="iconDoc-name">gauge</p>
-          <p class="iconDoc-code">0xe854</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script src="../js/pattern-components/tabs/tabs.js" charset="utf-8"></script>
-</div></div></div></div></body><script src="/js/global.js"></script><script src="/js/zoolander-only.js"></script><script src="/global/modal.js"></script></html>
+</div></div></div></body><script src="/js/global.js"></script><script src="/js/zoolander-only.js"></script><script src="/global/modal.js"></script></html>
