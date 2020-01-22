@@ -228,3 +228,55 @@ table {
     }
   }
 }
+
+$exposed-form: #1c4587;
+
+.rsExposed-form {
+  background-color: $exposed-form;
+  color: $white;
+  padding: 20px;
+
+  div.form-control { // sass-lint:disable-line no-qualifying-elements force-element-nesting
+    background-color: $exposed-form;
+    color: $white;
+  }
+
+  .form-checkboxes {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-checkbox {
+    display: inline;
+  }
+
+  .option {
+    display: inline;
+  }
+
+  .form-group-item {
+    margin-bottom: 15px;
+  }
+}
+
+.rsExposed-form-header {
+  color: $white;
+}
+
+.rsExposed-form-terms {
+  font-size: .8em;
+}
+
+.rsExposed-form-smallText {
+  font-size: .8em;
+  margin-top: 15px;
+}
+
+.rsExposed-form-termLink {
+  color: $white;
+  text-decoration: underline;
+
+  &:hover {
+    color: $rackspace-red;
+  }
+}
