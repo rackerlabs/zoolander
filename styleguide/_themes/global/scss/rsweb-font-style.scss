@@ -83,7 +83,7 @@ $font-version: "1.0.5";
     }
 }
 
-i.rsweb {
+span.rsweb {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'rswebfonts' !important;
     speak: none;
