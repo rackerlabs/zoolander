@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row-eq-height clearfix">
+    <div class="col-xs-12">
+      <h2>Related Resources</h2>
+    </div>
+  </div>
+  <div class="resourcecenter-resourceRow row-eq-height">
+    <%- partial('resourceCenter-resource.ejs', {
+      type: 'video',
+      title: 'This is a really ridiculously long resource title'
+    })%>
+    <%- partial('resourceCenter-resource.ejs', {
+      type: 'webinar',
+      link: '/derek/view-templates/resource-center/webinar'
+    }) %>
+    <%- partial('resourceCenter-resource.ejs', {
+        type: 'video',
+        link: '/derek/view-templates/resource-center/video'
+      }) %>
+  </div>
+</div>

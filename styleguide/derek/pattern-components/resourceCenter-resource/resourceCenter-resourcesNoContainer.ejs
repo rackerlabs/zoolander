@@ -1,22 +1,16 @@
 <!-- Additional Resources: 33/34/33 -->
-<div class="row row-eq-height">
-  <div class="col-sm-4 panel-flex">
-    <%- partial('_partials/resourceCenter-resource.ejs', {
-      type: 'pdf',
-      title: 'This is a really ridiculously long resource title ',
-      link: '/derek/view-templates/resource-center/pdf'
-    })%>
-  </div>
-  <div class="col-sm-4 panel-flex">
-    <%- partial('_partials/resourceCenter-resource.ejs', {
-      type: 'stories',
-      link: '/derek/view-templates/resource-center/webinar'
-    }) %>
-  </div>
-  <div class="col-sm-4 panel-flex">
-    <%- partial('_partials/resourceCenter-resource.ejs', {
-      type: 'video',
-      link: '/derek/view-templates/resource-center/video'
-    }) %>
-  </div>
-</div>
+  <%- partial('_partials/resourceCenter-resource.ejs', {
+    type: 'pdf',
+    title: 'This is a really ridiculously long resource title',
+    link: '/derek/view-templates/resource-center/pdf'
+  })%>
+
+  <%- partial('_partials/resourceCenter-resource.ejs', {
+    type: 'stories',
+    link: '/derek/view-templates/resource-center/webinar'
+  }) %>
+
+  <%- partial('_partials/resourceCenter-resource.ejs', {
+    type: 'video',
+    link: '/derek/view-templates/resource-center/video'
+  }) %>

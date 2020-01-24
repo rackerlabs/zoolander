@@ -10,26 +10,11 @@
   &.teal { background-color: $teal-medium; }
 
   //grays
+  &.gray-lightest { background-color: $gray-lightest; }
   &.gray-light { background-color: $gray-lighter; }
   &.gray-base { background-color: $gray-base; }
   &.gray-darker { background-color: $gray-darker; }
   &.darkest-gray { background-color: $gray-darkest; }
-
-  &:hover {
-
-    .swatch-copy-button {
-      background-color: $gray-lightest;
-      display: block;
-      font-family: $subhead;
-      opacity: .85;
-      padding: 10px;
-      position: absolute;
-      text-align: center;
-      text-transform: uppercase;
-      top: 60px;
-      width: 88%;
-    }
-  }
 }
 
 .swatch-color-lighter {
@@ -57,12 +42,4 @@
   margin: 0;
   overflow: auto;
   padding: 5px;
-}
-
-.swatch-copy-button {
-  display: none;
-}
-
-.swatch-copy {
-  display: none;
 }

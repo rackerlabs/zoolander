@@ -1,31 +1,12 @@
-<div class="half-padding">
-  <h1 class="center">Rackspace Resources</h1>
-</div>
-
-<div class="resourcecenter-featuredResourceWrapper">
-  <div class="resourcecenter-featuredResourceContainer">
-    <div class="resourcecenter-featuredGraphicWrapper">
-      <img class="resourcecenter-featuredGraphic" src="imgs/derek/resourceCenter/testpdf.jpg">
-    </div>
-    <div class="resourcecenter-featuredTextWrapper">
-      <h3 class="resourcecenter-featuredTextTitle">Resource Title Here</h3>
-      <div class="resourcecenter-featuredTextDesc">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mpsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-      </div>
-      <a class="resourcecenter-featuredTextLink">View Resource</a>
-    </div>
-  </div>
-</div>
-
 <div class="rsFilter-section">
-  <div class="rsFilter-sideBar-row row-eq-height">
-    <div class="rsFilter-sideBar">
-      <div class="rsFilter-sideBar-titleContainer">
-        <button class="rsFilter-sideBar-hamburger"></button>
-        <div class="rsFilter-sideBar-formTitle">Find a Resource</div>
-      </div>
-
+  <div class="rsFilter-sideBar-row">
+    <div class="rsFilter-sideBar rsFilter-refreshSideBar">
       <form class="rsFilter-sideBar-form">
+        <div class="rsFilter-sideBar-titleContainer">
+          <button class="rsFilter-sideBar-hamburger"></button>
+          <div class="rsFilter-sideBar-formTitle">Find a Resource</div>
+          <input class="rsFilter-sideBar-reset" type="reset" value="Clear All" />
+        </div>
         <!-- Accordion Side -->
         <div class="rsFilter-sideBar-content">
           <ul class="rsFilter-sideBar-acc">
@@ -180,20 +161,18 @@
       </form>
     </div>
     <div class="rsFilter-results-content">
-      <div class="resourcecenter-resourceRow">
-        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resourcesNoContainer.ejs') %>
+      <div class="resourcecenter-resourceRow row-eq-height">
+        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resource.ejs') %>
       </div>
-      <div class="resourcecenter-resourceRow">
-        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resourcesNoContainer.ejs') %>
+      <div class="resourcecenter-resourceRow row-eq-height">
+        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resourceRow2.ejs') %>
       </div>
-      <div class="resourcecenter-resourceRow">
-        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resourcesNoContainer.ejs') %>
+      <div class="resourcecenter-resourceRow row-eq-height">
+        <%- partial('../../pattern-components/resourceCenter-resource/resourceCenter-resource.ejs') %>
       </div>
-        <%- partial('../pagination.ejs') %>
     </div>
   </div>
 </div>
-
 <script src="js/global-components/filter-bar/filter-accordion.js" charset="utf-8"></script>
 <script type="text/javascript">
   $('.rsFilter-sideBar').rsFilterBarAccordion();
