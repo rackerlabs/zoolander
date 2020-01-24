@@ -1,34 +1,19 @@
 <!-- Related Resources -->
-<div class="container standard-padding-full">
-  <div class="resourcecenter-relatedWrapper">
-    <h2>Related Resources</h2>
-  </div>
+<%- partial('_partials/resourceCenter-resource.ejs', {
+  type: 'video',
+  title: 'Rackspace Managed Backup and Encryption',
+  desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...'
+})%>
 
-  <div class="row row-eq-height">
-    <div class="col-sm-4 panel-flex">
-      <%- partial('_partials/resourceCenter-resource.ejs', {
-        type: 'pdf',
-        title: 'This is a really ridiculously long resource title'
-      })%>
-    </div>
-    <div class="col-sm-4 panel-flex">
-      <%- partial('_partials/resourceCenter-resource.ejs', {
-        type: 'webinar',
-        link: '/derek/view-templates/resource-center/webinar'
-      }) %>
-    </div>
-    <div class="col-sm-4 panel-flex">
-      <%- partial('_partials/resourceCenter-resource.ejs', {
-          type: 'stories',
-          link: '/derek/view-templates/resource-center/code'
-        }) %>
-    </div>
-  </div>
+<%- partial('_partials/resourceCenter-resource.ejs', {
+  type: 'document',
+  image: 'Image',
+  link: '/derek/view-templates/resource-center/pdf'
+}) %>
 
-  <div class="text-center">
-    <div class="resourcecenter-allResourceLink">
-      <a href="javascript:void(0)" class="resourcecenter-allResourceLink">View All Resources</a>
-    </div>
-  </div>
-
-</div>
+<%- partial('_partials/resourceCenter-resource.ejs', {
+    type: 'code',
+    title: 'OpenStack Compute (Nova)',
+    desc: 'Implement services & libraries for scalable, on demand, self service access to compute resources, including bare metal, virtual machines, and containers. Would be cool if we could get some more information at all into these pages.',
+    link: '/derek/view-templates/resource-center/code'
+  }) %>

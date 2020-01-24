@@ -39,7 +39,7 @@
 @import '../../../derek/pattern-components/dedicated-configurator/dedicated-configurator';
 @import '../../../derek/pattern-components/ias/ias';
 @import '../../../derek/pattern-components/resourceCenter-resource/resourceCenter-resource';
-@import '../../../derek/pattern-components/resourceCenter-resource/refresh/resourceCenter-resource';
+@import '../../../derek/view-templates/resource-center/resource-center';
 @import '../../../derek/pattern-components/awards/awards';
 @import '../../../derek/pattern-components/ctas/cta';
 @import '../../../derek/pattern-components/cust-story-river/cust-story-river';
@@ -51,7 +51,6 @@
 @import '../../../derek/view-templates/stories/stories';
 @import '../../../derek/view-templates/leadership/leadership';
 @import '../../../derek/view-templates/interactive-map/interactive-map';
-@import '../../../derek/view-templates/resource-center/resource-center';
 @import '../../../derek/view-templates/newsroom-overview/newsroom-overview';
 @import '../../../derek/view-templates/search/search';
 @import '../../../derek/templates/thought-leadership-overview/_partials/nav';
@@ -59,7 +58,6 @@
 @import 'snowflakes/homepage';
 @import '../../../derek/pattern-components/platforms/platforms';
 @import 'snowflakes/swatches';
-@import 'snowflakes/o365';
 @import '../../../derek/global-components/chat/chat';
 
 .clear-fixed-top {

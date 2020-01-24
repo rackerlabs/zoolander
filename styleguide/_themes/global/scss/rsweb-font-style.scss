@@ -83,7 +83,7 @@ $font-version: "1.0.5";
     }
 }
 
-i.rsweb {
+span.rsweb {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'rswebfonts' !important;
     speak: none;
@@ -159,6 +159,7 @@ i.rsweb {
 .cont-checklist:before { content: '\e814'; } /* '' */
 .cont-code-review:before { content: '\e815'; } /* '' */
 .cont-health-checks:before { content: '\e816'; } /* '' */
+.code-script:before { content: '\e808'; } /* '' */
 .ded-tools:before { content: '\e819'; } /* '' */
 .gen-backups:before { content: '\e81a'; } /* '' */
 .gen-news:before { content: '\e81b'; } /* '' */
@@ -334,6 +335,7 @@ i.rsweb {
 .mng-access:before { content: '\e986'; } /* '' */
 .mng-advisors:before { content: '\e987'; } /* '' */
 .srv-virtualization-server:before { content: '\e988'; } /* '' */
+.movie-popup:before { content: '\e8c6'; } /* '' */
 .mng-apps:before { content: '\e989'; } /* '' */
 .mng-cloud:before { content: '\e98b'; } /* '' */
 .mng-databases:before { content: '\e98d'; } /* '' */
@@ -349,6 +351,8 @@ i.rsweb {
 .mng-security:before { content: '\e99b'; } /* '' */
 .mng-service:before { content: '\e99d'; } /* '' */
 .mng-support:before { content: '\e9a0'; } /* '' */
+.pdf-doc:before { content: '\e8c5'; } /* '' */
+.playbtn-film:before { content: '\e8c8'; } /* '' */
 .srv-advisory:before { content: '\e9a3'; } /* '' */
 .srv-anti-virus:before { content: '\e9a4'; } /* '' */
 .srv-architecture:before { content: '\e9a5'; } /* '' */
