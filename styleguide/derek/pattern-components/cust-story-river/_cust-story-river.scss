@@ -145,4 +145,128 @@
     background-image: url('../imgs/derek/banners/customer-story-background-1440.jpg');
   }
 }
-// end rsHomepage-customerStories
+
+.rsCustomer-story-header {
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.rsCustomer-story-cta {
+  border: 2px solid $black;
+  color: $black;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+  transition-duration: .2s;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.rsCustomer-story-logo {
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.rsCustomer-story-headerBackground {
+  position: relative;
+  text-align: center;
+}
+
+.rsCustomer-story-headerContainer {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  z-index: 250;
+}
+
+.rsCustomer-story-headerInner {
+  // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
+  @include the-ms-special(10);
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.rsCustomer-story-title {
+  font-size: 1.75em;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 110%;
+  margin: 10px 0 25px;
+  text-align: left;
+}
+
+.rsCustomer-story-text {
+  // sass-lint:disable-block no-vendor-prefixes
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 10;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  background-color: $white;
+  color: $black;
+  grid-area: 1 / 1 / 2 / 11;
+  padding: 25px;
+}
+
+.cs-story-box {
+  visibility: hidden;
+}
+
+.rsCustomer-story-headerBackgroundContent {
+  width: 100%;
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .rsCustomer-story-title,
+  .rsCustomer-story-p {
+    color: $black;
+  }
+
+  .rsCustomer-story-header {
+    height: 42vw;
+  }
+
+  .rsCustomer-story-headerBackground {
+    display: inline;
+    height: 42vw;
+    left: 50%;
+    margin-left: -50%;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .rsCustomer-story-text {
+    // sass-lint:disable-block no-vendor-prefixes
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-area: 1 / 1 / 2 / 6;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .rsCustomer-story-header {
+    height: 42vw;
+    max-height: 500px;
+  }
+}
+
