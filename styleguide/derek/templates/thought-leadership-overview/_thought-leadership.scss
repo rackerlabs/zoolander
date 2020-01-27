@@ -13,11 +13,12 @@ $row-space: 35px;
   font-size: 1.75em;
 
   @media only screen and (min-width: $screen-md-min) {
-    font-size: 2.5em;
+    font-size: 3.5vw;
   }
 
-  @media only screen and (min-width: $screen-lg-min) {
-    font-size: 3.75em;
+  // don't allow the font to increase further for larger screens
+  @media screen and (min-width: $screen-xl) {
+    font-size: 60px;
   }
 }
 
@@ -32,11 +33,12 @@ $row-space: 35px;
 .rsTl-feature-header {
   background-position: center center;
   background-repeat: no-repeat;
-  display: block;
+  display: table;
   margin-bottom: $row-space / 2;
   overflow: hidden;
   padding: 0;
   position: relative;
+  width: 100%;
 
   &:focus,
   &:hover {
@@ -85,6 +87,13 @@ $row-space: 35px;
 .rsTl-feature-author {
   font-weight: 600;
   text-decoration: underline;
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .rsTl-feature-headerBackgroundContent {
+    height: 100%;
+    width: $screen-xl;
+  }
 }
 
 .rsTl-article-read {
@@ -614,7 +623,7 @@ $row-space: 35px;
 
   .rsTl-feature-headerBackground {
     display: inline;
-    height: 42vw;
+    height: 100%;
     left: 50%;
     margin-left: -50%;
     position: absolute;
