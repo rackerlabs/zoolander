@@ -17,7 +17,17 @@
 
 .basement-container {
   @include make-container;
-  padding: 10px 25px;
+  padding: 10px 0;
+
+  .region-select {
+    display: block;
+    font-weight: bold;
+    padding: 0 25px;
+
+    @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      text-align: center;
+    }
+  }
 }
 
 .basement-container-xl {
@@ -75,6 +85,11 @@
   color: $gray-light;
   margin-top: 5px;
   text-align: right;
+}
+
+.basement-flag-label {
+  color: $white;
+  font-size: 1.2rem;
 }
 
 .redirect-flag-icon,
