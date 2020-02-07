@@ -77,6 +77,80 @@
   </form>
 </div>
 
+<div class="row half-padding">
+  <h5>Exposed Form</h5>
+  <div class="rs-webform-embedded" id="block-webform">
+    <div>
+      <form class="rsExposed-form">
+         <div class="form-item">
+            <h4 class="formModal-title">Please complete this form to have a specialist contact you.</h4>
+            <div class="description">
+               <div class="webform-element-description"></div>
+            </div>
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">First Name<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="text">
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">Last Name<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="text">
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">Company<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="text">
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">Email Address<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="email">
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">Phone Number<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="text">
+         </div>
+         <div class="form-item">
+            <label class="formModal-label form-label">How can we assist you?</label>
+            <div>
+              <textarea class="form-control formModal-input" rows="5" cols="60"></textarea>
+            </div>
+         </div>
+         <div class="form-item">
+            <label class="formModal-label form-label">
+              Do you want to receive additional information about products, services, thought leadership and invitations to flagship events?<span class="formModal-required"> *</span>
+            </label>
+            <div>
+               <div class="form-item">
+                 <input type="radio" class="form-radio">
+                 <label class="option form-label">Yes</label>
+               </div>
+               <div class="form-item">
+                 <input type="radio" class="form-radio">
+                 <label class="option form-label">No</label>
+               </div>
+            </div>
+         </div>
+         <details class="captcha form-wrapper">
+            <summary role="button">CAPTCHA</summary>
+            <input type="hidden">
+            <input type="hidden">
+            <input type="hidden">
+            <div class="g-recaptcha recaptcha-processed">
+               <div style="width: 304px; height: 78px">
+                  <textarea class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none"></textarea>
+               </div>
+            </div>
+         </details>
+         <div class="form-actions">
+           <input class="button lead button--primary form-submit" type="submit">
+         </div>
+      </form>
+      <p class="small half-padding-top">
+        Information collected in this form is subject to the <a href="#">Rackspace Privacy Statement</a>.
+      </p>  
+    </div>
+  </div>
+</div>
+
 <div class="row half-padding-top">
   <h5>Modal Form Components</h5>
   <!-- Button trigger modal -->
