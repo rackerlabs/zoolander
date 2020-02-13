@@ -9,6 +9,7 @@ files:
     - 'styleguide/_themes/global/scss/bootstrap_overrides.scss'
     - 'styleguide/_themes/global/scss/vendor_prefixes.scss'
     - 'styleguide/_themes/global/scss/scaffolding.scss'
+    - 'styleguide/css/rsweb-font-style.scss'
 rules:
   no-url-protocols: 0
   no-url-domains: 0

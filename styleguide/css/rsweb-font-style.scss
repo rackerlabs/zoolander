@@ -9,19 +9,6 @@ $font-version: "1.0.5";
     font-style: normal
 }
 
-.iconDoc-wrapper {
-  @include make-sm-column(3);
-  margin: 10px 0;
-
-  .rsweb {
-    font-size:3em;
-  }
-}
-
-.iconDoc-name {
-  margin: 0;
-}
-
 .fa,
 .rsweb {
     font-family: "rswebfonts";
