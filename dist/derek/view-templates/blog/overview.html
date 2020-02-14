@@ -186,436 +186,326 @@
 </div>
 <!--[/navigation]-->
 <script src="js/global-components/mainnav/mainnav.js" charset="utf-8"></script>
-<div class="contentOffset"></div>
-
-<div class="refreshBanner2019">
-  <picture class="refreshBanner2019-pic">
-   <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source class="refreshBanner2019-pic-content" srcset="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/refresh/health-d.jpg 1x" media="all and (min-width: 1600px)" type="image/jpeg"/>
-    <source class="refreshBanner2019-pic-content" srcset="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/refresh/health-d.jpg 1x" media="all and (min-width: 1280px) and (max-width: 1599px)" type="image/jpeg"/>
-    <source class="refreshBanner2019-pic-content" srcset="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/refresh/health-d.jpg 1x" media="all and (min-width: 992px) and (max-width: 1279px)" type="image/jpeg"/>
-    <source class="refreshBanner2019-pic-content" srcset="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/refresh/health-d.jpg 1x" media="all and (min-width: 768px) and (max-width: 991px)" type="image/jpeg"/>
-    <source class="refreshBanner2019-pic-content" srcset="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/refresh/health-d.jpg 1x" media="all and (min-width: 480px) and (max-width: 767px)" type="image/jpeg"/>
-    <source class="refreshBanner2019-pic-content" srcset="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/refresh/health-d.jpg 1x" type="image/jpeg"/>
-    <!--[if IE 9]></video><![endif]-->
-    <img class="refreshBanner2019-pic-content" src="https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/bananers/refresh/health-d.jpg" alt="Test page banner">
-  </picture>
-  <div class="container">
-    <h2 class="refreshBanner2019-text">Is Google Your Destination? We’ll Be Your Guide.</h2>
-  </div>
-  <script type="text/javascript" src="global/plugins/scrollreveal.min.js"></script>
-  <script type="application/ecmascript">
-  /* eslint-disable */
-
-var Zoolander = Zoolander || {};
-
-/**
- * @file
- * This file should never be included directly. Rather, the code should be
- * injected inside of a SVG. This is only in a separate file for the purposes
- * of unit testing the code.
- */
-
-/**
- * Retrieves svg attribute values based on lineCt and ID.
- */
-function svgBannerGetAttributes(lineCt, id) {
-  var height = lineCt * 45 + 50;
-  var bottomSides = {
-    primaryBox: "1442," + height + " 805,777 140,777 777," + height,
-    secondaryBox: "1327," + height + " 690,777 140,777 777," + height
-  }
-  return {
-    boxHeight: height,
-    leftSide: "777," + height + " 140,777 0,777 777,0",
-    bottomSide: bottomSides[id]
-  };
-}
-
-/**
- * Splits a string based on characters.
- *
- * @see http://bit.ly/2zn664C
- */
-function svgBannerStringSplitter(str, l){
-  var strs = [];
-  while(str.length > l){
-    var pos = str.substring(0, l).lastIndexOf(' ');
-    pos = pos <= 0 ? l : pos;
-    strs.push(str.substring(0, pos));
-    var i = str.indexOf(' ', pos)+1;
-    if(i < pos || i > pos+l)
-      i = pos;
-    str = str.substring(i);
-  }
-  strs.push(str);
-  return strs;
-}
-
-/**
- * Set's the svg content.
- */
-function svgBannerSetContent(primaryBox = 25) {
-  // Prevent redraw.
-  if (typeof Zoolander.svgIsDrawn === "undefined") {
-    Zoolander.svgIsDrawn = false;
-  } else if (Zoolander.svgIsDrawn) {
-    return;
-  }
-  // Add content lines.
-  var boxTextLimits = {
-    primaryBox: primaryBox,
-    secondaryBox: 20
-  };
-  for (var id in boxTextLimits) {
-    var parent = document.getElementById(id);
-    if (!parent) { continue; }
-    var el = parent.querySelector('.text');
-    var sourceText = el.childNodes[1].textContent ? el.childNodes[1].textContent : el.childNodes[1].innerText;
-    var lines = svgBannerStringSplitter(sourceText, boxTextLimits[id]);
-    var xmlns = 'http://www.w3.org/2000/svg';
-
-    for (var lineIdx in lines) {
-      var tspan = document.createElementNS(xmlns, 'tspan');
-      tspan.setAttributeNS(null, 'class', 'displayText');
-      tspan.setAttributeNS(null, 'x', 800);
-      tspan.setAttributeNS(null, 'dy', lineIdx > 0 ? 50 : 0);
-      tspan.setAttributeNS(null, 'width', 665);
-      var text = document.createTextNode(lines[lineIdx]);
-      tspan.appendChild(text);
-      el.appendChild(tspan);
-    }
-  }
-  Zoolander.svgIsDrawn = true;
-}
-
-var runAnimations = function (el) {
-  window.sr = ScrollReveal();
-  // header box
-  sr.reveal(el, {
-    duration: 850,
-    opacity: 0,
-    distance: '50px',
-  });
-};
-
-  svgBannerSetContent();
-  runAnimations('.refreshBanner2019-text');
-  </script>
-</div>
-
-<div class="container standard-padding">
-  <!-- Lead pattern -->
-
-<!--
-.lead class naming not used in alignment with typical pattern structure
-instead here .lead-wrapper is used to avoid having to override bootstrap base class
- -->
-<div class="lead-wrapper">
-  <div class="lead-headerWrapper">
-    <h1 class="lead-header">This is the Page H1, the Most Important Words on the Page for SEO</h1>
-  </div>
-  <div class="lead-bodyWrapper">
-    <p>Bacon ipsum dolor amet minim tri-tip pork chop fatback pork loin, salami shoulder pastrami cow id tongue aliquip nostrud. Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est. In dolor qui pastrami, proident velit laborum prosciutto shoulder. Cow in cillum, dolor kielbasa ut occaecat aute irure.</p>
-    <p>
-      <ul>
-          <li>Item one.</li>
-          <li>Item two.</li>
-          <li>Item three with <a href="#"> a link within a list</a></li>
-      </ul>
-    </p>
-    <a href="#" class="lead-link"> A link within a lead</a>
-  </div>
-</div>
-
-</div>
+<div class="contentOffset"><!-- Industry River -->
 
 
-<!-- Value Props: 33/34/33 -->
-<div class="container half-padding">
-  <div class="row row-eq-height">
-    <div class="col-sm-4 panel-flex">
-      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-<!-- Value Props Pattern -->
-
-<div class="valueProp">
-  <div class="valueProp-row">
-    <div class="valueProp-media">
-      <div class="valueProp-icon">
-        <span class="rsweb idio-brain"></span>
-      </div>
-    </div>
-  </div>
-  <div class="valueProp-row">
-    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
-  </div>
-  <div class="valueProp-row">
-    <div class="valueProp-body">
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-    </div>
-  </div>
-</div>
-
-    </div>
-    <div class="col-sm-4 panel-flex">
-      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-<!-- Value Props Pattern -->
-
-<div class="valueProp">
-  <div class="valueProp-row">
-    <div class="valueProp-media">
-      <div class="valueProp-icon">
-        <span class="rsweb idio-brain"></span>
-      </div>
-    </div>
-  </div>
-  <div class="valueProp-row">
-    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
-  </div>
-  <div class="valueProp-row">
-    <div class="valueProp-body">
-      <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
-    </div>
-  </div>
-</div>
-
-    </div>
-    <div class="col-sm-4 panel-flex">
-      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-<!-- Value Props Pattern -->
-
-<div class="valueProp">
-  <div class="valueProp-row">
-    <div class="valueProp-media">
-      <img class="valueProp-img" src="https://placeholdit.imgix.net/~text?txtsize=30&txt=%5Bplaceholder%5D&w=200&h=150">
-    </div>
-  </div>
-  <div class="valueProp-row">
-    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
-  </div>
-  <div class="valueProp-row">
-    <div class="valueProp-body">
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
-
-
-<!-- Quote Full Width -->
-<div class="quote">
-  <div class="quote-wrapper">
-    <div class="row">
-      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-
-
-
-<!-- Quote Partial -->
-
-<div class="quote-logoWrapper">
-  <div class="quote-logo">
-    <img src="imgs/derek/logos/underarmor.png" alt="">
-  </div>
-</div>
-<div class="quote-textWrapper">
-  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
-  <p class="quote-attrName">Brian McManus</p>
-  <p class="quote-attrPosition">Senior Director of Technology</p>
-</div>
-<div class="quote-buttonWrapper">
-  <a class="button ghost">View More Stories</a>
-</div>
-
-
-    </div>
-  </div>
-</div>
-
-
-<div class="container">
-  <div class="rsTabs-container rsTabsHorizontal-container">
-    <ul class="nav nav-tabs rsTabs rsTabsHorizontal">
-      <li class="rsTab-tab active"><a class="rsTab-link rsTabHorizontal-link" href="#tab-1" data-toggle="tab">Tab 1</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-2" data-toggle="tab">Tab 2</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-3" data-toggle="tab">Tab 3</a></li>
-      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-4" data-toggle="tab">Tab 4</a></li>
-    </ul>
-    <div id="myTabContent" class="tab-content rsTabs-content rsTabsHorizontal-content">
-      <div class="tab-pane active" id="tab-1">
-        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-
-
-
-<!-- Internal Tab Section -->
-<div class="half-padding-full">
-<h2 class="center">Pain Point / Use Case</h2>
+<div class="container half-padding-top">
   <div class="row">
-    <div class="col-sm-9">
-      <div class="subpanel">
-        <div class="subpanel-inner">
-          <h4>Expand on Value Props or Pain Points</h4>
-          <p>Text goes here for pain points or use cases for the targeted product, solution, service, or industry. Pair with a related image, screenshot, or other asset to the right. Finish off this section with links to relevant product/service/solution pages. Solve with: Use Case Examples</p>
-        </div>
+    <div class="col-md-12 rsBlog-featured-container">
+      <h1>Rackspace Blog</h1>
+
+      <div class="col-md-8">
+        <img src="../imgs/derek/quadrant.jpg" alt="title here">
       </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="subpanel">
-        <div class="subpanel-inner">
-          <img src="http://placehold.it/350x250">
-        </div>
+      <div class="col-md-4">
+        <h1>Featured Blog Headline Goes Here</h1>
+        <p>Aug 9, 2020</p>
+        <p>
+          Pug prism coloring book, poke craft beer lyft hella. Gochujang pok pok cliche master cleanse. 
+          8-bit fingerstache slow-carb, bitters kinfolk gluten-free squid hashtag before they sold out 
+          chillwave taxidermy narwhal viral. Cloud bread whatever fingerstache vape cornhole seitan. 
+        </p>
+        <p>
+          <a class="rsBlog-readmore" href="#">Read More</a>
+        </p>
       </div>
     </div>
   </div>
-</div>
-
-      </div>
-      <div class="tab-pane" id="tab-2">
-        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-
-
-
-<!-- Internal Tab Section -->
-<div class="half-padding-full">
-<h2 class="center">Pain Point / Use Case</h2>
   <div class="row">
-    <div class="col-sm-9">
-      <div class="subpanel">
-        <div class="subpanel-inner">
-          <h4>Expand on Value Props or Pain Points</h4>
-          <p>Text goes here for pain points or use cases for the targeted product, solution, service, or industry. Pair with a related image, screenshot, or other asset to the right. Finish off this section with links to relevant product/service/solution pages. Solve with: Use Case Examples</p>
+    <div class="col-md-12">
+      
+        <div class="rsBlog-overview-row row-eq-height">
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here. this is a longer title to break into multiple lines</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here. This title will break into even more multiple lines than the one before</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
         </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="subpanel">
-        <div class="subpanel-inner">
-          <img src="http://placehold.it/350x250">
+      
+        <div class="rsBlog-overview-row row-eq-height">
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
         </div>
-      </div>
+      
+        <div class="rsBlog-overview-row row-eq-height">
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="/derek/view-templates/blog/article" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg')">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop">Some long title here</h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      
     </div>
   </div>
-</div>
-
-      </div>
-      <div class="tab-pane" id="tab-3">
-         <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-
-
-
-<!-- Internal Tab Section -->
-<div class="half-padding-full">
-<h2 class="center">Alternative Title</h2>
   <div class="row">
-    <div class="col-sm-9">
-      <div class="subpanel">
-        <div class="subpanel-inner">
-          <h4>Expand on Value Props or Pain Points</h4>
-          <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean moon.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="subpanel">
-        <div class="subpanel-inner">
-          <img src="http://placehold.it/350x250">
-        </div>
-      </div>
-    </div>
+    <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+  <h4 id="pagination-heading" class="hidden"></h4>
+  <ul class="pager__items js-pager__items">
+      <li class="pager__item pager__item--first">
+        <a href="javascript:void(0)" title="Go to first page">
+          <span class="hidden"></span>
+          <span aria-hidden="true">« 
+            <span class="hidden-sm hidden-xs">First</span>
+          </span>
+        </a>
+      </li>
+      <li class="pager__item pager__item--previous">
+        <a href="javascript:void(0)" title="Go to previous page" rel="prev">
+          <span class="hidden"></span>
+          <span aria-hidden="true">‹‹ 
+            <span class="hidden-sm hidden-xs">Back</span>
+          </span>
+        </a>
+      </li>
+      <li class="pager__item pager__item--ellipsis" role="presentation">…</li>
+      <li class="pager__item is-active"><a href="javascript:void(0)" title="Current page"><span class="hidden"></span>1</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 2"><span class="hidden">Page </span>2</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 3"><span class="hidden"></span>3</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 4"><span class="hidden"></span>4</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 5"><span class="hidden"></span>5</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 6"><span class="hidden"></span>6</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 7"><span class="hidden"></span>7</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 8"><span class="hidden"></span>8</a></li>
+      <li class="pager__item"><a href="javascript:void(0)" title="Go to page 9"><span class="hidden"></span>9</a></li>
+      <li class="pager__item pager__item--ellipsis" role="presentation">…</li>
+      <li class="pager__item pager__item--next">
+        <a href="javascript:void(0)" title="Go to next page" rel="next">
+          <span class="hidden"></span>
+          <span aria-hidden="true">
+            <span class="hidden-sm hidden-xs">Next</span> 
+            ››
+          </span>
+        </a>
+      </li>
+      <li class="pager__item pager__item--last">
+        <a href="javascript:void(0)" title="Go to last page">
+          <span class="hidden"></span>
+          <span aria-hidden="true">
+            <span class="hidden-sm hidden-xs">Last</span> 
+            »
+          </span>
+        </a>
+      </li>
+  </ul>
+</nav>
   </div>
-</div>
-
-      </div>
-      <div class="tab-pane" id="tab-4">
-        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
-
-
-
-
-<!-- Internal Tab Section -->
-<div class="half-padding-full">
-<h2 class="center">Pain Point / Use Case</h2>
-  <div class="row">
-    <div class="col-sm-9">
-      <div class="subpanel">
-        <div class="subpanel-inner">
-          <h4>Expand on Value Props or Pain Points</h4>
-          <p>Text goes here for pain points or use cases for the targeted product, solution, service, or industry. Pair with a related image, screenshot, or other asset to the right. Finish off this section with links to relevant product/service/solution pages. Solve with: Use Case Examples</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="subpanel">
-        <div class="subpanel-inner">
-          <img src="http://placehold.it/350x250">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-    </div>
-  </div>
-</div>
-<script src="js/pattern-components/tabs/tabs.js" charset="utf-8"></script>
-
-
-<div class="half-padding">
-  <!-- CTA -->
-  <div class="cta">
-    <div class="cta-row">
-      <div class="cta-headerWrapper">
-        <h2>Talk to a Rackspace Specialist</h2>
-      </div>
-    </div>
-    <div class="cta-row">
-      <div class="cta-buttonWrapper">
-        <a class="cta-button track-cta">Talk to a Specialist</a>
-      </div>
-    </div>
-    <div class="cta-row">
-      <div class="cta-subheadWrapper">
-        <p class="cta-subhead">Call <a href="javascript:void(0)">1-855-715-7307</a> to start saving</p>
-      </div>
-    </div>
-  </div>
-  <!-- end CTA -->
-</div>
-
-
-
-
-<div class="half-padding">
-  <!-- CTA -->
-  <div class="cta">
-    <div class="cta-row">
-      <div class="cta-headerWrapper">
-        <h2>Talk to a Rackspace Specialist</h2>
-      </div>
-    </div>
-    <div class="cta-row">
-      <div class="cta-buttonWrapper">
-        <a class="cta-button track-cta">Talk to a Specialist</a>
-      </div>
-    </div>
-    <div class="cta-row">
-      <div class="cta-subheadWrapper">
-        <p class="cta-subhead">Call <a href="javascript:void(0)">1-855-715-7307</a> to start saving</p>
-      </div>
-    </div>
-  </div>
-  <!-- end CTA -->
-</div><div class="backtotop-wrapper">
+</div></div><div class="backtotop-wrapper">
   <div class="row">
     <div class="backtotop-linkwrapper">
       <a href="#" class="backtotop-link">Back to Top<span class="fa-arrow-circle-up backtotop-icon"></span></a>
