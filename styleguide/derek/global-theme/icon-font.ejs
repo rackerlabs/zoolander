@@ -70,9 +70,13 @@
     <h5 class="red">Available icons: </h5>
     <% for (var i=0; i < icons.length; i++) { %>
       <% var icon = icons[i] %>
-      <% if (icon.selected) { %>
+      <% if (icon.src !== 'fontawesome' && icon.selected || icon.src === 'fontawesome') { %>
+        <% var classPrefix = '' %>
+        <% if (icon.src === 'fontawesome') { %>
+          <% classPrefix = 'fa-' %>
+        <% } %>
         <div title="Code: <%= icon.code %>" class="iconDoc-wrapper">
-          <span class="rsweb <%= icon.css %>" style="font-size:32px;"></span>
+          <span class="rsweb <%= classPrefix %><%= icon.css %>" style="font-size:32px;"></span>
           <p class="iconDoc-name">Class: <span class="blue-login"><%= icon.css %></span></p>
           <p class="iconDoc-code">Code: <span class="blue-login"><%= Number(icon.code).toString(16).slice(-4) %></span></p>
         </div>

@@ -1,0 +1,123 @@
+<!-- Industry River -->
+<%
+  var rows = [
+    {
+      articles: [
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...'
+        },
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here. this is a longer title to break into multiple lines',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.'
+        },
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here. This title will break into even more multiple lines than the one before',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.'
+        }
+      ]
+    },
+    {
+      articles: [
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.'
+        },
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.'
+        },
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.'
+        }
+      ]
+    },
+    {
+      articles: [
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.'
+        },
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.'
+        },
+        {
+          link: '/derek/view-templates/blog/article',
+          title: 'Some long title here',
+          desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.'
+        }
+      ]
+    }
+  ];
+%>
+
+<div class="container half-padding-top">
+  <div class="row">
+    <div class="col-md-12 rsBlog-featured-container">
+      <h1>Rackspace Blog</h1>
+
+      <div class="col-md-8">
+        <img src="../imgs/derek/quadrant.jpg" alt="title here" />
+      </div>
+      <div class="col-md-4">
+        <h1>Featured Blog Headline Goes Here</h1>
+        <p>Aug 9, 2020</p>
+        <p>
+          Pug prism coloring book, poke craft beer lyft hella. Gochujang pok pok cliche master cleanse. 
+          8-bit fingerstache slow-carb, bitters kinfolk gluten-free squid hashtag before they sold out 
+          chillwave taxidermy narwhal viral. Cloud bread whatever fingerstache vape cornhole seitan. 
+        </p>
+        <p>
+          <a class="rsBlog-readmore" href="#">Read More</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <% for(var i=0; i < rows.length; i++) { %>
+        <div class="rsBlog-overview-row row-eq-height">
+          <% for(var x=0; x < rows[i].articles.length; x++) { %>
+            <div class="rsBlog-article-wrapper rsBlog-article-wrapperBox">
+              <div class="rsBlog-article">
+                <a href="<%= rows[i].articles[x].link %>" class="rsBlog-article-innerLink">
+                  <div class="rsBlog-article-top" style="background-image: url('https://img.youtube.com/vi/cbP2N1BQdYc/hqdefault.jpg');">
+                    <div class="rsBlog-article-topSpace"></div>
+                    <div class="rsBlog-article-titleTopWrap">
+                      <h5 class="rsBlog-article-titleTop"><%= rows[i].articles[x].title %></h5>
+                    </div>
+                    <div class="rsBlog-article-date">
+                      July 30, 2019
+                    </div>
+                  </div>
+                  <div class="rsBlog-article-bottom">
+                    <div class="rsBlog-rule">&nbsp;</div>
+                    <div class="rsBlog-descWrap">
+                      <p class="rsBlog-desc"><%= rows[i].articles[x].desc %></p>
+                    </div>
+                    <div class="rsBlog-article-linkWrap">
+                      <p class="rsBlog-article-link">Read More <span class="fa fa-caret-right rsBlog-article-linkCaret"></span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+  </div>
+  <div class="row">
+    <%- partial('../pagination.ejs') %>
+  </div>
+</div>
