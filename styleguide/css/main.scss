@@ -138,3 +138,17 @@ $medium-gray: #666;
     transition-duration: .5s;
   }
 }
+
+.iconDoc-wrapper {
+  float: left;
+  margin: 10px 0;
+  width: 25%;
+
+  .rsweb {
+    font-size: 3em;
+  }
+}
+
+.iconDoc-name {
+  margin: 0;
+}
