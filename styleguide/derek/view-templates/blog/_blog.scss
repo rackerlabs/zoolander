@@ -1,0 +1,261 @@
+.rsBlog-overview-row {
+  padding: 2rem 0;
+}
+
+.rsBlog-featured-container {
+  margin-bottom: 75px;
+}
+
+.rsBlog-article-wrapper {
+  @include make-md-column(4);
+  @include make-sm-column(6);
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+  transition: .3s ease-in-out;
+  width: 100%;
+}
+
+.rsBlog-article-wrapperBox {
+  background: $white;
+  box-shadow: 0 1px 1px 1px $black-shadow-dark;
+
+  &:hover {
+    box-shadow: 0 15px 25px -9px $black-shadow-darkest;
+    transition: .3s ease-in-out;
+  }
+}
+
+.rsBlog-article {
+  height: 100%;
+}
+
+.rsBlog-article-innerLink {
+  @include flex-box;
+  flex-flow: column nowrap;
+  height: 100%;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.rsBlog-article-top {
+  background: $gray-darkest no-repeat center center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: .25fr auto .25fr;
+  height: 175px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    background-color: $black;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.rsBlog-article-topSpace {
+  flex: 0 0 auto;
+}
+
+.rsBlog-article-titleTopWrap {
+  flex: 1 0 auto;
+  margin: 10px 20px;
+  mask-image: linear-gradient(to top, transparent 0%, $black 15%);
+  max-height: 150px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.rsBlog-article-titleTop {
+  color: $white;
+  font-size: 3.5vw;
+  font-weight: 600;
+  letter-spacing: .01vw;
+  line-height: 3.85vw;
+  margin: 0 0 10px;
+}
+
+.rsBlog-article-date {
+  color: $white;
+  font-size: .9em;
+  font-weight: 300;
+  margin: 10px 20px;
+  z-index: 1;
+}
+
+.rsBlog-article-bottom {
+  @include flex-box;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.rsBlog-article-linkWrap {
+  bottom: 5px;
+  position: absolute;
+}
+
+.rsBlog-article-link {
+  @include standard-link;
+  font-family: $heading;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rsBlog-article-linkCaret {
+  @include standard-link;
+  text-decoration: none;
+}
+
+.rsBlog-rule {
+  border-top: solid $red-shadow .5px;
+  height: 1px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.rsBlog-descWrap {
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.rsBlog-desc {
+  color: $gray-base;
+  font-size: .75em;
+  line-height: 1.6em;
+}
+
+.rsBlog-readmore {
+  text-decoration: none;
+
+  &::after {
+    content: '\f105';
+    display: inline-block;
+    font-family: 'rswebfonts';
+    margin-left: 5px;
+  }
+}
+
+.rsBlog-title {
+  font-style: italic;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.rsBlog-author-name {
+  color: $rackspace-red;
+  font-weight: 600;
+}
+
+.rsBlog-cta-sectionBackground {
+  position: relative;
+  z-index: 9;
+}
+
+.rsBlog-cta-section {
+  background-color: $gray;
+  display: block;
+  margin: 0 auto;
+  max-width: 970px;
+  position: relative;
+  transition-duration: .2s;
+
+  &:hover {
+    box-shadow: 0 0 16px -1px transparentize($black, .8);
+    text-decoration: none;
+  }
+}
+
+.rsBlog-cta-sectionContent {
+  bottom: 0;
+  display: block;
+  left: 0;
+  padding: 2.5vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.rsBlog-cta-title {
+  color: $white;
+  display: block;
+  font-size: 4.7vw;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.1em;
+  margin: 1vw 0 3vw;
+}
+
+.rsBlog-cta-button {
+  background: $rackspace-red;
+  bottom: 4vw;
+  color: $white;
+  font-size: 2.6vw;
+  font-weight: 600;
+  padding: 1.4vw 3.5vw;
+  position: absolute;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .rsBlog-article-wrapper {
+    margin: 10px;
+  }
+
+  .rsBlog-article-titleTop {
+    font-size: 1.6vw;
+    line-height: 1.65vw;
+  }
+
+  .rsBlog-cta-sectionContent {
+    padding: 20px;
+  }
+
+  .rsBlog-cta-title {
+    font-size: 2.2em;
+    margin: 10px 0 25px;
+  }
+
+  .rsBlog-cta-button {
+    bottom: 2.2em;
+    font-size: 1.25em;
+    padding: 11px 30px;
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .rsBlog-cta-title {
+    font-size: 2.6em;
+  }
+}
+
+@media only screen and (min-width: $screen-md-max) {
+
+  .rsBlog-article-wrapper {
+    margin: 20px;
+  }
+
+  .rsBlog-article-titleTop {
+    font-size: 1.3vw;
+    line-height: 1.85vw;
+  }
+
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .rsBlog-cta-title {
+    font-size: 2.7em;
+  }
+}

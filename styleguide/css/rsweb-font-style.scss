@@ -9,19 +9,6 @@ $font-version: "1.0.5";
     font-style: normal
 }
 
-.iconDoc-wrapper {
-  @include make-sm-column(3);
-  margin: 10px 0;
-
-  .rsweb {
-    font-size:3em;
-  }
-}
-
-.iconDoc-name {
-  margin: 0;
-}
-
 .fa,
 .rsweb {
     font-family: "rswebfonts";
@@ -149,6 +136,8 @@ span.rsweb {
 .fa-youtube:before { content: '\f167'; } /* '' */
 .fa-angle-up:before { content: '\f106'; } /* '' */
 .fa-angle-down:before { content: '\f107'; } /* '' */
+.fa-github-circled:before { content: '\f09b'; } /* '' */
+.fa-calendar:before { content: '\e851'; } /* '' */
 
 .auto-around-the-world:before { content: '\e80e'; } /* '' */
 .auto-cdn-propagation:before { content: '\e80f'; } /* '' */

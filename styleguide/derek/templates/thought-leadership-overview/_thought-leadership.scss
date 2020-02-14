@@ -2,7 +2,7 @@ $solve-black: #00001e;
 $row-space: 35px;
 
 @mixin tl-header {
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 110%;
   margin: 10px 0 25px;
@@ -83,13 +83,13 @@ $row-space: 35px;
 }
 
 .rsTl-feature-author {
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
 }
 
 .rsTl-article-read {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .rsTl-article-row {
@@ -265,14 +265,14 @@ $row-space: 35px;
 
 .rsTl-author-label {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
 .rsTl-author-name {
   display: block;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
@@ -310,7 +310,7 @@ $row-space: 35px;
   color: $white;
   display: block;
   font-size: 4.7vw;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 1.1em;
   margin: 1vw 0 3vw;
@@ -321,7 +321,7 @@ $row-space: 35px;
   bottom: 4vw;
   color: $white;
   font-size: 2.6vw;
-  font-weight: 600;
+  font-weight: 500;
   padding: 1.4vw 3.5vw;
   position: absolute;
 }
