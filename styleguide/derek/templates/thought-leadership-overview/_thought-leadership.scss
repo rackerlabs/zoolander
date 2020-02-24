@@ -297,7 +297,8 @@ $row-space: 35px;
 
 .rsTl-cta-sectionContent {
   bottom: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
   left: 0;
   padding: 2.5vw;
   position: absolute;
@@ -324,6 +325,7 @@ $row-space: 35px;
   font-weight: 500;
   padding: 1.4vw 3.5vw;
   position: absolute;
+  width: fit-content;
 }
 
 .rsTl-relatedTopics-row {
@@ -590,7 +592,7 @@ $row-space: 35px;
 
   .rsTl-cta-title {
     font-size: 2.2em;
-    margin: 10px 0 25px;
+    margin: 10px 0 15px;
   }
 
   .rsTl-cta-button {
