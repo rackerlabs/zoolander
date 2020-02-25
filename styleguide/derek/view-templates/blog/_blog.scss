@@ -180,7 +180,8 @@
 
 .rsBlog-cta-sectionContent {
   bottom: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
   left: 0;
   padding: 2.5vw;
   position: absolute;
@@ -204,9 +205,9 @@
   bottom: 4vw;
   color: $white;
   font-size: 2.6vw;
-  font-weight: 600;
+  font-weight: 500;
   padding: 1.4vw 3.5vw;
-  position: absolute;
+  width: fit-content;
 }
 
 @media only screen and (min-width: $screen-sm-min) {
@@ -225,7 +226,7 @@
 
   .rsBlog-cta-title {
     font-size: 2.2em;
-    margin: 10px 0 25px;
+    margin: 10px 0 15px;
   }
 
   .rsBlog-cta-button {
