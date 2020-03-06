@@ -170,6 +170,16 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
+    $(document).on('click', '.solve-cta', function (e) {
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'CTA',
+        eventAction: 'Solve CTA Click',
+        eventLabel: $(e.target).text() || $(e.target).val() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
+        eventValue: '0',
+        eventNonInteraction: 0
+      });
+    });
     $('.rsFilter-form').on('submit', function (e) {
       dataLayer.push({
         event: 'ga.event',

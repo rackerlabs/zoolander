@@ -369,6 +369,22 @@ describe('Zoolander Tracking Module', () => {
       expect(expected).to.eql(window.dataLayer.pop());
     });
 
+    it('should set solve undefined label when alt tag is missing', () => {
+      $('body').append('<a class="solve-cta" href="https://rackspace.com"><img src="#"></a>');
+      Zoolander.Tracking.init();
+
+      $('.solve-cta').trigger('click');
+      const expected = {
+        event: 'ga.event',
+        eventCategory: 'CTA',
+        eventAction: 'Solve CTA Click',
+        eventLabel: 'undefined',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
+
     it('should set button label', () => {
       $('body').append('<button class="track-cta">Click this button please</button>');
       Zoolander.Tracking.init();
