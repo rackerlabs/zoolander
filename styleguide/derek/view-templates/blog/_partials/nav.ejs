@@ -1,0 +1,62 @@
+<div class="rsBlog-nav-container">
+  <nav class="rsBlog-nav">
+    <div class="rsBlog-nav-logo">
+      <div class="rsBlog-nav-solveLogoContainer">
+        Rackspace <span class="rsBlog-nav-redText">Blog</span>
+      </div>
+    </div>
+    <div class="rsBlog-nav-links">
+      <!-- <span class="rsBlog-nav-tagline">IT Insights for Your Path Forward</span> -->
+      <ul class="rsBlog-nav-list">
+        <li class="rsBlog-nav-item">
+          <a href="/solve/transformation-and-trends" class="rsBlog-nav-link">Transformation & Trends</a>
+        </li>
+        <li class="rsBlog-nav-item">
+          <a href="/solve/innovation" class="rsBlog-nav-link">Innovation</a>
+        </li>
+        <li class="rsBlog-nav-item">
+          <a href="/solve/roundtable" class="rsBlog-nav-link">Roundtable</a>
+        </li>
+        <li class="rsBlog-nav-item">
+          <a href="#" class="rsBlog-nav-link rsBlog-nav-ddLink">Series</a>
+          <!-- dropdown -->
+          <ul class="rsBlog-nav-subList">
+            <li class="rsBlog-nav-subItem">
+              <a href="/solve/inside-the-innovators-mind" class="rsBlog-nav-subLink">Inside the Innovator's Mind</a>
+            </li>
+            <li class="rsBlog-nav-subItem">
+              <a href="/solve/what-are-you-solving-for" class="rsBlog-nav-subLink">What Are You Solving For?</a>
+            </li>
+          </ul>
+        </li>
+        <li class="rsBlog-nav-item">
+          <a href="#" class="rsBlog-nav-link rsBlog-nav-ddLink">About</a>
+          <ul class="rsBlog-nav-subList">
+            <li class="rsBlog-nav-subItem">
+              <a href="/solve/about" class="rsBlog-nav-subLink">Panel - About Thought Leadership Page</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="rsBlog-nav-rsLogo">
+      <div class="rsBlog-nav-logoContainer">
+        <%- partial('rs-logo') %>
+      </div>
+    </div>
+    <div class="rsBlog-nav-hamburger">
+      <button class="rsBlog-nav-hamburgerBtn" type="button" name="nav-open"></button>
+    </div>
+  </nav>
+</div>
+
+<script src="js/templates/thought-leadership-overview//solve-nav.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+  // need to run on document ready
+  $(document).ready(() => {
+    $('.rsBlog-nav-container').solveNav({
+      classPrefix: 'rsBlog',
+    });
+  });
+</script>

@@ -1,12 +1,17 @@
 (($) => {
-  $.fn.solveNav = function solveNav() {
+  $.fn.solveNav = function solveNav(params) {
+    const defaults = {
+      classPrefix: 'rsTl',
+    };
+    const $options = $.extend(true, {}, defaults, params);
+    const prefix = `${$options.classPrefix}`;
     const $nav = $(this);
     const $window = $(window);
-    const $dropDowns = $nav.find('.rsTl-nav-ddLink');
-    const $linkList = $nav.find('.rsTl-nav-list');
-    const $hamburger = $nav.find('.rsTl-nav-hamburgerBtn');
-    const $content = $('.rsTl-content');
-    const subListCls = 'rsTl-nav-subList-show';
+    const $dropDowns = $nav.find(`.${prefix}-nav-ddLink`);
+    const $linkList = $nav.find(`.${prefix}-nav-list`);
+    const $hamburger = $nav.find(`.${prefix}-nav-hamburgerBtn`);
+    const $content = $(`.${prefix}-content`);
+    const subListCls = `${prefix}-nav-subList-show`;
     const methods = {
       $mobileNav: null,
       navIsContained: false,
@@ -14,7 +19,7 @@
         $hamburger.click((e) => {
           e.preventDefault();
           methods.$mobileNav.slideToggle(100);
-          $hamburger.toggleClass('rsTl-nav-hamburgerOpen');
+          $hamburger.toggleClass(`${prefix}-nav-hamburgerOpen`);
         });
       },
       getLinkLines(target) {
@@ -46,36 +51,36 @@
         20);
       },
       adjustNavSize() {
-        $nav.removeClass('rsTl-nav-contained');
+        $nav.removeClass(`${prefix}-nav-contained`);
         if (methods.$containedLogos) {
-          methods.$containedLogos.removeClass('rsTl-nav-contained');
+          methods.$containedLogos.removeClass(`${prefix}-nav-contained`);
         }
         const lines = methods.getLinkLines($linkList.get(0));
         if (lines < 3) {
           methods.navIsContained = false;
           if (methods.$mobileNav && methods.$mobileNav.is(':visible')) {
             methods.$mobileNav.hide();
-            $hamburger.removeClass('rsTl-nav-hamburgerOpen');
+            $hamburger.removeClass(`${prefix}-nav-hamburgerOpen`);
           }
         } else {
           methods.navIsContained = true;
-          $nav.addClass('rsTl-nav-contained');
+          $nav.addClass(`${prefix}-nav-contained`);
           if (methods.$containedLogos) {
-            methods.$containedLogos.addClass('rsTl-nav-contained');
+            methods.$containedLogos.addClass(`${prefix}-nav-contained`);
           }
         }
       },
       createMobileMenu() {
         const $navListClone = $linkList.clone();
-        $navListClone.addClass('rsTl-nav-list-contained');
-        $navListClone.removeClass('rsTl-nav-list');
+        $navListClone.addClass(`${prefix}-nav-list-contained`);
+        $navListClone.removeClass(`${prefix}-nav-list`);
         $nav.append($navListClone);
-        $navListClone.find('.rsTl-nav-ddLink').each(function c() {
+        $navListClone.find(`.${prefix}-nav-ddLink`).each(function c() {
           const $ddLink = $(this);
-          const $nextMenu = $ddLink.next('.rsTl-nav-subList');
+          const $nextMenu = $ddLink.next(`.${prefix}-nav-subList`);
           $ddLink.click((e) => {
             e.preventDefault();
-            $ddLink.toggleClass('rsTl-nav-mobileOpen');
+            $ddLink.toggleClass(`${prefix}-nav-mobileOpen`);
             $nextMenu.slideToggle(100);
           });
         });
@@ -84,7 +89,7 @@
       setDropDowns() {
         $dropDowns.each(function set() {
           const $ddLink = $(this);
-          const $nextMenu = $ddLink.next('.rsTl-nav-subList');
+          const $nextMenu = $ddLink.next(`.${prefix}-nav-subList`);
           const delay = 400;
           let offTimer;
           $ddLink.mouseover(() => {
@@ -118,9 +123,9 @@
       },
       $containedLogos: null,
       copyLogos() {
-        const $logoWrapper = $('<div class="rsTl-nav-logoWrapper"></div>');
-        const $sponser = $nav.find('.rsTl-nav-sponsor').clone();
-        const $rsLogo = $nav.find('.rsTl-nav-rsLogo').clone();
+        const $logoWrapper = $(`<div class="${prefix}-nav-logoWrapper"></div>`);
+        const $sponser = $nav.find(`.${prefix}-nav-sponsor`).clone();
+        const $rsLogo = $nav.find(`.${prefix}-nav-rsLogo`).clone();
 
         let logoCt = 0;
 
@@ -134,7 +139,7 @@
         }
 
         if (logoCt === 1) {
-          $logoWrapper.addClass('rsTl-nav-logoWrapperSingleLogo');
+          $logoWrapper.addClass(`${prefix}-nav-logoWrapperSingleLogo`);
         }
 
         if (logoCt > 0) {
@@ -144,21 +149,21 @@
       },
       startingLocation: null,
       setSticky(e) {
-        if ($nav.hasClass('rsTl-nav-fixed')) {
-          $nav.removeClass('rsTl-nav-fixed');
+        if ($nav.hasClass(`${prefix}-nav-fixed`)) {
+          $nav.removeClass(`${prefix}-nav-fixed`);
         }
         if (methods.startingLocation === null || !e) {
           methods.startingLocation = ~~($nav.offset().top); // eslint-disable-line
         }
         if (window.pageYOffset >= methods.startingLocation) {
           // only add class if it's not there
-          if (!$nav.hasClass('rsTl-nav-fixed')) {
-            $nav.addClass('rsTl-nav-fixed');
+          if (!$nav.hasClass(`${prefix}-nav-fixed`)) {
+            $nav.addClass(`${prefix}-nav-fixed`);
           }
         }
       },
       adjustContent() {
-        if (!$nav.hasClass('rsTl-nav-contained') && $nav.hasClass('rsTl-nav-fixed')) {
+        if (!$nav.hasClass(`${prefix}-nav-contained`) && $nav.hasClass(`${prefix}-nav-fixed`)) {
           $content.css('margin-top', `${$nav.outerHeight()}px`);
         } else {
           $content.css('margin-top', '');

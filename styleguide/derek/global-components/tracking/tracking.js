@@ -185,6 +185,17 @@ Zoolander.Tracking = (function Tracking($) {
       });
     });
 
+    $(document).on('click', '.solve-cta', (e) => {
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'CTA',
+        eventAction: 'Solve CTA Click',
+        eventLabel: $(e.target).text() || $(e.target).val() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+
     $('.rsFilter-form').on('submit', (e) => {
       dataLayer.push({
         event: 'ga.event',
