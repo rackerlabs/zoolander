@@ -29,11 +29,25 @@ $row-space: 35px;
   font-size: 1.45em;
 }
 
+.rsTl-content {
+  background-color: $gray-light;
+
+  .rsBasement {
+    background-color: $gray-light;
+  }
+
+  .basement-container {
+    background-color: $black;
+  }
+}
+
 .rsTl-feature-header {
+  @include xl-container;
   background-position: center center;
   background-repeat: no-repeat;
   display: block;
-  margin-bottom: $row-space / 2;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -45,6 +59,7 @@ $row-space: 35px;
 }
 
 .rsTl-feature-headerBackground {
+  background-color: $white;
   position: relative;
   text-align: center;
 }
@@ -56,8 +71,12 @@ $row-space: 35px;
 }
 
 .rsTl-article-contentContainer {
-  max-width: 970px;
-  padding: 0 $grid-gutter-width / 2;
+  background-color: $white;
+  padding: $grid-gutter-width / 2;
+}
+
+.rsTl-contentContainer {
+  background-color: $white;
 }
 
 .rsTl-feature-headerInner {
@@ -462,6 +481,10 @@ $row-space: 35px;
 // tablet rules
 @media screen and (max-width: $screen-md-min - 1) {
 
+  .rsTl-feature-headerContainer {
+    background-color: $white;
+  }
+
   .rsTl-relatedTopics-2colRow {
     // sass-lint:disable-block no-vendor-prefixes
     -ms-grid-columns: 1fr;
@@ -611,7 +634,6 @@ $row-space: 35px;
 
   .rsTl-feature-header {
     height: 42vw;
-    margin-bottom: $row-space;
   }
 
   .rsTl-feature-headerBackground {
@@ -662,10 +684,5 @@ $row-space: 35px;
   .rsTl-article-contentContainer,
   .rsTl-feature-headerContainer {
     padding: 45px;
-  }
-
-  .rsTl-contentContainer {
-    padding-left: 0;
-    padding-right: 0;
   }
 }

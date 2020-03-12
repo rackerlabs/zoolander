@@ -13,8 +13,7 @@ $link-hover: #f9f9f9;
 
 .rsTl-nav-container {
   @include clearfix;
-  background-color: $white;
-  border-bottom: 2px solid $nav-link-black;
+  background-color: $gray-light;
   top: 0;
   width: 100%;
   z-index: 275;
@@ -24,6 +23,8 @@ $link-hover: #f9f9f9;
   // sass-lint:disable-block no-vendor-prefixes no-duplicate-properties
   @include xl-container;
   -ms-grid-columns: 180px 1fr 181px 220px;
+  background-color: $white;
+  border-bottom: 2px solid $nav-link-black;
   display: -ms-grid;
   display: grid;
   grid-template-columns: 180px 1fr 181px 220px;
@@ -398,6 +399,7 @@ $link-hover: #f9f9f9;
 
 // this is for the cloned nav list for mobile view
 .rsTl-nav-list-contained {
+  background-color: $white;
   border-bottom: 1px solid $nav-link-black;
   display: none;
   list-style: none;
