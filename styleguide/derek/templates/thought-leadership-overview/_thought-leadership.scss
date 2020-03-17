@@ -71,12 +71,14 @@ $row-space: 35px;
 }
 
 .rsTl-article-contentContainer {
+  @include xl-container;
   background-color: $white;
   padding: $grid-gutter-width / 2;
 }
 
 .rsTl-contentContainer {
   background-color: $white;
+  padding-top: 25px;
 }
 
 .rsTl-feature-headerInner {
