@@ -608,6 +608,12 @@ $row-space: 35px;
       padding-right: 0;
     }
   }
+
+  .rsTl-column {
+    iframe {
+      width: 100%;
+    }
+  }
 }
 
 @media only screen and (min-width: $screen-sm-min) {
