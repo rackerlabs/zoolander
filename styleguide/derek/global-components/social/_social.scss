@@ -1,6 +1,7 @@
 $facebook-blue: #4267b2;
 $facebook-darkblue: #365899;
 $twitter-blue: #00aced;
+$twitter-share: #1b95e0;
 $twitter-darkblue: #0084b4;
 $linkedin-blue: #0077b5;
 $linkedin-darkblue: #006ba3;
@@ -127,6 +128,37 @@ $xing-green: #005a5f;
 
 // Hacky fix for social button alignment.
 .twitter-share-button {
+  &.extLink {
+    background-color: $twitter-share;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: $white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    height: 20px;
+    padding: 3px 8px 3px 6px;
+    position: relative;
+    top: -2px;
+
+    &:hover {
+      background-color: $twitter-darkblue;
+      text-decoration: none;
+    }
+
+    &::after {
+      content: '';
+    }
+
+    &::before {
+      content: '\f099';
+      display: inline-block;
+      font-family: 'rswebfonts';
+      font-size: 13px;
+      margin-right: 3px;
+    }
+  }
+
   &[style] {
     // sass-lint:disable-block no-important
     position: relative !important;
