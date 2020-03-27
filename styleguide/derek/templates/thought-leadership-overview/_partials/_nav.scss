@@ -12,8 +12,9 @@ $link-hover: #f9f9f9;
 }
 
 .rsTl-nav-container {
+
   @include clearfix;
-  background-color: $gray-light;
+  background-color: $white;
   top: 0;
   width: 100%;
   z-index: 275;
