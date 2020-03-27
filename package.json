@@ -16,6 +16,7 @@
     "hooks": "./scripts/hooks.sh",
     "lint:js": "eslint styleguide/derek styleguide/global",
     "lint:sass": "sass-lint -v --max-warnings=0",
+    "preinstall": "npx npm-force-resolutions",
     "preversion": "npm run babel && npm run harp compile styleguide dist && git add -f dist",
     "postinstall": "npm run hooks && npm run babel && npm run install:nodemodules",
     "postversion": "git push && git push --tags",
@@ -32,15 +33,16 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap-sass": "^3.4.1",
+    "npm-force-resolutions": "0.0.3",
     "scrollreveal": "^4.0.5"
   },
   "devDependencies": {
-    "acorn": ">=7.1.1",
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/plugin-transform-classes": "^7.7.4",
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.7",
+    "acorn": ">=7.1.1",
     "browser-sync": "^2.26.7",
     "chai": "^4.2.0",
     "cli": "^1.0.0",
@@ -59,11 +61,14 @@
     "minimist": ">=1.2.2",
     "mocha": "^6.2.2",
     "mozilla-fira-pack": "0.0.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "pify": "^4.0.1",
     "sass-lint": "^1.13.1",
     "sinon": "^8.0.2",
     "sinon-chai": "^3.4.0"
+  },
+  "resolutions": {
+    "minimist": "1.2.5"
   },
   "optionalDependencies": {
     "harp": "^0.31.0"
