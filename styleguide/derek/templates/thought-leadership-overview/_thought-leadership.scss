@@ -21,6 +21,10 @@ $row-space: 35px;
   }
 }
 
+.test-nothing {
+  color: $white;
+}
+
 @mixin solve-h2 {
   font-size: 1.75em;
 }
