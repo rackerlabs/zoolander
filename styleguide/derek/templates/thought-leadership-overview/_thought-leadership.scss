@@ -30,10 +30,10 @@ $row-space: 35px;
 }
 
 .rsTl-content {
-  background-color: $white;
+  background-color: $gray-light;
 
   .rsBasement {
-    background-color: $white;
+    background-color: $gray-light;
   }
 
   .basement-container {
@@ -78,6 +78,7 @@ $row-space: 35px;
 
 .rsTl-contentContainer {
   background-color: $white;
+  padding-bottom: 35px;
   padding-top: 25px;
 }
 
