@@ -17,6 +17,12 @@ fi
 
 cp ./node_modules/scrollreveal/dist/scrollreveal.min.js styleguide/global/plugins/scrollreveal.min.js
 
-cd node_modules/karma-mocha
+# add karma mocha
+if [ ! -d ./node_modules/karma-mocha ]; then
+  npm install --save karma-mocha
+fi
+
+cd ./node_modules/karma-mocha
 npm install
 npx grunt build
+
