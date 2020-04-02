@@ -53,7 +53,7 @@
     "karma": "^4.4.1",
     "karma-babel-preprocessor": "^8.0.1",
     "karma-chrome-launcher": "^3.1.0",
-    "karma-mocha": "git+https://github.com/xinbin/karma-mocha.git#master",
+    "karma-mocha": "git+https://github.com/WidgetsBurritos/karma-mocha.git#master",
     "karma-sinon-chai": "^2.0.2",
     "karma-verbose-reporter": "0.0.6",
     "minimist": ">=1.2.2",
