@@ -16,3 +16,7 @@ if [ ! -d ./node_modules/scrollreveal ]; then
 fi
 
 cp ./node_modules/scrollreveal/dist/scrollreveal.min.js styleguide/global/plugins/scrollreveal.min.js
+
+cd node_modules/karma-mocha
+npm install
+npx grunt build
