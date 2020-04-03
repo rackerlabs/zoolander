@@ -1,8 +1,12 @@
 $solve-black: #00001e;
 $row-space: 35px;
 
-@mixin tl-header {
+@mixin tl-header-weight {
   font-weight: 500;
+}
+
+@mixin tl-header {
+  @include tl-header-weight;
   letter-spacing: 0;
   line-height: 110%;
   margin: 10px 0 25px;
@@ -79,6 +83,22 @@ $row-space: 35px;
 .rsTl-contentContainer {
   background-color: $white;
   padding-top: 25px;
+
+  h1 {
+    @include tl-header-weight;
+  }
+
+  h2 {
+    @include tl-header-weight;
+  }
+
+  h3 {
+    @include tl-header-weight;
+  }
+
+  h4 {
+    @include tl-header-weight;
+  }
 }
 
 .rsTl-feature-headerInner {
