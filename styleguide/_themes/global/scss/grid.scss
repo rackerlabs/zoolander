@@ -2,7 +2,7 @@
   @include container-fixed;
 }
 
-@mixin make-container($max-width: 1280px) {
+@mixin make-container($max-width: 1600px) {
   @include container-fixed;
   max-width: $max-width;
 
@@ -14,6 +14,9 @@
   }
   @media (min-width: $screen-lg-min) {
     width: $container-lg;
+  }
+  @media (min-width: $screen-xl-min) {
+    width: $max-width;
   }
 }
 
@@ -35,5 +38,9 @@
 }
 
 .container-xl {
+  @include xl-container;
+}
+
+.container {
   @include xl-container;
 }
