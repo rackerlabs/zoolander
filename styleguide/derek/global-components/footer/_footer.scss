@@ -5,6 +5,7 @@
 
 .footer-container {
   @include make-container;
+  padding: 0;
 }
 
 .footer-menu {
@@ -19,8 +20,9 @@
 }
 
 .footer-menu-link {
-  color: $gray-light;
+  color: $white;
   font-size: 1.2rem;
+  font-weight: bold;
   text-decoration: none;
 
   &:focus {
@@ -46,6 +48,7 @@
 .footer-tab-link {
   color: $white;
   font-size: 1.3rem;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -54,6 +57,99 @@
     color: $white;
     cursor: default;
     text-decoration: none;
+  }
+}
+
+.footer-copyright-row {
+  color: $white;
+  padding-top: 10px;
+  text-align: right;
+}
+
+.footer-social {
+  text-align: right;
+
+  .fa-facebook-official,
+  .fa-twitter,
+  .fa-youtube,
+  .fa-linkedin,
+  .fa-google-plus {
+    color: $white;
+
+    &:hover {
+      color: $gray-light;
+    }
+  }
+}
+
+.footer-links-container {
+  @include make-md-column(9);
+
+  @media screen and (min-width: $screen-sm-min) and (max-width: $screen-xl-max) {
+    padding: 0;
+  }
+}
+
+.footer-social-container {
+  @include make-md-column(3);
+  @include make-xs-column(12);
+
+  @media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    padding: 0;
+  }
+}
+
+@mixin footer-social-span($content) {
+  font-size: 0;
+
+  &::before {
+    color: $white;
+    content: $content;
+    display: inline-block;
+    font-family: 'rswebfonts';
+    font-size: 30px;
+    margin-right: .2em;
+
+    @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      font-size: 25px;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.footer-social-fb {
+  @include footer-social-span('\f230');
+}
+
+.footer-social-tw {
+  @include footer-social-span('\f099');
+}
+
+.footer-social-ln {
+  @include footer-social-span('\f0e1');
+}
+
+.footer-social-yt {
+  @include footer-social-span('\f167');
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .footer-social {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .footer-copyright-row {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .footer-tabs {
+    display: flex;
+    margin-bottom: 0;
   }
 }
 
