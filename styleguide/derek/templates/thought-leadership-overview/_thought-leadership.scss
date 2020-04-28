@@ -1,4 +1,5 @@
 $solve-black: #00001e;
+$quote-red: #fcd9e1;
 $row-space: 35px;
 
 @mixin tl-header-weight {
@@ -148,34 +149,20 @@ $row-space: 35px;
     -ms-grid-column-span: 8;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
-    border-bottom: 8px solid $rackspace-red;
-    border-top: 8px solid $rackspace-red;
+    background-color: $quote-red;
     color: $solve-black;
     font-family: $copy;
-    font-size: 1.75em;
+    font-size: 26px;
+    font-style: italic;
     font-weight: 100;
     grid-area: 1 / 2 / 2 / 10;
     letter-spacing: 0;
-    line-height: 110%;
-    margin-bottom: 25px;
-    padding-top: 60px;
+    line-height: 1.2em;
+    padding: 25px 35px;
     text-align: left;
 
     p {
       line-height: inherit;
-    }
-
-    &::before {
-      content: '“';
-      display: block;
-      font-size: 2em;
-    }
-
-    &::after {
-      content: '”';
-      display: block;
-      font-size: 2em;
-      margin-top: 47px;
     }
   }
 }
