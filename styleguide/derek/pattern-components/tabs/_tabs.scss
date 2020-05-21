@@ -137,14 +137,14 @@
 @media (min-width: $screen-sm-min) {
   // Horizontal Tabs
   .rsTabsHorizontal {
-    max-width: $screen-lg-min;
+    max-width: $screen-xl-min;
   }
 
   .rsTabsHorizontal-content {
     border-bottom: 2px solid $purple;
     border-top: 2px solid $purple;
     margin: 0 auto 10px;
-    max-width: $screen-lg-min;
+    max-width: $screen-xl-min;
     padding-bottom: 0;
   }
 
