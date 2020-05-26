@@ -12,16 +12,41 @@
   visibility: hidden;
 }
 
+.pageBanner2020-wrapper {
+  background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $black;
+  display: flex;
+  font-family: $heading;
+  height: 475px;
+  position: relative;
+  visibility: hidden;
+}
+
 .pageBanner-wrapper-es {
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
+}
+
+.pageBanner-wrapper2020-es {
+  background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
 }
 
 .pageBanner-wrapper-pt {
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
 }
 
+.pageBanner-wrapper2020-pt {
+  background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+}
+
 .pageBanner-wrapper-apac {
   background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480_APAC.jpg');
+}
+
+.pageBanner-wrapper2020-apac {
+  background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
 }
 
 .pageBanner-col {
@@ -39,11 +64,24 @@
   height: 450px;
 }
 
+.pageBanner2020-main-image {
+  background-position: center;
+  background-size: cover;
+  display: none;
+  height: 450px;
+}
+
 .pageBanner-content {
   background-color: $white;
+  color: $black;
   padding-bottom: 30px;
   padding-left: 15px;
   padding-top: 20px;
+  visibility: hidden;
+}
+
+.pageBanner2020-content {
+  color: $black;
   visibility: hidden;
 }
 
@@ -77,6 +115,27 @@
     background-color: $dark-red;
     color: $white;
     text-decoration: none;
+  }
+}
+
+.pageBanner2020-hm-video {
+  color: $white;
+  display: inline-block;
+  margin-left: 10px;
+
+  &::before {
+    content: '\f16a';
+    display: inline-block;
+    font-family: 'rswebfonts';
+    margin-right: 5px;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  &:focus {
+    color: $white;
   }
 }
 
@@ -129,19 +188,48 @@
     height: 300px;
   }
 
+  .pageBanner2020-main-image {
+    background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+    display: block;
+    height: 300px;
+  }
+
   .pageBanner-main-image-es {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
+  }
+
+  .pageBanner2020-main-image-es {
+    background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
   }
 
   .pageBanner-main-image-pt {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480-LATAM.jpg');
   }
 
+  .pageBanner2020-main-image-pt {
+    background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+  }
+
   .pageBanner-main-image-apac {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-480_APAC.jpg');
   }
 
+  .pageBanner2020-main-image-apac {
+    background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+  }
+
   .pageBanner-wrapper {
+    background-image: unset;
+    height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .pageBanner2020-wrapper {
     background-image: unset;
     height: unset;
 
@@ -178,8 +266,18 @@
     display: block;
   }
 
+  .pageBanner2020-main-image {
+    background-image: url('../imgs/derek/banners/hp-ban-768.jpg');
+    display: block;
+  }
+
   .pageBanner-main-image-es {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-768-LATAM.jpg');
+    display: block;
+  }
+
+  .pageBanner2020-main-image-es {
+    background-image: url('../imgs/derek/banners/hp-ban-768.jpg');
     display: block;
   }
 
@@ -188,8 +286,18 @@
     display: block;
   }
 
+  .pageBanner2020-main-image-pt {
+    background-image: url('../imgs/derek/banners/hp-ban-768.jpg');
+    display: block;
+  }
+
   .pageBanner-main-image-apac {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-768_APAC.jpg');
+    display: block;
+  }
+
+  .pageBanner2020-main-image-apac {
+    background-image: url('../imgs/derek/banners/hp-ban-768.jpg');
     display: block;
   }
 
@@ -208,47 +316,7 @@
     }
   }
 
-  .pageBanner-button-box {
-    bottom: 50%;
-  }
-
-  .pageBanner-col {
-    align-items: inherit;
-    background-color: $white;
-    display: block;
-    float: none;
-    height: unset;
-    justify-content: unset;
-    margin-left: 0;
-  }
-}
-// 768px - 991px
-@media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
-  .pageBanner-main-image {
-    background-image: url('../imgs/derek/banners/homepage-banner-992.jpg');
-    display: block;
-  }
-
-  .pageBanner-main-image-es {
-    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992-LATAM.jpg');
-    display: block;
-  }
-
-  .pageBanner-main-image-pt {
-    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992-LATAM.jpg');
-    display: block;
-  }
-
-  .pageBanner-main-image-apac {
-    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992_APAC.jpg');
-    display: block;
-  }
-
-  .pageBanner-content {
-    width: 65%;
-  }
-
-  .pageBanner-wrapper {
+  .pageBanner2020-wrapper {
     background-image: unset;
     height: unset;
 
@@ -260,7 +328,7 @@
   }
 
   .pageBanner-button-box {
-    top: 325px;
+    bottom: 50%;
   }
 
   .pageBanner-col {
@@ -300,26 +368,189 @@
   }
 }
 
+// < 992px
+@media screen and (max-width: $screen-md) {
+  .pageBanner2020-content {
+    @include make-container;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .pageBanner2020-main-image {
+    height: 250px;
+  }
+
+  .pageBanner2020-hm-video {
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+
+    &:focus {
+      color: $black;
+    }
+  }
+}
+
+// 768px - 991px
+@media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+  .pageBanner-main-image {
+    background-image: url('../imgs/derek/banners/homepage-banner-992.jpg');
+    display: block;
+  }
+
+  .pageBanner2020-main-image {
+    background-image: url('../imgs/derek/banners/hp-ban-992.jpg');
+    display: block;
+    height: 325px;
+  }
+
+  .pageBanner-main-image-es {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992-LATAM.jpg');
+    display: block;
+  }
+
+  .pageBanner2020-main-image-es {
+    background-image: url('../imgs/derek/banners/hp-ban-992.jpg');
+    display: block;
+  }
+
+  .pageBanner-main-image-pt {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992-LATAM.jpg');
+    display: block;
+  }
+
+  .pageBanner2020-main-image-pt {
+    background-image: url('../imgs/derek/banners/hp-ban-992.jpg');
+    display: block;
+  }
+
+  .pageBanner-main-image-apac {
+    background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-992_APAC.jpg');
+    display: block;
+  }
+
+  .pageBanner2020-main-image-apac {
+    background-image: url('../imgs/derek/banners/hp-ban-992.jpg');
+    display: block;
+  }
+
+  .pageBanner-content {
+    width: 65%;
+  }
+
+  .pageBanner-wrapper {
+    background-image: unset;
+    height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .pageBanner2020-wrapper {
+    background-image: unset;
+    height: unset;
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .pageBanner-button-box {
+    top: 325px;
+  }
+
+  .pageBanner-col {
+    align-items: inherit;
+    background-color: $white;
+    display: block;
+    float: none;
+    height: unset;
+    justify-content: unset;
+    margin-left: 0;
+  }
+}
+
+// 860px - 991px 
+@media screen and (max-width: $screen-sm-max) and (min-width: 860px) {
+  .pageBanner2020-main-image {
+    height: 300px;
+  }
+}
+
+// 767px - 630px
+@media screen and (max-width: $screen-xs-max) and (min-width: 630px) {
+  .pageBanner2020-main-image {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 629px) and (min-width: 590px) {
+  .pageBanner2020-main-image {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 859px) and (min-width: 730px) {
+  .pageBanner2020-main-image {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: $screen-sm-max) and (min-width: 950px) {
+  .pageBanner2020-main-image {
+    height: 300px;
+  }
+}
+
 // 992px+
 @media screen and (min-width: $screen-md) {
   .pageBanner-wrapper {
     background-image: url('../imgs/derek/banners/homepage-banner-1280.jpg');
   }
 
+  .pageBanner2020-wrapper {
+    background-image: url('../imgs/derek/banners/hp-ban-1280.jpg');
+  }
+
   .pageBanner-wrapper-es {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1280-LATAM.jpg');
+  }
+
+  .pageBanner2020-wrapper-es {
+    background-image: url('../imgs/derek/banners/hp-ban-1280.jpg');
   }
 
   .pageBanner-wrapper-pt {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1280-LATAM.jpg');
   }
 
+  .pageBanner2020-wrapper-pt {
+    background-image: url('../imgs/derek/banners/hp-ban-1280.jpg');
+  }
+
   .pageBanner-wrapper-apac {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1280_APAC.jpg');
   }
 
+  .pageBanner2020-wrapper-apac {
+    background-image: url('../imgs/derek/banners/hp-ban-1280.jpg');
+  }
+
   .pageBanner-content {
     width: 400px;
+  }
+
+  .pageBanner2020-content {
+    color: $white;
+    width: 450px;
   }
 }
 
@@ -329,15 +560,42 @@
     background-image: url('../imgs/derek/banners/homepage-banner-1440.jpg');
   }
 
+  .pageBanner2020-wrapper {
+    background-image: url('../imgs/derek/banners/hp-ban-1440.jpg');
+  }
+
   .pageBanner-wrapper-es {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1440-LATAM.jpg');
+  }
+
+  .pageBanner2020-wrapper-es {
+    background-image: url('../imgs/derek/banners/hp-ban-1440.jpg');
   }
 
   .pageBanner-wrapper-pt {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1440-LATAM.jpg');
   }
 
+  .pageBanner2020-wrapper-pt {
+    background-image: url('../imgs/derek/banners/hp-ban-1440.jpg');
+  }
+
   .pageBanner-wrapper-apac {
     background-image: url('https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/home/2019-brand/homepage-1440_APAC.jpg');
+  }
+
+  .pageBanner2020-wrapper-apac {
+    background-image: url('../imgs/derek/banners/hp-ban-1440.jpg');
+  }
+
+  .pageBanner2020-content {
+    width: 550px;
+  }
+}
+
+// extra large screens
+@media screen and (min-width: 1400px) {
+  .pageBanner2020-wrapper {
+    height: 620px;
   }
 }
