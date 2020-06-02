@@ -1,0 +1,77 @@
+<!-- Logo Ticker River -->
+<%
+  var logos = [
+    {
+      title: 'Alistair',
+      img: 'AlistairLogo.png',
+    },
+    {
+      title: 'Arthrex',
+      img: 'ArthrexLogo.png',
+    },
+    {
+      title: 'AutoPets',
+      img: 'AutoPetsLogo.png',
+    },
+    {
+      title: 'BuyaTab',
+      img: 'BuyaTabLogo.png',
+    },
+    {
+      title: 'eHarmony',
+      img: 'eHarmonyLogo.png',
+    },
+    {
+      title: 'JibJab',
+      img: 'JibJabLogo.png',
+    },
+    {
+      title: 'LiveNation',
+      img: 'LiveNationLogo.png',
+    },
+    {
+      title: 'Local Roots',
+      img: 'LocalRootsLogo.png',
+    },
+    {
+      title: 'MovieTickets',
+      img: 'MovieTicketsLogo.png',
+    },
+    {
+      title: 'PointClickCare',
+      img: 'PointClickCareLogo.png',
+    },
+    {
+      title: 'Samsung',
+      img: 'SamsungLogo.png',
+    },
+    {
+      title: 'Spireon',
+      img: 'SpireonLogo.png',
+    },
+    {
+      title: 'Surfeline',
+      img: 'SurflineLogo.png',
+    },
+    {
+      title: 'TrueCar',
+      img: 'TrueCarLogo.png',
+    },
+    {
+      title: 'ZGallerie',
+      img: 'ZGallerieLogo.png',
+    },
+  ];
+%>
+
+<div class="logoTicker-wrapper">
+  <div class="logoTicker">
+    <% for(var i=0; i<logos.length; i++) {%>
+      <%- partial("_partials/logo", logos[i]) %>
+    <% } %>
+
+    <% for(var i=0; i<logos.length; i++) {%>
+      <%- partial("_partials/logo", logos[i]) %>
+    <% } %>
+  </div>
+</div>

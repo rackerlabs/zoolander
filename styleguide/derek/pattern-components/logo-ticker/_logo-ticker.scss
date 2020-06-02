@@ -1,0 +1,39 @@
+// Logo ticker.
+
+$logo-count: 15;
+$logo-width: 10rem;
+$logo-gutter: 4rem;
+$ticker-width: ($logo-width + $logo-gutter) * $logo-count;
+$animation-time: 120s;
+
+@keyframes logoTicker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-$ticker-width, 0, 0);
+  }
+}
+
+.logoTicker {
+  animation: logoTicker $animation-time linear infinite;
+  display: flex;
+}
+
+.logoTicker-wrapper {
+  background: $gray-lighter;
+  overflow: hidden;
+  padding: 25px 0;
+}
+
+.logoTicker-logo {
+  align-self: center;
+  flex: none;
+  margin: 0 $logo-gutter / 2;
+  width: $logo-width;
+}
+
+.logoTicker-logoImage {
+  width: 100%;
+}
