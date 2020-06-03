@@ -1,0 +1,80 @@
+.rsCustomer-story2020 {
+  align-items: center;
+  background-image: url('../imgs/derek/banners/customer-story-2020.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 400px;
+  padding: 20px 0;
+}
+
+
+h4 {
+  &.rsCustomer-story2020-header {
+    color: $white;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 2px;
+  }
+}
+
+h3 {
+  &.rsCustomer-story2020-header {
+    color: $white;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+}
+
+.rsCustomer-story2020-quote {
+  color: $white;
+
+  &::before {
+    content: '\f10d';
+    display: inline-block;
+    font-family: 'rswebfonts';
+    font-size: 30px;
+  }
+}
+
+.rsCustomer-story2020-iconWrap {
+  float: left;
+  width: 8.33333%;
+}
+
+.rsCustomer-story2020-textWrap {
+  float: left;
+  width: 91.66667%;
+}
+
+.rsCustomer-story2020-text {
+  color: $white;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.rsCustomer-story2020-author {
+  color: $white;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.rsCustomer-story2020-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.rsCustomer-story2020-logo {
+  display: block;
+  width: 150px;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .rsCustomer-story2020 {
+    min-height: 10px;
+  }
+}
