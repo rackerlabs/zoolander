@@ -117,12 +117,11 @@
   background-image: url('../imgs/derek/rs-logo.svg');
   background-position: left 50%;
   background-repeat: no-repeat;
-  background-size: 100% 79%;
-  height: 35px;
-  margin: 5px;
+  height: 45px;
+  margin: 20px 5px;
   position: relative;
   transition-duration: .3s;
-  width: 131px;
+  width: 168px;
 }
 
 .navbar-hamburger {
@@ -136,17 +135,17 @@
 
 // After-nav offsets.
 .contentOffset {
-  margin-top: 94px;
+  margin-top: 137px;
 }
 
 .contentOffset-landingPage {
-  margin-top: 48px;
+  margin-top: 87px;
 }
 
 //main nav on desktop
 @media only screen and (min-width: $screen-sm-min) {
   .contentOffset {
-    margin-top: 107px;
+    margin-top: 144px;
   }
 
   .navbar-topLink-dropDown {
@@ -282,9 +281,10 @@
 
   .navbar-brand {
     @include make-sm-column(4);
-    background-size: 95px 22px;
+    background-position: right center;
+    background-size: 80%;
     padding: 0;
-    width: 95px;
+    width: 130px;
   }
 
   .navbar-phoneicon,
@@ -347,7 +347,7 @@
 
 @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
   .navbar-brand {
-    margin: 5px 0;
+    margin: 20px 0;
   }
 }
 

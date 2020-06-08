@@ -52,7 +52,7 @@ $blog-link-hover: #f9f9f9;
   -ms-grid-column: 3;
   border-left: 2px solid $blog-link-black;
   float: left;
-  padding: 8px 25px;
+  padding: 16px 25px;
 }
 
 .rsBlog-nav-solveLogoContainer {
@@ -72,7 +72,7 @@ $blog-link-hover: #f9f9f9;
 }
 
 .rsBlog-nav-rackspaceSvg {
-  width: 100px;
+  width: 120px;
 }
 
 .rsBlog-nav-rackspace {
@@ -284,7 +284,7 @@ $blog-link-hover: #f9f9f9;
     border-left: 0;
     display: none;
     grid-area: 2 / 1 / 3 / 5;
-    height: 60px;
+    height: 72px;
   }
 
   &.rsBlog-nav-logoWrapper {

@@ -56,7 +56,7 @@ $ceiling-font-size: $navigation-font-size-medium;
 .navbar-emailicon,
 .navbar-searchicon {
   display: block;
-  padding: 15px floor($ceiling-margin + 5);
+  padding: 35px floor($ceiling-margin + 5);
   text-align: center;
 
   &::before {
@@ -107,7 +107,7 @@ $ceiling-font-size: $navigation-font-size-medium;
   color: $black;
   display: block;
   font-size: 12.5px;
-  padding: 15px floor($ceiling-margin + 5);
+  padding: 35px floor($ceiling-margin + 5);
   text-decoration: none;
   vertical-align: middle;
 
@@ -178,7 +178,7 @@ $ceiling-font-size: $navigation-font-size-medium;
   color: $black;
   display: block;
   font-size: $navigation-font-size-medium;
-  padding: 15px floor($ceiling-margin + 5);
+  padding: 35px floor($ceiling-margin + 5);
   text-decoration: none;
 
   &:hover,
@@ -233,6 +233,6 @@ $ceiling-font-size: $navigation-font-size-medium;
   .navbar-chaticon,
   .navbar-emailicon,
   .navbar-searchicon {
-    padding: 15px 0;
+    padding: 37px 0;
   }
 }

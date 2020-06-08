@@ -45,7 +45,7 @@ $link-hover: #f9f9f9;
   display: flex;
   float: left;
   justify-content: flex-start;
-  padding: 8px 25px;
+  padding: 16px 25px;
 }
 
 .rsTl-nav-img {
@@ -106,11 +106,11 @@ $link-hover: #f9f9f9;
 }
 
 .rsTl-nav-rackspaceSvg {
-  width: 100px;
+  width: 120px;
 }
 
 .rsTl-nav-sponsorSvg {
-  width: 100px;
+  width: 120px;
 }
 
 .rsTl-nav-rackspace {
@@ -333,7 +333,7 @@ $link-hover: #f9f9f9;
     border-left: 0;
     display: none;
     grid-area: 2 / 1 / 3 / 3;
-    height: 60px;
+    height: 72px;
   }
 
   .rsTl-nav-sponsor {
@@ -347,7 +347,7 @@ $link-hover: #f9f9f9;
     color: $white;
     display: none;
     grid-area: 2 / 3 / 3 / 5;
-    height: 60px;
+    height: 72px;
   }
 
   &.rsTl-nav-logoWrapper {
