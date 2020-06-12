@@ -254,6 +254,62 @@ describe('Zoolander Tracking Module', () => {
       expect(0).to.eql(window.dataLayer.length);
     });
 
+    it('should track signup Menu clicks', () => {
+      $('body').append('<a class="track-signupMenu link1" href="https://cart.rackspace.com/cloud">Cloud</a>');
+      $('body').append('<a class="track-signupMenu link2" href="https://cart.rackspace.com/aws?_ga=abc123">AWS</a>');
+      $('body').append('<a class="track-signupMenu link3" href="https://cart.rackspace.com/gcp">GCP</a>');
+      Zoolander.Tracking.init();
+      $('body').append('<div id="rackspaceModal"><a class="track-signupMenu link4" href="https://cart.rackspace.com/office365">Office365</a></div>');
+
+      $('.link3').trigger('click');
+      let expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: 'https://cart.rackspace.com/gcp',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+
+      $('.link1').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: 'https://cart.rackspace.com/cloud',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+
+      $('.link2').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: 'https://cart.rackspace.com/aws',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+
+      $('.link4').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: 'https://cart.rackspace.com/office365',
+        eventValue: '0',
+        eventNonInteraction: 0,
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+    });
+
     it('should track resource clicks', () => {
       $('body').append('<a class="track-cta link1" href="https://rackspace.com">View Resource</a>');
       $('body').append('<a class="track-cta link2" href="https://cart.rackspace.com">View Cart</a>');

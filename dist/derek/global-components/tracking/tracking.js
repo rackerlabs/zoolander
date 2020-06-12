@@ -174,6 +174,20 @@ Zoolander.Tracking = (function Tracking($) {
       });
     });
 
+    $(document).on('click', '.track-signupMenu', (e) => {
+      const protocol = $(e.target).prop('protocol');
+      const hostname = $(e.target).prop('hostname');
+      const pathname = $(e.target).prop('pathname');
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: `${protocol}//${hostname}${pathname}`,
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+
     $(document).on('click', '.track-cta', (e) => {
       dataLayer.push({
         event: 'cta.click',

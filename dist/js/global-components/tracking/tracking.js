@@ -160,6 +160,19 @@ Zoolander.Tracking = function Tracking($) {
         eventNonInteraction: 0
       });
     });
+    $(document).on('click', '.track-signupMenu', function (e) {
+      var protocol = $(e.target).prop('protocol');
+      var hostname = $(e.target).prop('hostname');
+      var pathname = $(e.target).prop('pathname');
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: "".concat(protocol, "//").concat(hostname).concat(pathname),
+        eventValue: '0',
+        eventNonInteraction: 0
+      });
+    });
     $(document).on('click', '.track-cta', function (e) {
       dataLayer.push({
         event: 'cta.click',
