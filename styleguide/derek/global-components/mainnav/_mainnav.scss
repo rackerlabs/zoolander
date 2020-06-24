@@ -160,6 +160,11 @@
 }
 
 @media only screen and (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+  .contentOffset {
+    margin-top: 10px;
+    color: $red;
+  }
+
   .navbar-nav {
 
     .navbar-topItem {
