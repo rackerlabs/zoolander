@@ -1,0 +1,232 @@
+$side-bar-width: 235px;
+$modal-height: 550px;
+$border-color: rgba($black, .1);
+$link-state: rgba($black, .04);
+
+.rs-gated-modal {
+  margin: 10px auto;
+  position: relative;
+  width: 90%;
+}
+
+.rs-gatedContent-trigger {
+  display: block;
+}
+
+.rs-gated-modalContent {
+  border: 0;
+  min-height: $modal-height;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.rs-gated-close {
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  font-size: 55px;
+  padding: 0;
+  position: absolute;
+  right: -35px;
+  top: -25px;
+}
+
+.rs-gated-sideBar {
+  border-right: 1px solid $border-color;
+  height: 100%;
+  overflow-x: scroll;
+  padding: 60px 15px 10px;
+  position: fixed;
+  width: $side-bar-width;
+  z-index: 5;
+}
+
+.rs-gated-sideBarTop {
+  background-color: $rackspace-red;
+  height: 60px;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: $side-bar-width;
+}
+
+.rs-gated-mobileBtn {
+  color: $white;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 8px;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &::before {
+    content: '\f0c9';
+    font-family: 'rswebfonts';
+  }
+}
+
+.rs-gated-logo {
+  width: 60%;
+}
+
+.rs-gated-sideBarList {
+  display: block;
+  list-style: none;
+  padding: 0;
+}
+
+.rs-gated-sideBarLink {
+  border-bottom: 1px solid $border-color;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  padding: 15px 5px;
+  transition-duration: .2s;
+  width: 100%;
+
+  &::before {
+    color: $gray-light;
+    display: inline-block;
+    font-family: 'rswebfonts';
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: $link-state;
+    color: $rackspace-red;
+    text-decoration: none;
+
+    &::before {
+      color: $gray-base;
+      transition-duration: .2s;
+    }
+  }
+
+  &:focus {
+    background-color: $link-state;
+    color: $rackspace-red;
+    text-decoration: none;
+  }
+}
+
+.rs-gated-active {
+  background-color: $link-state;
+  color: $rackspace-red;
+  text-decoration: none;
+
+  &::before {
+    color: $gray-base;
+    transition-duration: .2s;
+  }
+}
+
+.rs-gated-linkPage {
+  &::before {
+    content: '\e971';
+  }
+}
+
+.rs-gated-linkPdf {
+  &::before {
+    content: '\e8c5';
+  }
+}
+
+.rs-gated-linkVideo {
+  &::before {
+    content: '\e8c8';
+  }
+}
+
+.rs-gated-linkWorld {
+  &::before {
+    content: '\e82a';
+  }
+}
+
+.rs-gated-linkNewspaper {
+  &::before {
+    content: '\e81b';
+  }
+}
+
+.rs-gated-contentContainer {
+  height: 100%;
+  padding-left: $side-bar-width;
+  position: relative;
+}
+
+.rs-gated-contentIframe {
+  border: 0;
+  height: $modal-height;
+  width: 100%;
+}
+
+// mobile
+@media screen and (max-width: $screen-sm-max) {
+  .rs-gated-sideBar {
+    border-right: 0;
+  }
+
+  .rs-gated-sideBarTop {
+    padding: 10px 15px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .rs-gated-logo {
+    float: right;
+    height: 100%;
+    width: initial;
+  }
+
+  .rs-gated-contentContainer {
+    padding-left: 0;
+    padding-top: 60px;
+  }
+
+  .rs-gated-sideBarList {
+    display: none;
+  }
+
+  // when mobile menu is open
+  .rs-gated-mobileOpen {
+    .rs-gated-sideBar {
+      border-right: 1px solid $border-color;
+    }
+
+    .rs-gated-sideBarList {
+      display: block;
+    }
+
+    .rs-gated-contentContainer {
+      padding-left: $side-bar-width;
+    }
+
+    .rs-gated-mobileBtn {
+      &::before {
+        content: '\e803';
+      }
+    }
+  }
+}
+
+// desktop rules
+@media screen and (min-width: $screen-md-min) {
+  .rs-gated-modal {
+    width: 950px;
+  }
+
+  .rs-gated-mobileBtn {
+    display: none;
+  }
+}
