@@ -563,6 +563,111 @@
     always-on service and expertise with the best in tools and 
     automation to deliver technology when and how you need it.
     </p>
+    
+    <p>
+  <!-- triggers need to be in order with no other children -->
+  <a class="rs-gatedContent-trigger" data-toggle="modal" data-target="#gated-content" data-index="0">Cloud Security Solutions</a>
+  <a class="rs-gatedContent-trigger" data-toggle="modal" data-target="#gated-content" data-index="1">Cloud Native Solutions</a>
+  <a class="rs-gatedContent-trigger" data-toggle="modal" data-target="#gated-content" data-index="2">Modernization Solutions</a>
+  <a class="rs-gatedContent-trigger" data-toggle="modal" data-target="#gated-content" data-index="3">Optimization Solutions</a>
+  <a class="rs-gatedContent-trigger" data-toggle="modal" data-target="#gated-content" data-index="4">Video</a>
+  <a class="rs-gatedContent-trigger" data-toggle="modal" data-target="#gated-content" data-index="5">Video</a>
+</p>
+
+<!-- Gated Content Modal -->
+<div class="modal fade" id="gated-content" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog rs-gated-modal" role="document">
+    <button type="button" class="rs-gated-close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="modal-content rs-gated-modalContent">
+      <div class="rs-gated-sideBar">
+        <div class="rs-gated-sideBarTop">
+          <a href="#" class="rs-gated-mobileBtn"></a>
+          <img class="rs-gated-logo" src="/imgs/derek/rs-logo-2020-white.svg" alt="rackspace logo">
+        </div>
+        <ul class="rs-gated-sideBarList">
+          <li class="rs-gated-sideBarItem">
+            <a href="#" class="rs-gated-sideBarLink rs-gated-linkPdf" data-iframe-src="https://dab35129f0361dca3159-2fe04d8054667ffada6c4002813eccf0.ssl.cf1.rackcdn.com/downloads/pdfs/2020/solution-data-sheets/Rackspace-Data-Sheet-Cloud-Security-Solution.pdf">
+              Cloud Security Solutions
+            </a>
+          </li>
+          <li class="rs-gated-sideBarItem">
+            <a href="#" class="rs-gated-sideBarLink rs-gated-linkWorld" data-iframe-src="http://c744563d32d0468a7cf1-2fe04d8054667ffada6c4002813eccf0.r76.cf1.rackcdn.com/downloads/pdfs/2020/solution-data-sheets/Rackspace-Data-Sheet-Cloud-Native-Solutions.pdf">
+              Cloud Native Solutions
+            </a>
+          </li>
+          <li class="rs-gated-sideBarItem">
+            <a href="#" class="rs-gated-sideBarLink rs-gated-linkPage" data-iframe-src="https://dab35129f0361dca3159-2fe04d8054667ffada6c4002813eccf0.ssl.cf1.rackcdn.com/downloads/pdfs/2020/solution-data-sheets/Rackspace-Data-Sheet-Data-Modernization-Solution.pdf">
+              Modernization Solutions
+            </a>
+          </li>
+          <li class="rs-gated-sideBarItem">
+            <a href="#" class="rs-gated-sideBarLink rs-gated-linkNewspaper" data-iframe-src="https://dab35129f0361dca3159-2fe04d8054667ffada6c4002813eccf0.ssl.cf1.rackcdn.com/downloads/pdfs/2020/solution-data-sheets/Rackspace-Data-Sheet-Cloud-Optimization-Solutions.pdf">
+              Optimization Solutions
+            </a>
+          </li>
+          <li class="rs-gated-sideBarItem">
+            <a href="#" class="rs-gated-sideBarLink rs-gated-linkVideo" data-iframe-src="https://www.rackspace.com/resources/video-solving-together-customers-itari-ighoroje">
+              Video
+            </a>
+          </li>
+          <li class="rs-gated-sideBarItem">
+            <a href="#" class="rs-gated-sideBarLink rs-gated-linkVideo" data-iframe-src="https://www.rackspace.com/resources/video-solving-together-customers-saikumar-iyer">
+              Video
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="rs-gated-contentContainer">
+        <iframe src="" class="rs-gated-contentIframe"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var $gatedContentTrigger = $('.rs-gatedContent-trigger');
+  var $gatedModal = $('#gated-content');
+  var $gatedContent = $gatedModal.find('.rs-gated-modal');
+  var $iframe = $gatedContent.find('.rs-gated-contentIframe');
+  var $gatedContentLink = $gatedContent.find('.rs-gated-sideBarLink');
+  var $gatedModalContent = $gatedModal.find('.rs-gated-modalContent');
+  var gatedActiveClass = 'rs-gated-active';
+  $gatedContentTrigger.click(function() {
+    var $linkItem = $gatedContent.find('.rs-gated-sideBarItem');
+    $linkItem.find('.rs-gated-sideBarLink').removeClass(gatedActiveClass);
+    if ($iframe.length) {
+      var $firstSrc = $linkItem
+        .eq($(this).attr('data-index'))
+        .find('.rs-gated-sideBarLink')
+        .addClass(gatedActiveClass)
+        .attr('data-iframe-src');
+      $iframe.attr('src', $firstSrc);
+    }
+  });
+  $gatedContentLink.click(function(e) {
+    e.preventDefault();
+    var $link = $(this);
+    var src = $link.attr('data-iframe-src');
+    if (src) {
+      $gatedContent.find('.rs-gated-sideBarLink').removeClass(gatedActiveClass);
+      $link.addClass(gatedActiveClass)
+      $gatedModalContent.removeClass('rs-gated-mobileOpen')
+      $iframe.attr('src', src);
+    }
+  });
+  var $gatedMobileBtn = $gatedModal.find('.rs-gated-mobileBtn');
+  $gatedMobileBtn.click(function (e) {
+    e.preventDefault();
+    $gatedModalContent.toggleClass('rs-gated-mobileOpen');
+  });
+  $gatedModal.on('hidden.bs.modal', function () {
+    $iframe.attr('src', '');
+  });
+</script>
+
+
   </div>
   <div class="cxRiver-farCol"></div>
 </div>

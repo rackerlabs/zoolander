@@ -72,6 +72,28 @@ Zoolander.Tracking = (function Tracking($) {
       });
     });
 
+    $('.track-caModalOpen').on('click', (e) => {
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Content Activation',
+        eventAction: 'Modal Click',
+        eventLabel: $(e.target).data('target'),
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+
+    $('.track-caSidebarLink').on('click', (e) => {
+      dataLayer.push({
+        event: 'ga.event',
+        eventCategory: 'Content Activation',
+        eventAction: 'Sidebar Link Click',
+        eventLabel: $(e.target).data('iframe-src'),
+        eventValue: '0',
+        eventNonInteraction: 0,
+      });
+    });
+
     $('.track-loginMyRack').on('click', () => {
       dataLayer.push({
         event: 'ga.event',

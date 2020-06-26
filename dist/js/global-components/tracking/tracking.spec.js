@@ -34,6 +34,31 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(window.dataLayer.pop(), 'to include page call event').to.eql(expected);
+    }); // content activation links
+
+    it('should track content activation links', function () {
+      $('body').append('<a class="track-caModalOpen" data-target="#gated-content">Content Activation Modal Open</a>').append('<a class="track-caSidebarLink" data-iframe-src="https://www.youtube.com/watch?v=oHg5SJYRHA0">Content Activation Sidebar Link Click</a>');
+      Zoolander.Tracking.init();
+      $('.track-caModalOpen').trigger('click');
+      var expected = {
+        event: 'ga.event',
+        eventCategory: 'Content Activation',
+        eventAction: 'Modal Click',
+        eventLabel: '#gated-content',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.deep.eql(window.dataLayer.pop());
+      $('.track-caSidebarLink').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Content Activation',
+        eventAction: 'Sidebar Link Click',
+        eventLabel: 'https://www.youtube.com/watch?v=oHg5SJYRHA0',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.deep.eql(window.dataLayer.pop());
     }); // login clicks
 
     it('should track login clicks', function () {
