@@ -148,12 +148,6 @@
     margin-top: 144px;
   }
 
-  .rsBlog-nav-container {
-    .contentOffset {
-      margin-top: 10px;
-    }
-  }
-
   .navbar-topLink-dropDown {
 
     &::after {
@@ -166,10 +160,6 @@
 }
 
 @media only screen and (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
-  .contentOffset {
-    margin-top: 10px;
-  }
-
   .navbar-nav {
 
     .navbar-topItem {

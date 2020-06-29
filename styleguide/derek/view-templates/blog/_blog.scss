@@ -8,6 +8,12 @@ $blog-link-hover: #f9f9f9;
   justify-content: center;
 }
 
+@media only screen and (max-width: $screen-sm-max) {
+  .rsBlog-noOffset {
+    margin-top: 50px;
+  }
+}
+
 .rsBlog-nav-fixed {
   position: fixed;
 }
