@@ -9,10 +9,6 @@ $link-state: rgba($black, .04);
   width: 90%;
 }
 
-.rs-gatedContent-trigger {
-  display: block;
-}
-
 .rs-gated-modalContent {
   border: 0;
   min-height: $modal-height;
@@ -175,6 +171,8 @@ $link-state: rgba($black, .04);
 @media screen and (max-width: $screen-sm-max) {
   .rs-gated-sideBar {
     border-right: 0;
+    padding: 0;
+    width: 0;
   }
 
   .rs-gated-sideBarTop {
@@ -202,6 +200,8 @@ $link-state: rgba($black, .04);
   .rs-gated-mobileOpen {
     .rs-gated-sideBar {
       border-right: 1px solid $border-color;
+      padding: 60px 15px 10px;
+      width: $side-bar-width;
     }
 
     .rs-gated-sideBarList {
