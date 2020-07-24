@@ -13,7 +13,7 @@ $link-hover: #f9f9f9;
 
 .rsTl-nav-container {
   @include clearfix;
-  background-color: $gray-light;
+  border-bottom: 2px solid $nav-link-black;
   top: 0;
   width: 100%;
   z-index: 275;
@@ -24,7 +24,6 @@ $link-hover: #f9f9f9;
   @include xl-container;
   -ms-grid-columns: 180px 1fr 181px 220px;
   background-color: $white;
-  border-bottom: 2px solid $nav-link-black;
   display: -ms-grid;
   display: grid;
   grid-template-columns: 180px 1fr 181px 220px;
