@@ -77,7 +77,7 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'ga.event',
         eventCategory: 'Content Activation',
         eventAction: 'Modal Click',
-        eventLabel: $(e.target).data('target'),
+        eventLabel: $(e.currentTarget).data('target'),
         eventValue: '0',
         eventNonInteraction: 0,
       });
@@ -88,7 +88,7 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'ga.event',
         eventCategory: 'Content Activation',
         eventAction: 'Sidebar Link Click',
-        eventLabel: $(e.target).data('iframe-src'),
+        eventLabel: $(e.currentTarget).data('iframe-src'),
         eventValue: '0',
         eventNonInteraction: 0,
       });
@@ -183,9 +183,9 @@ Zoolander.Tracking = (function Tracking($) {
     });
 
     $(document).on('click', '.track-signupCTA', (e) => {
-      const protocol = $(e.target).prop('protocol');
-      const hostname = $(e.target).prop('hostname');
-      const pathname = $(e.target).prop('pathname');
+      const protocol = $(e.currentTarget).prop('protocol');
+      const hostname = $(e.currentTarget).prop('hostname');
+      const pathname = $(e.currentTarget).prop('pathname');
       dataLayer.push({
         event: 'ga.event',
         eventCategory: 'Signup',
@@ -197,14 +197,18 @@ Zoolander.Tracking = (function Tracking($) {
     });
 
     $(document).on('click', '.track-signupMenu', (e) => {
-      const protocol = $(e.target).prop('protocol');
-      const hostname = $(e.target).prop('hostname');
-      const pathname = $(e.target).prop('pathname');
+      const protocol = $(e.currentTarget).prop('protocol');
+      const hostname = $(e.currentTarget).prop('hostname');
+      const pathname = $(e.currentTarget).prop('pathname');
+      const hash = $(e.currentTarget).prop('hash');
+      const port = $(e.currentTarget).prop('port');
+      const portStr = port ? `:${port}` : '';
+
       dataLayer.push({
         event: 'ga.event',
         eventCategory: 'Signup',
         eventAction: 'Signup Click Menu',
-        eventLabel: `${protocol}//${hostname}${pathname}`,
+        eventLabel: `${protocol}//${hostname}${portStr}${pathname}${hash}`,
         eventValue: '0',
         eventNonInteraction: 0,
       });
@@ -215,7 +219,7 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'cta.click',
         eventCategory: 'CTA',
         eventAction: 'CTA Click',
-        eventLabel: $(e.target).text() || $(e.target).val() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
+        eventLabel: $(e.currentTarget).text() || $(e.currentTarget).val() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
         eventValue: '0',
         eventNonInteraction: 0,
       });
@@ -226,7 +230,7 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'ga.event',
         eventCategory: 'CTA',
         eventAction: 'Solve CTA Click',
-        eventLabel: $(e.target).text() || $(e.target).val() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
+        eventLabel: $(e.currentTarget).text() || $(e.currentTarget).val() || $(e.currentTarget).find('img').prop('alt') || 'undefined',
         eventValue: '0',
         eventNonInteraction: 0,
       });
@@ -237,7 +241,7 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'ga.event',
         eventCategory: 'Resource Center',
         eventAction: 'Resource Center Filter - Product',
-        eventLabel: $(e.target).find('option:selected').text(),
+        eventLabel: $(e.currentTarget).find('option:selected').text(),
         eventValue: '0',
         eventNonInteraction: 0,
       });
@@ -246,7 +250,7 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'ga.event',
         eventCategory: 'Resource Center',
         eventAction: 'Resource Center Filter - Type',
-        eventLabel: getCheckboxValuesByElement($(e.target).find('input:checked')),
+        eventLabel: getCheckboxValuesByElement($(e.currentTarget).find('input:checked')),
         eventValue: '0',
         eventNonInteraction: 0,
       });
@@ -257,7 +261,7 @@ Zoolander.Tracking = (function Tracking($) {
         event: 'ga.event',
         eventCategory: 'Internal Links',
         eventAction: 'Link Click - Navigation',
-        eventLabel: getLinksValue($(e.target)),
+        eventLabel: getLinksValue($(e.currentTarget)),
         eventValue: 0,
         eventNonInteraction: 0,
       });
