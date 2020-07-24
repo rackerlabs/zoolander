@@ -187,19 +187,46 @@
 <!--[/navigation]-->
 <script src="js/global-components/mainnav/mainnav.js" charset="utf-8"></script>
 <div class="contentOffset"><!-- Home Page Banner -->
+<div id="animation_container" class="pageBanner2020-animation">
+  <canvas id="canvas" class="pageBanner2020-animation-canvas"></canvas>
+  <div id="dom_overlay_container" class="pageBanner2020-animation-container">
+    <div class="container">
+      <div class="pageBanner-col">
+        <div class="pageBanner2020-content">
+          <h2 class="pageBanner-title">The Most Successful Technology Transformations Start With a Clear Vision of Tomorrow</h2>
+          <h4>Solving Together<sub>&trade;</sub></h4>
+          <a class="pageBanner-button button track-cta" href="/node/21600#solutions">Learn More</a>
+          <a class="pageBanner2020-hm-video" data-modal-context="homepage video" data-size="modal-lg" data-toggle="modal" data-target="#rackspaceModal" data-load-modal="modal/video/21714">Watch Video</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="pageBanner2020-wrapper">
   <div class="container">
     <div class="pageBanner2020-main-image"></div>
     <div class="pageBanner-col">
         <div class="pageBanner2020-content">
-            <h1 class="pageBanner-title">The Most Successful Transformations Start With a Clear Vision of Tomorrow</h1>
-            <p class="pageBanner-text">We are helping customers achieve business outcomes faster by combining world-class expertise, process and technology.</p>
-            <a class="pageBanner-button button track-cta">Learn More</a>
-            <a class="pageBanner2020-hm-video" href="#">Watch Brand Video</a>
+            <h2 class="pageBanner-title">The Most Successful Technology Transformations Start With a Clear Vision of Tomorrow</h2>
+            <h4>Solving Together<sub>&trade;</sub></h4>
+<a class="pageBanner-button button track-cta" href="[current-page:url:relative]#solutions">Learn More</a>
+            <a class="pageBanner2020-hm-video" data-modal-context="homepage video" data-size="modal-lg" data-toggle="modal" data-target="#rackspaceModal" data-load-modal="modal/video/21714">Watch Video</a>
         </div>
     </div>
   </div>
 </div>
+
+<script src="global/plugins/create.js" charset="utf-8"></script>
+<script type="text/javascript">
+  var animation_manifest = [
+    {src:"/imgs/derek/CachedTexturedBitmap_1.png", id:"CachedTexturedBitmap_1"},
+    {src:"/imgs/derek/CachedTexturedBitmap_7.png", id:"CachedTexturedBitmap_7"},
+    {src:"/imgs/derek/Rackspace_Responsive_Hero_atlas_.png", id:"Rackspace_Responsive_Hero_atlas_"}
+  ];
+</script>
+<script src="global/homepage-animation.js" charset="utf-8"></script>
+
 
 <!-- Announcement River -->
 <div class="rsHomepage-announcementRiver">
@@ -220,33 +247,40 @@
 
 
 <!-- Customer Story River -->
-<div class="rsCustomer-story-header">
-  <picture class="rsCustomer-story-headerBackground">
-     <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source class="rsCustomer-story-headerBackgroundContent" srcset="imgs/derek/banners/customer-story-background-3-1400.jpg 1x" media="all and (min-width: 1600px)" type="image/jpeg">
-    <source class="rsCustomer-story-headerBackgroundContent" srcset="imgs/derek/banners/customer-story-background-3-1400.jpg 1x" media="all and (min-width: 1280px) and (max-width: 1599px)" type="image/jpeg">
-    <source class="rsCustomer-story-headerBackgroundContent" srcset="imgs/derek/banners/customer-story-background-3-1400.jpg 1x" media="all and (min-width: 992px) and (max-width: 1279px)" type="image/jpeg">
-    <source class="rsCustomer-story-headerBackgroundContent" srcset="imgs/derek/banners/customer-story-background-3-1400.jpg 1x" media="all and (min-width: 768px) and (max-width: 991px)" type="image/jpeg">
-    <source class="rsCustomer-story-headerBackgroundContent" srcset="imgs/derek/banners/customer-story-background-3-1400.jpg 1x" media="all and (min-width: 480px) and (max-width: 767px)" type="image/jpeg">
-    <source class="rsCustomer-story-headerBackgroundContent" srcset="imgs/derek/banners/customer-story-background-3-1400.jpg 1x" type="image/jpeg">
-    <!--[if IE 9]></video><![endif]-->
-    <img class="rsCustomer-story-headerBackgroundContent" src="imgs/derek/banners/customer-story-background-3-1400.jpg" alt="Test page banner">
-  </picture>
-  <div class="rsCustomer-story-headerContainer container">
-    <div class="rsCustomer-story-headerInner">
-      <!-- we only need cs-story-box if we want the scroll animation to run -->
-      <div class="rsCustomer-story-text cs-story-box">
-        <img class="rsCustomer-story-logo" src="imgs/derek/logos/aeromexico-logo.svg">
-        <h1 class="rsCustomer-story-title">Triple Your Online Sales by Modernizing Your Stack</h1>
-        <p class="rsCustomer-story-p">
-          See how Aeromexico revamped their interaction with customers using modern applications, platforms and devices.
-        </p>
-        <a class="rsCustomer-story-cta" href="#">Read Their Story</a>
+<div class="rsCustomer-story2020">
+  <div class="container">
+    <div class="rsCustomer-story2020-col col-md-6">
+      <h3 class="rsCustomer-story2020-header">Visions Realized</h3>
+      <h4 class="rsCustomer-story2020-header">Empowering our customer success</h4>
+      <div class="rsCustomer-story2020-textBlock">
+        <div class="rsCustomer-story2020-iconWrap">
+          <span class="rsCustomer-story2020-quote"></span>
+        </div>
+        <div class="rsCustomer-story2020-textWrap">
+          <span class="rsCustomer-story2020-text">
+            What I have been blown away with is Rackspace's enthusiasm to find out what 
+            more they can do with us; how else they can help. And that comes through all 
+            levels of the organisation, from the CTO through to Rackers.
+          </span>
+          <span class="rsCustomer-story2020-author">
+            Mary O'Callaghan<br>
+            Director of Technology Partnerships
+          </span>
+          <img class="rsCustomer-story2020-logo" src="/imgs/derek/logos/British-Heart-Foundation.svg" alt="British Heart Foundation">
+        </div>
+      </div>
+    </div>
+    <div class="rsCustomer-story2020-col col-md-6">
+      <div class="videoEmbed-column">
+        <div class="embed-responsive embed-responsive-16by9">
+          <figure class="youtube-container">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SyzX5Z0A14k"></iframe>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <div class="aboutus-wrapper">
   <div class="container">
