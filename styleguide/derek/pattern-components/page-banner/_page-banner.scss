@@ -83,12 +83,19 @@
 .pageBanner2020-content {
   color: $black;
   visibility: hidden;
+
+  h4 {
+    color: $white;
+    font-weight: 600;
+    margin-bottom: 40px;
+    margin-top: 25px;
+  }
 }
 
 .pageBanner-title {
   display: inline-block;
   font-size: 4rem;
-  font-weight: lighter;
+  font-weight: $font-weight-black;
   line-height: 44px;
   padding-right: 30px;
 }
@@ -106,7 +113,7 @@
 .pageBanner-button {
   background-color: $rackspace-red;
   color: $white;
-  font-weight: bolder;
+  font-weight: $font-weight-black;
   padding-left: 30px;
   padding-right: 30px;
 
@@ -121,7 +128,8 @@
 .pageBanner2020-hm-video {
   color: $white;
   display: inline-block;
-  margin-left: 10px;
+  font-weight: $font-weight-black;
+  margin-left: 35px;
 
   &::before {
     content: '\f16a';
@@ -132,6 +140,7 @@
 
   &:hover {
     color: $white;
+    cursor: pointer;
   }
 
   &:focus {
@@ -180,6 +189,34 @@
   }
 }
 
+.pageBanner2020-animation {
+  background-color: $white;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+
+  .container {
+    height: inherit;
+  }
+}
+
+.pageBanner2020-animation-canvas {
+  background-color: $white;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+.pageBanner2020-animation-container {
+  display: block;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 // < 480px
 @media screen and (max-width: $screen-xs) {
   .pageBanner-main-image {
@@ -189,7 +226,7 @@
   }
 
   .pageBanner2020-main-image {
-    background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+    background-image: url('../imgs/derek/banners/hp-ban-768.jpg');
     display: block;
     height: 300px;
   }
@@ -199,7 +236,7 @@
   }
 
   .pageBanner2020-main-image-es {
-    background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+    background-image: url('../imgs/derek/banners/hp-ban-768.jpg');
   }
 
   .pageBanner-main-image-pt {
@@ -207,7 +244,7 @@
   }
 
   .pageBanner2020-main-image-pt {
-    background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+    background-image: url('../imgs/derek/banners/hp-ban-768.jpg');
   }
 
   .pageBanner-main-image-apac {
@@ -215,7 +252,7 @@
   }
 
   .pageBanner2020-main-image-apac {
-    background-image: url('../imgs/derek/banners/hp-ban-480.jpg');
+    background-image: url('../imgs/derek/banners/hp-ban-768.jpg');
   }
 
   .pageBanner-wrapper {
@@ -392,6 +429,10 @@
       color: $black;
     }
   }
+
+  .pageBanner2020-animation {
+    display: none;
+  }
 }
 
 // 768px - 991px
@@ -478,7 +519,7 @@
   }
 }
 
-// 860px - 991px 
+// 860px - 991px
 @media screen and (max-width: $screen-sm-max) and (min-width: 860px) {
   .pageBanner2020-main-image {
     height: 300px;
@@ -518,6 +559,7 @@
 
   .pageBanner2020-wrapper {
     background-image: url('../imgs/derek/banners/hp-ban-1280.jpg');
+    display: none;
   }
 
   .pageBanner-wrapper-es {
@@ -551,6 +593,13 @@
   .pageBanner2020-content {
     color: $white;
     width: 450px;
+  }
+}
+
+@media screen and (min-width: $screen-sm) and (max-width: $screen-md-max) {
+  .pageBanner-title {
+    font-size: 3rem;
+    line-height: 1.2em;
   }
 }
 
