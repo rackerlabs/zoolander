@@ -1,3 +1,22 @@
 .chat-disabled {
   display: none;
 }
+
+// Safari only triggers
+
+// when announcement is open
+_::-webkit-full-page-media, _:future, :root body:not([style*='padding-bottom: 0px']) .helpButton {
+  bottom: 144px !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  _::-webkit-full-page-media, _:future, :root body:not([style*='padding-bottom: 0px']) .helpButton {
+    bottom: 168px !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  _::-webkit-full-page-media, _:future, :root body:not([style*='padding-bottom: 0px']) .helpButton {
+    bottom: 120px !important;
+  }
+}
