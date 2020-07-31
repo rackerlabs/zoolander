@@ -12,7 +12,7 @@ describe('Zoolander Tracking Module', function () {
     }); // call clicks
 
     it('should track call clicks', function () {
-      $('body').append('<a class="track-ceilingCall">Call</a>').append('<a class="track-pageCall">In-Page Call</a>');
+      $('body').append('<a class="track-ceilingCall">Call</a>').append('<a class="track-pageCall">In-Page Call</a>').append('<a class="track-ceilingCall"><span>Span Call</span></a>').append('<a class="track-pageCall"><span>Span In-Page Call</span></a>');
       Zoolander.Tracking.init();
       $('.track-ceilingCall').trigger('click');
       var expected = {
@@ -34,10 +34,30 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(window.dataLayer.pop(), 'to include page call event').to.eql(expected);
+      $('.track-ceilingCall span').trigger('click');
+      expected = {
+        event: 'rs.call_click',
+        eventCategory: 'Infinity Tracking Triggers',
+        eventAction: 'Call Click CTA - Eyebrow',
+        eventLabel: 'http://localhost:9876/context.html',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(window.dataLayer.pop(), 'to include ceiling call event').to.eql(expected);
+      $('.track-pageCall span').trigger('click');
+      expected = {
+        event: 'rs.call_click',
+        eventCategory: 'Infinity Tracking Triggers',
+        eventAction: 'Call Click CTA - Page',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(window.dataLayer.pop(), 'to include page call event').to.eql(expected);
     }); // content activation links
 
     it('should track content activation links', function () {
-      $('body').append('<a class="track-caModalOpen" data-target="#gated-content">Content Activation Modal Open</a>').append('<a class="track-caSidebarLink" data-iframe-src="https://www.youtube.com/watch?v=oHg5SJYRHA0">Content Activation Sidebar Link Click</a>');
+      $('body').append('<a class="track-caModalOpen" data-target="#gated-content">Content Activation Modal Open</a>').append('<a class="track-caSidebarLink" data-iframe-src="https://www.youtube.com/watch?v=oHg5SJYRHA0">Content Activation Sidebar Link Click</a>').append('<a class="track-caModalOpen" data-target="#gated-content"><span>Content Activation Modal Open</span></a>').append('<a class="track-caSidebarLink" data-iframe-src="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span>Content Activation Sidebar Link Click</span></a>');
       Zoolander.Tracking.init();
       $('.track-caModalOpen').trigger('click');
       var expected = {
@@ -59,10 +79,30 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.deep.eql(window.dataLayer.pop());
+      $('.track-caModalOpen span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Content Activation',
+        eventAction: 'Modal Click',
+        eventLabel: '#gated-content',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.deep.eql(window.dataLayer.pop());
+      $('.track-caSidebarLink span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Content Activation',
+        eventAction: 'Sidebar Link Click',
+        eventLabel: 'https://www.youtube.com/watch?v=oHg5SJYRHA0',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.deep.eql(window.dataLayer.pop());
     }); // login clicks
 
     it('should track login clicks', function () {
-      $('body').append('<a class="track-loginMyRack">MyZoolander Portal</a>').append('<a class="track-loginFaws">FAWS</a>').append('<a class="track-loginApps">Apps</a>').append('<a class="track-loginCloudOffice">Cloud Office</a>').append('<a class="track-loginOnePortal">Login One</a>').append('<a class="track-loginCloudCp">Cloud Control Panel</a>').append('<a class="track-loginGcp">GCP Login</a>');
+      $('body').append('<a class="track-loginMyRack">MyZoolander Portal</a>').append('<a class="track-loginFaws">FAWS</a>').append('<a class="track-loginApps">Apps</a>').append('<a class="track-loginCloudOffice">Cloud Office</a>').append('<a class="track-loginOnePortal">Login One</a>').append('<a class="track-loginCloudCp">Cloud Control Panel</a>').append('<a class="track-loginGcp">GCP Login</a>').append('<a class="track-loginMyRack"><span>MyZoolander Portal</span></a>').append('<a class="track-loginFaws"><span>FAWS</span></a>').append('<a class="track-loginApps"><span>Apps</span></a>').append('<a class="track-loginCloudOffice"><span>Cloud Office</span></a>').append('<a class="track-loginOnePortal"><span>Login One</span></a>').append('<a class="track-loginCloudCp"><span>Cloud Control Panel</span></a>').append('<a class="track-loginGcp"><span>GCP Login</span></a>');
       Zoolander.Tracking.init();
       $('.track-loginMyRack').trigger('click');
       var expected = {
@@ -134,10 +174,80 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.eql(window.dataLayer.pop());
+      $('.track-loginMyRack span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://my.rackspace.com/portal/auth/login',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.deep.eql(window.dataLayer.pop());
+      $('.track-loginApps span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://apps.rackspace.com/',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.deep.eql(window.dataLayer.pop());
+      $('.track-loginFaws span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://manage.rackspace.com/aws',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.deep.eql(window.dataLayer.pop());
+      $('.track-loginCloudOffice span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://cp.rackspace.com/',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      $('.track-loginCloudCp span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://mycloud.rackspace.com/',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      $('.track-loginGcp span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://manage.rackspace.com/gcp',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      $('.track-loginOnePortal span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Login',
+        eventAction: 'Click',
+        eventLabel: 'https://login.rackspace.com/',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
     }); // cta clicks
 
     it('should track form cta clicks', function () {
-      $('body').append('<a class="track-ceilingEmail">Email</a>').append('<a class="track-secondCTA">Secondary CTA</a>').append('<a class="track-subnavEmail">Subnav CTA</a>').append('<a class="track-pageEmail">In-Page CTA</a>');
+      $('body').append('<a class="track-ceilingEmail">Email</a>').append('<a class="track-secondCTA">Secondary CTA</a>').append('<a class="track-subnavEmail">Subnav CTA</a>').append('<a class="track-pageEmail">In-Page CTA</a>').append('<a class="track-ceilingEmail"><span>Email</span></a>').append('<a class="track-secondCTA"><span>Secondary CTA</span></a>').append('<a class="track-subnavEmail"><span>Subnav CTA</span></a>').append('<a class="track-pageEmail"><span>In-Page CTA</span></a>');
       Zoolander.Tracking.init();
       $('.track-ceilingEmail').trigger('click');
       var expected = {
@@ -148,8 +258,7 @@ describe('Zoolander Tracking Module', function () {
         eventValue: '0',
         eventNonInteraction: 0
       };
-      var result = window.dataLayer.pop();
-      expect(expected, '.track-ceilingEmail').to.eql(result);
+      expect(expected, '.track-ceilingEmail').to.eql(window.dataLayer.pop());
       $('.track-secondCTA').trigger('click');
       expected = {
         event: 'ga.event',
@@ -180,12 +289,62 @@ describe('Zoolander Tracking Module', function () {
         eventNonInteraction: 0
       };
       expect(expected).to.eql(window.dataLayer.pop());
+      $('.track-ceilingEmail span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Site Submission',
+        eventAction: 'Form Click CTA - Eyebrow',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected, '.track-ceilingEmail').to.eql(window.dataLayer.pop());
+      $('.track-secondCTA span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Site Submission',
+        eventAction: 'Form Click CTA - Secondary CTA',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      $('.track-subnavEmail span').trigger('click');
+      expected = {
+        event: 'rs.form_click',
+        eventCategory: 'Site Submission',
+        eventAction: 'Form Click CTA - Subnav',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      $('.track-pageEmail span').trigger('click');
+      expected = {
+        event: 'rs.form_click',
+        eventCategory: 'Site Submission',
+        eventAction: 'Form Click CTA - Page',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
     });
     it("should track 'back to top' clicks", function () {
-      $('body').append('<a class="track-backToTop">Back To Top</a>');
+      $('body').append('<a class="track-backToTop">Back To Top</a>').append('<a class="track-backToTop"><span>Back To Top</span></a>');
       Zoolander.Tracking.init();
       $('.track-backToTop').trigger('click');
       var expected = {
+        event: 'ga.event',
+        eventCategory: 'Page-Level Interactions',
+        eventAction: 'Click Back to Top',
+        eventLabel: window.location.href,
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      $('.track-backToTop span').trigger('click');
+      expected = {
         event: 'ga.event',
         eventCategory: 'Page-Level Interactions',
         eventAction: 'Click Back to Top',
@@ -199,8 +358,12 @@ describe('Zoolander Tracking Module', function () {
       $('body').append('<a class="track-signupCTA link1" href="https://cart.rackspace.com/cloud">Cloud</a>');
       $('body').append('<a class="track-signupCTA link2" href="https://cart.rackspace.com/aws?_ga=abc123">AWS</a>');
       $('body').append('<a class="track-signupCTA link3" href="https://cart.rackspace.com/gcp">GCP</a>');
+      $('body').append('<a class="track-signupCTA link11" href="https://cart.rackspace.com/cloud"><span>Cloud</span></a>');
+      $('body').append('<a class="track-signupCTA link22" href="https://cart.rackspace.com/aws?_ga=abc123"><span>AWS</span></a>');
+      $('body').append('<a class="track-signupCTA link33" href="https://cart.rackspace.com/gcp"><span>GCP</span></a>');
       Zoolander.Tracking.init();
       $('body').append('<div id="rackspaceModal"><a class="track-signupCTA link4" href="https://cart.rackspace.com/office365">Office365</a></div>');
+      $('body').append('<div id="rackspaceModal"><a class="track-signupCTA link44" href="https://cart.rackspace.com/office365"><span>Office365</span></a></div>');
       $('.link3').trigger('click');
       var expected = {
         event: 'ga.event',
@@ -297,6 +460,57 @@ describe('Zoolander Tracking Module', function () {
       expect(expected).to.eql(window.dataLayer.pop());
       expect(0).to.eql(window.dataLayer.length);
     });
+    it('should track signup Menu span clicks', function () {
+      $('body').append('<a class="track-signupMenu link1" href="#cloud"><span>Cloud</span></a>');
+      $('body').append('<a class="track-signupMenu link2" href="#aws"><span>AWS</span></a>');
+      $('body').append('<a class="track-signupMenu link3" href="#gcp"><span>GCP</span></a>');
+      Zoolander.Tracking.init();
+      $('body').append('<div id="rackspaceModal"><a class="track-signupMenu link4" href="#office365"><span>Office365</span></a></div>');
+      $('.link3 span').trigger('click');
+      var expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: 'http://localhost:9876/context.html#gcp',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+      $('.link1').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: 'http://localhost:9876/context.html#cloud',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+      $('.link2').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: 'http://localhost:9876/context.html#aws',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+      $('.link4').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Signup',
+        eventAction: 'Signup Click Menu',
+        eventLabel: 'http://localhost:9876/context.html#office365',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+    });
     it('should track resource clicks', function () {
       $('body').append('<a class="track-cta link1" href="https://rackspace.com">View Resource</a>');
       $('body').append('<a class="track-cta link2" href="https://cart.rackspace.com">View Cart</a>');
@@ -337,6 +551,57 @@ describe('Zoolander Tracking Module', function () {
       expect(expected).to.eql(window.dataLayer.pop());
       expect(0).to.eql(window.dataLayer.length);
       $('.link4').trigger('click');
+      expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'View Support',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+    });
+    it('should track resource span clicks', function () {
+      $('body').append('<a class="track-cta link1" href="#https://rackspace.com"><span>View Resource</span></a>');
+      $('body').append('<a class="track-cta link2" href="#https://cart.rackspace.com"><span>View Cart</span></a>');
+      $('body').append('<a class="track-cta link3" href="#https://blog.rackspace.com"><span>View Blog</span></a>');
+      Zoolander.Tracking.init();
+      $('body').append('<div id="rackspaceModal"><a class="track-cta link4" href="#https://support.rackspace.com"><span>View Support</span></a></div>');
+      $('.link2 span').trigger('click');
+      var expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'View Cart',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+      $('.link1 span').trigger('click');
+      expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'View Resource',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+      $('.link3 span').trigger('click');
+      expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'View Blog',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+      expect(0).to.eql(window.dataLayer.length);
+      $('.link4 span').trigger('click');
       expected = {
         event: 'cta.click',
         eventCategory: 'CTA',
@@ -400,6 +665,20 @@ describe('Zoolander Tracking Module', function () {
       };
       expect(expected).to.eql(window.dataLayer.pop());
     });
+    it('should set label to nested span contents', function () {
+      $('body').append('<a class="track-cta" href="https://rackspace.com"><span>These are my contents</span></a>');
+      Zoolander.Tracking.init();
+      $('.track-cta').trigger('click');
+      var expected = {
+        event: 'cta.click',
+        eventCategory: 'CTA',
+        eventAction: 'CTA Click',
+        eventLabel: 'These are my contents',
+        eventValue: '0',
+        eventNonInteraction: 0
+      };
+      expect(expected).to.eql(window.dataLayer.pop());
+    });
     it('should set solve undefined label when alt tag is missing', function () {
       $('body').append('<a class="solve-cta" href="https://rackspace.com"><img src="#"></a>');
       Zoolander.Tracking.init();
@@ -443,7 +722,7 @@ describe('Zoolander Tracking Module', function () {
       expect(expected).to.eql(window.dataLayer.pop());
     });
     it('should track internal nav clicks', function () {
-      var linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">' + '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> ' + '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>' + '<ul class="mid-nav">' + '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>' + '<li class="item-b"><span id="midlvl">Mid lvl second</span>' + '<ul class="third-nav">' + '<li class="item-1">Base lvl first</li>' + '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>' + '<li class="item-3">Base lvl third</li>' + '</ul>' + '</li>' + '<li class="item-c">Mid lvl third</li>' + '</ul>' + '</li>' + '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>' + '</ul>' + '</div>';
+      var linkHtml = '<div class="navbar-menuContainer" id="main-navigation"><ul class="top-nav">' + '<li class="item-i"><span class="navbar-topLink">Top lvl first</span></li> ' + '<li class="item-ii"><span class="navbar-topLink">Top lvl second</span>' + '<ul class="mid-nav">' + '<li class="item-a"><a class="navbar-dropDownLink">Mid lvl first</a></li>' + '<li class="item-b"><span id="midlvl">Mid lvl second</span>' + '<ul class="third-nav">' + '<li class="item-1">Base lvl first</li>' + '<li class="item-2"><a class="navbar-tertiary-dropDownLink">Base lvl second</a></li>' + '<li class="item-3">Base lvl third</li>' + '</ul>' + '</li>' + '<li class="item-c">Mid lvl third</li>' + '</ul>' + '</li>' + '<li class="item-iii"><a class="navbar-topLink">Top lvl third</a></li>' + '<li class="item-iv"><a class="navbar-topLink"><span>Top lvl fourth</span></a></li>' + '</ul>' + '</div>';
       $('body').append(linkHtml);
       Zoolander.Tracking.init(); // click base level
 
@@ -482,6 +761,18 @@ describe('Zoolander Tracking Module', function () {
         eventCategory: 'Internal Links',
         eventAction: 'Link Click - Navigation',
         eventLabel: 'Top lvl third',
+        eventValue: 0,
+        eventNonInteraction: 0
+      };
+      result = window.dataLayer.pop();
+      expect(expected, 'top lvl click').to.deep.eql(result); // click span inside top level link
+
+      $('.item-iv .navbar-topLink span').trigger('click');
+      expected = {
+        event: 'ga.event',
+        eventCategory: 'Internal Links',
+        eventAction: 'Link Click - Navigation',
+        eventLabel: 'Top lvl fourth',
         eventValue: 0,
         eventNonInteraction: 0
       };
