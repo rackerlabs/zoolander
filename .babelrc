@@ -1,0 +1,6 @@
+{
+  "presets": ["@babel/preset-env"],
+  "ignore":[
+    "./styleguide/derek/global-components/hex/hex.js"
+  ]
+}

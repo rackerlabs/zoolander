@@ -1,0 +1,23 @@
+files:
+  include: 'styleguide/**/*.scss'
+  ignore:
+    - 'styleguide/_themes/global/scss/rsweb-font-style.scss'
+    - 'styleguide/_sass/syntax-highlighting.scss'
+    - 'styleguide/_themes/derek/scss/components/rsweb-font-style.scss'
+    - 'styleguide/_themes/derek/scss/components/pager.scss'
+    - 'styleguide/_themes/global/scss/bootstrap_variables.scss'
+    - 'styleguide/_themes/global/scss/bootstrap_overrides.scss'
+    - 'styleguide/_themes/global/scss/vendor_prefixes.scss'
+    - 'styleguide/_themes/global/scss/scaffolding.scss'
+    - 'styleguide/css/rsweb-font-style.scss'
+rules:
+  no-url-protocols: 0
+  no-url-domains: 0
+  class-name-format:
+    - 1
+    - convention: ^([a-z0-9]+([A-Z][a-z0-9]+)*)(-{1}([a-z0-9]+([A-Z][a-z0-9]+)*)){0,3}$
+    - convention-explanation: 'Classes should be camelCase and separated by no more than 3 hyphens'
+  mixin-name-format:
+    - 1
+    - convention: ^([a-z0-9]+([A-Z][a-z0-9]+)*)(-{1}([a-z0-9]+([A-Z][a-z0-9]+)*)){0,4}$
+    - convention-explanation: 'Mixins should be camelCase and separated by no more than 4 hyphens'

@@ -1,0 +1,467 @@
+<!DOCTYPE html><html lang="en"><head><base href="/zoolander/"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><meta name="description" content=""><meta name="author" content=""><meta name="format-detection" content="telephone=no"><link rel="icon" href="favicon.ico"><title>Zoolander Style Guide</title><link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"><link href="css/fira-font-style-300.css" rel="stylesheet"><link href="css/rsweb-font-style.css" rel="stylesheet"><link href="css/global.css" rel="stylesheet"><link href="css/main.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/modernizr.min.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/jquery.fittext.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js"></script></head><body><div class="row row-eq-height"><button class="navZoolander-slideBtn navZoolander-leftArrow navZoolander-slideBtn-collapsed"></button><div class="navZoolander-container navZoolander-container-collapsed"><div class="siteHeader-logo"><div class="siteHeader-logoImg"></div></div><ul class="navZoolander-list"><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Home</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="./" class="navZoolander-dropdownLink">Welcome</a></li><li class="navZoolander-item"><a href="global/styleguide" class="navZoolander-dropdownLink">Living Styleguide</a></li><li class="navZoolander-item"><a href="global/contributing" class="navZoolander-dropdownLink">Contributing</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Brand Guidelines</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="global/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="global/brand-elements" class="navZoolander-dropdownLink">Brand Elements</a></li><li class="navZoolander-item"><a href="global/voice" class="navZoolander-dropdownLink">Voice and Tone</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Global Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-dropdownItem"><a href="derek/global-theme/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/typography" class="navZoolander-dropdownLink">Typography</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/photography" class="navZoolander-dropdownLink">Photography/Banners</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/swatches" class="navZoolander-dropdownLink">Colors/Swatches</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/icon-font" class="navZoolander-dropdownLink">Icon Font</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/buttons" class="navZoolander-dropdownLink">Buttons/CTAs</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/tables/tables" class="navZoolander-dropdownLink">Tables</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/forms" class="navZoolander-dropdownLink">Forms</a></li></ul></li><!--Add in themes dropdown when there are multiple--><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Ecommerce Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="derek/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="derek/templates" class="navZoolander-dropdownLink">Templates</a></li><li class="navZoolander-item"><a href="derek/patterns/patterns" class="navZoolander-dropdownLink">Patterns</a></li><li class="navZoolander-item"><a href="derek/assets" class="navZoolander-dropdownLink">Asset Library</a></li><li class="navZoolander-item"><a href="derek/incubation" class="navZoolander-dropdownLink">Dev Sandbox</a></li></ul></li></ul></div></div><div id="mainContainer" class="mainContainer mainContainer-collapsed"><div class="standard-padding"><div class="container">
+  <div class="rsTabs-container rsTabsVertical-container">
+    <ul class="nav nav-tabs rsTabs rsTabsVertical">
+      <li class="rsTab-tab rsTabVertical-tab active"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-1" data-toggle="tab">One Row</a></li>
+      <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-2" data-toggle="tab">Two Rows</a></li>
+      <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-3" data-toggle="tab">One Row Again</a></li>
+      <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-4" data-toggle="tab">Two Rows Again</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content rsTabs-content rsTabsVertical-content">
+        <div class="tab-pane active" id="tab-vertical-1">
+          
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader">Single row</h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        </div>
+        <div class="tab-pane" id="tab-vertical-2">
+          
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader">Double rows</h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        </div>
+        <div class="tab-pane" id="tab-vertical-3">
+          
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader">Another single row tab</h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        </div>
+        <div class="tab-pane" id="tab-vertical-4">
+          
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader">Another double row tab</h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        </div>
+    </div>
+  </div>
+</div>
+<script src="js/pattern-components/tabs/tabs.js" charset="utf-8"></script></div></div></body><script src="/zoolander/js/global.js"></script><script src="/zoolander/js/zoolander-only.js"></script><script src="/zoolander/global/modal.js"></script></html>

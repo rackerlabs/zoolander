@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="en"><head><base href="/zoolander/"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><meta name="description" content=""><meta name="author" content=""><meta name="format-detection" content="telephone=no"><link rel="icon" href="favicon.ico"><title>Zoolander Style Guide</title><link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"><link href="css/fira-font-style-300.css" rel="stylesheet"><link href="css/rsweb-font-style.css" rel="stylesheet"><link href="css/derek.css" rel="stylesheet"><link href="css/main.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/modernizr.min.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/jquery.fittext.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js"></script></head><body><div class="row row-eq-height"><button class="navZoolander-slideBtn navZoolander-leftArrow navZoolander-slideBtn-collapsed"></button><div class="navZoolander-container navZoolander-container-collapsed"><div class="siteHeader-logo"><div class="siteHeader-logoImg"></div></div><ul class="navZoolander-list"><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Home</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="./" class="navZoolander-dropdownLink">Welcome</a></li><li class="navZoolander-item"><a href="global/styleguide" class="navZoolander-dropdownLink">Living Styleguide</a></li><li class="navZoolander-item"><a href="global/contributing" class="navZoolander-dropdownLink">Contributing</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Brand Guidelines</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="global/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="global/brand-elements" class="navZoolander-dropdownLink">Brand Elements</a></li><li class="navZoolander-item"><a href="global/voice" class="navZoolander-dropdownLink">Voice and Tone</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Global Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-dropdownItem"><a href="derek/global-theme/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/typography" class="navZoolander-dropdownLink">Typography</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/photography" class="navZoolander-dropdownLink">Photography/Banners</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/swatches" class="navZoolander-dropdownLink">Colors/Swatches</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/icon-font" class="navZoolander-dropdownLink">Icon Font</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/buttons" class="navZoolander-dropdownLink">Buttons/CTAs</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/tables/tables" class="navZoolander-dropdownLink">Tables</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/forms" class="navZoolander-dropdownLink">Forms</a></li></ul></li><!--Add in themes dropdown when there are multiple--><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Ecommerce Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="derek/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="derek/templates" class="navZoolander-dropdownLink">Templates</a></li><li class="navZoolander-item"><a href="derek/patterns/patterns" class="navZoolander-dropdownLink">Patterns</a></li><li class="navZoolander-item"><a href="derek/assets" class="navZoolander-dropdownLink">Asset Library</a></li><li class="navZoolander-item"><a href="derek/incubation" class="navZoolander-dropdownLink">Dev Sandbox</a></li></ul></li></ul></div></div><div id="mainContainer" class="mainContainer mainContainer-collapsed"><div class="standard-padding"><div class="row half-padding-top">
+  <h5>Inline Form</h5>
+  <form class="form-inline">
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputEmail">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputName">First Name</label>
+      <input type="name" class="form-control" id="exampleInputName" placeholder="First Name">
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox">Check This Box
+      </label>
+    </div>
+    <button type="submit" class="button lead">Send</button>
+  </form>
+</div>
+
+<div class="row half-padding-top">
+  <h5>Contact Form</h5>
+  <form class="form-horizontal">
+    <div class="form-group row">
+      <div class="col-xs-6">
+        <label class="sr-only" for="FirstName">First Name</label>
+        <input type="name" class="form-control" id="FirstName" placeholder="First Name">
+      </div>
+      <div class="col-xs-6">
+        <label class="sr-only" for="LastName">Last Name</label>
+        <input type="name" class="form-control" id="LastName" placeholder="Last Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-6">
+        <label class="sr-only" for="Email">Email address</label>
+        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+      </div>
+      <div class="col-xs-6">
+        <label class="sr-only" for="Phone">Phone Number</label>
+        <input type="phone" class="form-control" id="Phone" placeholder="Phone Number">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-12">
+        <label>Checkboxes</label>
+        <div class="form-checkboxes form-control">
+          <div class="form-item">
+            <input type="checkbox" id="Checkbox-0" value="0" class="form-checkbox" id="">  <label class="option" for="Checkbox-0">Checkbox 0</label>
+          </div>
+          <div class="form-item">
+            <input type="checkbox" id="Checkbox-1" value="1" class="form-checkbox">  <label class="option" for="Checkbox-1">Checkbox 1</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-12">
+        <label>Radios <span class="form-required" title="This field is required.">*</span></label>
+        <div class="form-radios form-control">
+          <div class="form-item">
+            <input type="radio" name="radio" value="0" id="Radio-0" class="form-radio">  <label class="option" for="Radio-0">Radio 0</label>
+          </div>
+          <div class="form-item">
+            <input type="radio" name="radio" value="1" id="Radio-1" class="form-radio">  <label class="option" for="Radio-1">Radio 1</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-12">
+       <label for="Textarea"><h6>How can we help you?</h6></label>
+       <textarea class="form-control" id="Textarea" rows="3"></textarea>
+      </div>
+    </div>
+    <button type="submit" class="button lead">Send</button>
+  </form>
+</div>
+
+<div class="row half-padding">
+  <h5>Exposed Form</h5>
+  <div class="rs-webform-embedded" id="block-webform">
+    <div>
+      <form class="rsExposed-form">
+         <div class="form-item">
+            <h4 class="formModal-title">Please complete this form to have a specialist contact you.</h4>
+            <div class="description">
+               <div class="webform-element-description"></div>
+            </div>
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">First Name<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="text">
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">Last Name<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="text">
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">Company<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="text">
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">Email Address<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="email">
+         </div>
+         <div class="form-item">
+           <label class="formModal-label form-label">Phone Number<span class="formModal-required"> *</span></label>
+           <input class="form-control formModal-input" type="text">
+         </div>
+         <div class="form-item">
+            <label class="formModal-label form-label">How can we assist you?</label>
+            <div>
+              <textarea class="form-control formModal-input" rows="5" cols="60"></textarea>
+            </div>
+         </div>
+         <div class="form-item">
+            <label class="formModal-label form-label">
+              Do you want to receive additional information about products, services, thought leadership and invitations to flagship events?<span class="formModal-required"> *</span>
+            </label>
+            <div>
+               <div class="form-item">
+                 <input type="radio" class="form-radio">
+                 <label class="option form-label">Yes</label>
+               </div>
+               <div class="form-item">
+                 <input type="radio" class="form-radio">
+                 <label class="option form-label">No</label>
+               </div>
+            </div>
+         </div>
+         <details class="captcha form-wrapper">
+            <summary role="button">CAPTCHA</summary>
+            <input type="hidden">
+            <input type="hidden">
+            <input type="hidden">
+            <div class="g-recaptcha recaptcha-processed">
+               <div style="width: 304px; height: 78px">
+                  <textarea class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none"></textarea>
+               </div>
+            </div>
+         </details>
+         <div class="form-actions">
+           <input class="button lead button--primary form-submit" type="submit">
+         </div>
+      </form>
+      <p class="small half-padding-top">
+        Information collected in this form is subject to the <a href="#">Rackspace Privacy Statement</a>.
+      </p>  
+    </div>
+  </div>
+</div>
+
+<div class="row half-padding-top">
+  <h5>Modal Form Components</h5>
+  <!-- Button trigger modal -->
+  <button type="button" class="button lead" data-toggle="modal" data-target="#myModal">
+    Launch Form Modal
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog formModal-dialog" role="document">
+    <div class="modal-content formModal-content">
+      <div class="modal-header formModal-header">
+        <button type="button" class="close formModal-closeIcon" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="formModal-title">This is a Much Longer Optional Form Title with Multiple Lines</h4>
+      </div>
+      <div class="modal-body formModal-body">
+        <form class="form-horizontal">
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label class="formModal-label" for="FirstName">Name Label <strong class="formModal-required">*</strong></label>
+              <input type="name" class="form-control formModal-input">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label class="formModal-label" for="Email">Email Label <strong class="formModal-required">*</strong></label>
+              <input type="email" class="form-control formModal-input">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label class="formModal-label" for="Phone">Phone Label <strong class="formModal-required">*</strong></label>
+              <input type="phone" class="form-control formModal-input">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label class="formModal-label" for="URL">URL Label <strong class="formModal-required">*</strong></label>
+              <input type="url" class="form-control formModal-input">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label class="formModal-label" for="Select">Select Label <strong class="formModal-required">*</strong></label>
+              <select class="form-control formModal-input">
+                <option value="">Choose...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label class="formModal-label" for="Radio">Radio Label <strong class="formModal-required">*</strong></label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" value="option1">
+                  Option one
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" value="option2">
+                  Option two
+                </label>
+              </div>
+              <div class="radio disabled">
+                <label>
+                  <input type="radio" name="optionsRadios" value="option3" disabled="disabled">
+                  Option three is disabled
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label class="formModal-label" for="Radio">Yes or No Label <strong class="formModal-required">*</strong></label>
+            </div>
+            <div class="col-md-6">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" value="option1">
+                  Yes
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" value="option1">
+                  No
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label class="formModal-label" for="Checkbox">Checkbox Label <strong class="formModal-required">*</strong></label>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="optionsCheckbox" value="option1"> Option one
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="optionsCheckbox" value="option2"> Option two
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+             <label class="formModal-label" for="Textarea">Text Area Label <strong class="formModal-required">*</strong></label>
+             <textarea class="form-control formModal-input" rows="4"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="button lead">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div></div></div></body><script src="/zoolander/js/global.js"></script><script src="/zoolander/js/zoolander-only.js"></script><script src="/zoolander/global/modal.js"></script></html>

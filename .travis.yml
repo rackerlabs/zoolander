@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "8.11.3"
+  - "10.18.0"
+  - "13.5.0"
+env:
+  - CMD="sass:compile"
+  - CMD="lint:sass"
+  - CMD="lint:js"
+  - CMD="test:karma"
+install:
+  - "npm install"
+script:
+  - "npm run $CMD"
+addons:
+  chrome: stable

@@ -1,0 +1,1799 @@
+<!DOCTYPE html><html lang="en"><head><base href="/zoolander/"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><meta name="description" content=""><meta name="author" content=""><meta name="format-detection" content="telephone=no"><link rel="icon" href="favicon.ico"><title>Zoolander Style Guide</title><link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"><link href="css/fira-font-style-300.css" rel="stylesheet"><link href="css/rsweb-font-style.css" rel="stylesheet"><link href="css/derek.css" rel="stylesheet"><link href="css/main.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/modernizr.min.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/jquery.fittext.js"></script><script src="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/zoolander/bootstrap-tabcollapse.js"></script></head><body><div class="row row-eq-height"><button class="navZoolander-slideBtn navZoolander-leftArrow navZoolander-slideBtn-collapsed"></button><div class="navZoolander-container navZoolander-container-collapsed"><div class="siteHeader-logo"><div class="siteHeader-logoImg"></div></div><ul class="navZoolander-list"><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Home</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="./" class="navZoolander-dropdownLink">Welcome</a></li><li class="navZoolander-item"><a href="global/styleguide" class="navZoolander-dropdownLink">Living Styleguide</a></li><li class="navZoolander-item"><a href="global/contributing" class="navZoolander-dropdownLink">Contributing</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Brand Guidelines</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="global/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="global/brand-elements" class="navZoolander-dropdownLink">Brand Elements</a></li><li class="navZoolander-item"><a href="global/voice" class="navZoolander-dropdownLink">Voice and Tone</a></li></ul></li><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Global Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-dropdownItem"><a href="derek/global-theme/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/typography" class="navZoolander-dropdownLink">Typography</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/photography" class="navZoolander-dropdownLink">Photography/Banners</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/swatches" class="navZoolander-dropdownLink">Colors/Swatches</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/icon-font" class="navZoolander-dropdownLink">Icon Font</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/buttons" class="navZoolander-dropdownLink">Buttons/CTAs</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/tables/tables" class="navZoolander-dropdownLink">Tables</a></li><li class="navZoolander-dropdownItem"><a href="derek/global-theme/forms" class="navZoolander-dropdownLink">Forms</a></li></ul></li><!--Add in themes dropdown when there are multiple--><li class="navZoolander-item"><a href="#" class="navZoolander-link navZoolander-hasDropdown">Ecommerce Theme</a><ul class="navZoolander-dropdown"><li class="navZoolander-item"><a href="derek/" class="navZoolander-dropdownLink">Overview</a></li><li class="navZoolander-item"><a href="derek/templates" class="navZoolander-dropdownLink">Templates</a></li><li class="navZoolander-item"><a href="derek/patterns/patterns" class="navZoolander-dropdownLink">Patterns</a></li><li class="navZoolander-item"><a href="derek/assets" class="navZoolander-dropdownLink">Asset Library</a></li><li class="navZoolander-item"><a href="derek/incubation" class="navZoolander-dropdownLink">Dev Sandbox</a></li></ul></li></ul></div></div><div id="mainContainer" class="mainContainer mainContainer-collapsed"><div class="standard-padding-full"><div class="container standard-padding-full">
+  <h5 class="red">Global Ecomm Pattern Usage Guidelines</h5>
+  <h2 class="no-margin">How to put our patterns to work for you</h2>
+  <p>We love our patterns and there are guidelines to using them so they can be as consistent and maintainable as possible. So here are the Dos and Don'ts of using our patterns in general</p>
+  <div class="col-md-6">
+    <h4 class="red">DO</h4>
+    <ul class="checks">
+      <li>Use patterns that coorespond to the content to go in them. ie. The features of a product should go in the features pattern</li>
+      <li>Try to fit your content in any of these very diverse patterns BEFORE utilizing the general content type</li>
+      <li>Try to use an icon from our ever growing icon library before utilizing an image if at all possible</li>
+      <li>Keep river headlines (h2s) under 65 characters</li>
+      <li>Have all pages should begin with a lead that is not included within a river</li>
+      <li>When reusing the same nodes keep it on the same background and in the same style</li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h4 class="red">DONT</h4>
+    <ul class="times">
+      <li>Bold, italicize or alter any text in any way other than centering</li>
+      <li>Include buttons within any patterns other than the cta</li>
+      <li>Put in any hard coded styles on any elements within patterns</li>
+      <li>Include any code within the patterns. columns, colors or otherwise</li>
+      <li>Copy and paste or write titles in as all caps. THIS HEADLINE IS BAD. This headline is good.</li>
+      <li>Copy and paste copyright, trademark, registration marks and ampersands into the cms. They should be created with unicode. See guide on typography page.</li>
+    </ul>
+  </div>
+</div>
+
+
+<hr>
+
+<!-- Lead -->
+<div class="container">
+  <h4>Lead</h4>
+  <h6>Required Fileds: Headline, Body</h6>
+  <p>The page's h1 is the title of the lead so only one lead is allowed on a page, however you must have one on the page in order to have an h1. Please make sure this title is as succinct and helpful as possible for SEO purposes. Limit text to one paragraph. <span class="uppercase">All pages should begin with a lead that is not included within a river</span></p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Put your best foot forward when writing the title as it is the H1</li>
+        <li>Include at top of page</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Include more than one on a page</li>
+        <li>Make the title just the page title</li>
+        <li>Include and hardcoded styling or code at all</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h5 class="red">Example:</h5>
+      <!-- Lead pattern -->
+
+<!--
+.lead class naming not used in alignment with typical pattern structure
+instead here .lead-wrapper is used to avoid having to override bootstrap base class
+ -->
+<div class="lead-wrapper">
+  <div class="lead-headerWrapper">
+    <h1 class="lead-header">This is the Page H1, the Most Important Words on the Page for SEO</h1>
+  </div>
+  <div class="lead-bodyWrapper">
+    <p>Bacon ipsum dolor amet minim tri-tip pork chop fatback pork loin, salami shoulder pastrami cow id tongue aliquip nostrud. Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est. In dolor qui pastrami, proident velit laborum prosciutto shoulder. Cow in cillum, dolor kielbasa ut occaecat aute irure.</p>
+    <p>
+      <ul>
+          <li>Item one.</li>
+          <li>Item two.</li>
+          <li>Item three with <a href="#"> a link within a list</a></li>
+      </ul>
+    </p>
+    <a href="#" class="lead-link"> A link within a lead</a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- Lead Corner Pocket-->
+<div class="container">
+  <h4>Split Lead/ Corner Pocket</h4>
+  <h6>Required Fileds for Corner Pocket: Pre-headline, Callout</h6>
+  <p>The corner pocket should be used to feature pricing. It has three available fields but the first two are the only required fields.</p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Include compelling pricing</li>
+        <li>Use with the left aligned lead</li>
+        <li>Put lead and corner pocket in a subpanel well in order to get alignment</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Use for promotions, that is to be used with the anouncements pattern</li>
+        <li>Use for PDFs or other call outs. Only to be used for pricing.</li>
+        <li> Do not use with an equal height container</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h5 class="red">Example:</h5>
+      <div class="container half-padding-full">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <!-- Lead pattern -->
+
+<!--
+.lead class naming not used in alignment with typical pattern structure
+instead here .lead-wrapper is used to avoid having to override bootstrap base class
+ -->
+<div class="lead-wrapper">
+  <div class="lead-headerWrapper">
+    <h1 class="lead-header">This is the Page H1, the Most Important Words on the Page for SEO</h1>
+  </div>
+  <div class="lead-bodyWrapper">
+    <p>Bacon ipsum dolor amet minim tri-tip pork chop fatback pork loin, salami shoulder pastrami cow id tongue aliquip nostrud. Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est. In dolor qui pastrami, proident velit laborum prosciutto shoulder. Cow in cillum, dolor kielbasa ut occaecat aute irure.</p>
+    <p>
+      <ul>
+          <li>Item one.</li>
+          <li>Item two.</li>
+          <li>Item three with <a href="#"> a link within a list</a></li>
+      </ul>
+    </p>
+    <a href="#" class="lead-link"> A link within a lead</a>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <div class="cornerPocket-wrapper">
+  <div class="cornerPocket-borderWrapper">
+  	<p class="cornerPocket-heading">Starting at
+  	</p><p class="cornerPocket-callout">$0.015/hr
+  	</p><p class="cornerPocket-text">High availability without a long-term contract</p>
+	</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<hr>
+
+
+<!-- Text -->
+<div class="container">
+  <h4>Text</h4>
+  <h6>Required Fileds: Body</h6>
+  <p>The text pattern can be used for text areas on the page when you do not want it to contain an H1. It should also be used in any text splits. ie. a mini panel that has text/video or text/image split.</p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Use for text areas</li>
+        <li>Use in text splits</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Include any images within the code</li>
+        <li>Include any hardcoded styling or added code at all</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h5 class="red">Example:</h5>
+      <!-- Text Pattern -->
+
+<p>Nisi in magna, flank picanha eiusmod lorem jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est. Flank picanha eiusmod lorem jowl swine frankfurter do. T-bone meatloaf chuck prosciutto biltong. Eu jowl pariatur id, ut pork belly aliquip ipsum shoulder swine est. Nisi in magna.</p>
+
+    </div>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="container">
+  <h4>Value Prop</h4>
+  <h6>Required Fileds: Headline, Body, Icon/Image <span class="red">For each card</span></h6>
+  <h6>Character Limit: <br>
+    Headline - 50. <br>
+    Description - 200.</h6>
+  <p>The Value Prop pattern is to be used to showcase the top few values that the product or service can bring to our potential buyer. They should be short, sweet and to the point. It should introduce the value of the product or service to the users business in easily digestable chunks. This pattern should not include a link or button.</p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Keep each value prop short and meaningful</li>
+        <li>Utilize rsweb icons for icon images</li>
+        <li>Try to use in groups of 3 and not 6</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Exceed character limit</li>
+        <li>Add a link or button</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h5 class="red">Example:</h5>
+      <!-- Value Props: 33/34/33 -->
+<div class="container half-padding">
+  <div class="row row-eq-height">
+    <div class="col-sm-4 panel-flex">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Value Props Pattern -->
+
+<div class="valueProp">
+  <div class="valueProp-row">
+    <div class="valueProp-media">
+      <div class="valueProp-icon">
+        <span class="rsweb idio-brain"></span>
+      </div>
+    </div>
+  </div>
+  <div class="valueProp-row">
+    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
+  </div>
+  <div class="valueProp-row">
+    <div class="valueProp-body">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Value Props Pattern -->
+
+<div class="valueProp">
+  <div class="valueProp-row">
+    <div class="valueProp-media">
+      <div class="valueProp-icon">
+        <span class="rsweb idio-brain"></span>
+      </div>
+    </div>
+  </div>
+  <div class="valueProp-row">
+    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
+  </div>
+  <div class="valueProp-row">
+    <div class="valueProp-body">
+      <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Value Props Pattern -->
+
+<div class="valueProp">
+  <div class="valueProp-row">
+    <div class="valueProp-media">
+      <img class="valueProp-img" src="https://placeholdit.imgix.net/~text?txtsize=30&txt=%5Bplaceholder%5D&w=200&h=150">
+    </div>
+  </div>
+  <div class="valueProp-row">
+    <h3 class="valueProp-header">This a value headline with a max of 50 characters</h3>
+  </div>
+  <div class="valueProp-row">
+    <div class="valueProp-body">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h4>Infrastructure and Services</h4>
+  <h6>Required Fileds: Headline, Body, Icon/Image <span class="red">For each card</span></h6>
+  <h6>Character Limit: <br>
+    Headline - 50. <br>
+    Description - 150.</h6>
+  <p>The Infrastructure and Services pattern should be used to showcase a service or product and link to it's page for more information if there is one. Infrastructure and Services is not the same thing as a value prop and should not be used as one. This should summarize a product or service that we offer in an approachable and not overly technical way.  </p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Keep each infrastructure and service card focused on a product or service</li>
+        <li>Utilize rsweb icons for icon images</li>
+        <li>Try to use in groups of 3 and not 6</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Exceed character limit</li>
+        <li>Add any links or buttons, other than what is included in the pattern</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h5 class="red">Example:</h5>
+      <!-- IAS: 33/34/33 -->
+<div class="container half-padding">
+  <div class="row row-eq-height">
+    <div class="col-sm-4 panel-flex">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Infrastructure and Services Pattern -->
+
+<a class="iasWidget iasWidget-hover" href="javascript:void(0)">
+  <div class="center">
+    <span class="rsweb cl-files"></span>
+  </div>
+  <div class="iasWidget-row">
+    <div class="iasWidget-col-full">
+      <h3 class="iasWidget-header">Name with only 50 characters</h3>
+      <p class="iasWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis p</p>
+    </div>
+    <div class="iasWidget-bottom">
+      <p class="iasWidget-cta">More Info</p>
+    </div>
+  </div>
+</a>
+
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Infrastructure and Services Pattern -->
+
+<a class="iasWidget iasWidget-hover" href="javascript:void(0)">
+  <div class="center">
+    <span class="rsweb cl-files"></span>
+  </div>
+  <div class="iasWidget-row">
+    <div class="iasWidget-col-full">
+      <h3 class="iasWidget-header">Name with only 50 characters</h3>
+      <p class="iasWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis p</p>
+    </div>
+    <div class="iasWidget-bottom">
+      <p class="iasWidget-cta">More Info</p>
+    </div>
+  </div>
+</a>
+
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Infrastructure and Services Pattern -->
+
+<div class="iasWidget">
+  <img class="iasWidget-img center" src="https://placeholdit.imgix.net/~text?txtsize=30&txt=%5Bplaceholder%5D&w=200&h=150">
+  <div class="iasWidget-row">
+    <div class="iasWidget-col-full">
+      <h3 class="iasWidget-header">Name with only 50 characters</h3>
+      <p class="iasWidget-body">Non-links will not have hover state. commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h4>Key Offers</h4>
+  <h6>Required Fileds: Headline, Body, Icon/Image <span class="red">For each card</span></h6>
+  <h6>Character Limit: <br>
+    River Headline - 65 <br>
+    Headline - 30. <br>
+    Description - 350.</h6>
+  <p>The Key Offers pattern should be used to highlight either key offerings or the product the current page is about or key product offerings of the section you are within. There should always be an icon in the lower left and never any additional links or buttons added to the section. A link is not necessary within this pattern. This pattern should never be left on a white background.</p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Place on background color</li>
+        <li>Always utilize rsweb icons for icon image</li>
+        <li>Try to use in groups of 2 or 3</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Exceed character limit</li>
+        <li>Add additional links or buttons within the content area</li>
+        <li>Use as a 4-up</li>
+      </ul>
+    </div>
+  </div>
+  <h5 class="red">Example:</h5>
+</div>
+
+<!-- Key Offers: 33/34/33 -->
+<div class="half-padding">
+  <div class="container">
+    <div class="row row-eq-height">
+      <div class="col-sm-4 panel-flex">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+      </div>
+      <div class="col-sm-4 panel-flex">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div class="col-sm-4 panel-flex">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <h4>Features</h4>
+  <h6>Required Fileds: Headline, Body, Icon/Image <span class="red">For each card</span></h6>
+  <h6>Character Limit: <br>
+    Headline - 30. <br>
+    Description - 200.<br>
+    List Limit: 12 list items</h6>
+  <p>The Features pattern should be used to showcase important or key features of the product or service. This pattern should be placed on a background color and the feature copy should be appraochable and not overly technical. There is also the list pattern which can be used to add additional features so that the features section doesn't get overly heavy.</p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Always utilize rsweb icons for icon images</li>
+        <li>Include a headline as well as desciption</li>
+        <li>Add supporting features in lists</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Place on a BG color darker than light-gray</li>
+        <li>Exceed character limit</li>
+        <li>Try not to use more than 4 cards whenever possible</li>
+        <li>Use colored check marks in lists</li>
+      </ul>
+    </div>
+  </div>
+  <h5 class="red">Example:</h5>
+</div>
+<div class="half-padding">
+  <!-- Features: 50/50 -->
+<div class="half-padding">
+  <div class="container">
+    <div class="row row-eq-height">
+      <div class="col-sm-6 panel-flex">
+        <div class="subpanel panel-flex">
+          <div class="subpanel-inner panel-flex">
+            <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Product Features Pattern -->
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <span class="feature-icon srv-design-build-2 rsweb"></span>
+    </div>
+  </div>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 panel-flex">
+        <div class="subpanel panel-flex">
+          <div class="subpanel-inner panel-flex">
+            <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Product Features Pattern -->
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <span class="feature-icon srv-design-build-2 rsweb"></span>
+    </div>
+  </div>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-eq-height">
+      <div class="col-sm-6 panel-flex">
+        <div class="subpanel panel-flex">
+          <div class="subpanel-inner panel-flex">
+            <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Product Features Pattern -->
+<div class="feature">
+  <div class="feature-media">
+    <div class="feature-iconWrapper">
+      <span class="feature-icon srv-design-build-2 rsweb"></span>
+    </div>
+  </div>
+  <div class="feature-content">
+    <h3 class="feature-header">Example Title</h3>
+    <div class="feature-bodyWrapper">
+      <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+      <p>consectetuer</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 panel-flex">
+        <div class="subpanel panel-flex">
+          <div class="subpanel-inner panel-flex">
+            <div class="feature">
+              <div class="feature-media">
+                <div class="feature-imgWrapper">
+                  <img class="feature-img" src="https://placeholdit.imgix.net/~text?txtsize=30&txt=%5Bplaceholder%5D&w=200&h=150">
+                </div>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-header">Example Title</h3>
+                <div class="feature-bodyWrapper">
+                  <a href="javascript:void(0)">This is an example of a link in the Feature pattern.</a>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div>
+  <div class="container half-padding">
+    <!-- List: 33/34/33 -->
+<div class="half-padding-top">
+  <div class="container">
+    <div class="row row-eq-height">
+      <div class="col-md-4 panel-flex">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+<!-- Features List Pattern -->
+<div class="list-wrapper">
+  <div class="col-xs-12">
+    <h4 class="center">Optional List Title</h4>
+    <ul class="discs">
+      
+        <li>Live, US-based support team</li>
+      
+        <li>Remotely log in and troubleshoot Virtual Machines, OS and Apps</li>
+      
+        <li>Dedicated account team</li>
+      
+        <li>15-Minute Response Time SLA to monitoring notifications</li>
+      
+        <li><a href="javascript:void(0)">This is an example of a link in the List pattern.</a></li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="col-md-4 panel-flex">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+<!-- Features List Pattern -->
+<div class="list-wrapper">
+  <div class="col-xs-12">
+    <h4 class="center">Optional List Title</h4>
+    <ul class="checks green">
+      
+        <li>Live, US-based support team</li>
+      
+        <li>Remotely log in and troubleshoot Virtual Machines, OS and Apps</li>
+      
+        <li>Dedicated account team</li>
+      
+        <li>15-Minute Response Time SLA to monitoring notifications</li>
+      
+        <li><a href="javascript:void(0)">This is an example of a link in the List pattern.</a></li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="col-md-4 panel-flex">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+<!-- Features List Pattern -->
+<div class="list-wrapper">
+  <div class="col-xs-12">
+    <h4 class="center">Optional List Title</h4>
+    <ul class="discs">
+      
+        <li>Live, US-based support team</li>
+      
+        <li>Remotely log in and troubleshoot Virtual Machines, OS and Apps</li>
+      
+        <li>Dedicated account team</li>
+      
+        <li>15-Minute Response Time SLA to monitoring notifications</li>
+      
+        <li>Live, US-based support team</li>
+      
+        <li>Live, US-based support team</li>
+      
+        <li><a href="javascript:void(0)">This is an example of a link in the List pattern.</a></li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="container">
+  <h4>Testimonials</h4>
+  <h6>Required Fileds: Quote, Attribution</h6>
+  <h6>Character Limit: <br>
+    Split Quote Text - 150 <br>
+    Full Width Quote Text - 260</h6>
+  <p>The Testimonials pattern is to be used for customer or client testimonials and quotes. These should be to the point and support the product or service for the page that you are on. For use at bottom of the page above a cta or resources. It should be one of the final proof points for the user.</p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Keep quotes focused on a proof point for the page you're on</li>
+        <li>Place towards the bottom of the page</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Have against the footer, since they are similar colors</li>
+        <li>Have a dark color or black logo</li>
+      </ul>
+    </div>
+  </div>
+  <h5 class="red">Example:</h5>
+</div>
+<!-- Quote Full Width -->
+<div class="quote">
+  <div class="quote-wrapper">
+    <div class="row">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+<!-- Quote Partial -->
+
+<div class="quote-logoWrapper">
+  <div class="quote-logo">
+    <img src="imgs/derek/logos/underarmor.png" alt="">
+  </div>
+</div>
+<div class="quote-textWrapper">
+  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
+  <p class="quote-attrName">Brian McManus</p>
+  <p class="quote-attrPosition">Senior Director of Technology</p>
+</div>
+<div class="quote-buttonWrapper">
+  <a class="button ghost">View More Stories</a>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container half-padding-top">
+  <h5 class="red">Example of Split Quote:</h5>
+</div>
+<!-- Quote Split -->
+<div class="quote">
+  <div class="quote-wrapper">
+    <div class="row">
+        <div class="col-md-6">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+<!-- Quote Partial -->
+
+<div class="quote-logoWrapper">
+  <div class="quote-logo">
+    <img src="imgs/derek/logos/underarmor.png" alt="">
+  </div>
+</div>
+<div class="quote-textWrapper">
+  <blockquote class="quote-blockquote">Because of Fanatical Support, we knew we were partnering with a best-in-class company that shared our vision of getting it done.</blockquote>
+  <p class="quote-attrName">Brian McManus</p>
+  <p class="quote-attrPosition">Senior Director of Technology</p>
+</div>
+<div class="quote-buttonWrapper">
+  <a class="button ghost">View More Stories</a>
+</div>
+
+
+        </div>
+        <div class="col-md-6">
+          <!-- For the sake of page-load time on zoolander, if we're within a subpanel, just show screenshot, not full video. -->
+
+
+
+<h1 class="videoEmbed-title">Title Here</h1>
+<div class="videoEmbed-column">
+  <div class="embed-responsive embed-responsive-16by9">
+    
+      <figure class="youtube-container">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H2uHBhKTSe0"></iframe>
+      </figure>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<hr>
+
+<!-- Video -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Video</h4>
+      <h6>Required Fileds: Video Link</h6>
+      <p>The Video pattern should be used to add dynamic and more visually impactful content to the page. This content should be supporting or explaining the product or service for the page the user is on. It should only be used full width on the video landing page. All other uses should be split with text, a lead or a cta.</p>
+      <h6>Event Tracking:</h6>
+      <p>There are events for play, pause, watched to end, 10% complete, 25%, 50%, 75% and 90% complete.</p>
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Use videos the support or explain the rest of the content</li>
+        <li>Include in splits or in a corner pocket</li>
+      </ul>
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Include full width outside of video landing pages</li>
+        <li>Include a title if the title is displayed within the video overlay</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div class="videoEmbed-row">
+        <div class="videoEmbed-column">
+          <!-- For the sake of page-load time on zoolander, if we're within a subpanel, just show screenshot, not full video. -->
+
+
+
+<h1 class="videoEmbed-title">Title Here</h1>
+<div class="videoEmbed-column">
+  <div class="embed-responsive embed-responsive-16by9">
+    
+      <figure class="youtube-container">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H2uHBhKTSe0"></iframe>
+      </figure>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h4>CTA</h4>
+  <h6>Required Fileds: Headline and/or Subhead, Button Type</h6>
+  <h6>Event Tracking:</h6>
+  <p>There are events for chats and form submits. Those are listed (for chat) as
+  <ul>
+  <li>Category - CTA Click</li>
+  <li>Action - Chat Started</li>
+  <li>Label - Button Label</li>
+  </ul></p>
+  <p>There are events for chats and form submits. Those are listed (for form submissions) as
+  <ul>
+  <li>Category - Site Submission</li>
+  <li>Action - Form Click CTA</li>
+  <li>Label - Button Location (on page)</li>
+  </ul></p>
+  <div class="half-padding">
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-row">
+      <div class="cta-iconWrapper">
+        <span class="rsweb gen-assistance"></span>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="cta-headerWrapper">
+        <h2>Talk to a Rackspace Specialist</h2>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="cta-buttonWrapper">
+        <a class="cta-button track-cta">Talk to a Specialist</a>
+      </div>
+    </div>
+    <div class="cta-row">
+      <div class="cta-subheadWrapper">
+        <p class="cta-subhead">Call <a href="javascript:void(0)">1-855-715-7307</a> to start saving</p>
+      </div>
+    </div>
+  </div>
+  <!-- end CTA -->
+</div>
+
+</div>
+
+<hr>
+
+<div class="container">
+  <h4>Tabs</h4>
+  <h6>Required Fileds: Headline, Body</h6>
+  <h6>Character Limit: <br>
+    Headline - 15. <br>
+    Content - no limit.</h6>
+  <h6>Event Tracking:</h6>
+  <p>There are events for tab clicks. Those are listed as
+  <ul>
+  <li>Category - Content</li>
+  <li>Content - Tab Toggle</li>
+  <li>Label - The Tab Title</li>
+  </ul></p>
+  <p>The Tabs pattern can be used for pages that are content heavy but can be organized into sections. This can save significant scroll space while allowing for content to be as lengthy as possible.</p>
+  <p>Vertical tabs are only to be used for product showcases. All other uses of tabs should use horizontal.</p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Place on background color</li>
+        <li>Use any available content, splits or panels within the internal area</li>
+        <li>Use to categorize similar content in an efficient way</li>
+        <li>Use horizontal tabs for anything other than product showcases</li>
+        <li>Use vertical tabs for product showcases</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Exceed title character limit to avoid breaking the container</li>
+        <li>Place within a container. The white area should be full width</li>
+        <li>Use horizontal tabs for product showcases</li>
+        <li>Use vertical tabs for anything other than product showcases</li>
+      </ul>
+    </div>
+  </div>
+  <h5 class="red">Horizontal Example: Used for reducing content scroll and Use Case Examples</h5>
+</div>
+<div class="container">
+  <div class="rsTabs-container rsTabsHorizontal-container">
+    <ul class="nav nav-tabs rsTabs rsTabsHorizontal">
+      <li class="rsTab-tab active"><a class="rsTab-link rsTabHorizontal-link" href="#tab-1" data-toggle="tab">Tab 1</a></li>
+      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-2" data-toggle="tab">Tab 2</a></li>
+      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-3" data-toggle="tab">Tab 3</a></li>
+      <li class="rsTab-tab"><a class="rsTab-link rsTabHorizontal-link" href="#tab-4" data-toggle="tab">Tab 4</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content rsTabs-content rsTabsHorizontal-content">
+      <div class="tab-pane active" id="tab-1">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+<!-- Internal Tab Section -->
+<div class="half-padding-full">
+<h2 class="center">Pain Point / Use Case</h2>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <h4>Expand on Value Props or Pain Points</h4>
+          <p>Text goes here for pain points or use cases for the targeted product, solution, service, or industry. Pair with a related image, screenshot, or other asset to the right. Finish off this section with links to relevant product/service/solution pages. Solve with: Use Case Examples</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <img src="http://placehold.it/350x250">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div class="tab-pane" id="tab-2">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+<!-- Internal Tab Section -->
+<div class="half-padding-full">
+<h2 class="center">Pain Point / Use Case</h2>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <h4>Expand on Value Props or Pain Points</h4>
+          <p>Text goes here for pain points or use cases for the targeted product, solution, service, or industry. Pair with a related image, screenshot, or other asset to the right. Finish off this section with links to relevant product/service/solution pages. Solve with: Use Case Examples</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <img src="http://placehold.it/350x250">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div class="tab-pane" id="tab-3">
+         <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+<!-- Internal Tab Section -->
+<div class="half-padding-full">
+<h2 class="center">Alternative Title</h2>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <h4>Expand on Value Props or Pain Points</h4>
+          <p>consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean moon.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <img src="http://placehold.it/350x250">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div class="tab-pane" id="tab-4">
+        <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+
+
+<!-- Internal Tab Section -->
+<div class="half-padding-full">
+<h2 class="center">Pain Point / Use Case</h2>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <h4>Expand on Value Props or Pain Points</h4>
+          <p>Text goes here for pain points or use cases for the targeted product, solution, service, or industry. Pair with a related image, screenshot, or other asset to the right. Finish off this section with links to relevant product/service/solution pages. Solve with: Use Case Examples</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="subpanel">
+        <div class="subpanel-inner">
+          <img src="http://placehold.it/350x250">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/pattern-components/tabs/tabs.js" charset="utf-8"></script>
+
+
+<div class="container">
+  <h5 class="red">Vertical Example: Used for Product Portfolio only</h5>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="container">
+  <div class="rsTabs-container rsTabsVertical-container">
+    <ul class="nav nav-tabs rsTabs rsTabsVertical">
+      <li class="rsTab-tab rsTabVertical-tab active"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-1" data-toggle="tab">One Row</a></li>
+      <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-2" data-toggle="tab">Two Rows</a></li>
+      <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-3" data-toggle="tab">One Row Again</a></li>
+      <li class="rsTab-tab rsTabVertical-tab"><a class="rsTab-link rsTabVertical-link" href="#tab-vertical-4" data-toggle="tab">Two Rows Again</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content rsTabs-content rsTabsVertical-content">
+        <div class="tab-pane active" id="tab-vertical-1">
+          
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader">Single row</h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        </div>
+        <div class="tab-pane" id="tab-vertical-2">
+          
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader">Double rows</h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        </div>
+        <div class="tab-pane" id="tab-vertical-3">
+          
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader">Another single row tab</h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        </div>
+        <div class="tab-pane" id="tab-vertical-4">
+          
+
+<h2 class="rsTabs-contentHeader rsTabsVertical-contentHeader">Another double row tab</h2>
+<div class="rsTabs-contentBody">
+  <p>Maecenas placerat odio libero, porttitor rhoncus enim pharetra eu. Praesent in porttitor nulla. Nunc consequat metus sit amet magna vulputate suscipit. Proin justo libero, fermentum sit amet ullamcorper non, sagittis ut eros. Etiam vestibulum, mi quis posuere laoreet, purus nisi maximus massa, non varius felis arcu vel nulla. Nam sollicitudin suscipit augue, eu hendrerit purus vehicula ut. Curabitur efficitur consectetur interdum.</p>
+</div>
+
+<div class="portfolio-wrapper">
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="portfolio-row">
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<a class="keyoffersWidget keyoffersWidget-hover" href="javascript:void(0)">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+    </div>
+    <div class="keyoffersWidget-bottomText">Read More</div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 panel-flex">
+      <div class="subpanel panel-flex">
+        <div class="subpanel-inner panel-flex">
+          <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+<!-- Key Offers Pattern -->
+<div class="keyoffersWidget">
+  <div class="keyoffersWidget-row">
+    <div class="keyoffersWidget-col-full">
+      <h3 class="keyoffersWidget-header">Name with only 30 characters</h3>
+      <p class="keyoffersWidget-body">350 max character count here. Pro gravida dolor sit amet lacus accumsan at viverra justo commodo. No hoverstate will appear if there is no link present.</p>
+    </div>
+    <div class="keyoffersWidget-icon">
+      <span class="rsweb idio-high-five"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        </div>
+    </div>
+  </div>
+</div>
+<script src="js/pattern-components/tabs/tabs.js" charset="utf-8"></script>
+
+  </div>
+</div>
+
+
+<!-- Announcements -->
+<div class="container">
+  <h4>Announcements</h4>
+  <h6>Required Fileds: Headline, Body, Announcement type</h6>
+  <h6>Character Limit: <br>
+    Title - 150 <br>
+    Text - 250</h6>
+  <p>The Announcements pattern is to be used for short-term announcements. These should be at the top of the page and never more than one on a page. They should be used sparingly to increase the attention on them. The types of announcement are:
+  <ul>
+    <li>New Product: To be used to announce a new product or offering</li>
+    <li>Alert: To announce an outage, warning, or discontinuation of a product or offering</li>
+    <li>Promotion: To announce an applicable promotion. This should be for finance approved promotions and should not run long term</li>
+    <li>General Announcement: This annoucement should be used sparingly and to bring attention to things like new login page, ect.</li>
+  </ul></p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="red">DO</h4>
+      <ul class="checks">
+        <li>Use at top of page</li>
+        <li>Suggest new announcement types instead of trying to fit in an annoucement that may not fit</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4 class="red">DONT</h4>
+      <ul class="times">
+        <li>Use more than one on a page</li>
+        <li>Include a title, alter text or add any buttons to the pattern</li>
+      </ul>
+    </div>
+  </div>
+  <h5 class="red">Example:</h5>
+</div>
+<!-- Announcements -->
+<div class="container">
+  <h3>Standard Announcement</h3>
+  <div class="row">
+    <!-- Announcement River -->
+<div class="rsHomepage-announcementRiver">
+  <div class="rsHomepage-announcementRiverContainer">
+    <div class="rsHomepage-announcementRiverRow">
+      <div class="rsHomepage-announcementRiverTitle">
+        <h3 class="rsHomepage-announcementRiverTitleHeader">Announcement Header</h3>
+      </div>
+      <div class="rsHomepage-announcementRiverDetails">
+        <p class="rsHomepage-announcementRiverDetails-p">This the announcement body. You can add additional words here.</p>
+        <p class="rsHomepage-announcementRiverDetails-p">
+          <a class="rsHomepage-announcementRiverReadMore" href="#">Read more</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<!-- Webinar announcement ribbon 🦖 -->
+<div class="container">
+  <h3><a style="text-decoration: none" name="ribbon">Webinar Announcement</a></h3>
+  <div class="row">
+    <!-- Ribbon -->
+<div class="rsRibbon-river">
+  <div class="rsRibbon-container">
+    <div class="rsRibbon-row">
+      <div class="rsRibbon-what">
+        <p class="rsRibbon-what-info"> Webinar: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+      </div>
+      <div class="rsRibbon-when">
+        <p class="rsRibbon-when-info">April 13 - May 1</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h4>Awards</h4>
+  <h6>Required Fileds: Headline, Subhead</h6>
+  <h6>Character Limit: <br>
+    Headline - 5. <br>
+    Subhead - 50.
+    Subtext - 50. <br></h6>
+  <p>The Awards and Certifications pattern can be used for featuring awards, certifications or honors within a river.</p>
+  <h5 class="red">Example:</h5>
+  <!-- Awards Cert: 33/33/33 -->
+<div class="container half-padding">
+  <div class="row">
+    <div class="col-sm-4">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+<!-- Awards and Certs Pattern -->
+
+<div class="awards">
+  <h2 class="awards-title">300+</h2>
+  <p class="awards-subhead">RedHat certifications</p>
+  <p class="awards-subtext">including 122 CCNAs and 44 CCNPs</p>
+</div>
+
+    </div>
+    <div class="col-sm-4">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+<!-- Awards and Certs Pattern -->
+
+<div class="awards">
+  <h2 class="awards-title">300+</h2>
+  <p class="awards-subhead">Hosting engineers across Linux, Windows and VMware</p>
+  <p class="awards-subtext">including 122 CCNAs and 44 CCNPs</p>
+</div>
+
+    </div>
+    <div class="col-sm-4">
+      <!-- Default description to allow for partial override to demonstrate really long text and equal height -->
+
+
+<!-- Awards and Certs Pattern -->
+
+<div class="awards">
+  <h2 class="awards-title">300+</h2>
+  <p class="awards-subhead">Content Management Specialists</p>
+  <p class="awards-subtext">including 122 CCNAs and 44 CCNPs</p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<hr>
+
+<!-- Blog Feed -->
+<div class="container">
+  <h4>Blog Feed</h4>
+  <h6>Character Limit: <br>
+    Established by Pattern</h6>
+  <p>The Blog Feed pattern is to be used by developers only on main overview pages only. It will dynamically populate content with a character trucation established by Drupal.</p>
+  <h5 class="red">Example:</h5>
+</div>
+
+
+<!--  IMPLEMENTATION GUIDELINES -->
+
+<!--
+Limit to excerpt 150 characters - I cant implement with pure css because it needs to be multiple lines. Should culminate in an ellipsis.
+
+Limit Title to 19 characters and also culminate in ellipsis
+
+Date should be written as Month (spelled out), date, yyyy
+
+Link should always be "Read More" and will redirect to the blog post on blog
+
+Byline has to have "By:" prepended to all the author names.
+
+Should bring in featured image and no other. A filter has been applied in css.
+-->
+
+
+<div class="standard-padding">
+  <div class="container">
+    <h1 class="blogFeed-header">Feed Title</h1>
+    <div class="row row-eq-height">
+      <div class="col-sm-6 blogFeed-col1">
+        <!-- Blog Feed Pattern -->
+
+<a href="javascript:void(0)" class="blogFeed-item">
+  <div class="blogFeed-textContainer">
+    <p class="blogFeed-date">May 09, 2016</p>
+    <h4 class="blogFeed-title">Example Title of a Long Title that Brakes into Multiple Lines</h4>
+    <div class="blogFeed-linkContainer">
+      <p class="blogFeed-more extLink">Read More</p>
+    </div>
+  </div>
+</a>
+
+        <!-- Blog Feed Pattern -->
+
+<a href="javascript:void(0)" class="blogFeed-item">
+  <div class="blogFeed-textContainer">
+    <p class="blogFeed-date">May 09, 2016</p>
+    <h4 class="blogFeed-title">Example Title of a Long Title that Brakes into Multiple Lines</h4>
+    <div class="blogFeed-linkContainer">
+      <p class="blogFeed-more extLink">Read More</p>
+    </div>
+  </div>
+</a>
+
+      </div>
+      <div class="col-sm-6 blogFeed-col2">
+        <!-- Blog Feed Pattern -->
+
+<a href="javascript:void(0)" class="blogFeed-item">
+  <div class="blogFeed-textContainer">
+    <p class="blogFeed-date">May 09, 2016</p>
+    <h4 class="blogFeed-title">Example Title of a Long Title that Brakes into Multiple Lines</h4>
+    <div class="blogFeed-linkContainer">
+      <p class="blogFeed-more extLink">Read More</p>
+    </div>
+  </div>
+</a>
+
+        <!-- Blog Feed Pattern -->
+
+<a href="javascript:void(0)" class="blogFeed-item">
+  <div class="blogFeed-textContainer">
+    <p class="blogFeed-date">May 09, 2016</p>
+    <h4 class="blogFeed-title">Example Title of a Long Title that Brakes into Multiple Lines</h4>
+    <div class="blogFeed-linkContainer">
+      <p class="blogFeed-more extLink">Read More</p>
+    </div>
+  </div>
+</a>
+
+      </div>
+    </div>
+  </div>
+</div></div></div></body><script src="/zoolander/js/global.js"></script><script src="/zoolander/js/zoolander-only.js"></script><script src="/zoolander/global/modal.js"></script></html>
