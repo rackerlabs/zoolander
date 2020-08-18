@@ -455,3 +455,22 @@
     color: $gray-darkest;
   }
 }
+
+// For mobile and tablet.
+@media only screen and (max-width: $screen-sm-min) {
+  span.dropdown-toggle.ceiling-dropdownToggle > * {
+    visibility: visible;
+  }
+
+  .ceiling-menuInline-item .ceiling-dropdownToggle {
+    visibility: hidden;
+  }
+
+  a.ceiling-menuInline-link.menuInline-linkMobile > * {
+    visibility: visible;
+  }
+
+  .menuInline-linkMobile {
+    visibility: hidden;
+  }
+}
