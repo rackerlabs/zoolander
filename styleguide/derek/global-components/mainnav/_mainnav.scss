@@ -124,6 +124,10 @@
   width: 168px;
 }
 
+.navbar-brand-solve {
+  background-image: url('../imgs/derek/rs-logo-solve.svg');
+}
+
 .navbar-hamburger {
   &::after {
     display: none;
