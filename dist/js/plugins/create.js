@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /*!
 * @license CreateJS
@@ -2926,7 +2926,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           toString: 1
         }, c).toString != s ? _o = function o(a) {
           var b = this.__proto__,
-              c = a in (this.__proto__ = null, this);
+              c = (a in (this.__proto__ = null, this));
           return this.__proto__ = b, c;
         } : (b = c.constructor, _o = function o(a) {
           var c = (this.constructor || b).prototype;
