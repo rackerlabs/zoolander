@@ -1,4 +1,3 @@
-
 (($) => {
   // tooltip
   $('[data-toggle="tooltip"]').tooltip();
