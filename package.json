@@ -67,7 +67,7 @@
     "sinon-chai": "^3.5.0"
   },
   "optionalDependencies": {
-    "harp": "^0.31.0"
+    "harp": "^0.40.3"
   },
   "engines": {
     "node": ">= 14.0.0",
