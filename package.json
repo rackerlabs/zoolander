@@ -57,7 +57,7 @@
     "karma-mocha": "git+https://github.com/WidgetsBurritos/karma-mocha.git#master",
     "karma-sinon-chai": "^2.0.2",
     "karma-verbose-reporter": "0.0.6",
-    "minimist": ">=1.2.2",
+    "minimist": ">=1.2.6",
     "mocha": "^6.2.3",
     "mozilla-fira-pack": "0.0.1",
     "node-sass": "^4.14.1",
